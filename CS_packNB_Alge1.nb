@@ -1,0 +1,132 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4436,        124]
+NotebookOptionsPosition[      4124,        110]
+NotebookOutlinePosition[      4483,        126]
+CellTagsIndexPosition[      4440,        123]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"choices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"Range", "[", 
+           RowBox[{
+            RowBox[{"-", "20"}], ",", "20"}], "]"}], ",", "4"}], "]"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"xVal", "=", 
+        RowBox[{"choices", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"co", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "12"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"con", "=", 
+        RowBox[{"Replace", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "100"}], ",", "100"}], "}"}], "]"}], ",", 
+          RowBox[{"0", "\[Rule]", "5"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"eqNo", "=", 
+        RowBox[{
+         RowBox[{"co", "*", "xVal"}], "+", "con"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"math", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"h1", " ", "x"}], "+", "h2"}], "\[Equal]", "h3"}], "]"}], 
+         "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "co"}], ",", 
+           RowBox[{"h2", "\[Rule]", "con"}], ",", 
+           RowBox[{"h3", "\[Rule]", "eqNo"}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<What is the value of `1` in the following \
+equation?\\n`2`\>\"", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", "math"}], 
+           "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Alge1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwdz1sow3EcBfBt5X7bk9xKYlrSlNxqpI2SUovGEoVlQ2Tu4WFYq4m1lQeW
+XIdarcXDMEqNspAIQ5PwYLJhiUmS/+z8Hr596pzOwzdJLKuQMGg0Wor/oPdV
+N1Xf8cJzK+U6WClonYc5pgU9tJtFJmgWxe/AaLlsH85QWzb4OD/yA/Pprj84
++W0IafAb0aBgQvppUww0iOti4bOJLoFh653dkF/TMwCZBb/E14VEOckLb4gK
+EV0F19KWiE6PVgPvfOVaaA1efCK7rEo3rJ/hvMPRuIcvWJvbGCjGf3PDQfCE
+rwuHmbezkZBrcXCkfofTAzJg6jKVDfm7h0XQNr5WCqN878SQtwkB5FLmKmg5
+3pBAYfW2FJY4zTKonzZ2wmB1bh9sZ9mJwt6jQZgnZQ1BmnLM+tH/wktQXezC
+q7zxA0gpXOcw+izIAZvbNMRFZv499KgYTshe2XTD0K0HotWR/AP1UVXEvbKW
+P3gyygr49GsfKwuFLpk3DMrje9lwjlpNJ73xshhyvN/E88jrUqjZEwrg10iX
+ChqcWjX8B419NYg=
+  "],ExpressionUUID->"a4547e61-5f97-4ad9-98d4-3d26b19f5e87"]
+},
+WindowSize->{992, 978},
+WindowMargins->{{35, Automatic}, {Automatic, 37}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3562, 88, 325, "Input",ExpressionUUID->"a4547e61-5f97-4ad9-98d4-3d26b19f5e87"]
+}
+]
+*)
+
