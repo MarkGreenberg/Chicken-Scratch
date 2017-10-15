@@ -1,0 +1,263 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10153,        255]
+NotebookOptionsPosition[      9820,        238]
+NotebookOutlinePosition[     10180,        254]
+CellTagsIndexPosition[     10137,        251]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"set", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<homozygous dominant\>\"", ",", "\"\<homozygous recessive\>\"", 
+          ",", "\"\<heterozygous\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"gens", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"set", ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pers", "=", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"gens", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+           RowBox[{"gens", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+           "\"\<homozygous dominant\>\""}], ",", 
+          RowBox[{"{", 
+           RowBox[{"100", ",", "0", ",", "0"}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"gens", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                "\"\<homozygous dominant\>\""}], "&&", 
+               RowBox[{
+                RowBox[{"gens", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                "\"\<homozygous recessive\>\""}]}], ")"}], "||", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"gens", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                "\"\<homozygous recessive\>\""}], "&&", 
+               RowBox[{
+                RowBox[{"gens", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                "\"\<homozygous dominant\>\""}]}], ")"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0", ",", "100"}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"gens", "[", 
+                   RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                  "\"\<homozygous dominant\>\""}], "&&", 
+                 RowBox[{
+                  RowBox[{"gens", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                  "\"\<heterozygous\>\""}]}], ")"}], "||", 
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"gens", "[", 
+                   RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                  "\"\<heterozygous\>\""}], "&&", 
+                 RowBox[{
+                  RowBox[{"gens", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                  "\"\<homozygous dominant\>\""}]}], ")"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"50", ",", "0", ",", "50"}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"gens", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                 RowBox[{"gens", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                 "\"\<homozygous recessive\>\""}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "100", ",", "0"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"gens", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                    "\"\<homozygous recessive\>\""}], "&&", 
+                    RowBox[{
+                    RowBox[{"gens", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                    "\"\<heterozygous\>\""}]}], ")"}], "||", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"gens", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                    "\"\<heterozygous\>\""}], "&&", 
+                    RowBox[{
+                    RowBox[{"gens", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                    "\"\<homozygous recessive\>\""}]}], ")"}]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "50", ",", "50"}], "}"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"{", 
+                   RowBox[{"25", ",", "25", ",", "50"}], "}"}]}], "]"}]}], 
+               "]"}]}], "]"}]}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ansStr", "=", 
+        RowBox[{
+         RowBox[{"ToString", "[", 
+          RowBox[{"pers", "[", 
+           RowBox[{"[", 
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{"set", ",", 
+               RowBox[{"gens", "[", 
+                RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "]"}], "]"}], 
+         "<>", "\"\<%\>\""}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"\"\<In simple single-trait Mendelian inheritance, a \>\"", "<>", 
+         RowBox[{"gens", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "<>", 
+         "\"\< mother crossed with a \>\"", "<>", 
+         RowBox[{"gens", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "<>", 
+         "\"\< father has what chance of producing a \>\"", "<>", 
+         RowBox[{"gens", "[", 
+          RowBox[{"[", "3", "]"}], "]"}], "<>", "\"\< offspring?\>\""}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<100%\>\"", ",", "\"\<50%\>\"", ",", "\"\<25%\>\"", ",", 
+          "\"\<0%\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", "ansStr"}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Biol14\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.703008030678895*^9, {3.7030085225458107`*^9, 3.7030087613684273`*^9}, {
+   3.703008806105947*^9, 3.703008953458209*^9}, {3.70300901153975*^9, 
+   3.703009037253687*^9}, {3.703009077043552*^9, 3.70300910641691*^9}, {
+   3.703009231425604*^9, 3.70300923475887*^9}, 3.703009367783163*^9, {
+   3.703009674117338*^9, 3.703010044546039*^9}, {3.703010079941818*^9, 
+   3.703010145788311*^9}, {3.70301023197643*^9, 3.703010318145101*^9}, {
+   3.703010354791651*^9, 3.703010392344771*^9}, {3.7030105827316923`*^9, 
+   3.7030109106589193`*^9}, {3.703011024128183*^9, 3.703011082976714*^9}, {
+   3.7030113733999453`*^9, 3.703011380056922*^9}, {3.703011488213951*^9, 
+   3.703011542727858*^9}, {3.7030115768097878`*^9, 3.70301169618291*^9}, {
+   3.703012569875152*^9, 3.703012586722587*^9}, {3.7030126323659897`*^9, 
+   3.703012635933909*^9}, {3.703012714305583*^9, 3.703012715672412*^9}, {
+   3.703012753757451*^9, 3.7030128575103807`*^9}, {3.703012901174067*^9, 
+   3.703012913844303*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/user-4dec8a61-25b0-\
+47e1-8624-e5b3610139af/CS_pack_Biol14\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/user-4dec8a61-25b0-\
+47e1-8624-e5b3610139af/CS_pack_Biol14\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Biol14"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Biol14"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Biol14", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Biol14"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.7030090455792418`*^9, 3.703009108005027*^9, 3.703009236603101*^9, 
+   3.703011091154175*^9, 3.7030113909566307`*^9, 3.703011698123122*^9, {
+   3.70301257266168*^9, 3.70301258790522*^9}, 3.703012639633236*^9, 
+   3.703012719242702*^9, {3.703012840742979*^9, 3.7030128589324093`*^9}, 
+   3.703012944830018*^9}]
+}, Open  ]]
+},
+WindowSize->{1261, 1042},
+WindowMargins->{{3, Automatic}, {Automatic, 43}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 7775, 177, 453, "Input"],
+Cell[8358, 201, 1446, 34, 35, "Output"]
+}, Open  ]]
+}
+]
+*)
+
