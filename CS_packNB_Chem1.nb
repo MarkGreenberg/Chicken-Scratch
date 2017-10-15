@@ -1,0 +1,144 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6351,        134]
+NotebookOptionsPosition[      6037,        120]
+NotebookOutlinePosition[      6398,        136]
+CellTagsIndexPosition[      6355,        133]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"choices", "=", 
+        RowBox[{"Sort", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"<|", 
+             RowBox[{
+              RowBox[{"\"\<talc\>\"", "\[Rule]", "1"}], ",", 
+              RowBox[{"\"\<graphite\>\"", "\[Rule]", "1.5"}], ",", 
+              RowBox[{"\"\<gypsum\>\"", "\[Rule]", "2"}], ",", 
+              RowBox[{"\"\<borax\>\"", "\[Rule]", "2.25"}], ",", 
+              RowBox[{"\"\<halite\>\"", "\[Rule]", "2.5"}], ",", 
+              RowBox[{"\"\<gold\>\"", "\[Rule]", "2.75"}], ",", 
+              RowBox[{"\"\<silver\>\"", "\[Rule]", "2.8"}], ",", 
+              RowBox[{"\"\<calcite\>\"", "\[Rule]", "3"}], ",", 
+              RowBox[{"\"\<lepidolite\>\"", "\[Rule]", "3.25"}], ",", 
+              RowBox[{"\"\<copper\>\"", "\[Rule]", "3.5`"}], ",", 
+              RowBox[{"\"\<aragonite\>\"", "\[Rule]", "3.625"}], ",", 
+              RowBox[{"\"\<azurite\>\"", "\[Rule]", "3.75`"}], ",", 
+              RowBox[{"\"\<zinc\>\"", "\[Rule]", "3.875"}], ",", 
+              RowBox[{"\"\<paraschachnerite\>\"", "\[Rule]", "4"}], ",", 
+              RowBox[{"\"\<wolframite\>\"", "\[Rule]", "4.125"}], ",", 
+              RowBox[{"\"\<platinum\>\"", "\[Rule]", "4.25"}], ",", 
+              RowBox[{"\"\<bismite\>\"", "\[Rule]", "4.5"}], ",", 
+              RowBox[{"\"\<obsidian\>\"", "\[Rule]", "5"}], ",", 
+              RowBox[{"\"\<nickle\>\"", "\[Rule]", "5.25"}], ",", 
+              RowBox[{"\"\<hematite\>\"", "\[Rule]", "5.5"}], ",", 
+              RowBox[{"\"\<iron\>\"", "\[Rule]", "6"}], ",", 
+              RowBox[{"\"\<feldspar\>\"", "\[Rule]", "6.25"}], ",", 
+              RowBox[{"\"\<pyrite\>\"", "\[Rule]", "6.5"}], ",", 
+              RowBox[{"\"\<andradite\>\"", "\[Rule]", "6.75"}], ",", 
+              RowBox[{"\"\<quartz\>\"", "\[Rule]", "7"}], ",", 
+              RowBox[{"\"\<tungsten\>\"", "\[Rule]", "7.5"}], ",", 
+              RowBox[{"\"\<pyrope\>\"", "\[Rule]", "7.75`"}], ",", 
+              RowBox[{"\"\<topaz\>\"", "\[Rule]", "8"}], ",", 
+              RowBox[{"\"\<corundum\>\"", "\[Rule]", "9"}], ",", 
+              RowBox[{"\"\<boron\>\"", "\[Rule]", "9.3"}], ",", 
+              RowBox[{"\"\<diamond\>\"", "\[Rule]", "10"}]}], "|>"}], ",", 
+            "4"}], "]"}], ",", "Greater"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<Which of these minerals is hardest (based on the Mohs hardness \
+scale)?\>\""}], ";", 
+       RowBox[{"mixedRaw", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{
+           RowBox[{"Keys", "[", "mixedRaw", "]"}], ",", 
+           RowBox[{
+            RowBox[{"Keys", "[", "choices", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"Keys", "[", "mixedRaw", "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Chem1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.68304236382742*^9, 3.683042365672826*^9}, 
+   3.6830423997984667`*^9, {3.6830426838079967`*^9, 3.683042719073106*^9}, {
+   3.6830428224277*^9, 3.68304283167036*^9}, {3.6830430724884233`*^9, 
+   3.683043079082786*^9}, {3.683043132955052*^9, 3.6830431434695177`*^9}, {
+   3.683043196453063*^9, 3.6830432069206963`*^9}, {3.68304327276889*^9, 
+   3.6830432864286633`*^9}, {3.683043411588221*^9, 3.683043425579693*^9}, 
+   3.683043507711275*^9, {3.683043577158846*^9, 3.683043586267514*^9}, {
+   3.683043706736215*^9, 3.683043757555933*^9}, {3.683043789922299*^9, 
+   3.683043861432176*^9}, {3.683043988199792*^9, 3.683044033175815*^9}, {
+   3.683044095484675*^9, 3.683044111083871*^9}, {3.68304460103688*^9, 
+   3.683044612123654*^9}, {3.6830449378853083`*^9, 3.683044970788917*^9}, {
+   3.683045165551903*^9, 3.683045178646902*^9}, {3.6830452515723133`*^9, 
+   3.683045262866868*^9}, {3.683045415163513*^9, 3.6830454165704317`*^9}, {
+   3.683045537841653*^9, 3.683045553512678*^9}, {3.6830456260699778`*^9, 
+   3.683045626612327*^9}, {3.683045669744493*^9, 3.683045679654982*^9}, {
+   3.683045728138955*^9, 3.68304573445716*^9}, {3.683045892467005*^9, 
+   3.683045909226021*^9}, {3.683045945358284*^9, 3.683045993950172*^9}, {
+   3.683046048338603*^9, 3.683046085338724*^9}, {3.6830461471749163`*^9, 
+   3.683046195207595*^9}, 3.683046235771084*^9, {3.683046329752521*^9, 
+   3.683046345215064*^9}, {3.683046400171954*^9, 3.683046412634276*^9}, {
+   3.683046476575302*^9, 3.683046491782031*^9}, {3.6830465415532846`*^9, 
+   3.683046557737296*^9}, {3.683046736882804*^9, 3.683046750546546*^9}, {
+   3.683046930276815*^9, 3.683046976845549*^9}, {3.683047115158574*^9, 
+   3.683047210898471*^9}, 3.683047281644578*^9, 
+   3.683047534347773*^9},ExpressionUUID->"cf544b44-eb8f-4a44-a3ff-\
+8aa8fbacf99c"]
+},
+WindowSize->{1202, 1046},
+WindowMargins->{{-2, Automatic}, {40, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5475, 98, 325, "Input",ExpressionUUID->"cf544b44-eb8f-4a44-a3ff-8aa8fbacf99c"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
