@@ -1,0 +1,203 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7446,        195]
+NotebookOptionsPosition[      7132,        181]
+NotebookOutlinePosition[      7492,        197]
+CellTagsIndexPosition[      7449,        194]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<common hepatic artery\>\"", ",", "\"\<liver\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<common carotid artery\>\"", ",", "\"\<head and neck\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<axillary artery\>\"", ",", "\"\<armpit and shoulder\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<brachial artery\>\"", ",", "\"\<upper and lower arm\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<radial artery\>\"", ",", "\"\<lower arm and hand\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<internal iliac artery\>\"", ",", 
+              "\"\<pelvis and genitals\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<femoral artery\>\"", ",", "\"\<upper and lower leg\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<popliteal artery\>\"", ",", "\"\<knee and lower leg\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<deep plantar artery\>\"", ",", "\"\<foot and toes\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<pulmonary artery\>\"", ",", "\"\<lungs\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<celiac artery\>\"", ",", 
+              "\"\<liver, stomach, esophagus, and spleen\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<renal artery\>\"", ",", "\"\<kindeys\>\""}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<lumbar artery\>\"", ",", 
+              "\"\<abdominal wall, spinal chord, and muscles of the \
+back\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<buccal artery\>\"", ",", "\"\<cheek\>\""}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<aorta\>\"", ",", "\"\<entire body\>\""}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<external carotid artery\>\"", ",", 
+              "\"\<face, scalp, skull, and meninges\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<internal carotid artery\>\"", ",", "\"\<brain\>\""}], "}"}],
+             ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<subclavian artery\>\"", ",", 
+              "\"\<arm, and secondarily the thorax and head\>\""}], "}"}], 
+            ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<deep volar arch\>\"", ",", "\"\<hand and fingers\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<bronchial artery\>\"", ",", "\"\<lungs\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<mediastinal arteries\>\"", ",", 
+              "\"\<lymph nodes and areolar tissue\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<esophageal artery\>\"", ",", "\"\<throat\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<superior phrenic arteries\>\"", ",", 
+              "\"\<diaphragm and anastomose\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<intercostal arteries\>\"", ",", 
+              "\"\<gaps between the ribs\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<median sacral artery\>\"", ",", 
+              "\"\<buttocks, rectum, and, in animals that have one, the \
+tail\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<dorsalis pedis artery\>\"", ",", "\"\<heel\>\""}], 
+             "}"}]}], "}"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<Which of these arteries primarily supplies blood to the ``?\>\
+\"", ",", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"First", "[", "#", "]"}], "&"}], "/@", "data"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Anat1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.683116815326659*^9, {3.683117099652656*^9, 3.683117120428382*^9}, {
+   3.683117390130435*^9, 3.683117435698802*^9}, {3.683117507311769*^9, 
+   3.683117583202173*^9}, {3.683117740802965*^9, 3.683117813045423*^9}, {
+   3.683118133213458*^9, 3.6831181599735193`*^9}, {3.683118222626112*^9, 
+   3.6831182474418917`*^9}, {3.683118308382016*^9, 3.683118379457287*^9}, {
+   3.683118454061138*^9, 3.683118480429401*^9}, {3.683118595500073*^9, 
+   3.683118645485367*^9}, {3.683118858199381*^9, 3.683118881672714*^9}, {
+   3.683119130580433*^9, 3.6831192243852797`*^9}, {3.683119384658184*^9, 
+   3.683119402593938*^9}, {3.683119627337015*^9, 3.683119653177596*^9}, {
+   3.683119743845192*^9, 3.683119745834669*^9}, {3.709041968871179*^9, 
+   3.709041970421229*^9}},ExpressionUUID->"b05cb350-44d6-4795-b416-\
+0017292c7405"]
+},
+WindowSize->{1897, 1270},
+WindowMargins->{{0, Automatic}, {Automatic, 50}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6570, 159, 346, "Input",ExpressionUUID->"b05cb350-44d6-4795-b416-0017292c7405"]
+}
+]
+*)
+

@@ -1,0 +1,502 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23911,        494]
+NotebookOptionsPosition[     23596,        480]
+NotebookOutlinePosition[     23955,        496]
+CellTagsIndexPosition[     23912,        493]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"<|", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"\"\<atlas\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<rectus capitis anterior\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<coccyx\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<levator ani\>\"", ",", "\"\<gluteus maximus\>\"", ",", 
+             "\"\<coccygeus\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<hyoid bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<anterior belly of digastric\>\"", ",", 
+             "\"\<posterior belly of digastric\>\"", ",", 
+             "\"\<stylohyoid\>\"", ",", "\"\<geniohyoid\>\"", ",", 
+             "\"\<sternohyoid\>\"", ",", "\"\<omohyoid\>\"", ",", 
+             "\"\<thyrohyoid\>\"", ",", "\"\<genioglossus\>\"", ",", 
+             "\"\<hyoglossus\>\"", ",", 
+             "\"\<middle pharyngeal constrictor\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<mandible\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<depressor labii inferioris\>\"", ",", "\"\<mentalis\>\"", 
+             ",", "\"\<orbicularis oris\>\"", ",", "\"\<platysma\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<occipital bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<splenius capitis\>\"", ",", 
+             "\"\<rectus capitis anterior\>\"", ",", 
+             "\"\<semispinalis capitis\>\"", ",", "\"\<trapezius\>\"", ",", 
+             "\"\<occipitalis\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<sacrum\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<multifidus\>\"", ",", "\"\<gluteus maximus\>\"", ",", 
+             "\"\<piriformis\>\"", ",", "\"\<coccygeus\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<sphenoid bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<levator palpebrae superioris\>\"", ",", 
+             "\"\<superior oblique\>\"", ",", "\"\<superior rectus\>\"", ",", 
+             "\"\<inferior rectus\>\"", ",", "\"\<medial rectus\>\"", ",", 
+             "\"\<lateral rectus\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"\"\<first rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<serratus anterior\>\"", ",", "\"\<subclavius\>\"", ",", 
+             "\"\<scalenus medius\>\"", ",", "\"\<scalenus anterior\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<second rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<serratus anterior\>\"", ",", "\"\<scalenus posterior\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<third rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<pectoralis minor\>\"", ",", "\"\<serratus anterior\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<fourth rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<pectoralis minor\>\"", ",", "\"\<serratus anterior\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<fifth rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<external oblique\>\"", ",", "\"\<pectoralis minor\>\"", ",", 
+             "\"\<serratus anterior\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<sixth rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<external oblique\>\"", ",", "\"\<serratus anterior\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<seventh rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<external oblique\>\"", ",", "\"\<serratus anterior\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<eighth rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<latissimus dorsi\>\"", ",", "\"\<serratus anterior\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<ninth rib\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<latissimus dorsi\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<tenth rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<latissimus dorsi\>\"", ",", "\"\<internal oblique\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<eleventh rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<latissimus dorsi\>\"", ",", "\"\<internal oblique\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<twelfth rib\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<latissimus dorsi\>\"", ",", "\"\<internal oblique\>\"", ",", 
+             "\"\<quadratus lumborum\>\"", ",", 
+             "\"\<iliocostalis lumborum\>\"", ",", 
+             "\"\<iliocostalis thoracis\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<clavicle\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<pectoralis major\>\"", ",", "\"\<subclavius\>\"", ",", 
+             "\"\<deltoid\>\"", ",", "\"\<sternocleidomastoid\>\"", ",", 
+             "\"\<trapezius\>\"", ",", "\"\<sternohyoid\>\""}], "}"}]}], ",", 
+          
+          RowBox[{"\"\<scapula\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<pectoralis minor\>\"", ",", "\"\<rhomboid major\>\"", ",", 
+             "\"\<rhomboid minor\>\"", ",", "\"\<serratus anterior\>\"", ",", 
+             "\"\<subscapularis\>\"", ",", "\"\<deltoid\>\"", ",", 
+             "\"\<levator scapulae\>\"", ",", "\"\<supraspinatus\>\"", ",", 
+             "\"\<infraspinatus muscle\>\"", ",", "\"\<teres major\>\"", ",", 
+             "\"\<teres minor\>\"", ",", "\"\<coracobrachialis\>\"", ",", 
+             "\"\<short head of biceps brachii\>\"", ",", 
+             "\"\<long head of biceps brachii\>\"", ",", 
+             "\"\<long head of triceps brachii\>\"", ",", "\"\<omohyoid\>\"", 
+             ",", "\"\<trapezius\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"\"\<humerus\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<latissimus dorsi\>\"", ",", "\"\<pectoralis major\>\"", ",", 
+             "\"\<subscapularis\>\"", ",", "\"\<deltoid\>\"", ",", 
+             "\"\<supraspinatus\>\"", ",", "\"\<infraspinatus muscle\>\"", 
+             ",", "\"\<teres major\>\"", ",", "\"\<teres minor\>\"", ",", 
+             "\"\<coracobrachialis\>\"", ",", "\"\<brachialis\>\"", ",", 
+             "\"\<medial head of triceps brachii\>\"", ",", 
+             "\"\<lateral head of triceps brachii\>\"", ",", 
+             "\"\<anconeus\>\"", ",", "\"\<pronator teres\>\"", ",", 
+             "\"\<flexor carpi radialis\>\"", ",", "\"\<palmaris longus\>\"", 
+             ",", "\"\<flexor carpi ulnaris\>\"", ",", 
+             "\"\<flexor digitorum superficialis\>\"", ",", 
+             "\"\<brachioradialis\>\"", ",", 
+             "\"\<extensor carpi radialis longus\>\"", ",", 
+             "\"\<extensor carpi radialis brevis\>\"", ",", 
+             "\"\<extensor digitorum\>\"", ",", 
+             "\"\<extensor digiti minimi\>\"", ",", 
+             "\"\<extensor carpi ulnaris\>\"", ",", "\"\<supinator\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<radius\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<biceps brachii\>\"", ",", 
+             "\"\<short head of biceps brachii\>\"", ",", 
+             "\"\<long head of biceps brachii\>\"", ",", 
+             "\"\<pronator teres\>\"", ",", "\"\<pronator quadratus\>\"", 
+             ",", "\"\<flexor digitorum superficialis\>\"", ",", 
+             "\"\<flexor pollicis longus\>\"", ",", "\"\<brachioradialis\>\"",
+              ",", "\"\<supinator\>\"", ",", 
+             "\"\<abductor pollicis longus\>\"", ",", 
+             "\"\<extensor pollicis brevis\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<ulna\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<brachialis\>\"", ",", 
+             "\"\<medial head of triceps brachii\>\"", ",", 
+             "\"\<lateral head of triceps brachii\>\"", ",", 
+             "\"\<long head of triceps brachii\>\"", ",", "\"\<anconeus\>\"", 
+             ",", "\"\<pronator teres\>\"", ",", "\"\<pronator quadratus\>\"",
+              ",", "\"\<flexor carpi ulnaris\>\"", ",", 
+             "\"\<flexor digitorum superficialis\>\"", ",", 
+             "\"\<flexor digitorum profundus\>\"", ",", 
+             "\"\<extensor carpi ulnaris\>\"", ",", "\"\<supinator\>\"", ",", 
+             "\"\<abductor pollicis longus\>\"", ",", 
+             "\"\<extensor pollicis longus\>\"", ",", 
+             "\"\<extensor indicis\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<trapezium\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<abductor pollicis brevis\>\"", ",", 
+             "\"\<flexor pollicis brevis\>\"", ",", 
+             "\"\<opponens pollicis\>\"", ",", 
+             "\"\<opponens digiti minimi of hand\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<proximal phalanx of thumb\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<flexor pollicis brevis\>\"", ",", 
+             "\"\<adductor pollicis\>\"", ",", 
+             "\"\<extensor pollicis brevis\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<proximal phalanx of index finger\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<first dorsal interosseous of hand\>\"", ",", 
+             "\"\<set of palmar interossei of hand\>\"", ",", 
+             "\"\<set of dorsal interossei of hand\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<proximal phalanx of middle finger\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<set of dorsal interossei of hand\>\"", "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<proximal phalanx of ring finger\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<fourth dorsal interosseous of hand\>\"", ",", 
+             "\"\<set of palmar interossei of hand\>\"", ",", 
+             "\"\<set of dorsal interossei of hand\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<proximal phalanx of little finger\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<extensor digiti minimi\>\"", ",", 
+             "\"\<set of palmar interossei of hand\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<first metacarpal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<flexor pollicis brevis\>\"", ",", 
+             "\"\<opponens pollicis\>\"", ",", 
+             "\"\<first dorsal interosseous of hand\>\"", ",", 
+             "\"\<abductor pollicis longus\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<second metacarpal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<adductor pollicis\>\"", ",", 
+             "\"\<first dorsal interosseous of hand\>\"", ",", 
+             "\"\<set of palmar interossei of hand\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<third metacarpal bone\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<adductor pollicis\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<fourth metacarpal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<fourth dorsal interosseous of hand\>\"", ",", 
+             "\"\<set of palmar interossei of hand\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<fifth metacarpal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<opponens digiti minimi of hand\>\"", ",", 
+             "\"\<fourth dorsal interosseous of hand\>\"", ",", 
+             "\"\<set of palmar interossei of hand\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<femur\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<gluteus medius\>\"", ",", "\"\<vastus lateralis\>\"", ",", 
+             "\"\<iliacus\>\"", ",", "\"\<obturator internus\>\"", ",", 
+             "\"\<obturator externus\>\"", ",", "\"\<gluteus maximus\>\"", 
+             ",", "\"\<gluteus minimus\>\"", ",", "\"\<gemellus superior\>\"",
+              ",", "\"\<gemellus inferior\>\"", ",", 
+             "\"\<quadratus femoris\>\"", ",", "\"\<piriformis\>\"", ",", 
+             "\"\<psoas major\>\"", ",", "\"\<biceps femoris\>\"", ",", 
+             "\"\<pectineus\>\"", ",", "\"\<adductor brevis\>\"", ",", 
+             "\"\<adductor longus\>\"", ",", "\"\<adductor magnus\>\"", ",", 
+             "\"\<gastrocnemius\>\"", ",", "\"\<plantaris\>\"", ",", 
+             "\"\<popliteus\>\"", ",", "\"\<vastus medialis\>\"", ",", 
+             "\"\<vastus intermedius\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<tibia\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<vastus lateralis\>\"", ",", "\"\<sartorius\>\"", ",", 
+             "\"\<semitendinosus\>\"", ",", "\"\<biceps femoris\>\"", ",", 
+             "\"\<semimembranosus\>\"", ",", "\"\<tibialis anterior\>\"", 
+             ",", "\"\<extensor digitorum longus\>\"", ",", 
+             "\"\<fibularis longus\>\"", ",", "\"\<soleus\>\"", ",", 
+             "\"\<popliteus\>\"", ",", "\"\<rectus femoris\>\"", ",", 
+             "\"\<vastus medialis\>\"", ",", "\"\<vastus intermedius\>\"", 
+             ",", "\"\<gracilis\>\"", ",", "\"\<flexor digitorum longus\>\"", 
+             ",", "\"\<tibialis posterior\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<fibula\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<biceps femoris\>\"", ",", "\"\<extensor hallucis longus\>\"",
+              ",", "\"\<extensor digitorum longus\>\"", ",", 
+             "\"\<fibularis longus\>\"", ",", "\"\<fibularis brevis\>\"", 
+             ",", "\"\<soleus\>\"", ",", "\"\<flexor hallucis longus\>\"", 
+             ",", "\"\<tibialis posterior\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<calcaneus bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<gastrocnemius\>\"", ",", "\"\<soleus\>\"", ",", 
+             "\"\<plantaris\>\"", ",", "\"\<abductor hallucis\>\"", ",", 
+             "\"\<flexor digitorum brevis\>\"", ",", 
+             "\"\<abductor digiti minimi of foot\>\"", ",", 
+             "\"\<flexor accessorius\>\"", ",", 
+             "\"\<extensor digitorum brevis\>\"", ",", 
+             "\"\<extensor hallucis brevis\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<first metatarsal bone\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<first dorsal interosseous of foot\>\"", "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<second metatarsal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<first dorsal interosseous of foot\>\"", ",", 
+             "\"\<tibialis posterior\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<third metatarsal bone\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<tibialis posterior\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<fourth metatarsal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<fourth dorsal interosseous of foot\>\"", ",", 
+             "\"\<tibialis posterior\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<fifth metatarsal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<flexor digiti minimi brevis of foot\>\"", ",", 
+             "\"\<fourth dorsal interosseous of foot\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<medial cuneiform bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<tibialis anterior\>\"", ",", "\"\<fibularis longus\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<lateral cuneiform bone\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor hallucis brevis\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<proximal phalanx of little toe\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<abductor digiti minimi of foot\>\"", ",", 
+             "\"\<flexor digiti minimi brevis of foot\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<middle phalanx of second toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum brevis\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<middle phalanx of third toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum brevis\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<middle phalanx of fourth toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum brevis\>\"", "}"}]}], ",", 
+          RowBox[{"\"\<distal phalanx of big toe\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<extensor hallucis longus\>\"", ",", 
+             "\"\<flexor hallucis longus\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<distal phalanx of second toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum longus\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<distal phalanx of third toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum longus\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<distal phalanx of fourth toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum longus\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<distal phalanx of little toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum longus\>\"", "}"}]}], ",", 
+          RowBox[{"\"\<proximal phalanx of big toe\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<abductor hallucis\>\"", ",", 
+             "\"\<flexor hallucis brevis\>\"", ",", 
+             "\"\<extensor hallucis brevis\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<temporal bone\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<occipitalis\>\"", "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<zygomatic bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<zygomaticus major\>\"", ",", "\"\<zygomaticus minor\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<nasal bone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<nasalis\>\"", ",", "\"\<procerus\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<maxilla\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<levator labii superioris alaeque nasi\>\"", ",", 
+             "\"\<levator anguli oris\>\"", ",", "\"\<inferior oblique\>\"", 
+             ",", "\"\<nasalis\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<middle phalanx of little toe\>\"", "\[Rule]", 
+           RowBox[{"{", "\"\<flexor digitorum brevis\>\"", "}"}]}]}], 
+         "|>"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"bone", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"Keys", "[", "data", "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"muscle", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", "bone", "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"DeleteDuplicates", "[", 
+                RowBox[{"Flatten", "[", 
+                 RowBox[{"Values", "[", "data", "]"}], "]"}], "]"}], ",", 
+               "4"}], "]"}], ",", "muscle"}], "]"}], "]"}], ",", "4"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{
+          "\"\<Which of these muscles is attached to the \>\"", "<>", "bone", 
+           "<>", "\"\<?\>\""}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Anat3\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.683123479090783*^9, {3.683123521856596*^9, 3.683123537271759*^9}, {
+   3.684843750270504*^9, 3.6848437502798557`*^9}, {3.6848438437612753`*^9, 
+   3.684843870266183*^9}, 3.684843937879751*^9, {3.684844285710104*^9, 
+   3.684844429969741*^9}, {3.68484446544191*^9, 3.684844662167111*^9}, {
+   3.684845139032798*^9, 3.6848452947919283`*^9}, {3.684845697324141*^9, 
+   3.684845786721294*^9}, {3.68484583796248*^9, 3.684845880182057*^9}, {
+   3.684845911726571*^9, 3.684845936943803*^9}, {3.684845967938881*^9, 
+   3.684846201970355*^9}, {3.684846256703938*^9, 3.684846276203133*^9}, {
+   3.684846362245283*^9, 3.684846363075032*^9}, {3.6848464522058764`*^9, 
+   3.684846452730214*^9}, {3.68484652174581*^9, 
+   3.684846534829715*^9}},ExpressionUUID->"a5d990d4-0441-4d61-8781-\
+e43393380477"]
+},
+WindowSize->{1212, 997},
+WindowMargins->{{2, Automatic}, {58, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 23034, 458, 2068, "Input",ExpressionUUID->"a5d990d4-0441-4d61-8781-e43393380477"]
+}
+]
+*)
+
