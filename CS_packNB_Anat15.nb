@@ -1,0 +1,168 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6752,        160]
+NotebookOptionsPosition[      6438,        146]
+NotebookOutlinePosition[      6798,        162]
+CellTagsIndexPosition[      6755,        159]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"<|", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"\"\<nucleus\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<contains the genetic material\>\"", ",", 
+               "\"\<serves as the information center\>\"", ",", 
+               "\"\<is where all DNA and RNA replication takes place\>\""}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<mitochondria\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<provides respiration\>\"", ",", 
+               "\"\<creates ATP by oxidative phosphorylation\>\""}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<rough endoplasmic reticulum\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<translates instructions for new proteins\>\"", ",", 
+               "\"\<folds new proteins\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<smooth endoplasmic reticulum\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<expresses lipids\>\"", "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<golgi apparatus\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<sorts and packages proteins\>\"", ",", 
+               "\"\<modifies proteins\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<vacuole\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<contains and transports waste\>\"", ",", 
+               "\"\<maintain hydrostatic pressure\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<acrosome\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<helps spermatozoa fuse with ova\>\"", "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<autophagosome\>\"", "\[Rule]", 
+             RowBox[{
+             "{", "\"\<sequesters cell material for degradation\>\"", "}"}]}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<centriole\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<anchors the cytoskeleton\>\"", ",", 
+               "\"\<forms spindle fibers during cell division\>\""}], "}"}]}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<cilium\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<moves the cell\>\"", ",", 
+               "\"\<moves material around the outside of the cell\>\"", ",", 
+               "\"\<provides a developmental signaling pathway\>\""}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<lysosome\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<breaks down large molecules\>\"", "}"}]}], ",",
+             "\[IndentingNewLine]", 
+            RowBox[{"\"\<melanosome\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<stores pigment\>\"", "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<nucleoslus\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<produces pre-ribosomes\>\"", "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<proteasome\>\"", "\[Rule]", 
+             RowBox[{
+             "{", "\"\<degrades old proteins by proteolysis\>\"", "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<ribosome\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<translates RNA into proteins\>\"", "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<vesicle\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<moves materials within the cell\>\"", "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<stress granule\>\"", "\[Rule]", 
+             RowBox[{"{", "\"\<stores mRNA\>\"", "}"}]}]}], "|>"}], ",", 
+          "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"\"\<Which of these cell organelles \>\"", "<>", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"data", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<?\>\""}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Anat15\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQB2IQzZZooOk95bXjlMNyxiBaSZat0gdI7+59VAOiT04o
+6ADRDoKFPSD6ypfnE0H0RLPpC0G0zelLGr5AOs4h2gBE3471twDRbC2BLiDa
+auLZlSlAWqYqcBeIdrPVPQiieWsELoDovt1e10C0+qLNYNqAh/U5iL7Sa/UK
+RD/bpfEeRG9J8v8Eopdkh/0A0UdO/2BIBdKT/+5lTQPSnM5v2UB0rqc2L4gu
+O9EuBKJ3MK2TBNESBzeqgegnNzdpg+hf/iKWIJqL/Y8NiFY48MgRRC+4cmF3
+OpAOWvPpBYhmaAj6CKLNtGf+AtHKZVOZMkD8nEVCILqJ9b4YiC7hYhEH0fPY
+q2VBdJuvkQKI1rscrAui+SqPgWkA/Ze1sQ==
+  
+  "],ExpressionUUID->"c8da633a-d554-4d48-9db0-ea82d7adf63b"]
+},
+WindowSize->{1246, 1058},
+WindowMargins->{{2, Automatic}, {46, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5876, 124, 577, "Input",ExpressionUUID->"c8da633a-d554-4d48-9db0-ea82d7adf63b"]
+}
+]
+*)
+

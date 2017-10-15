@@ -1,0 +1,181 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6674,        173]
+NotebookOptionsPosition[      6360,        159]
+NotebookOutlinePosition[      6720,        175]
+CellTagsIndexPosition[      6677,        172]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ordinalizeF", "=", 
+        RowBox[{
+         RowBox[{"Module", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"mod", "=", 
+             RowBox[{
+              RowBox[{"Boole", "[", 
+               RowBox[{"!", 
+                RowBox[{"MemberQ", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"11", ",", "12"}], "}"}], ",", 
+                  RowBox[{"Mod", "[", 
+                   RowBox[{
+                    RowBox[{"Abs", "[", "#", "]"}], ",", "100"}], "]"}]}], 
+                 "]"}]}], "]"}], " ", 
+              RowBox[{"Mod", "[", 
+               RowBox[{
+                RowBox[{"Abs", "[", "#", "]"}], ",", "10"}], "]"}]}]}], "}"}],
+            ",", 
+           RowBox[{"With", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"suffix", "=", 
+               RowBox[{"Switch", "[", 
+                RowBox[{
+                "mod", ",", "1", ",", "\"\<st\>\"", ",", "2", ",", 
+                 "\"\<nd\>\"", ",", "3", ",", "\"\<rd\>\"", ",", "_", ",", 
+                 "\"\<th\>\""}], "]"}]}], "}"}], ",", 
+             RowBox[{"Row", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"ToString", "@", "#"}], ",", "suffix"}], "}"}], 
+              "]"}]}], "]"}]}], "]"}], "&"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"perc", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "99"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"age", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "36"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"sex", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Entity", "[", 
+            RowBox[{"\"\<Gender\>\"", ",", "\"\<Male\>\""}], "]"}], ",", 
+           RowBox[{"Entity", "[", 
+            RowBox[{"\"\<Gender\>\"", ",", "\"\<Female\>\""}], "]"}]}], "}"}],
+          "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"sexStr", "=", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"sex", "===", 
+           RowBox[{"Entity", "[", 
+            RowBox[{"\"\<Gender\>\"", ",", "\"\<Male\>\""}], "]"}]}], ",", 
+          "\"\<boy\>\"", ",", "\"\<girl\>\""}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"circ", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"QuantityMagnitude", "[", 
+           RowBox[{"HumanGrowthData", "[", 
+            RowBox[{
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{"\"\<Age\>\"", "\[Rule]", 
+                RowBox[{"Quantity", "[", 
+                 RowBox[{"age", ",", "\"\<Months\>\""}], "]"}]}], ",", 
+               RowBox[{"\"\<Gender\>\"", "\[Rule]", "sex"}]}], "|>"}], ",", 
+             "\"\<HeadCircumference\>\"", ",", 
+             RowBox[{"N", "[", 
+              RowBox[{"perc", "/", "100"}], "]"}]}], "]"}], "]"}], ",", 
+          ".01"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<A `1`-month old baby `2` with a `3`-inch circumference head is \
+in what percentile?\>\"", ",", "age", ",", "sexStr", ",", "circ"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Quantity", "[", 
+           RowBox[{"#", ",", "\"\<Percent\>\""}], "]"}], "&"}], "/@", 
+         RowBox[{"Take", "[", 
+          RowBox[{
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"RandomSample", "[", 
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "99"}], "]"}], ",", "4"}], "]"}], ",", 
+              "perc"}], "]"}], "]"}], ",", "4"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Anat13\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7016177283156757`*^9, 3.7016177432364893`*^9}, 
+   3.701617778717754*^9, {3.7016178143732233`*^9, 3.701617910073786*^9}, {
+   3.7016180622566557`*^9, 3.701618218634346*^9}, {3.701618264804184*^9, 
+   3.701618287703603*^9}, {3.701618337863927*^9, 3.7016183823930607`*^9}, {
+   3.701618483366314*^9, 3.701618529878907*^9}, {3.701618569890979*^9, 
+   3.701618578273919*^9}, {3.701618668046194*^9, 3.7016186856149282`*^9}, {
+   3.701618769471435*^9, 3.701618807029704*^9}, {3.701618870487671*^9, 
+   3.701618902576746*^9}, {3.701621717984707*^9, 3.701621718645385*^9}, {
+   3.701621774833749*^9, 3.7016220318442993`*^9}, {3.701622118625826*^9, 
+   3.701622127443254*^9}, 3.701622193774487*^9, {3.701622294700173*^9, 
+   3.701622309307103*^9}},ExpressionUUID->"9fc35c45-409c-4c82-b57c-\
+68e38dda6882"]
+},
+WindowSize->{1254, 1047},
+WindowMargins->{{0, Automatic}, {48, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5798, 137, 346, "Input",ExpressionUUID->"9fc35c45-409c-4c82-b57c-68e38dda6882"]
+}
+]
+*)
+

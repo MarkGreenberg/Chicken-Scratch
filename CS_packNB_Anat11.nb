@@ -1,0 +1,300 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12503,        292]
+NotebookOptionsPosition[     12188,        278]
+NotebookOutlinePosition[     12548,        294]
+CellTagsIndexPosition[     12505,        291]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"<|", "|>"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"data", "=", 
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{
+               "\"\<epinephrine\>\"", "\[Rule]", 
+                "\"\<the adrenal gland\>\""}], ",", 
+               RowBox[{
+               "\"\<melatonin\>\"", "\[Rule]", "\"\<the pineal gland\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<triiodothyronine\>\"", "\[Rule]", 
+                "\"\<the peripheral tissue of the thyroid gland\>\""}], ",", 
+               RowBox[{
+               "\"\<thyroxine\>\"", "\[Rule]", "\"\<the thyroid gland\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<prostaglandins\>\"", "\[Rule]", 
+                "\"\<the seminal vesicle\>\""}], ",", 
+               RowBox[{
+               "\"\<leukotrienes\>\"", "\[Rule]", 
+                "\"\<white blood cells\>\""}], ",", 
+               RowBox[{
+               "\"\<prostacyclin\>\"", "\[Rule]", "\"\<the endothelium\>\""}],
+                ",", 
+               RowBox[{
+               "\"\<thromboxane\>\"", "\[Rule]", "\"\<platelets\>\""}], ",", 
+               RowBox[{"\"\<amylin\>\"", "\[Rule]", "\"\<the pancreas\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<anti-M\[UDoubleDot]llerian hormone\>\"", "\[Rule]", 
+                "\"\<the testes\>\""}], ",", 
+               RowBox[{
+               "\"\<adiponectin\>\"", "\[Rule]", "\"\<adipose tissue\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<adrenocorticotropic hormone\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<angiotensinogen\>\"", "\[Rule]", "\"\<the liver\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<antidiuretic hormone\>\"", "\[Rule]", 
+                "\"\<the posterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<atrial-matriuretic peptide\>\"", "\[Rule]", 
+                "\"\<the heart\>\""}], ",", 
+               RowBox[{
+               "\"\<brain natriuretic peptide\>\"", "\[Rule]", 
+                "\"\<the heart\>\""}], ",", 
+               RowBox[{
+               "\"\<calcitonin\>\"", "\[Rule]", "\"\<thyroid gland\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<cholecystokinin\>\"", "\[Rule]", "\"\<duodenum\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<corticotropin-releasing hormone\>\"", "\[Rule]", 
+                "\"\<the hypothalamus\>\""}], ",", 
+               RowBox[{
+               "\"\<cortistatin\>\"", "\[Rule]", 
+                "\"\<the cerebral cortex\>\""}], ",", 
+               RowBox[{
+               "\"\<enkephalin\>\"", "\[Rule]", "\"\<the kidneys\>\""}], ",", 
+               
+               RowBox[{
+               "\"\<endothelin\>\"", "\[Rule]", 
+                "\"\<vascular endothelium\>\""}], ",", 
+               RowBox[{
+               "\"\<erythropoietin\>\"", "\[Rule]", "\"\<the kidneys\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<follicle-stimulating hormone\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary\>\""}], ",", 
+               RowBox[{
+               "\"\<galanin\>\"", "\[Rule]", 
+                "\"\<the gastrointestinal tract\>\""}], ",", 
+               RowBox[{
+               "\"\<gastric inhibitory polypeptide\>\"", "\[Rule]", 
+                "\"\<the mucosa of the jejunum\>\""}], ",", 
+               RowBox[{
+               "\"\<gastrin\>\"", "\[Rule]", 
+                "\"\<the stomach and duodenum\>\""}], ",", 
+               RowBox[{"\"\<ghrelin\>\"", "\[Rule]", "\"\<the stomach\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<glucagon\>\"", "\[Rule]", "\"\<the pancreas\>\""}], ",", 
+               RowBox[{
+               "\"\<glucagon-like peptide-1\>\"", "\[Rule]", 
+                "\"\<the ileum\>\""}], ",", 
+               RowBox[{
+               "\"\<gonadothropin-releasing hormone\>\"", "\[Rule]", 
+                "\"\<the hypothalamus\>\""}], ",", 
+               RowBox[{
+               "\"\<growth hormone-releasing hormone\>\"", "\[Rule]", 
+                "\"\<the hypothalamus\>\""}], ",", 
+               RowBox[{"\"\<hepcidin\>\"", "\[Rule]", "\"\<the liver\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<human chorionic gonadotropin\>\"", "\[Rule]", 
+                "\"\<the placenta\>\""}], ",", 
+               RowBox[{
+               "\"\<human placental lactogen\>\"", "\[Rule]", 
+                "\"\<the placenta\>\""}], ",", 
+               RowBox[{
+               "\"\<growth hormone\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<inhibin\>\"", "\[Rule]", 
+                "\"\<the testes or ovaries\>\""}], ",", 
+               RowBox[{"\"\<insulin\>\"", "\[Rule]", "\"\<the pancreas\>\""}],
+                ",", 
+               RowBox[{
+               "\"\<insulin-like growth factor\>\"", "\[Rule]", 
+                "\"\<the liver\>\""}], ",", 
+               RowBox[{
+               "\"\<leptin\>\"", "\[Rule]", "\"\<adipose tissue\>\""}], ",", 
+               RowBox[{
+               "\"\<lipotropin\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<luteinizing hormone\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<melanocyte stimulating hormone\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<motilin\>\"", "\[Rule]", "\"\<the small intestine\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<orexin\>\"", "\[Rule]", "\"\<the hypothalamus\>\""}], ",", 
+               RowBox[{
+               "\"\<osteocalcin\>\"", "\[Rule]", "\"\<the skeleton\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<oxytocin\>\"", "\[Rule]", 
+                "\"\<the posterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<pancreatic polypeptide\>\"", "\[Rule]", 
+                "\"\<the pancreas\>\""}], ",", 
+               RowBox[{
+               "\"\<parathyroid hormone\>\"", "\[Rule]", 
+                "\"\<the parathyroid gland\>\""}], ",", 
+               RowBox[{
+               "\"\<prolactin\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<prolactin releasing hormone\>\"", "\[Rule]", 
+                "\"\<the hypothalamus\>\""}], ",", 
+               RowBox[{
+               "\"\<relaxin\>\"", "\[Rule]", "\"\<the corpus luteum\>\""}], 
+               ",", 
+               RowBox[{"\"\<renin\>\"", "\[Rule]", "\"\<the kidneys\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<secretin\>\"", "\[Rule]", "\"\<the duodenum\>\""}], ",", 
+               RowBox[{
+               "\"\<somatostatin\>\"", "\[Rule]", "\"\<the langerhans\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<thrombopoietin\>\"", "\[Rule]", "\"\<the liver\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<thyroid-stimulating hormone\>\"", "\[Rule]", 
+                "\"\<the anterior pituitary gland\>\""}], ",", 
+               RowBox[{
+               "\"\<thyrotropin-releasing hormone\>\"", "\[Rule]", 
+                "\"\<the hypothalamus\>\""}], ",", 
+               RowBox[{
+               "\"\<vasoactive intestinal peptide\>\"", "\[Rule]", 
+                "\"\<the pancreas\>\""}], ",", 
+               RowBox[{"\"\<guanylin\>\"", "\[Rule]", "\"\<the gut\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<uroguanylin\>\"", "\[Rule]", "\"\<renal tissues\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<testosterone\>\"", "\[Rule]", "\"\<the testes\>\""}], ",", 
+               RowBox[{
+               "\"\<dehydroepiandrosterone\>\"", "\[Rule]", 
+                "\"\<the testes\>\""}], ",", 
+               RowBox[{
+               "\"\<androstenedione\>\"", "\[Rule]", 
+                "\"\<the adrenal gland\>\""}], ",", 
+               RowBox[{
+               "\"\<aldosterone\>\"", "\[Rule]", 
+                "\"\<the adrenal cortex\>\""}], ",", 
+               RowBox[{
+               "\"\<estradiol\>\"", "\[Rule]", "\"\<the ovaries\>\""}], ",", 
+               RowBox[{"\"\<estrone\>\"", "\[Rule]", "\"\<the ovaries\>\""}], 
+               ",", 
+               RowBox[{"\"\<estriol\>\"", "\[Rule]", "\"\<the placenta\>\""}],
+                ",", 
+               RowBox[{
+               "\"\<cortisol\>\"", "\[Rule]", "\"\<the adrenal cortex\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<progesterone\>\"", "\[Rule]", "\"\<the ovaries\>\""}], 
+               ",", 
+               RowBox[{"\"\<calcitriol\>\"", "\[Rule]", "\"\<the skin\>\""}], 
+               ",", 
+               RowBox[{"\"\<calcidiol\>\"", "\[Rule]", "\"\<the skin\>\""}]}],
+               "|>"}], ",", "4"}], "]"}], "]"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"\"\<Which of these hormones originates in \>\"", "<>", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "<>", "\"\<?\>\""}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Anat11\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.701541114232835*^9, 3.7015411315438547`*^9}, {
+  3.701541510851623*^9, 3.701541516671421*^9}, {3.7015415878617163`*^9, 
+  3.701541806734159*^9}, {3.701541847649406*^9, 3.701542009304229*^9}, {
+  3.701542046346314*^9, 3.701542801816277*^9}, {3.7015432215208197`*^9, 
+  3.701543756416853*^9}, {3.701562348575603*^9, 3.7015624531095*^9}, {
+  3.701562494052256*^9, 3.701563721678033*^9}, {3.7015637726885*^9, 
+  3.701563867482623*^9}, {3.701563900580405*^9, 3.701563925611717*^9}, {
+  3.7015976482353687`*^9, 3.701597669144228*^9}, {3.701597816136896*^9, 
+  3.701597887070655*^9}, {3.701597970170951*^9, 
+  3.701597991454982*^9}},ExpressionUUID->"f33e681e-28a6-4c99-b29c-\
+639bfbad8c45"]
+},
+WindowSize->{1233, 1075},
+WindowMargins->{{2, Automatic}, {Automatic, 35}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 11626, 256, 766, "Input",ExpressionUUID->"f33e681e-28a6-4c99-b29c-639bfbad8c45"]
+}
+]
+*)
+
