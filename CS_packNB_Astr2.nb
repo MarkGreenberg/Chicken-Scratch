@@ -1,0 +1,103 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3480,         93]
+NotebookOptionsPosition[      3167,         79]
+NotebookOutlinePosition[      3527,         95]
+CellTagsIndexPosition[      3484,         92]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ansStr", "=", 
+        RowBox[{"EntityValue", "[", 
+         RowBox[{
+          RowBox[{"MoonPhase", "[", 
+           RowBox[{"Yesterday", ",", "\"\<Name\>\""}], "]"}], ",", 
+          "\"\<Name\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Append", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<new moon\>\"", ",", "\"\<waxing crescent moon\>\"", ",", 
+                 "\"\<first quarter moon\>\"", ",", 
+                 "\"\<waxing gibbous moon\>\"", ",", "\"\<full moon\>\"", 
+                 ",", "\"\<waning gibbous moon\>\"", ",", 
+                 "\"\<last quarter moon\>\"", ",", 
+                 "\"\<waning crescent moon\>\""}], "}"}], ",", "4"}], "]"}], 
+             ",", "ansStr"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", "\"\<What phase was the moon in last night?\>\""}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr2\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.683037885965567*^9, 3.683037887772128*^9}, 
+   3.6830382666602097`*^9, {3.684261907587042*^9, 3.6842619132454567`*^9}, {
+   3.684262170161963*^9, 3.6842621747901897`*^9}, {3.684262212391231*^9, 
+   3.684262282082259*^9}, {3.684262315365302*^9, 3.684262349237561*^9}, {
+   3.684262398401547*^9, 3.6842624000482607`*^9}, {3.6842625209119577`*^9, 
+   3.684262528430682*^9}},ExpressionUUID->"453dcb74-993b-458e-817d-\
+58418933bc0b"]
+},
+WindowSize->{1199, 933},
+WindowMargins->{{-3, Automatic}, {Automatic, 66}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2605, 57, 304, "Input",ExpressionUUID->"453dcb74-993b-458e-817d-58418933bc0b"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

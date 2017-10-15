@@ -1,0 +1,212 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8319,        202]
+NotebookOptionsPosition[      8004,        188]
+NotebookOutlinePosition[      8365,        204]
+CellTagsIndexPosition[      8322,        201]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"pic", "=", 
+        RowBox[{"Hold", "[", 
+         RowBox[{"Style", "[", 
+          RowBox[{
+           RowBox[{"Grid", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"HoldForm", "[", 
+                  RowBox[{
+                   FractionBox[
+                    SubscriptBox["L", "1"], 
+                    SubscriptBox["L", "2"]], "\[Equal]", 
+                   FractionBox[
+                    SubsuperscriptBox["D", "1", "2"], 
+                    SubsuperscriptBox["D", "2", "2"]]}], "]"}], ",", 
+                 "SpanFromLeft"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 SubscriptBox["L", "1"], ",", 
+                 "\"\<light gathering power\\nof telescope 1\>\""}], "}"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 SubscriptBox["L", "2"], ",", 
+                 "\"\<light gathering power\\nof telescope 2\>\""}], "}"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 SubscriptBox["D", "1"], ",", 
+                 "\"\<objective diameter of\\ntelescope 1\>\""}], "}"}], ",", 
+               
+               RowBox[{"{", 
+                RowBox[{
+                 SubscriptBox["D", "2"], ",", 
+                 "\"\<objective diameter of\\ntelescope 2\>\""}], "}"}]}], 
+              "}"}], ",", 
+             RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+             RowBox[{"FrameStyle", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"LightGray", ",", 
+                RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
+             RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+             RowBox[{"Spacings", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "72"}], 
+          "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"diams", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Quantity", "[", 
+           RowBox[{"#", ",", "\"\<Inches\>\""}], "]"}], "&"}], "/@", 
+         RowBox[{"Sort", "[", 
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"Range", "[", 
+             RowBox[{"4", ",", "80"}], "]"}], ",", "2"}], "]"}], "]"}]}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"rat", "=", 
+        RowBox[{
+         RowBox[{"diams", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "/", 
+         RowBox[{"diams", "[", 
+          RowBox[{"[", "1", "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Telescope 1's lens is `1` across. Telescope 2's is `2`. How \
+much more light can telescope 2 collect?\>\"", ",", 
+          RowBox[{"diams", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{"diams", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"diams", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], "2"], "/", 
+           SuperscriptBox[
+            RowBox[{"diams", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "2"]}], ",", ".1"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"choiceNos", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"N", "[", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"RandomSample", "[", 
+               RowBox[{
+                RowBox[{"Round", "[", 
+                 RowBox[{
+                  RowBox[{"Divide", "[", 
+                   RowBox[{
+                    RowBox[{"rat", "*", 
+                    RowBox[{"Range", "[", 
+                    RowBox[{"1", ",", "100"}], "]"}]}], ",", "10"}], "]"}], 
+                  ",", ".1"}], "]"}], ",", "4"}], "]"}], ",", "ansNo"}], 
+             "]"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"ToString", "[", "#", "]"}], "<>", 
+           "\"\< times as much light\>\""}], "&"}], "/@", "choiceNos"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Astr8\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6939157014508343`*^9, 3.693915703241551*^9}, {
+   3.69391576783753*^9, 3.6939157723963623`*^9}, {3.693916723257765*^9, 
+   3.693916741323904*^9}, {3.693916966621079*^9, 3.6939169965991697`*^9}, {
+   3.693917140924306*^9, 3.693917256062417*^9}, 3.6939173251698027`*^9, {
+   3.693917367328505*^9, 3.693917427127399*^9}, {3.693917828352645*^9, 
+   3.693917913499714*^9}, 3.693918876696685*^9, {3.6939190028160467`*^9, 
+   3.693919054035619*^9}, {3.693919092358041*^9, 3.693919143080656*^9}, {
+   3.693919249061553*^9, 3.6939192547152443`*^9}, {3.693919285926894*^9, 
+   3.693919348834159*^9}, {3.693919436150783*^9, 3.6939194543092337`*^9}, {
+   3.693919501577922*^9, 3.6939195197366343`*^9}, {3.693919570316832*^9, 
+   3.6939197507251263`*^9}, {3.693919958632248*^9, 3.693919965805879*^9}, {
+   3.6939202383167753`*^9, 3.6939203627355747`*^9}, {3.693920414106125*^9, 
+   3.693920510726753*^9}, {3.693920570009112*^9, 3.693920593353488*^9}, {
+   3.6939206255401907`*^9, 3.693920642244673*^9}, {3.693920715561414*^9, 
+   3.693920797115103*^9}, {3.693920831966951*^9, 3.6939208441005096`*^9}, {
+   3.693920891657226*^9, 3.69392090248133*^9}, {3.693920956380815*^9, 
+   3.693920960027125*^9}, {3.693921079514181*^9, 3.693921091057067*^9}, 
+   3.693921124674446*^9, {3.693921220774908*^9, 3.6939213724936047`*^9}, {
+   3.693921409711385*^9, 3.693921472491658*^9}, {3.693921505540799*^9, 
+   3.6939215186924334`*^9}, {3.693921573600453*^9, 3.6939216366818523`*^9}, {
+   3.6939216728846827`*^9, 3.6939217556392937`*^9}, {3.693921873526986*^9, 
+   3.693921873941017*^9}, {3.693921940832428*^9, 3.6939219428884783`*^9}, {
+   3.693922004907618*^9, 3.693922005411379*^9}, {3.6939221375773973`*^9, 
+   3.6939221746352177`*^9}, {3.693922233238962*^9, 3.693922234743251*^9}, {
+   3.693922332203657*^9, 3.6939223689877872`*^9}, {3.693922544524908*^9, 
+   3.693922554466425*^9}, {3.6939931677438087`*^9, 
+   3.693993180416772*^9}},ExpressionUUID->"3a9d82a2-aa8d-4d45-b33e-\
+805e7ce352eb"]
+},
+WindowSize->{1202, 1077},
+WindowMargins->{{-1, Automatic}, {23, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7442, 166, 488, "Input",ExpressionUUID->"3a9d82a2-aa8d-4d45-b33e-805e7ce352eb"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
