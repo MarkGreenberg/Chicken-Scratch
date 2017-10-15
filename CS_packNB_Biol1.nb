@@ -1,0 +1,624 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     28788,        616]
+NotebookOptionsPosition[     28472,        602]
+NotebookOutlinePosition[     28832,        618]
+CellTagsIndexPosition[     28789,        615]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<aardvark\>\"", ",", "\"\<Orycteropus afer\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<African buffalo\>\"", ",", "\"\<Syncerus caffer\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<agile wallaby\>\"", ",", "\"\<Macropus agilis\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Amazonian manatee\>\"", ",", 
+              "\"\<Trichechus inunguis\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<American bison\>\"", ",", "\"\<Bison bison\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<American bullfrog\>\"", ",", "\"\<Rana catesbeiana\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Andean condor\>\"", ",", "\"\<Vultur gryphus\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<antelope jack rabbit\>\"", ",", "\"\<Lepus alleni\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<arctic hare\>\"", ",", "\"\<Lepus arcticus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Asian elephant\>\"", ",", "\"\<Elephas maximus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Atlantic salmon\>\"", ",", "\"\<Salmo salar\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<aye-aye\>\"", ",", "\"\<Daubentonia madagascariensis\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<baboon\>\"", ",", "\"\<Papio hamadryas\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<beluga\>\"", ",", "\"\<Huso huso\>\""}], "}"}], ",",
+             "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<black rhinoceros\>\"", ",", "\"\<Diceros bicornis\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<blue devilfish\>\"", ",", "\"\<Assessor macneilli\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<blue whale\>\"", ",", "\"\<Balaenoptera musculus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<blue wildebeest\>\"", ",", 
+              "\"\<Connochaetes taurinus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<bobcat\>\"", ",", "\"\<Lynx rufus\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<bottlenose dolphin\>\"", ",", 
+              "\"\<Tursiops truncatus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<brown bear\>\"", ",", "\"\<Ursus arctos\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<brown thrasher\>\"", ",", "\"\<Toxostoma rufum\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<brown trout\>\"", ",", "\"\<Salmo trutta\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<California gull\>\"", ",", "\"\<Larus californicus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<canary\>\"", ",", "\"\<Serinus canaria\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<carpenter bee\>\"", ",", "\"\<Xylocopa micans\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<castor bean tick\>\"", ",", "\"\<Ixodes ricinus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<common chimpanzee\>\"", ",", "\"\<Pan troglodytes\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<common dolphin\>\"", ",", "\"\<Delphinus capensis\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<cow\>\"", ",", "\"\<Bos taurus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<coyote\>\"", ",", "\"\<Canis latrans\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<deepwater sole\>\"", ",", 
+              "\"\<Bathysolea profundicola\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<dog\>\"", ",", "\"\<Canis lupus familiaris\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<domestic goat\>\"", ",", "\"\<Capra hircus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<double-crested cormorant\>\"", ",", 
+              "\"\<Phalacrocorax auritus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<dragon stingray\>\"", ",", "\"\<Himantura draco\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<dromedary\>\"", ",", "\"\<Camelus dromedarius\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<earth-boring dung beetle\>\"", ",", 
+              "\"\<Geotrupes stercorarius\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<eastern chipmunk\>\"", ",", "\"\<Tamias striatus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<emu\>\"", ",", "\"\<Dromaius novaehollandiae\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<European earwig\>\"", ",", 
+              "\"\<Forficula auricularia\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<European starling\>\"", ",", "\"\<Sturnus vulgaris\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<firemouth\>\"", ",", "\"\<Amphilophus macracanthus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<flower hat jelly\>\"", ",", "\"\<Olindias formosa\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<giant squid\>\"", ",", "\"\<Architeuthis dux\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<gila monster\>\"", ",", "\"\<Heloderma suspectum\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<glossy ibis\>\"", ",", "\"\<Plegadis falcinellus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<greater roadrunner\>\"", ",", 
+              "\"\<Geococcyx californianus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<great white shark\>\"", ",", 
+              "\"\<Carcharodon carcharias\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<green anaconda\>\"", ",", "\"\<Eunectes murinus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<green sea turtle\>\"", ",", "\"\<Chelonia mydas\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<grunting ox\>\"", ",", "\"\<Bos grunniens\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<horned puffin\>\"", ",", "\"\<Fratercula corniculata\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<housefly\>\"", ",", "\"\<Musca domestica\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<house sparrow\>\"", ",", "\"\<Passer domesticus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<human\>\"", ",", "\"\<Homo sapiens\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Kenyan big-eared free-tailed bat\>\"", ",", 
+              "\"\<Tadarida lobata\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<laughing dove\>\"", ",", 
+              "\"\<Streptopelia senegalensis\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<leopard moray eel\>\"", ",", 
+              "\"\<Enchelycore pardalis\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<lion\>\"", ",", "\"\<Panthera leo\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<llama\>\"", ",", "\"\<Lama glama\>\""}], "}"}], ",",
+             "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<macaroni penguin\>\"", ",", 
+              "\"\<Eudyptes chrysolophus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<maroon hermit crab\>\"", ",", "\"\<Pagurus hemphilli\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<mealybug destroyer\>\"", ",", 
+              "\"\<Cryptolaemus montrouzieri\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Mexican redknee tarantula\>\"", ",", 
+              "\"\<Brachypelma smithi\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<mindoro bleeding-heart\>\"", ",", 
+              "\"\<Gallicolumba platenae\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<moose\>\"", ",", "\"\<Alces alces\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<muskox\>\"", ",", "\"\<Ovibos moschatus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Norway rat\>\"", ",", "\"\<Rattus norvegicus\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Pitt Island shag\>\"", ",", 
+              "\"\<Phalacrocorax featherstoni\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<plains zebra\>\"", ",", "\"\<Equus quagga\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<prickly-stick insect\>\"", ",", 
+              "\"\<Acanthoxyla prasina\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<pronghorn\>\"", ",", "\"\<Antilocapra americana\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<pygmy tarsier\>\"", ",", "\"\<Tarsius pumilus\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<raven\>\"", ",", "\"\<Corvus corax\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<red deer\>\"", ",", "\"\<Cervus elaphus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<red fox\>\"", ",", "\"\<Vulpes vulpes\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<red kangaroo\>\"", ",", "\"\<Macropus rufus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<red oscar\>\"", ",", "\"\<Astronotus ocellatus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<red stingray\>\"", ",", "\"\<Dasyatis akajei\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<red-tailed hawk\>\"", ",", "\"\<Buteo jamaicensis\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<red wolf\>\"", ",", "\"\<Canis rufus\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<reticulate knifefish\>\"", ",", 
+              "\"\<Papyrocranus afer\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<ringtail\>\"", ",", "\"\<Bassariscus astutus\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<rockfish\>\"", ",", "\"\<Acanthoclinus littoreus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<San Esteban Island chuckwalla\>\"", ",", 
+              "\"\<Sauromalus varius\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Savannah monitor\>\"", ",", 
+              "\"\<Varanus exanthematicus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<seven-banded armadillo\>\"", ",", 
+              "\"\<Dasypus septemcinctus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<sheep\>\"", ",", "\"\<Ovis aries\>\""}], "}"}], ",",
+             "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<siamang\>\"", ",", "\"\<Hylobates syndactylus\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Siamese fightingfish\>\"", ",", "\"\<Betta splendens\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<silver marlin fish\>\"", ",", "\"\<Makaira indica\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<smallmouth bass\>\"", ",", "\"\<Micropterus dolomieu\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<small-scaled dwarf leaf-toed gecko\>\"", ",", 
+              "\"\<Goggia microlepidota\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<southern cassowary\>\"", ",", 
+              "\"\<Casuarius casuarius\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<southern fire ant\>\"", ",", "\"\<Solenopsis xyloni\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<southern opah\>\"", ",", "\"\<Lampris immaculatus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<spoonbill\>\"", ",", "\"\<Platalea leucorodia\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<spotted sand tiger shark\>\"", ",", 
+              "\"\<Carcharias taurus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<striped possum\>\"", ",", 
+              "\"\<Dactylopsila trivirgata\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<sugar glider\>\"", ",", "\"\<Petaurus breviceps\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<tenspotted lady beetle\>\"", ",", 
+              "\"\<Coelophora pupillata\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<turkey vulture\>\"", ",", "\"\<Cathartes aura\>\""}], "}"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<walrus\>\"", ",", "\"\<Odobenus rosmarus\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<western diamondback rattlesnake\>\"", ",", 
+              "\"\<Crotalus atrox\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<white-tailed deer\>\"", ",", 
+              "\"\<Odocoileus virginianus\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<wild boar\>\"", ",", "\"\<Sus scrofa\>\""}], "}"}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<wolf spider\>\"", ",", "\"\<Pirata simplex\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<yellow-lipped sea krait\>\"", ",", 
+              "\"\<Laticauda colubrina\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<yellow mealworm\>\"", ",", "\"\<Tenebrio molitor\>\""}], 
+             "}"}]}], "\[IndentingNewLine]", "}"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"sciName", "=", 
+        RowBox[{"data", "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", " ", "data"}]}], ";", 
+       
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<Which of these animals has the scientific name ``?\>\"", ",", 
+            
+            RowBox[{"Style", "[", 
+             RowBox[{"sciName", ",", "Italic"}], "]"}]}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Biol1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6831263325220747`*^9, 3.683126337399029*^9}, 
+   3.6831264524416523`*^9, {3.684177726293874*^9, 3.684177750623644*^9}, {
+   3.684178282770389*^9, 3.684178283763523*^9}, {3.684178349718788*^9, 
+   3.684178352765977*^9}, {3.684178391753091*^9, 3.684178394512004*^9}, {
+   3.6841784453636312`*^9, 3.684178447546576*^9}, {3.684178487549876*^9, 
+   3.6841784890936127`*^9}, {3.6841789306118517`*^9, 3.684178933242365*^9}, {
+   3.6841789973265953`*^9, 3.684179000413493*^9}, {3.684179049241289*^9, 
+   3.684179052912407*^9}, {3.684179104468316*^9, 3.684179107259123*^9}, {
+   3.6841791890723057`*^9, 3.684179192975212*^9}, {3.684179309390038*^9, 
+   3.684179320258699*^9}, {3.684179381969652*^9, 3.684179390009*^9}, {
+   3.6841797354348183`*^9, 3.6841797457271967`*^9}, {3.68417990533109*^9, 
+   3.6841799082421913`*^9}, {3.684179945172883*^9, 3.684179948180101*^9}, {
+   3.6841801528872623`*^9, 3.6841801543030767`*^9}, {3.684180224730693*^9, 
+   3.6841802298641*^9}, {3.684180357689331*^9, 3.684180360376149*^9}, {
+   3.6841806339429293`*^9, 3.684180638141603*^9}, {3.684181287125822*^9, 
+   3.684181289692808*^9}, {3.6841814048359833`*^9, 3.684181408066986*^9}, {
+   3.684181517313479*^9, 3.684181521080257*^9}, {3.684182489947385*^9, 
+   3.684182495663314*^9}, {3.684182611058015*^9, 3.6841826417741756`*^9}, {
+   3.6841826768239737`*^9, 3.684182679958755*^9}, {3.6841827309416122`*^9, 
+   3.684182733257525*^9}, {3.684182763628072*^9, 3.6841827850598707`*^9}, {
+   3.684182853920627*^9, 3.684182858678059*^9}, {3.6841832421711407`*^9, 
+   3.6841832450022917`*^9}, {3.68418339892267*^9, 3.684183402297764*^9}, {
+   3.684183463629991*^9, 3.684183466349021*^9}, {3.684183531993314*^9, 
+   3.6841835580413103`*^9}, {3.684183598044446*^9, 3.6841836009554873`*^9}, {
+   3.684183719867194*^9, 3.684183723225884*^9}, {3.6841838898028173`*^9, 
+   3.684183891906003*^9}, {3.684183932685454*^9, 3.684183935524023*^9}, {
+   3.684183991463986*^9, 3.684183994414852*^9}, {3.6841841663925447`*^9, 
+   3.684184168383287*^9}, {3.684184254861102*^9, 3.684184264371993*^9}, {
+   3.6841843430409393`*^9, 3.684184345911705*^9}, {3.684184402036023*^9, 
+   3.6841844050029497`*^9}, {3.684184703042219*^9, 3.684184705385188*^9}, {
+   3.684184759968711*^9, 3.684184765257016*^9}, {3.6841848983876877`*^9, 
+   3.684184901322871*^9}, {3.684184945437827*^9, 3.684184954291483*^9}, {
+   3.684228566986679*^9, 3.684228570190683*^9}, {3.6842286722287827`*^9, 
+   3.684228690294343*^9}, {3.68422886891324*^9, 3.684228875310753*^9}, {
+   3.684228925740617*^9, 3.68422892932135*^9}, {3.684229068603194*^9, 
+   3.684229071864111*^9}, {3.684230955703898*^9, 3.684230957302945*^9}, {
+   3.684231083198951*^9, 3.684231086212121*^9}, {3.684231278920621*^9, 
+   3.6842312826775293`*^9}, {3.684231353932469*^9, 3.684231357905422*^9}, {
+   3.6842314776585283`*^9, 3.684231480663566*^9}, {3.684236060489811*^9, 
+   3.684236064070723*^9}, {3.6842362872202673`*^9, 3.684236303478681*^9}, {
+   3.684236584202936*^9, 3.6842365866963*^9}, {3.684236904081641*^9, 
+   3.684236938751746*^9}, {3.684237098731485*^9, 3.684237104823489*^9}, {
+   3.6842372105135*^9, 3.6842372132704363`*^9}, {3.6842373066142397`*^9, 
+   3.684237310219545*^9}, {3.684237371753335*^9, 3.684237374765938*^9}, {
+   3.684238010687674*^9, 3.684238015245035*^9}, {3.684238062514628*^9, 
+   3.68423806576788*^9}, {3.684238182224887*^9, 3.684238210327059*^9}, {
+   3.6842383092145243`*^9, 3.6842383118593407`*^9}, {3.684238452373761*^9, 
+   3.6842384556267557`*^9}, {3.684238714401964*^9, 3.684238752616146*^9}, {
+   3.684238888915606*^9, 3.684238892128709*^9}, {3.684238947790388*^9, 
+   3.6842389501147623`*^9}, {3.6842389954005136`*^9, 3.684238997725939*^9}, {
+   3.684239051467248*^9, 3.684239080282332*^9}, {3.684239199810882*^9, 
+   3.6842392024560137`*^9}, {3.684239338681509*^9, 3.684239341487183*^9}, {
+   3.6842394648077717`*^9, 3.68423946726083*^9}, {3.6842395494202547`*^9, 
+   3.684239552041791*^9}, {3.684239632392446*^9, 3.684239635069723*^9}, {
+   3.684239721772336*^9, 3.684239726137684*^9}, {3.6842399532481413`*^9, 
+   3.684239956373169*^9}, {3.6842399953857927`*^9, 3.6842399975985937`*^9}, {
+   3.684240131801128*^9, 3.6842401351339293`*^9}, {3.68424022646165*^9, 
+   3.684240229090404*^9}, {3.684240459232265*^9, 3.6842404745246487`*^9}, {
+   3.6842406570667067`*^9, 3.684240660639103*^9}, {3.684240878428739*^9, 
+   3.684240884738308*^9}, {3.684241044050006*^9, 3.684241075066472*^9}, {
+   3.684241161667018*^9, 3.6842411815515833`*^9}, {3.684241279232842*^9, 
+   3.6842412819660463`*^9}, {3.684241350588954*^9, 3.684241353256922*^9}, {
+   3.684241469651024*^9, 3.684241472079932*^9}, {3.6842415402144747`*^9, 
+   3.684241542883175*^9}, {3.684241670027617*^9, 3.684241672360467*^9}, {
+   3.68424350755262*^9, 3.6842435103890533`*^9}, {3.6842449781172743`*^9, 
+   3.684244979099782*^9}, {3.684245014558537*^9, 3.684245019538951*^9}, {
+   3.6842453490614967`*^9, 3.684245371007745*^9}, {3.684245517541563*^9, 
+   3.684245520610034*^9}, {3.684245866670121*^9, 3.684245895611555*^9}, {
+   3.684246453330442*^9, 3.684246456359853*^9}, {3.684246521157874*^9, 
+   3.684246523954452*^9}, {3.6842468516544456`*^9, 3.684246854635447*^9}, {
+   3.6842485440305357`*^9, 3.6842485467871933`*^9}, {3.684248634660062*^9, 
+   3.684248666904851*^9}, {3.6842487937156363`*^9, 3.6842487970487022`*^9}, {
+   3.6842490216697693`*^9, 3.6842490335058613`*^9}, {3.684249129755934*^9, 
+   3.684249172691963*^9}, {3.6842492055981007`*^9, 3.684249364722801*^9}, {
+   3.684249499090274*^9, 3.6842495479815083`*^9}, {3.684249690287615*^9, 
+   3.68424969082574*^9}, {3.684249939886393*^9, 3.684249943437358*^9}, {
+   3.6842500222898006`*^9, 3.684250024985879*^9}, {3.684250142167643*^9, 
+   3.6842501468474503`*^9}, {3.6842502049135838`*^9, 3.684250207729475*^9}, {
+   3.684250344224298*^9, 3.684250347472869*^9}, {3.68425061658945*^9, 
+   3.684250667630632*^9}, {3.6842507793807497`*^9, 3.684250781022154*^9}, {
+   3.68425097807224*^9, 3.684250993007538*^9}, {3.684251108821006*^9, 
+   3.6842511117172527`*^9}, {3.684251265572948*^9, 3.684251268709242*^9}, {
+   3.684251335025034*^9, 3.684251339968872*^9}, {3.684251402739972*^9, 
+   3.684251406332273*^9}, {3.684251458373377*^9, 3.6842514606139183`*^9}, {
+   3.684251528601741*^9, 3.684251533706115*^9}, {3.684251585541033*^9, 
+   3.6842515891888657`*^9}, {3.684251678825788*^9, 3.684251682977746*^9}, {
+   3.684252117637822*^9, 3.6842521206780653`*^9}, {3.684252171705636*^9, 
+   3.684252174618297*^9}, {3.684252229451882*^9, 3.6842522323315363`*^9}, {
+   3.684252292950406*^9, 3.684252296071219*^9}, {3.68425237615482*^9, 
+   3.684252380267519*^9}, {3.6842526071096697`*^9, 3.6842526533424807`*^9}, {
+   3.684253929643964*^9, 3.684253969748316*^9}, {3.684254093195174*^9, 
+   3.684254126235331*^9}, {3.6842542699557247`*^9, 3.684254273244252*^9}, {
+   3.6842544351012993`*^9, 3.68425443862164*^9}, {3.684254490127048*^9, 
+   3.6842544925271053`*^9}, {3.6842547160106993`*^9, 3.684254752643148*^9}, {
+   3.684255110103958*^9, 
+   3.684255249483212*^9}},ExpressionUUID->"194f71b5-f51b-4706-b6cf-\
+b97738bd50a7"]
+},
+WindowSize->{1237, 955},
+WindowMargins->{{-2, Automatic}, {Automatic, 42}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 27910, 580, 2572, "Input",ExpressionUUID->"194f71b5-f51b-4706-b6cf-b97738bd50a7"]
+}
+]
+*)
+

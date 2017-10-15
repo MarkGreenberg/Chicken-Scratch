@@ -1,0 +1,156 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7077,        148]
+NotebookOptionsPosition[      6764,        134]
+NotebookOutlinePosition[      7123,        150]
+CellTagsIndexPosition[      7080,        147]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"choices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<acacia\>\"", ",", "\"\<agave\>\"", ",", "\"\<alder\>\"", ",", 
+            "\"\<alfalfa\>\"", ",", "\"\<allspice\>\"", ",", "\"\<apple\>\"", 
+            ",", "\"\<artichoke\>\"", ",", "\"\<asclepias\>\"", ",", 
+            "\"\<aspen\>\"", ",", "\"\<banana\>\"", ",", "\"\<baobab\>\"", 
+            ",", "\"\<beech\>\"", ",", "\"\<birch\>\"", ",", 
+            "\"\<boswellia\>\"", ",", "\"\<bougainvillea\>\"", ",", 
+            "\"\<cabbage\>\"", ",", "\"\<carob\>\"", ",", "\"\<cashew\>\"", 
+            ",", "\"\<cattail\>\"", ",", "\"\<cherimoya\>\"", ",", 
+            "\"\<clover\>\"", ",", "\"\<coriander\>\"", ",", 
+            "\"\<creosote\>\"", ",", "\"\<datura\>\"", ",", 
+            "\"\<dichondra\>\"", ",", "\"\<dogwood\>\"", ",", 
+            "\"\<durian\>\"", ",", "\"\<elm\>\"", ",", "\"\<eucalyptus\>\"", 
+            ",", "\"\<ficus\>\"", ",", "\"\<fiddlehead\>\"", ",", 
+            "\"\<fir\>\"", ",", "\"\<foxglove\>\"", ",", "\"\<freesia\>\"", 
+            ",", "\"\<geranium\>\"", ",", "\"\<ginger\>\"", ",", 
+            "\"\<ginkgo\>\"", ",", "\"\<grape\>\"", ",", "\"\<hydrangea\>\"", 
+            ",", "\"\<ivy\>\"", ",", "\"\<jujube\>\"", ",", "\"\<juniper\>\"",
+             ",", "\"\<kelp\>\"", ",", "\"\<kudzu\>\"", ",", 
+            "\"\<lavender\>\"", ",", "\"\<lemon\>\"", ",", "\"\<liana\>\"", 
+            ",", "\"\<lilac\>\"", ",", "\"\<lilium\>\"", ",", 
+            "\"\<loquat\>\"", ",", "\"\<lychee\>\"", ",", "\"\<maize\>\"", 
+            ",", "\"\<mango\>\"", ",", "\"\<mangosteen\>\"", ",", 
+            "\"\<mangrove\>\"", ",", "\"\<manzanita\>\"", ",", 
+            "\"\<maple\>\"", ",", "\"\<millet\>\"", ",", "\"\<mimosa\>\"", 
+            ",", "\"\<myrrh\>\"", ",", "\"\<oak\>\"", ",", "\"\<ocotillo\>\"",
+             ",", "\"\<peach\>\"", ",", "\"\<peanut\>\"", ",", 
+            "\"\<pistachio\>\"", ",", "\"\<pomegranate\>\"", ",", 
+            "\"\<pomelo\>\"", ",", "\"\<pyracantha\>\"", ",", 
+            "\"\<ragweed\>\"", ",", "\"\<redwood\>\"", ",", "\"\<rice\>\"", 
+            ",", "\"\<rose\>\"", ",", "\"\<saguaro\>\"", ",", 
+            "\"\<sorghum\>\"", ",", "\"\<spruce\>\"", ",", "\"\<tamarind\>\"",
+             ",", "\"\<taraxacum\>\"", ",", "\"\<taro\>\"", ",", 
+            "\"\<thistle\>\"", ",", "\"\<tumbleweed\>\"", ",", 
+            "\"\<verbena\>\"", ",", "\"\<vetch\>\"", ",", "\"\<vinca\>\""}], 
+           "}"}], ",", "4"}], "]"}]}], ";", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<This word cloud was generated from a Wikipedia article on one \
+of these four plants. Which one?\>\"", ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"WordCloud", "[", 
+           RowBox[{
+            RowBox[{"DeleteStopwords", "[", 
+             RowBox[{"StringDelete", "[", 
+              RowBox[{
+               RowBox[{"WikipediaData", "[", "h1", "]"}], ",", 
+               RowBox[{"RegularExpression", "[", 
+                RowBox[{
+                "\"\<(\>\"", "<>", "h1", "<>", 
+                 "\"\<e?s?i?|species|000)\>\""}], "]"}], ",", 
+               RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "]"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"choices", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Biol4\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.683133794855246*^9, 3.683133837222241*^9, 3.6831338974329987`*^9, {
+   3.683133996664068*^9, 3.683134014503545*^9}, {3.6831340474382257`*^9, 
+   3.683134052697577*^9}, {3.68313410257524*^9, 3.68313410726022*^9}, {
+   3.683134142831895*^9, 3.683134178151494*^9}, {3.683134233132019*^9, 
+   3.683134238538184*^9}, {3.683134364059764*^9, 3.683134370200904*^9}, {
+   3.6831344240542097`*^9, 3.683134430243217*^9}, {3.683134619894516*^9, 
+   3.683134624308669*^9}, {3.683134846136672*^9, 3.683134856415916*^9}, {
+   3.6831349415014*^9, 3.683134944451421*^9}, {3.6831349792564983`*^9, 
+   3.6831349827735443`*^9}, {3.683135048042906*^9, 3.683135052753203*^9}, {
+   3.683135101590313*^9, 3.683135108907854*^9}, {3.6831352046368017`*^9, 
+   3.683135211089018*^9}, {3.683135260973041*^9, 3.683135263658985*^9}, {
+   3.684874206376001*^9, 3.684874209340123*^9}, {3.684874256897546*^9, 
+   3.684874259238352*^9}, {3.684874315172913*^9, 3.684874316962665*^9}, {
+   3.684874526398305*^9, 3.684874532963434*^9}, {3.684874581720756*^9, 
+   3.684874585326089*^9}, {3.684874689254923*^9, 3.684874697187626*^9}, {
+   3.684874737985311*^9, 3.684874741677788*^9}, {3.6848748570223017`*^9, 
+   3.684874862403386*^9}, {3.684875114322753*^9, 3.68487511743178*^9}, {
+   3.684875195460483*^9, 3.6848752004699993`*^9}, {3.6848752469784193`*^9, 
+   3.6848752581186934`*^9}, {3.715627350600232*^9, 3.715627372141286*^9}, {
+   3.715673645457631*^9, 3.715673756599861*^9}, {3.7156738373368073`*^9, 
+   3.715673868377035*^9}},ExpressionUUID->"5fa3fe6a-606b-472e-8c85-\
+6d08fe737ac0"]
+},
+WindowSize->{1221, 924},
+WindowMargins->{{2, Automatic}, {Automatic, 77}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6202, 112, 409, "Input",ExpressionUUID->"5fa3fe6a-606b-472e-8c85-6d08fe737ac0"]
+}
+]
+*)
+

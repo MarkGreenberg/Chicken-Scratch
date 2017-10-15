@@ -1,0 +1,1338 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     68440,       1330]
+NotebookOptionsPosition[     68122,       1316]
+NotebookOutlinePosition[     68483,       1332]
+CellTagsIndexPosition[     68440,       1329]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"<|", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"\"\<adder\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", 
+             "\"\<Xenophidia (Colubroidea = Caenophidia)\>\"", ",", 
+             "\"\<vipers\>\"", ",", "\"\<Vipera\>\"", ",", "\"\<adder\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<African buffalo\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Syncerus\>\"", ",", "\"\<African buffalo\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<American mink\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<badgers, otters, weasels...\>\"",
+              ",", "\"\<Mustela\>\"", ",", "\"\<American mink\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Andean condor\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<herons, storks...\>\"", ",", "\"\<stork\>\"", ",", 
+             "\"\<Vultur\>\"", ",", "\"\<andean condor\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<antilopine kangaroo\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<marsupials\>\"", ",", "\"\<Diprotodontia\>\"", ",", 
+             "\"\<kangaroos, wallabies\>\"", ",", "\"\<Macropus\>\"", ",", 
+             "\"\<antilopine kangaroo\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<armadillo girdled lizard\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", "\"\<spiny lizards\>\"", ",", 
+             "\"\<Cordylus\>\"", ",", "\"\<armadillo girdled lizard\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Asian elephant\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<elephants\>\"", ",", "\"\<elephants\>\"", ",", 
+             "\"\<Elephas\>\"", ",", "\"\<asian elephant\>\""}], "}"}]}], ",",
+           "\[IndentingNewLine]", 
+          RowBox[{"\"\<aye-aye\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<primates\>\"", ",", "\"\<aye-ayes\>\"", ",", 
+             "\"\<Daubentonia\>\"", ",", 
+             "\"\<Daubentonia madagascariensis\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<babirusa\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<pigs, hogs, boars...\>\"", ",", "\"\<Babyrousa\>\"", ",", 
+             "\"\<babirusa\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<barasingha\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<deer, elk, moose...\>\"", ",", "\"\<Cervus\>\"", ",", 
+             "\"\<barasingha\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<basking shark\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<cartilaginous fishes\>\"", ",", 
+             "\"\<mackerel sharks\>\"", ",", "\"\<Cetorhinidae\>\"", ",", 
+             "\"\<Cetorhinus\>\"", ",", "\"\<basking shark\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<birch mouse\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", 
+             "\"\<birch mice, jerboas,  jumping mice...\>\"", ",", 
+             "\"\<birch mouse\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<American bison\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Bison\>\"", ",", "\"\<American bison\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<black rhinoceros\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<odd-toed ungulates\>\"", ",", "\"\<rhinoceroses\>\"", ",", 
+             "\"\<Diceros\>\"", ",", "\"\<black rhinoceros\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<black widow\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<spiders, scorpions, mites, ticks...\>\"", ",", 
+             "\"\<spiders\>\"", ",", "\"\<Theridiidae\>\"", ",", 
+             "\"\<Latrodectus\>\"", ",", "\"\<black widow\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<black wildebeest\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<wildebeests\>\"", ",", "\"\<black wildebeest\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<blobfish\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<scorpionfishes, sculpins...\>\"", ",", 
+             "\"\<Psychrolutidae\>\"", ",", "\"\<Psychrolutes\>\"", ",", 
+             "\"\<blobfish\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<blue glaucus\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<slugs, snails, limpets, nudibranchs, molluscs...\>\"", ",", 
+             "\"\<naked-gill sea slugs\>\"", ",", "\"\<Glaucidae\>\"", ",", 
+             "\"\<Glaucus\>\"", ",", "\"\<blue glaucus\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<bolinopsis comb jelly\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<comb jellies\>\"", ",", 
+             "\"\<comb jellies with tentacles\>\"", ",", "\"\<lobates\>\"", 
+             ",", "\"\<Bolinopsidae\>\"", ",", "\"\<Bolinopsis\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<bottlenose dolphin\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<whales, dolphins, porpoises...\>\"", ",", 
+             "\"\<dolphins, killer whales, pilot whales...\>\"", ",", 
+             "\"\<Tursiops\>\"", ",", "\"\<bottlenose dolphin\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<bristle-thighed curlew\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<herons, storks...\>\"", ",", "\"\<Scolopacidae\>\"", ",", 
+             "\"\<Numenius\>\"", ",", "\"\<bristle-thighed curlew\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<brittle star\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<cnidarians\>\"", ",", "\"\<hydrozoans\>\"", ",", 
+             "\"\<siphonophores\>\"", ",", "\"\<Physaliidae\>\"", ",", 
+             "\"\<Physalia\>\"", ",", "\"\<Physalia physalis\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<brown bear\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<bears\>\"", ",", "\"\<Ursus\>\"",
+              ",", "\"\<brown bear\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<california gull\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<herons, storks...\>\"", ",", "\"\<gulls\>\"", ",", 
+             "\"\<gull\>\"", ",", "\"\<california gull\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<cape lobster\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<woodlice, shrimps, lobsters, crabs...\>\"", ",", 
+             "\"\<shrimps, lobsters, crabs, hermit crabs...\>\"", ",", 
+             "\"\<Nephropoidea\>\"", ",", "\"\<lobsters\>\"", ",", 
+             "\"\<cape lobster\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Carolina terrapin\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<tortoises, turtles, terrapins...\>\"", ",", 
+             "\"\<Testudinoidea\>\"", ",", 
+             "\"\<pond turtles, box turtles...\>\"", ",", "\"\<Terrapene\>\"",
+              ",", "\"\<Terrapene carolina\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<castor bean tick\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<spiders, scorpions, mites, ticks...\>\"", ",", 
+             "\"\<ticks\>\"", ",", "\"\<scale ticks\>\"", ",", 
+             "\"\<Ixodes\>\"", ",", "\"\<castor bean tick\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Clark's sea pig\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<echinoderms\>\"", ",", "\"\<sea cucumber\>\"", ",", 
+             "\"\<Elasipodida\>\"", ",", "\"\<Elpidiidae\>\"", ",", 
+             "\"\<sea pigs\>\"", ",", "\"\<Scotoplanes clarki\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<common cuttlefish\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<octopuses, squids, cuttlefishes...\>\"", ",", 
+             "\"\<cuttlefishes\>\"", ",", "\"\<cuttlefishes\>\"", ",", 
+             "\"\<typical cuttlefishes\>\"", ",", 
+             "\"\<common cuttlefish\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<common raccoon\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", 
+             "\"\<raccoons, coatis, kinkajous, olingos, ringtails, \
+cacomistles...\>\"", ",", "\"\<Procyon\>\"", ",", "\"\<common raccoon\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<conch\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<slugs, snails, limpets, nudibranchs, molluscs...\>\"", ",", 
+             "\"\<Neotaenioglossa\>\"", ",", "\"\<Strombidae\>\"", ",", 
+             "\"\<Strombus\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<cottonmouth\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", 
+             "\"\<Xenophidia (Colubroidea = Caenophidia)\>\"", ",", 
+             "\"\<vipers\>\"", ",", "\"\<Agkistrodon\>\"", ",", 
+             "\"\<Agkistrodon piscivorus\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<cow\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Bos\>\"", ",", "\"\<cow\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<daddy longlegs\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<spiders, scorpions, mites, ticks...\>\"", ",", 
+             "\"\<spiders\>\"", ",", "\"\<Pholcidae\>\"", ",", 
+             "\"\<daddy long legs\>\"", ",", 
+             "\"\<Pholcus phalangioides\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<dama gazelle\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<gazelle\>\"", ",", "\"\<dama gazelle\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<dog\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", 
+             "\"\<coyotes, dogs, foxes, jackals, wolves...\>\"", ",", 
+             "\"\<Canis\>\"", ",", "\"\<gray wolf\>\"", ",", "\"\<dog\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<dromedary\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<camels, llamas, alpacas, guanacos, vicunas...\>\"", ",", 
+             "\"\<Camelus\>\"", ",", "\"\<dromedary\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<dung beetle\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<beetles\>\"", ",", "\"\<Scarabaeoidea\>\"", ",", 
+             "\"\<scarab\>\"", ",", "\"\<Onitis\>\"", ",", 
+             "\"\<Onitis alexis\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<dwarf cassowary\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<ostriches, emus, rheas...\>\"", ",", "\"\<Casuariidae\>\"", 
+             ",", "\"\<Casuarius\>\"", ",", "\"\<dwarf cassowary\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<eland\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Taurotragus\>\"", ",", "\"\<eland\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<ermine\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<badgers, otters, weasels...\>\"",
+              ",", "\"\<Mustela\>\"", ",", "\"\<ermine\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<eurasian red squirrel\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", "\"\<squirrels\>\"", ",", 
+             "\"\<Sciurus\>\"", ",", "\"\<eurasian red squirrel\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<fattail scorpion\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<spiders, scorpions, mites, ticks...\>\"", ",", 
+             "\"\<scorpions\>\"", ",", "\"\<Buthidae\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<fossa\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<civets, genets, linsangs...\>\"",
+              ",", "\"\<Fossa\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<garter snake\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", 
+             "\"\<Xenophidia (Colubroidea = Caenophidia)\>\"", ",", 
+             "\"\<nonvenomous snakes\>\"", ",", "\"\<Thamnophis\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<gaur\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Bos\>\"", ",", "\"\<gaur\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<gemsbok\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Oryx\>\"", ",", "\"\<gemsbok\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<gerenuk\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Litocranius\>\"", ",", "\"\<gerenuk\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<giant isopod\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<woodlice, shrimps, lobsters, crabs...\>\"", ",", 
+             "\"\<sowbugs, pillbugs, woodlice, gribbles, slaters...\>\"", 
+             ",", "\"\<Cirolanidae\>\"", ",", "\"\<Bathynomus\>\"", ",", 
+             "\"\<Bathynomus giganteus\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<giant monitor lizard\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", "\"\<monitor lizards\>\"", 
+             ",", "\"\<Varanus\>\"", ",", "\"\<Varanus giganteus\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<giant panda\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<bears\>\"", ",", 
+             "\"\<Ailuropoda\>\"", ",", "\"\<giant panda\>\""}], "}"}]}], ",",
+           "\[IndentingNewLine]", 
+          RowBox[{"\"\<gila monster\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", "\"\<gila monsters\>\"", ",", 
+             "\"\<Heloderma\>\"", ",", "\"\<Heloderma suspectum\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<giraffe\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<giraffes, okapis\>\"", ",", "\"\<Giraffa\>\"", ",", 
+             "\"\<giraffe\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<gobi jerboa\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", 
+             "\"\<birch mice, jerboas,  jumping mice...\>\"", ",", 
+             "\"\<Allactaga\>\"", ",", "\"\<Allactaga bullata\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<goblin shark\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<cartilaginous fishes\>\"", ",", 
+             "\"\<mackerel sharks\>\"", ",", "\"\<Mitsukurinidae\>\"", ",", 
+             "\"\<Mitsukurina\>\"", ",", "\"\<goblin shark\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<goldfish\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<carps, suckers, loaches...\>\"", ",", "\"\<Cyprinidae\>\"", 
+             ",", "\"\<Carassius\>\"", ",", "\"\<goldfish\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<grain weevil\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<beetles\>\"", ",", "\"\<Curculionoidea\>\"", ",", 
+             "\"\<Dryophthoridae\>\"", ",", "\"\<Sitophilus\>\"", ",", 
+             "\"\<grain weevil\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<gray whale\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<whales, dolphins, porpoises...\>\"", ",", 
+             "\"\<gray whales\>\"", ",", "\"\<gray whale\>\"", ",", 
+             "\"\<gray whale\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<greater adjutant\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<herons, storks...\>\"", ",", "\"\<stork\>\"", ",", 
+             "\"\<Leptoptilos\>\"", ",", "\"\<greater adjutant\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<great star coral\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<cnidarians\>\"", ",", "\"\<corals\>\"", ",", 
+             "\"\<true corals\>\"", ",", "\"\<crator corals\>\"", ",", 
+             "\"\<Montastraea\>\"", ",", "\"\<Montastraea cavernosa\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<green iguana\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", "\"\<iguanas\>\"", ",", 
+             "\"\<Iguana\>\"", ",", "\"\<Iguana iguana\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<Grevy's zebra\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<odd-toed ungulates\>\"", ",", 
+             "\"\<asses, horses, zebras...\>\"", ",", "\"\<Equus\>\"", ",", 
+             "\"\<Grevy's zebra\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<hermit crab\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<woodlice, shrimps, lobsters, crabs...\>\"", ",", 
+             "\"\<shrimps, lobsters, crabs, hermit crabs...\>\"", ",", 
+             "\"\<Paguroidea\>\"", ",", "\"\<Paguridae\>\"", ",", 
+             "\"\<hermit crabs\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<hippopotamus\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<hippopotamuses\>\"", ",", "\"\<Hippopotamus\>\"", ",", 
+             "\"\<hippopotamus\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<hookworm\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<roundworms\>\"", ",", "\"\<roundworms\>\"", ",", 
+             "\"\<strongylids\>\"", ",", "\"\<Uncinariidae\>\"", ",", 
+             "\"\<Necator\>\"", ",", "\"\<Necator americanus\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<horse\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<odd-toed ungulates\>\"", ",", 
+             "\"\<asses, horses, zebras...\>\"", ",", "\"\<Equus\>\"", ",", 
+             "\"\<horse (domestic)\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<horse-fly\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<true flies\>\"", ",", "\"\<horse-fly\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<human\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<primates\>\"", ",", 
+             "\"\<humans, chimpanzees, gorillas, orangutans\>\"", ",", 
+             "\"\<Homo\>\"", ",", "\"\<human\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<kagu\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<cranes, rails, coots...\>\"", ",", 
+             "\"\<Rhynochetidae\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<koala\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<marsupials\>\"", ",", "\"\<Diprotodontia\>\"", ",", 
+             "\"\<koalas\>\"", ",", "\"\<Phascolarctos\>\"", ",", 
+             "\"\<koala\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<large flying fox\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", "\"\<bats\>\"", 
+             ",", "\"\<fruit bats\>\"", ",", "\"\<Pteropus\>\"", ",", 
+             "\"\<large flying fox\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<limpet\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<slugs, snails, limpets, nudibranchs, molluscs...\>\"", ",", 
+             "\"\<sea snails\>\"", ",", "\"\<Patellidae\>\"", ",", 
+             "\"\<Patella\>\"", ",", "\"\<limpet\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<lion\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<cats\>\"", ",", 
+             "\"\<Panthera\>\"", ",", "\"\<lion\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<lodgepole chipmunk\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", "\"\<squirrels\>\"", ",", 
+             "\"\<chipmunk\>\"", ",", "\"\<lodgepole chipmunk\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<long-tailed pangolin\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<pangolins, scaly anteaters...\>\"", ",", 
+             "\"\<pangolins\>\"", ",", "\"\<pangolin\>\"", ",", 
+             "\"\<long-tailed pangolin\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<macaroni penguin\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", "\"\<penguin\>\"",
+              ",", "\"\<penguins\>\"", ",", "\"\<Eudyptes\>\"", ",", 
+             "\"\<macaroni penguin\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<Mexican burrowing caecilian\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<amphibians\>\"", ",", 
+             "\"\<caecilians\>\"", ",", "\"\<Caeciliidae\>\"", ",", 
+             "\"\<Dermophis\>\"", ",", "\"\<Dermophis mexicanus\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Mexican lamprey\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<jawless fishes\>\"", ",", 
+             "\"\<lampreys\>\"", ",", "\"\<lamprey\>\"", ",", 
+             "\"\<Lampetra\>\"", ",", "\"\<Mexican lamprey\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<moose\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<deer, elk, moose...\>\"", ",", "\"\<Alces\>\"", ",", 
+             "\"\<moose\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<mountain goat\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Oreamnos\>\"", ",", "\"\<mountain goat\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<mustache conger\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<anguilles, eels...\>\"", ",", "\"\<Congridae\>\"", ",", 
+             "\"\<Conger\>\"", ",", "\"\<mustache conger\>\""}], "}"}]}], ",",
+           "\[IndentingNewLine]", 
+          RowBox[{"\"\<naked mole rat\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", "\"\<naked mole rats\>\"", ",", 
+             "\"\<Heterocephalus\>\"", ",", "\"\<mole rat\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<nightcrawler\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<segmented worms\>\"", ",", "\"\<leeches, earthworms...\>\"", 
+             ",", "\"\<earthworms\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Norway rat\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", "\"\<rats, mice\>\"", ",", "\"\<rat\>\"",
+              ",", "\"\<Norway rat\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<nose-horned viper\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", 
+             "\"\<Xenophidia (Colubroidea = Caenophidia)\>\"", ",", 
+             "\"\<vipers\>\"", ",", "\"\<Vipera\>\"", ",", 
+             "\"\<nose-horned viper\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<nutria\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", "\"\<spiny rats\>\"", ",", 
+             "\"\<Myocastor\>\"", ",", "\"\<nutria\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<okapi\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<giraffes, okapis\>\"", ",", "\"\<Okapia\>\"", ",", 
+             "\"\<okapi\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<onion kingfish\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<perches, butterflyfishes, cichlids, tunas,...\>\"", ",", 
+             "\"\<pompanos\>\"", ",", "\"\<Carangoides\>\"", ",", 
+             "\"\<onion kingfish\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"\"\<olympia oyster\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<molluscs, scallops, clams, oysters, mussels...\>\"", ",", 
+             "\"\<Ostreoida\>\"", ",", "\"\<oyster\>\"", ",", 
+             "\"\<olympia oyster\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"\"\<orangutan\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<primates\>\"", ",", 
+             "\"\<humans, chimpanzees, gorillas, orangutans\>\"", ",", 
+             "\"\<orangutan\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<pacific geoduck\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<molluscs, scallops, clams, oysters, mussels...\>\"", ",", 
+             "\"\<Myoida\>\"", ",", "\"\<Hiatellidae\>\"", ",", 
+             "\"\<Panopea\>\"", ",", "\"\<pacific geoduck\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<pacu\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<leporins, piranhas...\>\"", ",", "\"\<Characidae\>\"", ",", 
+             "\"\<Piaractus\>\"", ",", "\"\<pacu\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<parma wallaby\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<marsupials\>\"", ",", "\"\<Diprotodontia\>\"", ",", 
+             "\"\<kangaroos, wallabies\>\"", ",", "\"\<Macropus\>\"", ",", 
+             "\"\<parma wallaby\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Patagonian mara\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", "\"\<Guinea pigs, cavies, maras...\>\"", 
+             ",", "\"\<Dolichotis\>\"", ",", "\"\<patagonian mara\>\""}], 
+            "}"}]}], ",", 
+          RowBox[{"\"\<pillbug\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<woodlice, shrimps, lobsters, crabs...\>\"", ",", 
+             "\"\<sowbugs, pillbugs, woodlice, gribbles, slaters...\>\"", 
+             ",", "\"\<Armadilloidea\>\"", ",", "\"\<Armadillidiidae\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<pink fairy armadillo\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<sloths, armadillos, anteaters...\>\"", ",", 
+             "\"\<armadillos\>\"", ",", "\"\<pink fairy armadillo\>\"", ",", 
+             "\"\<pink fairy armadillo\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<platypus\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<monotremes\>\"", ",", "\"\<platypuses\>\"", ",", 
+             "\"\<Ornithorhynchus\>\"", ",", "\"\<platypus\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<poison dart frog\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<amphibians\>\"", ",", 
+             "\"\<frogs, toads...\>\"", ",", "\"\<poison dart frog\>\"", ",", 
+             "\"\<Dendrobates\>\"", ",", "\"\<Dendrobates leucomelas\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<porcupine\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<rodents\>\"", ",", "\"\<New World porcupines\>\"", ",", 
+             "\"\<Erethizon\>\"", ",", "\"\<common porcupine\>\""}], "}"}]}], 
+          ",", 
+          RowBox[{"\"\<Portuguese man o' war\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<cnidarians\>\"", ",", "\"\<hydrozoans\>\"", ",", 
+             "\"\<siphonophores\>\"", ",", "\"\<Physaliidae\>\"", ",", 
+             "\"\<Physalia\>\"", ",", "\"\<Physalia physalis\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<pronghorn\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<pronghorn antelope\>\"", ",", "\"\<Antilocapra\>\"", ",", 
+             "\"\<pronghorn\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<quadrident rotifer\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<rotifers\>\"", ",", "\"\<rotifers\>\"", ",", 
+             "\"\<Ploima\>\"", ",", "\"\<Brachionidae\>\"", ",", 
+             "\"\<Brachionus\>\"", ",", "\"\<Brachionus quadridentatus\>\""}],
+             "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<red deer\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<deer, elk, moose...\>\"", ",", "\"\<Cervus\>\"", ",", 
+             "\"\<red deer\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<red-eared slider\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<tortoises, turtles, terrapins...\>\"", ",", 
+             "\"\<Testudinoidea\>\"", ",", 
+             "\"\<pond turtles, box turtles...\>\"", ",", 
+             "\"\<slider turtles\>\"", ",", "\"\<Trachemys scripta\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<red fox\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", 
+             "\"\<coyotes, dogs, foxes, jackals, wolves...\>\"", ",", 
+             "\"\<true foxes\>\"", ",", "\"\<red fox\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<red-kneed tarantula\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<spiders, scorpions, mites, ticks...\>\"", ",", 
+             "\"\<spiders\>\"", ",", "\"\<baboon spiders\>\"", ",", 
+             "\"\<Brachypelma\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<red wolf\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", 
+             "\"\<coyotes, dogs, foxes, jackals, wolves...\>\"", ",", 
+             "\"\<Canis\>\"", ",", "\"\<red wolf\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<ring-tailed lemur\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<primates\>\"", ",", "\"\<lemurs\>\"", ",", "\"\<Lemur\>\"", 
+             ",", "\"\<Lemur catta\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<rock ptarmigan\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<quails, grouse, pheasants, turkeys, domestic fowl...\>\"", 
+             ",", "\"\<turkeys\>\"", ",", "\"\<Lagopus\>\"", ",", 
+             "\"\<rock ptarmigan\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"\"\<rose chafer\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<beetles\>\"", ",", "\"\<Scarabaeoidea\>\"", ",", 
+             "\"\<Cetoniidae\>\"", ",", "\"\<Cetonia\>\"", ",", 
+             "\"\<rose chafer\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<roseslug\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<ants, bees, wasps, sawflies...\>\"", ",", 
+             "\"\<Tenthredinoidea\>\"", ",", "\"\<common sawflies\>\"", ",", 
+             "\"\<Endelomyia\>\"", ",", "\"\<roseslug\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<saltwater crocodile\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<caimans, crocodiles, alligators...\>\"", ",", 
+             "\"\<crocodiles\>\"", ",", "\"\<Crocodylus\>\"", ",", 
+             "\"\<Crocodylus porosus\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<sambar\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<deer, elk, moose...\>\"", ",", "\"\<Cervus\>\"", ",", 
+             "\"\<sambar\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<sand-pride\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<jawless fishes\>\"", ",", 
+             "\"\<lampreys\>\"", ",", "\"\<lamprey\>\"", ",", 
+             "\"\<Lampetra\>\"", ",", "\"\<sand-pride\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<sea scallop\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<molluscs, scallops, clams, oysters, mussels...\>\"", ",", 
+             "\"\<Ostreoida\>\"", ",", "\"\<Placopecten\>\"", ",", 
+             "\"\<sea scallop\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<shoebill\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<herons, storks...\>\"", ",", "\"\<Pelecanidae\>\"", ",", 
+             "\"\<Balaeniceps\>\"", ",", "\"\<shoebill\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<shore plover\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<herons, storks...\>\"", ",", "\"\<Charadriidae\>\"", ",", 
+             "\"\<Thinornis\>\"", ",", "\"\<shore plover\>\""}], "}"}]}], ",",
+           "\[IndentingNewLine]", 
+          RowBox[{"\"\<short-beaked echidna\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<monotremes\>\"", ",", "\"\<echidnas\>\"", ",", 
+             "\"\<Tachyglossus\>\"", ",", "\"\<short-beaked echidna\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<short-nose spurdog\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<cartilaginous fishes\>\"", ",", 
+             "\"\<dogfish sharks\>\"", ",", "\"\<dogfish sharks\>\"", ",", 
+             "\"\<Squalus\>\"", ",", "\"\<short-nose spurdog\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<silver aruana\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<arapaimas, bonytongues...\>\"", ",", 
+             "\"\<Osteoglossidae\>\"", ",", "\"\<Osteoglossum\>\"", ",", 
+             "\"\<silver aruana\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<soapfish\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<perches, butterflyfishes, cichlids, tunas,...\>\"", ",", 
+             "\"\<Serranidae\>\"", ",", "\"\<Grammistes\>\"", ",", 
+             "\"\<soapfish\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<spotted salamander\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<amphibians\>\"", ",", 
+             "\"\<salamanders\>\"", ",", "\"\<Ambystomatidae\>\"", ",", 
+             "\"\<big salamanders\>\"", ",", "\"\<spotted salamander\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<springbok\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Antidorcas\>\"", ",", "\"\<springbok\>\""}], "}"}]}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<star-nosed mole\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<solenodonts, shrews, moles...\>\"", ",", 
+             "\"\<desmans, moles...\>\"", ",", "\"\<star-nosed mole\>\"", 
+             ",", "\"\<star-nosed mole\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<streaked tenrec\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<tenrecs, otter shrews, golden moles...\>\"", ",", 
+             "\"\<tenrecs\>\"", ",", "\"\<Hemicentetes\>\"", ",", 
+             "\"\<streaked tenrec\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<striped-backed duiker\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Cephalophus\>\"", ",", 
+             "\"\<striped-backed duiker\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<striped hyena\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<hyenas, aardwolves\>\"", ",", 
+             "\"\<Hyaena\>\"", ",", "\"\<striped hyena\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<striped newt\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<amphibians\>\"", ",", 
+             "\"\<salamanders\>\"", ",", "\"\<newt\>\"", ",", 
+             "\"\<Notophthalmus\>\"", ",", "\"\<striped newt\>\""}], "}"}]}], 
+          ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<sunda colugo\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<colugos\>\"", ",", "\"\<colugos\>\"", ",", 
+             "\"\<Cynocephalus\>\"", ",", "\"\<malayan flying lemur\>\""}], 
+            "}"}]}], ",", 
+          RowBox[{"\"\<swallowtail\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<moths, butterflies\>\"", ",", "\"\<Papilionoidea\>\"", ",", 
+             "\"\<swallowtails\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<tamandua\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<sloths, armadillos, anteaters...\>\"", ",", 
+             "\"\<anteaters\>\"", ",", "\"\<Tamandua\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<thorny dragon\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<reptiles\>\"", ",", 
+             "\"\<lizards, snakes...\>\"", ",", "\"\<agamas\>\"", ",", 
+             "\"\<Moloch\>\"", ",", "\"\<Moloch horridus\>\""}], "}"}]}], ",",
+           "\[IndentingNewLine]", 
+          RowBox[{"\"\<tubifex\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<segmented worms\>\"", ",", "\"\<leeches, earthworms...\>\"", 
+             ",", "\"\<earthworms\>\"", ",", "\"\<Tubificidae\>\"", ",", 
+             "\"\<Tubifex\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<tufted deer\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<deer, elk, moose...\>\"", ",", "\"\<Elaphodus\>\"", ",", 
+             "\"\<tufted deer\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<urial\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<antelopes, buffalo, bison, cattle, gazelles, goats, \
+sheep...\>\"", ",", "\"\<Ovis\>\"", ",", "\"\<urial\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<vicugna\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<camels, llamas, alpacas, guanacos, vicunas...\>\"", ",", 
+             "\"\<Vicugna\>\"", ",", "\"\<vicugna\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<walleye\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<perches, butterflyfishes, cichlids, tunas,...\>\"", ",", 
+             "\"\<Percidae\>\"", ",", "\"\<Sander\>\"", ",", 
+             "\"\<walleye\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<walrus\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<walruses\>\"", ",", 
+             "\"\<Odobenus\>\"", ",", "\"\<walrus\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<western thatching ant\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<ants, bees, wasps, sawflies...\>\"", ",", 
+             "\"\<Scolioidea\>\"", ",", "\"\<ants\>\"", ",", 
+             "\"\<Formica\>\"", ",", "\"\<western thatching ant\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<whale remora\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<ray-finned fishes\>\"", ",", 
+             "\"\<perches, butterflyfishes, cichlids, tunas,...\>\"", ",", 
+             "\"\<Echeneidae\>\"", ",", "\"\<Remora\>\"", ",", 
+             "\"\<whale remora\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<whimbrel\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<herons, storks...\>\"", ",", "\"\<Scolopacidae\>\"", ",", 
+             "\"\<Numenius\>\"", ",", "\"\<whimbrel\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<white abalone\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<molluscs\>\"", ",", 
+             "\"\<slugs, snails, limpets, nudibranchs, molluscs...\>\"", ",", 
+             "\"\<sea snails\>\"", ",", "\"\<Haliotididae\>\"", ",", 
+             "\"\<Haliotis\>\"", ",", "\"\<white abalone\>\""}], "}"}]}], ",",
+           "\[IndentingNewLine]", 
+          RowBox[{"\"\<white-lipped peccary\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<antelope, giraffe, camels, pigs, hippos...\>\"", ",", 
+             "\"\<peccaries\>\"", ",", "\"\<Tayassu\>\"", ",", 
+             "\"\<white-lipped peccary\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<wolf spider\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<spiders, scorpions, mites, ticks...\>\"", ",", 
+             "\"\<spiders\>\"", ",", "\"\<Lycosidae\>\"", ",", 
+             "\"\<wolf spider\>\""}], "}"}]}], ",", 
+          RowBox[{"\"\<wolverine\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<mammals\>\"", ",", 
+             "\"\<carnivores\>\"", ",", "\"\<badgers, otters, weasels...\>\"",
+              ",", "\"\<Gulo\>\"", ",", "\"\<wolverine\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<wool carder bee\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<ants, bees, wasps, sawflies...\>\"", ",", "\"\<Apoidea\>\"",
+              ",", "\"\<leafcutting bees\>\"", ",", "\"\<Anthidium\>\"", ",", 
+             "\"\<wool carder bee\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<yellowjacket\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", "\"\<insects\>\"", ",", 
+             "\"\<ants, bees, wasps, sawflies...\>\"", ",", 
+             "\"\<Vespoidea\>\"", ",", "\"\<hornets\>\"", ",", 
+             "\"\<Vespula\>\"", ",", "\"\<yellowjacket\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<yellow tube sponge\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<sponges\>\"", ",", "\"\<demosponges\>\"", ",", 
+             "\"\<Verongida\>\"", ",", "\"\<Aplysinidae\>\"", ",", 
+             "\"\<Aplysina\>\"", ",", "\"\<Aplysina fistularis\>\""}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<yeti crab\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<arthropods\>\"", ",", 
+             "\"\<woodlice, shrimps, lobsters, crabs...\>\"", ",", 
+             "\"\<shrimps, lobsters, crabs, hermit crabs...\>\"", ",", 
+             "\"\<Galatheoidea\>\"", ",", "\"\<Kiwaidae\>\""}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"\"\<Zapata rail\>\"", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<chordates\>\"", ",", "\"\<birds\>\"", ",", 
+             "\"\<cranes, rails, coots...\>\"", ",", "\"\<Rallidae\>\""}], 
+            "}"}]}]}], "\[IndentingNewLine]", "|>"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"keys", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"Keys", "[", "data", "]"}], ",", "5"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"okQ", "=", "False"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{"okQ", "===", "False"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"taxa", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"data", ",", "8"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"sims", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Length", "[", 
+              RowBox[{"Intersection", "[", 
+               RowBox[{
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", 
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "]"}], "&"}], "/@", 
+            
+            RowBox[{"Partition", "[", 
+             RowBox[{
+              RowBox[{"Values", "[", "taxa", "]"}], ",", "2"}], "]"}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"okQ", "=", 
+           RowBox[{
+            RowBox[{"Count", "[", 
+             RowBox[{"sims", ",", 
+              RowBox[{"Max", "[", "sims", "]"}]}], "]"}], "\[Equal]", 
+            "1"}]}]}]}], "]"}], ";", "\n", 
+       RowBox[{"mixed", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "<>", "\"\< & \>\"", "<>", 
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], "&"}], "/@", 
+         RowBox[{"Partition", "[", 
+          RowBox[{
+           RowBox[{"Keys", "[", "taxa", "]"}], ",", "2"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"FirstPosition", "[", 
+          RowBox[{"sims", ",", 
+           RowBox[{"Max", "[", "sims", "]"}]}], "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<Taxonomically, which of these pairs of animals is most closely \
+related?\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Biol7\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.691084434308799*^9, 3.69108443698619*^9}, {
+   3.691085152692658*^9, 3.691085162697618*^9}, {3.691085293264584*^9, 
+   3.691085337704486*^9}, {3.691085387518095*^9, 3.691085397246441*^9}, {
+   3.691086141726016*^9, 3.691086158145546*^9}, {3.691086188340199*^9, 
+   3.691086192051252*^9}, {3.691086282249106*^9, 3.6910862854082003`*^9}, {
+   3.6910863536288023`*^9, 3.691086359579773*^9}, {3.69108641531997*^9, 
+   3.691086425007269*^9}, {3.6910864879718933`*^9, 3.691086491746859*^9}, {
+   3.6910865540231037`*^9, 3.6910865871775923`*^9}, {3.691086644515944*^9, 
+   3.691086646978739*^9}, {3.691086734920219*^9, 3.69108674152129*^9}, {
+   3.691086800748131*^9, 3.691086805347026*^9}, {3.691086872607435*^9, 
+   3.69108689581527*^9}, {3.691086965756535*^9, 3.69108698414015*^9}, {
+   3.691087121139628*^9, 3.691087137955792*^9}, {3.69108720071209*^9, 
+   3.691087204702829*^9}, {3.69108730414939*^9, 3.6910873167011127`*^9}, {
+   3.6910873728251543`*^9, 3.691087375847361*^9}, {3.6910875401354637`*^9, 
+   3.691087551088475*^9}, {3.691151365843309*^9, 3.6911513693715*^9}, {
+   3.6911519852982893`*^9, 3.6911519960506983`*^9}, {3.6911522556094847`*^9, 
+   3.691152271944151*^9}, {3.6911524225606003`*^9, 3.691152437262343*^9}, {
+   3.691152930154438*^9, 3.691152936819343*^9}, {3.691153014926742*^9, 
+   3.691153031419991*^9}, {3.691153227856593*^9, 3.691153248104479*^9}, {
+   3.691153651806457*^9, 3.691153679775429*^9}, {3.691153740827857*^9, 
+   3.6911537553849573`*^9}, {3.6911538970275507`*^9, 
+   3.6911539151591578`*^9}, {3.691154117027464*^9, 3.691154138411145*^9}, {
+   3.691154422292185*^9, 3.691154425258758*^9}, {3.69115447887129*^9, 
+   3.691154484693821*^9}, {3.691154534928215*^9, 3.691154539360568*^9}, {
+   3.691154898317298*^9, 3.691154901594585*^9}, {3.6911550116433783`*^9, 
+   3.691155020895321*^9}, {3.691155305721819*^9, 3.69115531370439*^9}, {
+   3.691155507338252*^9, 3.6911555161951303`*^9}, {3.691155656208138*^9, 
+   3.691155661600683*^9}, {3.691155752128037*^9, 3.691155755029491*^9}, {
+   3.691155932042211*^9, 3.69115593511897*^9}, {3.6911559784761553`*^9, 
+   3.691155980289317*^9}, {3.691156047719123*^9, 3.691156065110393*^9}, {
+   3.691156192981482*^9, 3.691156196653719*^9}, {3.6911563073384132`*^9, 
+   3.691156321362063*^9}, {3.691156369142193*^9, 3.69115637347046*^9}, {
+   3.691156440644105*^9, 3.6911564556602488`*^9}, {3.6911565399010897`*^9, 
+   3.691156542597797*^9}, {3.691156659370442*^9, 3.69115667650852*^9}, {
+   3.691156794093792*^9, 3.691156822068047*^9}, {3.691156916993915*^9, 
+   3.6911569217592783`*^9}, {3.6911569934311523`*^9, 3.691157008206636*^9}, {
+   3.691157071782917*^9, 3.691157076695035*^9}, {3.691157138453774*^9, 
+   3.6911571437950706`*^9}, {3.691157283971908*^9, 3.691157294604621*^9}, {
+   3.6911573713606853`*^9, 3.691157383541192*^9}, {3.691157447833281*^9, 
+   3.6911574517380733`*^9}, {3.691157526002562*^9, 3.691157530877687*^9}, {
+   3.691157672212658*^9, 3.691157679893256*^9}, {3.691157712800626*^9, 
+   3.6911577163589277`*^9}, {3.691157773345256*^9, 3.691157781016261*^9}, {
+   3.691157835174877*^9, 3.691157839565248*^9}, {3.691157986862794*^9, 
+   3.691158006382852*^9}, {3.691158082370858*^9, 3.6911580868091393`*^9}, {
+   3.691158215600987*^9, 3.6911582306149063`*^9}, {3.691158299627843*^9, 
+   3.691158302971723*^9}, {3.691158444023773*^9, 3.691158446546752*^9}, {
+   3.691158510153935*^9, 3.691158519673581*^9}, {3.691158673453868*^9, 
+   3.691158701184841*^9}, {3.691158786668648*^9, 3.6911587934201517`*^9}, {
+   3.6911589692768993`*^9, 3.69115897214137*^9}, {3.691159105354678*^9, 
+   3.6911591095318727`*^9}, {3.6911594217780647`*^9, 3.691159427227084*^9}, {
+   3.6911595270493298`*^9, 3.6911595302559023`*^9}, {3.6911596386394577`*^9, 
+   3.691159643044713*^9}, {3.691159892564365*^9, 3.6911599254061327`*^9}, {
+   3.69116012112501*^9, 3.6911601256187572`*^9}, {3.6911601807064943`*^9, 
+   3.6911601847178926`*^9}, {3.691160269906897*^9, 3.691160283250765*^9}, {
+   3.69116040836567*^9, 3.6911604259095078`*^9}, {3.691160578169606*^9, 
+   3.691160583003029*^9}, {3.691160657855877*^9, 3.6911606618995457`*^9}, {
+   3.691160778105381*^9, 3.691160781609524*^9}, {3.691160835540309*^9, 
+   3.691160861247306*^9}, {3.6911628920360003`*^9, 3.691163504937187*^9}, {
+   3.6911635658043957`*^9, 3.691163596464229*^9}, {3.69116364878121*^9, 
+   3.691163696644227*^9}, {3.691163728298377*^9, 3.6911637353128977`*^9}, 
+   3.69116379904416*^9, {3.691233382002475*^9, 3.691233384129938*^9}, {
+   3.691233425058403*^9, 3.6912334988284616`*^9}, {3.6912335368957872`*^9, 
+   3.6912335644479723`*^9}, {3.691233616827691*^9, 3.6912336512838717`*^9}, {
+   3.691233687511909*^9, 3.691233688637059*^9}, {3.691233728600967*^9, 
+   3.691233756096624*^9}, {3.691233813796225*^9, 3.691233815131301*^9}, {
+   3.6912339481232653`*^9, 3.691233955993042*^9}, {3.6912342268564787`*^9, 
+   3.691234271903922*^9}, {3.691234551056666*^9, 3.691234575077463*^9}, {
+   3.6912346377808533`*^9, 3.691234670291458*^9}, {3.691234978575047*^9, 
+   3.691234982670576*^9}, {3.691235081733986*^9, 3.691235085619179*^9}, {
+   3.69123515618292*^9, 3.6912351603035316`*^9}, {3.691235331969898*^9, 
+   3.6912353443976727`*^9}, {3.6912359298743896`*^9, 
+   3.6912359500207367`*^9}, {3.691236197257737*^9, 3.691236228174857*^9}, {
+   3.6912366083009853`*^9, 3.691236637586502*^9}, {3.691236749746797*^9, 
+   3.691236766410821*^9}, {3.691236850102961*^9, 3.691236868593717*^9}, {
+   3.691236985150311*^9, 3.691236989093514*^9}, {3.6912371300916157`*^9, 
+   3.691237149033193*^9}, {3.691237772740377*^9, 3.691237788766335*^9}, {
+   3.691238031574171*^9, 3.691238036438431*^9}, {3.691238349194566*^9, 
+   3.6912383628183403`*^9}, {3.691238543624864*^9, 3.691238546574513*^9}, {
+   3.691238951556941*^9, 3.69123895424219*^9}, {3.6912390573459578`*^9, 
+   3.691239062103166*^9}, {3.691239197799122*^9, 3.691239200493925*^9}, {
+   3.691239431578204*^9, 3.6912394497539883`*^9}, {3.69123959473505*^9, 
+   3.6912395985687*^9}, {3.691239650027421*^9, 3.6912396539796352`*^9}, {
+   3.691239779313694*^9, 3.691239833588455*^9}, {3.691239874708996*^9, 
+   3.6912398774307117`*^9}, {3.6912422769318533`*^9, 3.691242281784614*^9}, {
+   3.691242406125167*^9, 3.6912424101271677`*^9}, {3.691242823960245*^9, 
+   3.691242839376277*^9}, {3.6912429813623867`*^9, 3.6912429887886953`*^9}, {
+   3.6912430429119177`*^9, 3.6912430576003103`*^9}, {3.6912431681495533`*^9, 
+   3.691243173990225*^9}, {3.691243275980136*^9, 3.691243302058133*^9}, {
+   3.691243359234255*^9, 3.691243363742402*^9}, {3.691243411449334*^9, 
+   3.69124341477703*^9}, {3.691243526469255*^9, 3.6912435312064734`*^9}, {
+   3.691243624287466*^9, 3.691243627667492*^9}, {3.691243718633648*^9, 
+   3.691243721544157*^9}, {3.691243814765902*^9, 3.691243817677503*^9}, {
+   3.691244056804474*^9, 3.691244059416751*^9}, {3.691244522086996*^9, 
+   3.691244525368084*^9}, {3.6912446035576277`*^9, 3.691244611612187*^9}, {
+   3.691244695155665*^9, 3.6912447000580263`*^9}, 3.691244753808329*^9, {
+   3.6912513585147533`*^9, 3.691251364096199*^9}, {3.691251430788714*^9, 
+   3.691251435867194*^9}, {3.691251564113573*^9, 3.691251568233955*^9}, {
+   3.691251685446271*^9, 3.691251689832259*^9}, {3.6912517428669662`*^9, 
+   3.691251746780287*^9}, {3.691251946179845*^9, 3.6912519646851254`*^9}, {
+   3.691252119683528*^9, 3.6912521231923113`*^9}, {3.6912521600584097`*^9, 
+   3.691252163257043*^9}, {3.69125221700072*^9, 3.691252221476698*^9}, {
+   3.691252275262577*^9, 3.691252278078836*^9}, {3.691252340260498*^9, 
+   3.6912523449862432`*^9}, {3.691252438808935*^9, 3.691252442680623*^9}, {
+   3.691252568422155*^9, 3.6912525721255493`*^9}, {3.6912526257210293`*^9, 
+   3.69125263022526*^9}, {3.691252671003458*^9, 3.6912526750433702`*^9}, {
+   3.6912527306612377`*^9, 3.6912527333422318`*^9}, {3.691252814353738*^9, 
+   3.691252817538093*^9}, {3.6912528689887733`*^9, 3.691252872373787*^9}, {
+   3.691252914975089*^9, 3.691252917903432*^9}, {3.6912531527617702`*^9, 
+   3.691253165994286*^9}, {3.691253336655025*^9, 3.691253370393776*^9}, {
+   3.6912534203924637`*^9, 3.6912534234562397`*^9}, {3.691253629466395*^9, 
+   3.691253634362483*^9}, {3.6912538349572897`*^9, 3.6912538395972977`*^9}, {
+   3.691253891575631*^9, 3.691253895143386*^9}, {3.691253998662963*^9, 
+   3.6912540028210793`*^9}, {3.691254146699759*^9, 3.691254177204976*^9}, {
+   3.6912542855942593`*^9, 3.691254288722554*^9}, {3.691254450554941*^9, 
+   3.691254454002861*^9}, {3.691254491515329*^9, 3.6912545025008183`*^9}, {
+   3.6912545748472*^9, 
+   3.691254591070867*^9}},ExpressionUUID->"05415813-5810-4328-bb84-\
+784862466f6e"]
+},
+WindowSize->{1206, 1040},
+WindowMargins->{{-1, Automatic}, {51, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 67560, 1294, 4441, "Input",ExpressionUUID->"05415813-5810-4328-bb84-784862466f6e"]
+}
+]
+*)
+

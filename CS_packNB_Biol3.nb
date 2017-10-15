@@ -1,0 +1,164 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7796,        156]
+NotebookOptionsPosition[      7483,        142]
+NotebookOutlinePosition[      7842,        158]
+CellTagsIndexPosition[      7799,        155]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"choices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<aardvark\>\"", ",", "\"\<alligator\>\"", ",", 
+            "\"\<antelope\>\"", ",", "\"\<armadillo\>\"", ",", 
+            "\"\<arowana\>\"", ",", "\"\<badger\>\"", ",", "\"\<bear\>\"", 
+            ",", "\"\<bluegill\>\"", ",", "\"\<bullfrog\>\"", ",", 
+            "\"\<caiman\>\"", ",", "\"\<camel\>\"", ",", "\"\<caribou\>\"", 
+            ",", "\"\<chinchilla\>\"", ",", "\"\<chimpanzee\>\"", ",", 
+            "\"\<chipmunk\>\"", ",", "\"\<chuckwalla\>\"", ",", 
+            "\"\<coati\>\"", ",", "\"\<cobra\>\"", ",", "\"\<condor\>\"", 
+            ",", "\"\<cormorant\>\"", ",", "\"\<cougar\>\"", ",", 
+            "\"\<coyote\>\"", ",", "\"\<crocodile\>\"", ",", "\"\<deer\>\"", 
+            ",", "\"\<dingo\>\"", ",", "\"\<dugon\>\"", ",", "\"\<eagle\>\"", 
+            ",", "\"\<egret\>\"", ",", "\"\<elephant\>\"", ",", "\"\<emu\>\"",
+             ",", "\"\<falcon\>\"", ",", "\"\<flounder\>\"", ",", 
+            "\"\<fox\>\"", ",", "\"\<galago\>\"", ",", "\"\<gibbon\>\"", ",", 
+            "\"\<giraffe\>\"", ",", "\"\<hawk\>\"", ",", "\"\<hedgehog\>\"", 
+            ",", "\"\<hippopotamus\>\"", ",", "\"\<hummingbird\>\"", ",", 
+            "\"\<hyena\>\"", ",", "\"\<ibex\>\"", ",", "\"\<javalina\>\"", 
+            ",", "\"\<kangaroo\>\"", ",", "\"\<koala\>\"", ",", 
+            "\"\<llama\>\"", ",", "\"\<lemur\>\"", ",", "\"\<leopard\>\"", 
+            ",", "\"\<loon\>\"", ",", "\"\<lynx\>\"", ",", "\"\<marmoset\>\"",
+             ",", "\"\<marmot\>\"", ",", "\"\<meerkat\>\"", ",", 
+            "\"\<mongoose\>\"", ",", "\"\<moose\>\"", ",", "\"\<nutria\>\"", 
+            ",", "\"\<ocelot\>\"", ",", "\"\<orangutan\>\"", ",", 
+            "\"\<oryx\>\"", ",", "\"\<otter\>\"", ",", "\"\<owl\>\"", ",", 
+            "\"\<paku\>\"", ",", "\"\<panda\>\"", ",", "\"\<parrot\>\"", ",", 
+            "\"\<penguin\>\"", ",", "\"\<pigeon\>\"", ",", "\"\<pika\>\"", 
+            ",", "\"\<platypus\>\"", ",", "\"\<porcupine\>\"", ",", 
+            "\"\<possum\>\"", ",", "\"\<ptarmigan\>\"", ",", "\"\<rabbit\>\"",
+             ",", "\"\<raven\>\"", ",", "\"\<rhinoceros\>\"", ",", 
+            "\"\<ringtail\>\"", ",", "\"\<roadrunner\>\"", ",", 
+            "\"\<scrod\>\"", ",", "\"\<sloth\>\"", ",", "\"\<sturgeon\>\"", 
+            ",", "\"\<tapir\>\"", ",", "\"\<tarpon\>\"", ",", 
+            "\"\<tarsier\>\"", ",", "\"\<tiger\>\"", ",", "\"\<tuna\>\"", 
+            ",", "\"\<viper\>\"", ",", "\"\<vole\>\"", ",", "\"\<vulture\>\"",
+             ",", "\"\<walrus\>\"", ",", "\"\<weasel\>\"", ",", 
+            "\"\<wildebeest\>\"", ",", "\"\<wombat\>\""}], "}"}], ",", "4"}], 
+         "]"}]}], ";", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<This is a word cloud generated from the Wikipedia article on \
+one of these four animals. Which one?\>\"", ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       RowBox[{"pic", "=", 
+        RowBox[{"WordCloud", "[", 
+         RowBox[{
+          RowBox[{"DeleteStopwords", "[", 
+           RowBox[{"StringDelete", "[", 
+            RowBox[{
+             RowBox[{"WikipediaData", "[", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+             RowBox[{"RegularExpression", "[", 
+              RowBox[{"\"\<(\>\"", "<>", 
+               RowBox[{"choices", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "<>", 
+               "\"\<e?s?i?|species|000)\>\""}], "]"}], ",", 
+             RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "]"}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Biol3\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6831303976399717`*^9, 3.6831303987811813`*^9}, {
+   3.683130510170356*^9, 3.6831305162755547`*^9}, 3.683130681808703*^9, {
+   3.683130845748703*^9, 3.683130850057642*^9}, {3.683130892750667*^9, 
+   3.683130897691738*^9}, {3.683131025164611*^9, 3.683131032234804*^9}, {
+   3.683131084176177*^9, 3.683131087988677*^9}, {3.683131153826372*^9, 
+   3.683131163192461*^9}, {3.683131300993267*^9, 3.6831313075189543`*^9}, {
+   3.683131404735382*^9, 3.683131407723728*^9}, {3.683131463457838*^9, 
+   3.683131467030807*^9}, {3.6831315525898447`*^9, 3.6831315607474413`*^9}, {
+   3.6831316763305283`*^9, 3.683131684049021*^9}, {3.6831317900335693`*^9, 
+   3.683131794374702*^9}, {3.6831319710828133`*^9, 3.683131989527885*^9}, {
+   3.683132039301219*^9, 3.683132044482535*^9}, {3.68313208587004*^9, 
+   3.683132116901744*^9}, {3.6831322429181213`*^9, 3.683132256156708*^9}, {
+   3.683132316457337*^9, 3.683132341826336*^9}, {3.683132437592979*^9, 
+   3.683132442085657*^9}, {3.6831324862485456`*^9, 3.6831324930722923`*^9}, {
+   3.683132584093047*^9, 3.6831325897248697`*^9}, {3.683132672146041*^9, 
+   3.683132675600395*^9}, {3.6831327446478033`*^9, 3.683132749971982*^9}, {
+   3.683132844492025*^9, 3.683132847832931*^9}, {3.683132907526864*^9, 
+   3.683132912348044*^9}, {3.683133095318935*^9, 3.6831331000340433`*^9}, {
+   3.683133158650861*^9, 3.6831331643435173`*^9}, {3.683133224981881*^9, 
+   3.6831332322027397`*^9}, {3.683133276846807*^9, 3.68313328050906*^9}, {
+   3.683133381588704*^9, 3.683133382483407*^9}, {3.684872681483624*^9, 
+   3.684872683282572*^9}, {3.684872784140663*^9, 3.684872793928279*^9}, {
+   3.684872874605979*^9, 3.684872878763927*^9}, {3.684873009540772*^9, 
+   3.684873015699011*^9}, {3.6848732917299633`*^9, 3.684873296448063*^9}, {
+   3.684873375575259*^9, 3.6848733805644083`*^9}, {3.6848734527642803`*^9, 
+   3.684873459832262*^9}, {3.684873511255197*^9, 3.684873515371152*^9}, {
+   3.684873557350753*^9, 3.684873561388837*^9}, {3.6848736318203487`*^9, 
+   3.684873636144717*^9}, {3.684873675045233*^9, 
+   3.684873678274517*^9}},ExpressionUUID->"6e286f32-7a3e-4f85-bc6d-\
+c0a50e71bb51"]
+},
+WindowSize->{1229, 963},
+WindowMargins->{{0, Automatic}, {Automatic, 93}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6921, 120, 388, "Input",ExpressionUUID->"6e286f32-7a3e-4f85-bc6d-c0a50e71bb51"]
+}
+]
+*)
+
