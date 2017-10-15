@@ -1,0 +1,631 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30690,        623]
+NotebookOptionsPosition[     30374,        609]
+NotebookOutlinePosition[     30734,        625]
+CellTagsIndexPosition[     30691,        622]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"SortBy", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Interchange\>\"", ",", "\"\<Willem de Kooning\>\"", ",", 
+                "1955", ",", "300000000", ",", "\"\<September, 2015\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Nafea Faa Ipoipo (When Will You Marry?)\>\"", ",", 
+                "\"\<Paul Gauguin\>\"", ",", "1892", ",", "300000000", ",", 
+                "\"\<February, 2015\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<The Card Players\>\"", ",", 
+                "\"\<Paul C\[EAcute]zanne\>\"", ",", "1893", ",", "259000000",
+                 ",", "\"\<April, 2011\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Number 17A\>\"", ",", "\"\<Jackson Pollock\>\"", ",", 
+                "1948", ",", "200000000", ",", "\"\<September, 2015\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<No. 6 (Violet, Green and Red)\>\"", ",", 
+                "\"\<Mark Rothko\>\"", ",", "1951", ",", "186000000", ",", 
+                "\"\<August, 2014\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Maerten Soolmans & Oopjen Coppit\>\"", ",", 
+                "\"\<Rembrandt\>\"", ",", "1634", ",", "180000000", ",", 
+                "\"\<September, 2015\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Les Femmes d'Alger (Version O)\>\"", ",", 
+                "\"\<Pablo Picasso\>\"", ",", "1955", ",", "179400000", ",", 
+                "\"\<May 11, 2015\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Nu Couch\[EAcute]\>\"", ",", "\"\<Amedeo Modigliani\>\"", 
+                ",", "1918", ",", "170400000", ",", 
+                "\"\<November 9, 2015\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<No. 5, 1948\>\"", ",", "\"\<Jackson Pollock\>\"", ",", 
+                "1948", ",", "140000000", ",", "\"\<November 2, 2006\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Masterpiece\>\"", ",", "\"\<Roy Lichtenstein\>\"", ",", 
+                "1962", ",", "165000000", ",", "\"\<January, 2017\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Woman III\>\"", ",", "\"\<Willem de Kooning\>\"", ",", 
+                "1953", ",", "137500000", ",", "\"\<November 18, 2006\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Portrait of Adele Bloch-Bauer I\>\"", ",", 
+                "\"\<Gustav Klimt\>\"", ",", "1907", ",", "135000000", ",", 
+                "\"\<June 18, 2006\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Le R\[EHat]ve\>\"", ",", "\"\<Pablo Picasso\>\"", ",", 
+                "1932", ",", "155000000", ",", "\"\<March 26, 2013\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Portrait of Dr. Gachet\>\"", ",", 
+                "\"\<Vincent van Gogh\>\"", ",", "1890", ",", "82500000", 
+                ",", "\"\<May 15, 1990\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Adele Bloch-Bauer II\>\"", ",", "\"\<Gustav Klimt\>\"", 
+                ",", "1912", ",", "150000000", ",", "\"\<2016\>\""}], "}"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Three Studies of Lucian Freud\>\"", ",", 
+                "\"\<Francis Bacon\>\"", ",", "1969", ",", "142400000", ",", 
+                "\"\<November 12, 2013\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Bal du Moulin de la Galette\>\"", ",", 
+                "\"\<Pierre-Auguste Renoir\>\"", ",", "1876", ",", "78100000",
+                 ",", "\"\<May 17, 1990\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Gar\[CCedilla]on \[AGrave] la Pipe\>\"", ",", 
+                "\"\<Pablo Picasso\>\"", ",", "1905", ",", "104200000", ",", 
+                "\"\<May 4, 2004\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Salvator Mundi\>\"", ",", "\"\<Leonardo da Vinci\>\"", 
+                ",", "1519", ",", "127500000", ",", "\"\<May, 2015\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<The Scream\>\"", ",", "\"\<Edvard Munch\>\"", ",", "1895",
+                 ",", "119900000", ",", "\"\<May 2, 2012\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Reclining Nude with Blue Cushion\>\"", ",", 
+                "\"\<Amedeo Modigliani\>\"", ",", "1917", ",", "118000000", 
+                ",", "\"\<2012\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Flag\>\"", ",", "\"\<Jasper Johns\>\"", ",", "1954", ",", 
+                "110000000", ",", "\"\<March, 2010\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Nude, Green Leaves and Bust\>\"", ",", 
+                "\"\<Pablo Picasso\>\"", ",", "1932", ",", "106500000", ",", 
+                "\"\<May 4, 2010\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Portrait of Joseph Roulin\>\"", ",", 
+                "\"\<Vincent van Gogh\>\"", ",", "1889", ",", "58000000", 
+                ",", "\"\<August 1, 1989\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Irises\>\"", ",", "\"\<Vincent van Gogh\>\"", ",", "1889",
+                 ",", "53900000", ",", "\"\<November 11, 1987\>\""}], "}"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Dora Maar au Chat\>\"", ",", "\"\<Pablo Picasso\>\"", ",",
+                 "1941", ",", "95200000", ",", "\"\<May 3, 2006\>\""}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Eight Elvises\>\"", ",", "\"\<Andy Warhol\>\"", ",", 
+                "1963", ",", "100000000", ",", "\"\<October, 2008\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Anna's Light\>\"", ",", "\"\<Barnett Newman\>\"", ",", 
+                "1968", ",", "105700000", ",", "\"\<October 4, 2015\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Silver Car Crash (Double Disaster)\>\"", ",", 
+                "\"\<Andy Warhol\>\"", ",", "1963", ",", "105400000", ",", 
+                "\"\<November 13, 2013\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Portrait de l'Artiste sans Barbe\>\"", ",", 
+                "\"\<Vincent van Gogh\>\"", ",", "1889", ",", "71500000", 
+                ",", "\"\<November 19, 1998\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<La Montagne Sainte-Victoire\>\"", ",", 
+                "\"\<Paul C\[EAcute]zanne\>\"", ",", "1904", ",", "100000000",
+                 ",", "\"\<2013\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Massacre of the Innocents\>\"", ",", 
+                "\"\<Peter Paul Rubens\>\"", ",", "1611", ",", "76700000", 
+                ",", "\"\<July 10, 2002\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Nurse\>\"", ",", "\"\<Roy Lichtenstein\>\"", ",", "1964", 
+                ",", "95400000", ",", "\"\<November 9, 2015\>\""}], "}"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Triptych, 1976\>\"", ",", "\"\<Francis Bacon\>\"", ",", 
+                "1976", ",", "86300000", ",", "\"\<May 4, 2008\>\""}], "}"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Les Noces de Pierrette\>\"", ",", "\"\<Pablo Picasso\>\"",
+                 ",", "1905", ",", "49300000", ",", 
+                "\"\<November 30,1989\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<False Start\>\"", ",", "\"\<Jasper Johns\>\"", ",", 
+                "1959", ",", "80000000", ",", "\"\<October 12, 2006\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<A Wheatfield with Cypresses\>\"", ",", 
+                "\"\<Vincent van Gogh\>\"", ",", "1889", ",", "57000000", 
+                ",", "\"\<May, 1993\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Yo, Picasso\>\"", ",", "\"\<Pablo Picasso\>\"", ",", 
+                "1901", ",", "47800000", ",", "\"\<May 9, 1989\>\""}], "}"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Turquoise Marilyn\>\"", ",", "\"\<Andy Warhol\>\"", ",", 
+                "1964", ",", "80000000", ",", "\"\<May 20, 2007\>\""}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Portrait of Alfonso d'Avalos\>\"", ",", "\"\<Titian\>\"", 
+                ",", "1533", ",", "70000000", ",", "\"\<November, 2003\>\""}],
+                "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Orange, Red, Yellow\>\"", ",", "\"\<Mark Rothko\>\"", ",",
+                 "1961", ",", "86900000", ",", "\"\<May 8, 2012\>\""}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Le Bassin aux Nymph\[EAcute]as\>\"", ",", 
+                "\"\<Claude Monet\>\"", ",", "1919", ",", "80500000", ",", 
+                "\"\<June 24, 2008\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Rideau, Crochon et Compotier\>\"", ",", 
+                "\"\<Paul C\[EAcute]zanne\>\"", ",", "1894", ",", "60500000", 
+                ",", "\"\<May 10, 1999\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Black Fire I\>\"", ",", "\"\<Barnett Newman\>\"", ",", 
+                "1961", ",", "84200000", ",", "\"\<May 13, 2014\>\""}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<White Center (Yellow, Pink and Lavender on Rose)\>\"", 
+                ",", "\"\<Mark Rothko\>\"", ",", "1950", ",", "72800000", 
+                ",", "\"\<May 15, 2007\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Vase with Fifteen Sunflowers\>\"", ",", 
+                "\"\<Vincent van Gogh\>\"", ",", "1888", ",", "39700000", 
+                ",", "\"\<March 30, 1987\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Triple Elvis\>\"", ",", "\"\<Andy Warhol\>\"", ",", 
+                "1963", ",", "81900000", ",", "\"\<November 12, 2014\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Green Car Crash (Green Burning Car I)\>\"", ",", 
+                "\"\<Andy Warhol\>\"", ",", "1963", ",", "71700000", ",", 
+                "\"\<May 16, 2007\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<No. 10\>\"", ",", "\"\<Mark Rothko\>\"", ",", "1958", ",",
+                 "81900000", ",", "\"\<May 13, 2015\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Meule\>\"", ",", "\"\<Claude Monet\>\"", ",", "1891", ",",
+                 "81400000", ",", "\"\<November 16, 2016\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Three Studies for a Portrait of John Edwards\>\"", ",", 
+                "\"\<Francis Bacon\>\"", ",", "1984", ",", "80800000", ",", 
+                "\"\<May 13, 2014\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Darmstadt Madonna\>\"", ",", "\"\<Hans Holbein\>\"", ",", 
+                "1526", ",", "75000000", ",", "\"\<July 12, 2011\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Diana and Actaeon\>\"", ",", "\"\<Titian\>\"", ",", 
+                "1559", ",", "70600000", ",", "\"\<February 1, 2009\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Au Lapin Agile\>\"", ",", "\"\<Pablo Picasso\>\"", ",", 
+                "1904", ",", "40700000", ",", "\"\<November 27, 1989\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<The Gross Clinic\>\"", ",", "\"\<Thomas Eakins\>\"", ",", 
+                "1875", ",", "68000000", ",", "\"\<April 12, 2007\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<No 1 (Royal Red and Blue)\>\"", ",", 
+                "\"\<Mark Rothko\>\"", ",", "1954", ",", "75100000", ",", 
+                "\"\<November 13, 2012\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Acrobate et Jeune Arlequin\>\"", ",", 
+                "\"\<Pablo Picasso\>\"", ",", "1905", ",", "38500000", ",", 
+                "\"\<November 28, 1988\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Femme aux Bras Crois\[EAcute]s\>\"", ",", 
+                "\"\<Pablo Picasso\>\"", ",", "1902", ",", "55000000", ",", 
+                "\"\<November 8, 2000\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Nude Sitting on a Divan\>\"", ",", 
+                "\"\<Amedeo Modigliani\>\"", ",", "1917", ",", "69000000", 
+                ",", "\"\<November 2, 2010\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Police Gazette\>\"", ",", "\"\<Willem de Kooning\>\"", 
+                ",", "1955", ",", "63500000", ",", 
+                "\"\<October 12, 2006\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Diana and Callisto\>\"", ",", "\"\<Titian\>\"", ",", 
+                "1559", ",", "71700000", ",", "\"\<March 2, 2012\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<New York City\>\"", ",", "\"\<Cy Twombly\>\"", ",", 
+                "1968", ",", "70500000", ",", "\"\<November 11, 2015\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Femme Assise dans un Jardin\>\"", ",", 
+                "\"\<Pablo Picasso\>\"", ",", "1938", ",", "49500000", ",", 
+                "\"\<November 10, 1999\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Four Marlons\>\"", ",", "\"\<Andy Warhol\>\"", ",", 
+                "1966", ",", "69600000", ",", "\"\<November 12, 2014\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Eagle Standing on Pine Tree\>\"", ",", 
+                "\"\<Qi Baishi\>\"", ",", "1946", ",", "65500000", ",", 
+                "\"\<May 22, 2011\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Men in Her Life\>\"", ",", "\"\<Andy Warhol\>\"", ",", 
+                "1962", ",", "63400000", ",", "\"\<November 8, 2010\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<La Gommeuse\>\"", ",", "\"\<Pablo Picasso\>\"", ",", 
+                "1901", ",", "67450000", ",", "\"\<November 5, 2015\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Buste de Femme\>\"", ",", "\"\<Pablo Picasso\>\"", ",", 
+                "1938", ",", "67400000", ",", "\"\<May 11, 2015\>\""}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Portrait of a Halberdier\>\"", ",", "\"\<Pontormo\>\"", 
+                ",", "1537", ",", "35200000", ",", "\"\<May 31, 1989\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<L'All\[EAcute]e des Alyscamps\>\"", ",", 
+                "\"\<Vincent van Gogh\>\"", ",", "1888", ",", "66300000", 
+                ",", "\"\<May 5, 2015\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Suprematist Composition\>\"", ",", 
+                "\"\<Kazimir Malevich\>\"", ",", "1916", ",", "60000000", 
+                ",", "\"\<November 3, 2008\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Zhichuan Resettlement\>\"", ",", "\"\<Wang Meng\>\"", ",",
+                 "1350", ",", "62100000", ",", "\"\<June 4, 2011\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Spring\>\"", ",", "\"\<\[CapitalEAcute]douard Manet\>\"", 
+                ",", "1881", ",", "65100000", ",", 
+                "\"\<November 5, 2014\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<La R\[EHat]ve\>\"", ",", "\"\<Pablo Picasso\>\"", ",", 
+                "1932", ",", "139000000", ",", "\"\<2006\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Mona Lisa\>\"", ",", "\"\<Leonardo da Vinci\>\"", ",", 
+                "1506", ",", "100000000", ",", "\"\<1962\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Hemlocks\>\"", ",", "\"\<John Henry Twachtman\>\"", ",", 
+                "1900", ",", "600000", ",", "\"\<May 24, 2007\>\""}], "}"}], 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Barbershop Quartet\>\"", ",", "\"\<Norman Rockwell\>\"", 
+                ",", "1936", ",", "212500", ",", "\"\<May 20, 2015\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Roots\>\"", ",", "\"\<Frida Kahlo\>\"", ",", "1943", ",", 
+                "5616000", ",", "\"\<May 24, 2006\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Studies of Male Nudes\>\"", ",", "\"\<Michelangelo\>\"", 
+                ",", "1512", ",", "9425968", ",", "\"\<July 5, 2011\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Portrait de Paul Eluard\>\"", ",", 
+                "\"\<Salvador Dali\>\"", ",", "1929", ",", "22400000", ",", 
+                "\"\<2017\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Peinture (Etoile Bleue\>\"", ",", "\"\<Joan Miro\>\"", 
+                ",", "1927", ",", "36900000", ",", "\"\<June 17, 2012\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<A Reconnaissance\>\"", ",", "\"\<Frederic Remington\>\"", 
+                ",", "1902", ",", "5172500", ",", "\"\<May 26, 1999\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<At the Earth's Core\>\"", ",", "\"\<Frank Frazetta\>\"", 
+                ",", "1974", ",", "1075500", ",", "\"\<August 2016\>\""}], 
+               "}"}], ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Young Woman Seated at the Virginal\>\"", ",", 
+                "\"\<Johannes Vermeer\>\"", ",", "1670", ",", "30000000", 
+                ",", "\"\<July 4, 2004\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Boulevard Montmartre\>\"", ",", 
+                "\"\<Camille Pissarro\>\"", ",", "1889", ",", "25913780", 
+                ",", "\"\<February, 2014\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<La Corde Sensible\>\"", ",", 
+                "\"\<Ren\[EAcute] Magritte\>\"", ",", "1960", ",", "17579700",
+                 ",", "\"\<March, 2017\>\""}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<Bajan Ri\[NTilde]endo\>\"", ",", 
+                "\"\<Francisco de Goya\>\"", ",", "1801", ",", "2971442", 
+                ",", "\"\<July 8, 2008\>\""}], "}"}]}], "\[IndentingNewLine]",
+              "}"}], ",", "4"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"InflationAdjust", "[", 
+            RowBox[{"Quantity", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "4", "]"}], "]"}], ",", 
+              RowBox[{"DatedUnit", "[", 
+               RowBox[{"\"\<USDollars\>\"", ",", 
+                RowBox[{"DateList", "[", 
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "5", "]"}], "]"}], "]"}]}], "]"}]}], "]"}], 
+            "]"}], "&"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"hiLo", "=", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+          "\"\<lowest\>\"", ",", 
+          RowBox[{
+           RowBox[{"data", "=", 
+            RowBox[{"Reverse", "[", "data", "]"}]}], ";", 
+           "\"\<highest\>\""}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+        "\"\<Which of these paintings has the \>\"", "<>", "hiLo", "<>", 
+         "\"\< value?\>\""}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{"\"\<`1` by `2` (`3`)\>\"", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", "Italic"}], "]"}], ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "&"}], "/@", "data"}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Art12\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.707820637818285*^9, 3.707820659591798*^9}, {
+   3.7078217891170883`*^9, 3.7078218647469187`*^9}, {3.7078219006666937`*^9, 
+   3.707821911898624*^9}, {3.707821990306202*^9, 3.7078219917463913`*^9}, {
+   3.707822652008443*^9, 3.707822714663357*^9}, {3.7078227791989822`*^9, 
+   3.7078228413029947`*^9}, {3.707822884366811*^9, 3.707822955534815*^9}, {
+   3.707823013327877*^9, 3.707823135613863*^9}, {3.7078231805897083`*^9, 
+   3.7078234295086527`*^9}, {3.707823486756699*^9, 3.707823621396056*^9}, {
+   3.7078236559964323`*^9, 3.707823941451261*^9}, {3.707823994578775*^9, 
+   3.7078240802989883`*^9}, {3.707824224011092*^9, 3.707824542921042*^9}, {
+   3.707824579634651*^9, 3.707824631984808*^9}, {3.70782466428045*^9, 
+   3.7078250349998503`*^9}, {3.707825115705299*^9, 3.707825295150674*^9}, {
+   3.707825334734438*^9, 3.7078253682544937`*^9}, {3.707825440519779*^9, 
+   3.707825866276759*^9}, {3.707825907493581*^9, 3.7078260246763563`*^9}, {
+   3.7078286192690363`*^9, 3.7078286975723143`*^9}, {3.707828741011485*^9, 
+   3.707828812739143*^9}, {3.7078288528189087`*^9, 3.7078291614741898`*^9}, {
+   3.707829205754649*^9, 3.7078294537850037`*^9}, {3.7078295009532948`*^9, 
+   3.7078301430226603`*^9}, {3.707830227263363*^9, 3.7078302306950483`*^9}, {
+   3.707830263454526*^9, 3.7078304568781157`*^9}, {3.707830495806509*^9, 
+   3.707830563405781*^9}, {3.707831580483368*^9, 3.707832883166617*^9}, {
+   3.707832950750279*^9, 3.707832985910388*^9}, {3.7078330202463093`*^9, 
+   3.707833382645173*^9}, {3.7078362551492367`*^9, 3.707836943266088*^9}, {
+   3.707836979081139*^9, 3.707837045497102*^9}, {3.707837077538445*^9, 
+   3.707837417959929*^9}, {3.707837453143363*^9, 3.7078376360234423`*^9}, {
+   3.707837710024147*^9, 3.7078380120060596`*^9}, {3.7078383358146276`*^9, 
+   3.707838456804286*^9}, {3.707838683204999*^9, 3.707838693979546*^9}, {
+   3.707838728532446*^9, 3.7078388124766808`*^9}, {3.7078390286671457`*^9, 
+   3.707839071482273*^9}, {3.707839256866805*^9, 3.7078393060257463`*^9}, {
+   3.707839382553999*^9, 3.707839408817288*^9}, {3.7078395250578203`*^9, 
+   3.707839573968637*^9}, {3.707839720841093*^9, 3.707839743000307*^9}, {
+   3.7078397911775093`*^9, 3.7078398481045933`*^9}, {3.707839980752452*^9, 
+   3.707840010192095*^9}, {3.707840062255919*^9, 3.707840105535075*^9}, {
+   3.707840307447209*^9, 3.7078403565342093`*^9}, {3.707840396015023*^9, 
+   3.707840435070347*^9}, {3.7078404944060087`*^9, 3.707840506357719*^9}, {
+   3.707840590590596*^9, 3.707840637390007*^9}, {3.707840678749682*^9, 
+   3.7078407277809753`*^9}, {3.707841076348661*^9, 3.707841129203705*^9}, {
+   3.707841246356184*^9, 3.707841294939288*^9}, {3.70784141838715*^9, 
+   3.707841477666729*^9}, {3.707841530890134*^9, 3.7078415677636843`*^9}, {
+   3.707841690076007*^9, 3.7078418408577633`*^9}, {3.707841978017687*^9, 
+   3.707842051056826*^9}, {3.7078421336162663`*^9, 3.707842179218231*^9}, {
+   3.7078423090335197`*^9, 3.707842375679371*^9}, {3.707842408072296*^9, 
+   3.7078424526635857`*^9}, {3.7078425713999557`*^9, 
+   3.7078426307826853`*^9}, {3.707842742103662*^9, 3.707842744958206*^9}, {
+   3.707842786078861*^9, 3.707842841622123*^9}, {3.7078431008565817`*^9, 
+   3.707843188314308*^9}, {3.707843271630186*^9, 3.70784328862015*^9}, {
+   3.707843348748775*^9, 3.7078435387446613`*^9}, {3.707843624953549*^9, 
+   3.707843625200412*^9}, {3.7078444779860477`*^9, 3.7078444852209597`*^9}, {
+   3.707844550504879*^9, 3.707844665319957*^9}, {3.7078447926686773`*^9, 
+   3.7078448285645123`*^9}, {3.707845352054323*^9, 3.707845359886341*^9}, 
+   3.707845415119514*^9, {3.707845804726447*^9, 3.707846690206307*^9}, {
+   3.707846740367128*^9, 3.707846743605878*^9}, {3.707847113093655*^9, 
+   3.7078471385775623`*^9}},ExpressionUUID->"061b9e8c-598d-4620-8d8a-\
+8daed57e6ced"]
+},
+WindowSize->{1902, 1280},
+WindowMargins->{{0, Automatic}, {Automatic, 44}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 29812, 587, 2105, "Input",ExpressionUUID->"061b9e8c-598d-4620-8d8a-8daed57e6ced"]
+}
+]
+*)
+

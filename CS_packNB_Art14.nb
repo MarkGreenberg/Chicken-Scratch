@@ -1,0 +1,396 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17031,        388]
+NotebookOptionsPosition[     16715,        374]
+NotebookOutlinePosition[     17075,        390]
+CellTagsIndexPosition[     17032,        387]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"data", "=", 
+          RowBox[{"DeleteDuplicatesBy", "[", 
+           RowBox[{
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Abraham Lincoln\>\"", ",", 
+                  "\"\<Daniel Chester French\>\"", ",", 
+                  "\"\<Lincoln.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Alas, Poor Yorick\>\"", ",", 
+                  "\"\<Christopher David White\>\"", ",", 
+                  "\"\<Alas.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Aphrodite of Knidos\>\"", ",", "\"\<Praxiteles\>\"", 
+                  ",", "\"\<AphroditeOfKnidos.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Bender\>\"", ",", "\"\<Jean de Roncourt\>\"", ",", 
+                  "\"\<Bender.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Benjamin Franklin\>\"", ",", 
+                  "\"\<Jean Anoine Houdon\>\"", ",", 
+                  "\"\<BenFranklin.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bicycle Wheel\>\"", ",", "\"\<Marcel Duchamp\>\"", ",", 
+                  "\"\<BicycleWheel.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bronze Horseman\>\"", ",", 
+                  "\"\<\[CapitalEAcute]tienne Maurice Falconet\>\"", ",", 
+                  "\"\<BronzeHorseman.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bull\>\"", ",", "\"\<Tomas Vitanovsky\>\"", ",", 
+                  "\"\<Bull2.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Charging Bull\>\"", ",", "\"\<Arturo Di Modica\>\"", 
+                  ",", "\"\<Bull.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Christ the Redeemer\>\"", ",", "\"\<Paul Landowski\>\"",
+                   ",", "\"\<ChristRedeemer.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Damned Soul\>\"", ",", "\"\<Gian Lorenzo Bernini\>\"", 
+                  ",", "\"\<DamnedSoul.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<David\>\"", ",", "\"\<Michelangelo\>\"", ",", 
+                  "\"\<David.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Dying Gaul\>\"", ",", "\"\<Epigonus\>\"", ",", 
+                  "\"\<DyingGaul.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<End of the Trail\>\"", ",", 
+                  "\"\<James Earle Fraser\>\"", ",", 
+                  "\"\<EndOfTrail.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Feeling Material XIV\>\"", ",", 
+                  "\"\<Anthony Gormley\>\"", ",", 
+                  "\"\<FeelingMaterialXIV.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Girl\>\"", ",", "\"\<Georges Coudray\>\"", ",", 
+                  "\"\<Girl.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Head\>\"", ",", "\"\<Amedeo Modigliani\>\"", ",", 
+                  "\"\<Head.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hercules the Archer\>\"", ",", 
+                  "\"\<Antoine Bourdelle\>\"", ",", 
+                  "\"\<HerculesArcher.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Horse and Rider\>\"", ",", "\"\<Leonardo da Vinci\>\"", 
+                  ",", "\"\<HorseAndRider.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Human Cycles\>\"", ",", "\"\<Rong Mueck\>\"", ",", 
+                  "\"\<HumanCycles.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Iceberg\>\"", ",", "\"\<William Lishman\>\"", ",", 
+                  "\"\<Iceberg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Josephson\>\"", ",", "\"\<Deborah Butterfield\>\"", 
+                  ",", "\"\<Josephson.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Kiss\>\"", ",", "\"\<Auguste Rodin\>\"", ",", 
+                  "\"\<Kiss.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Laoco\[ODoubleDot]n and His Sons\>\"", ",", 
+                  "\"\<Agesander\>\"", ",", "\"\<Laocoon.jpg\>\""}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Lenin\>\"", ",", "\"\<Emil Venkov\>\"", ",", 
+                  "\"\<Lenin.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Liberty Enlightening the World\>\"", ",", 
+                  "\"\<Fr\[EAcute]d\[EAcute]ric Auguste Bartholdi\>\"", ",", 
+                  "\"\<Liberty.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<LOVE\>\"", ",", "\"\<Robert Indiana\>\"", ",", 
+                  "\"\<Love.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Maman\>\"", ",", "\"\<Louise Bourgeois\>\"", ",", 
+                  "\"\<Maman.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Monday Inspiration\>\"", ",", 
+                  "\"\<Alexander Calder\>\"", ",", 
+                  "\"\<MondayInspiration.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Monument to the Discoveries\>\"", ",", 
+                  "\"\<Cottinelli Telmo\>\"", ",", 
+                  "\"\<Discoveries.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Moses\>\"", ",", "\"\<Michelangelo\>\"", ",", 
+                  "\"\<Moses.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Mountain Man\>\"", ",", "\"\<Frederic Remington\>\"", 
+                  ",", "\"\<MountainMan.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Mount Rushmore\>\"", ",", "\"\<Gutzon Borglum\>\"", 
+                  ",", "\"\<Rushmore.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Muse\>\"", ",", "\"\<Constantin Brancusi\>\"", ",", 
+                  "\"\<Muse.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Mind \[LongDash] My Force\>\"", ",", 
+                  "\"\<Loris Marazzi\>\"", ",", "\"\<MyMind.jpg\>\""}], "}"}],
+                 ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Nefertiti\>\"", ",", "\"\<Thutmose\>\"", ",", 
+                  "\"\<Nefertiti.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Oval with Points\>\"", ",", "\"\<Henry Moore\>\"", ",", 
+                  "\"\<OvalWithPoints.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Part as an Evocation of the Whole\>\"", ",", 
+                  "\"\<Alberto Giacometti\>\"", ",", 
+                  "\"\<PartWhole.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Pieta\>\"", ",", "\"\<Michelangelo\>\"", ",", 
+                  "\"\<Pieta.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Roman Soldier\>\"", ",", "\"\<Fernando Botero\>\"", 
+                  ",", "\"\<RomanSoldier.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Secret Bench\>\"", ",", "\"\<Lea Vivot\>\"", ",", 
+                  "\"\<SecretBench.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Serpentine\>\"", ",", "\"\<Henri Matisse\>\"", ",", 
+                  "\"\<Serpentine.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<St. George\>\"", ",", "\"\<Donatello\>\"", ",", 
+                  "\"\<StGeorge.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Thinker\>\"", ",", "\"\<Auguste Rodin\>\"", ",", 
+                  "\"\<Thinker.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Tiger\>\"", ",", "\"\<Sel\[CCedilla]uk Yilmaz\>\"", 
+                  ",", "\"\<Tiger.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Two Rings\>\"", ",", "\"\<Keizo Ushio\>\"", ",", 
+                  "\"\<TwoRings.jpg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Veiled Virgin\>\"", ",", "\"\<Giovanni Strazza\>\"",
+                   ",", "\"\<VeiledVirgin.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Venus de Milo\>\"", ",", 
+                  "\"\<Alexandros of Antioch\>\"", ",", 
+                  "\"\<VenusDeMilo.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Wing\[EAcute]d Horse\>\"", ",", 
+                  "\"\<John Bradley Storrs\>\"", ",", 
+                  "\"\<WingedHorse.jpg\>\""}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Woman\>\"", ",", "\"\<Hsu Tung Han\>\"", ",", 
+                  "\"\<Woman.jpg\>\""}], "}"}]}], "\[IndentingNewLine]", 
+               "}"}], ",", "4"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "&"}]}], "]"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{"\"\<Who is the sculptor of `1`, shown here?\>\"", ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "Italic"}], "]"}]}],
+          "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{"In", " ", "the", " ", "following", " ", "line"}], ",", " ", 
+         
+         RowBox[{
+         "replace", " ", "XXXXX", " ", "with", " ", "your", " ", "user", " ", 
+          
+          RowBox[{"code", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"Image", "[", 
+           RowBox[{
+            RowBox[{"Import", "[", 
+             RowBox[{
+             "\"\<https://www.wolframcloud.com/objects/user-XXXXX/images/\
+Art14/\>\"", "<>", "h1"}], "]"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"data", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "3"}], "]"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Art14\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwd0n0wE3AYB/C1EtOlzsvSjcwqco15bV3FzWpZI9PUXTkpL2MZyXkZ6UVJ
+UXL0QkYMhVNXk95fTRNRKlwpK3oRKS8p3XV56ff1x+8+d7/n7rnnzTokRiKl
+UigUb/JgfIbENFX13ZPK8jKHtMwpLnyndhPAhD6DDXDPVLQYGpt4bYYtzdJp
+KR+XbYVGu1RB8MqMSyGwP2xMBk+8nKKfJQ5I/RhwJKKGm0cMECzkw8IZ7Fg4
+W/9oHJwzXKSATW4OKVCpvn8IpjK2HIGBwlOZcKL847R8O4oShlnnq2Aa/Qk3
+n/inkeMJqXbvJQVEx37RNujt0/0Z1tcU9cJsr+pfcNbVvjEoCnOgKIn0W/56
+cJ14tyfkuNIFcEC4NhbyU7IToW5j9xs4tKO8EwqaTD5D5s7Qr9B50sSpEPVo
+Na5QIN1+ACr5Q+nQZ1h+vYTYJpY9gvGBUdYqopdDyjLILytIh+G0kBPwghnn
+Plyc1vIAvvzXWw9H3eq0kDkUpF+K/cluzIWRg5wk2K5QH4Z7eeF34Gn/xDq4
+fiKytYy4rda7A9KP+ZiVox9eDANmJ/aI4KaAHX7QwlaTU0FkM2cWQoV9ig6W
+/JZ9gdQ/xcxK4luX1KXwdvruQGgzfjIE+uaculo5PfcPtbB2MO0tDFqs7YZC
+mfPKKqJlQsIaeHDg/C6o7toeA3uEMTkwTirPhQuqb+RBtkxeAB966Ds3ELWv
+8rhQWG8YBV0TRQkwa2vfsyfIk6XrhAa5D20biWeS++yhqU90Ljz2OP8snD/7
+nAYaspweT8fNGc/gp5+vWyFtwn4YmlVrfsG9Szo5TYjXrXSBBqPzVsMpHdcd
+qh1Ci58Tj/aHlkK13YqL8OkiahVktUWbtxI7GtmW0Mg9OQIaWljJIcusuAp+
+uKK9DHW5vL9wlbdC7wXyRow1v8J9B7u0wXAngUUbcSMznwUlSxmHoXyUlgF7
+mu/+gPHijBH4LVgzDnPKGqzaifsmeMehlbEyC9pMehgPEmXJVgsgNWw+A4Zf
+62JCestNG9hNW2ELVe8rfOGoddcm6Lift36I6F5dK4Z2uqJAyF6uCoaSu5mK
+OjWZ35hhEgzQeyS4V0P+F0pF8D9+xo6K
+  
+  "],ExpressionUUID->"af36309b-21f0-4894-a3fd-1b1f0730db4c"]
+},
+WindowSize->{1900, 1242},
+WindowMargins->{{1, Automatic}, {Automatic, 51}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 16153, 352, 1393, "Input",ExpressionUUID->"af36309b-21f0-4894-a3fd-1b1f0730db4c"]
+}
+]
+*)
+
