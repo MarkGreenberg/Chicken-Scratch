@@ -1,0 +1,247 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9948,        239]
+NotebookOptionsPosition[      9634,        225]
+NotebookOutlinePosition[      9994,        241]
+CellTagsIndexPosition[      9951,        238]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"a", "=", 
+        RowBox[{
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "10"}], ",", "10"}], "}"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{"0", "\[Rule]", "5"}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"b", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "30"}], ",", "30"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"c", "=", 
+        RowBox[{
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "12"}], ",", "12"}], "}"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{"0", "\[Rule]", "2"}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"fun", "=", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"fun", "[", 
+         RowBox[{"[", "1", "]"}], "]"}], "=", 
+        FractionBox["c", 
+         RowBox[{
+          RowBox[{"a", "*", "x"}], "+", "b"}]]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{
+        RowBox[{"fun", "[", 
+         RowBox[{"[", "2", "]"}], "]"}], "=", 
+        RowBox[{"c", "*", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"a", "*", "x"}], "+", "b"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"fun", "[", 
+         RowBox[{"[", "3", "]"}], "]"}], "=", 
+        RowBox[{"c", "*", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"a", "*", 
+            RowBox[{"Abs", "[", "x", "]"}]}], "+", "b"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"fun", "[", 
+         RowBox[{"[", "4", "]"}], "]"}], "=", 
+        RowBox[{"c", "*", 
+         RowBox[{"Log10", "[", 
+          RowBox[{
+           RowBox[{"a", "*", "x"}], "+", "b"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dom", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"FunctionDomain", "[", 
+           RowBox[{"#", ",", "x"}], "]"}], "&"}], "/@", "fun"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "\[LessEqual]", "4"}], ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"dom", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "===", "True"}], ",", 
+            RowBox[{
+             RowBox[{"dom", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "=", 
+             RowBox[{"x", "\[Element]", "\[DoubleStruckCapitalR]"}]}]}], 
+           "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"dom", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "===", "False"}], ",", 
+            RowBox[{
+             RowBox[{"dom", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "=", 
+             "\"\<The domain is an empty set.\>\""}]}], 
+           StyleBox["]", "GuideCharacterImage"]}], 
+          StyleBox[";", "GuideCharacterImage"], 
+          StyleBox["\[IndentingNewLine]", "GuideCharacterImage"], 
+          RowBox[{
+           RowBox[{"dom", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "=", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"FullForm", "[", 
+             RowBox[{"dom", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"dom", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", "h1", "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"dom", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}]}]}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixt", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixt", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{"\"\<What is the domain of the function `1`?\>\"", ",", 
+          RowBox[{
+           RowBox[{"f", "[", "x", "]"}], "==", 
+           RowBox[{"fun", "[", 
+            RowBox[{"[", 
+             RowBox[{"choices", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"dom", "[", 
+           RowBox[{"[", "#", "]"}], "]"}], "&"}], "/@", "mixt"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Alge11\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.696781720385558*^9, 3.6967817407650223`*^9}, {
+   3.6967858136888657`*^9, 3.696786137714449*^9}, {3.696786178348279*^9, 
+   3.6967864102157917`*^9}, {3.696786496414074*^9, 3.6967865805214376`*^9}, {
+   3.696786710055009*^9, 3.696786818858823*^9}, 3.696787978710306*^9, {
+   3.6967881948477182`*^9, 3.696788229049159*^9}, {3.6967883002365227`*^9, 
+   3.696788308099931*^9}, {3.696788339910944*^9, 3.6967883661832533`*^9}, {
+   3.696788416514134*^9, 3.696788417161907*^9}, {3.696851170854446*^9, 
+   3.6968515510353003`*^9}, {3.696851634401183*^9, 3.696851648713447*^9}, {
+   3.696851694196786*^9, 3.6968517451971903`*^9}, {3.696851891053342*^9, 
+   3.69685191604467*^9}, {3.696852288231112*^9, 3.696852300119988*^9}, {
+   3.696852387478397*^9, 3.696852392979929*^9}, {3.696852473945107*^9, 
+   3.696852485625659*^9}, {3.696852923911976*^9, 3.6968530095223494`*^9}, 
+   3.6968530708798027`*^9, {3.696853248893956*^9, 3.696853315697302*^9}, {
+   3.6968534875362587`*^9, 3.696853501473626*^9}, {3.696853630289319*^9, 
+   3.696853634207807*^9}, {3.69685366596253*^9, 3.696853682722486*^9}, {
+   3.6968542079581423`*^9, 3.696854370943664*^9}, {3.6968544030458937`*^9, 
+   3.696854468600297*^9}, {3.696854513515719*^9, 3.696854647064464*^9}, 
+   3.696854727422846*^9, {3.696854774391013*^9, 3.696854980272792*^9}, {
+   3.696855042302045*^9, 3.69685505311589*^9}, {3.696855132617536*^9, 
+   3.696855135423902*^9}, {3.696855223070651*^9, 3.6968552408855762`*^9}, {
+   3.6968552742228413`*^9, 3.696855347283905*^9}, {3.6968554248472233`*^9, 
+   3.696855557180438*^9}, {3.696855600712352*^9, 3.696855693859561*^9}, {
+   3.696855732374617*^9, 3.696855743343357*^9}, {3.696855797248904*^9, 
+   3.696855851603661*^9}, 3.696855927341344*^9, {3.696856033779599*^9, 
+   3.696856042236047*^9}, {3.696856266881117*^9, 3.696856281743793*^9}, {
+   3.696856423422608*^9, 3.696856433349662*^9}, {3.6968565671176243`*^9, 
+   3.696856595902916*^9}, {3.696856638360674*^9, 3.696856656032495*^9}, {
+   3.696856707223885*^9, 3.696856816522262*^9}, {3.696856854418161*^9, 
+   3.696856857386491*^9}, {3.696856895205956*^9, 3.6968569237355003`*^9}, {
+   3.696856960128196*^9, 3.696857006864843*^9}, {3.696857116967927*^9, 
+   3.696857146377696*^9}, {3.6968593347795687`*^9, 3.696859384640703*^9}, {
+   3.6968600612578573`*^9, 3.696860081296883*^9}, 3.696860172684284*^9, {
+   3.696860216037594*^9, 3.696860220885626*^9}, {3.696860251843566*^9, 
+   3.696860252975678*^9}, {3.696860348086776*^9, 3.696860390094879*^9}, {
+   3.696860512343507*^9, 3.696860614825001*^9}, {3.696860685775037*^9, 
+   3.696860686456409*^9}, {3.6968607354253693`*^9, 3.69686074694289*^9}, {
+   3.696860797084468*^9, 3.696860801945122*^9}, {3.696860853422656*^9, 
+   3.696860862379274*^9}, {3.696860971043693*^9, 3.696861023935255*^9}, {
+   3.6968610807104273`*^9, 3.696861087718622*^9}, {3.696861120664445*^9, 
+   3.69686113098359*^9}, {3.696861217060389*^9, 3.696861248316855*^9}, {
+   3.696861417959949*^9, 3.696861434885579*^9}, {3.696861503753912*^9, 
+   3.696861540500331*^9}, {3.696861614518505*^9, 3.6968617020890207`*^9}, {
+   3.696861746715397*^9, 
+   3.696861772652832*^9}},ExpressionUUID->"b9eb79f1-2693-48bb-b02c-\
+737d6b4e50cc"]
+},
+WindowSize->{1193, 1042},
+WindowMargins->{{4, Automatic}, {54, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 9072, 203, 564, "Input",ExpressionUUID->"b9eb79f1-2693-48bb-b02c-737d6b4e50cc"]
+}
+]
+*)
+

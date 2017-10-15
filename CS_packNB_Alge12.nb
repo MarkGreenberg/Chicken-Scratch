@@ -1,0 +1,127 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4170,        117]
+NotebookOptionsPosition[      3856,        103]
+NotebookOutlinePosition[      4217,        119]
+CellTagsIndexPosition[      4174,        116]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"no1", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "12"}], ",", "12"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"no2", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "12"}], ",", "12"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"no3", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "20"}], ",", "20"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{
+         SuperscriptBox["no1", "2"], "-", 
+         RowBox[{"no1", "*", "no2"}], "+", "no3"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{
+                 RowBox[{"-", "75"}], ",", "120"}], "]"}], ",", "4"}], "]"}], 
+             ",", "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<If `1`, `2`, and `3`, then what is the value of the expression \
+`4`?\>\"", ",", 
+          RowBox[{"a", "\[Equal]", "no1"}], ",", 
+          RowBox[{"b", "\[Equal]", "no2"}], ",", 
+          RowBox[{"c", "\[Equal]", "no3"}], ",", 
+          RowBox[{
+           SuperscriptBox["a", "2"], "-", 
+           RowBox[{"a", "*", "b"}], " ", "+", "c"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Alge12\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6968628661129227`*^9, 3.696862878234805*^9}, {
+   3.696866498000688*^9, 3.696866632502212*^9}, {3.696866685097927*^9, 
+   3.696866845936884*^9}, {3.6968668771303673`*^9, 3.696866877921541*^9}, 
+   3.696866990951722*^9, {3.696867048154274*^9, 3.6968672548437643`*^9}, 
+   3.696867366763605*^9, {3.696867397197071*^9, 3.696867432925009*^9}, {
+   3.6968675137948017`*^9, 3.696867526065778*^9}, {3.696867680188712*^9, 
+   3.6968676818844748`*^9}},ExpressionUUID->"d94aa532-7250-4b4a-bfb9-\
+b7268477c86c"]
+},
+WindowSize->{1201, 1054},
+WindowMargins->{{-1, Automatic}, {Automatic, 45}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3294, 81, 295, "Input",ExpressionUUID->"d94aa532-7250-4b4a-bfb9-b7268477c86c"]
+}
+]
+*)
+
+(* End of internal cache information *)
+

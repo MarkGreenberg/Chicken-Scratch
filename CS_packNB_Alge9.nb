@@ -1,0 +1,190 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7222,        180]
+NotebookOptionsPosition[      6907,        166]
+NotebookOutlinePosition[      7268,        182]
+CellTagsIndexPosition[      7225,        179]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ClearAll", "[", "f", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"scen", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "2"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"exps", "=", 
+        RowBox[{"Sort", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"Range", "[", 
+             RowBox[{"0", ",", "9"}], "]"}], ",", "3"}], "]"}], ",", 
+          "Greater"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"cos", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{
+          RowBox[{"DeleteCases", "[", 
+           RowBox[{
+            RowBox[{"Range", "[", 
+             RowBox[{
+              RowBox[{"-", "12"}], ",", "12"}], "]"}], ",", "0"}], "]"}], ",",
+           "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"fnRl", "=", 
+        RowBox[{"Total", "[", 
+         RowBox[{"MapThread", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"#1", " ", 
+             RowBox[{"x", "^", "#2"}]}], "&"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"cos", ",", "exps"}], "}"}]}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"qFun", "=", 
+        RowBox[{
+         RowBox[{"HoldForm", "[", 
+          RowBox[{"f", "[", "x", "]"}], "]"}], "\[Equal]", "fnRl"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"der1", "=", 
+        RowBox[{"D", "[", 
+         RowBox[{"fnRl", ",", "x"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"rules", "=", 
+        RowBox[{"{", "der1", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "rules", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"expsD", "=", 
+           RowBox[{"Sort", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{"0", ",", 
+                 RowBox[{"exps", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", "3"}], "]"}], 
+             ",", "Greater"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"cosD", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{
+                 RowBox[{"-", "99"}], ",", "99"}], "]"}], ",", "0"}], "]"}], 
+             ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"try", "=", 
+           RowBox[{"Total", "[", 
+            RowBox[{"MapThread", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#1", " ", 
+                RowBox[{"x", "^", "#2"}]}], "&"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"cosD", ",", "expsD"}], "}"}]}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"Not", "[", 
+             RowBox[{"MemberQ", "[", 
+              RowBox[{"rules", ",", "try"}], "]"}], "]"}], ",", 
+            RowBox[{"rules", "=", 
+             RowBox[{"Append", "[", 
+              RowBox[{"rules", ",", "try"}], "]"}]}]}], "]"}]}]}], "]"}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"HoldForm", "[", 
+            RowBox[{
+             RowBox[{"f", "'"}], "[", "x", "]"}], "]"}], "==", "#"}], "&"}], "/@",
+          "rules"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{"\"\<What is the first derivative of ``?\>\"", ",", "qFun"}],
+          "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Alge9\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.690561163185231*^9, 3.6905611737859287`*^9}, {
+   3.69056698729056*^9, 3.690567010546187*^9}, {3.690567047885365*^9, 
+   3.6905671396917067`*^9}, {3.690567260913002*^9, 3.6905672609185143`*^9}, {
+   3.690567294120945*^9, 3.690567417950616*^9}, {3.690567456000621*^9, 
+   3.69056753277066*^9}, {3.690567630873871*^9, 3.6905676661626177`*^9}, {
+   3.690567704638232*^9, 3.6905677260855923`*^9}, {3.690568827059106*^9, 
+   3.690568988706046*^9}, {3.690569034154149*^9, 3.690569091493503*^9}, {
+   3.690569130536529*^9, 3.69056916684055*^9}, {3.6905692245253*^9, 
+   3.690569271086274*^9}, {3.690569332010663*^9, 3.6905694204215307`*^9}, {
+   3.6905694620086393`*^9, 3.6905694645757113`*^9}, {3.690569517466906*^9, 
+   3.690569522834437*^9}, {3.690569560957428*^9, 3.6905695845584393`*^9}, {
+   3.690569618575469*^9, 3.69057001553806*^9}, {3.690570077981649*^9, 
+   3.6905700804456882`*^9}, {3.690570534472114*^9, 3.690570695346134*^9}, {
+   3.690570801203411*^9, 3.690570919717257*^9}, {3.690570951391263*^9, 
+   3.690570965215506*^9}, {3.690570998765771*^9, 3.690571017737976*^9}, {
+   3.690571067968061*^9, 3.690571073212537*^9}, {3.6905711440020437`*^9, 
+   3.690571222451638*^9}, {3.690571257718573*^9, 3.69057131327039*^9}, {
+   3.6905713873510857`*^9, 3.690571391155053*^9}, {3.690571430128984*^9, 
+   3.69057159192383*^9}, {3.69057163299833*^9, 3.6905717038260307`*^9}, {
+   3.690571751072263*^9, 3.6905717594779387`*^9}, 
+   3.6905719763315563`*^9},ExpressionUUID->"2a2cc505-ddf4-4b17-8bf3-\
+4e78c80a5e61"]
+},
+WindowSize->{1203, 1024},
+WindowMargins->{{-2, Automatic}, {Automatic, 49}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6345, 144, 472, "Input",ExpressionUUID->"2a2cc505-ddf4-4b17-8bf3-4e78c80a5e61"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
