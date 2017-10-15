@@ -1,0 +1,556 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     27220,        548]
+NotebookOptionsPosition[     26904,        534]
+NotebookOutlinePosition[     27264,        550]
+CellTagsIndexPosition[     27221,        547]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"<|", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"\"\<AbsoluteWorldTowers\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Absolute World\>\"", ",", 
+              "\"\<Mississauga, Ontario, Canada\>\"", ",", 
+              "\"\<Yansong Ma\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<AeroflotMoscow\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Aeroflot\>\"", ",", "\"\<Moscow, Russia\>\"", ",", 
+              "\"\<Vladimir Plotkin\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<AliceLaneTwinTowers\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Alice Lane\>\"", ",", "\"\<Santon, South Africa\>\"", ",", 
+              "\"\<Paragon Architects\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<AngkorWat\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Angkor Wat\>\"", ",", "\"\<Angkor, Cambodia\>\"", ",", 
+              "\"\<Suryavarman II\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<ArcDeTriomphe\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Triomphe de l'\[CapitalEAcute]toile\>\"", ",", 
+              "\"\<Paris, France\>\"", ",", "\"\<Jean Chalgrin\>\""}], 
+             "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<BrandenburgGate\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Brandenburg\>\"", ",", "\"\<Berlin, Germany\>\"", ",", 
+              "\"\<Carl Gotthard Langhans\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<BurjAlArab\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<al-Arab\>\"", ",", "\"\<Dubai, United Arab Emirates\>\"", 
+              ",", "\"\<Tom Wright\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<BurjKhalifa\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Khalifa\>\"", ",", "\"\<Dubai, United Arab Emirates\>\"", 
+              ",", "\"\<Adrian Smith\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<Colosseum\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Colosseum\>\"", ",", "\"\<Rome, Italy\>\"", ",", 
+              "\"\<Vespasian\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<ConventionCentreDublin\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<L\[AAcute]rionad Tion\[OAcute]il na Bhaile \
+\[CapitalAAcute]tha Cliath\>\"", ",", "\"\<Dublin, Ireland\>\"", ",", 
+              "\"\<Harry Crosbie\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           
+           RowBox[{"\"\<DjenneMosque\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Djenn\[EAcute]\>\"", ",", "\"\<Djenn\[EAcute], Mali\>\"", 
+              ",", "\"\<Kunburu\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<DomeOfTheRock\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Qubbat al-Sakhrah\>\"", ",", "\"\<Jerusalem, Israel\>\"", 
+              ",", "\"\<Abd al-Malik\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<EiffelTower\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Eiffel\>\"", ",", "\"\<Paris, France\>\"", ",", 
+              "\"\<Stephen Sauvestre\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<EmpireState\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Empire State\>\"", ",", 
+              "\"\<Manhattan, New York City, New York\>\"", ",", 
+              "\"\<William F. Lamb\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<FallingWater\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Fallingwater\>\"", ",", 
+              "\"\<Stewart Township, Pennsylvania\>\"", ",", 
+              "\"\<Frank Lloyd Wright\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<GazpromTower\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Gazprom\>\"", ",", "\"\<Saint Petersburg,Russia\>\"", ",", 
+              "\"\<Tony Kettle\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<GuangdongMuseum\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Guangdong\>\"", ",", "\"\<Guangzhou, China\>\"", ",", 
+              "\"\<Rocco Yim\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<GuggenheimMuseumBilbao\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Gugenheim\>\"", ",", 
+              "\"\<Bilbao, Basque Country, Spain\>\"", ",", 
+              "\"\<Frank Gehry\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<Habitat67\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Habitat 67\>\"", ",", "\"\<Montreal, Canada\>\"", ",", 
+              "\"\<Moshe Safdie\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<HagiaSophia\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Hagia Sophia\>\"", ",", "\"\<Istanbul, Turkey\>\"", ",", 
+              "\"\<Isidore of Miletus\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<JatiyoSangshadBhaban\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Jatiyo Sangshad Bhaban\>\"", ",", 
+              "\"\<Dhaka, Bangladesh\>\"", ",", "\"\<Louis Kahn\>\""}], 
+             "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<KrzywyDomek\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Krzywy Domek\>\"", ",", "\"\<Sopot, Poland\>\"", ",", 
+              "\"\<Szoty\:0144scy & Zaleski\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<LeaningTowerOfPisa\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Torre Pendente\>\"", ",", "\"\<Pisa, Italy\>\"", ",", 
+              "\"\<Bonanno Pisano\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<LondonMetUniversity\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Metropolitan\>\"", ",", "\"\<London, England\>\"", ",", 
+              "\"\<Daniel Libeskind\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<NationalGalleryOfCanada\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<National Gallery\>\"", ",", "\"\<Ottawa, Canada\>\"", ",", 
+              "\"\<Moshe Safdie\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<NeuschwansteinCastle\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Neuschwanstein\>\"", ",", 
+              "\"\<Hohenschwangau, Bavaria, Germany\>\"", ",", 
+              "\"\<Eduard Riedel\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           
+           RowBox[{"\"\<NotreDameCathedral\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Notre-Dame\>\"", ",", "\"\<Paris, France\>\"", ",", 
+              "\"\<Pierre de Montreuil\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<OneWorldTradeCenter\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<One World\>\"", ",", 
+              "\"\<Manhattan, New York City, New York\>\"", ",", 
+              "\"\<David Childs\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<Pantheon\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Pantheon\>\"", ",", "\"\<Rome, Italy\>\"", ",", 
+              "\"\<Publius Aelius Hadrianus\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<Parthenon\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Parthenon\>\"", ",", "\"\<Athens, Greece\>\"", ",", 
+              "\"\<Ictinos and Callicrates\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<PetronasTowers\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Petronas\>\"", ",", "\"\<Kuala Lumpur, Malaysia\>\"", ",", 
+              "\"\<Cesar Pelli\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<SagradaFamilia\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Sagrada Fam\[IAcute]lia\>\"", ",", 
+              "\"\<Barcelona, Spain\>\"", ",", 
+              "\"\<Antoni Gaud\[IAcute]\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<SantoriniChurch\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Santorini\>\"", ",", "\"\<Perissa, Santorini, Greece\>\"", 
+              ",", "\"\<Unknown\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<SedonaChapel\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Holy Cross\>\"", ",", "\"\<Sedona, Arizona\>\"", ",", 
+              "\"\<Marguerite Brunswig Staude\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<SevenSisters\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Seven Sisters\>\"", ",", "\"\<Moscow, Russia\>\"", ",", 
+              "\"\<Lev Rudnev\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<SpaceNeedle\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Space Needle\>\"", ",", "\"\<Seattle, Washington\>\"", ",", 
+              "\"\<John Graham\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<StBasilsCathedral\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Saint Basil\>\"", ",", "\"\<Moscow, Russia\>\"", ",", 
+              "\"\<Barma and Postnik Yakovlev\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<StLouisArch\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Gateway\>\"", ",", "\"\<St. Louis, Missouri\>\"", ",", 
+              "\"\<Eero Saarinen\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           
+           RowBox[{"\"\<StMarksBasilica\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Saint Mark\>\"", ",", "\"\<Venice, Italy\>\"", ",", 
+              "\"\<Vitale Faliero\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<StPauls\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Saint Paul\>\"", ",", "\"\<London, England\>\"", ",", 
+              "\"\<Sir Christopher Wren\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<SydneyOperaHouse\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Opera House\>\"", ",", "\"\<Sydney, Australia\>\"", ",", 
+              "\"\<J\[OSlash]rn Utzon\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<TajMahal\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Taj Mahal\>\"", ",", "\"\<Agra, India\>\"", ",", 
+              "\"\<Ustad Ahmad Lahauri\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<TorreAgbar\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Agbar\>\"", ",", "\"\<Barcelona, Spain\>\"", ",", 
+              "\"\<Jean Nouvel\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<USCapitol\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Capitol Hill\>\"", ",", "\"\<Washington, D.C.\>\"", ",", 
+              "\"\<William Thornton\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<VillaAmanzi\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Villa Amanzi\>\"", ",", "\"\<Phuket, Thailand\>\"", ",", 
+              "\"\<Adrian McCarroll\>\""}], "}"}]}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"\"\<WhiteHouse\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<White House\>\"", ",", "\"\<Washington, D.C.\>\"", ",", 
+              "\"\<James Hoban\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+           RowBox[{"\"\<YoyogiNationalStadium\>\"", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Yoyogi\>\"", ",", "\"\<Tokyo, Japan\>\"", ",", 
+              "\"\<Kenzo Tange\>\""}], "}"}]}]}], "|>"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansKey", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"Keys", "[", "data", "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"qCat", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "3"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"qStr", "=", 
+        RowBox[{
+         RowBox[{"data", "[", "ansKey", "]"}], "[", 
+         RowBox[{"[", "qCat", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"imgs", "=", 
+        RowBox[{"Prepend", "[", 
+         RowBox[{
+          RowBox[{"Keys", "[", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{"data", ",", 
+               RowBox[{"Switch", "[", 
+                RowBox[{"qCat", ",", "1", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"qStr", ",", "_", ",", "_"}], "}"}], ",", "2", ",", 
+                 
+                 RowBox[{"{", 
+                  RowBox[{"_", ",", "qStr", ",", "_"}], "}"}], ",", "3", ",", 
+                 
+                 RowBox[{"{", 
+                  RowBox[{"_", ",", "_", ",", 
+                   RowBox[{"(", 
+                    RowBox[{"qStr", "|", "\"\<Unknown\>\""}], ")"}]}], 
+                  "}"}]}], "]"}]}], "]"}], ",", "3"}], "]"}], "]"}], ",", 
+          "ansKey"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"smig", "=", 
+        RowBox[{"RandomSample", "[", "imgs", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"picURLs", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<images/Art1/\>\"", "<>", "#", "<>", "\"\<.jpg\>\""}], 
+          "&"}], "/@", "smig"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"smig", ",", 
+           RowBox[{"imgs", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<upper left\>\"", ",", "\"\<upper right\>\"", ",", 
+          "\"\<lower left\>\"", ",", "\"\<lower right\>\""}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Switch", "[", 
+         RowBox[{"qCat", ",", "\[IndentingNewLine]", "1", ",", 
+          RowBox[{
+          "\"\<Which building has a name that includes \\\"\>\"", "<>", 
+           "qStr", "<>", "\"\<\\\"?\>\""}], ",", "\[IndentingNewLine]", "2", 
+          ",", 
+          RowBox[{
+          "\"\<Which building is located in \>\"", "<>", "qStr", "<>", 
+           "\"\<?\>\""}], ",", "\[IndentingNewLine]", "3", ",", 
+          RowBox[{
+          "\"\<Which of these was designed or built by \>\"", "<>", "qStr", 
+           "<>", "\"\<?\>\""}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"Grid", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Rasterize", "[", 
+                 RowBox[{"Import", "[", 
+                  RowBox[{"urlStem", "<>", "h1"}], "]"}], "]"}], ",", 
+                RowBox[{"Rasterize", "[", 
+                 RowBox[{"Import", "[", 
+                  RowBox[{"urlStem", "<>", "h2"}], "]"}], "]"}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Rasterize", "[", 
+                 RowBox[{"Import", "[", 
+                  RowBox[{"urlStem", "<>", "h3"}], "]"}], "]"}], ",", 
+                RowBox[{"Rasterize", "[", 
+                 RowBox[{"Import", "[", 
+                  RowBox[{"urlStem", "<>", "h4"}], "]"}], "]"}]}], "}"}]}], 
+             "}"}], ",", 
+            RowBox[{"Spacings", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", 
+            RowBox[{"picURLs", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+           RowBox[{"h2", "\[Rule]", 
+            RowBox[{"picURLs", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+           RowBox[{"h3", "\[Rule]", 
+            RowBox[{"picURLs", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], ",", 
+           RowBox[{"h4", "\[Rule]", 
+            RowBox[{"picURLs", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Art1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.683547400554873*^9, 3.683547403953895*^9}, 
+   3.6835475226154003`*^9, {3.6835476344536533`*^9, 3.683547741794643*^9}, {
+   3.6881426594082117`*^9, 3.688142704529952*^9}, {3.688142857455209*^9, 
+   3.688142889620289*^9}, {3.688142933118627*^9, 3.688142994081346*^9}, {
+   3.688143069604054*^9, 3.6881431024570227`*^9}, {3.688143136745284*^9, 
+   3.688143293999035*^9}, {3.688152171153942*^9, 3.6881521896325283`*^9}, {
+   3.688152365763747*^9, 3.688152369217868*^9}, {3.688152518147087*^9, 
+   3.6881525215452623`*^9}, {3.688238291506547*^9, 3.6882383176358023`*^9}, {
+   3.6882383690239077`*^9, 3.6882383981278877`*^9}, {3.688238498238247*^9, 
+   3.68823856488059*^9}, {3.6882386387497597`*^9, 3.6882386485645933`*^9}, {
+   3.6882386804480267`*^9, 3.688238704247552*^9}, {3.688238898570654*^9, 
+   3.688238955395628*^9}, {3.688239184337298*^9, 3.688239280804797*^9}, {
+   3.688239345744377*^9, 3.688239351616179*^9}, {3.68823942659636*^9, 
+   3.688239439444528*^9}, {3.688239575371457*^9, 3.688239584915979*^9}, {
+   3.688250920687913*^9, 3.6882509299350224`*^9}, {3.688299450274763*^9, 
+   3.6882994687319202`*^9}, {3.688299547733487*^9, 3.688299566885297*^9}, {
+   3.688314269951239*^9, 3.688314319855586*^9}, {3.688314469576001*^9, 
+   3.6883145776362333`*^9}, {3.6883146430716352`*^9, 3.688314646958486*^9}, {
+   3.688314680570891*^9, 3.688314750716692*^9}, {3.6883147866547203`*^9, 
+   3.688314791925727*^9}, 3.688314838618827*^9, {3.6883148700690107`*^9, 
+   3.688314873387416*^9}, {3.688314967404215*^9, 3.688315015800578*^9}, {
+   3.6883150865653057`*^9, 3.6883151475770397`*^9}, {3.688315458191535*^9, 
+   3.688315473638776*^9}, {3.688315518670081*^9, 3.688315558501114*^9}, {
+   3.68831561734337*^9, 3.688315623030225*^9}, 3.688315683104781*^9, {
+   3.688315779674152*^9, 3.688315820249857*^9}, {3.6883159032252407`*^9, 
+   3.688315934689385*^9}, {3.6883160134458313`*^9, 3.688316064533836*^9}, {
+   3.6883161250122128`*^9, 3.688316152423979*^9}, {3.688316249138221*^9, 
+   3.688316325202468*^9}, {3.6883163880701723`*^9, 3.688316392043672*^9}, 
+   3.688316428420623*^9, 3.688316489270933*^9, {3.6883165575901737`*^9, 
+   3.688316599247726*^9}, {3.688316660562315*^9, 3.688316694882657*^9}, {
+   3.688316773117565*^9, 3.6883167758226748`*^9}, 3.688316876096601*^9, {
+   3.688318401992322*^9, 3.688318446760928*^9}, {3.688318484387535*^9, 
+   3.688318486145953*^9}, {3.6883185532264433`*^9, 3.688318564254064*^9}, {
+   3.688318621938635*^9, 3.6883186313052464`*^9}, {3.688318840485134*^9, 
+   3.6883189177100983`*^9}, {3.688319327300239*^9, 3.688319328107353*^9}, {
+   3.688319519633857*^9, 3.688319567783475*^9}, {3.688319845099217*^9, 
+   3.688319848379291*^9}, {3.6883198900344467`*^9, 3.688319895165328*^9}, 
+   3.68832003691564*^9, {3.688320071504673*^9, 3.6883201155766687`*^9}, 
+   3.6883201867027397`*^9, 3.6883202283000507`*^9, {3.688320273416875*^9, 
+   3.6883203053872337`*^9}, {3.688320352394063*^9, 3.688320431673778*^9}, {
+   3.688320470980177*^9, 3.688320506440817*^9}, {3.68832067905693*^9, 
+   3.688320730375757*^9}, {3.688320789015058*^9, 3.688320884861671*^9}, {
+   3.68832097694855*^9, 3.688321003277514*^9}, {3.6883212412982388`*^9, 
+   3.688321288961266*^9}, {3.688330211870205*^9, 3.6883302201719103`*^9}, {
+   3.688334079624614*^9, 3.688334106393605*^9}, {3.688334182944709*^9, 
+   3.6883341868945923`*^9}, {3.6883342349937553`*^9, 3.68833429465893*^9}, {
+   3.6883343527010508`*^9, 3.688334379445065*^9}, {3.688334536192919*^9, 
+   3.688334582489143*^9}, {3.688334625074497*^9, 3.688334662034959*^9}, {
+   3.6883347155877542`*^9, 3.688334780585947*^9}, {3.688334842853208*^9, 
+   3.688334849452115*^9}, {3.688335044699441*^9, 3.6883350572839813`*^9}, {
+   3.688335175017643*^9, 3.6883352382013073`*^9}, {3.688335283961624*^9, 
+   3.6883353142671213`*^9}, {3.6883354196426783`*^9, 3.688335438346129*^9}, {
+   3.688382125001685*^9, 3.6883821500424747`*^9}, 3.6883822571246223`*^9, {
+   3.6883823036974382`*^9, 3.688382398085019*^9}, {3.688383307319194*^9, 
+   3.6883833422054234`*^9}, {3.688383414633445*^9, 3.688383425551484*^9}, {
+   3.688383803375833*^9, 3.6883838529660807`*^9}, {3.688383934469131*^9, 
+   3.688383999805399*^9}, {3.688384042171331*^9, 3.688384070158942*^9}, {
+   3.688384142769514*^9, 3.688384191061096*^9}, {3.6883842987397947`*^9, 
+   3.6883843039710903`*^9}, {3.688384607999227*^9, 3.6883846339718*^9}, {
+   3.688385273140286*^9, 3.68838532114253*^9}, {3.6883853805606422`*^9, 
+   3.6883853969281187`*^9}, {3.688385625569674*^9, 3.688385684438384*^9}, {
+   3.688385721360135*^9, 3.688385735856721*^9}, {3.688385806026649*^9, 
+   3.688385843095776*^9}, {3.688385918523234*^9, 3.688385942890993*^9}, {
+   3.6883861828284607`*^9, 3.688386225290881*^9}, {3.688386291053603*^9, 
+   3.688386293084426*^9}, {3.688386325063074*^9, 3.68838633684107*^9}, {
+   3.688386399399901*^9, 3.688386462574512*^9}, {3.688386544729887*^9, 
+   3.688386558817432*^9}, {3.688386860910118*^9, 3.688386927643326*^9}, {
+   3.6883870165771112`*^9, 3.6883870797811403`*^9}, 3.688387143144712*^9, {
+   3.688387205514278*^9, 3.6883872508934717`*^9}, {3.688387319160028*^9, 
+   3.688387382739978*^9}, {3.6883874524532127`*^9, 3.6883874593573637`*^9}, 
+   3.688387494629498*^9, {3.688387564282988*^9, 3.688387600150832*^9}, 
+   3.688387712000291*^9, {3.688387757153618*^9, 3.688387831922007*^9}, {
+   3.688388143664712*^9, 3.688388153999497*^9}, {3.688388197098731*^9, 
+   3.688388243395825*^9}, {3.68838831995002*^9, 3.688388373307715*^9}, {
+   3.688388417780839*^9, 3.6883884399808617`*^9}, 3.688388478437669*^9, {
+   3.688388819617628*^9, 3.688388841603738*^9}, 3.688388884239472*^9, {
+   3.688388934740287*^9, 3.6883889475487413`*^9}, {3.688388984483836*^9, 
+   3.688388994432605*^9}, {3.688389110414485*^9, 3.6883891708475924`*^9}, {
+   3.688389214239629*^9, 3.6883892806643887`*^9}, {3.688389323803384*^9, 
+   3.68838935577065*^9}, {3.688389407298777*^9, 3.688389414734976*^9}, {
+   3.688389455883403*^9, 3.688389464577052*^9}, {3.688389734446415*^9, 
+   3.688389773864143*^9}, {3.6883898153380632`*^9, 3.688389824194791*^9}, {
+   3.68838987478878*^9, 3.688389876346919*^9}, {3.688389998412425*^9, 
+   3.688390017781007*^9}, {3.68839006180698*^9, 3.6883901011201057`*^9}, {
+   3.6883901545725403`*^9, 3.688390293688777*^9}, {3.68839032590731*^9, 
+   3.688390328794252*^9}, {3.6883903859200897`*^9, 3.688390398863264*^9}, {
+   3.68839044185015*^9, 3.688390444639792*^9}, {3.6883907018526087`*^9, 
+   3.688390753503133*^9}, {3.688390788147059*^9, 3.6883907994649487`*^9}, {
+   3.6883908771830606`*^9, 3.688390891165174*^9}, {3.688391091787936*^9, 
+   3.688391104676646*^9}, {3.688391177035537*^9, 3.688391186786497*^9}, {
+   3.6883915651495533`*^9, 3.688391628118338*^9}, {3.68839187898707*^9, 
+   3.68839190416286*^9}, {3.688393013919043*^9, 3.688393020952948*^9}, {
+   3.688393111771859*^9, 3.688393115884143*^9}, {3.6883934453948393`*^9, 
+   3.688393571735342*^9}, {3.6883936098490763`*^9, 3.688393640490389*^9}, {
+   3.688393676405995*^9, 3.688393678477333*^9}, {3.688393826981051*^9, 
+   3.6883938453721037`*^9}, {3.688393882215657*^9, 3.6883938903275003`*^9}, {
+   3.688393937417968*^9, 3.688394001475501*^9}, {3.688394072376917*^9, 
+   3.688394079904626*^9}, {3.6883941109778214`*^9, 3.688394149131384*^9}, {
+   3.6883942030061827`*^9, 3.688394355268179*^9}, {3.68839438931768*^9, 
+   3.688394621120501*^9}, {3.688394667100456*^9, 3.688394718302762*^9}, {
+   3.688394840036893*^9, 3.688394852499859*^9}, {3.688394904735922*^9, 
+   3.6883949559921207`*^9}, {3.688395033525783*^9, 3.688395087238493*^9}, {
+   3.6883953470521173`*^9, 3.688395444839212*^9}, {3.6883957109008827`*^9, 
+   3.688395836825397*^9}, {3.6883958673172197`*^9, 3.6883958683960238`*^9}, {
+   3.6883959030614233`*^9, 3.688395967927207*^9}, {3.688396041909369*^9, 
+   3.6883960554979773`*^9}, {3.6883967697979527`*^9, 3.688396784877685*^9}, {
+   3.688398967516671*^9, 3.6883989917801247`*^9}, 3.6883990912033243`*^9, {
+   3.688402430221488*^9, 3.688402442153216*^9}, {3.6884029185545273`*^9, 
+   3.688402931879466*^9}, {3.688403224270752*^9, 
+   3.6884032921299*^9}},ExpressionUUID->"6ed372a5-d34a-4089-8440-\
+893d96c052d0"]
+},
+WindowSize->{1190, 1049},
+WindowMargins->{{2, Automatic}, {48, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 26342, 512, 1477, "Input",ExpressionUUID->"6ed372a5-d34a-4089-8440-893d96c052d0"]
+}
+]
+*)
+

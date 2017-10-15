@@ -1,0 +1,188 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7212,        180]
+NotebookOptionsPosition[      6897,        166]
+NotebookOutlinePosition[      7258,        182]
+CellTagsIndexPosition[      7215,        179]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"imgNo", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "20"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<R\>\"", ",", "\"\<red\>\"", ",", "\"\<RGB\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<G\>\"", ",", "\"\<green\>\"", ",", "\"\<RGB\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<B\>\"", ",", "\"\<blue\>\"", ",", "\"\<RGB\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<H\>\"", ",", "\"\<hue\>\"", ",", "\"\<HSB\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<S\>\"", ",", "\"\<saturation\>\"", ",", "\"\<HSB\>\""}], 
+             "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<V\>\"", ",", "\"\<brightness\>\"", ",", "\"\<HSB\>\""}], 
+             "}"}]}], "}"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"#", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "<>", "\"\< channel (\>\"", "<>", 
+           
+           RowBox[{"#", "[", 
+            RowBox[{"[", "3", "]"}], "]"}], "<>", "\"\< model)\>\""}], "&"}], 
+         "/@", "data"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"(*", " ", 
+        RowBox[{
+         RowBox[{"In", " ", "the", " ", "following", " ", "line"}], ",", " ", 
+         
+         RowBox[{
+         "replace", " ", "XXXXX", " ", "with", " ", "your", " ", "user", " ", 
+          
+          RowBox[{"code", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{
+           RowBox[{"img", "=", 
+            RowBox[{"Import", "[", 
+             RowBox[{
+             "\"\<https://www.wolframcloud.com/objects/user-XXXXX/images/Art7/\
+ChanSep\>\"", "<>", 
+              RowBox[{"StringTake", "[", 
+               RowBox[{
+                RowBox[{"\"\<0\>\"", "<>", 
+                 RowBox[{"ToString", "[", "h1", "]"}]}], ",", 
+                RowBox[{"-", "2"}]}], "]"}], "<>", "\"\<.jpg\>\""}], "]"}]}], 
+           ";", "\[IndentingNewLine]", 
+           RowBox[{"chan", "=", 
+            RowBox[{"ColorSeparate", "[", 
+             RowBox[{"img", ",", "h2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           
+           RowBox[{"Image", "[", 
+            RowBox[{
+             RowBox[{"ImageAssemble", "[", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"ImageDimensions", "[", "img", "]"}], "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", "480"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "img", "}"}], ",", 
+                  RowBox[{"{", "chan", "}"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"img", ",", "chan"}], "}"}]}], "]"}], "]"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], "]"}], "/.", 
+         
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "imgNo"}], ",", 
+           RowBox[{"h2", "\[Rule]", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<The grayscale image is one channel from the color image. What \
+channel?\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Art7\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.691487053629534*^9, 3.691487067434072*^9}, {
+   3.691502963293651*^9, 3.691503030889894*^9}, {3.691503063775782*^9, 
+   3.691503182456436*^9}, {3.69150417477322*^9, 3.691504216141685*^9}, {
+   3.691504246576448*^9, 3.691504247184376*^9}, {3.691504459386508*^9, 
+   3.6915045067083387`*^9}, {3.691504832667984*^9, 3.691504838186676*^9}, 
+   3.691504882996916*^9, 3.6915049435193987`*^9, {3.691504974569405*^9, 
+   3.691505112712113*^9}, {3.691505445968513*^9, 3.6915055841245317`*^9}, {
+   3.691505812792851*^9, 3.691505879363862*^9}, {3.691506494609932*^9, 
+   3.691506529881048*^9}, {3.6915072313004293`*^9, 3.691507268997858*^9}, {
+   3.691507389027907*^9, 3.691507528901546*^9}, {3.6915075715166607`*^9, 
+   3.691507593444124*^9}, {3.691508427182781*^9, 3.691508529088438*^9}, {
+   3.6915087069232273`*^9, 3.691508763515519*^9}, {3.691508810544715*^9, 
+   3.6915088734657927`*^9}, {3.691508962600046*^9, 3.691508970725953*^9}, 
+   3.691509010746269*^9, {3.691509112517914*^9, 3.691509155334509*^9}, {
+   3.691509193744503*^9, 3.691509273349402*^9}, {3.691509394780307*^9, 
+   3.6915095079195967`*^9}, {3.691509561130743*^9, 3.6915095698754683`*^9}, {
+   3.691509616359572*^9, 3.691509625525679*^9}, {3.691509717627533*^9, 
+   3.6915097306122437`*^9}, {3.691509822722484*^9, 3.6915098344163322`*^9}, {
+   3.6915103953734407`*^9, 3.69151039671551*^9}, {3.6915105886550207`*^9, 
+   3.6915106005010853`*^9}, {3.717060199986985*^9, 
+   3.717060252458034*^9}},ExpressionUUID->"a745312b-9c3e-460b-b633-\
+d1ca39441718"]
+},
+WindowSize->{1205, 1068},
+WindowMargins->{{-1, Automatic}, {Automatic, 27}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6335, 144, 388, "Input",ExpressionUUID->"a745312b-9c3e-460b-b633-d1ca39441718"]
+}
+]
+*)
+

@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6499,        159]
+NotebookOptionsPosition[      6184,        145]
+NotebookOutlinePosition[      6545,        161]
+CellTagsIndexPosition[      6502,        158]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"pic", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Grid", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"HoldForm", "[", 
+                 RowBox[{"N", "\[Equal]", 
+                  RowBox[{"f", "/", "D"}]}], "]"}], ",", "SpanFromLeft"}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"N", ",", "\"\<f-number\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"f", ",", "\"\<focal length\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"D", ",", "\"\<diameter\\n of aperture\>\""}], "}"}]}],
+              "}"}], ",", 
+            RowBox[{"Frame", "->", "All"}], ",", 
+            RowBox[{"FrameStyle", "\[Rule]", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"LightGray", ",", 
+               RowBox[{"Thickness", "\[Rule]", "4"}]}], "]"}]}], ",", 
+            RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+            RowBox[{"Spacings", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "42"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"fl", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"Range", "[", 
+          RowBox[{"10", ",", "300", ",", "5"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"fn", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+          ".7", ",", "1", ",", "1.4", ",", "2", ",", "2.8", ",", "4", ",", 
+           "5.6", ",", "8", ",", "11", ",", "16", ",", "22", ",", "32", ",", 
+           "45", ",", "64", ",", "90", ",", "128"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<The `1`-number controls the brightness of a photograph. A \
+`2`-mm lens set to `3` will open the aperture to what diameter?\>\"", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<f\>\"", ",", "Italic"}], "]"}], ",", "h1", ",", 
+            RowBox[{"HoldForm", "[", 
+             RowBox[{"f", "/", "h2"}], "]"}]}], "]"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "fl"}], ",", 
+           RowBox[{"h2", "\[Rule]", "fn"}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"\"\<~\>\"", "<>", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"Round", "[", 
+                RowBox[{
+                 RowBox[{"Abs", "[", "#", "]"}], ",", ".01"}], "]"}], "]"}], 
+              "<>", "\"\< mm\>\""}], "&"}], "/@", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"RandomVariate", "[", 
+               RowBox[{
+                RowBox[{"SkewNormalDistribution", "[", 
+                 RowBox[{"22", ",", "75", ",", 
+                  RowBox[{"-", ".5"}]}], "]"}], ",", "5"}], "]"}], ",", 
+              RowBox[{"fl", "/", "fn"}]}], "]"}]}], "]"}], ",", "4"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Art4\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6835535336871223`*^9, 3.683553535461897*^9}, {
+   3.683553566409252*^9, 3.68355357036952*^9}, {3.683553628972349*^9, 
+   3.683553661010571*^9}, {3.683553969541654*^9, 3.683554065283112*^9}, {
+   3.683554229452559*^9, 3.68355426682209*^9}, {3.683554310481167*^9, 
+   3.6835543379112043`*^9}, {3.683554530497992*^9, 3.683554556967883*^9}, {
+   3.6887217076731977`*^9, 3.688721862936008*^9}, {3.688721932741455*^9, 
+   3.68872197048556*^9}, 3.6887220158232*^9, {3.6887404479833097`*^9, 
+   3.6887404667497473`*^9}, 3.688740520763096*^9, {3.7154485286143293`*^9, 
+   3.715448530828269*^9}, {3.7154487305738*^9, 3.715448828427671*^9}, {
+   3.715448879948868*^9, 3.715448880259614*^9}, {3.715449032524838*^9, 
+   3.715449038323391*^9}, {3.715449115986331*^9, 3.715449121328388*^9}, {
+   3.7154491627234097`*^9, 3.715449196547845*^9}, {3.7154493185783873`*^9, 
+   3.71544934270611*^9}, {3.715449865113694*^9, 3.715449880120678*^9}, {
+   3.715450085665332*^9, 3.715450093928014*^9}, {3.715450383419181*^9, 
+   3.715450388151142*^9}, {3.7154505249513807`*^9, 3.715450526973625*^9}, {
+   3.715450582535845*^9, 3.715450585447484*^9}, {3.7154506484235983`*^9, 
+   3.715450714141796*^9}},ExpressionUUID->"33c0fca8-1b08-442f-aea3-\
+c22ee79605e2"]
+},
+WindowSize->{1247, 1024},
+WindowMargins->{{5, Automatic}, {172, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5622, 123, 367, "Input",ExpressionUUID->"33c0fca8-1b08-442f-aea3-c22ee79605e2"]
+}
+]
+*)
+

@@ -1,0 +1,228 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9730,        220]
+NotebookOptionsPosition[      9417,        206]
+NotebookOutlinePosition[      9776,        222]
+CellTagsIndexPosition[      9733,        219]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<Aztec\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Aztec\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Benin\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Benin\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Cambodia\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Cambodian\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<China\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Chinese\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Egypt\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Egyptian\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Etruscans\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Etruscan\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Classical Greek\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_GreekAncient\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Archaic Greek\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_GreekArchaic\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<India\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Indian\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Japan\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Japanese\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Maya\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Mayan\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Mesopotamia\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Mesopotamian\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Persia\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Persian\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Roman Empire\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_RomanEmpire\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Roman Republic\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_RomanRepublic\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Thailand\>\"", ",", 
+              RowBox[{"\"\<images/Art6/cs_art6_Thai\>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
+               "<>", "\"\<.jpg\>\""}]}], "}"}]}], "}"}], ",", "4"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<Which ancient culture produced this piece of art?\>\"", ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"Image", "[", 
+           RowBox[{
+            RowBox[{"Import", "[", 
+             RowBox[{"urlStem", "<>", "h1"}], "]"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "480", "}"}], ",", 
+               RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"data", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Art6\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.686253423037221*^9, 3.6862534258677883`*^9}, {
+   3.686253468438332*^9, 3.686253491071505*^9}, {3.6862535814204617`*^9, 
+   3.686253741170019*^9}, {3.686253894603487*^9, 3.686254059084271*^9}, {
+   3.686254121881131*^9, 3.686254121991666*^9}, {3.686254157448737*^9, 
+   3.686254361315696*^9}, {3.686254428928437*^9, 3.6862546769550457`*^9}, {
+   3.686254709310293*^9, 3.6862547674319487`*^9}, 3.686254840318634*^9, {
+   3.686254884765994*^9, 3.686254885291499*^9}, {3.686254937151803*^9, 
+   3.686254969739573*^9}, 3.686255449092567*^9, {3.688740893512891*^9, 
+   3.688740945774982*^9}, {3.688740979867691*^9, 3.6887409884487467`*^9}, {
+   3.688741036116588*^9, 3.6887410847898893`*^9}, {3.688741119585484*^9, 
+   3.688741120024838*^9}},ExpressionUUID->"bc1d716c-70df-4b37-8bf9-\
+ca499e4fc677"]
+},
+WindowSize->{1188, 980},
+WindowMargins->{{3, Automatic}, {Automatic, 77}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 8855, 184, 577, "Input",ExpressionUUID->"bc1d716c-70df-4b37-8bf9-ca499e4fc677"]
+}
+]
+*)
+
