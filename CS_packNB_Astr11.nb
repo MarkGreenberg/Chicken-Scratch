@@ -1,0 +1,249 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11210,        241]
+NotebookOptionsPosition[     10894,        227]
+NotebookOutlinePosition[     11255,        243]
+CellTagsIndexPosition[     11212,        240]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<Jupiter\>\"", "\[Rule]", "69911"}], ",", 
+          RowBox[{"\"\<Saturn\>\"", "\[Rule]", "58232"}], ",", 
+          RowBox[{"\"\<Uranus\>\"", "\[Rule]", "25362"}], ",", 
+          RowBox[{"\"\<Neptune\>\"", "\[Rule]", "24622"}], ",", 
+          RowBox[{"\"\<Earth\>\"", "\[Rule]", "6371"}], ",", 
+          RowBox[{"\"\<Venus\>\"", "\[Rule]", "6051"}], ",", 
+          RowBox[{"\"\<Mars\>\"", "\[Rule]", "3389"}], ",", 
+          RowBox[{"\"\<Ganymede\>\"", "\[Rule]", "2634"}], ",", 
+          RowBox[{"\"\<Titan\>\"", "\[Rule]", "2576"}], ",", 
+          RowBox[{"\"\<Mercury\>\"", "\[Rule]", "2440"}], ",", 
+          RowBox[{"\"\<Callisto\>\"", "\[Rule]", "2410"}], ",", 
+          RowBox[{"\"\<Io\>\"", "\[Rule]", "1821"}], ",", 
+          RowBox[{"\"\<The Moon\>\"", "\[Rule]", "1737"}], ",", 
+          RowBox[{"\"\<Europa\>\"", "\[Rule]", "1561"}], ",", 
+          RowBox[{"\"\<Triton\>\"", "\[Rule]", "1353"}], ",", 
+          RowBox[{"\"\<Pluto\>\"", "\[Rule]", "1186"}], ",", 
+          RowBox[{"\"\<Eris\>\"", "\[Rule]", "1163"}], ",", 
+          RowBox[{"\"\<Titania\>\"", "\[Rule]", "788.4"}], ",", 
+          RowBox[{
+          "\"\<2007 \!\(\*SubscriptBox[\(OR\), \(10\)]\)\>\"", "\[Rule]", 
+           "767"}], ",", 
+          RowBox[{"\"\<Rhea\>\"", "\[Rule]", "763.8"}], ",", 
+          RowBox[{"\"\<Oberon\>\"", "\[Rule]", "761.4"}], ",", 
+          RowBox[{"\"\<Iapetus\>\"", "\[Rule]", "734.5"}], ",", 
+          RowBox[{"\"\<Makemake\>\"", "\[Rule]", "715"}], ",", 
+          RowBox[{"\"\<Haumea\>\"", "\[Rule]", "620"}], ",", 
+          RowBox[{"\"\<Charon\>\"", "\[Rule]", "606"}], ",", 
+          RowBox[{"\"\<Umbriel\>\"", "\[Rule]", "584.7"}], ",", 
+          RowBox[{"\"\<Ariel\>\"", "\[Rule]", "578.9"}], ",", 
+          RowBox[{"\"\<Dione\>\"", "\[Rule]", "561.4"}], ",", 
+          RowBox[{"\"\<Quaoar\>\"", "\[Rule]", "555"}], ",", 
+          RowBox[{"\"\<Tethys\>\"", "\[Rule]", "531.1"}], ",", 
+          RowBox[{"\"\<Sedna\>\"", "\[Rule]", "500"}], ",", 
+          RowBox[{"\"\<Ceres\>\"", "\[Rule]", "473"}], ",", 
+          RowBox[{
+          "\"\<2002 \!\(\*SubscriptBox[\(MS\), \(4\)]\)\>\"", "\[Rule]", 
+           "467"}], ",", 
+          RowBox[{"\"\<Orcus\>\"", "\[Rule]", "458"}], ",", 
+          RowBox[{"\"\<Salacia\>\"", "\[Rule]", "425"}]}], "|>"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dataPts", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"Range", "[", 
+           RowBox[{"1", ",", 
+            RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", "4"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"wrong", "=", 
+        RowBox[{"ReplacePart", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{"0", ",", 
+            RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"dataPts", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "\[Rule]", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{"dataPts", "[", 
+                RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"dataPts", "[", 
+              RowBox[{"[", "3", "]"}], "]"}], "\[Rule]", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{"dataPts", "[", 
+                RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"dataPts", "[", 
+              RowBox[{"[", "4", "]"}], "]"}], "\[Rule]", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{"dataPts", "[", 
+                RowBox[{"[", "4", "]"}], "]"}], "]"}], "]"}]}]}], "}"}]}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"right", "=", 
+        RowBox[{"ReplacePart", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{"0", ",", 
+            RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"dataPts", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", 
+           RowBox[{
+            RowBox[{"Values", "[", "data", "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"dataPts", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"ListPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"Values", "[", "data", "]"}], ",", "wrong", ",", 
+            "right"}], "}"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"LightGray", ",", "Gray", ",", "Blue"}], "}"}]}], ",", 
+          RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+          RowBox[{"FillingStyle", "\[Rule]", "Thick"}], ",", 
+          RowBox[{"AxesStyle", "\[Rule]", "15"}], ",", 
+          RowBox[{"Ticks", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"None", ",", "Automatic"}], "}"}]}], ",", 
+          RowBox[{"TicksStyle", "\[Rule]", "Black"}], ",", 
+          RowBox[{"PlotLabel", "\[Rule]", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<Solar System Objects by Radius\>\"", ",", "Black", ",", 
+             "20"}], "]"}]}], ",", 
+          RowBox[{"ScalingFunctions", "\[Rule]", "\"\<Log\>\""}], ",", 
+          RowBox[{"AspectRatio", "\[Rule]", 
+           FractionBox["9", "8"]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "480", "}"}], ",", 
+             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<Which solar system object is represented in blue?\>\""}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{"Keys", "[", "data", "]"}], "[", 
+         RowBox[{"[", "dataPts", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Astr11\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7002485642507753`*^9, 3.700248595727481*^9}, {
+   3.700250218467588*^9, 3.7002503370224457`*^9}, {3.700250373791782*^9, 
+   3.700250374729487*^9}, {3.700250423811098*^9, 3.700250617004006*^9}, {
+   3.7002506489570837`*^9, 3.700251157525839*^9}, {3.700251221153071*^9, 
+   3.700251474413406*^9}, {3.700255817308655*^9, 3.700255917253697*^9}, 
+   3.70029947036055*^9, {3.700299565462327*^9, 3.700299573289853*^9}, {
+   3.700299716950137*^9, 3.700299722621881*^9}, {3.7003016228509293`*^9, 
+   3.700301639322789*^9}, {3.70030172941621*^9, 3.700301750007806*^9}, {
+   3.700304319116424*^9, 3.700304360707361*^9}, {3.70030449671557*^9, 
+   3.700304597917807*^9}, {3.7003046627351427`*^9, 3.700304692866098*^9}, {
+   3.700304740550043*^9, 3.700304807550831*^9}, {3.7003049997541437`*^9, 
+   3.7003051178785686`*^9}, {3.700305208331688*^9, 3.700305264485222*^9}, {
+   3.70030531700873*^9, 3.700305364682049*^9}, {3.70030629184735*^9, 
+   3.700306333167914*^9}, {3.700306426037949*^9, 3.70030659319635*^9}, {
+   3.700306694082506*^9, 3.700306743532949*^9}, {3.700306941462007*^9, 
+   3.700307026376638*^9}, {3.700307061579467*^9, 3.7003071142529993`*^9}, {
+   3.700307297982579*^9, 3.700307306127846*^9}, {3.700307339152657*^9, 
+   3.70030734340806*^9}, {3.7003073981952963`*^9, 3.7003073989819107`*^9}, 
+   3.700307448130969*^9, {3.7003074918401537`*^9, 3.7003075096642447`*^9}, {
+   3.7003089265164423`*^9, 3.700308975813471*^9}, {3.70030903211265*^9, 
+   3.700309035807423*^9}, {3.700309075058527*^9, 3.700309116723238*^9}, {
+   3.700309173103106*^9, 3.7003092594019814`*^9}, {3.7003093076127872`*^9, 
+   3.700309335767098*^9}, {3.700309398489448*^9, 3.70030940345859*^9}, {
+   3.7003094729249907`*^9, 3.700309578043118*^9}, {3.7003096327525797`*^9, 
+   3.700309633907709*^9}, {3.700309667174777*^9, 3.700309740720168*^9}, {
+   3.700309784275776*^9, 3.7003099244416637`*^9}, {3.7003100560648127`*^9, 
+   3.700310085953322*^9}, {3.700310148195566*^9, 3.700310149131536*^9}, {
+   3.700310221857386*^9, 3.7003102306873407`*^9}, {3.700310304405374*^9, 
+   3.700310306003705*^9}, {3.700310425666148*^9, 3.700310433433342*^9}, {
+   3.70031047704506*^9, 3.700310519928817*^9}, {3.700310682736678*^9, 
+   3.700310697095435*^9}, {3.700310727193326*^9, 3.70031076587288*^9}, {
+   3.700310799484514*^9, 3.700310807435132*^9}, {3.700310867437703*^9, 
+   3.700310876973884*^9}, {3.700311142852459*^9, 3.700311169987973*^9}, {
+   3.700311362630661*^9, 3.700311391238955*^9}, {3.700311435386386*^9, 
+   3.700311447241482*^9}, {3.700311595762209*^9, 3.700311609193556*^9}, {
+   3.7003116938873653`*^9, 3.7003117581934023`*^9}, {3.70031178969963*^9, 
+   3.700311926504871*^9}, {3.700312156578236*^9, 3.700312313164124*^9}, {
+   3.700312464363599*^9, 3.700312544077961*^9}, {3.700312574129374*^9, 
+   3.700312575863325*^9}, {3.7003126172900963`*^9, 3.700312619801733*^9}, {
+   3.70031266162696*^9, 3.7003126690268106`*^9}, {3.70031318707759*^9, 
+   3.7003131889400463`*^9}, {3.700313219700693*^9, 
+   3.700313233945331*^9}},ExpressionUUID->"55707da5-63b2-4023-8214-\
+bb44cde21b6e"]
+},
+WindowSize->{1258, 1047},
+WindowMargins->{{-2, Automatic}, {Automatic, 38}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 10332, 205, 511, "Input",ExpressionUUID->"55707da5-63b2-4023-8214-bb44cde21b6e"]
+}
+]
+*)
+

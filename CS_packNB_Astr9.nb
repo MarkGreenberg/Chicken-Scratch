@@ -1,0 +1,126 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4639,        118]
+NotebookOptionsPosition[      4325,        104]
+NotebookOutlinePosition[      4686,        120]
+CellTagsIndexPosition[      4643,        117]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"hbs", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<the moon\>\"", ",", "\"\<the sun\>\"", ",", "\"\<Earth\>\"", 
+            ",", "\"\<Mercury\>\"", ",", "\"\<Venus\>\"", ",", "\"\<Mars\>\"",
+             ",", "\"\<Jupiter\>\"", ",", "\"\<Saturn\>\"", ",", 
+            "\"\<Uranus\>\"", ",", "\"\<Neptune\>\"", ",", "\"\<Ganymede\>\"",
+             ",", "\"\<Callisto\>\"", ",", "\"\<Titan\>\"", ",", 
+            "\"\<Pandora\>\"", ",", "\"\<Oberon\>\""}], "}"}], ",", "2"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Quantity", "[", 
+           RowBox[{
+            RowBox[{"ScientificForm", "[", 
+             RowBox[{"#", ",", "4"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"\"\<Meters\>\"", "^", "3"}], "*", 
+             RowBox[{"\"\<Kilograms\>\"", "^", 
+              RowBox[{"-", "1"}]}], "*", 
+             RowBox[{"\"\<Seconds\>\"", "^", 
+              RowBox[{"-", "2"}]}]}]}], "]"}], "&"}], "/@", 
+         RowBox[{"Prepend", "[", 
+          RowBox[{
+           RowBox[{"RandomReal", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{".000000000001", ",", ".000000009"}], "}"}], ",", "3"}],
+             "]"}], ",", "0.0000000000667408"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<On the surface of `1` the gravitational constant is `2`. What \
+is it on the surface of `3`?\>\"", ",", 
+          RowBox[{"hbs", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{"choices", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{"hbs", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr9\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.693927407734169*^9, 3.693927512985393*^9}, {
+  3.693927567301176*^9, 3.6939276799224873`*^9}, {3.6939277649044237`*^9, 
+  3.693927789631958*^9}, {3.693927853434259*^9, 3.693927983024028*^9}, {
+  3.693928043860861*^9, 3.693928067716742*^9}, {3.6939281178470163`*^9, 
+  3.693928247252787*^9}, {3.693928321227736*^9, 3.6939283648591413`*^9}, {
+  3.693928452688202*^9, 3.6939284979693527`*^9}, {3.6939286070493727`*^9, 
+  3.6939286146067257`*^9}, {3.6939287329262238`*^9, 3.69392873313274*^9}, {
+  3.693928766744223*^9, 3.693928807440371*^9}, {3.693928838747733*^9, 
+  3.693928897084799*^9}, {3.693929075567189*^9, 3.693929217070156*^9}, {
+  3.6939292682255077`*^9, 3.693929478618017*^9}, {3.693929618912795*^9, 
+  3.693929634536984*^9}, {3.693930707271502*^9, 
+  3.6939307094054403`*^9}},ExpressionUUID->"97681f44-f2f2-44b4-b2a0-\
+2d24eef964bf"]
+},
+WindowSize->{1203, 1071},
+WindowMargins->{{-2, Automatic}, {37, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3763, 82, 283, "Input",ExpressionUUID->"97681f44-f2f2-44b4-b2a0-2d24eef964bf"]
+}
+]
+*)
+
