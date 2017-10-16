@@ -1,0 +1,110 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      3465,        102]
+NotebookOptionsPosition[      3152,         88]
+NotebookOutlinePosition[      3512,        104]
+CellTagsIndexPosition[      3469,        101]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"r", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "100"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<The radius of a circle measures `` units.\\nWhat is the \
+measure of its circumference?\>\"", ",", "r"}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"2", " ", "\[Pi]", " ", "r"}], ",", ".001"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"\"\<~\>\"", "<>", 
+            RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< units\>\""}], 
+           ")"}], "&"}], "/@", " ", 
+         RowBox[{"Prepend", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Round", "[", 
+              RowBox[{"#", ",", ".001"}], "]"}], "&"}], "/@", " ", 
+            RowBox[{"RandomReal", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"3", ",", 
+                RowBox[{"ansNo", "*", "2"}]}], "}"}], ",", "3"}], "]"}]}], 
+           ",", "ansNo"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Geom4\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.6828877022779093`*^9, {3.682887839169191*^9, 
+   3.6828878670088253`*^9}},ExpressionUUID->"82ceac77-5016-4b90-bc12-\
+8335178e6e4b"]
+},
+WindowSize->{1177, 988},
+WindowMargins->{{-1, Automatic}, {81, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2590, 66, 262, "Input",ExpressionUUID->"82ceac77-5016-4b90-bc12-8335178e6e4b"]
+}
+]
+*)
+

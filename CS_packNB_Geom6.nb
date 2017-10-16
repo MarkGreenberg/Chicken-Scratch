@@ -1,0 +1,242 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10196,        234]
+NotebookOptionsPosition[      9882,        220]
+NotebookOutlinePosition[     10242,        236]
+CellTagsIndexPosition[     10199,        233]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"r1", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"12", ",", "50"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"r2", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", 
+           RowBox[{"r1", "-", "4"}]}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"6", " ", "r1"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"EdgeForm", "[", 
+               RowBox[{"Directive", "[", "Gray", "]"}], "]"}], ",", 
+              RowBox[{"FaceForm", "[", "LightGreen", "]"}], ",", 
+              RowBox[{"RegularPolygon", "[", 
+               RowBox[{"r1", ",", "6"}], "]"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"EdgeForm", "[", 
+               RowBox[{"Directive", "[", "Gray", "]"}], "]"}], ",", 
+              RowBox[{"FaceForm", "[", "White", "]"}], ",", 
+              RowBox[{"RegularPolygon", "[", 
+               RowBox[{"r2", ",", "6"}], "]"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "r2"}], ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"Text", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<B\>\"", ",", "Large", ",", "Italic", ",", 
+                 RowBox[{
+                 "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "r2"}], ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], "]"}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "r1"}], ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"Text", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<A\>\"", ",", "Large", ",", "Italic", ",", 
+                 RowBox[{
+                 "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "r1"}], ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1.5", ",", "0"}], "}"}]}], "]"}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
+              RowBox[{"Point", "[", 
+               RowBox[{"{", 
+                RowBox[{"r2", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"Text", "[", 
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<C\>\"", ",", "Large", ",", "Italic", ",", 
+                 RowBox[{
+                 "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"r2", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "1.7"}], ",", "0"}], "}"}]}], "]"}], "}"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "480", "}"}], ",", 
+             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Prepend", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"DeleteCases", "[", 
+             RowBox[{
+              RowBox[{"Range", "[", 
+               RowBox[{
+                RowBox[{"r2", "*", "2"}], ",", 
+                RowBox[{"Round", "[", 
+                 RowBox[{"ansNo", " ", "*", " ", "1.4"}], "]"}], ",", "2"}], 
+               "]"}], ",", "ansNo"}], "]"}], ",", "3"}], "]"}], ",", 
+          "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<This figure's bounds are concentric regular hexagons. `1`=`2` \
+and `3`=`4`. What is the length of the outside perimeter?\>\"", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<AB\>\"", ",", "Italic"}], "]"}], ",", 
+            RowBox[{"r1", "-", "r2"}], ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<BC\>\"", ",", "Italic"}], "]"}], ",", 
+            RowBox[{"2", " ", "r2"}]}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Geom6\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6858309546519327`*^9, 3.685831016197304*^9}, {
+   3.685831544752861*^9, 3.685831629404726*^9}, {3.6858317169127693`*^9, 
+   3.685831721207733*^9}, {3.685831760308111*^9, 3.685831769179303*^9}, {
+   3.6858320817644672`*^9, 3.685832160006605*^9}, {3.685832203162291*^9, 
+   3.685832249633731*^9}, {3.6858323335047693`*^9, 3.685832584913966*^9}, {
+   3.685832668537607*^9, 3.685832680449765*^9}, 3.685832799231759*^9, {
+   3.685832876459379*^9, 3.685832896397929*^9}, {3.685833031579432*^9, 
+   3.685833054793272*^9}, 3.685833153589775*^9, {3.685833184377674*^9, 
+   3.6858331879196997`*^9}, {3.685833239961537*^9, 3.6858332426742153`*^9}, {
+   3.685872660040605*^9, 3.685872694838192*^9}, {3.685872778067842*^9, 
+   3.685872912544989*^9}, {3.685872946244048*^9, 3.6858729896945353`*^9}, {
+   3.685873033689584*^9, 3.685873034159815*^9}, {3.685873167088187*^9, 
+   3.685873172772656*^9}, {3.685873203041822*^9, 3.6858732040356913`*^9}, {
+   3.685873329320181*^9, 3.685873390984982*^9}, {3.685873464614397*^9, 
+   3.68587350391831*^9}, {3.685874076476981*^9, 3.685874100195497*^9}, {
+   3.6858741433206053`*^9, 3.685874148575143*^9}, {3.685875956800147*^9, 
+   3.685876091591776*^9}, {3.685876241832399*^9, 3.685876243244454*^9}, {
+   3.685876285936552*^9, 3.685876328667482*^9}, {3.685876360373248*^9, 
+   3.6858763621625*^9}, {3.685876421920092*^9, 3.685876514777866*^9}, {
+   3.685876549334868*^9, 3.685876560021924*^9}, {3.685876601668455*^9, 
+   3.685876664939097*^9}, {3.685876727128586*^9, 3.685876774369687*^9}, 
+   3.685876807836186*^9, {3.685877061994615*^9, 3.685877107225382*^9}, {
+   3.685877140156785*^9, 3.685877220935144*^9}, {3.685886100101452*^9, 
+   3.685886167657773*^9}, {3.6858862566333714`*^9, 3.685886307290498*^9}, {
+   3.6858863465808153`*^9, 3.6858863674935827`*^9}, {3.6858864026072083`*^9, 
+   3.685886406375658*^9}, {3.6858864839563847`*^9, 3.685886529157483*^9}, {
+   3.685886624388742*^9, 3.6858866913506327`*^9}, {3.685886781459012*^9, 
+   3.6858868344998407`*^9}, {3.6858868741586857`*^9, 3.685886875525589*^9}, 
+   3.6858869703404617`*^9, {3.685887188129431*^9, 3.6858872296158733`*^9}, {
+   3.6858872612682056`*^9, 3.685887271498547*^9}, {3.685887304661645*^9, 
+   3.685887309477642*^9}, {3.685887343639637*^9, 3.685887383832515*^9}, 
+   3.685887493606427*^9, {3.6858875827632303`*^9, 3.6858875927956123`*^9}, {
+   3.685887787285593*^9, 3.685887792666088*^9}, 3.685887957902829*^9, {
+   3.685888495039469*^9, 3.685888523493321*^9}, {3.685888564311172*^9, 
+   3.685888702269312*^9}, {3.6858891528162327`*^9, 3.68588916162953*^9}, {
+   3.685889300966509*^9, 3.685889313316577*^9}, {3.6858896901612177`*^9, 
+   3.6858896932635193`*^9}},ExpressionUUID->"661ca9c8-3202-4ce6-a37b-\
+f0c6c05a666e"]
+},
+WindowSize->{1231, 1029},
+WindowMargins->{{2, Automatic}, {Automatic, 33}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 9320, 198, 514, "Input",ExpressionUUID->"661ca9c8-3202-4ce6-a37b-f0c6c05a666e"]
+}
+]
+*)
+

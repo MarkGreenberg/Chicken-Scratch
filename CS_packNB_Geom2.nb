@@ -1,0 +1,143 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5247,        135]
+NotebookOptionsPosition[      4934,        121]
+NotebookOutlinePosition[      5294,        137]
+CellTagsIndexPosition[      5251,        134]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"area1", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "200"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"area2", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "200"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"Rationalize", "[", 
+         RowBox[{
+          FractionBox[
+           RowBox[{"\[Sqrt]", 
+            RowBox[{"(", 
+             RowBox[{"area1", "/", "\[Pi]"}], ")"}]}], 
+           RowBox[{"\[Sqrt]", 
+            RowBox[{"(", 
+             RowBox[{"area2", "/", "\[Pi]"}], ")"}]}]], ",", ".001"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"diss", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Rationalize", "[", 
+           RowBox[{"#", ",", ".001"}], "]"}], "&"}], "/@", " ", 
+         RowBox[{"Join", "[", 
+          RowBox[{
+           RowBox[{"RandomReal", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{".01", ",", "1"}], "}"}], ",", "5"}], "]"}], ",", 
+           RowBox[{"RandomReal", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1", ",", "7"}], "}"}], ",", "5"}], "]"}]}], "]"}]}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{"diss", ",", "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Circle `1` has an area of `2`. Circle `3` has an area of `4`. \
+What is the approximate ratio between the radius of `1` and the radius of \
+`3`?\>\"", ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<A\>\"", ",", "Italic"}], "]"}], ",", 
+          RowBox[{"Quantity", "[", 
+           RowBox[{"area1", ",", "\"\<Meters\>\""}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"\"\<B\>\"", ",", "Italic"}], "]"}], ",", 
+          RowBox[{"Quantity", "[", 
+           RowBox[{"area2", ",", "\"\<Meters\>\""}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Geom2\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.682874881519477*^9, 3.682874898908062*^9}, {
+   3.682874975055539*^9, 3.6828750098736467`*^9}, {3.682875091496784*^9, 
+   3.682875101647086*^9}, {3.6874439691818733`*^9, 3.68744398325413*^9}, {
+   3.687444236837645*^9, 3.687444297780816*^9}, 3.687444330343726*^9, {
+   3.687444833502461*^9, 3.687444869432438*^9}, {3.6874453480282927`*^9, 
+   3.687445356888928*^9}, {3.715526092027898*^9, 3.715526112033824*^9}, {
+   3.7155262272185783`*^9, 3.715526227969387*^9}, {3.715526307346298*^9, 
+   3.715526322681201*^9}, {3.715526358513906*^9, 3.715526366128973*^9}, {
+   3.715526403081606*^9, 3.715526444273724*^9}, {3.715526486289474*^9, 
+   3.715526516024583*^9}, {3.715526551705388*^9, 3.715526604000114*^9}, {
+   3.715526748040682*^9, 3.715526855009864*^9}, {3.715526896408618*^9, 
+   3.715526909046767*^9}, 3.715527018120096*^9, {3.7155270654007263`*^9, 
+   3.71552714245518*^9}, 3.7155271801342287`*^9, {3.715527236374673*^9, 
+   3.715527237389365*^9}, {3.715527268678199*^9, 
+   3.715527280109612*^9}},ExpressionUUID->"f03fa5e2-99d6-42e1-bc30-\
+2abf188c0fce"]
+},
+WindowSize->{1723, 1140},
+WindowMargins->{{2, Automatic}, {Automatic, 64}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4372, 99, 364, "Input",ExpressionUUID->"f03fa5e2-99d6-42e1-bc30-2abf188c0fce"]
+}
+]
+*)
+

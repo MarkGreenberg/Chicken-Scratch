@@ -1,0 +1,193 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6571,        185]
+NotebookOptionsPosition[      6257,        171]
+NotebookOutlinePosition[      6617,        187]
+CellTagsIndexPosition[      6574,        184]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"ptPair", "[", "x_List", "]"}], ":=", 
+        RowBox[{"DisplayForm", "[", 
+         RowBox[{"StyleBox", "[", 
+          RowBox[{
+           RowBox[{"RowBox", "[", 
+            RowBox[{"{", 
+             RowBox[{"\"\<(\>\"", ",", 
+              RowBox[{"Row", "[", 
+               RowBox[{"x", ",", "\"\<,\>\""}], "]"}], ",", "\"\<)\>\""}], 
+             "}"}], "]"}], ",", 
+           RowBox[{"SpanMaxSize", "\[Rule]", "Infinity"}]}], "]"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"pts", "=", 
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"Range", "[", 
+             RowBox[{
+              RowBox[{"-", "30"}], ",", "30"}], "]"}], ",", "4"}], "]"}], ",",
+           "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"pts", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}], "-", 
+           RowBox[{"pts", "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ",", "1"}], "]"}], "]"}]}], "\[Equal]", "0"}], ",", 
+         
+         RowBox[{
+          RowBox[{"pts", "[", 
+           RowBox[{"[", 
+            RowBox[{"2", ",", "1"}], "]"}], "]"}], "+=", "1"}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ptsStr", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"\"\<(\>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<,\>\"", "<>", 
+            
+            RowBox[{"ToString", "[", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}], "<>", "\"\<)\>\""}], 
+           ")"}], "&"}], "/@", " ", "pts"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<What is the slope of the line that passes through\\nthe \
+points `1` and `2`?\>\"", ",", 
+            RowBox[{"ptPair", "[", 
+             RowBox[{"pts", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+            RowBox[{"ptPair", "[", 
+             RowBox[{"pts", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       RowBox[{"choices", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"pts", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "2"}], "]"}], "]"}], "-", 
+            RowBox[{"pts", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ")"}], "/", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"pts", "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ",", "1"}], "]"}], "]"}], "-", 
+            RowBox[{"pts", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ")"}]}], "}"}]}], ";", 
+       
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "choices", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"temp", "=", 
+           RowBox[{
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "30"}], ",", "30"}], "}"}], "]"}], "/", 
+            RowBox[{"Replace", "[", 
+             RowBox[{
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "30"}], ",", "30"}], "}"}], "]"}], ",", 
+              RowBox[{"0", "\[Rule]", "3"}]}], "]"}]}]}], ";", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{" ", "!"}], 
+             RowBox[{"MemberQ", "[", 
+              RowBox[{"choices", ",", "temp"}], "]"}]}], ",", 
+            RowBox[{"choices", "=", 
+             RowBox[{"Append", "[", 
+              RowBox[{"choices", ",", "temp"}], "]"}]}]}], "]"}]}]}], "]"}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"FontSize", "\[Rule]", "40"}]}], "]"}], "&"}], "/@", 
+         "mixed"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Geom5\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.682888508598002*^9, 3.682888512043268*^9}, {
+  3.682888556842928*^9, 3.682888582534296*^9}, {3.6828886143452387`*^9, 
+  3.682888629247531*^9}},ExpressionUUID->"56c01ae1-22bb-462f-82bb-\
+1f9f5fb1ee78"]
+},
+WindowSize->{1169, 1028},
+WindowMargins->{{3, Automatic}, {Automatic, 23}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5695, 149, 388, "Input",ExpressionUUID->"56c01ae1-22bb-462f-82bb-1f9f5fb1ee78"]
+}
+]
+*)
+
