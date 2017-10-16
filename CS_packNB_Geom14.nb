@@ -1,0 +1,295 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     12239,        287]
+NotebookOptionsPosition[     11906,        270]
+NotebookOutlinePosition[     12266,        286]
+CellTagsIndexPosition[     12223,        283]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"r1", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
+            RowBox[{"4", ",", "24"}], "}"}], "]"}], ",", ".1"}], "]"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"r2", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "12"}], "}"}], "]"}], ",", ".1"}], "]"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        FractionBox[
+         RowBox[{"4", " ", 
+          SuperscriptBox["r1", "3"]}], 
+         RowBox[{"3", " ", 
+          SuperscriptBox["r2", "2"]}]]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"Graphics3D", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{"Gray", ",", 
+            RowBox[{"Specularity", "[", 
+             RowBox[{"Gray", ",", "10"}], "]"}], ",", 
+            RowBox[{"Sphere", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"r1", ",", "0", ",", "r1"}], "}"}], ",", "r1"}], "]"}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"Opacity", "[", ".5", "]"}], ",", 
+            RowBox[{"Cylinder", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"2", " ", "r1"}], "+", "r2", "+", "2"}], ",", "0", 
+                  ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"2", " ", "r1"}], "+", "r2", "+", "2"}], ",", "0", 
+                  ",", 
+                  RowBox[{"2", " ", "r1"}]}], "}"}]}], "}"}], ",", "r2"}], 
+             "]"}], ",", "\[IndentingNewLine]", "Black", ",", "Thick", ",", 
+            RowBox[{"Opacity", "[", "1", "]"}], ",", 
+            RowBox[{"Arrow", "[", 
+             RowBox[{"BezierCurve", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"r1", ",", "0", ",", 
+                  RowBox[{
+                   RowBox[{"2", " ", "r1"}], "+", "1"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"2", " ", "r1"}], "+", "1"}], ",", "0", ",", 
+                  RowBox[{"3", " ", "r1"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"2", " ", "r1"}], "+", "r2", "+", "2"}], ",", "0", 
+                  ",", 
+                  RowBox[{
+                   RowBox[{"2", " ", "r1"}], "+", "1"}]}], "}"}]}], "}"}], 
+              "]"}], "]"}], ",", "\[IndentingNewLine]", "Dashed", ",", 
+            RowBox[{"Arrowheads", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "Automatic"}], ",", "Automatic"}], "}"}], "]"}], 
+            ",", 
+            RowBox[{"Arrow", "[", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"2", " ", "r1"}], "+", 
+                  RowBox[{"2", "r2"}], "+", "4"}], ",", "0", ",", "0"}], 
+                "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"2", " ", "r1"}], "+", 
+                  RowBox[{"2", "r2"}], "+", "4"}], ",", "0", ",", 
+                 RowBox[{
+                  RowBox[{"2", " ", "r1"}], "+", "4"}]}], "}"}]}], "}"}], 
+             "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Text", "[", 
+             RowBox[{
+              RowBox[{"Style", "[", 
+               RowBox[{"\"\<?\>\"", ",", "24"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"2", " ", "r1"}], "+", 
+                  RowBox[{"2", "r2"}], "+", "5.5"}], ",", "0", ",", 
+                 RowBox[{"r1", "+", "3"}]}], "}"}], "}"}]}], "]"}]}], 
+           "\[IndentingNewLine]", "}"}], ",", 
+          RowBox[{"Lighting", "\[Rule]", "\"\<Neutral\>\""}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "480", "}"}], ",", 
+             RowBox[{"{", "540", "}"}]}], "}"}]}], ",", 
+          RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+          RowBox[{"ViewPoint", "\[Rule]", "Front"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<A sphere, radius of `1`, melts into a cylinder, radius of `2`. \
+How tall is the cylinder?\>\"", ",", "r1", ",", "r2"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"\"\<~\>\"", "<>", 
+           RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< units\>\""}], 
+          "&"}], "/@", 
+         RowBox[{"Take", "[", 
+          RowBox[{
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"Round", "[", 
+             RowBox[{
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomReal", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"ansNo", "*", ".25"}], ",", 
+                    RowBox[{"ansNo", "*", "1.75"}]}], "}"}], ",", "6"}], 
+                 "]"}], ",", "ansNo"}], "]"}], ",", ".01"}], "]"}], "]"}], 
+           ",", "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Geom14\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.698797777302589*^9, {3.698797818193252*^9, 3.698797824753956*^9}, {
+   3.6987978827874613`*^9, 3.698797888815102*^9}, {3.698797924536984*^9, 
+   3.698798036670188*^9}, 3.698798085646905*^9, {3.6987981221849213`*^9, 
+   3.6987981844688*^9}, {3.698798264024658*^9, 3.6987983597236967`*^9}, {
+   3.698798482227481*^9, 3.698798490451935*^9}, {3.6987985416221857`*^9, 
+   3.698798639665592*^9}, {3.6988228648859386`*^9, 3.6988230265538692`*^9}, {
+   3.6988231027915688`*^9, 3.698823248636985*^9}, {3.698823284441413*^9, 
+   3.698823286304463*^9}, {3.698823398276314*^9, 3.6988234008285007`*^9}, 
+   3.698823507827578*^9, {3.698824076616336*^9, 3.698824101135683*^9}, 
+   3.698824260729082*^9, {3.698824332948333*^9, 3.698824591127748*^9}, {
+   3.698824651867105*^9, 3.698824680803918*^9}, {3.698824711543323*^9, 
+   3.698824716158259*^9}, {3.698824748440865*^9, 3.6988247552873983`*^9}, {
+   3.698845346728593*^9, 3.698845360026451*^9}, {3.698845540755381*^9, 
+   3.6988455814795856`*^9}, {3.698845631545042*^9, 3.698845637154241*^9}, {
+   3.698845712702194*^9, 3.698845743044828*^9}, {3.698845861396596*^9, 
+   3.698845893021103*^9}, {3.6988459874669724`*^9, 3.6988459975472393`*^9}, {
+   3.698846043525572*^9, 3.6988462838099318`*^9}, {3.698861369064636*^9, 
+   3.698861372360408*^9}, {3.6988614592470922`*^9, 3.6988615656584682`*^9}, {
+   3.698861622278632*^9, 3.698861735762629*^9}, {3.698861769614649*^9, 
+   3.6988618431833878`*^9}, 3.6988619098771343`*^9, 3.698861977072071*^9, {
+   3.698862029016576*^9, 3.6988620390644608`*^9}, {3.698862164609994*^9, 
+   3.69886217865623*^9}, {3.6988622148822002`*^9, 3.6988622800465517`*^9}, {
+   3.6988623316175327`*^9, 3.698862331903607*^9}, {3.69886236244977*^9, 
+   3.698862384762784*^9}, 3.698862432398891*^9, {3.698862516170065*^9, 
+   3.698862524680966*^9}, {3.6988630453398523`*^9, 3.6988630670443897`*^9}, {
+   3.69886399522851*^9, 3.698864038034298*^9}, {3.698864073765217*^9, 
+   3.698864123663146*^9}, 3.69886416128092*^9, {3.6988642819755898`*^9, 
+   3.698864341544896*^9}, {3.698864798298194*^9, 3.698864799526929*^9}, {
+   3.698864911197793*^9, 3.698864922716857*^9}, {3.6988649651445227`*^9, 
+   3.698865101529737*^9}, {3.69886514068959*^9, 3.698865227035589*^9}, {
+   3.698866184604703*^9, 3.698866296870059*^9}, {3.698866653441279*^9, 
+   3.6988666782886972`*^9}, {3.698866794406329*^9, 3.698867083772265*^9}, {
+   3.6988674129020233`*^9, 3.6988674146120853`*^9}, {3.698867495380907*^9, 
+   3.698867509586327*^9}, {3.6988680160375547`*^9, 3.698868023171092*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TagBox[
+    ButtonBox[
+     PaneSelectorBox[{
+      False->"\<\"https://www.wolframcloud.com/objects/user-4dec8a61-25b0-\
+47e1-8624-e5b3610139af/CS_pack_Geom14\"\>", True->
+      StyleBox["\<\"https://www.wolframcloud.com/objects/user-4dec8a61-25b0-\
+47e1-8624-e5b3610139af/CS_pack_Geom14\"\>", "HyperlinkActive"]}, Dynamic[
+       CurrentValue["MouseOver"]],
+      BaseStyle->{"Hyperlink"},
+      FrameMargins->0,
+      ImageSize->Automatic],
+     BaseStyle->"Hyperlink",
+     ButtonData->{
+       URL[
+       "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Geom14"], None},
+     ButtonNote->
+      "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Geom14"],
+    Annotation[#, 
+     "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Geom14", "Hyperlink"]& ], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Geom14"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.698861342515531*^9, 3.698861373864674*^9, {3.698861480789545*^9, 
+   3.6988615090712357`*^9}, 3.698861566934379*^9, {3.6988616733643*^9, 
+   3.698861737103565*^9}, {3.698861771154941*^9, 3.6988617876862907`*^9}, {
+   3.698861819283558*^9, 3.698861847937724*^9}, 3.698861911054277*^9, {
+   3.6988622828493843`*^9, 3.6988623331695757`*^9}, {3.6988623642286377`*^9, 
+   3.698862385507037*^9}, 3.698862434392119*^9, 3.698862526904003*^9, 
+   3.6988630124861393`*^9, {3.6988640966348658`*^9, 3.6988641251860447`*^9}, {
+   3.69886416241882*^9, 3.698864167190174*^9}, 3.698864311521954*^9, 
+   3.698864343275011*^9, 3.698864801267281*^9, 3.698864924380542*^9, {
+   3.6988649942981863`*^9, 3.698865020838091*^9}, 3.69886516788846*^9, {
+   3.698865207670991*^9, 3.698865227948258*^9}, 3.698866298399558*^9, 
+   3.6988663959950438`*^9, 3.6988665866088953`*^9, 3.6988670880796423`*^9, 
+   3.698867471678854*^9, 3.698867522000914*^9, 3.698868041452836*^9}]
+}, Open  ]]
+},
+WindowSize->{1253, 1077},
+WindowMargins->{{6, Automatic}, {22, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+21, 2016)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 9225, 201, 470, "Input"],
+Cell[9808, 225, 2082, 42, 69, "Output"]
+}, Open  ]]
+}
+]
+*)
+
