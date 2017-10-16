@@ -1,0 +1,727 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     37895,        719]
+NotebookOptionsPosition[     37580,        705]
+NotebookOutlinePosition[     37940,        721]
+CellTagsIndexPosition[     37897,        718]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ents", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"adamantane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Adamantane\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Adamantane\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"aicar\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Aicar\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Aicar\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"alpha-tocopherol acetate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"AlphaTocopherolAcetate\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"AlphaTocopherolAcetate\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"alpha-toluenesulfonamide\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"AlphaToluenesulfonamide\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"AlphaToluenesulfonamide\
+\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"3-aminobiphenyl\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"3Aminobiphenyl\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"3Aminobiphenyl\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"amisulpride\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Amisulpride\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Amisulpride\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"azacyclonol\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Azacyclonol\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Azacyclonol\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"azoxystrobin\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Azoxystrobin\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Azoxystrobin\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"benzene-d 1\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"BenzeneD1\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"BenzeneD1\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"benzyl cyanoformate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"BenzylCyanoformate\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"BenzylCyanoformate\\\"]\
+\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"1-benzylhomopiperazine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"NBenzylhomopiperazine\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"NBenzylhomopiperazine\\\
+\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"bepridil\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Bepridil\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Bepridil\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"bioguard\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Bioguard\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Bioguard\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"4-bromobutyronitrile\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"4Bromobutyronitrile\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"4Bromobutyronitrile\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            AdjustmentBox[
+             TemplateBox[{"\"bromocyclopropane\"",RowBox[{"Entity", "[", 
+                 RowBox[{"\"Chemical\"", ",", "\"Bromocyclopropane\""}], 
+                 "]"}],"\"Entity[\\\"Chemical\\\", \\\"Bromocyclopropane\\\"]\
+\"","\"chemical\""},
+              "Entity"],
+             
+             BoxMargins->{{0.07122506948339123, -0.07122506948339123}, {0., 
+              0.}}], ",", 
+            
+            TemplateBox[{
+             "\"3-bromo-7-nitroindazole\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"3Bromo7Nitroindazole\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"3Bromo7Nitroindazole\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"1-bromononane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"1Bromononane\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"1Bromononane\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"4-bromopyrazole\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"4Bromopyrazole\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"4Bromopyrazole\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"1-bromostyrene\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"AlphaBromostyrene\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"AlphaBromostyrene\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"butyl acrylate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"ButylAcrylate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"ButylAcrylate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"butyl propyl sulfide\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"ButylPropylSulfide\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"ButylPropylSulfide\\\"]\
+\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"caffeine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Caffeine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Caffeine\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"carbon tetrachloride\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"CarbonTetrachloride\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"CarbonTetrachloride\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"chloroacetaldehyde\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Chloroacetaldehyde\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"Chloroacetaldehyde\\\"]\
+\"","\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"3-chloropropionyl chloride\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"3ChloropropionylChloride\""}],
+                 "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"3ChloropropionylChloride\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"2-chloro-p-toluidine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"2Chloro4Methylaniline\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"2Chloro4Methylaniline\\\
+\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"chlorphenesin\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Chlorphenesin\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Chlorphenesin\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"chlorotrifluoroethylene\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Chlorotrifluoroethylene\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"Chlorotrifluoroethylene\
+\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"chrysanthemol\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"ChrysanthemylAlcohol\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"ChrysanthemylAlcohol\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"3,4-cresotic acid\"",RowBox[{"Entity", "[", 
+                
+                RowBox[{
+                 "\"Chemical\"", ",", "\"3Hydroxy4MethylbenzoicAcid\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"3Hydroxy4MethylbenzoicAcid\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"cyanophos\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Cyanophos\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Cyanophos\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"cyclopropane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Cyclopropane\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Cyclopropane\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"cyclopentadecanol\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Cyclopentadecanol\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Cyclopentadecanol\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"darifenacin\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Darifenacin\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Darifenacin\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"1,1-dibromoethane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"1,1Dibromoethane\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"1,1Dibromoethane\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"dichloroanthrarufin\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Dichloroanthrarufin\""}], 
+                "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Dichloroanthrarufin\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"dicyclopropyl ketone\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"DicyclopropylKetone\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"DicyclopropylKetone\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"diethyl benzoylphosphonate\"",RowBox[{"Entity", "[", 
+                
+                RowBox[{
+                 "\"Chemical\"", ",", "\"DiethylBenzoylphosphonate\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"DiethylBenzoylphosphonate\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"dihydrolipoic acid\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"DihydrolipoicAcid\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"DihydrolipoicAcid\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"dimethenamid\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Dimethenamid\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Dimethenamid\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"dimethylbenzene\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Xylenes\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Xylenes\\\"]\"","\"chemical\""},
+             
+             "Entity"], ",", 
+            TemplateBox[{"\"dimethyl dibromomalonate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"DimethylDibromomalonate\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"DimethylDibromomalonate\
+\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"dioxacarb\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Dioxacarb\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Dioxacarb\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"dipyridamole\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Dipyridamole\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Dipyridamole\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"diuron\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Diuron\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Diuron\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"doxycycline\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Doxycycline\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Doxycycline\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"2-ethoxycinnamic acid\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"2EthoxycinnamicAcid\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"2EthoxycinnamicAcid\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"N-ethylbenzylamine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"NEthylbenzylamine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"NEthylbenzylamine\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"ethyl carbonate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"DiethylCarbonate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"DiethylCarbonate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"flunitrazepam\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Flunitrazepam\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Flunitrazepam\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"3-fluorobenzal bromide\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"3FluorobenzalBromide\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"3FluorobenzalBromide\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"3-fluorobenzoic acid\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"3FluorobenzoicAcid\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"3FluorobenzoicAcid\\\"]\
+\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"formanilide\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Formanilide\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Formanilide\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"furethidine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Furethidine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Furethidine\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"furfuran\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Furan\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Furan\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"heptabarbital\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Heptabarbital\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Heptabarbital\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"hexyl tiglate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"HexylTiglate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"HexylTiglate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"3-hydroxycoumarin\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"3Hydroxycoumarin\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"3Hydroxycoumarin\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"3-hydroxyphthalic anhydride\"",RowBox[{"Entity", "[", 
+                
+                RowBox[{
+                 "\"Chemical\"", ",", "\"3HydroxyphthalicAnhydride\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"3HydroxyphthalicAnhydride\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"iodoform\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Iodoform\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Iodoform\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"iodopyrazine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Iodopyrazine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Iodopyrazine\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"isobutyl cinnamate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"IsobutylCinnamate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"IsobutylCinnamate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"isononyl acetate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"IsononylAcetate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"IsononylAcetate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"maclurin\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Maclurin\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Maclurin\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"maprotiline\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Maprotiline\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Maprotiline\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"meerwein's ester\"",RowBox[{"Entity", "[", 
+                
+                RowBox[{
+                 "\"Chemical\"", ",", 
+                  
+                  "\"Tetramethyl2,6Dihydroxybicyclonona2,6Diene1,3,5,\
+7Tetracarboxylate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \
+\\\"Tetramethyl2,6Dihydroxybicyclonona2,6Diene1,3,5,7Tetracarboxylate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"mesoxalic acid\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"MesoxalicAcid\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"MesoxalicAcid\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"methane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Methane\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Methane\\\"]\"","\"chemical\""},
+             
+             "Entity"], ",", 
+            TemplateBox[{"\"methyl carbonate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"DimethylCarbonate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"DimethylCarbonate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"9-methylfluorene\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"9Methylfluorene\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"9Methylfluorene\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"methyl nicotinoylacetate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"MethylNicotinoylacetate\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"MethylNicotinoylacetate\
+\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"methyl pentafluorobenzoate\"",RowBox[{"Entity", "[", 
+                
+                RowBox[{
+                 "\"Chemical\"", ",", "\"MethylPentafluorobenzoate\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"MethylPentafluorobenzoate\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"6-nitrochromone\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"6Nitrochromone\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"6Nitrochromone\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"4-nitrocinnamyl alcohol\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"4NitrocinnamylAlcohol\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"4NitrocinnamylAlcohol\\\
+\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"nojirimycine tetrazole\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"NojirimycineTetrazole\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"NojirimycineTetrazole\\\
+\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"1-nonyne\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"1Nonyne\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"1Nonyne\\\"]\"","\"chemical\""},
+             
+             "Entity"], ",", 
+            TemplateBox[{"\"octyl gallate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"OctylGallate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"OctylGallate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"phentermine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Phentermine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Phentermine\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"2-phenylbenzyl bromide\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"2PhenylbenzylBromide\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"2PhenylbenzylBromide\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"4-phenylbutyric acid\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"4PhenylbutyricAcid\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"4PhenylbutyricAcid\\\"]\
+\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"phenylthiourea\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"NPhenylthiourea\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"NPhenylthiourea\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"pipecuronium\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Pipecuronium\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Pipecuronium\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"piracetam\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Piracetam\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Piracetam\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"promethazine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Promethazine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Promethazine\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"propachlor\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Propachlor\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Propachlor\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"proparacaine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Proparacaine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Proparacaine\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"propionic acid, hexyl ester\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"HexylPropionate\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"HexylPropionate\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"4-propylheptane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"4Propylheptane\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"4Propylheptane\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"4-pyridinepropanol\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"4Pyridinepropanol\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"4Pyridinepropanol\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"rubratoxin B\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"RubratoxinB\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"RubratoxinB\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"salicylamide\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Salicylamide\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Salicylamide\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"sec-octanol\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"SecOctanol\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"SecOctanol\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"silatrane glycol\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"SilatraneGlycol\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"SilatraneGlycol\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"squalane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Squalane\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Squalane\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"N-sulfinylaniline\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"NThionylaniline\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"NThionylaniline\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"tartronic acid\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"TartronicAcid\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"TartronicAcid\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            
+            TemplateBox[{
+             "\"tetrachloro-o-benzoquinone\"",RowBox[{"Entity", "[", 
+                
+                RowBox[{
+                 "\"Chemical\"", ",", 
+                  "\"3,4,5,6Tetrachloro1,2Benzoquinone\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \
+\\\"3,4,5,6Tetrachloro1,2Benzoquinone\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"thymine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Thymine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Thymine\\\"]\"","\"chemical\""},
+             
+             "Entity"], ",", 
+            TemplateBox[{"\"s-triazine\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"STriazine\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"STriazine\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"triamcinolone\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Triamcinolone\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Triamcinolone\\\"]\"",
+              "\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"tributylchlorosilane\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Chlorotributylsilane\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \
+\\\"Chlorotributylsilane\\\"]\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"tripropyl phosphate\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"TripropylPhosphate\""}], 
+                "]"}],"\"Entity[\\\"Chemical\\\", \\\"TripropylPhosphate\\\"]\
+\"","\"chemical\""},
+             "Entity"], ",", 
+            TemplateBox[{"\"verbenalin\"",RowBox[{"Entity", "[", 
+                RowBox[{"\"Chemical\"", ",", "\"Verbenalin\""}], "]"}],
+              "\"Entity[\\\"Chemical\\\", \\\"Verbenalin\\\"]\"",
+              "\"chemical\""},
+             "Entity"]}], "}"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<The image shows a structure plot for which of these chemicals?\>\
+\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"EntityValue", "[", 
+          RowBox[{
+           RowBox[{"ents", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<MoleculePlot\>\""}], 
+          "]"}], "/.", 
+         RowBox[{
+          RowBox[{"Rule", "[", 
+           RowBox[{"ImageSize", ",", "_"}], "]"}], "\[Rule]", 
+          RowBox[{"Rule", "[", 
+           RowBox[{"ImageSize", ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "480", "}"}], ",", 
+              RowBox[{"{", "540", "}"}]}], "}"}]}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"EntityValue", "[", 
+           RowBox[{"#", ",", "\"\<Name\>\""}], "]"}], "&"}], "/@", "ents"}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Chem9\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.694280296825541*^9, 3.6942803186892776`*^9}, {
+   3.694281978080923*^9, 3.694282012553236*^9}, {3.6942820612703257`*^9, 
+   3.694282104261957*^9}, {3.69428626591663*^9, 3.694286287508481*^9}, {
+   3.694286597879176*^9, 3.6942865996845617`*^9}, {3.6942866933450737`*^9, 
+   3.6942866942336063`*^9}, {3.694286800005743*^9, 3.6942868005600157`*^9}, {
+   3.69428686178043*^9, 3.6942868636014233`*^9}, {3.69428695247756*^9, 
+   3.6942869633173857`*^9}, {3.694287031038553*^9, 3.69428703318495*^9}, {
+   3.6942872040090227`*^9, 3.694287210313591*^9}, {3.694287326802278*^9, 
+   3.694287328463759*^9}, {3.6942873838209543`*^9, 3.6942873859459543`*^9}, {
+   3.6942874702093477`*^9, 3.694287472070547*^9}, {3.694287580086356*^9, 
+   3.6942875817639093`*^9}, {3.694287780120023*^9, 3.694287782541506*^9}, {
+   3.694287846659264*^9, 3.694287855040538*^9}, {3.694287937887412*^9, 
+   3.6942879496203213`*^9}, {3.694288009243636*^9, 3.694288011159943*^9}, {
+   3.6942880589887*^9, 3.694288061282189*^9}, {3.694288113936386*^9, 
+   3.694288115948897*^9}, {3.6942881795954437`*^9, 3.694288182896944*^9}, {
+   3.694288248150516*^9, 3.694288250059966*^9}, {3.69428834269975*^9, 
+   3.694288344776518*^9}, {3.694288482554659*^9, 3.6942884843112917`*^9}, {
+   3.6942885833036337`*^9, 3.694288585668188*^9}, {3.694288639897725*^9, 
+   3.694288642039071*^9}, {3.694288726116911*^9, 3.6942887278663893`*^9}, {
+   3.694288796440269*^9, 3.6942887996456413`*^9}, {3.694288867443687*^9, 
+   3.694288869729106*^9}, {3.6942889408232517`*^9, 3.694288948684864*^9}, {
+   3.694288995760027*^9, 3.694288996587051*^9}, {3.694289042861225*^9, 
+   3.694289044874666*^9}, {3.694289084031036*^9, 3.694289086156411*^9}, {
+   3.694289148369802*^9, 3.69428915069454*^9}, {3.694289200021275*^9, 
+   3.694289202249117*^9}, {3.694289323674243*^9, 3.6942893257429657`*^9}, {
+   3.694289388293632*^9, 3.69428939036241*^9}, {3.6942894321759443`*^9, 
+   3.6942894340610456`*^9}, {3.694289487082643*^9, 3.694289488616037*^9}, {
+   3.694289539596477*^9, 3.69428954136162*^9}, {3.6942896051445503`*^9, 
+   3.694289607045968*^9}, {3.694289666162641*^9, 3.694289668111627*^9}, {
+   3.69428975760638*^9, 3.694289759972145*^9}, {3.694289825114695*^9, 
+   3.694289827607164*^9}, {3.694289922839835*^9, 3.6942899250045223`*^9}, {
+   3.694289958457156*^9, 3.69428996511024*^9}, {3.694290009924576*^9, 
+   3.694290011593525*^9}, {3.694290059629162*^9, 3.694290061578858*^9}, {
+   3.6942952322073603`*^9, 3.694295238476244*^9}, {3.6942953033700867`*^9, 
+   3.694295306303369*^9}, {3.694295382094377*^9, 3.694295384483089*^9}, {
+   3.694295470561705*^9, 3.6942954729432583`*^9}, {3.6942955200367937`*^9, 
+   3.6942955226018553`*^9}, {3.694295604296135*^9, 3.694295607925787*^9}, {
+   3.6942956728280773`*^9, 3.694295674720952*^9}, {3.694295727948359*^9, 
+   3.694295735715839*^9}, {3.694295853261285*^9, 3.694295856770734*^9}, {
+   3.694295915695225*^9, 3.694295923045013*^9}, {3.694295999900948*^9, 
+   3.6942960019780693`*^9}, {3.694296052399383*^9, 3.694296054988216*^9}, {
+   3.694296130106604*^9, 3.694296140273508*^9}, {3.694296179340021*^9, 
+   3.694296189610042*^9}, {3.69429624194433*^9, 3.694296244893523*^9}, {
+   3.69429628617771*^9, 3.694296296160365*^9}, {3.6942964055917253`*^9, 
+   3.69429641538942*^9}, {3.694296868292905*^9, 3.694296891925952*^9}, {
+   3.694296941136567*^9, 3.694296943310192*^9}, {3.694297000124489*^9, 
+   3.694297008986126*^9}, {3.694297067936061*^9, 3.6942970871332197`*^9}, {
+   3.69429713625828*^9, 3.69429714520002*^9}, {3.694297344110984*^9, 
+   3.6942973865932913`*^9}, {3.694297425164434*^9, 3.6942975006315823`*^9}, {
+   3.694297739028572*^9, 3.694297762807486*^9}, {3.694297805390764*^9, 
+   3.694297824006019*^9}, 3.694297914028808*^9, {3.694297959074435*^9, 
+   3.6942986947057037`*^9}, {3.694338876262567*^9, 3.694338965193672*^9}, {
+   3.694339027201248*^9, 3.694339037286965*^9}, {3.694339212990829*^9, 
+   3.694339222703143*^9}, {3.694343564658758*^9, 3.694343566575411*^9}, {
+   3.6943436225016403`*^9, 3.6943436254980783`*^9}, {3.6943436981451273`*^9, 
+   3.694343700181693*^9}, {3.694343776461219*^9, 3.694343778753831*^9}, {
+   3.694343835616184*^9, 3.694343837252532*^9}, {3.694343924091339*^9, 
+   3.6943439266645517`*^9}, {3.694344107908269*^9, 3.694344110321308*^9}, {
+   3.694344567969397*^9, 3.694344569711917*^9}, {3.694344620589649*^9, 
+   3.694344639002173*^9}, {3.694344676999789*^9, 3.694344678788622*^9}, {
+   3.6943447280501537`*^9, 3.694344729871401*^9}, {3.6943447899885893`*^9, 
+   3.694344791777875*^9}, {3.6943448927459297`*^9, 3.6943449096955853`*^9}, {
+   3.694344992158535*^9, 3.6943449938836117`*^9}, {3.6943450856822968`*^9, 
+   3.694345087608447*^9}, {3.694345213265353*^9, 3.694345214886435*^9}, {
+   3.694345299557159*^9, 3.694345301610734*^9}, {3.6943453676093273`*^9, 
+   3.694345369174247*^9}, {3.6943454332842093`*^9, 3.69434543500169*^9}, {
+   3.694345472006288*^9, 3.69434547400345*^9}, {3.694345544953615*^9, 
+   3.694345546759469*^9}, {3.694345633413769*^9, 3.694345637315506*^9}, {
+   3.694345695576851*^9, 3.694345697734756*^9}, {3.694346872954007*^9, 
+   3.6943468745837593`*^9}, {3.694346966366683*^9, 3.694346969099173*^9}, {
+   3.694347009544539*^9, 3.6943470112622766`*^9}, {3.694347067851285*^9, 
+   3.694347069464307*^9}, {3.6943471920090027`*^9, 3.69434719479885*^9}, {
+   3.694347288325635*^9, 3.694347289803022*^9}, {3.6943473318490477`*^9, 
+   3.694347333725606*^9}, {3.694347412251875*^9, 3.694347414753312*^9}, {
+   3.6943474861591578`*^9, 3.694347488060897*^9}, {3.69434754491461*^9, 
+   3.6943475467597713`*^9}, {3.694347605357359*^9, 3.694347607162566*^9}, {
+   3.698873913562353*^9, 
+   3.698873926462203*^9}},ExpressionUUID->"c32a9df3-076a-4bda-8164-\
+4dabd5e74086"]
+},
+WindowSize->{1199, 1057},
+WindowMargins->{{1, Automatic}, {42, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 37018, 683, 917, "Input",ExpressionUUID->"c32a9df3-076a-4bda-8164-4dabd5e74086"]
+}
+]
+*)
+
