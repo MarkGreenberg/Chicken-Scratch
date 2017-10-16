@@ -1,0 +1,2221 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    108595,       2213]
+NotebookOptionsPosition[    108277,       2199]
+NotebookOutlinePosition[    108637,       2215]
+CellTagsIndexPosition[    108594,       2212]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"<|", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"\"\<Achille Lauro\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 2 Dec 1994\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1994", ",", "12", ",", "2"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cruise ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"2", ",", "47"}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Admiral Ushakov\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 28 May 1905\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1905", ",", "5", ",", "28"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<battleship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"34.56666666666667`", ",", "129.53333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Aki\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 7 Sep 1924\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1924", ",", "9", ",", "7"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<battleship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.025", ",", "139.856"}], "}"}], "]"}]}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Alert\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1791\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1791", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<schooner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"46.13333333333333`", ",", 
+                  RowBox[{"-", "63.083333333333336`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Alexander Hamilton\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 30 Jan 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "1", ",", "30"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cutter\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"64.1", ",", 
+                  RowBox[{"-", "22.56"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Alexander Nevsky\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 25 Sep 1968\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1968", ",", "9", ",", "25"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<frigate\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"56.68333333333333`", ",", "8.133333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Algerine\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 15 Nov 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "11", ",", "15"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<minesweeper\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"36.75`", ",", "5.183333333333334`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Amagiri\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 23 Apr 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "4", ",", "23"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "2.1666666666666665`"}], ",", "116.75`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Amatsukaze\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 6 Apr 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "4", ",", "6"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"24.5", ",", "118.16666666666667`"}], "}"}], "]"}]}],
+               "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<American Star\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 18 Jan 1993\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1993", ",", "1", ",", "18"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ocean liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"28.346077", ",", 
+                  RowBox[{"-", "14.180442"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Antikythera\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"-86\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"-", "86"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ancient merchant vessel\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.8897", ",", "23.3078"}], "}"}], "]"}]}], "}"}]}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Aratama Maru\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 12 Mar 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "3", ",", "12"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<military transport\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"13.334722222222222`", ",", "144.7722222222222`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Arctic Explorer\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 3 Jul 1981\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1981", ",", "7", ",", "3"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<icebreaker\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"51.5", ",", 
+                  RowBox[{"-", "56.5"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Arizona\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 7 Dec 1941\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1941", ",", "12", ",", "7"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<battleship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"21.364775", ",", 
+                  RowBox[{"-", "157.950112"}]}], "}"}], "]"}]}], "}"}]}], ",",
+             "\[IndentingNewLine]", 
+            RowBox[{"\"\<Armidale\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 1 Dec 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "12", ",", "1"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<corvette\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "9.164444444444445`"}], ",", "125.725`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Attack\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 30 Dec 1917\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1917", ",", "12", ",", "30"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"31.3`", ",", "29.816666666666666`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Audacious\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 27 Oct 1914\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1914", ",", "10", ",", "27"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<battleship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"55.1542", ",", 
+                  RowBox[{"-", "7.53662"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Birkenhead\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 26 Feb 1852\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1852", ",", "2", ",", "26"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<iron-hulled troopship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "34.645`"}], ",", "19.285833333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Bluebell\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 17 Feb 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "2", ",", "17"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<corvette\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"69.4`", ",", "33.7`"}], "}"}], "]"}]}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Bom Jesus\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1533\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1533", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<nau\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "28.551666666666666`"}], ",", 
+                  "16.426388888888887`"}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Britannia\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 9 Nov 1918\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1918", ",", "11", ",", "9"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<battleship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.88333333333333`", ",", 
+                  RowBox[{"-", "5.883333333333334`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Carpathia\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 17 Jul 1918\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1918", ",", "7", ",", "17"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ocean liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"49.4667", ",", 
+                  RowBox[{"-", "19.7667"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Challenger\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Oct 1875\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1875", ",", "10"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<extreme clipper\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"19.052222222222223`", ",", 
+                  RowBox[{"-", "104.31583333333333`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Conde de Tolosa\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 24 Aug 1724\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1724", ",", "8", ",", "24"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<galleon\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"19.166666666666668`", ",", 
+                  RowBox[{"-", "69.41666666666667`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Crist\[OAcute]bal Col\[OAcute]n\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 3 Jul 1898\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1898", ",", "7", ",", "3"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<armored cruiser\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"19.933333333333334`", ",", 
+                  RowBox[{"-", "76.75`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Curlew\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 26 May 1940\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1940", ",", "5", ",", "26"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cruiser\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"68.559", ",", "16.558"}], "}"}], "]"}]}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Dannebroge\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 4 Oct 1710\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1710", ",", "10", ",", "4"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ship of the line\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"55.49216666666667`", ",", "12.502833333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Danny F II\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 17 Dec 2009\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"2009", ",", "12", ",", "17"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<livestock carrier\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"34.43`", ",", "35.86666666666667`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Dara\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 10 Apr 1961\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1961", ",", "4", ",", "10"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ocean liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"25.5715`", ",", "55.46611111111111`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Dido\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1883\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1883", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<barque\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"51.46666666666667`", ",", 
+                  RowBox[{"-", "9.316666666666666`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Docos\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"-2450\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"-", "2450"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ancient merchant vessel\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"37.330555555555556`", ",", "23.32133888888889`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Dunbrody\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1875\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1875", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<barque\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"58.557", ",", 
+                  RowBox[{"-", "62.75"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Edmund Fitzgerald\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 10 Nov 1975\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1975", ",", "11", ",", "10"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ore freighter\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"46.841944444444444`", ",", 
+                  RowBox[{"-", "85.11694444444444`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<El Concepci\[OAcute]n\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1641\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1641", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<galleon\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"19.8`", ",", 
+                  RowBox[{"-", "70.68333333333334`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Electra\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 27 Feb 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "2", ",", "27"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "5"}], ",", "111"}], "}"}], "]"}]}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Emmons\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 6 Apr 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "4", ",", "6"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"26.8", ",", "128.06666666666666`"}], "}"}], "]"}]}],
+               "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Empire Barracuda\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 15 Dec 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "12", ",", "15"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cargo ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.5`", ",", 
+                  RowBox[{"-", "6.283333333333333`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Endurance\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 21 Nov 1915\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1915", ",", "11", ",", "21"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<barquentine\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "67.10593`"}], ",", 
+                  RowBox[{"-", "49.570313000000006`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Farah III\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Dec 2006\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"2006", ",", "12"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cargo ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"9.314444444444444`", ",", "80.79138888888889`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Fredericksburg\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 4 Apr 1865\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1865", ",", "4", ",", "4"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ironclad warship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"36.96666666666667`", ",", 
+                  RowBox[{"-", "76.36666666666666`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Fujinami\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 27 Oct 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "10", ",", "27"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"12", ",", "122.5"}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Greyhound\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 22 May 1941\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1941", ",", "5", ",", "22"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"36", ",", "23.166666666666668`"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Hanneke Wrome\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 11 Nov 1468\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1468", ",", "11", ",", "11"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<merchant vessel\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"59.791722", ",", "23.582153"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Hector\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Apr 1913\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1913", ",", "4"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<tugboat\>\"", ",", "47.3809", ",", 
+               RowBox[{"-", "122.6360"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Huaguangjiao One\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1200\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1200", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<merchant vessel\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"16.27111111111111`", ",", "111.5675`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Indianapolis\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 30 Jul 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "7", ",", "30"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cruiser\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"12.033333333333333`", ",", "134.8`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Investigator\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 3 Jun 1853\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1853", ",", "6", ",", "3"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<exploration ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"74.084397", ",", 
+                  RowBox[{"-", "119.002619"}]}], "}"}], "]"}]}], "}"}]}], ",",
+             "\[IndentingNewLine]", 
+            RowBox[{"\"\<Kaimon\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 5 Jul 1904\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1904", ",", "7", ",", "5"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<sloop-of-war\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"38.833333333333336`", ",", "121.83333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Kamikaze\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 7 Jun 1946\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1946", ",", "6", ",", "7"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"34.63333333333333`", ",", "138.13333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Katina P\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 26 Apr 1992\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1992", ",", "4", ",", "26"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<oil tanker\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "25.583333333333332`"}], ",", 
+                  "32.983333333333334`"}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Kisaragi\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 11 Dec 1941\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1941", ",", "12", ",", "11"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"18.916666666666668`", ",", "166.28333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Kronan\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 1 Jun 1676\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1676", ",", "6", ",", "1"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<warship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"56.449444444444445`", ",", "16.67222222222222`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<La Belle\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1686\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1686", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<barque\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"28.565555555555555`", ",", 
+                  RowBox[{"-", "96.21`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Lady of the Lake\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 11 May 1833\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1833", ",", "5", ",", "11"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<brig\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"45.5", ",", 
+                  RowBox[{"-", "47.1"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Lark\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 5 Aug 1778\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1778", ",", "8", ",", "5"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<frigate\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"41.6`", ",", 
+                  RowBox[{"-", "71.35`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Lusitania\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 7 May 1915\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1915", ",", "5", ",", "7"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ocean liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"51.416666666666664`", ",", 
+                  RowBox[{"-", "8.55`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Mahdia\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"-80\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"-", "80"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ancient trading vessel\>\"", ",", 
+               
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.53194444444444`", ",", "11.124444444444444`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Maud\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1930\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1930", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<exploration ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"69.11888888888889`", ",", 
+                  RowBox[{"-", "105.02`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Mediterranean Sky\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 11 Jan 2003\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"2003", ",", "1", ",", "11"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ocean liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"38.0244", ",", "23.4892"}], "}"}], "]"}]}], "}"}]}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Medusa\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 2 Jul 1816\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1816", ",", "7", ",", "2"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<passenger ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"20.0475", ",", 
+                  RowBox[{"-", "16.8090"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Mohawk\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 1 Oct 1917\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1917", ",", "10", ",", "1"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<revenue cutter\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"40.452891", ",", 
+                  RowBox[{"-", "73.995237"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Montana\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 20 Dec 1863\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1863", ",", "12", ",", "20"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<blockade runner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"32.363616666666665`", ",", 
+                  RowBox[{"-", "64.91353333333333`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Muscogee\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1865\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1865", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ironclad ram\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"32.016666666666666`", ",", 
+                  RowBox[{"-", "81.1`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Neptuno\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 23 Oct 1805\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1805", ",", "10", ",", "23"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ship of the line\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"36.494166666666665`", ",", 
+                  RowBox[{"-", "6.216944444444445`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Nossa Senhora dos M\[AAcute]rtires\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1606\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1606", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<nau\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"38.71388888888889`", ",", 
+                  RowBox[{"-", "9.14`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Nuestra Se\[NTilde]ora de Guadalupe\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 24 Aug 1724\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1724", ",", "8", ",", "24"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<galleon\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"19.166666666666668`", ",", 
+                  RowBox[{"-", "69.41666666666667`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Oceanos\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 4 Aug 1991\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1991", ",", "8", ",", "4"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cruise liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "32.12093"}], ",", "29.12029"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Patris\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1868\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1868", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<steamboat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"37.57893888888889`", ",", "24.262894444444445`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Perch\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 3 Mar 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "3", ",", "3"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<submarine\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "6.5"}], ",", "113.83333333333333`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Phoenix\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 19 Jul 1829\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1829", ",", "7", ",", "19"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<merchant vessel\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "34.1898`"}], ",", "18.4483`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Potomac\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 9 Jan 1862\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1862", ",", "1", ",", "9"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<whaler\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"32.81863888888889`", ",", 
+                  RowBox[{"-", "79.92789166666667`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<President Kruger\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 18 Feb 1982\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1982", ",", "2", ",", "18"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<frigate\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "35.25`"}], ",", "17.35`"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Preu\[SZ]en\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 13 Aug 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "8", ",", "13"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<vorpostenboot\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"53.833333333333336`", ",", "7.666666666666667`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Princeton\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 24 Oct 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "10", ",", "24"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<aircraft carrier\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"15.35`", ",", "123.51666666666667`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Queen Elizabeth\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 9 Jan 1972\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1972", ",", "1", ",", "9"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ocean liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"22.328616666666665`", ",", "114.11221666666667`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Rattlesnake\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 28 Feb 1863\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1863", ",", "2", ",", "28"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<privateer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"31.83361111111111`", ",", 
+                  RowBox[{"-", "81.01083333333334`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Redwing\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 29 Jun 1943\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1943", ",", "6", ",", "29"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<minesweeper\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"37.31666666666667`", ",", "9.933333333333334`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Rhone\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 29 Oct 1867\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1867", ",", "10", ",", "29"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<packet ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"18.3687", ",", 
+                  RowBox[{"-", "64.5356"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Robert E. Lee\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 30 Jul 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "7", ",", "30"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<passenger freighter\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"28.666666666666668`", ",", 
+                  RowBox[{"-", "88.7`"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Samphire\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 30 Jan 1943\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1943", ",", "1", ",", "30"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<corvette\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"36.93333333333333`", ",", "5.666666666666667`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<San Juan\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1565\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1565", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<whaler\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"51.731944444444444`", ",", 
+                  RowBox[{"-", "56.425555555555555`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<San Quentin\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Apr 1898\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1898", ",", "4"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<gunboat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"14.76`", ",", "120.23`"}], "}"}], "]"}]}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Santissimo Sacramento\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"1647\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", "1647", "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<man o' war\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "34.043"}], ",", "25.52033"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<S\[ATilde]o Jos\[EAcute] Paquete Africa\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 27 Dec 1794\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1794", ",", "12", ",", "27"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<slaver\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"33.92527777777778`", ",", "18.4`"}], "}"}], "]"}]}],
+               "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Seiki\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 10 Dec 1888\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1888", ",", "12", ",", "10"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<screw sloop\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.11666666666667`", ",", "138.66666666666666`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Sewol\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 16 Apr 2014\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"2014", ",", "4", ",", "16"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ferry\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"34.21805555555556`", ",", "125.95`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Sibiryakov\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 24 Aug 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "8", ",", "24"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<icebreaker\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"76", ",", "91.51666666666667`"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Spice Islander I\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 10 Sep 2011\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"2011", ",", "9", ",", "10"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ferry\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "5.6563888888888885`"}], ",", 
+                  "39.47416666666667`"}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Speedy\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 8 Oct 1804\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1804", ",", "10", ",", "8"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<schooner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"43.814", ",", 
+                  RowBox[{"-", "76.789"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Spikefish\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 4 Aug 1964\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1964", ",", "8", ",", "4"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<submarine\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"40.8", ",", 
+                  RowBox[{"-", "73.15"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Stratagem\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 22 Nov 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "11", ",", "22"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<submarine\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"1.6`", ",", "102.88333333333334`"}], "}"}], "]"}]}],
+               "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Sunny South\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 20 Feb 1861\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1861", ",", "2", ",", "20"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<slaver\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "13.048"}], ",", "45.195"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Tang\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 24 Oct 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "10", ",", "24"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<submarine\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"25.1`", ",", "119.51666666666667`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Th\[EAcute]r\[EGrave]se\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 24 Jul 1669\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1669", ",", "7", ",", "24"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ship of the line\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.333333333333336`", ",", "25.133333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Thistle\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 10 Apr 1940\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1940", ",", "4", ",", "10"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<submarine\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"59", ",", "5"}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Tiger\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 11 May 1854\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1854", ",", "5", ",", "11"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<steam frigate\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"46.483333333333334`", ",", "30.743444444444446`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Titanic\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 12 Apr 1912\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1912", ",", "4", ",", "12"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ocean liner\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"41.7325`", ",", 
+                  RowBox[{"-", "49.94694444444445`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<T\:014dh\:014d Maru\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 29 Mar 1943\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1943", ",", "3", ",", "29"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<oil tanker\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "118.31666666666666`"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Treasure\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 23 Jun 2000\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"2000", ",", "6", ",", "23"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<bulk ore carrier\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "33.675`"}], ",", "18.331666666666667`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Trouvadore\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mar 1841\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1841", ",", "3"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<slaver\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"21.4025`", ",", 
+                  RowBox[{"-", "71.49805555555555`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Tsushima Maru\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 22 Aug 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "8", ",", "22"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<passanger ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"29.5425`", ",", "129.55833333333334`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Tuscaloosa\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 12 Apr 1865\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1865", ",", "4", ",", "12"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ironclad warship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"30.76924", ",", 
+                  RowBox[{"-", "88.02053"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<U-1221\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 3 Apr 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "4", ",", "3"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<U-boat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"54.333333333333336`", ",", "10.166666666666666`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<U-183\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 23 Apr 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "4", ",", "23"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<U-boat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "4.833"}], ",", "112.867"}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<U-204\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 19 Oct 1941\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1941", ",", "10", ",", "19"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<U-boat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.766666666666666`", ",", 
+                  RowBox[{"-", "6.033333333333333`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<U-5\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 18 Dec 1914\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1914", ",", "12", ",", "18"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<U-boat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"51.38333333333333`", ",", "3.183333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<U-579\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 5 May 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "5", ",", "5"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<U-boat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"56.166666666666664`", ",", "11.066666666666666`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<U-852\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 3 May 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "5", ",", "3"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<U-boat\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"9.533333333333333`", ",", "50.983333333333334`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Uluburun\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{RowBox[{"\"-1400\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"-", "1400"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<ancient sailing ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"36.12861111111111`", ",", "29.685833333333335`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Um El Faroud\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 2 Sep 1998\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1998", ",", "9", ",", "2"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<oil tanker\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"35.82`", ",", "14.450666666666667`"}], "}"}], 
+                "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Vampire\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 9 Apr 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "4", ",", "9"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"7.583333333333333`", ",", "82.08333333333333`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Van Nes\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 17 Feb 1942\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1942", ",", "2", ",", "17"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "3.45`"}], ",", "106.63333333333334`"}], "}"}],
+                 "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Vasa\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Thu 10 Aug 1628\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1628", ",", "8", ",", "10"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<galleon\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"59.327777777777776`", ",", "18.09111111111111`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Viribus Unitis\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Fri 1 Nov 1918\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1918", ",", "11", ",", "1"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<dreadnought battleship\>\"", ",", 
+               
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"44.869166666666665`", ",", "13.735833333333334`"}], 
+                 "}"}], "]"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Walton\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sat 14 Sep 1878\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1878", ",", "9", ",", "14"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<barque\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"44.69", ",", 
+                  RowBox[{"-", "66.81"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Warwick\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Nov 1619\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1619", ",", "11"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<cargo ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"32.34722222222222`", ",", 
+                  RowBox[{"-", "64.68722222222222`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Whydah Gally\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Mon 26 Apr 1717\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1717", ",", "4", ",", "26"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<pirate ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"41.89194444444445`", ",", 
+                  RowBox[{"-", "69.95944444444444`"}]}], "}"}], "]"}]}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Wilhelm Gustloff\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Tue 30 Jan 1945\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1945", ",", "1", ",", "30"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<passenger ship\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"55.0729", ",", "17.4213"}], "}"}], "]"}]}], "}"}]}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Wolverine\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Wed 12 Dec 1917\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1917", ",", "12", ",", "12"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<destroyer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"55.166", ",", 
+                  RowBox[{"-", "8.685"}]}], "}"}], "]"}]}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Yaeyama\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               
+               TemplateBox[{
+                RowBox[{"\"Sun 24 Sep 1944\""}],RowBox[{"DateObject", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"1944", ",", "9", ",", "24"}], "}"}], "]"}]},
+                "DateObject",
+                Editable->False], ",", "\"\<minelayer\>\"", ",", 
+               RowBox[{"GeoPosition", "[", 
+                RowBox[{"{", 
+                 RowBox[{"12.25", ",", "121"}], "}"}], "]"}]}], "}"}]}]}], 
+           "\[IndentingNewLine]", "|>"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{
+           RowBox[{"GeoListPlot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "3", "]"}], "]"}], "&"}], "/@", 
+                RowBox[{
+                 RowBox[{"Values", "[", "h1", "]"}], "[", 
+                 RowBox[{"[", 
+                  RowBox[{"2", ";;", "4"}], "]"}], "]"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Values", "[", "h1", "]"}], "[", 
+                 RowBox[{"[", 
+                  RowBox[{"1", ",", "3"}], "]"}], "]"}], "}"}]}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"PlotMarkers", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<\[Times]\>\"", ",", "30"}], "]"}], ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<\[Times]\>\"", ",", "30", ",", "Bold"}], 
+                 "]"}]}], "}"}]}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", "Blue"}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"GeoLabels", "\[Rule]", 
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"Inset", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Position", "[", 
+                    RowBox[{
+                    RowBox[{"Values", "[", "h1", "]"}], ",", "#2"}], "]"}], "/.", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"{", 
+                    RowBox[{"k_", ",", "3"}], "}"}], "}"}], "\[RuleDelayed]", 
+                    
+                    RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"DateString", "[", 
+                    RowBox[{
+                    RowBox[{"h1", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"k", ",", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"{", "\"\<Year\>\"", "}"}]}], "]"}], ",", "15"}], 
+                    "]"}]}]}], ",", "#2", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", 
+                    RowBox[{"-", "2"}]}], "}"}]}], "]"}], "&"}], ")"}]}], ",",
+              "\[IndentingNewLine]", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}], ",", 
+             RowBox[{"ImagePadding", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"4", ",", "4"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"18", ",", "18"}], "}"}]}], "}"}]}]}], "]"}], "/.", 
+           RowBox[{
+            RowBox[{"Legended", "[", 
+             RowBox[{"a_", ",", "b_"}], "]"}], "\[Rule]", "a"}]}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{"h1", "\[Rule]", "data"}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<The map shows the locations and years sunk of four shipwrecks. \
+Which wreck is the blue marker?\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"riffled", "=", 
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{"Riffle", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", 
+             RowBox[{"Values", "[", "data", "]"}]}], ",", 
+            RowBox[{"Keys", "[", "data", "]"}]}], "]"}], ",", "2"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{"\"\<`1` `2`\>\"", ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}], ",", "Italic"}], "]"}]}], 
+           "]"}], "&"}], "/@", "riffled"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Hist11\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7045688131542063`*^9, 3.7045688383742237`*^9}, {
+   3.7045692512722807`*^9, 3.7045692812462053`*^9}, {3.704569367807386*^9, 
+   3.7045693764061747`*^9}, 3.70456943280748*^9, {3.704569545077406*^9, 
+   3.704569604917452*^9}, 3.704571944080854*^9, {3.704571976863209*^9, 
+   3.704571983991457*^9}, {3.7045720317281237`*^9, 3.704572041535554*^9}, {
+   3.7045721030075293`*^9, 3.704572147863763*^9}, {3.704583267921152*^9, 
+   3.7045832713599157`*^9}, {3.704583754423141*^9, 3.704583802485306*^9}, {
+   3.704587138025241*^9, 3.704587146272842*^9}, {3.704587294425782*^9, 
+   3.7045873042331944`*^9}, 3.7045873387368507`*^9, {3.7045873891832037`*^9, 
+   3.704587436502836*^9}, 3.704587473959566*^9, {3.70458752757768*^9, 
+   3.704587559806094*^9}, {3.7045876052479467`*^9, 3.704587626397862*^9}, {
+   3.704587668502768*^9, 3.7045877007334146`*^9}, {3.704587738840187*^9, 
+   3.7045877973412447`*^9}, {3.704587855965643*^9, 3.7045878693647842`*^9}, {
+   3.704587972863914*^9, 3.70458799640452*^9}, {3.704588041767219*^9, 
+   3.704588064598789*^9}, {3.704588147493142*^9, 3.704588185443817*^9}, {
+   3.704588252038506*^9, 3.704588287355749*^9}, {3.70458834640454*^9, 
+   3.704588361636218*^9}, 3.7045884245413923`*^9, {3.7045886170348682`*^9, 
+   3.704588634826191*^9}, {3.704588709388322*^9, 3.704588735953528*^9}, {
+   3.704588786298606*^9, 3.704588821114605*^9}, {3.7045888557853603`*^9, 
+   3.704588915735571*^9}, {3.7045889471692142`*^9, 3.704588954431509*^9}, {
+   3.704588989912273*^9, 3.704588994831716*^9}, {3.704589072161772*^9, 
+   3.7045891106643677`*^9}, {3.7045891415116987`*^9, 3.704589168590639*^9}, {
+   3.704627749306234*^9, 3.704627770559947*^9}, {3.70462780878312*^9, 
+   3.704627814141477*^9}, {3.704627845757197*^9, 3.704627870717558*^9}, 
+   3.704627910550766*^9, {3.7046279707180843`*^9, 3.704627971405017*^9}, {
+   3.704628253548889*^9, 3.704628279716207*^9}, {3.704628316230551*^9, 
+   3.704628342972886*^9}, {3.704628373078569*^9, 3.704628374989109*^9}, 
+   3.7046284119426317`*^9, {3.704628562852723*^9, 3.7046286284841557`*^9}, {
+   3.704628659957715*^9, 3.704628668925007*^9}, {3.704628733334383*^9, 
+   3.704628745668954*^9}, {3.704634931410556*^9, 3.7046349643527107`*^9}, {
+   3.70463500719522*^9, 3.704635036808655*^9}, {3.704635092914681*^9, 
+   3.704635103945339*^9}, {3.70463514554591*^9, 3.704635146152788*^9}, {
+   3.704635329745009*^9, 3.704635341184334*^9}, {3.704635416162677*^9, 
+   3.704635452192067*^9}, {3.704635495738225*^9, 3.704635498296875*^9}, 
+   3.704635565593911*^9, {3.704635694096498*^9, 3.7046357632155943`*^9}, 
+   3.704635868497468*^9, {3.7046359073769827`*^9, 3.704635908295741*^9}, {
+   3.704636021208543*^9, 3.704636032510845*^9}, {3.7046360756573544`*^9, 
+   3.7046361212228518`*^9}, {3.7046361964567413`*^9, 3.704636219431322*^9}, {
+   3.7046362789278297`*^9, 3.704636280078835*^9}, {3.704636376127385*^9, 
+   3.704636390901945*^9}, {3.704636478920178*^9, 3.704636526678071*^9}, {
+   3.704636566822364*^9, 3.7046365728616333`*^9}, {3.704636704398765*^9, 
+   3.704636704821498*^9}, {3.7046459416828423`*^9, 3.7046459645850286`*^9}, {
+   3.704646023667894*^9, 3.7046460919128532`*^9}, {3.704646175330027*^9, 
+   3.7046462034163427`*^9}, {3.704646242474759*^9, 3.704646245873262*^9}, {
+   3.70464648293723*^9, 3.704646510415642*^9}, {3.7046465415607*^9, 
+   3.7046465728954573`*^9}, {3.704646669455068*^9, 3.704646693743228*^9}, {
+   3.7046467892074137`*^9, 3.704646804694631*^9}, {3.7046468445046873`*^9, 
+   3.704646881446609*^9}, {3.704646924032044*^9, 3.704646924759636*^9}, {
+   3.704646969559698*^9, 3.704646970182673*^9}, {3.704647241254745*^9, 
+   3.704647254612817*^9}, {3.704647306471407*^9, 3.704647331812581*^9}, {
+   3.704647394750162*^9, 3.704647395989146*^9}, {3.7046474398379803`*^9, 
+   3.704647440717008*^9}, {3.7046475025490217`*^9, 3.704647522628042*^9}, {
+   3.704647590551299*^9, 3.704647612387825*^9}, {3.7046476542453327`*^9, 
+   3.704647657812606*^9}, 3.704647688798098*^9, {3.7046479796512337`*^9, 
+   3.7046479970266037`*^9}, {3.7046481116048193`*^9, 3.704648150962204*^9}, {
+   3.704648222396654*^9, 3.7046482256185017`*^9}, 3.7046482934768677`*^9, {
+   3.704648411962569*^9, 3.704648422297245*^9}, {3.704648459875668*^9, 
+   3.7046484828411837`*^9}, {3.704648533491343*^9, 3.704648536657694*^9}, 
+   3.7046485993079023`*^9, {3.704648663461794*^9, 3.7046486671088543`*^9}, {
+   3.704648795697143*^9, 3.704648809687977*^9}, {3.704648869027732*^9, 
+   3.704648923695959*^9}, {3.704650188164587*^9, 3.704650200187067*^9}, {
+   3.7046502549495373`*^9, 3.704650276803275*^9}, {3.7046503176378193`*^9, 
+   3.704650320483963*^9}, 3.704650362389161*^9, {3.704650496875373*^9, 
+   3.704650513282249*^9}, {3.70465056157225*^9, 3.70465061928237*^9}, {
+   3.704650684739801*^9, 3.704650685682517*^9}, {3.704650830090007*^9, 
+   3.704650878905192*^9}, {3.704650959995667*^9, 3.704650985319395*^9}, {
+   3.7046510364510098`*^9, 3.7046510457538233`*^9}, 3.704651083051092*^9, {
+   3.704651139417889*^9, 3.704651151608386*^9}, {3.704651189979493*^9, 
+   3.7046512103123903`*^9}, 3.704651272844048*^9, {3.704651316641817*^9, 
+   3.704651317216703*^9}, {3.704651399097579*^9, 3.7046514282077017`*^9}, {
+   3.704651458210472*^9, 3.704651476143631*^9}, {3.704651523202199*^9, 
+   3.704651528112631*^9}, {3.70465156728129*^9, 3.70465156852092*^9}, {
+   3.704651670784272*^9, 3.7046516870950537`*^9}, {3.7046517219376907`*^9, 
+   3.7046517574230556`*^9}, 3.7046518061618843`*^9, {3.704651858688386*^9, 
+   3.7046518597673407`*^9}, {3.704660602745311*^9, 3.704660618656149*^9}, {
+   3.704660655553569*^9, 3.7046606786409483`*^9}, {3.704660715977676*^9, 
+   3.7046607298642197`*^9}, {3.704660820905768*^9, 3.704660825584444*^9}, {
+   3.704660967216096*^9, 3.704660980534857*^9}, {3.704661016226144*^9, 
+   3.704661055391548*^9}, {3.704661183399694*^9, 3.7046611958458443`*^9}, {
+   3.704661230408011*^9, 3.704661265957583*^9}, {3.7046612990632668`*^9, 
+   3.70466129976575*^9}, {3.70466250327287*^9, 3.7046625057439737`*^9}, {
+   3.704662903303342*^9, 3.704662917773732*^9}, {3.704709900944652*^9, 
+   3.70470996383983*^9}, {3.70471002709403*^9, 3.704710119605427*^9}, {
+   3.704710178612994*^9, 3.704710198804853*^9}, {3.704710229247346*^9, 
+   3.704710238636919*^9}, {3.704710281893937*^9, 3.704710327510895*^9}, {
+   3.7047103990699472`*^9, 3.704710424124118*^9}, {3.704710467007299*^9, 
+   3.704710489012108*^9}, {3.704710531127306*^9, 3.704710533445204*^9}, {
+   3.704710564176053*^9, 3.704710579901157*^9}, {3.704710650819991*^9, 
+   3.704710663436185*^9}, {3.704710707381021*^9, 3.704710763539736*^9}, {
+   3.704710894571574*^9, 3.7047109050426607`*^9}, {3.7047109376701393`*^9, 
+   3.704710960666741*^9}, {3.704711005075552*^9, 3.704711007778844*^9}, 
+   3.7047110559169292`*^9, {3.7047111027313766`*^9, 3.704711116954018*^9}, {
+   3.7047111536926203`*^9, 3.704711213690791*^9}, 3.7047112466680717`*^9, {
+   3.704711478946203*^9, 3.704711492496739*^9}, {3.704711535803581*^9, 
+   3.7047115556967916`*^9}, {3.704711599707488*^9, 3.704711602593205*^9}, 
+   3.704711636634923*^9, {3.704711709944985*^9, 3.7047117242564497`*^9}, {
+   3.7047117645709963`*^9, 3.704711799304329*^9}, {3.704711852202279*^9, 
+   3.704711855368531*^9}, 3.704711893081974*^9, {3.7047120213515453`*^9, 
+   3.7047120413347178`*^9}, {3.704712072201208*^9, 3.7047120910307283`*^9}, {
+   3.704712129631776*^9, 3.7047121391352167`*^9}, 3.7047121813760033`*^9, {
+   3.704712258047402*^9, 3.704712274238841*^9}, {3.704712317498295*^9, 
+   3.704712344326233*^9}, 3.704712899134706*^9, {3.704712954453426*^9, 
+   3.704712955173905*^9}, {3.7047132275234327`*^9, 3.704713250650393*^9}, {
+   3.7047132911504717`*^9, 3.7047133418029137`*^9}, 3.7047133734768867`*^9, {
+   3.704713489747177*^9, 3.704713508297621*^9}, {3.7047135438048477`*^9, 
+   3.704713582058085*^9}, {3.7047137309146423`*^9, 3.704713748737007*^9}, {
+   3.704713791851756*^9, 3.704713810884227*^9}, {3.7047138645897713`*^9, 
+   3.7047138707852077`*^9}, {3.704713906530468*^9, 3.704713907138607*^9}, {
+   3.7047140399768963`*^9, 3.7047140528879337`*^9}, {3.704714091691443*^9, 
+   3.7047141219837103`*^9}, 3.704714173330875*^9, {3.7047142084331903`*^9, 
+   3.704714209152149*^9}, {3.704714267208046*^9, 3.7047142822790403`*^9}, {
+   3.704714321834696*^9, 3.704714349791216*^9}, {3.704714394302791*^9, 
+   3.704714421543971*^9}, 3.704714456161414*^9, {3.7047145627749977`*^9, 
+   3.704714578126231*^9}, {3.704714615402295*^9, 3.7047146612940607`*^9}, {
+   3.704714733326627*^9, 3.704714752509965*^9}, {3.70471480522543*^9, 
+   3.704714831262024*^9}, 3.704714869360221*^9, {3.704715066317663*^9, 
+   3.7047150796374207`*^9}, {3.7047151396723127`*^9, 3.704715156813711*^9}, 
+   3.7047152027358828`*^9, {3.704715233005788*^9, 3.704715233574404*^9}, {
+   3.7047153441492987`*^9, 3.704715357188136*^9}, {3.704715403607978*^9, 
+   3.704715419139895*^9}, {3.7047154643562517`*^9, 3.704715469941674*^9}, {
+   3.7047155064375153`*^9, 3.7047155070603323`*^9}, {3.704715576796083*^9, 
+   3.704715592059039*^9}, {3.704715634765502*^9, 3.7047156586278143`*^9}, {
+   3.7047156937898617`*^9, 3.704715696299622*^9}, 3.704715728148982*^9, {
+   3.704715982963985*^9, 3.704716018929599*^9}, {3.704716059300844*^9, 
+   3.704716065138331*^9}, 3.704716205274343*^9, {3.704716258153151*^9, 
+   3.7047162829287024`*^9}, {3.704716349275078*^9, 3.70471635307239*^9}, 
+   3.704716386379777*^9, {3.704716650936195*^9, 3.7047166609034348`*^9}, {
+   3.704716704435049*^9, 3.7047167466152697`*^9}, {3.704716790914483*^9, 
+   3.704716793103735*^9}, 3.7047168350183687`*^9, {3.7047170006481524`*^9, 
+   3.704717016742449*^9}, {3.704717056426907*^9, 3.704717076040476*^9}, {
+   3.704717309135522*^9, 3.70471737847814*^9}, {3.704717578453678*^9, 
+   3.704717600908708*^9}, {3.704717632976779*^9, 3.704717691092331*^9}, {
+   3.704717725912075*^9, 3.70471772771688*^9}, 3.704717761446994*^9, {
+   3.704719590231949*^9, 3.704719609029611*^9}, {3.704719653393792*^9, 
+   3.7047196714057417`*^9}, {3.7047197212407*^9, 3.7047197231036043`*^9}, 
+   3.704719753401536*^9, {3.704719814150673*^9, 3.704719829885187*^9}, {
+   3.7047198807128572`*^9, 3.704719907597189*^9}, {3.704719943528533*^9, 
+   3.704719945334345*^9}, 3.7047199934493313`*^9, {3.704720086630047*^9, 
+   3.70472010161255*^9}, {3.704720139175695*^9, 3.704720157860999*^9}, {
+   3.704720208403399*^9, 3.704720236632371*^9}, {3.704720376989052*^9, 
+   3.704720394203907*^9}, {3.704720442895944*^9, 3.704720515340151*^9}, {
+   3.704724194673224*^9, 3.704724208471634*^9}, {3.70472425367546*^9, 
+   3.704724284583625*^9}, {3.70472433560445*^9, 3.7047243376724663`*^9}, 
+   3.704724368698715*^9, {3.7047244175930157`*^9, 3.704724434934908*^9}, {
+   3.704724476498641*^9, 3.704724494422883*^9}, {3.704724534210926*^9, 
+   3.704724535903531*^9}, {3.704724569746519*^9, 3.704724599345736*^9}, {
+   3.704725116318451*^9, 3.704725143901477*^9}, {3.704725178205091*^9, 
+   3.7047251803270884`*^9}, {3.704725212264421*^9, 3.704725214342037*^9}, 
+   3.704725272096311*^9, {3.704725323373248*^9, 3.704725342358532*^9}, 
+   3.7047253821918993`*^9, {3.704725433341444*^9, 3.7047254509560757`*^9}, {
+   3.704725490335725*^9, 3.7047255710043173`*^9}, {3.704728693795253*^9, 
+   3.704728717138159*^9}, {3.7047287751895847`*^9, 3.704728803866675*^9}, 
+   3.7047288425579987`*^9, {3.7047288873239937`*^9, 3.7047289080498123`*^9}, {
+   3.7047289398875227`*^9, 3.7047289479619226`*^9}, {3.70472898713081*^9, 
+   3.704729015618209*^9}, {3.7047290844905767`*^9, 3.704729092961866*^9}, {
+   3.7047291243319073`*^9, 3.7047291417456503`*^9}, {3.704729392212264*^9, 
+   3.704729394705916*^9}, 3.704729440364031*^9, {3.704729666872438*^9, 
+   3.704729682937129*^9}, {3.704729750676805*^9, 3.70472977884009*^9}, {
+   3.70472984011625*^9, 3.7047298425769787`*^9}, 3.7047298727787857`*^9, {
+   3.704729995912705*^9, 3.704730011246941*^9}, {3.704730059721878*^9, 
+   3.7047301233836737`*^9}, {3.704730204544161*^9, 3.7047302183985243`*^9}, {
+   3.704730255417499*^9, 3.704730284502486*^9}, {3.704730352896456*^9, 
+   3.704730385655141*^9}, {3.704730442720729*^9, 3.704730453358118*^9}, {
+   3.7047305041388702`*^9, 3.704730519392311*^9}, {3.704730563799819*^9, 
+   3.704730570183022*^9}, {3.704730614576099*^9, 3.7047306204792852`*^9}, {
+   3.704730715487111*^9, 3.704730728141444*^9}, {3.704730775145389*^9, 
+   3.704730848110505*^9}, {3.704730902766086*^9, 3.704730924045299*^9}, {
+   3.704731022625375*^9, 3.7047310379088907`*^9}, {3.704731078111733*^9, 
+   3.70473108065419*^9}, {3.704731114295149*^9, 3.7047311150307493`*^9}, {
+   3.704731206062652*^9, 3.704731219676199*^9}, {3.7047312772001123`*^9, 
+   3.704731321108782*^9}, {3.70473166098009*^9, 3.704731676450904*^9}, {
+   3.704731716790164*^9, 3.704731735907333*^9}, 3.704731795407391*^9, {
+   3.704731832411991*^9, 3.704731832997095*^9}, {3.704731972915999*^9, 
+   3.70473198720242*^9}, {3.7047320283992558`*^9, 3.704732078004034*^9}, {
+   3.7047322084918213`*^9, 3.7047322228739357`*^9}, {3.704732524088922*^9, 
+   3.704732527000977*^9}, {3.7047325655328627`*^9, 3.70473261124118*^9}, {
+   3.704732945447669*^9, 3.7047329748794928`*^9}, {3.704733007314953*^9, 
+   3.7047330267113247`*^9}, {3.704733086816148*^9, 3.704733123071267*^9}, {
+   3.7047332754909887`*^9, 3.704733293976242*^9}, {3.704733345427314*^9, 
+   3.704733367387638*^9}, {3.7047334359297323`*^9, 3.704733441623983*^9}, {
+   3.704733490400115*^9, 3.704733522943272*^9}, {3.704733664750778*^9, 
+   3.704733677925507*^9}, {3.704733729649651*^9, 3.7047337428855667`*^9}, {
+   3.70473386729004*^9, 3.704733869606776*^9}, 3.704733899618389*^9, {
+   3.7047339640787983`*^9, 3.704733978589259*^9}, {3.7047340263543463`*^9, 
+   3.704734052276937*^9}, {3.7047340876978903`*^9, 3.704734090118479*^9}, {
+   3.704734140760475*^9, 3.7047341638619127`*^9}, {3.704734216893588*^9, 
+   3.704734222510388*^9}, {3.704734896572431*^9, 3.7047348995224533`*^9}, {
+   3.704734944646886*^9, 3.704734978403586*^9}, 3.7047350620221767`*^9, {
+   3.7047351069878273`*^9, 3.70473511187514*^9}, {3.704743691551292*^9, 
+   3.7047437092301273`*^9}, {3.704743743898479*^9, 3.7047437742564096`*^9}, {
+   3.704743817778129*^9, 3.704743820344095*^9}, 3.704743865827242*^9, {
+   3.704751569544989*^9, 3.704751578096035*^9}, {3.704751620011487*^9, 
+   3.704751649575584*^9}, {3.704751689444241*^9, 3.704751691992729*^9}, 
+   3.704751733099739*^9, {3.704751786744875*^9, 3.704751796015287*^9}, {
+   3.704751832418627*^9, 3.704751855263204*^9}, {3.7047519391869183`*^9, 
+   3.704751941351953*^9}, 3.704751987834584*^9, {3.704752526269816*^9, 
+   3.704752541372589*^9}, {3.704752597720961*^9, 3.704752614500553*^9}, {
+   3.704752686968952*^9, 3.7047526889016027`*^9}, {3.704752732407731*^9, 
+   3.704752737413127*^9}, {3.704752826615222*^9, 3.704752881427821*^9}, {
+   3.7047529519880037`*^9, 3.7047529589552937`*^9}, 3.704753017486382*^9, {
+   3.704753050140153*^9, 3.704753054099786*^9}, {3.704753154565023*^9, 
+   3.704753164538624*^9}, {3.704753212054974*^9, 3.704753234874693*^9}, {
+   3.704753267995269*^9, 3.704753290914596*^9}, {3.7047921002979937`*^9, 
+   3.704792114512438*^9}, {3.704792152188398*^9, 3.7047921839280243`*^9}, 
+   3.704792230885062*^9, {3.704792281322159*^9, 3.704792294081367*^9}, {
+   3.7047989300543547`*^9, 3.704798946204883*^9}, {3.704799002040503*^9, 
+   3.704799019781155*^9}, {3.7047990671616077`*^9, 3.704799098150395*^9}, {
+   3.7047991737183447`*^9, 3.704799196076036*^9}, {3.704799233912477*^9, 
+   3.7047992367325687`*^9}, 3.704799321291451*^9, {3.7048002504060297`*^9, 
+   3.704800276895656*^9}, 3.704800310509987*^9, {3.7048003460980186`*^9, 
+   3.7048003466494513`*^9}, {3.704800575705658*^9, 3.704800587478532*^9}, {
+   3.704800646898436*^9, 3.704800660974135*^9}, {3.704800703392837*^9, 
+   3.704800718889288*^9}, {3.704800753385017*^9, 3.704800754848427*^9}, {
+   3.70480200054795*^9, 3.704802061130908*^9}, {3.704802104853153*^9, 
+   3.704802106890497*^9}, {3.704802146403963*^9, 3.70480214738021*^9}, {
+   3.704823097777689*^9, 3.7048231133845654`*^9}, {3.704823151500577*^9, 
+   3.704823154704957*^9}, {3.704823245863016*^9, 3.7048232602801113`*^9}, 
+   3.7048233146367817`*^9, {3.704823353858536*^9, 3.704823355818995*^9}, {
+   3.704823689047142*^9, 3.7048236994162197`*^9}, {3.704823752082849*^9, 
+   3.704823777173955*^9}, {3.704823836486664*^9, 3.7048238579022303`*^9}, {
+   3.70482397049562*^9, 3.704823982285261*^9}, {3.704824027050427*^9, 
+   3.704824052525311*^9}, {3.704824094134952*^9, 3.704824120414748*^9}, {
+   3.704824213437994*^9, 3.7048242278207493`*^9}, {3.70482427204846*^9, 
+   3.704824292772738*^9}, {3.7048243751255217`*^9, 3.70482441509309*^9}, {
+   3.704843702955901*^9, 3.704843713337675*^9}, {3.7048437636450644`*^9, 
+   3.704843840937668*^9}, {3.704843907689417*^9, 3.704843918248645*^9}, {
+   3.704843960052685*^9, 3.704844012480157*^9}, {3.70484407825228*^9, 
+   3.704844081889185*^9}, {3.704844121601873*^9, 3.704844122330915*^9}, {
+   3.704844286425181*^9, 3.704844297127047*^9}, {3.7048443395951977`*^9, 
+   3.70484442023139*^9}, {3.70484464292006*^9, 3.704844654613844*^9}, {
+   3.704844686634754*^9, 3.7048447205741243`*^9}, 3.704844775810093*^9, {
+   3.70484481919174*^9, 3.704844845591269*^9}, {3.704844957496715*^9, 
+   3.704844966758444*^9}, {3.704845000105994*^9, 3.704845057073406*^9}, {
+   3.7048450963222713`*^9, 3.704845128999529*^9}, {3.7048453313822327`*^9, 
+   3.7048453456355352`*^9}, {3.704845397631909*^9, 3.7048454520436287`*^9}, {
+   3.704845485642844*^9, 3.7048454880202208`*^9}, {3.704845758308422*^9, 
+   3.70484577130624*^9}, {3.704845806750308*^9, 3.704845837215899*^9}, {
+   3.704846025040927*^9, 3.704846031362275*^9}, {3.7048460812273006`*^9, 
+   3.704846082412323*^9}, {3.70487757464465*^9, 3.7048775861232033`*^9}, 
+   3.7048776361909113`*^9, {3.70487775848939*^9, 3.7048777762488737`*^9}, {
+   3.7048778317396173`*^9, 3.704877834481065*^9}, 3.70487803407915*^9, {
+   3.704878090273211*^9, 3.7048780917465677`*^9}, {3.704878180528981*^9, 
+   3.704878199023114*^9}, {3.704878328651656*^9, 3.7048783823824253`*^9}, {
+   3.7048784745484743`*^9, 3.704878477039956*^9}, 3.704878523867612*^9, {
+   3.704878589559914*^9, 3.704878600077669*^9}, {3.704878649658267*^9, 
+   3.704878715558076*^9}, {3.704878977446663*^9, 3.7048789917559547`*^9}, {
+   3.704879046016945*^9, 3.704879078891877*^9}, {3.7048791502724752`*^9, 
+   3.7048791523328342`*^9}, {3.7048791950853853`*^9, 3.704879195838398*^9}, {
+   3.7048794451870613`*^9, 3.704879463042314*^9}, {3.704879501230586*^9, 
+   3.7048795270347357`*^9}, 3.704879559325264*^9, {3.7048795928108788`*^9, 
+   3.704879597442658*^9}, {3.7048799461146097`*^9, 3.704879965608667*^9}, {
+   3.704880021404811*^9, 3.704880045672182*^9}, {3.704880075961081*^9, 
+   3.7048801168969917`*^9}, {3.704880261736607*^9, 3.70488027294333*^9}, {
+   3.704880312987586*^9, 3.704880375655252*^9}, {3.7048805194967537`*^9, 
+   3.704880530534692*^9}, {3.7048805691962137`*^9, 3.704880584758403*^9}, 
+   3.704880644506468*^9, {3.704880683607545*^9, 3.704880692231655*^9}, {
+   3.704880877910027*^9, 3.704880892109243*^9}, {3.70488094140888*^9, 
+   3.704880961661241*^9}, {3.704881019354026*^9, 3.704881021591035*^9}, {
+   3.704881073951235*^9, 3.7048810751683598`*^9}, {3.704881169446514*^9, 
+   3.704881186903179*^9}, {3.704881229673397*^9, 3.704881268771946*^9}, 
+   3.704881325928349*^9, {3.704881364390469*^9, 3.7048813706361027`*^9}, {
+   3.704931753777274*^9, 3.704931771293915*^9}, {3.704931823626829*^9, 
+   3.704931856158246*^9}, {3.704931937347055*^9, 3.704931939742568*^9}, {
+   3.704931978099277*^9, 3.704931986126652*^9}, {3.704932094038341*^9, 
+   3.704932108564419*^9}, {3.7049321476413937`*^9, 3.704932169860609*^9}, {
+   3.7049322175420313`*^9, 3.7049322197182817`*^9}, 3.7049322636088133`*^9, {
+   3.7049323258686037`*^9, 3.704932337379918*^9}, {3.704932388528797*^9, 
+   3.704932398156061*^9}, {3.704932543004174*^9, 3.7049325632111053`*^9}, {
+   3.7049641474410963`*^9, 3.704964163408414*^9}, {3.704964198084317*^9, 
+   3.704964253527643*^9}, {3.704964376279777*^9, 3.704964399118348*^9}, {
+   3.7049644617797728`*^9, 3.704964464238886*^9}, {3.7049645098943377`*^9, 
+   3.7049645290223923`*^9}, {3.704964619711652*^9, 3.70496462840761*^9}, {
+   3.704964690420334*^9, 3.7049646946709137`*^9}, {3.7049648809817457`*^9, 
+   3.7049648923324203`*^9}, {3.704964939720809*^9, 3.704964973484211*^9}, 
+   3.704965061295987*^9, {3.704965103701377*^9, 3.7049651086368017`*^9}, {
+   3.7049657316599627`*^9, 3.704965748297188*^9}, {3.704965803958674*^9, 
+   3.7049658313061113`*^9}, {3.704966219314405*^9, 3.704966221704671*^9}, {
+   3.704966285058095*^9, 3.704966287106125*^9}, {3.7049948845915422`*^9, 
+   3.704994930751493*^9}, 3.704995065270874*^9, {3.704995112092952*^9, 
+   3.70499512394062*^9}, {3.7049951859655523`*^9, 3.704995211542322*^9}, {
+   3.704995307404448*^9, 3.704995310420779*^9}, {3.704995371437744*^9, 
+   3.704995380043148*^9}, {3.704996267781221*^9, 3.70499630343186*^9}, 
+   3.7049963820175037`*^9, {3.704996912965117*^9, 3.7049969147331257`*^9}, {
+   3.704996959326675*^9, 3.7049970273724527`*^9}, {3.704997153316925*^9, 
+   3.704997282931758*^9}, {3.704997316636139*^9, 3.704997322739264*^9}, {
+   3.704997393907818*^9, 3.704997447395173*^9}, {3.7049974922309227`*^9, 
+   3.704997520900043*^9}, {3.704997561700284*^9, 3.704997573339604*^9}, {
+   3.7049976402684917`*^9, 3.704997648850333*^9}, {3.704997682441639*^9, 
+   3.704997774809897*^9}, {3.7049978108758783`*^9, 3.7049978398415947`*^9}, {
+   3.704997895164401*^9, 3.704997938833362*^9}, {3.70499797745755*^9, 
+   3.7049979783057613`*^9}, {3.704998036488414*^9, 3.704998039632506*^9}, {
+   3.7049981417619057`*^9, 3.704998168520979*^9}, {3.704998204536861*^9, 
+   3.704998242304182*^9}, {3.704998291503571*^9, 3.704998297399455*^9}, {
+   3.70499873480884*^9, 3.7049987394218903`*^9}, {3.7049990399177303`*^9, 
+   3.704999081068376*^9}, {3.704999131172689*^9, 3.7049993793077173`*^9}, {
+   3.704999747666477*^9, 3.7049997540014353`*^9}, {3.7049998271441097`*^9, 
+   3.704999930385294*^9}, {3.7049999717457533`*^9, 3.70500000424086*^9}, {
+   3.7050001456171217`*^9, 3.7050001553121367`*^9}, {3.705000219370512*^9, 
+   3.705000229440233*^9}, {3.7050003093060207`*^9, 3.705000377231575*^9}, {
+   3.7050005047294407`*^9, 3.7050005100029707`*^9}, 3.70500056140138*^9, {
+   3.705000592449486*^9, 3.7050005935227947`*^9}, {3.7050006364167757`*^9, 
+   3.705000636863173*^9}, {3.70500103834966*^9, 3.705001128210793*^9}, {
+   3.70500116283873*^9, 3.7050011635689573`*^9}, {3.705013932094459*^9, 
+   3.7050139409003277`*^9}, {3.70501699354515*^9, 3.705017074841052*^9}, 
+   3.705017109072198*^9, {3.7050171587020206`*^9, 3.705017185669903*^9}, {
+   3.7050172201043797`*^9, 3.7050172413763447`*^9}, {3.705017293760223*^9, 
+   3.705017340141745*^9}, 3.705017379072154*^9, {3.7050174192638206`*^9, 
+   3.7050174261266193`*^9}, {3.705017462045649*^9, 3.7050174828129253`*^9}, {
+   3.705017872684236*^9, 3.70501794472215*^9}, {3.705017975859787*^9, 
+   3.705018003467617*^9}, {3.705018052597164*^9, 3.705018066644127*^9}, {
+   3.705018098756137*^9, 3.705018100674479*^9}, {3.7050181410060663`*^9, 
+   3.7050181696127987`*^9}, 3.705018327468321*^9, {3.705018371410231*^9, 
+   3.7050184488676662`*^9}, {3.705018513115233*^9, 3.7050185327543*^9}, {
+   3.7050186045509357`*^9, 3.705018664978015*^9}, {3.705018712105711*^9, 
+   3.7050187140721684`*^9}, {3.705050188708089*^9, 3.705050228388669*^9}, {
+   3.7050504122114477`*^9, 3.7050504600501633`*^9}, {3.705050553698584*^9, 
+   3.705050572874457*^9}, {3.7050506139868393`*^9, 3.705050706087088*^9}, {
+   3.7050507397911463`*^9, 3.705050784922462*^9}, {3.705050816928754*^9, 
+   3.705050820202314*^9}, {3.70505086440075*^9, 3.70505093716852*^9}, {
+   3.705051006283162*^9, 3.705051007000928*^9}, {3.705051074871245*^9, 
+   3.705051108481379*^9}, {3.70505140846119*^9, 3.705051440695836*^9}, {
+   3.705051572766458*^9, 3.7050515757419767`*^9}, {3.7050516086699657`*^9, 
+   3.705051609301705*^9}, {3.705051712765864*^9, 3.7050517660692377`*^9}, {
+   3.7050518035807734`*^9, 3.7050518454850607`*^9}, {3.705051890733684*^9, 
+   3.705051901836567*^9}, 3.705051948199332*^9, {3.705051988454698*^9, 
+   3.705052005222067*^9}, {3.705066025647346*^9, 3.705066031286079*^9}, 
+   3.70506691585187*^9, {3.7050680392858067`*^9, 3.7050680841660433`*^9}, {
+   3.705075969409025*^9, 3.705075969678339*^9}, {3.705076087192754*^9, 
+   3.705076129197695*^9}, {3.705076341622484*^9, 3.7050763660849953`*^9}, {
+   3.705076445375629*^9, 3.70507646389567*^9}, {3.7050765676211348`*^9, 
+   3.70507662914823*^9}, {3.705076664166691*^9, 3.705076668365477*^9}, {
+   3.705076807382338*^9, 3.705076822141221*^9}, {3.705077191756015*^9, 
+   3.705077195315516*^9}, {3.705077313451434*^9, 3.7050773430132113`*^9}, {
+   3.705077446320972*^9, 3.70507746492662*^9}, {3.705078987893256*^9, 
+   3.705079103433346*^9}, {3.705079158672011*^9, 3.705079177786806*^9}, {
+   3.7050792373729763`*^9, 
+   3.705079238024522*^9}},ExpressionUUID->"3970621a-f41a-4476-b2b9-\
+983d882fa6c1"]
+},
+WindowSize->{1888, 1266},
+WindowMargins->{{9, Automatic}, {Automatic, 52}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 107715, 2177, 4155, "Input",ExpressionUUID->"3970621a-f41a-4476-b2b9-983d882fa6c1"]
+}
+]
+*)
+

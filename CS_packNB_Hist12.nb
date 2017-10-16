@@ -1,0 +1,1250 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     56476,       1242]
+NotebookOptionsPosition[     56159,       1228]
+NotebookOutlinePosition[     56519,       1244]
+CellTagsIndexPosition[     56476,       1241]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"data", "=", 
+          RowBox[{"DeleteDuplicatesBy", "[", 
+           RowBox[{
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<Alfred the Great\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"871\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "871", "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 25 Oct 899\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"899", ",", "10", ",", "25"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward the Elder\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 27 Oct 899\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"899", ",", "10", ",", "27"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 16 Jul 924\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"924", ",", "7", ",", "16"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<\[CapitalAE]thelstan\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 18 Jul 924\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"924", ",", "7", ",", "18"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 27 Oct 939\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"939", ",", "10", ",", "27"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edmund I\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 28 Oct 939\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"939", ",", "10", ",", "28"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 26 May 946\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"946", ",", "5", ",", "26"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Eadred\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 27 May 946\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"946", ",", "5", ",", "27"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 23 Nov 955\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"955", ",", "11", ",", "23"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Eadwig\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 24 Nov 955\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"955", ",", "11", ",", "24"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 1 Oct 959\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"959", ",", "10", ",", "1"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edgar the Peaceful\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 2 Oct 959\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"959", ",", "10", ",", "2"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 8 Jul 975\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"975", ",", "7", ",", "8"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward the Martyr\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 9 Jul 975\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"975", ",", "7", ",", "9"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 18 Mar 978\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"978", ",", "3", ",", "18"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<\[CapitalAE]thelred the Unready\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 19 Mar 978\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"978", ",", "3", ",", "19"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 24 Dec 1013\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1013", ",", "12", ",", "24"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Sweyn Forkbeard\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 25 Dec 1013\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1013", ",", "12", ",", "25"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 2 Feb 1014\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1014", ",", "2", ",", "2"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<\[CapitalAE]thelred the Unready\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 3 Feb 1014\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1014", ",", "2", ",", "3"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 23 Apr 1016\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1016", ",", "4", ",", "23"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edmund Ironside\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 24 Apr 1016\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1016", ",", "4", ",", "24"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 30 Nov 1016\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1016", ",", "11", ",", "30"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Cnut the Great\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 18 Oct 1016\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1016", ",", "10", ",", "18"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 12 Nov 1035\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1035", ",", "11", ",", "12"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Harold Harefoot\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 13 Nov 1035\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1035", ",", "11", ",", "13"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 16 Mar 1040\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1040", ",", "3", ",", "16"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Harthacnut\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 18 Mar 1040\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1040", ",", "3", ",", "18"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 8 Jun 1042\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1042", ",", "6", ",", "8"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward the Confessor\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 9 Jun 1042\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1042", ",", "6", ",", "9"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 5 Jan 1066\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1066", ",", "1", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Harold Godwinson\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 6 Jan 1066\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1066", ",", "1", ",", "6"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 14 Oct 1066\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1066", ",", "10", ",", "14"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edgar the \[CapitalAE]theling\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 15 Oct 1066\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1066", ",", "10", ",", "15"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 17 Dec 1066\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1066", ",", "12", ",", "17"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<William I (The Conqueror)\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 25 Dec 1066\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1066", ",", "12", ",", "25"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 8 Sep 1087\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1087", ",", "9", ",", "8"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<William II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 10 Sep 1087\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1087", ",", "9", ",", "10"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 1 Aug 1100\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1100", ",", "8", ",", "1"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry I\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 3 Aug 1100\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1100", ",", "8", ",", "3"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 1 Dec 1135\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1135", ",", "12", ",", "1"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Stephen of Blois\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 1 Dec 1135\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1135", ",", "12", ",", "1"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 24 Oct 1154\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1154", ",", "10", ",", "24"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 26 Oct 1154\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1154", ",", "10", ",", "26"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 5 Jul 1189\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1189", ",", "7", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Richard I (The Lionheart)\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 6 Jul 1189\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1189", ",", "7", ",", "6"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 5 Apr 1199\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1199", ",", "4", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<John\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 6 Apr 1199\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1199", ",", "4", ",", "6"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 19 Oct 1216\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1216", ",", "10", ",", "19"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry III\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 20 Oct 1216\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1216", ",", "10", ",", "20"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 15 Nov 1272\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1272", ",", "11", ",", "15"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward I (Longshanks)\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 17 Nov 1272\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1272", ",", "11", ",", "17"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 6 Jul 1307\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1307", ",", "7", ",", "6"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 7 Jul 1307\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1307", ",", "7", ",", "7"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 24 Jan 1327\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1327", ",", "1", ",", "24"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward III\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 26 Jan 1327\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1327", ",", "1", ",", "26"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 20 Jun 1377\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1377", ",", "6", ",", "20"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Richard II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 22 Jun 1377\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1377", ",", "6", ",", "22"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 29 Sep 1399\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1399", ",", "9", ",", "29"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry IV\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 30 Sep 1399\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1399", ",", "9", ",", "30"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 19 Mar 1413\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1413", ",", "3", ",", "19"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry V\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 20 Mar 1413\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1413", ",", "3", ",", "20"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 30 Aug 1422\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1422", ",", "8", ",", "30"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry VI\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 1 Sep 1422\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1422", ",", "9", ",", "1"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 3 Mar 1461\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1461", ",", "3", ",", "3"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward IV\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 5 Mar 1461\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1461", ",", "3", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 2 Oct 1470\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1470", ",", "10", ",", "2"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry VI\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 4 Oct 1470\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1470", ",", "10", ",", "4"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 10 Apr 1471\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1471", ",", "4", ",", "10"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward IV\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 12 Apr 1471\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1471", ",", "4", ",", "12"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 8 Apr 1483\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1483", ",", "4", ",", "8"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward V\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 10 Apr 1483\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1483", ",", "4", ",", "10"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 25 Jun 1483\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1483", ",", "6", ",", "25"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Richard III\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 26 Jun 1483\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1483", ",", "6", ",", "26"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 21 Aug 1485\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1485", ",", "8", ",", "21"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry VII\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 22 Aug 1485\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1485", ",", "8", ",", "22"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 20 Apr 1509\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1509", ",", "4", ",", "20"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Henry III\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 22 Apr 1509\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1509", ",", "4", ",", "22"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 27 Jan 1547\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1547", ",", "1", ",", "27"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward VI\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 29 Jan 1547\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1547", ",", "1", ",", "29"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 5 Jul 1553\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1553", ",", "7", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Jane\>\"", ",", 
+                  TemplateBox[{
+                   RowBox[{"\"Fri 10 Jul 1553\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1553", ",", "7", ",", "10"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 18 Jul 1553\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1553", ",", "7", ",", "18"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Mary I\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 20 Jul 1553\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1553", ",", "7", ",", "20"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 16 Nov 1558\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1558", ",", "11", ",", "16"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Elizabeth I\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 18 Nov 1558\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1558", ",", "11", ",", "18"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 23 Mar 1603\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1603", ",", "3", ",", "23"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<James I\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 25 Mar 1603\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1603", ",", "3", ",", "25"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 26 Mar 1625\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1625", ",", "3", ",", "26"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Charles I\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 28 Mar 1625\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1625", ",", "3", ",", "28"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 30 Jan 1649\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1649", ",", "1", ",", "30"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Charles II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 29 May 1660\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1660", ",", "5", ",", "29"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 5 Feb 1685\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1685", ",", "2", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<James II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 7 Feb 1685\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1685", ",", "2", ",", "7"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 23 Dec 1688\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1688", ",", "12", ",", "23"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Mary II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 13 Feb 1689\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1689", ",", "2", ",", "13"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 28 Dec 1694\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1694", ",", "12", ",", "28"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<William III (of Orange)\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 28 Dec 1694\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1694", ",", "12", ",", "28"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 7 Mar 1702\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1702", ",", "3", ",", "7"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Anne\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 9 Mar 1702\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1702", ",", "3", ",", "9"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 31 Jul 1714\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1714", ",", "7", ",", "31"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<George I\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 2 Aug 1714\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1714", ",", "8", ",", "2"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 10 Jun 1727\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1727", ",", "6", ",", "10"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<George II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 12 Jun 1727\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1727", ",", "6", ",", "12"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  TemplateBox[{
+                   RowBox[{"\"Fri 24 Oct 1760\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1760", ",", "10", ",", "24"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<George III\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 26 Oct 1760\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1760", ",", "10", ",", "26"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Fri 28 Jan 1820\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1820", ",", "1", ",", "28"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<George IV\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 30 Jan 1820\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1820", ",", "1", ",", "30"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 24 Jun 1830\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1830", ",", "6", ",", "24"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<William IV\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 26 Jun 1830\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1830", ",", "6", ",", "26"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 19 Jun 1837\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1837", ",", "6", ",", "19"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Victoria\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 21 Jun 1837\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1837", ",", "6", ",", "21"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Mon 21 Jan 1901\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1901", ",", "1", ",", "21"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward VII\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Wed 23 Jan 1901\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1901", ",", "1", ",", "23"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 5 May 1910\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1910", ",", "5", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<George V\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 7 May 1910\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1910", ",", "5", ",", "7"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sun 19 Jan 1936\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1936", ",", "1", ",", "19"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Edward VIII\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 21 Jan 1936\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1936", ",", "1", ",", "21"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 10 Dec 1936\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1936", ",", "12", ",", "10"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<George VI\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Sat 12 Dec 1936\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1936", ",", "12", ",", "12"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 5 Feb 1952\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1952", ",", "2", ",", "5"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Elizabeth II\>\"", ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Thu 7 Feb 1952\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1952", ",", "2", ",", "7"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False], ",", 
+                  
+                  TemplateBox[{
+                   RowBox[{"\"Tue 30 May 2017\""}],
+                    RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"2017", ",", "5", ",", "30"}], "}"}], "]"}]},
+                   "DateObject",
+                   Editable->False]}], "}"}]}], "\[IndentingNewLine]", "}"}], 
+              ",", "4"}], "]"}], ",", "First"}], "]"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"date", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"DayRange", "[", 
+          RowBox[{
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{"\"\<Who was the monarch of England on `1`?\>\"", ",", 
+          RowBox[{"DateString", "[", 
+           RowBox[{"date", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", "\"\<DayShort\>\"", 
+              ",", "\"\<, \>\"", ",", "\"\<Year\>\""}], "}"}]}], "]"}]}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Hist12\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.705080329070342*^9, {3.705080915834841*^9, 3.705080917473855*^9}, {
+   3.705080960010523*^9, 3.7050810166893787`*^9}, {3.70508152033702*^9, 
+   3.705081521343849*^9}, {3.705081560887698*^9, 3.705081580063532*^9}, {
+   3.7050817305115557`*^9, 3.705081732647932*^9}, {3.705081764314458*^9, 
+   3.705081792655477*^9}, {3.705081849602725*^9, 3.705081879935945*^9}, {
+   3.7050819193292027`*^9, 3.7050819270712137`*^9}, {3.7050819962069273`*^9, 
+   3.705082032590911*^9}, {3.705082063730176*^9, 3.7050820654716673`*^9}, {
+   3.705082121682065*^9, 3.705082190303361*^9}, {3.7050822379378757`*^9, 
+   3.705082314455701*^9}, {3.7050823554976883`*^9, 3.7050823975698223`*^9}, {
+   3.705082431080283*^9, 3.705082490799601*^9}, {3.705082529082222*^9, 
+   3.705082643927388*^9}, {3.705082687393721*^9, 3.705082690463397*^9}, {
+   3.7051402985304947`*^9, 3.7051403254653788`*^9}, {3.705143318858169*^9, 
+   3.705143373353036*^9}, 3.705143448579526*^9, {3.705147576978838*^9, 
+   3.705147592169031*^9}, {3.7051477091525507`*^9, 3.7051477435215178`*^9}, {
+   3.7051478991710777`*^9, 3.705148030577344*^9}, 3.705148064084268*^9, {
+   3.7051480964535217`*^9, 3.705148102331973*^9}, {3.705148344979796*^9, 
+   3.705148427674924*^9}, {3.7051485145550833`*^9, 3.705148535107379*^9}, {
+   3.705148569394145*^9, 3.705148579250391*^9}, {3.705148621290691*^9, 
+   3.7051487020897207`*^9}, {3.7051487523666*^9, 3.7051487711420603`*^9}, 
+   3.705148959792151*^9, {3.705148998455171*^9, 3.705149068264361*^9}, {
+   3.705149111055225*^9, 3.705149112542177*^9}, {3.705149146382462*^9, 
+   3.705149243087778*^9}, {3.705149564540924*^9, 3.7051496049438133`*^9}, {
+   3.705149648421002*^9, 3.705149690116231*^9}, {3.7051497262876873`*^9, 
+   3.7051497574437428`*^9}, {3.705149798807632*^9, 3.705149825783411*^9}, {
+   3.705149870310816*^9, 3.705149881989751*^9}, {3.705149919844776*^9, 
+   3.705149926445199*^9}, {3.7051501049634323`*^9, 3.7051502155959387`*^9}, {
+   3.705151367407691*^9, 3.7051513807186203`*^9}, {3.7051514133868523`*^9, 
+   3.705151431711062*^9}, {3.70515147949058*^9, 3.7051515001662693`*^9}, {
+   3.705151533945435*^9, 3.705151602214374*^9}, {3.705151686013801*^9, 
+   3.705151756975809*^9}, {3.705156884207839*^9, 3.705156932046093*^9}, {
+   3.7051569682658367`*^9, 3.705156987346167*^9}, {3.705157027887396*^9, 
+   3.705157051584186*^9}, {3.7051570822703257`*^9, 3.7051572139265423`*^9}, {
+   3.705157296913506*^9, 3.705157330150762*^9}, 3.705157380578437*^9, {
+   3.705157465934794*^9, 3.705157511550267*^9}, {3.705157551977054*^9, 
+   3.705157553894511*^9}, {3.70515762155831*^9, 3.7051576501174726`*^9}, {
+   3.705157691010318*^9, 3.705157709710059*^9}, {3.705157745984137*^9, 
+   3.70515782930219*^9}, {3.705157863881531*^9, 3.705157886477714*^9}, {
+   3.705157921877249*^9, 3.705157949301839*^9}, {3.705158004065539*^9, 
+   3.7051580439261827`*^9}, 3.705158078761437*^9, {3.705160511230427*^9, 
+   3.705160557142212*^9}, {3.7051605935213737`*^9, 3.7051606107735863`*^9}, {
+   3.705160644999898*^9, 3.705160655678226*^9}, {3.705160686545539*^9, 
+   3.7051607088537207`*^9}, {3.705160739289364*^9, 3.70516076323804*^9}, 
+   3.705160794241323*^9, {3.705161806152966*^9, 3.705162244572975*^9}, {
+   3.705162278764258*^9, 3.705162282069688*^9}, {3.705162316939032*^9, 
+   3.705162379300462*^9}, {3.705162409644373*^9, 3.705162461236171*^9}, {
+   3.705162493163988*^9, 3.7051625921330633`*^9}, {3.705162635243815*^9, 
+   3.705162637581533*^9}, {3.705162674628854*^9, 3.705162676389752*^9}, {
+   3.705163279044742*^9, 3.705163291371435*^9}, {3.705163323763071*^9, 
+   3.7051633256846046`*^9}, {3.705163360666807*^9, 3.705163412163863*^9}, {
+   3.7051634451222267`*^9, 3.705163497123*^9}, {3.7051635380283422`*^9, 
+   3.705163538944529*^9}, {3.705163581731798*^9, 3.705163600562862*^9}, {
+   3.7051636382345047`*^9, 3.705163715212517*^9}, {3.705163931419232*^9, 
+   3.705163952645707*^9}, {3.705164055689793*^9, 3.7051640995596952`*^9}, {
+   3.705164152339819*^9, 3.705164187739828*^9}, {3.705164218914365*^9, 
+   3.705164267299651*^9}, {3.705164327003227*^9, 3.705164366866529*^9}, {
+   3.705164414002915*^9, 3.705164451107026*^9}, {3.705164481458988*^9, 
+   3.7051644834839087`*^9}, {3.705164593515129*^9, 3.705164636042461*^9}, {
+   3.705164669660368*^9, 3.705164698891178*^9}, {3.7051647312835617`*^9, 
+   3.7051647593320704`*^9}, {3.7051648139479094`*^9, 
+   3.7051648234268627`*^9}, {3.705164882500671*^9, 3.7051648859708557`*^9}, {
+   3.705164946106739*^9, 3.705164983586501*^9}, {3.705165023827858*^9, 
+   3.7051650815014467`*^9}, {3.705165157804248*^9, 3.7051651591843863`*^9}, {
+   3.705165260092334*^9, 3.705165296843299*^9}, {3.705165345652104*^9, 
+   3.705165463818924*^9}, {3.705165522695489*^9, 3.705165524875718*^9}, {
+   3.705165571019227*^9, 3.7051656230036087`*^9}, {3.70516565983629*^9, 
+   3.705165684619091*^9}, {3.70516572734251*^9, 3.705165804300127*^9}, {
+   3.705165839427102*^9, 3.7051658430199738`*^9}, {3.7051658757471447`*^9, 
+   3.705165988547257*^9}, {3.7051660289725657`*^9, 3.705166058835443*^9}, {
+   3.705166103851212*^9, 3.705166122763891*^9}, {3.705166162427477*^9, 
+   3.7051663280986557`*^9}, {3.705166367501747*^9, 3.7051664428450413`*^9}, {
+   3.705166500933853*^9, 3.7051665039640427`*^9}, 3.70516653442829*^9, {
+   3.705166583836198*^9, 
+   3.705166628523706*^9}},ExpressionUUID->"5b9c019b-63d4-456c-8a0c-\
+ea214fd8adaf"]
+},
+WindowSize->{1900, 1254},
+WindowMargins->{{5, Automatic}, {68, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 55597, 1206, 2280, "Input",ExpressionUUID->"5b9c019b-63d4-456c-8a0c-ea214fd8adaf"]
+}
+]
+*)
+

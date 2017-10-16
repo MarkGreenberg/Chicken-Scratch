@@ -1,0 +1,1003 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     46018,        995]
+NotebookOptionsPosition[     45702,        981]
+NotebookOutlinePosition[     46062,        997]
+CellTagsIndexPosition[     46019,        994]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"<|", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"\"\<American Civil War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 12 Apr 1861\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1861", ",", "4", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 9 May 1865\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1865", ",", "5", ",", "9"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<American Revolutionary War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 19 Apr 1775\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1775", ",", "4", ",", "19"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 3 Sep 1783\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1783", ",", "9", ",", "3"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Bay of Pigs Invasion\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 17 Apr 1961\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1961", ",", "4", ",", "17"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 20 Apr 1961\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1961", ",", "4", ",", "20"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Beaver Wars\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1628\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1628", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1629\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1629", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Boer War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 11 Oct 1899\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1899", ",", "10", ",", "11"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 31 May 1902\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1902", ",", "5", ",", "31"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Borneo Confrontation\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 20 Jan 1963\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1963", ",", "1", ",", "20"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 11 Aug 1966\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1966", ",", "8", ",", "11"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Boxer Rebellion\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Aug 1899\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1899", ",", "8"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sep 1901\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1901", ",", "9"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Bruce Campaign in Ireland\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1315\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1315", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1318\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1318", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Crimean War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Oct 1853\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1853", ",", "10"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 30 Mar 1856\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1856", ",", "3", ",", "30"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Crusades\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1096\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1096", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1456\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1456", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Falklands War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 2 Apr 1982\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1982", ",", "4", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 14 Jun 1982\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1982", ",", "6", ",", "14"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<First Punic War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"-264\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "264"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"-241\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "241"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<First Sino-Japanese War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 1 Aug 1894\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1894", ",", "8", ",", "1"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 17 Apr 1895\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1895", ",", "4", ",", "17"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Flower War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1446\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1446", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1502\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1502", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<French and Indian Wars\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1688\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1688", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1763\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1763", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Gallic Wars\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"-58\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "58"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"-50\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "50"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Genpei War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1180\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1180", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1185\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1185", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Great Saxon Revolt\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1077\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1077", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1088\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1088", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Gulf War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 2 Aug 1990\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1990", ",", "8", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 28 Feb 1991\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1991", ",", "2", ",", "28"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Hook and Cod Wars\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1350\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1350", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1490\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1490", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Hundred Years' War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1337\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1337", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1453\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1453", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Hunger War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1414\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1414", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1415\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1415", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Invasion of Grenada\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 25 Oct 1983\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1983", ",", "10", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 15 Dec 1983\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1983", ",", "12", ",", "15"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Israeli War of Independence\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 30 Nov 1947\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1947", ",", "11", ",", "30"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 20 Jul 1949\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1949", ",", "7", ",", "20"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Korean War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 25 Jun 1950\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1950", ",", "6", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 27 Jul 1953\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1953", ",", "7", ",", "27"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Loon War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1203\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1203", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1206\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1206", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Malayan Emergency\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 16 Jun 1948\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1948", ",", "6", ",", "16"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 12 Jul 1960\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1960", ",", "7", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Manx Revolt\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1275\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1275", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1276\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1276", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Mexican-American War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 25 Apr 1846\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1846", ",", "4", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 3 Feb 1848\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1848", ",", "2", ",", "3"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Mexican War of Independence\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 16 Sep 1810\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1810", ",", "9", ",", "16"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 27 Sep 1821\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1821", ",", "9", ",", "27"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Napoleanic Wars\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 18 May 1803\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1803", ",", "5", ",", "18"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 20 Nov 1815\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1815", ",", "11", ",", "20"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Norman Conquest of England\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1066\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1066", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1072\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1072", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Peloponnesian War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"-431\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "431"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 25 Apr -404\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "404"}], ",", "4", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Red Turban Rebellion\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1351\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1351", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1368\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1368", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Russian Civil War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1819\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1819", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1825\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1825", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Scottish-Norwegian War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1262\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1262", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1266\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1266", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Second Punic War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"-218\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "218"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"-201\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "201"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Second Sino-Japanese War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 7 Jul 1937\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1937", ",", "7", ",", "7"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 9 Sep 1945\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1945", ",", "9", ",", "9"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Six-Day War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 5 Jun 1967\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1967", ",", "6", ",", "5"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 10 Jun 1967\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1967", ",", "6", ",", "10"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Ten Year's War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 10 Oct 1868\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1868", ",", "10", ",", "10"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1878\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1878", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Third Punic War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"-149\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "149"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"-146\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"-", "146"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Vietnam War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{
+                 RowBox[{"\"Tue 1 Nov 1955\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1955", ",", "11", ",", "1"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 30 Apr 1975\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1975", ",", "4", ",", "30"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<War of Antiochene Succession\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1201\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1201", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1219\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1219", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<War of 1812\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 18 Jun 1812\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1812", ",", "6", ",", "18"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 18 Feb 1815\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1815", ",", "2", ",", "18"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<War of the Roses\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1455\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1455", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1485\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1485", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<War of the Three Sanchos\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"1065\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1065", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"1067\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1067", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<World War I\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 28 Jul 1914\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1914", ",", "7", ",", "28"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 11 Nov 1918\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1918", ",", "11", ",", "11"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<World War II\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 1 Sep 1939\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1939", ",", "9", ",", "1"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 2 Sep 1945\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1945", ",", "9", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Yamato-Goguryeo War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{RowBox[{"\"391\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "391", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{RowBox[{"\"404\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "404", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Yom Kippur War\>\"", "\[Rule]", 
+             RowBox[{"Interval", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 6 Oct 1973\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1973", ",", "10", ",", "6"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False], ",", 
+                TemplateBox[{
+                 RowBox[{"\"Thu 25 Oct 1973\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1973", ",", "10", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], "]"}]}]}], "\[IndentingNewLine]", 
+           "|>"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"TimelinePlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Values", "[", "data", "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"2", ";;", "4"}], "]"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"Values", "[", "data", "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], "}"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"Gray", ",", "Blue"}], "}"}]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", "960", "}"}]}], ",", 
+          RowBox[{"GridLines", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"Automatic", ",", "None"}], "}"}]}], ",", 
+          RowBox[{"PlotMarkers", "\[Rule]", "\"\<Filled\>\""}], ",", 
+          RowBox[{"LabelStyle", "\[Rule]", 
+           RowBox[{"Directive", "[", 
+            RowBox[{"FontSize", "\[Rule]", "15"}], "]"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<The graph shows the time spans of these four wars. Which war is \
+represented in blue?\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Hist10\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.703945157692212*^9, 3.70394515845714*^9}, {
+   3.7039452804385567`*^9, 3.703945300788515*^9}, {3.703945335655037*^9, 
+   3.703945336021562*^9}, {3.704465226314361*^9, 3.704465266301272*^9}, 
+   3.704466370305228*^9, {3.70446642872862*^9, 3.704466437453474*^9}, {
+   3.704466513099451*^9, 3.704466547683476*^9}, {3.704466578462811*^9, 
+   3.7044666667466707`*^9}, {3.704466733417283*^9, 3.704466750017393*^9}, {
+   3.704466804329761*^9, 3.7044668111534023`*^9}, {3.704467072673139*^9, 
+   3.704467127456423*^9}, 3.7044671941578627`*^9, {3.704467226012455*^9, 
+   3.70446732798354*^9}, {3.704467519320098*^9, 3.7044675718061132`*^9}, {
+   3.704467667992074*^9, 3.704467778287098*^9}, 3.704467828264742*^9, {
+   3.7044678592473803`*^9, 3.704467864374943*^9}, {3.704468056246603*^9, 
+   3.704468108535943*^9}, {3.7044682753021727`*^9, 3.704468297084148*^9}, 
+   3.704468369990507*^9, {3.704468405349764*^9, 3.7044684143084297`*^9}, {
+   3.704468446766014*^9, 3.7044684757480383`*^9}, {3.704468589622189*^9, 
+   3.704468598080418*^9}, {3.704468640406459*^9, 3.7044686464366693`*^9}, {
+   3.704468683964468*^9, 3.704468701643813*^9}, {3.7044687470944557`*^9, 
+   3.704468749124525*^9}, {3.704468785302351*^9, 3.704468812113903*^9}, {
+   3.7044688554672947`*^9, 3.7044688771861467`*^9}, {3.704472833177166*^9, 
+   3.7044728653160667`*^9}, {3.7044729094633083`*^9, 3.704472934158103*^9}, {
+   3.704473219879149*^9, 3.7044732244130793`*^9}, {3.704473282464183*^9, 
+   3.704473310040277*^9}, {3.704473340926103*^9, 3.704473344685755*^9}, {
+   3.7044733851749687`*^9, 3.704473411492807*^9}, {3.704473467255571*^9, 
+   3.704473469389853*^9}, 3.704473510382806*^9, {3.7044736254936666`*^9, 
+   3.7044736625082293`*^9}, {3.704473706103104*^9, 3.7044737082533417`*^9}, 
+   3.70447374736726*^9, {3.704477022539089*^9, 3.70447711540902*^9}, {
+   3.704477166035843*^9, 3.704477229745902*^9}, {3.704477334360216*^9, 
+   3.7044774101635838`*^9}, {3.704487348380814*^9, 3.704487372476696*^9}, {
+   3.704487448783428*^9, 3.704487465607403*^9}, {3.704487509580432*^9, 
+   3.7044875881169043`*^9}, {3.7044876449493427`*^9, 3.704487662043456*^9}, {
+   3.7044876936543093`*^9, 3.704487729414074*^9}, {3.704487761412282*^9, 
+   3.704487789515387*^9}, {3.704487841263208*^9, 3.704487842996736*^9}, 
+   3.704487875806233*^9, {3.704487905956643*^9, 3.704487926162875*^9}, {
+   3.704487960330098*^9, 3.7044879617174883`*^9}, 3.704488011367062*^9, {
+   3.704488062791622*^9, 3.704488069222576*^9}, {3.704488103102844*^9, 
+   3.7044881607659483`*^9}, {3.704488267779456*^9, 3.704488289931143*^9}, {
+   3.7044883683444157`*^9, 3.704488416916854*^9}, {3.704488487987461*^9, 
+   3.7044885130654917`*^9}, {3.704488559668771*^9, 3.704488586861161*^9}, {
+   3.704488627596047*^9, 3.704488653009467*^9}, 3.704488691260927*^9, {
+   3.7044887256836452`*^9, 3.7044887876560097`*^9}, {3.704488818548326*^9, 
+   3.704488820866473*^9}, {3.704488870994761*^9, 3.704488936628645*^9}, {
+   3.704489017682279*^9, 3.704489066419989*^9}, {3.704528544438491*^9, 
+   3.704528624414002*^9}, {3.704528703678391*^9, 3.704528729452305*^9}, {
+   3.704528760215493*^9, 3.704528762733547*^9}, 3.7045287982277117`*^9, {
+   3.7045423393739567`*^9, 3.704542360571076*^9}, {3.704542404150525*^9, 
+   3.704542405988304*^9}, 3.7045424542790117`*^9, {3.7045425432200527`*^9, 
+   3.704542561146655*^9}, {3.704542601137158*^9, 3.704542602963942*^9}, 
+   3.7045426435907307`*^9, {3.704542716780612*^9, 3.704542738625977*^9}, {
+   3.70454284965982*^9, 3.704542853388332*^9}, 3.704542884821835*^9, {
+   3.7045429548122053`*^9, 3.704543021940686*^9}, {3.7045431023550158`*^9, 
+   3.704543129832822*^9}, {3.704543212108585*^9, 3.7045432142662687`*^9}, 
+   3.704543259172798*^9, {3.704543304826147*^9, 3.704543328944578*^9}, 
+   3.704543392748131*^9, {3.7045434329146767`*^9, 3.7045434336018476`*^9}, {
+   3.704543467970491*^9, 3.7045434861286373`*^9}, 3.704543563347218*^9, {
+   3.704543599081586*^9, 3.704543599641449*^9}, {3.704543701009989*^9, 
+   3.7045437369283257`*^9}, {3.7045437926910667`*^9, 3.704543811067428*^9}, {
+   3.704543865649658*^9, 3.704543972338704*^9}, {3.704544073400779*^9, 
+   3.704544105591166*^9}, 3.704544169746418*^9, {3.7045442289205847`*^9, 
+   3.704544229512747*^9}, {3.704544303927229*^9, 3.7045443265180407`*^9}, {
+   3.704544384105468*^9, 3.704544413736226*^9}, {3.7045445620630407`*^9, 
+   3.704544587589493*^9}, {3.7045446991932993`*^9, 3.704544701654334*^9}, 
+   3.7045447441137238`*^9, {3.7045448361592083`*^9, 3.7045448628528223`*^9}, {
+   3.704545007296761*^9, 3.70454500885301*^9}, 3.704545055318982*^9, {
+   3.7045462326009073`*^9, 3.704546257583839*^9}, {3.704546288427598*^9, 
+   3.704546309380348*^9}, {3.704546354736699*^9, 3.704546385515992*^9}, {
+   3.7045465569288397`*^9, 3.7045465962963333`*^9}, {3.704546837822832*^9, 
+   3.704546861597239*^9}, 3.7045468941519547`*^9, {3.704546940726448*^9, 
+   3.704546941186405*^9}, {3.704547014765036*^9, 3.704547038268256*^9}, 
+   3.704547077319541*^9, {3.7045471165102453`*^9, 3.7045471186056147`*^9}, {
+   3.7045472863088617`*^9, 3.704547310267459*^9}, 3.704547387566926*^9, {
+   3.704547420612755*^9, 3.704547421414164*^9}, {3.7045474898448343`*^9, 
+   3.704547508426928*^9}, 3.7045475419273148`*^9, {3.7045475727974586`*^9, 
+   3.704547573540476*^9}, {3.704547738667869*^9, 3.7045477601947937`*^9}, {
+   3.704547805958119*^9, 3.704547822158119*^9}, {3.704547856403184*^9, 
+   3.704547880586096*^9}, {3.7045479112861843`*^9, 3.704547939390031*^9}, {
+   3.7045480043798923`*^9, 3.704548031777767*^9}, {3.7045480797177887`*^9, 
+   3.70454809907832*^9}, {3.70454815114717*^9, 3.704548172579624*^9}, {
+   3.7045482202862587`*^9, 3.704548235731887*^9}, {3.704548339522715*^9, 
+   3.704548367922327*^9}, {3.704548397965564*^9, 3.704548413827407*^9}, {
+   3.704548453651743*^9, 3.7045484735766487`*^9}, {3.704548528704845*^9, 
+   3.704548570276371*^9}, {3.704548612187055*^9, 3.7045486566081467`*^9}, {
+   3.7045487113725*^9, 3.704548738970846*^9}, {3.704548800266385*^9, 
+   3.704548820992196*^9}, {3.704548851877255*^9, 3.7045489684419394`*^9}, {
+   3.704549117833486*^9, 3.704549134495554*^9}, {3.704549196355009*^9, 
+   3.704549221641913*^9}, {3.704549262184668*^9, 3.704549285951304*^9}, {
+   3.704549342679006*^9, 3.704549366651483*^9}, {3.704549485976787*^9, 
+   3.704549505070423*^9}, 3.70454955977037*^9, {3.704549605000506*^9, 
+   3.704549605497436*^9}, {3.7045497818558702`*^9, 3.7045497835717373`*^9}, {
+   3.704553508793723*^9, 3.7045535104482613`*^9}, {3.70455354792315*^9, 
+   3.704553565591372*^9}},ExpressionUUID->"0bff55dc-3f9e-4ad8-a078-\
+54e209e50298"]
+},
+WindowSize->{1720, 1246},
+WindowMargins->{{7, Automatic}, {Automatic, 72}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 45140, 959, 1859, "Input",ExpressionUUID->"0bff55dc-3f9e-4ad8-a078-54e209e50298"]
+}
+]
+*)
+
