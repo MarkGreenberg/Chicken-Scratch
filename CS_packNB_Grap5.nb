@@ -1,0 +1,823 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     39443,        815]
+NotebookOptionsPosition[     39125,        801]
+NotebookOutlinePosition[     39487,        817]
+CellTagsIndexPosition[     39444,        814]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"\"\<Alabama\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Alexander City\>\"", ",", "\"\<Brookside\>\"", ",", 
+               "\"\<Childersburg\>\"", ",", "\"\<Dadeville\>\"", ",", 
+               "\"\<Double Springs\>\"", ",", "\"\<Livingston\>\"", ",", 
+               "\"\<Winfield\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Alaska\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Anchorage\>\"", ",", "\"\<Fairbanks\>\"", ",", 
+               "\"\<Juneau\>\"", ",", "\"\<Kodiak\>\"", ",", "\"\<Barrow\>\"",
+                ",", "\"\<Cordova\>\"", ",", "\"\<King Cove\>\""}], "}"}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Arizona\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Scottsdale\>\"", ",", "\"\<Paradise Valley\>\"", ",", 
+               "\"\<Pinetop\>\"", ",", "\"\<Yuma\>\"", ",", "\"\<Chinle\>\"", 
+               ",", "\"\<Showlow\>\"", ",", "\"\<Bullhead City\>\""}], 
+              "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Arkansas\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Little Rock\>\"", ",", "\"\<Conway\>\"", ",", 
+               "\"\<Texarkana\>\"", ",", "\"\<Bella Vista\>\"", ",", 
+               "\"\<Forrest City\>\"", ",", "\"\<Greenwood\>\"", ",", 
+               "\"\<Mena\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<California\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<San Diego\>\"", ",", "\"\<Los Angeles\>\"", ",", 
+               "\"\<Lodi\>\"", ",", "\"\<Brea\>\"", ",", "\"\<Calexico\>\"", 
+               ",", "\"\<Larkspur\>\"", ",", "\"\<Mammoth Lakes\>\""}], 
+              "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Colorado\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Holyoke\>\"", ",", "\"\<Littleton\>\"", ",", 
+               "\"\<Parker\>\"", ",", "\"\<Pueblo\>\"", ",", 
+               "\"\<Steamboat Springs\>\"", ",", "\"\<Westminster\>\"", ",", 
+               "\"\<Thornton\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Connecticut\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Bristol\>\"", ",", "\"\<Hartford\>\"", ",", 
+               "\"\<Middletown\>\"", ",", "\"\<West Haven\>\"", ",", 
+               "\"\<Shelton\>\"", ",", "\"\<Milford\>\"", ",", 
+               "\"\<Norwalk\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Delaware\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Dover\>\"", ",", "\"\<Elsmere\>\"", ",", 
+               "\"\<Selbyville\>\"", ",", "\"\<Ocean View\>\"", ",", 
+               "\"\<Smyrna\>\"", ",", "\"\<Middletown\>\"", ",", 
+               "\"\<Bethany Beach\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Florida\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Apopka\>\"", ",", "\"\<Boca Raton\>\"", ",", 
+               "\"\<Clermont\>\"", ",", "\"\<Malabar\>\"", ",", 
+               "\"\<South Palm Beach\>\"", ",", "\"\<Tampa\>\"", ",", 
+               "\"\<Wildwood\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Georgia\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Alma\>\"", ",", "\"\<Baxley\>\"", ",", 
+               "\"\<College Park\>\"", ",", "\"\<Crawfordville\>\"", ",", 
+               "\"\<Johns Creek\>\"", ",", "\"\<Newnan\>\"", ",", 
+               "\"\<Powder Springs\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Hawaii\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Honolulu\>\"", ",", "\"\<Hilo\>\"", ",", "\"\<Kapaa\>\"", 
+               ",", "\"\<Wailea\>\"", ",", "\"\<Puhi\>\"", ",", 
+               "\"\<Pukalani\>\"", ",", "\"\<Kailua\>\""}], "}"}]}], "}"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Idaho\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Meridian\>\"", ",", "\"\<Pocatello\>\"", ",", 
+               "\"\<Sandpoint\>\"", ",", "\"\<St. Anthony\>\"", ",", 
+               "\"\<Homedale\>\"", ",", "\"\<Preston\>\"", ",", 
+               "\"\<Blackfoot\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Illinois\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Collinsville\>\"", ",", "\"\<Des Plaines\>\"", ",", 
+               "\"\<McHenry\>\"", ",", "\"\<Oneida\>\"", ",", 
+               "\"\<Spring Valley\>\"", ",", "\"\<WarrenVille\>\"", ",", 
+               "\"\<Zion\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Indiana\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Fort Wayne\>\"", ",", "\"\<Lafayette\>\"", ",", 
+               "\"\<Elkhart\>\"", ",", "\"\<Elkwood\>\"", ",", 
+               "\"\<Rushville\>\"", ",", "\"\<Delphi\>\"", ",", 
+               "\"\<Oakland City\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Iowa\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ackley\>\"", ",", "\"\<Burlington\>\"", ",", 
+               "\"\<Charles City\>\"", ",", "\"\<Eagle Grove\>\"", ",", 
+               "\"\<Farmington\>\"", ",", "\"\<Mechanicsville\>\"", ",", 
+               "\"\<Osage\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           
+           RowBox[{"{", 
+            RowBox[{"\"\<Kansas\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Overland Park\>\"", ",", "\"\<Topeka\>\"", ",", 
+               "\"\<Prairie Village\>\"", ",", "\"\<Mission\>\"", ",", 
+               "\"\<Roeland Park\>\"", ",", "\"\<Bonner Springs\>\"", ",", 
+               "\"\<Parsons\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Kentucky\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Anchorage\>\"", ",", "\"\<Brandenburg\>\"", ",", 
+               "\"\<Erlanger\>\"", ",", "\"\<Fulton\>\"", ",", 
+               "\"\<Indian Hills\>\"", ",", "\"\<Middlesboro\>\"", ",", 
+               "\"\<St. Matthews\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Louisiana\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Baker\>\"", ",", "\"\<Golden Meadow\>\"", ",", 
+               "\"\<Marksville\>\"", ",", "\"\<Rayne\>\"", ",", 
+               "\"\<Simmesport\>\"", ",", "\"\<Youngsville\>\"", ",", 
+               "\"\<White Castle\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Maine\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Caribou\>\"", ",", "\"\<Augusta\>\"", ",", "\"\<Saco\>\"", 
+               ",", "\"\<Eastport\>\"", ",", "\"\<Gardiner\>\"", ",", 
+               "\"\<Ellsworth\>\"", ",", "\"\<Bath\>\""}], "}"}]}], "}"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Maryland\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Baltimore\>\"", ",", "\"\<Bel Air\>\"", ",", 
+               "\"\<Crisfield\>\"", ",", "\"\<Emmitsburg\>\"", ",", 
+               "\"\<Mount Rainier\>\"", ",", "\"\<Sykesville\>\"", ",", 
+               "\"\<Williamsport\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Massachusetts\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Billerica\>\"", ",", "\"\<Dennis\>\"", ",", 
+               "\"\<East Longmeadow\>\"", ",", "\"\<Holden\>\"", ",", 
+               "\"\<Lee\>\"", ",", "\"\<Nantucket\>\"", ",", 
+               "\"\<Springfield\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Michigan\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Albion\>\"", ",", "\"\<Chelsea\>\"", ",", 
+               "\"\<Grand Haven\>\"", ",", "\"\<Hancock\>\"", ",", 
+               "\"\<Hastings\>\"", ",", "\"\<South Lyon\>\"", ",", 
+               "\"\<Sparta\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Minnesota\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Minneapolis\>\"", ",", "\"\<Eden Prairie\>\"", ",", 
+               "\"\<Winona\>\"", ",", "\"\<Lino Lakes\>\"", ",", 
+               "\"\<Litchfield\>\"", ",", "\"\<Corcoran\>\"", ",", 
+               "\"\<Granite Falls\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Mississippi\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Beaumont\>\"", ",", "\"\<Biloxi\>\"", ",", 
+               "\"\<Forest\>\"", ",", "\"\<Greenville\>\"", ",", 
+               "\"\<Richland\>\"", ",", "\"\<Starkville\>\"", ",", 
+               "\"\<Water Valley\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Missouri\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<St. Louis\>\"", ",", "\"\<St. Peters\>\"", ",", 
+               "\"\<Joplin\>\"", ",", "\"\<Ballwin\>\"", ",", "\"\<Ladue\>\"",
+                ",", "\"\<Maplewood\>\"", ",", "\"\<Sullivan\>\""}], "}"}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Montana\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Billings\>\"", ",", "\"\<Glasgow\>\"", ",", 
+               "\"\<Havre\>\"", ",", "\"\<Roundup\>\"", ",", 
+               "\"\<Whitefish\>\"", ",", "\"\<Superior\>\""}], "}"}]}], "}"}],
+            ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Nebraska\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Lincoln\>\"", ",", "\"\<Scottsbluff\>\"", ",", 
+               "\"\<Seward\>\"", ",", "\"\<Falls City\>\"", ",", 
+               "\"\<Broken Bow\>\"", ",", "\"\<Valentine\>\"", ",", 
+               "\"\<Papillion\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Nevada\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Las Vegas\>\"", ",", "\"\<Boulder City\>\"", ",", 
+               "\"\<Elko\>\"", ",", "\"\<Henderson\>\"", ",", 
+               "\"\<Mesquite\>\"", ",", "\"\<West Wendover\>\"", ",", 
+               "\"\<Yerington\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<New Hampshire\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Barrington\>\"", ",", "\"\<Berlin\>\"", ",", 
+               "\"\<Hollis\>\"", ",", "\"\<Londonderry\>\"", ",", 
+               "\"\<Manchester\>\"", ",", "\"\<New Ipswich\>\"", ",", 
+               "\"\<Tuftonboro\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<New Jersey\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Jersey City\>\"", ",", "\"\<Cherry Hill\>\"", ",", 
+               "\"\<Gloucester Township\>\"", ",", "\"\<Bayonne\>\"", ",", 
+               "\"\<Mantua\>\"", ",", "\"\<Harrison\>\"", ",", 
+               "\"\<Hainesport\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<New Mexico\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Alamogordo\>\"", ",", "\"\<Corrales\>\"", ",", 
+               "\"\<Silver City\>\"", ",", "\"\<Taos\>\"", ",", 
+               "\"\<Tularosa\>\"", ",", "\"\<Pecos\>\"", ",", 
+               "\"\<Espanola\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<New York State\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Amsterdam\>\"", ",", "\"\<Albany\>\"", ",", 
+               "\"\<Watertown\>\"", ",", "\"\<Syracuse\>\"", ",", 
+               "\"\<Rome\>\"", ",", "\"\<Poughkeepsie\>\"", ",", 
+               "\"\<Lockport\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<North Carolina\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Winston-Salem\>\"", ",", "\"\<Asheville\>\"", ",", 
+               "\"\<Kannapolis\>\"", ",", "\"\<Goldsboro\>\"", ",", 
+               "\"\<Havelock\>\"", ",", "\"\<Boone\>\"", ",", 
+               "\"\<Lexington\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<North Dakota\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Fargo\>\"", ",", "\"\<Minot\>\"", ",", 
+               "\"\<Devils Lake\>\"", ",", "\"\<Bottineau\>\"", ",", 
+               "\"\<Garrison\>\"", ",", "\"\<New Rockford\>\"", ",", 
+               "\"\<Mandan\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Ohio\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Avon Lake\>\"", ",", "\"\<Beavercreek\>\"", ",", 
+               "\"\<Euclid\>\"", ",", "\"\<Oxford\>\"", ",", 
+               "\"\<Pepper Pike\>\"", ",", "\"\<Salem\>\"", ",", 
+               "\"\<Tipp City\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Oklahoma\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Tulsa\>\"", ",", "\"\<Enid\>\"", ",", "\"\<Ardmore\>\"", 
+               ",", "\"\<Ada\>\"", ",", "\"\<Chickasha\>\"", ",", 
+               "\"\<Woodward\>\"", ",", "\"\<Warr Acres\>\""}], "}"}]}], 
+            "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Oregon\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Eugene\>\"", ",", "\"\<Bend\>\"", ",", 
+               "\"\<Lake Oswego\>\"", ",", "\"\<Redmond\>\"", ",", 
+               "\"\<Independence\>\"", ",", "\"\<Eagle Point\>\"", ",", 
+               "\"\<Seaside\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Pennsylvania\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Corry\>\"", ",", "\"\<Johnstown\>\"", ",", 
+               "\"\<New Kensington\>\"", ",", "\"\<Philadelphia\>\"", ",", 
+               "\"\<Sharon\>\"", ",", "\"\<York\>\"", ",", 
+               "\"\<Jeannette\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Rhode Island\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Burrillville\>\"", ",", "\"\<Newport\>\"", ",", 
+               "\"\<Pawtucket\>\"", ",", "\"\<West Greenwich\>\"", ",", 
+               "\"\<Warren\>\"", ",", "\"\<Foster\>\"", ",", 
+               "\"\<Cumberland\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<South Carolina\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Bluffton\>\"", ",", "\"\<Branchville\>\"", ",", 
+               "\"\<Darlington\>\"", ",", "\"\<Forest Acres\>\"", ",", 
+               "\"\<Georgetown\>\"", ",", "\"\<Pickens\>\"", ",", 
+               "\"\<Rock Hill\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<South Dakota\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Sioux Falls\>\"", ",", "\"\<Box Elder\>\"", ",", 
+               "\"\<Pierre\>\"", ",", "\"\<Hot Springs\>\"", ",", 
+               "\"\<Flandreau\>\"", ",", "\"\<Summerset\>\"", ",", 
+               "\"\<Yankton\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Tennessee\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Alcoa\>\"", ",", "\"\<Berry Hill\>\"", ",", 
+               "\"\<Crossville\>\"", ",", "\"\<Erin\>\"", ",", 
+               "\"\<Hohenwald\>\"", ",", "\"\<Morristown\>\"", ",", 
+               "\"\<Oak Ridge\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Texas\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Abilene\>\"", ",", "\"\<Bevil Oaks\>\"", ",", 
+               "\"\<Brady\>\"", ",", "\"\<Dallas\>\"", ",", "\"\<Odessa\>\"", 
+               ",", "\"\<Pecos\>\"", ",", "\"\<Rockport\>\""}], "}"}]}], "}"}]
+            , ",", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Utah\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<American Fork\>\"", ",", "\"\<Big Water\>\"", ",", 
+               "\"\<Eagle Mountain\>\"", ",", "\"\<Kanab\>\"", ",", 
+               "\"\<Salt Lake City\>\"", ",", "\"\<West Jordan\>\"", ",", 
+               "\"\<Tremonton\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Vermont\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Burlington\>\"", ",", "\"\<Rutland\>\"", ",", 
+               "\"\<Barre\>\"", ",", "\"\<Montpelier\>\"", ",", 
+               "\"\<Winooski\>\"", ",", "\"\<St. Albans\>\"", ",", 
+               "\"\<Vergennes\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Virginia\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Virginia Beach\>\"", ",", "\"\<Hampton\>\"", ",", 
+               "\"\<Charlottesville\>\"", ",", "\"\<Hopewell\>\"", ",", 
+               "\"\<Manassas Park\>\"", ",", "\"\<Galax\>\"", ",", 
+               "\"\<Covington\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Washington\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Black Diamond\>\"", ",", "\"\<Cosmopolis\>\"", ",", 
+               "\"\<Kirkland\>\"", ",", "\"\<Forks\>\"", ",", 
+               "\"\<Issaquah\>\"", ",", "\"\<Olympia\>\"", ",", 
+               "\"\<Puyallup\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<West Virginia\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Huntington\>\"", ",", "\"\<Clarksburg\>\"", ",", 
+               "\"\<Bluefield\>\"", ",", "\"\<Wheeling\>\"", ",", 
+               "\"\<New Martinsville\>\"", ",", "\"\<Weston\>\"", ",", 
+               "\"\<Paden City\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Wisconsin\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Baraboo\>\"", ",", "\"\<Black River Falls\>\"", ",", 
+               "\"\<Elkhorn\>\"", ",", "\"\<Pewaukee\>\"", ",", 
+               "\"\<St. Francis\>\"", ",", "\"\<Watertown\>\"", ",", 
+               "\"\<Whitewater\>\""}], "}"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{"\"\<Wyoming\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Basin\>\"", ",", "\"\<Casper\>\"", ",", "\"\<Laramie\>\"", 
+               ",", "\"\<Lovell\>\"", ",", "\"\<Thermopolis\>\"", ",", 
+               "\"\<Worland\>\"", ",", "\"\<Greybull\>\""}], "}"}]}], "}"}]}],
+           "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"state", "=", 
+        RowBox[{"data", "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"city", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"Rasterize", "[", 
+           RowBox[{
+            RowBox[{"PieChart", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"ciHiToLow", ",", "stHiToLow", ",", "usHiToLow"}], 
+               "}"}], ",", 
+              RowBox[{"PlotLabel", "\[Rule]", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{
+                 "\"\<Educational Attainment,\\n\>\"", "<>", "h2", "<>", 
+                  "\"\<, \>\"", "<>", "h1"}], ",", "22", ",", "Bold"}], 
+                "]"}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"ChartLegends", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Master's+\>\"", ",", "\"\<AA or BA\>\"", ",", 
+                 "\"\<some college\>\"", ",", "\"\<HS diploma\>\"", ",", 
+                 "\"\<attended HS\>\"", ",", "\"\<K-8\>\"", ",", 
+                 "\"\<none\>\""}], "}"}]}], ",", 
+              RowBox[{"ImageSize", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", "480", "}"}], ",", 
+                 RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "state"}], ",", 
+           RowBox[{"h2", "\[Rule]", "city"}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"usRawData", "=", 
+            RowBox[{
+             RowBox[{"WolframAlpha", "[", 
+              RowBox[{"\"\<UnitedStates, education\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"\"\<EducationAttainment:ACSData\>\"", ",", "1"}], 
+                  "}"}], ",", "\"\<ComputableData\>\""}], "}"}]}], "]"}], "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"usHiToLow", "=", 
+            RowBox[{"Reverse", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}], "&"}], "/@", 
+              RowBox[{"Drop", "[", 
+               RowBox[{"usRawData", ",", "1"}], "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"usPercent", "=", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"usHiToLow", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "+", 
+               RowBox[{"usHiToLow", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}], ")"}], "/", 
+             RowBox[{"Total", "[", "usHiToLow", "]"}]}]}], ";", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"stRawData", "=", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"WolframAlpha", "[", 
+               RowBox[{
+                RowBox[{"h1", "<>", "\"\<United States, education\>\""}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"\"\<EducationAttainment:ACSData\>\"", ",", "1"}], 
+                   "}"}], ",", "\"\<ComputableData\>\""}], "}"}]}], "]"}], 
+              "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "/.", 
+             RowBox[{
+              RowBox[{"Null", "|", "\"\<\>\""}], "\[Rule]", "0"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"stHiToLow", "=", 
+            RowBox[{"Reverse", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}], "&"}], "/@", 
+              RowBox[{"Drop", "[", 
+               RowBox[{"stRawData", ",", "1"}], "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"ciRawData", "=", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"WolframAlpha", "[", 
+               RowBox[{
+                RowBox[{
+                "h2", "<>", "\"\<,\>\"", "<>", "h1", "<>", 
+                 "\"\<, education\>\""}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"\"\<EducationAttainment:ACSData\>\"", ",", "1"}], 
+                   "}"}], ",", "\"\<ComputableData\>\""}], "}"}]}], "]"}], 
+              "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "/.", 
+             RowBox[{
+              RowBox[{"Null", "|", "\"\<\>\""}], "\[Rule]", "0"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ciHiToLow", "=", 
+            RowBox[{"Reverse", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", 
+                 RowBox[{
+                  RowBox[{"-", "1"}], ",", "1"}], "]"}], "]"}], "&"}], "/@", 
+              RowBox[{"Drop", "[", 
+               RowBox[{"ciRawData", ",", "1"}], "]"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ciPercent", "=", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"ciHiToLow", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], "+", 
+               RowBox[{"ciHiToLow", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}], ")"}], "/", 
+             RowBox[{"Total", "[", "ciHiToLow", "]"}]}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"ansNo", "=", 
+            RowBox[{"usPercent", "-", "ciPercent"}]}], ";", 
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{
+             "\"\<Judging by the people with college degrees, the eduction \
+level of \>\"", "<>", "h2", "<>", "\"\< (inner pie), \>\"", "<>", "h1", "<>", 
+              "\"\< (middle ring), is _____ that of the United States (outer \
+ring).\>\""}], ",", "26"}], "]"}]}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "state"}], ",", 
+           RowBox[{"h2", "\[Rule]", "city"}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<much higher than\>\"", ",", "\"\<somewhat higher than\>\"", 
+          ",", "\"\<about the same as\>\"", ",", 
+          "\"\<significantly lower than\>\""}], "}"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{"Hold", "[", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Max", "[", 
+              RowBox[{"ansNo", ",", "0.03"}], "]"}], "\[Equal]", "ansNo"}], 
+            ",", 
+            RowBox[{"ansRep", "=", "4"}]}], "]"}], ";", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Max", "[", 
+               RowBox[{"ansNo", ",", 
+                RowBox[{"-", "0.02"}]}], "]"}], "\[Equal]", "ansNo"}], "&&", 
+             RowBox[{
+              RowBox[{"Max", "[", 
+               RowBox[{"ansNo", ",", "0.03"}], "]"}], "\[Equal]", "0.03"}]}], 
+            ",", 
+            RowBox[{"ansRep", "=", "3"}]}], "]"}], ";", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Max", "[", 
+               RowBox[{"ansNo", ",", 
+                RowBox[{"-", "0.1"}]}], "]"}], "\[Equal]", "ansNo"}], "&&", 
+             RowBox[{
+              RowBox[{"Max", "[", 
+               RowBox[{"ansNo", ",", 
+                RowBox[{"-", "0.02"}]}], "]"}], "\[Equal]", 
+              RowBox[{"-", "0.02"}]}]}], ",", 
+            RowBox[{"ansRep", "=", "2"}]}], "]"}], ";", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Max", "[", 
+              RowBox[{"ansNo", ",", 
+               RowBox[{"-", "0.1"}]}], "]"}], "\[Equal]", 
+             RowBox[{"-", "0.1"}]}], ",", 
+            RowBox[{"ansRep", "=", "1"}]}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Grap5\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6829542917818737`*^9, 3.682954374668746*^9}, {
+   3.68295443760254*^9, 3.682954488378427*^9}, {3.682954599392565*^9, 
+   3.6829546103044*^9}, {3.682954767297997*^9, 3.682954786741188*^9}, {
+   3.68295520605564*^9, 3.682955223529997*^9}, {3.682955484243247*^9, 
+   3.6829555252313433`*^9}, 3.6829562843702*^9, {3.682956399345784*^9, 
+   3.6829564331082487`*^9}, {3.682957211000613*^9, 3.682957228423361*^9}, {
+   3.682957733305586*^9, 3.682957739564043*^9}, {3.6829581403523808`*^9, 
+   3.682958157912396*^9}, {3.682958265519977*^9, 3.6829582796834927`*^9}, {
+   3.68295836790283*^9, 3.682958376180794*^9}, {3.682959151146277*^9, 
+   3.682959267326721*^9}, {3.6875219384864187`*^9, 3.687521939071186*^9}, {
+   3.6875220452010317`*^9, 3.687522274871896*^9}, {3.6875223436944847`*^9, 
+   3.687522473515362*^9}, {3.6875225203830347`*^9, 3.687522674973586*^9}, {
+   3.687522767659239*^9, 3.687522771083703*^9}, {3.6875228102946777`*^9, 
+   3.6875230220866203`*^9}, {3.687523107047667*^9, 3.687523132376369*^9}, {
+   3.687523173174062*^9, 3.687523193591091*^9}, {3.6875233029976597`*^9, 
+   3.687523428162159*^9}, {3.687523483054137*^9, 3.6875235421995296`*^9}, {
+   3.687523576513258*^9, 3.687523581401284*^9}, {3.687523615504764*^9, 
+   3.687523617232874*^9}, {3.687523701672804*^9, 3.687523798385363*^9}, {
+   3.687523858655223*^9, 3.687523964841773*^9}, {3.687524029048769*^9, 
+   3.6875241824603033`*^9}, {3.687524247363674*^9, 3.687524388630269*^9}, {
+   3.687524435748687*^9, 3.687524500374497*^9}, {3.687524531944106*^9, 
+   3.687524554929048*^9}, {3.6875245947603827`*^9, 3.687524597760561*^9}, {
+   3.68752464700708*^9, 3.687524737463163*^9}, {3.687524810959117*^9, 
+   3.68752487420855*^9}, {3.6875249075864897`*^9, 3.687524952145719*^9}, {
+   3.687524986015789*^9, 3.687525110265517*^9}, {3.687525173264875*^9, 
+   3.687525240378656*^9}, {3.6875252864049473`*^9, 3.687525290229004*^9}, {
+   3.6875253233879547`*^9, 3.6875253246918993`*^9}, {3.687525375618637*^9, 
+   3.6875254905157843`*^9}, {3.687525552971259*^9, 3.687525676252812*^9}, {
+   3.6875257233876457`*^9, 3.6875257627882853`*^9}, {3.687525813606583*^9, 
+   3.687525874158492*^9}, {3.687525923325364*^9, 3.6875259950698967`*^9}, {
+   3.687526050819481*^9, 3.6875261375504007`*^9}, {3.687526169839913*^9, 
+   3.687526172911965*^9}, {3.6875262035183687`*^9, 3.687526206606287*^9}, {
+   3.687526285663961*^9, 3.6875263928476887`*^9}, {3.6875264575193663`*^9, 
+   3.6875265947131147`*^9}, {3.6875266620493813`*^9, 3.687526786227084*^9}, {
+   3.687526837897978*^9, 3.687526910204205*^9}, {3.687526949837976*^9, 
+   3.6875269848602324`*^9}, {3.6875270523084373`*^9, 3.687527124932102*^9}, {
+   3.687527199707675*^9, 3.6875273164762087`*^9}, {3.687527363411778*^9, 
+   3.687527456786689*^9}, {3.68752935466716*^9, 3.6875294485621557`*^9}, {
+   3.687529525715254*^9, 3.687529645739581*^9}, {3.687529735709249*^9, 
+   3.6875298352565393`*^9}, {3.687529880695016*^9, 3.687529883999065*^9}, {
+   3.687529934493309*^9, 3.687530112057871*^9}, {3.6875301637775717`*^9, 
+   3.6875302554005423`*^9}, {3.6875303158888607`*^9, 
+   3.6875303946471148`*^9}, {3.687530427862364*^9, 3.687530528461423*^9}, {
+   3.687530579428241*^9, 3.6875306814048758`*^9}, {3.687530743557209*^9, 
+   3.687530822795146*^9}, {3.6875308662429733`*^9, 3.687530965714242*^9}, {
+   3.687531017466318*^9, 3.687531116689193*^9}, {3.687531172601076*^9, 
+   3.6875312860168257`*^9}, {3.687531355169429*^9, 3.687531460560005*^9}, {
+   3.6875315071842337`*^9, 3.687531593398139*^9}, {3.687531762267748*^9, 
+   3.687531884507028*^9}, {3.687531951660406*^9, 3.687531993876854*^9}, {
+   3.687532025230196*^9, 3.6875320267344923`*^9}, {3.6875321648603563`*^9, 
+   3.687532217258245*^9}, {3.687532273290739*^9, 3.687532342724852*^9}, {
+   3.687532378319358*^9, 3.687532447004507*^9}, {3.687532497581101*^9, 
+   3.687532577226366*^9}, {3.6875326457317944`*^9, 3.6875327404737873`*^9}, {
+   3.687532813531296*^9, 3.687532896541998*^9}, {3.687532937063693*^9, 
+   3.68753296325185*^9}, {3.687533025213402*^9, 3.687533111227215*^9}, {
+   3.687533153491102*^9, 3.6875332811146317`*^9}, {3.6875333451079683`*^9, 
+   3.6875335056854897`*^9}, {3.68753356573446*^9, 3.68753356805942*^9}, {
+   3.687537584367469*^9, 3.687537619082547*^9}, 3.687538301095111*^9, {
+   3.687538599250101*^9, 3.687538600914041*^9}, {3.687539492343184*^9, 
+   3.687539512981366*^9}, {3.687539813665845*^9, 3.6875398165774918`*^9}, 
+   3.68753995779216*^9, {3.687540015187888*^9, 3.687540021507378*^9}, {
+   3.6875401194370413`*^9, 3.687540181593534*^9}, {3.687540222916369*^9, 
+   3.687540225587818*^9}, {3.6875404886495028`*^9, 3.687540498721527*^9}, {
+   3.687540598182794*^9, 3.687540612909719*^9}, {3.68754065828925*^9, 
+   3.687540665465702*^9}, {3.687540769688313*^9, 3.6875407709504128`*^9}, {
+   3.6875408144476757`*^9, 3.687540821657392*^9}, {3.687540855634943*^9, 
+   3.687540858097198*^9}, {3.68754098269753*^9, 3.687540985919098*^9}, {
+   3.687541024641492*^9, 3.687541047523018*^9}, {3.687541078324088*^9, 
+   3.687541100470179*^9}, {3.687541192556253*^9, 3.68754140958629*^9}, {
+   3.687541452473062*^9, 3.687541516165073*^9}, {3.6875415487798643`*^9, 
+   3.68754159046703*^9}, {3.6875416346080933`*^9, 3.687541665631668*^9}, {
+   3.687541709124783*^9, 3.687541740597921*^9}, {3.687542120510818*^9, 
+   3.68754222580354*^9}, {3.687542289399859*^9, 3.687542323952181*^9}, {
+   3.687542377214222*^9, 3.687542385931378*^9}, {3.687542460482656*^9, 
+   3.687542484679926*^9}, {3.687542518977585*^9, 3.687542525657565*^9}, {
+   3.6875425619806433`*^9, 3.687542565771101*^9}, {3.687542649017462*^9, 
+   3.687542662569077*^9}, {3.6875429925692377`*^9, 3.687543013288013*^9}, {
+   3.687543071301944*^9, 3.687543077484104*^9}, {3.687548942974565*^9, 
+   3.687548977608231*^9}, {3.6875494613113527`*^9, 3.687549468888421*^9}, {
+   3.687549552467506*^9, 3.6875495544592533`*^9}, {3.6875495847645493`*^9, 
+   3.687549754907591*^9}, {3.687549840442669*^9, 3.687549857595882*^9}, {
+   3.68755016993399*^9, 3.687550177768695*^9}, {3.687550352249803*^9, 
+   3.6875503689490423`*^9}, {3.687550506142293*^9, 3.6875505739053383`*^9}, {
+   3.6875506462850533`*^9, 3.687550687993064*^9}, {3.68755076600175*^9, 
+   3.687550774761352*^9}, {3.6875508301724653`*^9, 3.687550842948997*^9}, 
+   3.687550894937128*^9, {3.687551177365913*^9, 3.68755118190877*^9}, {
+   3.687551212795067*^9, 3.687551218143384*^9}, 3.68755125302512*^9, 
+   3.6875513446568537`*^9, {3.687551425954837*^9, 3.687551444104712*^9}, {
+   3.687551481110278*^9, 3.68755148144252*^9}, {3.6875515644510593`*^9, 
+   3.687551564726686*^9}, {3.687551628781805*^9, 3.687551667549799*^9}, 
+   3.6875517932376842`*^9, {3.687552239322041*^9, 3.687552407143549*^9}, {
+   3.687552611133293*^9, 3.687552611669156*^9}, 3.687552806446165*^9, {
+   3.687552838469859*^9, 3.6875528433165894`*^9}, {3.6875529185468893`*^9, 
+   3.6875529862847347`*^9}, {3.68755572704183*^9, 3.687555740306328*^9}, {
+   3.687555773710347*^9, 3.687555802263831*^9}, {3.6875559676842403`*^9, 
+   3.6875559727334414`*^9}, {3.687556028520032*^9, 3.6875560682022963`*^9}, {
+   3.687560470007728*^9, 3.687560488566305*^9}, {3.68759708025739*^9, 
+   3.687597132245446*^9}, {3.687597404491431*^9, 3.6875974161912813`*^9}, {
+   3.687597450836185*^9, 3.687597474707563*^9}, 3.687597511591887*^9, {
+   3.690198616381928*^9, 3.690198639023189*^9}, {3.690198900261924*^9, 
+   3.6901989147005463`*^9}, {3.6901995766119833`*^9, 3.690199594016945*^9}, 
+   3.6901997834880133`*^9, {3.69531791158191*^9, 3.6953179189890738`*^9}, {
+   3.695318336188438*^9, 3.695318347140339*^9}, {3.695318686111412*^9, 
+   3.695318691685375*^9}, {3.695318723034235*^9, 3.695318736726544*^9}, {
+   3.6953943670243998`*^9, 3.6953943803570642`*^9}, 3.6953951484779673`*^9, {
+   3.69539526189013*^9, 3.695395264331029*^9}, {3.695395294801222*^9, 
+   3.695395307172172*^9}, {3.695395418829773*^9, 3.695395426059187*^9}, {
+   3.695395509552546*^9, 3.6953955111509457`*^9}, {3.695395693679535*^9, 
+   3.695395707873726*^9}, {3.695396329273992*^9, 3.695396338840987*^9}, {
+   3.695396423883439*^9, 3.695396426847754*^9}, {3.695396534602408*^9, 
+   3.6953965352745647`*^9}, {3.695396750532474*^9, 3.695396773531501*^9}, {
+   3.695396833032794*^9, 3.6953968337663*^9}, {3.695396900184449*^9, 
+   3.695397036352603*^9}, {3.695397069162242*^9, 3.6953973447660847`*^9}, 
+   3.715620495783359*^9, {3.715620657334268*^9, 
+   3.715620664004862*^9}},ExpressionUUID->"33d7fb97-e997-4085-a326-\
+8ecd810a6184"]
+},
+WindowSize->{1351, 1202},
+WindowMargins->{{202, Automatic}, {73, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 38563, 779, 1795, "Input",ExpressionUUID->"33d7fb97-e997-4085-a326-8ecd810a6184"]
+}
+]
+*)
+
