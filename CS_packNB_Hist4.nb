@@ -1,0 +1,842 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     36156,        834]
+NotebookOptionsPosition[     35839,        820]
+NotebookOutlinePosition[     36200,        836]
+CellTagsIndexPosition[     36157,        833]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"SortBy", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<Charles Lindbergh, Jr.\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 22 Jun 1930\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1930", ",", "6", ",", "22"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Walter Chrysler\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 2 Apr 1875\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1875", ",", "4", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Mahatma Gandhi\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 2 Oct 1869\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1869", ",", "10", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Pierre Laval\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 28 Jun 1883\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1883", ",", "6", ",", "28"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Haile Selassie\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 23 Jul 1892\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1892", ",", "7", ",", "23"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Wallis Simpson\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 19 Jun 1896\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1896", ",", "6", ",", "19"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Chiang Kai\[Hyphen]Shek\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 31 Oct 1887\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1887", ",", "10", ",", "31"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Soong May\[Hyphen]ling\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 5 Mar 1898\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1898", ",", "3", ",", "5"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Adolf Hitler\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 20 Apr 1889\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1889", ",", "4", ",", "20"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Josef Stalin\>\"", ",", 
+                TemplateBox[{
+                 RowBox[{"\"Wed 18 Dec 1878\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1878", ",", "12", ",", "18"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Winston Churchill\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 30 Nov 1874\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1874", ",", "11", ",", "30"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<George C. Marshall\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 31 Dec 1880\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1880", ",", "12", ",", "31"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<James F. Byrnes\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 2 May 1882\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1882", ",", "5", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Mohammed Mossadegh\>\"", ",", 
+                TemplateBox[{RowBox[{"\"Wed 19 May 1882\"", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "(", "\[InvisibleSpace]", "\"Julian\"", "\"calendar\"", 
+                    "\[InvisibleSpace]", ")"}], FontColor -> 
+                    GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1882", ",", "5", ",", "19"}], "}"}], ",", 
+                    RowBox[{"CalendarType", "\[Rule]", "\"Julian\""}]}], 
+                    "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Queen Elizabeth II\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 21 Apr 1926\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1926", ",", "4", ",", "21"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Konrad Adenauer\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 5 Jan 1876\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1876", ",", "1", ",", "5"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<John Foster Dulles\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 25 Feb 1888\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1888", ",", "2", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Nikita Khrushchev\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 15 Apr 1894\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1894", ",", "4", ",", "15"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Charles de Gaulle\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 22 Nov 1890\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1890", ",", "11", ",", "22"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Pope John XXIII\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 25 Nov 1881\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1881", ",", "11", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Martin Luther King\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 15 Jan 1929\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1929", ",", "1", ",", "15"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<William Westmoreland\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 26 Mar 1914\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1914", ",", "3", ",", "26"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Willy Brandt\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 18 Dec 1913\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1913", ",", "12", ",", "18"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Henry Kissinger\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 27 May 1923\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1923", ",", "5", ",", "27"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<King Faisal\>\"", ",", 
+                TemplateBox[{RowBox[{"\"1904\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1904", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Anwar Sadat\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 25 Dec 1918\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1918", ",", "12", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Deng Xiaoping\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 22 Aug 1904\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1904", ",", "8", ",", "22"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Ayatollah Khomeini\>\"", ",", 
+                TemplateBox[{RowBox[{"\"Tue 24 Sep 1902\"", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "(", "\[InvisibleSpace]", "\"Julian\"", "\"calendar\"", 
+                    "\[InvisibleSpace]", ")"}], FontColor -> 
+                    GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1902", ",", "9", ",", "24"}], "}"}], ",", 
+                    RowBox[{"CalendarType", "\[Rule]", "\"Julian\""}]}], 
+                    "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Lech Wa\[LSlash]\:0119sa\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 29 Sep 1943\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1943", ",", "9", ",", "29"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Yuri Andropov\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 14 Jun 1914\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1914", ",", "6", ",", "14"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Peter Ueberroth\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 2 Sep 1937\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1937", ",", "9", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Corazon Aquino\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 25 Jan 1933\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1933", ",", "1", ",", "25"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Mikhail Gorbachev\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 2 Mar 1931\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1931", ",", "3", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Ted Turner\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 2 Aug 1950\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1950", ",", "8", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Pope John Paul II\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 18 May 1920\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1920", ",", "5", ",", "18"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Newt Gingrich\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 17 Jun 1943\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1943", ",", "6", ",", "17"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<David Ho\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 3 Nov 1952\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1952", ",", "11", ",", "3"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Andy Grove\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 2 Sep 1936\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1936", ",", "9", ",", "2"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Ken Starr\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 21 Jul 1946\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1946", ",", "7", ",", "21"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Jeff Bezos\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 12 Jan 1964\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1964", ",", "1", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Rudy Giuliani\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 28 May 1944\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1944", ",", "5", ",", "28"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Vladimir Putin\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 7 Oct 1952\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1952", ",", "10", ",", "7"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Ben Bernanke\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 13 Dec 1953\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1953", ",", "12", ",", "13"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Mark Zuckerberg\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 14 May 1984\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1984", ",", "5", ",", "14"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Pope Francis\>\"", ",", 
+                TemplateBox[{
+                 RowBox[{"\"Thu 17 Dec 1936\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1936", ",", "12", ",", "17"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Angela Merkel\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 17 Jul 1954\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1954", ",", "7", ",", "17"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Margaret Fuller\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 23 May 1810\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1810", ",", "5", ",", "23"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Florence Nightingale\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 12 May 1820\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1820", ",", "5", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Susan B. Anthony\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 15 Feb 1820\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1820", ",", "2", ",", "15"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Elizabeth Blackwell\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 3 Feb 1821\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1821", ",", "2", ",", "3"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Emily Dickinson\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 10 Dec 1830\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1830", ",", "12", ",", "10"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Emmeline Pankhurst\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 14 Jul 1857\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1857", ",", "7", ",", "14"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Marie Curie\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 7 Nov 1867\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1867", ",", "11", ",", "7"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Rosa Luxemburg\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 5 Mar 1871\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1871", ",", "3", ",", "5"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Helen Keller\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 27 Jun 1880\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1880", ",", "6", ",", "27"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Coco Chanel\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 19 Aug 1883\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1883", ",", "8", ",", "19"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Eleanor Roosevelt\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 11 Oct 1884\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1884", ",", "10", ",", "11"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Annie Besant\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 1 Oct 1847\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1847", ",", "10", ",", "1"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Katharine Hepburn\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 12 May 1907\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1907", ",", "5", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Simone de Beauvoir\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 9 Jan 1908\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1908", ",", "1", ",", "9"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Mother Teresa\>\"", ",", 
+                TemplateBox[{RowBox[{"\"Thu 26 Aug 1910\"", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "(", "\[InvisibleSpace]", "\"Julian\"", "\"calendar\"", 
+                    "\[InvisibleSpace]", ")"}], FontColor -> 
+                    GrayLevel[0.5]]}],RowBox[{"DateObject", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1910", ",", "8", ",", "26"}], "}"}], ",", 
+                    RowBox[{"CalendarType", "\[Rule]", "\"Julian\""}]}], 
+                    "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Dorothy Crowfoot Hodgkin\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 12 May 1910\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1910", ",", "5", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Rosa Parks\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 4 Feb 1913\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1913", ",", "2", ",", "4"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Indira Gandhi\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 19 Nov 1917\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1917", ",", "11", ",", "19"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Evita Peron\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Wed 7 May 1919\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1919", ",", "5", ",", "7"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Betty Friedan\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 4 Feb 1921\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1921", ",", "2", ",", "4"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Margaret Thatcher\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 13 Oct 1925\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1925", ",", "10", ",", "13"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Shirin Ebadi\>\"", ",", 
+                TemplateBox[{RowBox[{"\"1947\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", "1947", "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Benazir Bhutto\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 21 Jun 1953\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1953", ",", "6", ",", "21"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Lady Diana\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 1 Jul 1961\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1961", ",", "7", ",", "1"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Malala Yousafzai\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sat 12 Jul 1997\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1997", ",", "7", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Sim\[OAcute]n Bol\[IAcute]var\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 24 Jul 1783\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1783", ",", "7", ",", "24"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Benjamin Disraeli\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 21 Dec 1804\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1804", ",", "12", ",", "21"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<William Ewart Gladstone\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 29 Dec 1809\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1809", ",", "12", ",", "29"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<David Livingstone\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Fri 19 Mar 1813\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1813", ",", "3", ",", "19"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Kaiser Wilhelm II\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 27 Jan 1859\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1859", ",", "1", ",", "27"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Karl Marx\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 5 May 1818\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1818", ",", "5", ",", "5"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<John Stuart Mill\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Tue 20 May 1806\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1806", ",", "5", ",", "20"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Charles Babbage\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Mon 26 Dec 1791\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1791", ",", "12", ",", "26"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Charles Darwin\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Sun 12 Feb 1809\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1809", ",", "2", ",", "12"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Louis Pasteur\>\"", ",", 
+                TemplateBox[{
+                 RowBox[{"\"Fri 27 Dec 1822\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1822", ",", "12", ",", "27"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Thomas Edison\>\"", ",", 
+                
+                TemplateBox[{
+                 RowBox[{"\"Thu 11 Feb 1847\""}],RowBox[{"DateObject", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"1847", ",", "2", ",", "11"}], "}"}], "]"}]},
+                 "DateObject",
+                 Editable->False]}], "}"}]}], "}"}], ",", "4"}], "]"}], ",", 
+          "Last"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<Which of these historical or newsworthy persons was born \
+first?\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Hist4\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.683474722726659*^9, 3.683474794567089*^9, {3.68347952949181*^9, 
+   3.683479589950878*^9}, {3.683479645446273*^9, 3.6834797039066153`*^9}, {
+   3.683479847094687*^9, 3.683479906738824*^9}, {3.683480066915956*^9, 
+   3.683480082158866*^9}},ExpressionUUID->"2e78d25f-2fe8-4359-b2f8-\
+a7d1969c4d6e"]
+},
+WindowSize->{1238, 1076},
+WindowMargins->{{-1, Automatic}, {32, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 35277, 798, 1070, "Input",ExpressionUUID->"2e78d25f-2fe8-4359-b2f8-a7d1969c4d6e"]
+}
+]
+*)
+

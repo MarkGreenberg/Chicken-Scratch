@@ -1,0 +1,1873 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     83548,       1865]
+NotebookOptionsPosition[     83231,       1851]
+NotebookOutlinePosition[     83591,       1867]
+CellTagsIndexPosition[     83548,       1864]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Tiger Woods becomes youngest player to win Masters \
+Tournament\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 13 Apr 1997\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1997", ",", "4", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<USPS introduces ZIP codes\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 1 Jul 1963\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1963", ",", "7", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Alexander Kerensky proclaims Russia a republic\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 15 Sep 1917\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1917", ",", "9", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Constitution of Afghanistan is signed into law\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 26 Jan 2004\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2004", ",", "1", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<\\\"Fantasia\\\" premieres\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 13 Nov 1940\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1940", ",", "11", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Cable car system is invented\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 1 Sep 1873\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1873", ",", "9", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<fourth Soviet Constitution is adopted\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 7 Oct 1977\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1977", ",", "10", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<earthquake in Kashmir kills nearly 80,000 people\>\"", ",", 
+              
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 8 Oct 2005\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2005", ",", "10", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<first cricket match played in American\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 1 May 1751\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1751", ",", "5", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Coal mine explosion in Mather, Pennsylvania\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 19 May 1928\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1928", ",", "5", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Gershwin's \\\"An American in Paris\\\" premieres at \
+Carnegie Hall\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 13 Dec 1928\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1928", ",", "12", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Hassan II becomes king of Morocco\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 3 Mar 1961\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1961", ",", "3", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<United States enters World War II\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 8 Dec 1941\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1941", ",", "12", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Hubble announces existence of other galaxies\>\"", ",", 
+              TemplateBox[{
+               RowBox[{"\"Tue 30 Dec 1924\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1924", ",", "12", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first lottery is drawn in St. Paul's Cathedral\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 11 Jan 1569\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1569", ",", "1", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Treaty of Waitangi establishes New Zealand as a British \
+colony\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 6 Feb 1840\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1840", ",", "2", ",", "6"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Opera singer Jenny Lind makes her American debut\>\"", ",", 
+              
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 11 Sep 1850\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1850", ",", "9", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<United States launches USS Monitor, the first ironclad \
+warship\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 30 Jan 1862\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1862", ",", "1", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Guatemalan Civil War ends\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 29 Dec 1996\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1996", ",", "12", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Fourth World Conference on Women begins\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 4 Sep 1995\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1995", ",", "9", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Ada Kepley becomes the first woman to graduate from law \
+school\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 30 Jun 1870\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1870", ",", "6", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Jacques Chirac is re-elected in a landslide victory\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 5 May 2002\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2002", ",", "5", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Researchers at the University of California at Berkeley \
+announce the creation of element 98, Californium\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 17 Mar 1950\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1950", ",", "3", ",", "17"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Pope Gregory XIII announces the Gregorian calendar\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 24 Feb 1582\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1582", ",", "2", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Passenger liner SS Athenia is torpedoed by a German U-boat, \
+killing 112\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 3 Sep 1939\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1939", ",", "9", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Moncada Barracks Attack begins the Cuban Revolution\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 26 Jul 1953\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1953", ",", "7", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first bombing of Paris by German zeppelins\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 29 Jan 1916\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1916", ",", "1", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first self-sustaining nuclear chain reaction\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 2 Dec 1942\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1942", ",", "12", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of the Coral Sea\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 4 May 1942\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1942", ",", "5", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Ford Motor Company ends production of the Model T\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 26 May 1927\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1927", ",", "5", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Secretary of War John Profumo resigns after a scandal\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 5 Jun 1963\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1963", ",", "6", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Great Hanshin Earthquake\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 17 Jan 1995\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1995", ",", "1", ",", "17"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Elizabeth I is excommunicated\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 25 Feb 1570\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1570", ",", "2", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Mali and Senegal gain independence from France\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 20 Jun 1960\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1960", ",", "6", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<North Korea releases US Pueblo crew\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 23 Dec 1968\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1968", ",", "12", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<La Fronde uprisings\>\"", ",", 
+              TemplateBox[{RowBox[{"\"1648\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", "1648", "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Arkansas and Tennessee secede\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 6 May 1861\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1861", ",", "5", ",", "6"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Day of Six Billion\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 12 Oct 1999\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1999", ",", "10", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Only minor problems interrupt Y2K celebrations\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 1 Jan 2000\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2000", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Hurricane Sandy kills over 200 people\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 24 Oct 2012\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2012", ",", "10", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Amnesty International founded\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 28 May 1961\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1961", ",", "5", ",", "28"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Rotary Club International is founded\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 23 Feb 1905\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1905", ",", "2", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Lithuania delcares independence from the Soviet Union\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 11 Mar 1990\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1990", ",", "3", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of the Wilderness\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 5 May 1864\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1864", ",", "5", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Australian Parliament House opens in Canberra\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 9 May 1988\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1988", ",", "5", ",", "9"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<John Adams is sworn in as president\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 4 Mar 1797\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1797", ",", "3", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Charles Schulz announces he is retiring the \\\"peanuts\\\" \
+comic strip\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 14 Dec 1999\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1999", ",", "12", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Pan-European Picnic\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 19 Aug 1989\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1989", ",", "8", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Law of Return is passed in Israel\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 5 Jul 1950\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1950", ",", "7", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<United States Geological Survey is created\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 3 Mar 1879\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1879", ",", "3", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Baha'i calendar begins\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 21 Mar 1844\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1844", ",", "3", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Great Fire of Boston\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 20 Mar 1760\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1760", ",", "3", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<John Rowland announces his resignation as governor of \
+Connecticut after a corruption investigation\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 21 Jun 2004\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2004", ",", "6", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Nadarajah Raviraj is assassinated\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 10 Nov 2006\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2006", ",", "11", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Ancient Order of Hibernians is founded\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 4 May 1836\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1836", ",", "5", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Manchester Ship Canal opens to traffic\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 1 Jan 1894\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1894", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<first Ecumenical Council\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 20 May 325\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"325", ",", "5", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Howard Carter and Lord Carnarvon enter King Tutankhamen's \
+tomb\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 26 Nov 1922\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1922", ",", "11", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\\\"Gone with the Wind\\\" wins 8 Academy Awards\>\"", ",", 
+              
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 1 Mar 1940\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1940", ",", "3", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle at Naseby Leicester\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 14 Jun 1645\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1645", ",", "6", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<General Clinton replaces General Howe as commander of \
+British troops in America\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 8 May 1778\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1778", ",", "5", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Uday and Qusay Hussein are killed by American forces in \
+Mosul\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 22 Jul 2003\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2003", ",", "7", ",", "22"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Typhoon strikes Honshu Island\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 21 Sep 1934\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1934", ",", "9", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Palau receives self-government\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 1 Jan 1981\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1981", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<British capture Hong Kong from China\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 23 Aug 1839\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1839", ",", "8", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<US Marines invade Cuba\>\"", ",", 
+              TemplateBox[{
+               RowBox[{"\"Fri 10 Jun 1898\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1898", ",", "6", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Austria annexes Bosnia and Herzegovina\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 6 Oct 1908\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1908", ",", "10", ",", "6"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<King Carlos I of Portugal is assassinated\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 1 Feb 1908\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1908", ",", "2", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Wilma Mankiller becomes the first woman to lead a major \
+Native American tribe as principal chief of the Cherokee Nation\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 14 Dec 1985\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1985", ",", "12", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Attempted assassination of Gustavus III\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 16 Mar 1792\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1792", ",", "3", ",", "16"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\\\"The Jetsons\\\" premieres on television\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 23 Sep 1962\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1962", ",", "9", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first World Series game is played outside of the United \
+States\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 20 Oct 1992\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1992", ",", "10", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Maximilien Robespierre is overthrown and arrested by the \
+National Convention\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 27 Jul 1794\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1794", ",", "7", ",", "27"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Ben Franklin appointed as American diplomatic \
+representitive to France\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 14 Sep 1778\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1778", ",", "9", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Ho Chi Minh won elections\>\"", ",", 
+              TemplateBox[{
+               RowBox[{"\"Sun 6 Jan 1946\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1946", ",", "1", ",", "6"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Rouen surrenders to Henry V in the Hundred Years War\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 19 Jan 1419\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1419", ",", "1", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Eighth Crusade ends at Tunis\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 30 Oct 1270\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1270", ",", "10", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Austro-Prussian War ends\>\"", ",", 
+              TemplateBox[{RowBox[{"\"1866\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", "1866", "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Maryland proposes site on the Potomac for new national \
+capital\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 23 Dec 1788\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1788", ",", "12", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Women's Auxiliary Army Corps is established\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 14 May 1942\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1942", ",", "5", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<American and South Vietnamese forces capture \\\"Hamburger \
+Hill\\\"\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 20 May 1969\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1969", ",", "5", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of Ladysmith\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 30 Oct 1899\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1899", ",", "10", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Leonarde Keeler tests the first polygraph machine\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 2 Feb 1935\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1935", ",", "2", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Bolshevik Revolution begins\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 7 Nov 1917\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1917", ",", "11", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Knesset makes Jerusalem Israel's capital\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 13 Dec 1949\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1949", ",", "12", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Al Capone begins eleven-year prison sentence\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 4 May 1932\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1932", ",", "5", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Shaanxi Earthquake kills approximately 830,000\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 23 Jan 1556\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1556", ",", "1", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Paris police kill hundreds of Algerians\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 17 Oct 1961\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1961", ",", "10", ",", "17"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<David Kunst completes the first around-the-world journey on \
+foot\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 5 Oct 1974\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1974", ",", "10", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Coca-Cola is invented\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 8 May 1886\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1886", ",", "5", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Native Americans attempt to capture Fort Detroit during \
+Pontiac's Rebellion\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 7 May 1763\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1763", ",", "5", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of Muret\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 12 Sep 1213\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1213", ",", "9", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<60% of Quebec voters reject a proposal for independence \
+from Canada\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 20 May 1980\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1980", ",", "5", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<ROTC is established\>\"", ",", 
+              TemplateBox[{
+               RowBox[{"\"Sat 3 Jun 1916\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1916", ",", "6", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Cape Colony becomes British colony\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 8 Jan 1806\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1806", ",", "1", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Puckle patents the machine gun\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 15 May 1718\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1718", ",", "5", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<first launderette opens\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 18 Apr 1934\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1934", ",", "4", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<first televised Academy Awards ceremony\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 19 Mar 1953\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1953", ",", "3", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Churchill arrives in Moscow\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 9 Oct 1944\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1944", ",", "10", ",", "9"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Spain, France and Great Britain sign the Treaty of \
+Seville\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 9 Nov 1729\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1729", ",", "11", ",", "9"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Arthur Eldred becomes the first Eagle Scout\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 2 Sep 1912\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1912", ",", "9", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Fulgencio Batista leads a coup in Cuba and appoints himself \
+\\\"provisional president\\\"\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 10 Mar 1952\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1952", ",", "3", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Swimmer Mark Spitz wins his seventh gold medal at the \
+Munich Olympics\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 4 Sep 1972\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1972", ",", "9", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first battle of American Civil War is won by Union\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 3 Jun 1861\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1861", ",", "6", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Birdseye starts frozen food industry\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 6 Mar 1930\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1930", ",", "3", ",", "6"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Confederate States adopt \\\"Stars and Bars\\\" flag design\
+\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 4 Mar 1861\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1861", ",", "3", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Miguel Primo de Rivera becomes dictator of Spain\>\"", ",", 
+              
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 14 Sep 1923\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1923", ",", "9", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first crossword puzzle book is published\>\"", ",", 
+              TemplateBox[{
+               RowBox[{"\"Fri 18 Apr 1924\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1924", ",", "4", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Olive Branch Petition\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 8 Jul 1775\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1775", ",", "7", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Hiram Bingham III rediscovers Machu Picchu\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 24 Jul 1911\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1911", ",", "7", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<John D. Rockefeller becomes the first person to amass a \
+billion dollars in personal wealth\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 29 Sep 1916\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1916", ",", "9", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Goodyear patents vulcanized rubber\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 15 Jun 1844\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1844", ",", "6", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Latvia and Estonia secede from the Soviet Union\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 3 Mar 1991\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1991", ",", "3", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<US takes Okinawa\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 10 Oct 1944\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1944", ",", "10", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Ku Klux Klan is formed by Confederate veterans as a social \
+club\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 24 Dec 1865\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1865", ",", "12", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Seige on Port Hudson, LA begins\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 21 May 1863\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1863", ",", "5", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<crew of Soyuz 11 is killed\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 30 Jun 1971\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1971", ",", "6", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Vesuvius erupts\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 7 Apr 1906\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1906", ",", "4", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Caspian Airlines Flight 7908 crashes, killing 168\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Jul 2009\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2009", ",", "7", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of Aughrim\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 12 Jul 1691\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1691", ",", "7", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<British soldiers take Pretoria during the Second Boer War\>\
+\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 5 Jun 1900\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1900", ",", "6", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Concepcion is destroyed by an earthquake, killing 5000\>\"",
+               ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 20 Feb 1835\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1835", ",", "2", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<\\\"I Spy\\\" premieres on television\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Sep 1965\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1965", ",", "9", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Fugitive Slave Law of 1850 is passed\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 18 Sep 1850\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1850", ",", "9", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<\\\"Maude\\\" premieres on television\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 12 Sep 1972\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1972", ",", "9", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<King Michael of Romania abdicates\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 30 Dec 1947\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1947", ",", "12", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Articles of Confederation are adopted\>\"", ",", 
+              TemplateBox[{
+               RowBox[{"\"Thu 1 Mar 1781\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1781", ",", "3", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Metric system adopted in France\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 7 Apr 1795\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1795", ",", "4", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Kyoto Protocol is signed\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 11 Dec 1997\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1997", ",", "12", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Maine joins the Union\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Mar 1820\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1820", ",", "3", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first general assembly of League of Nations\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 15 Nov 1920\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1920", ",", "11", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of Ackia\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 26 May 1736\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1736", ",", "5", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first pop-music chart published in \\\"Billboard\\\" \
+magazine\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 4 Jan 1936\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1936", ",", "1", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of the Milvian Bridge\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 28 Oct 312\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"312", ",", "10", ",", "28"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<English King Henry VIII marries Jane Seymour\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 30 May 1536\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1536", ",", "5", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<X-15 test aircraft reaches altitude of 106 km\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 19 Jul 1963\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1963", ",", "7", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<GenBank, a database of genetic sequences, is created\>\"", 
+              ",", 
+              TemplateBox[{RowBox[{"\"1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", "1982", "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Korean Air Lines Flight 007 is shot down\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 1 Sep 1983\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1983", ",", "9", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Pierre Laporte is killed by members of the Front de lib\
+\[EAcute]ration du Qu\[EAcute]bec\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 17 Oct 1970\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1970", ",", "10", ",", "17"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Kent State shootings\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 4 May 1970\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1970", ",", "5", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Vienna Treaty restores Austrian independence\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 15 May 1955\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1955", ",", "5", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Gnadenhutten Massacre leaves 96 Native Americans dead\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 8 Mar 1782\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1782", ",", "3", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<1993 World Trade Center bombing\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 26 Feb 1993\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1993", ",", "2", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<first Nazi Party election in Munich\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 28 Jan 1923\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1923", ",", "1", ",", "28"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<a major gay rights march takes place in Washington, \
+D.C.\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 14 Oct 1979\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1979", ",", "10", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Roger Williams emigrates to Boston\>\"", ",", 
+              TemplateBox[{
+               RowBox[{"\"Wed 5 Feb 1631\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1631", ",", "2", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Roman Catholic Church issues a new universal catechism\>\"",
+               ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 11 Oct 1992\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1992", ",", "10", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Continental Congress passes the Lee Resolution\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 2 Jul 1776\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1776", ",", "7", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Christopher Columbus sights Jamaica\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 3 May 1494\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1494", ",", "5", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<US Marine Corps is founded\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 10 Nov 1775\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1775", ",", "11", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Gemini 4 launches\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 3 Jun 1965\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1965", ",", "6", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<NATO takes its first military action\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 28 Feb 1994\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1994", ",", "2", ",", "28"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<King Faisal is killed by his nephew\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 25 Mar 1975\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1975", ",", "3", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Nelson Mandela is sentenced to life in prison\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 12 Jun 1964\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1964", ",", "6", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of the Boyne\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 12 Jul 1690\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1690", ",", "7", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Mount Tarawera erupts\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 10 Jul 1886\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1886", ",", "7", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Maastricht Treaty creates the European Union\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 7 Feb 1992\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1992", ",", "2", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Voyager 1's closest approach to Saturn\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 12 Nov 1980\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1980", ",", "11", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<South African Truth and Reconciliation Commission report is \
+presented\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 29 Oct 1998\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1998", ",", "10", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Venera 14 lands on Venus and sends back data\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 5 Mar 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "3", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<House of Commons is heavily damaged during a German air \
+raid on London\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 10 May 1941\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1941", ",", "5", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Vietnam declares independence\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 2 Sep 1945\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1945", ",", "9", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Ferdinand of Aragon marries Isabella of Castile\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 19 Oct 1469\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1469", ",", "10", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<J. Edgar Hoover is appointed as Director of the FBI\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 10 May 1924\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1924", ",", "5", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Russo-Japanese War: Battle of Tsushima\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 27 May 1905\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1905", ",", "5", ",", "27"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<first recognized outbreak of \\\"Legionnaire's \
+Disease\\\"\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 27 Jul 1976\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1976", ",", "7", ",", "27"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<No\[EDoubleDot]l Coward's \\\"Private Lives\\\" opens\>\"", 
+              ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 18 Aug 1930\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1930", ",", "8", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<North Korea shells Yeonpyeong Island\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 23 Nov 2010\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2010", ",", "11", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<members of Islamist group al-Shabaab attack at the Westgate \
+mall in Nairobi, Kenya, leaving 72 people dead\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 21 Sep 2013\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2013", ",", "9", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Battle of Dettingen\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 27 Jun 1743\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1743", ",", "6", ",", "27"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Apollo 17 lands on the moon\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 11 Dec 1972\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1972", ",", "12", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Dawson's Field hijackings\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 6 Sep 1970\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1970", ",", "9", ",", "6"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Royal Opera House in London opens\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 15 May 1858\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1858", ",", "5", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Twin Peaks Tunnel in San Francisco becomes the longest \
+streetcar tunnel\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 3 Feb 1918\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1918", ",", "2", ",", "3"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Disneyland opens\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 18 Jul 1955\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1955", ",", "7", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Lou Gehrig begins consecutive games played streak\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 1 Jun 1925\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1925", ",", "6", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Indonesian ferry SIEV X sinks, killing 370\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 19 Oct 2001\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2001", ",", "10", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Ashmolean Museum opens\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 24 May 1683\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1683", ",", "5", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Eldfell volcano erupts\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 23 Jan 1973\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1973", ",", "1", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<United States possesses Alaska\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 18 Oct 1867\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1867", ",", "10", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\\\"The Oprah Winfrey Show\\\" premieres\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 8 Sep 1986\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1986", ",", "9", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False]}], "}"}]}], "}"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"DateString", "[", 
+           RowBox[{
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<DayName\>\"", ",", "\"\< \>\"", ",", "\"\<MonthName\>\"", 
+              ",", "\"\< \>\"", ",", "\"\<DayShort\>\"", ",", "\"\<, \>\"", 
+              ",", "\"\<Year\>\""}], "}"}]}], "]"}], "&"}], "/@", "data"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{"\"\<When did this happen: ``\>\"", ",", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Hist2\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.683449991893858*^9, {3.68345003184979*^9, 3.6834500355790653`*^9}, {
+   3.68345009219203*^9, 3.683450110966447*^9}, {3.6834506189434633`*^9, 
+   3.683450693921096*^9}, {3.683450746342113*^9, 3.683450756093636*^9}, {
+   3.6834509885326967`*^9, 3.683451009302243*^9}, 3.6834510703532257`*^9, {
+   3.683451117632122*^9, 3.6834511711230392`*^9}, 3.683451205915978*^9, {
+   3.683451259610249*^9, 3.683451280993499*^9}, {3.6834594223916607`*^9, 
+   3.683461357413391*^9}, {3.6834615367611322`*^9, 3.6834616328967667`*^9}, 
+   3.6834616880708857`*^9, {3.683461749792647*^9, 3.683461755072754*^9}, {
+   3.683461809755611*^9, 3.683462457607662*^9}, {3.683462498984457*^9, 
+   3.683462621489895*^9}, {3.683462687634083*^9, 3.683462749043027*^9}, {
+   3.6834627811571007`*^9, 3.683462788601012*^9}, {3.683462823767623*^9, 
+   3.683462825671752*^9}, {3.683462958597898*^9, 3.683462970902619*^9}, 
+   3.683463063781084*^9, {3.683463095846574*^9, 3.683463099846396*^9}, {
+   3.683463130873616*^9, 3.683463136438212*^9}, {3.683463174406283*^9, 
+   3.683463210306472*^9}, {3.683463241645692*^9, 3.683463334894582*^9}, {
+   3.683463388018461*^9, 3.683463388489911*^9}, 3.683463466354396*^9, {
+   3.683463502371212*^9, 3.683463527222577*^9}, 3.683463753397874*^9, {
+   3.6834651595770617`*^9, 3.6834651704725237`*^9}, {3.683465857728983*^9, 
+   3.683465897694354*^9}},ExpressionUUID->"89ecc8b2-0c1c-4831-b60c-\
+6f547c2e78b0"]
+},
+WindowSize->{1633, 1095},
+WindowMargins->{{2, Automatic}, {Automatic, 62}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 82669, 1829, 5810, "Input",ExpressionUUID->"89ecc8b2-0c1c-4831-b60c-6f547c2e78b0"]
+}
+]
+*)
+

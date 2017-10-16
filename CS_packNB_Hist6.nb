@@ -1,0 +1,1895 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     90869,       1887]
+NotebookOptionsPosition[     90553,       1873]
+NotebookOutlinePosition[     90912,       1889]
+CellTagsIndexPosition[     90869,       1886]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<The African Queen\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 20 Feb 1952\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1952", ",", "2", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Humphrey Bogart\>\"", ",", 
+              "\"\<Katharine Hepburn\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Alien\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 25 May 1979\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1979", ",", "5", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sigourney Weaver\>\"", ",", 
+              "\"\<Tom Skerritt\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<All About Eve\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 13 Oct 1950\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1950", ",", "10", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Bette Davis\>\"", ",", 
+              "\"\<Anne Baxter\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<All Quiet on the Western Front\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 21 Apr 1930\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1930", ",", "4", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Louis Wolheim\>\"", ",", 
+              "\"\<Lew Ayres\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<American Graffiti\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 11 Aug 1973\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1973", ",", "8", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Richard Dreyfuss\>\"", ",", 
+              "\"\<Ron Howard\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<An American in Paris\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 9 Nov 1951\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1951", ",", "11", ",", "9"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Gene Kelly\>\"", ",", 
+              "\"\<Leslie Caron\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Amistad\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 12 Dec 1997\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1997", ",", "12", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Matthew McConaughey\>\"", ",", 
+              "\"\<Anthony Hopkins\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Annie Hall\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 20 Apr 1977\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1977", ",", "4", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Woody Allen\>\"", ",", 
+              "\"\<Diane Keaton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Apocalypse Now\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Aug 1979\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1979", ",", "8", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Marlon Brando\>\"", ",", 
+              "\"\<Robert Duvall\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Avatar\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 18 Dec 2009\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2009", ",", "12", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Zoe Zaldana\>\"", ",", 
+              "\"\<Sam Worthington\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Barbarella\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 10 Oct 1968\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1968", ",", "10", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jane Fonda\>\"", ",", 
+              "\"\<David Hemmings\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Being There\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 19 Dec 1979\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1979", ",", "12", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Shirley MacLaine\>\"", ",", 
+              "\"\<Peter Sellers\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Ben\[Hyphen]Hur\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 18 Nov 1959\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1959", ",", "11", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Charlton Heston\>\"", ",", 
+              "\"\<Jack Hawkins\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Big Wednesday\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 1 May 1978\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1978", ",", "5", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jan\[Hyphen]Michael Vincent\>\"", 
+              ",", "\"\<William Katt\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Big Sleep\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 31 Aug 1946\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1946", ",", "8", ",", "31"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Humphrey Bogart\>\"", ",", 
+              "\"\<Lauren Bacall\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Billy Jack\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 1 Jan 1971\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1971", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Tom Laughlin\>\"", ",", 
+              "\"\<Delores Taylor\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Birds\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 28 Mar 1963\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1963", ",", "3", ",", "28"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Rod Taylor\>\"", ",", 
+              "\"\<Jessica Tandy\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Blade Runner\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 25 Jun 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "6", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Harrison Ford\>\"", ",", 
+              "\"\<Rutger Hauer\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Blackboard Jungle\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 25 Mar 1955\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1955", ",", "3", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Glenn Ford\>\"", ",", 
+              "\"\<Anne Francis\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Bonnie and Clyde\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 13 Aug 1967\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1967", ",", "8", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Warren Beatty\>\"", ",", 
+              "\"\<Faye Dunaway\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Born Free\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 22 Jun 1966\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1966", ",", "6", ",", "22"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Virginia McKenna\>\"", ",", 
+              "\"\<Bill Travers\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Born on the Fourth of July\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 20 Dec 1989\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1989", ",", "12", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Tom Cruise\>\"", ",", 
+              "\"\<Kyra Sedgwick\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Breakfast at Tiffany's\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 5 Oct 1961\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1961", ",", "10", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Audrey Hepburn\>\"", ",", 
+              "\"\<George Peppard\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<A Bridge Too Far\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Jun 1977\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1977", ",", "6", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Dirk Bogarde\>\"", ",", 
+              "\"\<James Caan\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Bridge on the River Kwai\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 18 Dec 1957\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1957", ",", "12", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Alec Guinness\>\"", ",", 
+              "\"\<Sessue Hayakawa\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Butch Cassidy and the Sundance Kid\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 24 Oct 1969\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1969", ",", "10", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Robert Redford\>\"", ",", 
+              "\"\<Paul Newman\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Cabaret\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 12 Feb 1972\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1972", ",", "2", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Liza Minnelli\>\"", ",", 
+              "\"\<Michael York\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Caligula\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 15 Feb 1980\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1980", ",", "2", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Malcolm McDowell\>\"", ",", 
+              "\"\<John Gielgud\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Casablanca\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 23 Jan 1943\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1943", ",", "1", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Humphrey Bogart\>\"", ",", 
+              "\"\<Ingrid Bergman\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Chinatown\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 21 Jun 1974\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1974", ",", "6", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jack Nicholson\>\"", ",", 
+              "\"\<Faye Dunaway\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Citizen Kane\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 1 May 1941\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1941", ",", "5", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Joseph Cotten\>\"", ",", 
+              "\"\<Dorothy Comingore\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<A Clockwork Orange\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 17 Dec 1971\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1971", ",", "12", ",", "17"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Malcolm McDowell\>\"", ",", 
+              "\"\<David Prowse\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Close Encounters of the Third Kind\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 16 Nov 1977\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1977", ",", "11", ",", "16"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Michael J. Dyer\>\"", ",", 
+              "\"\<Richard Dreyfuss\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Color Purple\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 18 Dec 1985\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1985", ",", "12", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Danny Glover\>\"", ",", 
+              "\"\<Whoopi Goldberg\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Conan the Barbarian\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 14 May 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "5", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<James Earl Jones\>\"", ",", 
+              "\"\<Arnold Schwarzenegger\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Das Boot\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 10 Feb 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "2", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Klaus Wennemann\>\"", ",", 
+              "\"\<Hubertus Bengsch\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Dazed and Confused\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 24 Sep 1993\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1993", ",", "9", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jason London\>\"", ",", 
+              "\"\<Matthew McConaughey\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Deliverance\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 21 Jul 1972\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1972", ",", "7", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jon Voight\>\"", ",", 
+              "\"\<Burt Reynolds\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Dirty Harry\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 24 Dec 1971\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1971", ",", "12", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Clint Eastwood\>\"", ",", 
+              "\"\<Harry Guardino\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Doctor Zhivago\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 22 Dec 1965\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1965", ",", "12", ",", "22"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Omar Sharif\>\"", ",", 
+              "\"\<Julie Christie\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Double Indemnity\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 24 Apr 1944\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1944", ",", "4", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Fred MacMurray\>\"", ",", 
+              "\"\<Barbara Stanwyck\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Dr. No\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 8 May 1963\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1963", ",", "5", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sean Connery\>\"", ",", 
+              "\"\<Ursula Andress\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Dr. Strangelove\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 29 Jan 1964\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1964", ",", "1", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Peter Sellers\>\"", ",", 
+              "\"\<George C. Scott\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Duck Soup\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 17 Nov 1933\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1933", ",", "11", ",", "17"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Groucho Marx\>\"", ",", 
+              "\"\<Harpo Marx\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Easy Rider\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 14 Jul 1969\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1969", ",", "7", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Robert Walker\>\"", ",", 
+              "\"\<Peter Fonda\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Enter the Dragon\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Aug 1973\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1973", ",", "8", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Bruce Lee\>\"", ",", 
+              "\"\<John Saxon\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<E.T. the Extra\[Hyphen]Terrestrial\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 11 Jun 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "6", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Henry Thomas\>\"", ",", 
+              "\"\<Dee Wallace\[Hyphen]Stone\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Eyes of Laura Mars\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 2 Aug 1978\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1978", ",", "8", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Raul Julia\>\"", ",", 
+              "\"\<Brad Dourif\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Fiddler on the Roof\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 1 Jan 1971\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1971", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Chaim Topol\>\"", ",", 
+              "\"\<Leonard Frey\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Field of Dreams\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 21 Apr 1989\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1989", ",", "4", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Kevin Costner\>\"", ",", 
+              "\"\<Burt Lancaster\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Fight Club\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 15 Oct 1999\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1999", ",", "10", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Edward Norton\>\"", ",", 
+              "\"\<Brad Pitt\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<First Blood\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 22 Oct 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "10", ",", "22"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sylvester Stallone\>\"", ",", 
+              "\"\<Richard Crenna\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Forrest Gump\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 6 Jul 1994\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1994", ",", "7", ",", "6"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Tom Hanks\>\"", ",", 
+              "\"\<Robin Wright Penn\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<For Whom the Bell Tolls\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 14 Jul 1943\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1943", ",", "7", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Gary Cooper\>\"", ",", 
+              "\"\<Ingrid Bergman\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Frankenstein\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 21 Nov 1931\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1931", ",", "11", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Colin Clive\>\"", ",", 
+              "\"\<Boris Karloff\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<From Here to Eternity\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 5 Aug 1953\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1953", ",", "8", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Burt Lancaster\>\"", ",", 
+              "\"\<Montgomery Clift\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Full Metal Jacket\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 26 Jun 1987\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1987", ",", "6", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Matthew Modine\>\"", ",", 
+              "\"\<Adam Baldwin\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Ghost\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 13 Jul 1990\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1990", ",", "7", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Patrick Swayze\>\"", ",", 
+              "\"\<Demi Moore\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<G.I. Jane\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 22 Aug 1997\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1997", ",", "8", ",", "22"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Demi Moore\>\"", ",", 
+              "\"\<Viggo Mortensen\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<The Godfather\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Mar 1972\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1972", ",", "3", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Marlon Brando\>\"", ",", 
+              "\"\<Al Pacino\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Gods Must Be Crazy\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 9 Jul 1984\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1984", ",", "7", ",", "9"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<N!xau \:01c2Toma\>\"", ",", 
+              "\"\<Marius Weyers\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Gone with the Wind\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 15 Dec 1939\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1939", ",", "12", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Clark Gable\>\"", ",", 
+              "\"\<Vivien Leigh\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Good Morning, Vietnam\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 23 Dec 1987\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1987", ",", "12", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Forest Whitaker\>\"", ",", 
+              "\"\<Robin Williams\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Green Berets\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 19 Jun 1968\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1968", ",", "6", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<John Wayne\>\"", ",", 
+              "\"\<David Janssen\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Graduate\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 21 Dec 1967\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1967", ",", "12", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Dustin Hoffman\>\"", ",", 
+              "\"\<Anne Bancroft\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Grapes of Wrath\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 15 Mar 1940\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1940", ",", "3", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Henry Fonda\>\"", ",", 
+              "\"\<Jane Darwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Groundhog Day\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 12 Feb 1993\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1993", ",", "2", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Bill Murray\>\"", ",", 
+              "\"\<Andie MacDowell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Guess Who's Coming to Dinner\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 12 Dec 1967\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1967", ",", "12", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Spencer Tracy\>\"", ",", 
+              "\"\<Katharine Hepburn\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Hunt for Red October\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 2 Mar 1990\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1990", ",", "3", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sean Connery\>\"", ",", 
+              "\"\<Alec Baldwin\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<In the Heat of the Night\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 2 Aug 1967\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1967", ",", "8", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sidney Poitier\>\"", ",", 
+              "\"\<Rod Steiger\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Islands in the Stream\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 8 Aug 1977\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1977", ",", "8", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<George C. Scott\>\"", ",", 
+              "\"\<David Hemmings\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<It Happened One Night\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 23 Feb 1934\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1934", ",", "2", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Clark Gable\>\"", ",", 
+              "\"\<Claudette Colbert\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<It's a Wonderful Life\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 20 Dec 1940\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1940", ",", "12", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jimmy Stewart\>\"", ",", 
+              "\"\<Donna Reed\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Jaws\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 20 Jun 1975\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1975", ",", "6", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Roy Scheider\>\"", ",", 
+              "\"\<Robert Shaw\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Jurassic Park\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 11 Jun 1993\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1993", ",", "6", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sam Neill\>\"", ",", 
+              "\"\<Laura Dern\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Kentucky Fried Movie\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 10 Aug 1977\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1977", ",", "8", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Han Bong\[Hyphen]soo\>\"", ",", 
+              "\"\<George Lazenby\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Kill Bill Volume 1\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 10 Oct 2003\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2003", ",", "10", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Uma Thurman\>\"", ",", 
+              "\"\<David Carradine\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<King Kong\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 7 Apr 1933\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1933", ",", "4", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Fay Wray\>\"", ",", 
+              "\"\<Robert Armstrong\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Lara Croft: Tomb Raider\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 15 Jun 2001\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2001", ",", "6", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Angelina Jolie\>\"", ",", 
+              "\"\<Jon Voight\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Last of the Mohicans\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 21 Nov 1920\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1920", ",", "11", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Wallace Beery\>\"", ",", 
+              "\"\<Barbara Bedford\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Last Tango in Paris\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 14 Oct 1972\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1972", ",", "10", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Marlon Brando\>\"", ",", 
+              "\"\<Maria Schneider\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Lawrence of Arabia\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 16 Dec 1962\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1962", ",", "12", ",", "16"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Peter O'Toole\>\"", ",", 
+              "\"\<Omar Sharif\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Logan's Run\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 23 Jun 1976\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1976", ",", "6", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Michael York\>\"", ",", 
+              "\"\<Richard Jordan\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<The Lord of the Rings: The Fellowship of the Ring\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 19 Dec 2001\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2001", ",", "12", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Elijah Wood\>\"", ",", 
+              "\"\<Ian McKellen\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Love Story\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 1 Jan 1970\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1970", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<John Marley\>\"", ",", 
+              "\"\<Ali MacGraw\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Maltese Falcon\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 18 Oct 1941\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1941", ",", "10", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Mary Astor\>\"", ",", 
+              "\"\<Humphrey Bogart\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<The Manchurian Candidate\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 24 Oct 1962\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1962", ",", "10", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Frank Sinatra\>\"", ",", 
+              "\"\<Laurence Harvey\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<The Mark of Zorro\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 5 Dec 1920\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1920", ",", "12", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Douglas Fairbanks, Sr.\>\"", ",", 
+              "\"\<Marguerite De La Motte\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Martian\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 2 Oct 2015\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2015", ",", "10", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jessica Chastain\>\"", ",", 
+              "\"\<Matt Damon\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<MASH\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 1 Jan 1970\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1970", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Donald Sutherland\>\"", ",", 
+              "\"\<Elliott Gould\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Matrix\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 31 Mar 1999\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1999", ",", "3", ",", "31"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Keanu Reeves\>\"", ",", 
+              "\"\<Laurence Fishburne\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Milagro Beanfield War\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 18 Mar 1988\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1988", ",", "3", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Christopher Walken\>\"", ",", 
+              "\"\<Julie Carmen\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Minority Report\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 21 Jun 2002\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2002", ",", "6", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Tom Cruise\>\"", ",", 
+              "\"\<Max von Sydow\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Miracle on 34th Street\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 2 May 1947\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1947", ",", "5", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Maureen O'Hara\>\"", ",", 
+              "\"\<John Payne\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Moby Dick\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 20 Sep 1930\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1930", ",", "9", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<John Barrymore\>\"", ",", 
+              "\"\<Joan Bennett\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Modern Times\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 5 Feb 1936\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1936", ",", "2", ",", "5"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Charlie Chaplin\>\"", ",", 
+              "\"\<Paulette Goddard\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Mosquito Coast\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 1 Dec 1986\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1986", ",", "12", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Helen Mirren\>\"", ",", 
+              "\"\<Harrison Ford\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Mr. Smith Goes to Washington\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 19 Oct 1939\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1939", ",", "10", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jimmy Stewart\>\"", ",", 
+              "\"\<Jean Arthur\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Mutiny on the Bounty\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 1 Jan 1936\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1936", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Charles Laughton\>\"", ",", 
+              "\"\<Clark Gable\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<My Fair Lady\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 22 Oct 1964\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1964", ",", "10", ",", "22"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Audrey Hepburn\>\"", ",", 
+              "\"\<Rex Harrison\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<North by Northwest\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 1 Jan 1959\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1959", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Cary Grant\>\"", ",", 
+              "\"\<Eva Marie Saint\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<One Flew Over the Cuckoo's Nest\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 19 Nov 1975\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1975", ",", "11", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jack Nicholson\>\"", ",", 
+              "\"\<William Redfield\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<On Golden Pond\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 4 Dec 1981\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1981", ",", "12", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Katharine Hepburn\>\"", ",", 
+              "\"\<Henry Fonda\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<On the Waterfront\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 28 Jul 1954\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1954", ",", "7", ",", "28"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Marlon Brando\>\"", ",", 
+              "\"\<Karl Malden\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Outlaw Josey Wales\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 30 Jun 1976\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1976", ",", "6", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Clint Eastwood\>\"", ",", 
+              "\"\<Sondra Locke\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Patton\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 1 Jan 1970\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1970", ",", "1", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<George C. Scott\>\"", ",", 
+              "\"\<Karl Malden\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Pink Panther\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 20 Mar 1964\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1964", ",", "3", ",", "20"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<David Niven\>\"", ",", 
+              "\"\<Claudia Cardinale\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<A Place in the Sun\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 11 Oct 1951\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1951", ",", "10", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Montgomery Clift\>\"", ",", 
+              "\"\<Elizabeth Taylor\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Planet of the Apes\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 8 Feb 1968\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1968", ",", "2", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Charlton Heston\>\"", ",", 
+              "\"\<Roddy McDowall\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Platoon\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 19 Dec 1986\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1986", ",", "12", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Willem Dafoe\>\"", ",", 
+              "\"\<Tom Berenger\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Psycho\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 8 Mar 1960\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1960", ",", "3", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Anthony Perkins\>\"", ",", 
+              "\"\<Vera Miles\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Pulp Fiction\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 14 Oct 1994\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1994", ",", "10", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Bruce Willis\>\"", ",", 
+              "\"\<Samuel L. Jackson\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Quest for Fire\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 12 Feb 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "2", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Ron Perlman\>\"", ",", 
+              "\"\<Rae Dawn Chong\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Rabbit\[Hyphen]Proof Fence\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 29 Nov 2002\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2002", ",", "11", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Everlyn Sampi\>\"", ",", 
+              "\"\<Kenneth Branagh\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Raging Bull\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 14 Nov 1980\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1980", ",", "11", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Robert De Niro\>\"", ",", 
+              "\"\<Cathy Moriarty\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Raiders of the Lost Ark\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 12 Jun 1981\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1981", ",", "6", ",", "12"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Harrison Ford\>\"", ",", 
+              "\"\<Karen Allen\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<A Raisin in the Sun\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 24 Aug 1961\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1961", ",", "8", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sidney Poitier\>\"", ",", 
+              "\"\<Ruby Dee\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Rashomon\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 26 Dec 1951\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1951", ",", "12", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Toshir\[OHat] Mifune\>\"", ",", 
+              "\"\<Machiko Ky\:014d\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Rear Window\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 1 Sep 1954\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1954", ",", "9", ",", "1"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jimmy Stewart\>\"", ",", 
+              "\"\<Grace Kelly\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Rebel Without a Cause\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 27 Oct 1955\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1955", ",", "10", ",", "27"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<James Dean\>\"", ",", 
+              "\"\<Natalie Wood\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Road\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 25 Nov 2009\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"2009", ",", "11", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Viggo Mortensen\>\"", ",", 
+              "\"\<Charlize Theron\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Rocky\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 21 Nov 1976\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1976", ",", "11", ",", "21"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sylvester Stallone\>\"", ",", 
+              "\"\<Talia Shire\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Rocky Horror Picture Show\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 26 Sep 1975\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1975", ",", "9", ",", "26"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Tim Curry\>\"", ",", 
+              "\"\<Susan Sarandon\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Saving Private Ryan\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 24 Jul 1998\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1998", ",", "7", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Tom Hanks\>\"", ",", 
+              "\"\<Edward Burns\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Scarface\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 9 Dec 1983\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1983", ",", "12", ",", "9"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Al Pacino\>\"", ",", 
+              "\"\<Michelle Pfeiffer\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Schindler's List\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Dec 1993\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1993", ",", "12", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Liam Neeson\>\"", ",", 
+              "\"\<Ben Kingsley\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Seven Samurai\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 19 Nov 1956\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1956", ",", "11", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Takashi Shimura\>\"", ",", 
+              "\"\<Toshir\[OHat] Mifune\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Shane\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 24 Apr 1953\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1953", ",", "4", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Alan Ladd\>\"", ",", 
+              "\"\<Jean Arthur\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Shawshank Redemption\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 23 Sep 1994\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1994", ",", "9", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Tim Robbins\>\"", ",", 
+              "\"\<Bob Gunton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Silence of the Lambs\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 14 Feb 1991\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1991", ",", "2", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jodie Foster\>\"", ",", 
+              "\"\<Anthony Hopkins\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Singin' in the Rain\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 10 Apr 1952\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1952", ",", "4", ",", "10"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Gene Kelly\>\"", ",", 
+              "\"\<Donald O'Connor\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Sixteen Candles\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 4 May 1984\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1984", ",", "5", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Molly Ringwald\>\"", ",", 
+              "\"\<Paul Dooley\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Some Like It Hot\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 29 Mar 1959\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1959", ",", "3", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jack Lemmon\>\"", ",", 
+              "\"\<Tony Curtis\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Sound of Music\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Mon 29 Mar 1965\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1965", ",", "3", ",", "29"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Julie Andrews\>\"", ",", 
+              "\"\<Christopher Plummer\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Spartacus\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 7 Oct 1960\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1960", ",", "10", ",", "7"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Kirk Douglas\>\"", ",", 
+              "\"\<Jean Simmons\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Stagecoach\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Thu 2 Mar 1939\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1939", ",", "3", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Claire Trevor\>\"", ",", 
+              "\"\<John Wayne\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Stand by Me\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 8 Aug 1986\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1986", ",", "8", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Wil Wheaton\>\"", ",", 
+              "\"\<River Phoenix\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Star Trek II: The Wrath of Khan\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 4 Jun 1982\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1982", ",", "6", ",", "4"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<William Shatner\>\"", ",", 
+              "\"\<Leonard Nimoy\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Star Wars: Episode VI - Return of the Jedi\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 25 May 1983\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1983", ",", "5", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Mark Hamill\>\"", ",", 
+              "\"\<Carrie Fisher\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Steel Magnolias\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 15 Nov 1989\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1989", ",", "11", ",", "15"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Sally Field\>\"", ",", 
+              "\"\<Dolly Parton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<A Streetcar Named Desire\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 18 Sep 1951\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1951", ",", "9", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Vivien Leigh\>\"", ",", 
+              "\"\<Marlon Brando\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Sunset Boulevard\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 25 Aug 1950\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1950", ",", "8", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<William Holden\>\"", ",", 
+              "\"\<Gloria Swanson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Tank Girl\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 31 Mar 1995\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1995", ",", "3", ",", "31"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Naomi Watts\>\"", ",", 
+              "\"\<Jeff Kober\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Tarzan of the Apes\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 27 Jan 1918\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1918", ",", "1", ",", "27"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Elmo Lincoln\>\"", ",", 
+              "\"\<Gordon Griffith\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            
+            RowBox[{"{", 
+             RowBox[{"\"\<Taxi Driver\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sun 8 Feb 1976\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1976", ",", "2", ",", "8"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Robert De Niro\>\"", ",", 
+              "\"\<Jodie Foster\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Thelma & Louise\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 24 May 1991\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1991", ",", "5", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Marco St. John\>\"", ",", 
+              "\"\<Geena Davis\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Titanic\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 19 Dec 1997\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1997", ",", "12", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Leonardo DiCaprio\>\"", ",", 
+              "\"\<Kate Winslet\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<To Kill a Mockingbird\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 25 Dec 1962\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1962", ",", "12", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Gregory Peck\>\"", ",", 
+              "\"\<Phillip Alford\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Tommy\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 14 Mar 1975\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1975", ",", "3", ",", "14"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Oliver Reed\>\"", ",", 
+              "\"\<Ann\[Hyphen]Margret\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Top Gun\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 16 May 1986\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1986", ",", "5", ",", "16"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Adrian Pasdar\>\"", ",", 
+              "\"\<Kelly McGillis\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Tora! Tora! Tora!\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 23 Sep 1970\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1970", ",", "9", ",", "23"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Martin Balsam\>\"", ",", 
+              "\"\<Joseph Cotten\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Treasure of the Sierra Madre\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 24 Jan 1948\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1948", ",", "1", ",", "24"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Humphrey Bogart\>\"", ",", 
+              "\"\<Alfonso Bedoya\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<True Grit\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 11 Jun 1969\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1969", ",", "6", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<John Wayne\>\"", ",", 
+              "\"\<Glen Campbell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<12 Angry Men\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Sat 13 Apr 1957\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1957", ",", "4", ",", "13"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Henry Fonda\>\"", ",", 
+              "\"\<Lee J. Cobb\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<2001: A Space Odyssey\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Tue 2 Apr 1968\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1968", ",", "4", ",", "2"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Keir Dullea\>\"", ",", 
+              "\"\<Gary Lockwood\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Up in Smoke\>\"", ",", 
+              RowBox[{"DateObject", "[", 
+               RowBox[{"{", 
+                RowBox[{"1978", ",", " ", "9", ",", " ", "15"}], "}"}], "]"}],
+               ",", "\"\<Cheech Marin\>\"", ",", "\"\<Tommy Chong\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Vertigo\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 9 May 1958\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1958", ",", "5", ",", "9"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Jimmy Stewart\>\"", ",", 
+              "\"\<Kim Novak\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Wall Street\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 11 Dec 1987\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1987", ",", "12", ",", "11"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Michael Douglas\>\"", ",", 
+              "\"\<Charlie Sheen\>\""}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<West Side Story\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 18 Oct 1961\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1961", ",", "10", ",", "18"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Natalie Wood\>\"", ",", 
+              "\"\<Richard Beymer\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Who's Afraid of Virginia Woolf?\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 22 Jun 1966\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1966", ",", "6", ",", "22"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Elizabeth Taylor\>\"", ",", 
+              "\"\<Sandy Dennis\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Willy Wonka & the Chocolate Factory\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Wed 30 Jun 1971\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1971", ",", "6", ",", "30"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Gene Wilder\>\"", ",", 
+              "\"\<Jack Albertson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Wizard of Oz\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 25 Aug 1939\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1939", ",", "8", ",", "25"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Judy Garland\>\"", ",", 
+              "\"\<Frank Morgan\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Way We Were\>\"", ",", 
+              
+              TemplateBox[{
+               RowBox[{"\"Fri 19 Oct 1973\""}],RowBox[{"DateObject", "[", 
+                  RowBox[{"{", 
+                    RowBox[{"1973", ",", "10", ",", "19"}], "}"}], "]"}]},
+               "DateObject",
+               Editable->False], ",", "\"\<Barbra Streisand\>\"", ",", 
+              "\"\<Robert Redford\>\""}], "}"}]}], "}"}], ",", "4"}], "]"}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", "mixed"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<Which of these movies was released `1` starring `2` and \
+`3`?\>\"", ",", 
+            RowBox[{"DateString", "[", 
+             RowBox[{
+              RowBox[{"data", "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", "\"\<DayShort\>\"",
+                 ",", "\"\<, \>\"", ",", "\"\<Year\>\""}], "}"}]}], "]"}], 
+            ",", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "3"}], "]"}], "]"}], ",", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "4"}], "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Hist6\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6864037453968887`*^9, 3.686403746523157*^9}, {
+   3.686416894344974*^9, 3.6864169444016457`*^9}, {3.6864169858691998`*^9, 
+   3.686417043295176*^9}, {3.686417100309144*^9, 3.686417101533337*^9}, 
+   3.68641759115291*^9, 3.6864176672689447`*^9, {3.6864178095039797`*^9, 
+   3.6864178295199537`*^9}, {3.686417905109136*^9, 3.68641790644599*^9}, {
+   3.6864179758650923`*^9, 3.6864179889673758`*^9}, {3.686418174563924*^9, 
+   3.686418194783237*^9}, {3.6864201712931347`*^9, 3.686420174244177*^9}, {
+   3.68642059089193*^9, 3.6864205940087214`*^9}, {3.686420704559512*^9, 
+   3.686420707630971*^9}, {3.686420810501848*^9, 3.686420813628797*^9}, {
+   3.686421066554228*^9, 3.6864210689293213`*^9}, {3.686421134846322*^9, 
+   3.686421137885169*^9}, {3.686421257748259*^9, 3.686421261315729*^9}, {
+   3.686422035946198*^9, 3.686422040425816*^9}, {3.686422130983542*^9, 
+   3.68642214701803*^9}, {3.68642222296418*^9, 3.686422225563521*^9}, {
+   3.686422314785624*^9, 3.686422317696444*^9}, {3.686422392245676*^9, 
+   3.686422395900881*^9}, {3.686422454801608*^9, 3.686422457879825*^9}, {
+   3.686422553758815*^9, 3.686422557021604*^9}, {3.686422613809391*^9, 
+   3.6864226160966063`*^9}, {3.68642270856734*^9, 3.6864227108775063`*^9}, {
+   3.68642283212582*^9, 3.686422834940748*^9}, {3.686422915537188*^9, 
+   3.6864229179538507`*^9}, {3.6864229763332453`*^9, 3.686422978412958*^9}, {
+   3.686423047097148*^9, 3.686423049480193*^9}, {3.6864231311265097`*^9, 
+   3.686423134197816*^9}, {3.6864232318750763`*^9, 3.68642323474652*^9}, {
+   3.686423287030415*^9, 3.686423290604765*^9}, {3.6864234109086018`*^9, 
+   3.686423414155875*^9}, {3.686423491418309*^9, 3.6864234964962807`*^9}, {
+   3.686423563844832*^9, 3.686423566955905*^9}, {3.686423647745199*^9, 
+   3.686423652376096*^9}, {3.686423696892458*^9, 3.6864236994353113`*^9}, {
+   3.686423789273108*^9, 3.6864237918396673`*^9}, {3.686423857812736*^9, 
+   3.686423861563239*^9}, {3.6864239901238947`*^9, 3.686423992569902*^9}, {
+   3.686440199157194*^9, 3.686440202411357*^9}, {3.686440274177534*^9, 
+   3.686440279831436*^9}, {3.6864403727106733`*^9, 3.686440375421945*^9}, {
+   3.686440449971993*^9, 3.686440454210614*^9}, {3.686440519430785*^9, 
+   3.686440523102322*^9}, {3.686440604459469*^9, 3.686440609361926*^9}, {
+   3.686440687335381*^9, 3.6864406951267776`*^9}, {3.686440755445265*^9, 
+   3.686440759283031*^9}, {3.6864408295610523`*^9, 3.6864408351260757`*^9}, {
+   3.686440896651998*^9, 3.68644089997237*^9}, {3.686440993050906*^9, 
+   3.6864409960569773`*^9}, {3.6864410708544207`*^9, 3.686441074131772*^9}, {
+   3.686441254944265*^9, 3.6864412575913973`*^9}, {3.6864413143475847`*^9, 
+   3.686441318922696*^9}, {3.686441433129343*^9, 3.6864414359349403`*^9}, 
+   3.686441491830611*^9, 3.686441541276511*^9, {3.686441598146264*^9, 
+   3.686441601728483*^9}, {3.686441687743464*^9, 3.6864416909574757`*^9}, {
+   3.686441759459947*^9, 3.68644176288836*^9}, {3.6864422299455214`*^9, 
+   3.686442233672379*^9}, {3.686442314581737*^9, 3.6864423178202887`*^9}, {
+   3.686442385849575*^9, 3.686442388944202*^9}, {3.686442492961699*^9, 
+   3.686442495984529*^9}, {3.6864426388806334`*^9, 3.686442642839242*^9}, {
+   3.686442746974531*^9, 3.686442752484624*^9}, {3.686442871183071*^9, 
+   3.686442874042564*^9}, {3.686442935793891*^9, 3.686442940349032*^9}, {
+   3.686443010461339*^9, 3.686443014122588*^9}, {3.686443161276266*^9, 
+   3.686443164138976*^9}, {3.686443212223587*^9, 3.6864432164057913`*^9}, {
+   3.686443555031934*^9, 3.6864435589510727`*^9}, {3.686443642509396*^9, 
+   3.686443646499011*^9}, {3.686443788179123*^9, 3.686443900526101*^9}, {
+   3.686443966364143*^9, 3.6864439699951143`*^9}, {3.686444055834045*^9, 
+   3.686444058801379*^9}, {3.686444111686157*^9, 3.686444114947178*^9}, {
+   3.686444168929098*^9, 3.6864441749349937`*^9}, {3.686444307608885*^9, 
+   3.686444310573785*^9}, {3.686444411725217*^9, 3.686444421235065*^9}, {
+   3.686444479585009*^9, 3.686444482263262*^9}, {3.686444600823444*^9, 
+   3.686444605293181*^9}, {3.686444901023923*^9, 3.686444905325321*^9}, {
+   3.686444969372304*^9, 3.6864449726413307`*^9}, {3.6864451176358337`*^9, 
+   3.686445120687516*^9}, {3.686445176245207*^9, 3.686445179642933*^9}, {
+   3.6864452309357986`*^9, 3.686445235005492*^9}, {3.6864452877660723`*^9, 
+   3.686445290761471*^9}, {3.686445417812047*^9, 3.686445421521687*^9}, {
+   3.686445643356998*^9, 3.6864456466363287`*^9}, {3.6864457518112993`*^9, 
+   3.6864457546097717`*^9}, {3.686445848384079*^9, 3.686445851287047*^9}, {
+   3.686445981364355*^9, 3.686445984077898*^9}, {3.6864460578917418`*^9, 
+   3.686446061646366*^9}, {3.686446148030752*^9, 3.686446150965581*^9}, {
+   3.686446214052643*^9, 3.686446217665924*^9}, {3.686446327947072*^9, 
+   3.686446330488161*^9}, {3.6864465931359863`*^9, 3.686446597493541*^9}, {
+   3.6864466680530853`*^9, 3.6864466710109377`*^9}, {3.686446728624742*^9, 
+   3.6864467310622883`*^9}, {3.6864469347697983`*^9, 3.686446938028626*^9}, {
+   3.686447066689739*^9, 3.686447069756977*^9}, {3.686447135469605*^9, 
+   3.686447138347513*^9}, {3.686447197160346*^9, 3.68644720014147*^9}, {
+   3.686447327999691*^9, 3.686447332251914*^9}, {3.686447395987113*^9, 
+   3.686447398849845*^9}, {3.686447451627871*^9, 3.6864474538815117`*^9}, {
+   3.68644756195473*^9, 3.686447564448764*^9}, {3.686447631581444*^9, 
+   3.686447634388357*^9}, {3.6864477467278557`*^9, 3.686447760786787*^9}, {
+   3.68644791335087*^9, 3.686447916584805*^9}, {3.6864479918344593`*^9, 
+   3.686447995814486*^9}, {3.686448098420416*^9, 3.6864481028647833`*^9}, {
+   3.686448164086444*^9, 3.6864481674151297`*^9}, {3.6864483063903837`*^9, 
+   3.686448321781871*^9}, {3.6864483801429253`*^9, 3.686448384098469*^9}, {
+   3.686448438080557*^9, 3.686448441436846*^9}, {3.686448504860283*^9, 
+   3.686448508584697*^9}, {3.686448566591077*^9, 3.686448571140026*^9}, {
+   3.6864486884776297`*^9, 3.6864486922487583`*^9}, {3.686449007005447*^9, 
+   3.686449010232759*^9}, {3.6864491418661737`*^9, 3.6864491458941917`*^9}, {
+   3.686449375614635*^9, 3.6864493797246513`*^9}, {3.686449628986425*^9, 
+   3.68644963222307*^9}, {3.686449713998478*^9, 3.686449717500477*^9}, {
+   3.686449903558559*^9, 3.686449906077282*^9}, {3.6864499563279667`*^9, 
+   3.686449959252301*^9}, {3.686479755468877*^9, 3.6864797584715157`*^9}, {
+   3.686479826030813*^9, 3.686479829563223*^9}, {3.686479944028232*^9, 
+   3.6864799470035152`*^9}, {3.6864800088552647`*^9, 3.686480012180848*^9}, {
+   3.6864800969655323`*^9, 3.686480100657493*^9}, {3.686480240019189*^9, 
+   3.686480243000667*^9}, {3.6864805113640747`*^9, 3.686480514712945*^9}, {
+   3.686480729031901*^9, 3.686480731803051*^9}, {3.68648088305262*^9, 
+   3.6864808860587463`*^9}, {3.6864809441852417`*^9, 3.686480948542461*^9}, {
+   3.686481067575865*^9, 3.68648107034795*^9}, {3.686481126061438*^9, 
+   3.686481132462528*^9}, {3.6864813227782717`*^9, 3.686481326415102*^9}, {
+   3.686481410429088*^9, 3.68648141349737*^9}, {3.6864816459150133`*^9, 
+   3.686481648820376*^9}, {3.686481716740101*^9, 3.6864817197593403`*^9}, {
+   3.686481924038052*^9, 3.6864819284099607`*^9}, {3.686482050574862*^9, 
+   3.686482053579458*^9}, {3.686482179317073*^9, 3.6864821825898323`*^9}, {
+   3.6864822765382643`*^9, 3.686482296137047*^9}, {3.686482388081561*^9, 
+   3.686482391302923*^9}, {3.6864824754050207`*^9, 3.6864824782646637`*^9}, {
+   3.686482565499773*^9, 3.686482568141863*^9}, {3.686482652014958*^9, 
+   3.6864826552827587`*^9}, {3.6864827127400093`*^9, 3.686482715034708*^9}, {
+   3.686482783705489*^9, 3.686482785783205*^9}, {3.686482898700683*^9, 
+   3.686482902210154*^9}, {3.686482998706955*^9, 3.686483001253367*^9}, {
+   3.686483066067523*^9, 3.686483068424608*^9}, {3.6864831646684923`*^9, 
+   3.686483167895783*^9}, {3.686483242933642*^9, 3.686483245812517*^9}, {
+   3.686483364494857*^9, 3.6864833682157507`*^9}, {3.686483481203148*^9, 
+   3.68648348388846*^9}, {3.686483552372941*^9, 3.686483555952901*^9}, {
+   3.68648368395926*^9, 3.6864836862298326`*^9}, {3.686483762907791*^9, 
+   3.686483767297913*^9}, {3.686483954811054*^9, 3.686483958295053*^9}, {
+   3.6864841138188868`*^9, 3.686484116479741*^9}, {3.686484230569447*^9, 
+   3.686484233692822*^9}, {3.686484326736027*^9, 3.686484330545796*^9}, {
+   3.686484414633951*^9, 3.686484417273231*^9}, {3.686484510029879*^9, 
+   3.686484512628038*^9}, {3.686484715389103*^9, 3.686484717954371*^9}, {
+   3.686484803994791*^9, 3.6864848659045067`*^9}, {3.686484905972946*^9, 
+   3.686485129883541*^9}, {3.686485165793065*^9, 3.686485177126843*^9}, {
+   3.686485214207271*^9, 3.686485219348277*^9}, {3.686492481416731*^9, 
+   3.6864924974074306`*^9}, {3.6864925379068203`*^9, 3.686492630598217*^9}, {
+   3.6864926694769773`*^9, 
+   3.686492677920883*^9}},ExpressionUUID->"bba13771-4518-4e44-863a-\
+8f1273126933"]
+},
+WindowSize->{1222, 972},
+WindowMargins->{{0, Automatic}, {Automatic, 80}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 89991, 1851, 5346, "Input",ExpressionUUID->"bba13771-4518-4e44-863a-8f1273126933"]
+}
+]
+*)
+
