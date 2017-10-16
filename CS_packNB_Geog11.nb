@@ -1,0 +1,127 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4408,        119]
+NotebookOptionsPosition[      4095,        105]
+NotebookOutlinePosition[      4455,        121]
+CellTagsIndexPosition[      4412,        118]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ents", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"CountryData", "[", "]"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"Rasterize", "[", 
+           RowBox[{
+            RowBox[{"ImageCrop", "[", 
+             RowBox[{"Rasterize", "[", 
+              RowBox[{"Rotate", "[", 
+               RowBox[{
+                RowBox[{"GeoGraphics", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"EdgeForm", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}], "]"}], ",", 
+                    RowBox[{"GeoStyling", "[", 
+                    RowBox[{"RGBColor", "[", "\"\<#2E8B57\>\"", "]"}], "]"}], 
+                    ",", 
+                    RowBox[{"Polygon", "[", "h1", "]"}]}], "}"}], ",", 
+                  RowBox[{"GeoBackground", "\[Rule]", "None"}], ",", 
+                  RowBox[{"ImageSize", "\[Rule]", "800"}]}], "]"}], ",", 
+                RowBox[{"RandomReal", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", 
+                   RowBox[{"2", " ", "\[Pi]"}]}], "}"}], "]"}]}], "]"}], 
+              "]"}], "]"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "480", "}"}], ",", 
+               RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"ents", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", "\"\<This is the rotated shape of which country?\>\""}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"EntityValue", "[", 
+           RowBox[{"#", ",", "\"\<Name\>\""}], "]"}], "&"}], "/@", "ents"}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Geog11\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQA2IQfTM24VDIpNeObhZyR0D0D3OnGaFAOnjDhdUg+pTb
+ifUg2seofxuIzt5ZvAtEZ0lu2AOiXU88OwSi3x9jOguilfq3ceUC6QmvvXhB
+dAlfjhCIFlO5KQai5dR4pUH0leVVYPpZWLw8iE7X4lcA0WsuvbUD0UJ7/7mA
+6Cni1YkgOuXp1WQQnfZGrgpEL2Q+XwuiC1pVFoDNnSa4CERXs+5dD6Izcn5s
+BdEqqp92gu3bJrIHROulNJwE0V/XfTsLoqvuW/4Cm9vq/BtELxHT5MgD0vua
+2XhB9LO7DhIg+kFDhiSI/nR4pSaIvtLobgSiFVSCzED0pWvSViC6r70mrQQU
+PhWXwDQAXRO0hw==
+  "],ExpressionUUID->"d8c8c95d-fe31-4dc0-91de-34c30f1d86dc"]
+},
+WindowSize->{1241, 1063},
+WindowMargins->{{1, Automatic}, {42, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3533, 83, 325, "Input",ExpressionUUID->"d8c8c95d-fe31-4dc0-91de-34c30f1d86dc"]
+}
+]
+*)
+
