@@ -1,0 +1,165 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5684,        157]
+NotebookOptionsPosition[      5371,        143]
+NotebookOutlinePosition[      5730,        159]
+CellTagsIndexPosition[      5687,        156]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"yr1", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1950", ",", "2000"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"years", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"DateList", "[", 
+           RowBox[{"ToString", "[", "#", "]"}], "]"}], "&"}], "/@", 
+         RowBox[{"Range", "[", 
+          RowBox[{"yr1", ",", 
+           RowBox[{"yr1", "+", "20"}]}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"inc", "=", 
+        RowBox[{
+         RowBox[{"Sort", "[", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"100", ",", "20"}], "]"}], "]"}], "+", 
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"100", ",", "20"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"exp", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"200", ",", "20"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"Count", "[", 
+         RowBox[{
+          RowBox[{"inc", "-", "exp"}], ",", 
+          RowBox[{"_", "?", "Positive"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"data1", "=", 
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{"Riffle", "[", 
+           RowBox[{"years", ",", "inc"}], "]"}], ",", "2"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"data2", "=", 
+        RowBox[{"Partition", "[", 
+         RowBox[{
+          RowBox[{"Riffle", "[", 
+           RowBox[{"years", ",", "exp"}], "]"}], ",", "2"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"DateListStepPlot", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"data1", ",", "data2"}], "}"}], ",", 
+          RowBox[{"PlotLabels", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<income\>\"", ",", "20", ",", "Blue"}], "]"}], ",", 
+             
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<expense\>\"", ",", "20", ",", "Red"}], "]"}]}], 
+            "}"}]}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Blue", ",", "Thick"}], "}"}], ",", "Red"}], "}"}]}], 
+          ",", 
+          RowBox[{"AspectRatio", "\[Rule]", 
+           FractionBox["11", "8"]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "480", "}"}], ",", 
+             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", "\"\<How many years did income exceed expenses?\>\""}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{"2", ",", "18"}], "]"}], ",", "4"}], "]"}], ",", 
+             "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Grap10\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwlyk0ogwEAh/H3JZJp4sBIwywr2W5MYkzRZsjXli1KtB2puawwWVuxlLVi
+HMiIidl8tWFZHNhtifk+iF3MJB8Ho4b95/D0uzy5Xb3N8hiCILIiQd81tfR3
+PMh/5Xh5kCYboBOGIH9O72RBsfukENaO3hTBpLIMIfx5EErhpK6mA3J79N0w
+RDSpoYZep4XHFrMp+luEZliQkr4EW/0CK8zZeV6HnSUSJ1y9ZbrgrPrMDcnF
+ZQ9MrFd5YT6FdQEDb7ZLOMS4e4GHXM0HHGGQBBnRbGeTMDO+KgFSVecU6Kq+
+yoTb9zo6fDzgsqF6poIDN2hWLlS0SUWQGU5uhP3GbDF0UENS+GnclcE+OWmA
+5cq8qMVx2gn4HhicgmlfvjXoGVbZoMQfuwXbV1L/dXj3YHhh/wjOT/NOIUdp
+j7opUvihoGUsamUD7QmGvk1B+AfdX9Ix
+  
+  "],ExpressionUUID->"d845df82-8442-496d-9085-795b312a7a35"]
+},
+WindowSize->{1201, 1061},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4809, 121, 449, "Input",ExpressionUUID->"d845df82-8442-496d-9085-795b312a7a35"]
+}
+]
+*)
+

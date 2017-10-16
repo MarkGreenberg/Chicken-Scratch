@@ -1,0 +1,280 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11643,        272]
+NotebookOptionsPosition[     11327,        258]
+NotebookOutlinePosition[     11688,        274]
+CellTagsIndexPosition[     11645,        271]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"cors", "=", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"2", "\[Rule]", "\"\<horizontal & vertical scales\>\""}], 
+          ",", 
+          RowBox[{"3", "\[Rule]", "\"\<horizontal scale & bubble size\>\""}], 
+          ",", 
+          RowBox[{"4", "\[Rule]", "\"\<horizontal scale & bubble color\>\""}],
+           " ", ",", 
+          RowBox[{"6", "\[Rule]", "\"\<vertical scale & bubble size\>\""}], 
+          ",", 
+          RowBox[{"8", "\[Rule]", "\"\<vertical scale & bubble color\>\""}], 
+          ",", 
+          RowBox[{"12", "\[Rule]", "\"\<bubble size & color\>\""}]}], 
+         "|>"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"raw1", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "20"}], "}"}], "]"}], ",", "20"}], "]"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"raw2", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "20"}], "}"}], "]"}], ",", "20"}], "]"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"raw3", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "20"}], "}"}], "]"}], ",", "20"}], "]"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"raw4", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"RandomVariate", "[", 
+           RowBox[{"NormalDistribution", "[", 
+            RowBox[{"#", ",", "2.2"}], "]"}], "]"}], "&"}], "/@", "raw3"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"pre", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"{", 
+          RowBox[{"raw1", ",", "raw2", ",", "raw3", ",", "raw4"}], "}"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pos", "=", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Position", "[", 
+            RowBox[{"pre", ",", "raw3"}], "]"}], ",", 
+           RowBox[{"Position", "[", 
+            RowBox[{"pre", ",", "raw4"}], "]"}]}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansStr", "=", 
+        RowBox[{"cors", "[", 
+         RowBox[{
+          RowBox[{"pos", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "*", 
+          RowBox[{"pos", "[", 
+           RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"data", "=", 
+        RowBox[{
+         RowBox[{"Transpose", "[", "pre", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"a_", ",", "b_", ",", "c_", ",", "d_"}], "}"}], "\[Rule]", 
+          
+          RowBox[{"Rule", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"a", ",", "b", ",", "c"}], "}"}], ",", "d"}], 
+           "]"}]}]}]}], ";", "\n", 
+       RowBox[{
+        RowBox[{"data", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "2"}], "]"}], "]"}], "=", 
+        RowBox[{"Rescale", "[", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", 
+           RowBox[{"All", ",", "2"}], "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"scale", "=", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "20"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"20", ",", "1"}], "}"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"data", "[", 
+         RowBox[{"[", 
+          RowBox[{"All", ",", "1", ",", "3"}], "]"}], "]"}], "=", 
+        RowBox[{
+         RowBox[{"Rescale", "[", 
+          RowBox[{
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1", ",", "3"}], "]"}], "]"}], ",", 
+           "scale"}], "]"}], "*", "2.2"}]}], ";", "\n", 
+       RowBox[{"grad", "=", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+          RowBox[{"ColorData", "[", "\"\<SolarColors\>\"", "]"}], ",", 
+          RowBox[{"ColorData", "[", 
+           RowBox[{"{", 
+            RowBox[{"\"\<SolarColors\>\"", ",", "\"\<Reverse\>\""}], "}"}], 
+           "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ClearAll", "[", "bub", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"bub", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"xrange_", ",", "yrange_"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"x_", ",", "y_", ",", "z_"}], "}"}], ",", "meta_"}], "]"}],
+         ":=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Disk", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"x", ",", "y"}], "}"}], ",", "z"}], "]"}], ",", 
+          RowBox[{"grad", "[", 
+           RowBox[{"First", "@", "meta"}], "]"}]}], "]"}]}], ";", "\n", 
+       RowBox[{"pic", "=", 
+        RowBox[{"BubbleChart", "[", 
+         RowBox[{"data", ",", 
+          RowBox[{"ChartElementFunction", "\[Rule]", "bub"}], ",", 
+          RowBox[{"LabelStyle", "\[Rule]", "White"}], ",", 
+          RowBox[{"AspectRatio", "\[Rule]", "Automatic"}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "480", "}"}], ",", 
+             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<In this bubble chart, there is a strong correlation between \
+the...\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Take", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"Values", "[", "cors", "]"}], ",", "4"}], "]"}], ",", 
+             "ansStr"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Grap12\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.699475603170732*^9, 3.699475639563295*^9}, {
+   3.699475682150066*^9, 3.699475723253236*^9}, {3.699475768727214*^9, 
+   3.69947580161033*^9}, {3.6996167118849173`*^9, 3.699616776537258*^9}, {
+   3.699616949649212*^9, 3.699617022802915*^9}, {3.699618364813693*^9, 
+   3.699618481631673*^9}, {3.699624339781508*^9, 3.699624368721583*^9}, 
+   3.699624472095847*^9, 3.6996245263465023`*^9, {3.699624592660215*^9, 
+   3.699624632984079*^9}, {3.699625148764082*^9, 3.699625182073216*^9}, {
+   3.699625224835322*^9, 3.6996252278112783`*^9}, {3.6996252956959457`*^9, 
+   3.6996253728980913`*^9}, 3.6996262053713903`*^9, {3.6996262584859953`*^9, 
+   3.6996262595325937`*^9}, {3.699626326487501*^9, 3.699626375619404*^9}, {
+   3.6996264502942467`*^9, 3.699626576026697*^9}, {3.699626617718534*^9, 
+   3.699626714699037*^9}, {3.69962677101429*^9, 3.6996267764684553`*^9}, {
+   3.69962690743601*^9, 3.6996269197731037`*^9}, {3.6996269553421097`*^9, 
+   3.699627048738982*^9}, {3.699627279061427*^9, 3.699627402738678*^9}, {
+   3.699627445093718*^9, 3.699627473149452*^9}, {3.699627576971323*^9, 
+   3.699627586058144*^9}, {3.699627668232428*^9, 3.699627703232155*^9}, {
+   3.699628097531773*^9, 3.699628223224627*^9}, {3.699628335062641*^9, 
+   3.699628379105257*^9}, {3.699628477413632*^9, 3.699628484020831*^9}, {
+   3.69962852531884*^9, 3.6996286751278*^9}, {3.699628707113233*^9, 
+   3.699628710950989*^9}, {3.699628808637992*^9, 3.699628855245912*^9}, {
+   3.699629204970642*^9, 3.699629214296979*^9}, {3.699629340934815*^9, 
+   3.699629415993832*^9}, {3.699629539352017*^9, 3.699629540422649*^9}, {
+   3.6996296678475924`*^9, 3.699629679989819*^9}, {3.699629747464945*^9, 
+   3.699629871550922*^9}, {3.699629942756132*^9, 3.699629967507998*^9}, 
+   3.699630067074542*^9, {3.6996302737315073`*^9, 3.6996303543583307`*^9}, {
+   3.699630715200798*^9, 3.699630814339368*^9}, {3.699630885512368*^9, 
+   3.69963102124701*^9}, {3.6996313855930157`*^9, 3.6996315070686073`*^9}, 
+   3.699631545136602*^9, 3.699631724377294*^9, 3.699631764779867*^9, {
+   3.6996321344440613`*^9, 3.699632139778614*^9}, {3.699632365527256*^9, 
+   3.6996324055275393`*^9}, {3.699632545943946*^9, 3.699632554286574*^9}, {
+   3.699632882959341*^9, 3.699632938634123*^9}, {3.699632975188224*^9, 
+   3.69963307209569*^9}, 3.6996332381222353`*^9, {3.699633273125544*^9, 
+   3.699633433184105*^9}, {3.699633611658278*^9, 3.6996336236496773`*^9}, {
+   3.699633660283268*^9, 3.6996337169991293`*^9}, {3.699640891759569*^9, 
+   3.6996409989388514`*^9}, {3.699641063831336*^9, 3.699641120266119*^9}, {
+   3.699641161371972*^9, 3.699641198356718*^9}, 3.699641232486885*^9, {
+   3.699641390007615*^9, 3.6996414892347097`*^9}, {3.699642149236186*^9, 
+   3.69964246569064*^9}, {3.699701833424528*^9, 3.699701837828066*^9}, {
+   3.6997020859942408`*^9, 3.6997021047210617`*^9}, {3.699702171630329*^9, 
+   3.699702194253241*^9}, {3.699702227264311*^9, 3.699702247895296*^9}, {
+   3.6997022826824913`*^9, 3.699702318370586*^9}, {3.699702503124646*^9, 
+   3.699702519731392*^9}, {3.6997027646366673`*^9, 3.699702767771515*^9}, {
+   3.699702864150888*^9, 3.699702891077903*^9}, {3.699702968243698*^9, 
+   3.699703041986751*^9}, {3.699703120528069*^9, 3.6997031273444147`*^9}, {
+   3.6997034052856903`*^9, 3.6997034498787317`*^9}, {3.699703495001473*^9, 
+   3.699703700961403*^9}, {3.699703748364393*^9, 3.699703778196848*^9}, {
+   3.699703899284196*^9, 3.699704002142995*^9}, {3.699704179313171*^9, 
+   3.6997041860714273`*^9}, {3.699704258228903*^9, 
+   3.6997042897272873`*^9}},ExpressionUUID->"7d301161-035f-4614-a89b-\
+bad9b52f528d"]
+},
+WindowSize->{1557, 1067},
+WindowMargins->{{20, Automatic}, {40, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 10765, 236, 556, "Input",ExpressionUUID->"7d301161-035f-4614-a89b-bad9b52f528d"]
+}
+]
+*)
+
