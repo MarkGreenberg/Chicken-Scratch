@@ -1,0 +1,425 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16870,        417]
+NotebookOptionsPosition[     16553,        403]
+NotebookOutlinePosition[     16914,        419]
+CellTagsIndexPosition[     16871,        416]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<zapateria\>\"", ",", "\"\<magasin de chaussures\>\""}], 
+               "}"}], ",", "\"\<shoes\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<libreria\>\"", ",", "\"\<librairie\>\""}], "}"}], 
+              ",", "\"\<books\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<pasteleria\>\"", ",", "\"\<p\[AHat]tisserie\>\""}], "}"}],
+               ",", "\"\<pastries\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<papeleria\>\"", ",", "\"\<magasin de papeterie\>\""}], 
+               "}"}], ",", "\"\<stationery\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<panaderia\>\"", ",", "\"\<boulangerie\>\""}], 
+               "}"}], ",", "\"\<bread\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<joyeria\>\"", ",", "\"\<bijouterie\>\""}], "}"}], 
+              ",", "\"\<jewelry\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<farmacia\>\"", ",", "\"\<pharmacie\>\""}], "}"}], 
+              ",", "\"\<prescription drugs\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<confiter\[IAcute]a\>\"", ",", "\"\<confiserie\>\""}], 
+               "}"}], ",", "\"\<candy\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<florister\[IAcute]a\>\"", ",", "\"\<fleuriste\>\""}], 
+               "}"}], ",", "\"\<flowers\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<gasolinera\>\"", ",", "\"\<station-essence\>\""}],
+                "}"}], ",", "\"\<fuel\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<peluquer\[IAcute]a\>\"", ",", 
+                "\"\<est\[EAcute]tica\>\""}], "}"}], ",", 
+              "\"\<hair products\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<carniceria\>\"", ",", "\"\<boucherie\>\""}], 
+               "}"}], ",", "\"\<meats\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<pescader\[IAcute]a\>\"", ",", "\"\<poissonnerie\>\""}], 
+               "}"}], ",", "\"\<fish\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<correo\>\"", ",", "\"\<poste\>\""}], "}"}], ",", 
+              "\"\<postage stamps\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<agencia de viajes\>\"", ",", "\"\<agent de voyage\>\""}], 
+               "}"}], ",", "\"\<travel plans\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<ferreter\[IAcute]a\>\"", ",", "\"\<quincaillerie\>\""}], 
+               "}"}], ",", "\"\<hardware\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<muebler\[IAcute]a\>\"", ",", 
+                "\"\<magasin de meubles\>\""}], "}"}], ",", 
+              "\"\<furniture\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tienda de discos\>\"", ",", 
+                "\"\<magasin de disques\>\""}], "}"}], ",", "\"\<music\>\""}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tienda de antig\[UDoubleDot]edades\>\"", ",", 
+                "\"\<magasin d'antiquit\[EAcute]s\>\""}], "}"}], ",", 
+              "\"\<antiques\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tienda de licores\>\"", ",", "\"\<magasin d'alcool\>\""}],
+                "}"}], ",", "\"\<hard alcoholic beverages\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tienda de mascotas\>\"", ",", "\"\<animalerie\>\""}], 
+               "}"}], ",", "\"\<pets\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "\"\<verduler\[IAcute]a\>\"", "}"}], ",", 
+              "\"\<fruits and vegetables\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tienda de alimentos\>\"", ",", 
+                "\"\<\[EAcute]picerie magasin\>\""}], "}"}], ",", 
+              "\"\<groceries\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tienda de ropas\>\"", ",", 
+                "\"\<magasin de confection, de v\[EHat]tements\>\""}], "}"}], 
+              ",", "\"\<clothing\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<cafeter\[IAcute]a\>\"", ",", "\"\<caf\[EAcute]\>\""}], 
+               "}"}], ",", "\"\<coffee\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<jugueter\[IAcute]a\>\"", ",", 
+                "\"\<magasin de jouets\>\""}], "}"}], ",", "\"\<toys\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<helader\[IAcute]a\>\"", ",", "\"\<glacier\>\""}], 
+               "}"}], ",", "\"\<ice cream\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<llanter\[IAcute]a\>\"", ",", "\"\<magasin de pneus\>\""}],
+                "}"}], ",", "\"\<automobile tires\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<cervecer\[IAcute]a\>\"", ",", "\"\<brasserie\>\""}], 
+               "}"}], ",", "\"\<beer\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<droguer\[IAcute]a\>\"", ",", "\"\<droguerie\>\""}], "}"}],
+               ",", "\"\<over-the-counter drugs\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<ebanister\[IAcute]a\>\"", ",", 
+                "\"\<\[EAcute]b\[EAcute]niste\>\""}], "}"}], ",", 
+              "\"\<cabinetry\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<fruter\[IAcute]a\>\"", ",", "\"\<magasin de fruits\>\""}],
+                "}"}], ",", "\"\<fruit\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<herborister\[IAcute]a\>\"", ",", "\"\<herboriste\>\""}], 
+               "}"}], ",", "\"\<herbal remedies\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<herrer\[IAcute]a\>\"", ",", "\"\<forgeron\>\""}], 
+               "}"}], ",", "\"\<metalwork\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<lencer\[IAcute]a\>\"", ",", 
+                "\"\<boutique de lingerie\>\""}], "}"}], ",", 
+              "\"\<lingerie\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<perfumer\[IAcute]a\>\"", ",", 
+                "\"\<boutique de parfums\>\""}], "}"}], ",", 
+              "\"\<perfumes\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "\"\<pizzer\[IAcute]a\>\"", "}"}], ",", 
+              "\"\<pizza\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<sastrer\[IAcute]a\>\"", ",", "\"\<tailleur\>\""}],
+                "}"}], ",", "\"\<tailored dress clothes\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<sombrerer\[IAcute]a\>\"", ",", "\"\<mercerie\>\""}], 
+               "}"}], ",", "\"\<hats\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tapicer\[IAcute]a\>\"", ",", 
+                "\"\<atelier de rembourrage\>\""}], "}"}], ",", 
+              "\"\<upholstery\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<tintorer\[IAcute]a\>\"", ",", "\"\<teinturier\>\""}], 
+               "}"}], ",", "\"\<dry cleaning\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<lavander\[IAcute]a\>\"", ",", "\"\<laverie\>\"", ",", 
+                "\"\<blanchisserie\>\""}], "}"}], ",", "\"\<laundry\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "\"\<taqueria\>\"", "}"}], ",", "\"\<tacos\>\""}], 
+             "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<lechoneria\>\"", ",", "\"\<charcuterie\>\""}], 
+               "}"}], ",", "\"\<pork\>\""}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<lecher\[IAcute]a\>\"", ",", "\"\<laiterie\>\"", ",", 
+                "\"\<cr\[EAcute]merie\>\""}], "}"}], ",", 
+              "\"\<dairy products\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "\"\<fromagerie\>\"", "}"}], ",", 
+              "\"\<cheese\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", "\"\<marchand de vins\>\"", "}"}], ",", 
+              "\"\<wines\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"\"\<tabaquer\[IAcute]a\>\"", ",", "\"\<tabac\>\""}], 
+               "}"}], ",", "\"\<smoking products\>\""}], "}"}]}], 
+           "\[IndentingNewLine]", "}"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"phrase", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Traveling, you happen upon a shop displaying a sign with the \
+`1` `2` in it. What would be the shop's main product or service?\>\"", ",", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"StringContainsQ", "[", " ", 
+             RowBox[{"phrase", ",", "\"\< \>\""}], "]"}], ",", 
+            "\"\<words\>\"", ",", "\"\<word\>\""}], "]"}], ",", 
+          RowBox[{"Style", "[", 
+           RowBox[{"phrase", ",", "Italic"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lang7\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwl0Xkw1GEYB/Cl7O6UJeNI0xI5wlpa/mAK41xpxGz2jyhGrqxxDGsYpljZ
+XLlqDIp1btKUJIPKMcoxlKvtmqY2TWxIViSWHPn++uOdz7wz7zzP93lew5C4
+s+HKJBLJY/fAw8OCg0LBvMt2DNUMjs/aWcN9PjxCm3xfW0jXXHOD3ARzLyjr
+owRCp0eV4VDIkMXBH61zfGhtGpkKZy6+S4ehjfEZkDOykAWvT5LyIP97ZiGs
+4d0oI+pKxiqJHM0eLTC1abAdyoMcuqFyt+I5TKrLlsAGyoocslvdl+Fyafom
+MQ+VT762a3ta4364woqmwYiwXk34hRJuBLe0/Y5B8YaXObReSGTCVfKUA5wV
+9jvDgYQuV6KOqb831L0k5UAR4/Y5mJTT6w+LPwkC4SJdJxi2llPa4M3pkddE
+H7Hje5haqP4RBnJGpFDdjjkJ2yR7Z2De48o56P5QbQ1u0sIUsCb57Z6sXW+w
+C1QgLU2mBhW0dHW4pFeuB6ODt47AvHBtY7jSW2kCjfxNGZA6ZM+Enb8GWFB3
+JsIWWpxscoS1Bt+8oWs5lQOjxtl+0LPKzR+Sq40vwBBjw2A45nslFq56X06B
+yzkVabBks+oqjOyZzoTn83ayiZwk1VLoq3lPBLeSLauhE8/mLpxIFDfCWIfI
+Jlg+mt0C5dpd7ZBLt3oCP/crdUPlNXEPkcNlcBAKXigNwQbm1xGoYf97lHgX
+SpbAhPW4N/B4T9UHWEwVS4m+na7TUPVMjYzYI6d+DtZpieZhhYbDH2J/ga8I
+nSOH12FAs9tfYg5h1A6Rq6OelI1/k/epwMafpRQ4TVbQIJVSqw4fmBZpw6m2
+Ah1YV6ZFh+kUlj48vZhrBLm3DE2ggUDfAiYsxTNgkMiCBfknXtpACzN9ezhx
+X88dbmR0eIh2HToawIYl8jvPoL5UtxNupHgoVePO9jsExZ1MA2hwysoSWvFX
+PaHP8FMepMfFxMPtotL/TrByIfeAUj78B+FmPmg=
+  
+  "],ExpressionUUID->"c371b868-1c4a-4f21-a0fe-7fbde4bf3829"]
+},
+WindowSize->{1205, 1052},
+WindowMargins->{{-2, Automatic}, {Automatic, 46}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 15991, 381, 1333, "Input",ExpressionUUID->"c371b868-1c4a-4f21-a0fe-7fbde4bf3829"]
+}
+]
+*)
+

@@ -1,0 +1,139 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5025,        131]
+NotebookOptionsPosition[      4712,        117]
+NotebookOutlinePosition[      5072,        133]
+CellTagsIndexPosition[      5029,        130]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"choices", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<Noun\>\"", ",", "\"\<Verb\>\"", ",", "\"\<Adjective\>\"", ",", 
+          "\"\<Adverb\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pos", "=", 
+        RowBox[{"RandomChoice", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ex", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "ex", "]"}], "<", "1"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"wd", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"WordData", "[", 
+             RowBox[{"All", ",", "pos"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"WordData", "[", 
+            RowBox[{"wd", ",", "\"\<Examples\>\""}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"try", "=", 
+           RowBox[{"Values", "[", 
+            RowBox[{"DeleteCases", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Keys", "[", "#", "]"}], "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "==", "pos"}], ",", "#"}],
+                  "]"}], "&"}], "/@", "data"}], ",", 
+              RowBox[{
+               RowBox[{"(", "Null", ")"}], "|", 
+               RowBox[{"(", 
+                RowBox[{"_", "\[Rule]", 
+                 RowBox[{"{", "}"}]}], ")"}]}]}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ex", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"try", "\[Equal]", 
+              RowBox[{"{", "}"}]}], ",", 
+             RowBox[{"{", "}"}], ",", 
+             RowBox[{"RandomChoice", "[", "try", "]"}]}], "]"}]}]}]}], "]"}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"choices", ",", "pos"}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{"\"\<How is `1` used in \\\"`2`\\\"?\>\"", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{"wd", ",", "Italic"}], "]"}], ",", 
+            RowBox[{"ex", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "choices"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lang6\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.686393743253854*^9, 3.68639377034332*^9}, {
+  3.686394377881363*^9, 3.686394447539351*^9}, {3.6863944844853153`*^9, 
+  3.6863946605025377`*^9}, {3.686394964654365*^9, 3.686395049736866*^9}, {
+  3.686395296974721*^9, 3.686395384131341*^9}, {3.686396619090413*^9, 
+  3.686396697017767*^9}, {3.68639679815816*^9, 3.686396975373479*^9}, {
+  3.6863972909094057`*^9, 3.686397333361258*^9}, {3.6863974299469547`*^9, 
+  3.686397437788069*^9}, {3.686397790532873*^9, 3.686397936993505*^9}, {
+  3.686397970444642*^9, 3.686398047614057*^9}, {3.686398110908782*^9, 
+  3.68639811170557*^9}, {3.68639814602031*^9, 3.686398165955872*^9}, {
+  3.686398289279121*^9, 3.686398292250517*^9}, {3.686398434836747*^9, 
+  3.6863984443458567`*^9}, {3.686398482869686*^9, 
+  3.686398491526175*^9}},ExpressionUUID->"29c51753-9b3a-423d-9efe-\
+f3303c7b1670"]
+},
+WindowSize->{1224, 1048},
+WindowMargins->{{0, Automatic}, {15, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4150, 95, 325, "Input",ExpressionUUID->"29c51753-9b3a-423d-9efe-f3303c7b1670"]
+}
+]
+*)
+
