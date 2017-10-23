@@ -1,0 +1,310 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14561,        302]
+NotebookOptionsPosition[     14245,        288]
+NotebookOutlinePosition[     14606,        304]
+CellTagsIndexPosition[     14563,        301]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"<|", 
+           RowBox[{
+            RowBox[{"\"\<Silent Spring\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Rachel Carson\>\"", ",", "1962"}], "}"}]}], ",", 
+            RowBox[{"\"\<Mein Kampf\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Adolf Hitler\>\"", ",", "1926"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Double Helix\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<James D. Watson\>\"", ",", "1968"}], "}"}]}], ",", 
+            
+            RowBox[{
+            "\"\<The General Theory of Employment, Interest and Money\>\"", 
+             "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<John Maynard Keynes\>\"", ",", "1936"}], "}"}]}], 
+            ",", 
+            RowBox[{
+            "\"\<How to Win Frinds and Influence People\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Dale Carnegie\>\"", ",", "1936"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Communist Manifesto\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Karl Marx and Frederick Engels\>\"", ",", "1848"}],
+               "}"}]}], ",", 
+            RowBox[{"\"\<Black Boy\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Richard Wright\>\"", ",", "1945"}], "}"}]}], ",", 
+            RowBox[{"\"\<Three Cups of Tea\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Greg Mortenson\>\"", ",", "2007"}], "}"}]}], ",", 
+            RowBox[{"\"\<Bury My Heart at Wounded Knee\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Dee Brown\>\"", ",", "1970"}], "}"}]}], ",", 
+            RowBox[{"\"\<Capitalism and Freedom\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Milton Friedman\>\"", ",", "1962"}], "}"}]}], ",", 
+            
+            RowBox[{"\"\<The Feminine Mystique\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Betty Friedan\>\"", ",", "1963"}], "}"}]}], ",", 
+            RowBox[{"\"\<The God Delusion\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Richard Dawkins\>\"", ",", "2006"}], "}"}]}], ",", 
+            
+            RowBox[{"\"\<Eats, Shoots & Leaves\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Lynne Truss\>\"", ",", "2003"}], "}"}]}], ",", 
+            RowBox[{"\"\<Confessions\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Jean-Jacques Rousseau\>\"", ",", "1789"}], "}"}]}],
+             ",", 
+            RowBox[{"\"\<The Elements of Style\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<William Strunk Jr.\>\"", ",", "1918"}], "}"}]}], 
+            ",", 
+            RowBox[{"\"\<In Cold Blood\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Truman Capote\>\"", ",", "1965"}], "}"}]}], ",", 
+            RowBox[{"\"\<I Know Why the Caged Bird Sings\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Maya Angelou\>\"", ",", "1969"}], "}"}]}], ",", 
+            RowBox[{"\"\<Fast Food Nation\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Eric Schlosser\>\"", ",", "2001"}], "}"}]}], ",", 
+            RowBox[{"\"\<Maus: A Survivor's Tale\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Art Spiegelman\>\"", ",", "1986"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Art of War\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Niccol\[OGrave] Machiavelli\>\"", ",", "1521"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<A Room of One's Own\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Virginia Woolf\>\"", ",", "1928"}], "}"}]}], ",", 
+            RowBox[{"\"\<A Brief History of Time\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Stephen Hawking\>\"", ",", "1987"}], "}"}]}], ",", 
+            
+            RowBox[{"\"\<All the President's Men\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Carl Bernstein\>\"", ",", "1974"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Selfish Gene\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Richard Dawkins\>\"", ",", "1976"}], "}"}]}], ",", 
+            
+            RowBox[{"\"\<A Moveable Feast\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Ernest Hemingway\>\"", ",", "1964"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Electric Kool-Aid Acid Test\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Tom Wolf\>\"", ",", "1968"}], "}"}]}], ",", 
+            RowBox[{
+            "\"\<Mastering the Art of French Cooking\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Julia Child\>\"", ",", "1961"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Executioner's Song\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Norman Mailer\>\"", ",", "1979"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Naked Ape\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Desmond Morris\>\"", ",", "1967"}], "}"}]}], ",", 
+            RowBox[{"\"\<Notes of a Native Son\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<James Baldwin\>\"", ",", "1955"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Autobiography of Alice B. Toklas\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Gertrude Stein\>\"", ",", "1933"}], "}"}]}], ",", 
+            RowBox[{"\"\<Why We Can't Wait\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Martin Luther King Jr.\>\"", ",", "1963"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<The Conscience of a Conservative\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Barry M. Goldwater\>\"", ",", "1960"}], "}"}]}], 
+            ",", 
+            RowBox[{"\"\<How to Cook a Wolf\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<M.F.K. Fisher\>\"", ",", "1942"}], "}"}]}], ",", 
+            RowBox[{"\"\<Sexual Behavior in the Human Male\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Alfred C. Kinsey\>\"", ",", "1948"}], "}"}]}], ",", 
+            RowBox[{"\"\<Living to Tell the Tale\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Gabriel Garc\[IAcute]a M\[AAcute]rquez\>\"", ",", "2002"}],
+               "}"}]}], ",", 
+            RowBox[{"\"\<The Ancestor's Tale\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Richard Dawkins\>\"", ",", "2004"}], "}"}]}], ",", 
+            
+            RowBox[{"\"\<Gray's Anatomy\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Peter L. Williams and Henry Gray\>\"", ",", "1858"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<The Print\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ansel Adams and Robert Hardy Baker\>\"", ",", "1968"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<The Negative\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ansel Adams and Robert Hardy Baker\>\"", ",", "1948"}], 
+              "}"}]}], ",", 
+            RowBox[{"\"\<Homage to Catalonia\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<George Orwell\>\"", ",", "1938"}], "}"}]}], ",", 
+            RowBox[{
+            "\"\<The History of the Decline and Fall of the Roman Empire\>\"",
+              "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Edward Gibbon\>\"", ",", "1776"}], "}"}]}], ",", 
+            RowBox[{"\"\<Unbroken\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Laura Hillenbrand\>\"", ",", "2010"}], "}"}]}], 
+            ",", 
+            RowBox[{
+            "\"\<Don't Bother Me Mom \[LongDash] I'm Learning\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Marc Prensky\>\"", ",", "2006"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Connected Family\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Seymour Papert\>\"", ",", "1962"}], "}"}]}], ",", 
+            RowBox[{
+            "\"\<Topics in the Theory of Generative Grammar\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Noam Chomsky\>\"", ",", "1966"}], "}"}]}], ",", 
+            RowBox[{"\"\<On the Origin of Species\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Charles Darwin\>\"", ",", "1859"}], "}"}]}], ",", 
+            RowBox[{"\"\<The Prince\>\"", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"\"\<Niccol\[OGrave] Machiavelli\>\"", ",", "1532"}], 
+              "}"}]}]}], "|>"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", 
+         RowBox[{"Keys", "[", "data", "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Which of these nonfiction books was written by `1` and \
+published in `2`?\>\"", ",", 
+          RowBox[{
+           RowBox[{"Values", "[", "data", "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
+          RowBox[{
+           RowBox[{"Values", "[", "data", "]"}], "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lite9\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.694879000790038*^9, 3.6948790196878843`*^9}, {
+   3.694879128160941*^9, 3.694879147043285*^9}, {3.694879205847579*^9, 
+   3.694879289090476*^9}, {3.694879364120618*^9, 3.6948793936229687`*^9}, {
+   3.694879489614771*^9, 3.694879520909575*^9}, {3.694879664063146*^9, 
+   3.694879718518404*^9}, {3.694879781972865*^9, 3.694879953089628*^9}, {
+   3.694880006686144*^9, 3.6948800112293873`*^9}, {3.694880051537426*^9, 
+   3.6948800555918827`*^9}, {3.694880087338147*^9, 3.6948800882562523`*^9}, {
+   3.6948801486222687`*^9, 3.694880180501749*^9}, {3.694880220512805*^9, 
+   3.694880220918817*^9}, {3.694880263978448*^9, 3.694880288922777*^9}, {
+   3.694880328126789*^9, 3.694880390864822*^9}, {3.694880436796229*^9, 
+   3.69488047524299*^9}, {3.694880523424118*^9, 3.6948805687913923`*^9}, {
+   3.6948806561662893`*^9, 3.694880702141605*^9}, {3.694880795813245*^9, 
+   3.694880844436804*^9}, {3.694880880625739*^9, 3.6948809769313097`*^9}, {
+   3.69488101258388*^9, 3.694881058711277*^9}, {3.6948813181037893`*^9, 
+   3.6948813740784073`*^9}, {3.694881450067307*^9, 3.694881690229205*^9}, {
+   3.694881727336446*^9, 3.694881769939271*^9}, {3.694881808308332*^9, 
+   3.694881903632592*^9}, {3.6948823438392153`*^9, 3.694882378782065*^9}, {
+   3.69488242848172*^9, 3.694882470586884*^9}, {3.694882524350309*^9, 
+   3.6948825572325907`*^9}, {3.694882594538868*^9, 3.694882629681748*^9}, {
+   3.694882668517015*^9, 3.694882708229163*^9}, {3.694882783523993*^9, 
+   3.694882829669902*^9}, {3.694882922786495*^9, 3.694882960547751*^9}, {
+   3.694883025039475*^9, 3.694883070402071*^9}, {3.6948831144756737`*^9, 
+   3.694883252879616*^9}, {3.6948833477989693`*^9, 3.69488338852647*^9}, {
+   3.6948834484118767`*^9, 3.694883484163268*^9}, {3.694883594691146*^9, 
+   3.6948836255548277`*^9}, {3.6948836709073257`*^9, 3.694883698541151*^9}, {
+   3.694884150421357*^9, 3.694884247750752*^9}, {3.694884378448455*^9, 
+   3.694884424840131*^9}, {3.6948844577379217`*^9, 3.694884458849277*^9}, {
+   3.694884568992094*^9, 3.694884604680911*^9}, {3.694884639218828*^9, 
+   3.6948846399775677`*^9}, {3.69488520015186*^9, 3.6948852387030888`*^9}, {
+   3.694885573609046*^9, 3.694885661772146*^9}, {3.694885740086578*^9, 
+   3.6948857926789007`*^9}, {3.694885829482356*^9, 3.694885876058834*^9}, {
+   3.694885907484589*^9, 3.694885990120215*^9}, 3.69488603202601*^9, {
+   3.694886074582749*^9, 3.694886079884398*^9}, {3.6948861442146177`*^9, 
+   3.6948861571315536`*^9}, {3.6949704928141003`*^9, 3.694970545092218*^9}, {
+   3.711889638475424*^9, 3.711889639129634*^9}, {3.711889802554249*^9, 
+   3.7118898565689087`*^9}, {3.711889927057885*^9, 3.711889928328549*^9}, {
+   3.711889992265848*^9, 3.711890025056946*^9}, {3.711890174473374*^9, 
+   3.711890174936406*^9}, {3.7118902411210814`*^9, 3.711890264560266*^9}, 
+   3.711890296013348*^9, {3.7118903329529953`*^9, 
+   3.711890365144223*^9}},ExpressionUUID->"04a16951-1fb9-4893-80fd-\
+db48a9b8f06f"]
+},
+WindowSize->{1192, 1071},
+WindowMargins->{{1, Automatic}, {141, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 13683, 266, 724, "Input",ExpressionUUID->"04a16951-1fb9-4893-80fd-db48a9b8f06f"]
+}
+]
+*)
+

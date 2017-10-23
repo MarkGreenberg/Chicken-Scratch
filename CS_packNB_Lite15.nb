@@ -1,0 +1,924 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     42113,        916]
+NotebookOptionsPosition[     41797,        902]
+NotebookOutlinePosition[     42157,        918]
+CellTagsIndexPosition[     42114,        915]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "1", ",", "\"\<The Brethren\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "2", ",", "\"\<The Mark\>\"", ",", 
+            "\"\<Jerry B. Jenkins and Tim LaHaye\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "3", ",", "\"\<The Bear and the Dragon\>\"", ",", 
+            "\"\<Tom Clancy\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "4", ",", "\"\<The Indwelling\>\"", ",", 
+            "\"\<Jerry B. Jenkins and Tim LaHaye\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "5", ",", "\"\<The Last Precinct\>\"", ",", 
+            "\"\<Patricia Cornwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "6", ",", "\"\<Journey\>\"", ",", 
+            "\"\<Danielle Steel\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "7", ",", "\"\<The Rescue\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "8", ",", "\"\<Roses Are Red\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "9", ",", "\"\<Cradle and All\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2000", ",", "10", ",", "\"\<The House on Hope Street\>\"", ",", 
+            "\"\<Danielle Steel\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "1", ",", "\"\<Desecration\>\"", ",", 
+            "\"\<Jerry B. Jenkins and Tim LaHaye\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "2", ",", "\"\<Skipping Christmas\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "3", ",", "\"\<A Painted House\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "4", ",", "\"\<Dreamcatcher\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "5", ",", "\"\<The Corrections\>\"", ",", 
+            "\"\<Jonathan Franzen\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "6", ",", "\"\<Black House\>\"", ",", 
+            "\"\<Stephen King and Peter Straub\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "7", ",", "\"\<Last Man Standing\>\"", ",", 
+            "\"\<David Baldacci\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "8", ",", "\"\<Valhalla Rising\>\"", ",", 
+            "\"\<Clive Cussler\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "9", ",", "\"\<A Day Late and a Dollar Short\>\"", 
+            ",", "\"\<Terry McMillan\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2001", ",", "10", ",", "\"\<Violets Are Blue\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "1", ",", "\"\<The Summons\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "2", ",", "\"\<Red Rabbit\>\"", ",", 
+            "\"\<Tom Clancy\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "3", ",", "\"\<The Remnant\>\"", ",", 
+            "\"\<Jerry B. Jenkins and Tim LaHaye\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "4", ",", "\"\<The Lovely Bones\>\"", ",", 
+            "\"\<Alice Sebold\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "5", ",", "\"\<Prey\>\"", ",", 
+            "\"\<Michael Crichton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "6", ",", "\"\<Skipping Christmas\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "7", ",", "\"\<The Shelters of Stone\>\"", ",", 
+            "\"\<Jean M. Auel\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "8", ",", "\"\<Four Blind Mice\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "9", ",", "\"\<Everything's Eventual\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2002", ",", "10", ",", "\"\<The Nanny Diaries\>\"", ",", 
+            "\"\<Emma McLaughlin and Nicola Kraus\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "1", ",", 
+            "\"\<H. P. and the Order of the Phoenix\>\"", ",", 
+            "\"\<J.K. Rowling\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "2", ",", "\"\<The Da Vinci Code\>\"", ",", 
+            "\"\<Dan Brown\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "3", ",", "\"\<5 People You Meet in Heaven\>\"", ",", 
+            "\"\<Mitch Albom\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "4", ",", "\"\<The King of Torts\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "5", ",", "\"\<Bleachers\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "6", ",", "\"\<Armageddon\>\"", ",", 
+            "\"\<Tim LaHaye and Jerry B. Jenkins\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "7", ",", "\"\<The Teeth of the Tiger\>\"", ",", 
+            "\"\<Tom Clancy\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "8", ",", "\"\<The Big Bad Wolf\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "9", ",", "\"\<Blow Fly\>\"", ",", 
+            "\"\<Patricia Cornwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2003", ",", "10", ",", "\"\<The Lovely Bones\>\"", ",", 
+            "\"\<Alice Sebold\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "1", ",", "\"\<The Da Vinci Code\>\"", ",", 
+            "\"\<Dan Brown\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "2", ",", "\"\<5 People You Meet in Heaven\>\"", ",", 
+            "\"\<Mitch Albom\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "3", ",", "\"\<The Last Juror\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "4", ",", "\"\<Glorious Appearing\>\"", ",", 
+            "\"\<Jerry B. Jenkins and Tim LaHaye\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "5", ",", "\"\<Angels & Demons\>\"", ",", 
+            "\"\<Dan Brown\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "6", ",", "\"\<State of Fear\>\"", ",", 
+            "\"\<Michael Crichton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "7", ",", "\"\<London Bridges\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "8", ",", "\"\<Trace\>\"", ",", 
+            "\"\<Patricia Cornwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "9", ",", "\"\<The Rule of Four\>\"", ",", 
+            "\"\<Ian Caldwell and Dustin Thomason\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2004", ",", "10", ",", "\"\<The Da Vinci Code: Collectors\>\"", 
+            ",", "\"\<Dan Brown\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "1", ",", "\"\<The Broker\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "2", ",", "\"\<The Da Vinci Code\>\"", ",", 
+            "\"\<Dan Brown\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "3", ",", "\"\<Mary, Mary\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "4", ",", "\"\<At First Sight\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "5", ",", "\"\<Predator\>\"", ",", 
+            "\"\<Patricia Cornwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "6", ",", "\"\<True Believer\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "7", ",", "\"\<Light from Heaven\>\"", ",", 
+            "\"\<Jan Karon\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "8", ",", "\"\<The Historian\>\"", ",", 
+            "\"\<Elizabeth Kostova\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "9", ",", "\"\<The Mermaid Chair\>\"", ",", 
+            "\"\<Sue Monk Kidd\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2005", ",", "10", ",", "\"\<Eleven on Top\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "1", ",", "\"\<For One More Day\>\"", ",", 
+            "\"\<Mitch Albom\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "2", ",", "\"\<Cross\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "3", ",", "\"\<Dear John\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "4", ",", "\"\<Next\>\"", ",", 
+            "\"\<Michael Crichton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "5", ",", "\"\<Hannibal Rising\>\"", ",", 
+            "\"\<Thomas Harris\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "6", ",", "\"\<Lisey's Story\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "7", ",", "\"\<Twelve Sharp\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "8", ",", "\"\<Cell\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "9", ",", "\"\<Beach Road\>\"", ",", 
+            "\"\<James Patterson and Peter De Jonge\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2006", ",", "10", ",", "\"\<The 5th Horseman\>\"", ",", 
+            "\"\<James Patterson and Maxine Paetro\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "1", ",", "\"\<H. P. and the Deathly Hallows\>\"", 
+            ",", "\"\<J.K. Rowling\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "2", ",", "\"\<A Thousand Splendid Suns\>\"", ",", 
+            "\"\<Khaled Hosseini\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "3", ",", "\"\<Playing For Pizza\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "4", ",", "\"\<The Choice\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "5", ",", "\"\<Lean Mean Thirteen\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "6", ",", "\"\<Plum Lovin'\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "7", ",", "\"\<Book of the Dead\>\"", ",", 
+            "\"\<Patricia Cornwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "8", ",", "\"\<The Quickie\>\"", ",", 
+            "\"\<James Patterson and Michael Ledwidge\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "9", ",", "\"\<The 6th Target\>\"", ",", 
+            "\"\<James Patterson and Maxine Paetro\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2007", ",", "10", ",", "\"\<The Darkest Evening of the Year\>\"", 
+            ",", "\"\<Dean Koontz\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "1", ",", "\"\<The Appeal\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "2", ",", "\"\<The Story of Edgar Sawtelle\>\"", ",", 
+            "\"\<David Wroblewski\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "3", ",", "\"\<The Host\>\"", ",", 
+            "\"\<Stephenie Meyer\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "4", ",", "\"\<Cross Country\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "5", ",", "\"\<The Lucky One\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "6", ",", "\"\<Fearless Fourteen\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "7", ",", "\"\<Christmas Sweater\>\"", ",", 
+            "\"\<Glenn Beck\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "8", ",", "\"\<Scarpetta\>\"", ",", 
+            "\"\<Patricia Cornwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "9", ",", "\"\<Your Heart Belongs to Me\>\"", ",", 
+            "\"\<Dean Koontz\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2008", ",", "10", ",", "\"\<Plum Lucky\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "1", ",", "\"\<The Lost Symbol\>\"", ",", 
+            "\"\<Dan Brown\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "2", ",", "\"\<The Associate\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "3", ",", "\"\<The Help\>\"", ",", 
+            "\"\<Kathryn Stockett\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "4", ",", "\"\<I, Alex Cross\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "5", ",", "\"\<The Last Song\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "6", ",", "\"\<Ford County\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "7", ",", "\"\<Finger Lickin' Fifteen\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "8", ",", "\"\<The Host\>\"", ",", 
+            "\"\<Stephenie Meyer\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "9", ",", "\"\<Under the Dome\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2009", ",", "10", ",", "\"\<Pirate Latitudes\>\"", ",", 
+            "\"\<Michael Crichton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "1", ",", "\"\<Girl Who Kicked the Hornet's Nest\>\"",
+             ",", "\"\<Stieg Larsson\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "2", ",", "\"\<The Confession\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "3", ",", "\"\<The Help\>\"", ",", 
+            "\"\<Kathryn Stockett\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "4", ",", "\"\<Safe Haven\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "5", ",", "\"\<Dead or Alive\>\"", ",", 
+            "\"\<Tom Clancy\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "6", ",", "\"\<Sizzling Sixteen\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "7", ",", "\"\<Cross Fire\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "8", ",", "\"\<Freedom\>\"", ",", 
+            "\"\<Jonathan Franzen\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "9", ",", "\"\<Port Mortuary\>\"", ",", 
+            "\"\<Patricia Cornwell\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{
+           "2010", ",", "10", ",", "\"\<Full Dark, No Stars\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "1", ",", "\"\<The Litigators\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "2", ",", "\"\<11/22/63\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "3", ",", "\"\<The Best of Me\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "4", ",", "\"\<Smokin' Seventeen\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "5", ",", "\"\<A Dance with Dragons\>\"", ",", 
+            "\"\<George R.R. Martin\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "6", ",", "\"\<Explosive Eighteen\>\"", ",", 
+            "\"\<Janet Evanovich\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "7", ",", "\"\<Kill Alex Cross\>\"", ",", 
+            "\"\<James Patterson\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "8", ",", "\"\<Micro\>\"", ",", 
+            "\"\<Michael Crichton\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "9", ",", "\"\<Dead Reckoning\>\"", ",", 
+            "\"\<Charlaine Harris\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2011", ",", "10", ",", "\"\<Locked On\>\"", ",", 
+            "\"\<Tom Clancy and Mark Greaney\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "1", ",", "\"\<Fifty Shades of Grey\>\"", ",", 
+            "\"\<E.L. James\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "2", ",", "\"\<The Hunger Games\>\"", ",", 
+            "\"\<Suzanne Collins\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "3", ",", "\"\<Fifty Shades Darker\>\"", ",", 
+            "\"\<E.L. James\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "4", ",", "\"\<Fifty Shades Freed\>\"", ",", 
+            "\"\<E.L. James\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "5", ",", "\"\<Catching Fire\>\"", ",", 
+            "\"\<Suzanne Collins\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "6", ",", "\"\<Mockingjay\>\"", ",", 
+            "\"\<Suzanne Collins\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "7", ",", "\"\<Diary of W.K.: The Third Wheel\>\"", 
+            ",", "\"\<Jeff Kinney\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "8", ",", "\"\<Fifty Shades (box set)\>\"", ",", 
+            "\"\<E.L. James\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "9", ",", "\"\<The Mark of Athena\>\"", ",", 
+            "\"\<Rick Riordan\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2012", ",", "10", ",", "\"\<Gone Girl\>\"", ",", 
+            "\"\<Gillian Flynn\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "1", ",", "\"\<Diary of W.K.: Hard Luck\>\"", ",", 
+            "\"\<Jeff Kinney\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "2", ",", "\"\<Inferno\>\"", ",", 
+            "\"\<Dan Brown\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "3", ",", "\"\<The House of Hades\>\"", ",", 
+            "\"\<Rick Riordan\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "4", ",", "\"\<Divergent\>\"", ",", 
+            "\"\<Veronica Roth\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "5", ",", "\"\<Sycamore Row\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "6", ",", "\"\<Diary of W.K.: The Third Wheel\>\"", 
+            ",", "\"\<Jeff Kinney\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "7", ",", "\"\<Allegiant\>\"", ",", 
+            "\"\<Veronica Roth\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "8", ",", "\"\<The Fault in Our Stars\>\"", ",", 
+            "\"\<John Green\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "9", ",", "\"\<Doctor Sleep\>\"", ",", 
+            "\"\<Stephen King\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2013", ",", "10", ",", "\"\<The Great Gatsby\>\"", ",", 
+            "\"\<F. Scott Fitzgerald\>\""}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "1", ",", "\"\<The Fault in Our Stars\>\"", ",", 
+            "\"\<John Green\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "2", ",", "\"\<Diary of W.K.: The Long Haul\>\"", 
+            ",", "\"\<Jeff Kinney\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "3", ",", "\"\<Divergent\>\"", ",", 
+            "\"\<Veronica Roth\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "4", ",", "\"\<Insurgent\>\"", ",", 
+            "\"\<Veronica Roth\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "5", ",", "\"\<Killing Patton\>\"", ",", 
+            "\"\<Bill O'Reilly\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "6", ",", "\"\<Allegiant\>\"", ",", 
+            "\"\<Veronica Roth\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "7", ",", "\"\<Gone Girl\>\"", ",", 
+            "\"\<Gillian Flynn\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "8", ",", "\"\<The Fault in Our Stars (cine)\>\"", 
+            ",", "\"\<John Green\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "9", ",", "\"\<The Fault in Our Stars (hard)\>\"", 
+            ",", "\"\<John Green\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2014", ",", "10", ",", "\"\<Frozen\>\"", ",", 
+            "\"\<Victoria Saxon\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "1", ",", "\"\<Go Set a Watchman\>\"", ",", 
+            "\"\<Harper Lee\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "2", ",", "\"\<Grey\>\"", ",", "\"\<E.L. James\>\""}],
+            "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "3", ",", "\"\<The Girl on the Train\>\"", ",", 
+            "\"\<Paula Hawkins\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "4", ",", "\"\<All the Light We Cannot See\>\"", ",", 
+            "\"\<Anthony Doerr\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "5", ",", "\"\<The Martian\>\"", ",", 
+            "\"\<Andy Weir\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "6", ",", "\"\<Rogue Lawyer\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "7", ",", "\"\<To Kill a Mockingbird\>\"", ",", 
+            "\"\<Harper Lee\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "8", ",", "\"\<See Me\>\"", ",", 
+            "\"\<Nicholas Sparks\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "9", ",", "\"\<Gray Mountain\>\"", ",", 
+            "\"\<John Grisham\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{
+           "2015", ",", "10", ",", "\"\<The Nightingale\>\"", ",", 
+            "\"\<Kristin Hannah\>\""}], "}"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"books", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "books", "]"}], "<", "4"}], ",", 
+         RowBox[{"books", "=", 
+          RowBox[{"DeleteDuplicatesBy", "[", 
+           RowBox[{
+            RowBox[{"RandomSample", "[", 
+             RowBox[{"data", ",", "4"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"2", ";;", "3"}], "]"}], "]"}], "&"}]}], "]"}]}]}], 
+        "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"ListPlot", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ";;", "2"}], "]"}], "]"}], "}"}], "&"}], "/@", 
+           "books"}], ",", 
+          RowBox[{"PlotStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"Blue", ",", "Gray", ",", "Gray", ",", "Gray"}], "}"}]}], 
+          ",", 
+          RowBox[{"PlotMarkers", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Graphics", "[", 
+              RowBox[{"{", 
+               RowBox[{"Disk", "[", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0"}], "}"}], "]"}], "}"}], "]"}], ",", 
+             ".05"}], "}"}]}], ",", 
+          RowBox[{"PlotRange", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1999", ",", "2016"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{".5", ",", "10.5"}], "}"}]}], "}"}]}], ",", 
+          RowBox[{"AxesOrigin", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"1999", ",", "10.5"}], "}"}]}], ",", 
+          RowBox[{"ScalingFunctions", "\[Rule]", "\"\<Reverse\>\""}], ",", 
+          RowBox[{"GridLines", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{"200", ",", "2015"}], "]"}], ",", 
+             RowBox[{"Range", "[", 
+              RowBox[{"1", ",", "10"}], "]"}]}], "}"}]}], ",", 
+          RowBox[{"Ticks", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", 
+                 RowBox[{"Rotate", "[", 
+                  RowBox[{
+                   RowBox[{"ToString", "[", "#", "]"}], ",", 
+                   FractionBox["\[Pi]", "2"]}], "]"}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{"2000", ",", "2015"}], "]"}]}], ",", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"#", ",", 
+                 RowBox[{"\"\<# \>\"", "<>", 
+                  RowBox[{"ToString", "[", "#", "]"}]}]}], "}"}], "&"}], "/@", 
+              RowBox[{"Range", "[", 
+               RowBox[{"1", ",", "10"}], "]"}]}]}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"LabelStyle", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{"15", ",", "Black"}], "}"}]}], ",", 
+          RowBox[{
+          "PlotLabel", "\[Rule]", 
+           "\"\<BESTSELLERS\\nRanked by Annual Sales\>\""}], ",", 
+          RowBox[{"AspectRatio", "\[Rule]", 
+           FractionBox["9", "8"]}], ",", 
+          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", "480", "}"}], ",", 
+             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", "\"\<Which book is shown in blue in this graph?\>\""}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Tooltip", "[", 
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "3", "]"}], "]"}], ",", "Italic"}], "]"}], ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+         "books"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lite15\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.703848887314323*^9, 3.703848952517528*^9}, {
+   3.703851972464552*^9, 3.703852027770555*^9}, {3.703852059973666*^9, 
+   3.703852133039653*^9}, {3.7038564977332077`*^9, 3.7038567411277246`*^9}, {
+   3.703856771415532*^9, 3.703856894244742*^9}, {3.7038569455386763`*^9, 
+   3.7038569802651367`*^9}, {3.7038570109394073`*^9, 3.703857121696966*^9}, {
+   3.7038577730245333`*^9, 3.7038577930896893`*^9}, {3.703857865660954*^9, 
+   3.703857942160297*^9}, {3.70385797272224*^9, 3.703858092127988*^9}, 
+   3.7038581547782993`*^9, {3.7038582011373787`*^9, 3.703858382006876*^9}, {
+   3.703858412696072*^9, 3.7038585431504107`*^9}, {3.703858723190937*^9, 
+   3.7038588156688347`*^9}, 3.7038588545746098`*^9, {3.70385889079319*^9, 
+   3.703859005157596*^9}, {3.7038590555759497`*^9, 3.703859126748131*^9}, {
+   3.703859169765637*^9, 3.703859274802814*^9}, {3.7038593141889143`*^9, 
+   3.703859419894355*^9}, {3.703859450276202*^9, 3.7038597825400887`*^9}, {
+   3.703859823592197*^9, 3.703859841766725*^9}, {3.7038598748569393`*^9, 
+   3.703859912922977*^9}, {3.703860104364059*^9, 3.703860113520627*^9}, {
+   3.703860147126216*^9, 3.703860169671959*^9}, {3.703860206209499*^9, 
+   3.703860223114497*^9}, {3.703860255939766*^9, 3.703860298809285*^9}, {
+   3.7038603388076687`*^9, 3.703860589945159*^9}, {3.7038620300657673`*^9, 
+   3.703862375338789*^9}, {3.7038625754372387`*^9, 3.703862612694997*^9}, {
+   3.7038626606171618`*^9, 3.7038629523439693`*^9}, 3.703862989457323*^9, {
+   3.703863640601301*^9, 3.70386375017522*^9}, {3.703863781992488*^9, 
+   3.703863798153233*^9}, {3.7038638285547457`*^9, 3.7038638621247396`*^9}, {
+   3.703863892206128*^9, 3.703863931439581*^9}, {3.703863961881299*^9, 
+   3.703864218886641*^9}, {3.703864258104178*^9, 3.703864426112363*^9}, {
+   3.703864467823238*^9, 3.703864473260572*^9}, 3.70386451494949*^9, {
+   3.703864583946311*^9, 3.703864618210075*^9}, {3.7038646578440533`*^9, 
+   3.703864739224334*^9}, {3.703864774026526*^9, 3.7038648803040113`*^9}, {
+   3.703866332261161*^9, 3.7038664458191833`*^9}, {3.7038664791815863`*^9, 
+   3.7038665493302603`*^9}, 3.703866604035368*^9, {3.703866637084445*^9, 
+   3.7038669957030687`*^9}, {3.703867030151926*^9, 3.703867142378024*^9}, {
+   3.703867195521844*^9, 3.7038672093620996`*^9}, {3.703867243043401*^9, 
+   3.703867543249378*^9}, {3.703869325911108*^9, 3.7038693641630507`*^9}, {
+   3.7038693951082*^9, 3.703869416021604*^9}, {3.7038694630148478`*^9, 
+   3.7038695503630667`*^9}, {3.703869606853961*^9, 3.703869705035993*^9}, {
+   3.7038697475791616`*^9, 3.7038699552314777`*^9}, {3.7038699857614927`*^9, 
+   3.7038700014182997`*^9}, {3.703870037819704*^9, 3.70387005210012*^9}, {
+   3.703870085877881*^9, 3.7038701427610083`*^9}, {3.70387020318771*^9, 
+   3.703870220900449*^9}, {3.7038702512780724`*^9, 3.7038703055130033`*^9}, {
+   3.7038705925056*^9, 3.703870636335866*^9}, {3.70387066957393*^9, 
+   3.703870670588883*^9}, {3.703870701595221*^9, 3.7038707232855883`*^9}, {
+   3.7038707983830147`*^9, 3.7038708204640493`*^9}, {3.703870899397462*^9, 
+   3.7038709022062397`*^9}, {3.703870943375237*^9, 3.703871592200927*^9}, {
+   3.703887472869376*^9, 3.703887598545559*^9}, {3.703887824435019*^9, 
+   3.703887841610385*^9}, {3.703887900215281*^9, 3.7038879577738256`*^9}, {
+   3.703888005239843*^9, 3.7038880142630873`*^9}, {3.703888051381072*^9, 
+   3.703888107654078*^9}, {3.703888149804096*^9, 3.703888287177023*^9}, {
+   3.703888351559751*^9, 3.703888358076687*^9}, {3.703888448283078*^9, 
+   3.703888459442903*^9}, {3.703888520470934*^9, 3.7038887257135057`*^9}, {
+   3.703888767757427*^9, 3.703888929271989*^9}, {3.703889012540625*^9, 
+   3.703889018961297*^9}, {3.7038890771361847`*^9, 3.703889081604958*^9}, {
+   3.703889313357141*^9, 3.703889330235021*^9}, {3.703892960705583*^9, 
+   3.703892961721328*^9}, {3.7038934154064417`*^9, 3.703893514224969*^9}, {
+   3.703893675658414*^9, 3.70389368779307*^9}, {3.70389372221461*^9, 
+   3.703893766260725*^9}, {3.703938680528613*^9, 3.70393872935389*^9}, {
+   3.703938847431522*^9, 3.70393888081558*^9}, {3.703938930330983*^9, 
+   3.703938943378593*^9}, {3.703939058089918*^9, 3.70393910565207*^9}, {
+   3.70393914276766*^9, 3.703939194066036*^9}, {3.703939470189794*^9, 
+   3.7039394814206543`*^9}, {3.703939600643606*^9, 3.703939611106612*^9}, {
+   3.703939666881014*^9, 3.7039397287762947`*^9}, {3.7039397746057*^9, 
+   3.703939833117222*^9}, {3.703939871576407*^9, 3.703939881911605*^9}, 
+   3.703939938880095*^9, 3.703940138423253*^9, {3.703940190881008*^9, 
+   3.7039402151997147`*^9}, {3.703940271277597*^9, 3.7039402800757732`*^9}, {
+   3.703940332208591*^9, 3.703940373510701*^9}, {3.703940413570284*^9, 
+   3.703940438418386*^9}, {3.70394047660798*^9, 3.7039405251022778`*^9}, 
+   3.7039405728419867`*^9, {3.7039406218781853`*^9, 3.703940736880547*^9}, {
+   3.7039407691928463`*^9, 3.703940811419788*^9}, {3.703940852576239*^9, 
+   3.703940934369955*^9}, {3.703941182209631*^9, 3.70394118612788*^9}, {
+   3.703941245640758*^9, 3.703941344846529*^9}, 3.7039414574072523`*^9, {
+   3.703941504255804*^9, 3.703941510084838*^9}, {3.703941624466509*^9, 
+   3.703941706694767*^9}, {3.703941767452565*^9, 3.7039417784994097`*^9}, {
+   3.703941809430645*^9, 3.703941837084235*^9}, {3.7039421220986*^9, 
+   3.703942152796995*^9}, {3.703942462937965*^9, 3.703942469422163*^9}, {
+   3.703942513737143*^9, 3.7039425839644823`*^9}, {3.703942635726815*^9, 
+   3.703942639151094*^9}, 3.703942691944789*^9, {3.703942764452572*^9, 
+   3.7039428744178867`*^9}},ExpressionUUID->"96f07e85-769e-4fad-9fde-\
+03e7faa3a1f1"]
+},
+WindowSize->{1248, 1077},
+WindowMargins->{{1, Automatic}, {Automatic, 27}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 41235, 880, 3780, "Input",ExpressionUUID->"96f07e85-769e-4fad-9fde-03e7faa3a1f1"]
+}
+]
+*)
+
