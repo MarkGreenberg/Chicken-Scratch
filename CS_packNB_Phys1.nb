@@ -1,0 +1,143 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4978,        135]
+NotebookOptionsPosition[      4665,        121]
+NotebookOutlinePosition[      5025,        137]
+CellTagsIndexPosition[      4982,        134]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"scales", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<\[Degree]C\>\"", ",", "\"\<Celsius\>\"", ",", 
+             "\"\<DegreesCelsius\>\""}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<K\>\"", ",", "\"\<Kelvin\>\"", ",", "\"\<Kelvins\>\""}], 
+            "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<\[Degree]R\>\"", ",", "\"\<Rankine\>\"", ",", 
+             "\"\<DegreesRankine\>\""}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<\[Degree]R\[EAcute]\>\"", ",", "\"\<R\[EAcute]aumur\>\"", 
+             ",", "\"\<DegreesReaumur\>\""}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<\[Degree]R\[OSlash]\>\"", ",", "\"\<R\[OSlash]mer\>\"", ",", 
+             "\"\<DegreesRoemer\>\""}], "}"}]}], "}"}], "]"}]}], ";", 
+       RowBox[{"degF", "=", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "459"}], ",", "900"}], "}"}], "]"}], ",", 
+          "\"\<DegreesFahrenheit\>\""}], "]"}]}], ";", 
+       RowBox[{"deg1", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"UnitConvert", "[", 
+           RowBox[{"degF", ",", 
+            RowBox[{"scales", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], "]"}], ",", ".01"}], "]"}]}], 
+       ";", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringReplace", "[", 
+         RowBox[{
+          RowBox[{"\"\<The temperature \>\"", "<>", 
+           RowBox[{"ToString", "[", "deg1", "]"}], "<>", 
+           "\"\< is what in the Fahrenheit scale?\>\""}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"\"\< degrees\>\"", "\[Rule]", "\"\<\[Degree]\>\""}], ",", 
+            RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "}"}]}], 
+         "]"}]}], ";", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\<\[Degree]F\>\""}], 
+          "&"}], "/@", 
+         RowBox[{"Prepend", "[", 
+          RowBox[{
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "450"}], ",", "900"}], "}"}], ",", "3"}], "]"}], 
+           ",", 
+           RowBox[{"degF", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}]}], ";", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Phys1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6829595792044764`*^9, 3.682959583843019*^9}, 
+   3.682959683818179*^9, {3.682959749244451*^9, 3.682959763987988*^9}, {
+   3.6829599595285807`*^9, 3.6829600033747663`*^9}, {3.682960087500387*^9, 
+   3.682960127596245*^9}, {3.682960262827342*^9, 3.682960280147616*^9}, 
+   3.682960311188925*^9, 3.682960376049305*^9, {3.682960422387446*^9, 
+   3.682960426464476*^9}, {3.682960469221983*^9, 3.682960492197228*^9}, {
+   3.682960552363247*^9, 3.6829605540161543`*^9}, {3.682960622564064*^9, 
+   3.682960668382736*^9}},ExpressionUUID->"a884dcca-5a23-49a8-af77-\
+f8a5b2b2b6c4"]
+},
+WindowSize->{1185, 1009},
+WindowMargins->{{5, Automatic}, {64, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4103, 99, 283, "Input",ExpressionUUID->"a884dcca-5a23-49a8-af77-f8a5b2b2b6c4"]
+}
+]
+*)
+

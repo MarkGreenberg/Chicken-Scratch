@@ -1,0 +1,148 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5140,        140]
+NotebookOptionsPosition[      4825,        126]
+NotebookOutlinePosition[      5186,        142]
+CellTagsIndexPosition[      5143,        139]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"p1", "=", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "16"}], "}"}], "]"}], ",", "\"\<Bars\>\""}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"v1", "=", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"5", ",", "50"}], "}"}], "]"}], ",", 
+          RowBox[{"\"\<Centimeters\>\"", "^", "3"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"p2", "=", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "16"}], "}"}], "]"}], ",", "\"\<Bars\>\""}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"p1", "\[Equal]", "p2"}], ",", 
+         RowBox[{"p2", "=", 
+          RowBox[{"p2", "+", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{"2", ",", "\"\<Bars\>\""}], "]"}]}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"v2", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"v1", "*", "p1"}], ")"}], "/", "p2"}], ",", ".01"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"StringForm", "[", 
+           RowBox[{
+           "\"\<According to Boyle's Law, if a gas has a volume of `1` at a \
+pressure of `2`, then what is its volume at a pressure of `3`?\>\"", ",", 
+            "h1", ",", "h2", ",", "h3"}], "]"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "v1"}], ",", 
+           RowBox[{"h2", "\[Rule]", "p1"}], ",", 
+           RowBox[{"h3", "\[Rule]", "p2"}]}], "}"}]}]}], ";", 
+       RowBox[{"choiceNos", "=", 
+        RowBox[{"{", "v2", "}"}]}], ";", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "choiceNos", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"choiceNos", "=", 
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Append", "[", 
+            RowBox[{"choiceNos", ",", 
+             RowBox[{"Quantity", "[", 
+              RowBox[{
+               RowBox[{"Round", "[", 
+                RowBox[{
+                 RowBox[{"RandomReal", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", 
+                    RowBox[{
+                    RowBox[{"QuantityMagnitude", "[", "v2", "]"}], "*", 
+                    "1.8"}]}], "}"}], "]"}], ",", ".01"}], "]"}], ",", 
+               RowBox[{"\"\<Centimeters\>\"", "^", "3"}]}], "]"}]}], "]"}], 
+           "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"choiceNos", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choiceNos", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Phys3\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.682970865054714*^9, {3.682970963481048*^9, 3.6829710437993717`*^9}, {
+   3.68297108208953*^9, 3.6829711132084713`*^9}, 3.682971185311584*^9, {
+   3.682971399878456*^9, 3.682971403844651*^9}, {3.68761875100508*^9, 
+   3.687618799549101*^9}, {3.6876188761701813`*^9, 
+   3.6876189501498623`*^9}},ExpressionUUID->"fd240a7a-f88f-413b-99f5-\
+44ff07e0ae7c"]
+},
+WindowSize->{1244, 1050},
+WindowMargins->{{-2, Automatic}, {46, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4263, 104, 409, "Input",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"]
+}
+]
+*)
+

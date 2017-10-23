@@ -1,0 +1,205 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      8037,        197]
+NotebookOptionsPosition[      7722,        183]
+NotebookOutlinePosition[      8083,        199]
+CellTagsIndexPosition[      8040,        196]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"valP", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"15", ",", "50"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"valV1", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "12"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"valV2", "=", 
+        RowBox[{"valV1", "+", 
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"{", 
+           RowBox[{"3", ",", "16"}], "}"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"StringForm", "[", 
+             RowBox[{
+             "\"\<This formula gives the power of a wind turbine. If `1` and \
+then the wind picks up from `2` to `3`, what is the new power output of the \
+turbine?\>\"", ",", "h1", ",", "h2", ",", "h3"}], "]"}], ",", "24"}], "]"}], 
+          "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", 
+            RowBox[{"(", 
+             RowBox[{"P", "==", 
+              RowBox[{"Quantity", "[", 
+               RowBox[{"valP", ",", "\"\<kW\>\""}], "]"}]}], ")"}]}], ",", 
+           RowBox[{"h2", "\[Rule]", 
+            RowBox[{"Quantity", "[", 
+             RowBox[{"valV1", ",", "\"\<m/s\>\""}], "]"}]}], ",", 
+           RowBox[{"h3", "\[Rule]", 
+            RowBox[{"Quantity", "[", 
+             RowBox[{"valV2", ",", "\"\<m/s\>\""}], "]"}]}]}], "}"}]}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"valV2", "/", "valV1"}], ")"}], "^", "3"}], "*", "valP"}],
+          "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choiceNos", "=", 
+        RowBox[{"{", "ansNo", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "choiceNos", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"choiceNos", "=", 
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Append", "[", 
+            RowBox[{"choiceNos", ",", 
+             RowBox[{"Round", "[", 
+              RowBox[{"RandomReal", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"valP", "+", "10"}], ",", 
+                 RowBox[{"ansNo", "*", "1.5"}]}], "}"}], "]"}], "]"}]}], 
+            "]"}], "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ToString", "[", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{"#", ",", "\"\<kW\>\""}], "]"}], "]"}], "&"}], "/@", 
+         "choiceNos"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"choices", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"Hold", "[", 
+         RowBox[{"Style", "[", 
+          RowBox[{
+           RowBox[{"Grid", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"HoldForm", "[", 
+                  RowBox[{"P", "\[Equal]", 
+                   RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{"1", "/", "2"}], ")"}], "*", "\[Mu]", "*", 
+                    "\[Rho]", "*", "A", "*", 
+                    RowBox[{"V", "^", "3"}]}]}], "]"}], ",", "SpanFromLeft"}],
+                 "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"P", ",", "\"\<turbine power\>\""}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\[Rho]", ",", "\"\<air density\>\""}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"A", ",", "\"\<turbine area\>\""}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"\[Mu]", ",", "\"\<turbine efficiency\>\""}], "}"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{"V", ",", "\"\<wind velocity\>\""}], "}"}]}], "}"}], 
+             ",", 
+             RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+             RowBox[{"FrameStyle", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"LightGray", ",", 
+                RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
+             RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+             RowBox[{"Spacings", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "72"}], 
+          "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Phys2\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.682961337431746*^9, 3.682961444416664*^9, {3.682961493709384*^9, 
+   3.682961505907675*^9}, {3.68296156228269*^9, 3.682961576706417*^9}, 
+   3.6829630274087276`*^9, {3.682963139824027*^9, 3.6829631469491167`*^9}, {
+   3.682964058768283*^9, 3.682964065673326*^9}, {3.6829640969782267`*^9, 
+   3.682964293115086*^9}, {3.682964386146522*^9, 3.6829644114574623`*^9}, {
+   3.683033766963943*^9, 3.683033795093686*^9}, {3.68303382896742*^9, 
+   3.683033830038327*^9}, 3.6876088127253523`*^9, {3.687608848902074*^9, 
+   3.6876088998392973`*^9}, {3.687608964565813*^9, 3.687609052806966*^9}, {
+   3.687609181486496*^9, 3.687609183572814*^9}, {3.687609358087811*^9, 
+   3.687609431969486*^9}, 3.68760948472407*^9, {3.687609667688158*^9, 
+   3.6876096681572313`*^9}, {3.687609803654388*^9, 3.687609819404901*^9}, {
+   3.687613248313051*^9, 3.687613249695673*^9}, {3.687613736848387*^9, 
+   3.687613798554163*^9}, {3.687613876745186*^9, 3.687613895888515*^9}, {
+   3.687613997359177*^9, 3.687614011280179*^9}, {3.687614197424368*^9, 
+   3.687614200733897*^9}, {3.687614235991602*^9, 3.687614257114039*^9}, {
+   3.687614442076659*^9, 3.687614467324733*^9}, {3.687614642648182*^9, 
+   3.687614681238295*^9}, {3.687614809510502*^9, 3.6876148453668118`*^9}, {
+   3.687614927131852*^9, 3.6876149288653307`*^9}, {3.687615044417902*^9, 
+   3.687615050416006*^9}, {3.687615857880805*^9, 3.687615884433798*^9}, 
+   3.687616176480833*^9, 
+   3.687616711371866*^9},ExpressionUUID->"fb03149f-55ba-476c-a981-\
+88f57fde955e"]
+},
+WindowSize->{1233, 1024},
+WindowMargins->{{-1, Automatic}, {51, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7160, 161, 556, "Input",ExpressionUUID->"fb03149f-55ba-476c-a981-88f57fde955e"]
+}
+]
+*)
+
