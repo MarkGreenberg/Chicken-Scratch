@@ -1,0 +1,153 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5830,        145]
+NotebookOptionsPosition[      5516,        131]
+NotebookOutlinePosition[      5876,        147]
+CellTagsIndexPosition[      5833,        144]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"a1", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "99"}], ",", "99"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"d", "=", " ", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "16"}], ",", "16"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"d", "\[Equal]", "0"}], ",", 
+         RowBox[{"d", "=", "4"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"n", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"6", ",", "30"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"a2", "=", 
+        RowBox[{"a1", "+", "d"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"a3", "=", 
+        RowBox[{"a1", "+", 
+         RowBox[{"2", " ", "d"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"\"\<If a number sequence begins with \>\"", "<>", 
+           RowBox[{"ToString", "[", "a1", "]"}], "<>", "\"\<, \>\"", "<>", 
+           RowBox[{"ToString", "[", "a2", "]"}], "<>", "\"\<, \>\"", "<>", 
+           RowBox[{"ToString", "[", "a3", "]"}], "<>", 
+           "\"\<..., then what is term \>\"", "<>", 
+           RowBox[{"ToString", "[", "n", "]"}], "<>", 
+           "\"\< of that sequence?\>\""}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"a1", "+", 
+         RowBox[{"d", " ", 
+          RowBox[{"(", 
+           RowBox[{"n", "-", "1"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"end1", "=", 
+        RowBox[{"a3", "+", "d"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"end2", "=", 
+        RowBox[{"a1", " ", "+", " ", 
+         RowBox[{"d", " ", 
+          RowBox[{"(", 
+           RowBox[{"n", "+", "4"}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Prepend", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"DeleteCases", "[", 
+             RowBox[{
+              RowBox[{"Range", "[", 
+               RowBox[{
+                RowBox[{"Min", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"end1", ",", "end2"}], "}"}], "]"}], ",", 
+                RowBox[{"Max", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"end1", ",", "end2"}], "}"}], "]"}]}], "]"}], ",", 
+              "ansNo"}], "]"}], ",", "3"}], "]"}], ",", "ansNo"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb7\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.686835936340191*^9, 3.68683595231295*^9}, 
+   3.6868359828379307`*^9, {3.686836036202286*^9, 3.686836063495077*^9}, {
+   3.686837097464788*^9, 3.686837480585243*^9}, {3.686837512350263*^9, 
+   3.686837705043602*^9}, {3.6868377561737003`*^9, 3.686837756349093*^9}, {
+   3.6868378574436693`*^9, 3.686837872714923*^9}, {3.686837941678029*^9, 
+   3.686837946685546*^9}, {3.6868380027881107`*^9, 3.686838193890777*^9}, {
+   3.686838276471612*^9, 3.686838312505238*^9}, {3.686838556692381*^9, 
+   3.686838629724556*^9}, {3.686838703028288*^9, 3.686838715864719*^9}, {
+   3.686838756322802*^9, 3.686838822829295*^9}, {3.6868388673044167`*^9, 
+   3.68683887968007*^9}, {3.6868391463988533`*^9, 3.6868391474043083`*^9}, {
+   3.6868686088795357`*^9, 3.686868616028867*^9}, {3.6868688754599257`*^9, 
+   3.686868917500845*^9}, {3.686869022120923*^9, 3.686869023264963*^9}, {
+   3.686869060324308*^9, 3.686869086548087*^9}, 3.6868694652825603`*^9, {
+   3.686869622368462*^9, 3.686869628271592*^9}, {3.686869713621677*^9, 
+   3.686869747523529*^9}, {3.6868698007682133`*^9, 3.6868699427996063`*^9}, 
+   3.686869978418528*^9, {3.686870116906004*^9, 
+   3.686870125449789*^9}},ExpressionUUID->"b0802eb2-27ed-4c0d-863a-\
+859ab40b724a"]
+},
+WindowSize->{1196, 1035},
+WindowMargins->{{1, Automatic}, {44, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4954, 109, 409, "Input",ExpressionUUID->"b0802eb2-27ed-4c0d-863a-859ab40b724a"]
+}
+]
+*)
+

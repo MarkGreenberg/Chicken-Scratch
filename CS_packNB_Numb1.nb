@@ -1,0 +1,141 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5385,        133]
+NotebookOptionsPosition[      5072,        119]
+NotebookOutlinePosition[      5432,        135]
+CellTagsIndexPosition[      5389,        132]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"choices", " ", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", "400", "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<Which of these is the base 10 version of binary \>\"", "<>", 
+            RowBox[{"IntegerString", "[", 
+             RowBox[{
+              RowBox[{"First", "[", "choices", "]"}], ",", "2"}], "]"}], 
+            "<>", "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"nos", " ", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", "256", "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<What is the hexadecimal version of the decimal number \>\"", "<>", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"nos", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", "\"\<?\>\""}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"IntegerString", "[", 
+              RowBox[{"#", ",", "16"}], "]"}], "&"}], "/@", "nos"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Numb1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6827631268233747`*^9, 3.682763144912504*^9}, {
+   3.682763181800205*^9, 3.682763201638633*^9}, {3.68276324645203*^9, 
+   3.6827632487133093`*^9}, {3.6827634000833883`*^9, 
+   3.6827634097933826`*^9}, {3.682763497464538*^9, 3.682763503182061*^9}, {
+   3.682763845305995*^9, 3.682763846498433*^9}, {3.6827639727152653`*^9, 
+   3.682763980263176*^9}, {3.682764084412911*^9, 3.6827641271008883`*^9}, {
+   3.682764330886573*^9, 3.682764338100436*^9}, {3.682764409365067*^9, 
+   3.682764416895411*^9}, {3.682784915689308*^9, 3.682784922447496*^9}, 
+   3.7128615692669897`*^9, 3.7128616006060266`*^9, {3.712861636876622*^9, 
+   3.712861644931823*^9}, {3.7128617234295177`*^9, 3.7128617660676117`*^9}, {
+   3.712861800987986*^9, 3.712861844379314*^9}, {3.71286191261134*^9, 
+   3.712861993760788*^9}, {3.712862026100903*^9, 3.712862028314879*^9}, {
+   3.712862063643659*^9, 3.712862075338998*^9}, {3.712862628896833*^9, 
+   3.712862711991809*^9}, {3.712862753778358*^9, 3.712862831647728*^9}, {
+   3.712862863399868*^9, 3.712862864439136*^9}, {3.712862913970924*^9, 
+   3.7128629501029787`*^9}},ExpressionUUID->"70f89ed2-77ff-4de6-a0fa-\
+eb041274f119"]
+},
+WindowSize->{1703, 1235},
+WindowMargins->{{1, Automatic}, {39, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4510, 97, 430, "Input",ExpressionUUID->"70f89ed2-77ff-4de6-a0fa-eb041274f119"]
+}
+]
+*)
+

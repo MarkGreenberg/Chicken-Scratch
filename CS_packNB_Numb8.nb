@@ -1,0 +1,335 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     13431,        327]
+NotebookOptionsPosition[     13117,        313]
+NotebookOutlinePosition[     13476,        329]
+CellTagsIndexPosition[     13433,        326]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"doms", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\[DoubleStruckCapitalN]", ",", "\[DoubleStruckCapitalZ]", ",", 
+             "\[DoubleStruckCapitalQ]", ",", "\[DoubleStruckCapitalR]", ",", 
+             "\[DoubleStruckCapitalC]"}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"x_", "\[Subset]", "y_", "\[Subset]", "z___"}], ":=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{"doms", ",", "x"}], "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}], "<", 
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{"doms", ",", "y"}], "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}], "<", 
+            RowBox[{
+             RowBox[{"Position", "[", 
+              RowBox[{"doms", ",", "z"}], "]"}], "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<Which of these statements about domain sets is true?\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"ct", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", "3"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"tf", "=", "False"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"While", "[", 
+           RowBox[{
+            RowBox[{"tf", "===", "False"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"try", "=", 
+              RowBox[{"RandomSample", "[", 
+               RowBox[{"doms", ",", "ct"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"tf", "=", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", "try", "]"}], "\[Equal]", "2"}], ",", 
+                
+                RowBox[{
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "\[Subset]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "\[Subset]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], "\[Subset]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "3", "]"}], "]"}]}]}], "]"}]}]}]}], "]"}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"ansExp", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Length", "[", "try", "]"}], "\[Equal]", "2"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"HoldForm", "[", 
+               RowBox[{"h1", "\[Subset]", "h2"}], "]"}], "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"h1", "\[Rule]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                RowBox[{"h2", "\[Rule]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"HoldForm", "[", 
+               RowBox[{"h1", "\[Subset]", "h2", "\[Subset]", "h3"}], "]"}], "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"h1", "\[Rule]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                RowBox[{"h2", "\[Rule]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                RowBox[{"h3", "\[Rule]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "3", "]"}], "]"}]}]}], "}"}]}]}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"{", "ansExp", "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"While", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Length", "[", "choices", "]"}], "<", "4"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"ct", "=", 
+              RowBox[{"Min", "[", 
+               RowBox[{
+                RowBox[{"RandomInteger", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"2", ",", "5"}], "}"}], "]"}], ",", "3"}], "]"}]}], 
+             ";", "\[IndentingNewLine]", 
+             RowBox[{"try", "=", 
+              RowBox[{"RandomSample", "[", 
+               RowBox[{"doms", ",", "ct"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"tf", "=", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", "try", "]"}], "\[Equal]", "2"}], ",", 
+                
+                RowBox[{
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "\[Subset]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "\[Subset]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], "\[Subset]", 
+                 RowBox[{"try", "[", 
+                  RowBox[{"[", "3", "]"}], "]"}]}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"tf", "===", "False"}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"tryExp", "=", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Length", "[", "try", "]"}], "\[Equal]", "2"}], 
+                   ",", "\[IndentingNewLine]", 
+                   RowBox[{
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{"h1", "\[Subset]", "h2"}], "]"}], "/.", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"h1", "\[Rule]", 
+                    RowBox[{"try", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                    RowBox[{"h2", "\[Rule]", 
+                    RowBox[{"try", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{"h1", "\[Subset]", "h2", "\[Subset]", "h3"}], 
+                    "]"}], "/.", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"h1", "\[Rule]", 
+                    RowBox[{"try", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                    RowBox[{"h2", "\[Rule]", 
+                    RowBox[{"try", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                    RowBox[{"h3", "\[Rule]", 
+                    RowBox[{"try", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}]}]}], "}"}]}]}], "]"}]}], 
+                ";", "\[IndentingNewLine]", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"Not", "[", 
+                   RowBox[{"MemberQ", "[", 
+                    RowBox[{"choices", ",", "tryExp"}], "]"}], "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"choices", "=", 
+                   RowBox[{"Append", "[", 
+                    RowBox[{"choices", ",", "tryExp"}], "]"}]}]}], "]"}]}]}], 
+              "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", "#", "]"}], "]"}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Hold", "[", 
+              RowBox[{"FromCharacterCode", "[", "#", "]"}], "]"}], "&"}], "/@",
+             "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Complex", "[", 
+              RowBox[{
+               RowBox[{"#", "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", 
+               RowBox[{"#", "[", 
+                RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "&"}], "/@", 
+            RowBox[{"Partition", "[", 
+             RowBox[{
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "12"}], ",", "12"}], "}"}], ",", "8"}], "]"}], 
+              ",", "2"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dist", "=", 
+           RowBox[{"EuclideanDistance", "[", 
+            RowBox[{"0", ",", 
+             RowBox[{"choices", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Print", "[", "dist", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which of these complex numbers is exactly `1` units from the \
+complex plane's origin?\>\"", ",", "dist"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Numb8\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJwd0VtI0wEYBfCpM52LiSMiZ+KtJC/Jiszb1KYpBFpSmfOv1CY5NdHlJd2D
+bJhGWYNgJgWFODP7O7DhMKcVTEYJKnOhzTZdU7NZZOpKzSmG7ezh8ON8L9/D
+CSkSXSx2p1Aoic5AzolLCXuSZa6XrtLlboY5xdXnLpyBsrLUSop0matpcIjg
+19GuRpibym6D43V9g1AvzBqGaczjemiNSTbA6OAXFjhxM9wGB7u0W7CWZO1A
+dSjJc3MqVJcTMDzGvxhWl5dWwY7Vc43wcmbYXRh9LEQOy+IW2iFRY5qCY7mq
+GZg81GCFzfyEOXj7g+oH3FZpV113omIdZj5N34A8hZ+bO3oAjQnjW7ZY8Npr
+YRB80i9PhwJRswB26BR3YFDT/APoTte1QsI3vQ0WWoZ6oPJ3nwoWXaf3wyyd
+7iNkKXkz0BFrs8BHSb3zcONv5x84Wem9A8PMEd4eTkc8sxkwsOa8H6RLlg5C
+vaL6CBy+MR0FrRJ2DPyWQ42HJ2vlHGiP0ORBPi+OB/2kFYWQkdPistD8kA+V
+TRoBzNhgkTTsZNpyOTZnUUNjfVw/pBb46mGog3TZvMmywfcFvd8hYWbbYcez
+tU14SL9C8XFaml1ChTxJnTd8XBxIg+9C/E10p+Rb6S+4ODBihwUr3etQlJS3
+DYlS4w7kxM567nd6a1TFgOr6L0woo/APwEYvx6npnmXuPZnhNGwg21OgXGtL
+g5l8RQnMP8qogq8mpWJo2WNK4MBsWhNceJnYCs+KryrgkmfUc0gkj2lhsG/k
+OFRa8w1wsZszBVlhrWtw12DehOSngF14XxXp8Rn/qn28YEq9jAaF+tAJeOWN
+cRLaxf+W4L7D9p/wP1LQzUk=
+  
+  "],ExpressionUUID->"71edbd20-3d0e-41ca-b359-5d05703b8504"]
+},
+WindowSize->{1885, 1181},
+WindowMargins->{{0, Automatic}, {Automatic, 9}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 12555, 291, 913, "Input",ExpressionUUID->"71edbd20-3d0e-41ca-b359-5d05703b8504"]
+}
+]
+*)
+
