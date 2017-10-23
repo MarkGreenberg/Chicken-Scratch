@@ -1,0 +1,123 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4684,        115]
+NotebookOptionsPosition[      4370,        101]
+NotebookOutlinePosition[      4731,        117]
+CellTagsIndexPosition[      4688,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"q", "=", "\"\<What font is the blue text in?\>\""}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"System`$FontFamilies", ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"hues", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "Gray", ",", "Gray", ",", "Gray"}], "}"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"cPos", "=", 
+        RowBox[{"Position", "[", 
+         RowBox[{"hues", ",", "Blue"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{"Column", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Style", "[", 
+             RowBox[{"\"\<Peace\>\"", ",", "144", ",", 
+              RowBox[{"hues", "[", 
+               RowBox[{"[", "#", "]"}], "]"}], ",", 
+              RowBox[{"FontFamily", "\[Rule]", 
+               RowBox[{"choices", "[", 
+                RowBox[{"[", "#", "]"}], "]"}]}]}], "]"}], "&"}], "/@", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], ",", 
+          "Center"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", 
+             RowBox[{"cPos", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], "]"}], 
+         "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Huma14\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7086928422697077`*^9, 3.70869285736152*^9}, {
+   3.708701593797184*^9, 3.708701656060433*^9}, {3.7087103849743977`*^9, 
+   3.708710591183158*^9}, {3.7087108756788263`*^9, 3.708710941086685*^9}, {
+   3.70871151522855*^9, 3.7087115409320107`*^9}, {3.708711640060281*^9, 
+   3.70871165302791*^9}, {3.7087116874052563`*^9, 3.708711712955158*^9}, {
+   3.708711782539961*^9, 3.708711861083906*^9}, {3.708711897076556*^9, 
+   3.708711995978353*^9}, {3.708712058475272*^9, 3.708712124562299*^9}, {
+   3.708712201786578*^9, 3.708712232818364*^9}, {3.708712284052853*^9, 
+   3.708712323321529*^9}, {3.708712391257827*^9, 3.708712526592869*^9}, {
+   3.708712558001335*^9, 3.708712621280789*^9}, {3.708712676865118*^9, 
+   3.7087126790562773`*^9}, {3.7087127348191338`*^9, 
+   3.7087127696559553`*^9}, {3.708712918784639*^9, 3.708712998599203*^9}, {
+   3.708713054400434*^9, 3.7087130795908613`*^9}, {3.708713163327664*^9, 
+   3.708713244694599*^9}, {3.7087132771909237`*^9, 3.7087132938220177`*^9}, 
+   3.708713481638315*^9, {3.708713538887004*^9, 3.708713543437109*^9}, {
+   3.708713775925118*^9, 3.708713778812401*^9}, {3.708713839085156*^9, 
+   3.708713881588275*^9}, {3.708713958556375*^9, 3.708713994675899*^9}, {
+   3.70871402906091*^9, 3.708714032243812*^9}, {3.708714092260852*^9, 
+   3.708714197603738*^9}, {3.7087752117978163`*^9, 
+   3.708775235645068*^9}},ExpressionUUID->"89d34556-01bb-4fe0-9d47-\
+bc8d46543ef1"]
+},
+WindowSize->{1879, 1298},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3808, 79, 262, "Input",ExpressionUUID->"89d34556-01bb-4fe0-9d47-bc8d46543ef1"]
+}
+]
+*)
+

@@ -1,0 +1,1325 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     61053,       1317]
+NotebookOptionsPosition[     60736,       1303]
+NotebookOutlinePosition[     61096,       1319]
+CellTagsIndexPosition[     61053,       1316]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"states", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          TemplateBox[{"\"Alabama, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Alabama\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Alabama\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Arizona, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Arizona\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Arizona\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Arkansas, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Arkansas\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Arkansas\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"California, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"California\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"California\\\", \\\
+\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Colorado, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Colorado\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Colorado\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Connecticut, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Connecticut\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Connecticut\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Delaware, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Delaware\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Delaware\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Florida, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Florida\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Florida\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Georgia, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Georgia\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Georgia\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Idaho, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Idaho\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Idaho\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Illinois, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Illinois\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Illinois\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Indiana, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Indiana\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Indiana\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Iowa, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Iowa\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Iowa\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Kansas, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Kansas\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Kansas\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Kentucky, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Kentucky\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Kentucky\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Louisiana, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Louisiana\"", ",", "\"UnitedStates\""}], "}"}]}],
+               "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Louisiana\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Maine, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Maine\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Maine\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Maryland, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Maryland\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Maryland\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"Massachusetts, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Massachusetts\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Massachusetts\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Michigan, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Michigan\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Michigan\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Minnesota, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Minnesota\"", ",", "\"UnitedStates\""}], "}"}]}],
+               "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Minnesota\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Mississippi, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Mississippi\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Mississippi\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Missouri, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Missouri\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Missouri\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Montana, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Montana\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Montana\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Nebraska, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Nebraska\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Nebraska\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Nevada, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Nevada\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Nevada\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"New Hampshire, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"NewHampshire\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"NewHampshire\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"New Jersey, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"NewJersey\"", ",", "\"UnitedStates\""}], "}"}]}],
+               "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"NewJersey\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"New Mexico, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"NewMexico\"", ",", "\"UnitedStates\""}], "}"}]}],
+               "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"NewMexico\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"New York, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"NewYork\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"NewYork\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"North Carolina, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"NorthCarolina\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"NorthCarolina\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"North Dakota, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"NorthDakota\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"NorthDakota\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Ohio, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Ohio\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Ohio\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Oklahoma, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Oklahoma\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Oklahoma\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Oregon, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Oregon\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Oregon\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"Pennsylvania, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Pennsylvania\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Pennsylvania\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"Rhode Island, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"RhodeIsland\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"RhodeIsland\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"South Carolina, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"SouthCarolina\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"SouthCarolina\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"South Dakota, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"SouthDakota\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"SouthDakota\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Tennessee, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Tennessee\"", ",", "\"UnitedStates\""}], "}"}]}],
+               "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Tennessee\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Texas, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Texas\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Texas\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Utah, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Utah\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Utah\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Vermont, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Vermont\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Vermont\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Virginia, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Virginia\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Virginia\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"Washington, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Washington\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Washington\\\", \\\
+\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          
+          TemplateBox[{
+           "\"West Virginia, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"WestVirginia\"", ",", "\"UnitedStates\""}], 
+                  "}"}]}], "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"WestVirginia\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Wisconsin, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Wisconsin\"", ",", "\"UnitedStates\""}], "}"}]}],
+               "]"}],
+            "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Wisconsin\\\", \
+\\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"], ",", 
+          TemplateBox[{"\"Wyoming, United States\"",RowBox[{"Entity", "[", 
+              RowBox[{"\"AdministrativeDivision\"", ",", 
+                RowBox[{"{", 
+                  RowBox[{"\"Wyoming\"", ",", "\"UnitedStates\""}], "}"}]}], 
+              "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Wyoming\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+           "Entity"]}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"props", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"accommodation and food services sales\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"AccommodationAndFoodServicesSales\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AccommodationAndFoodServicesSales\\\"]\""},
+             "EntityProperty"], ",", "\"\<food & lodging sales\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"aggregate household income\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"AggregateHouseholdIncome\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AggregateHouseholdIncome\\\"]\""},
+             "EntityProperty"], ",", "\"\<household income\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"rate of aggravated assault\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"AggravatedAssaultRate\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AggravatedAssaultRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<assault rate\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"annual births\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"AnnualBirths\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AnnualBirths\\\"]\""},
+             "EntityProperty"], ",", "\"\<births per year\>\""}], "}"}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"annual deaths\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"AnnualDeaths\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AnnualDeaths\\\"]\""},
+             "EntityProperty"], ",", "\"\<deaths per year\>\""}], "}"}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"housing units change rate\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"AnnualHousingUnitsChangeFraction\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AnnualHousingUnitsChangeFraction\\\"]\""},
+             "EntityProperty"], ",", "\"\<housing change rate\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"average commute time\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"AverageCommute\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AverageCommute\\\"]\""},
+             "EntityProperty"], ",", "\"\<ave. commute time\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"average home sale price\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"AverageSalePrice\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"AverageSalePrice\\\"]\""},
+             "EntityProperty"], ",", "\"\<ave. home price\>\""}], "}"}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"rate of burglary\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"BurglaryRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"BurglaryRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<buglary rate\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"Amerindian business ownership fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"BusinessEthnicOwnershipFractionsAmerindian\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"BusinessEthnicOwnershipFractionsAmerindian\\\"]\""},
+             "EntityProperty"], ",", "\"\<% Indian businesses\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"Asian business ownership fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"BusinessEthnicOwnershipFractionsAsian\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"BusinessEthnicOwnershipFractionsAsian\\\"]\""},
+             "EntityProperty"], ",", "\"\<% Asian businesses\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"black business ownership fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"BusinessEthnicOwnershipFractionsBlack\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"BusinessEthnicOwnershipFractionsBlack\\\"]\""},
+             "EntityProperty"], ",", "\"\<% Black businesses\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"Hispanic business ownership fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"BusinessEthnicOwnershipFractionsHispanic\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"BusinessEthnicOwnershipFractionsHispanic\\\"]\""},
+             "EntityProperty"], ",", "\"\<% Hispanic businesses\>\""}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"Pacific Islander business ownership fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"BusinessEthnicOwnershipFractionsPacificIslander\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"BusinessEthnicOwnershipFractionsPacificIslander\\\"]\""},
+             "EntityProperty"], ",", "\"\<% Islander businesses\>\""}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"white business ownership fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"BusinessEthnicOwnershipFractionsWhite\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"BusinessEthnicOwnershipFractionsWhite\\\"]\""},
+             "EntityProperty"], ",", "\"\<% White businesses\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"civilian labor force\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"CivilianLaborForce\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"CivilianLaborForce\\\"]\""},
+             "EntityProperty"], ",", "\"\<labor force total\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"civilian unemployment rate\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"CivilianUnemploymentRate\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"CivilianUnemploymentRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<unemployment rate\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"coincident economic activity index\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"CoincidentEconomicActivityIndex\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"CoincidentEconomicActivityIndex\\\"]\""},
+             "EntityProperty"], ",", "\"\<coinc. econ. act. index\>\""}], 
+           "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"total rate of crime\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{"\"AdministrativeDivision\"", ",", "\"CrimeRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"CrimeRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<crime rate\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"earnings\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{"\"AdministrativeDivision\"", ",", "\"Earnings\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"Earnings\\\"]\""},
+             "EntityProperty"], ",", "\"\<total earnings\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"average earnings per job\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"EarningsAverage\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"EarningsAverage\\\"]\""},
+             "EntityProperty"], ",", "\"\<earnings per job\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"employment\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{"\"AdministrativeDivision\"", ",", "\"Employment\""}],
+                 "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"Employment\\\"]\""},
+             "EntityProperty"], ",", "\"\<total employed\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"employment change\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"EmploymentNetChange\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"EmploymentNetChange\\\"]\""},
+             "EntityProperty"], ",", "\"\<employment change\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"farmland area\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"FarmLandArea\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"FarmLandArea\\\"]\""},
+             "EntityProperty"], ",", "\"\<acres of farmland\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"federal government expenditure per capita\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"FederalGovernmentExpenditurePerCapita\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"FederalGovernmentExpenditurePerCapita\\\"]\""},
+             "EntityProperty"], ",", "\"\<fed. $ per capita\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"rate of rape\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"ForcibleRapeRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"ForcibleRapeRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<rate of rapes\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"fraction foreign born\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"ForeignBornFraction\""}], "]"}],
+              
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"ForeignBornFraction\\\"]\""},
+             "EntityProperty"], ",", "\"\<% foreign born\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"Gini index\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{"\"AdministrativeDivision\"", ",", "\"GiniIndex\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"GiniIndex\\\"]\""},
+             "EntityProperty"], ",", "\"\<Gini index\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"government employment\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"GovernmentEmployment\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"GovernmentEmployment\\\"]\""},
+             "EntityProperty"], ",", "\"\<total gov. employed\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"GSP\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"GrossStateProduct\""}],
+                 "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"GrossStateProduct\\\"]\""},
+             "EntityProperty"], ",", "\"\<gross state product\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"insured population fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"HealthInsuranceCoverageRate\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HealthInsuranceCoverageRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<% health insured\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"uninsured population fraction\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"HealthInsuranceUncoveredRate\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HealthInsuranceUncoveredRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<% not health insured\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"highest elevation\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"HighestElevation\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HighestElevation\\\"]\""},
+             "EntityProperty"], ",", "\"\<max elevation\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"highest sales tax rate\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"HighSalesTaxRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HighSalesTaxRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<sales tax rate\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"home ownership rate\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"HomeOwnershipRate\""}],
+                 "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HomeOwnershipRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<% home ownership\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"home vacancy rate\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"HomeVacancyRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HomeVacancyRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<% home vacancy\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"housing starts\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"HousingStarts\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HousingStarts\\\"]\""},
+             "EntityProperty"], ",", "\"\<total housing starts\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"housing units change\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"HousingUnitsChange\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HousingUnitsChange\\\"]\""},
+             "EntityProperty"], ",", "\"\<housing unit change\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"housing in multiple unit structures\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"HousingUnitsInMultipleUnitStructuresFraction\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"HousingUnitsInMultipleUnitStructuresFraction\\\"]\""},
+             "EntityProperty"], ",", "\"\<% multi-unit housing\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"land area\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{"\"AdministrativeDivision\"", ",", "\"LandArea\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"LandArea\\\"]\""},
+             "EntityProperty"], ",", "\"\<land area\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"rate of larceny\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"LarcenyTheftRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"LarcenyTheftRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<larceny rate\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"lowest elevation\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"LowestElevation\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"LowestElevation\\\"]\""},
+             "EntityProperty"], ",", "\"\<min elevation\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"mean elevation\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"MeanElevation\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"MeanElevation\\\"]\""},
+             "EntityProperty"], ",", "\"\<average elevation\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"median age\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{"\"AdministrativeDivision\"", ",", "\"MedianAge\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"MedianAge\\\"]\""},
+             "EntityProperty"], ",", "\"\<average age\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"median household income\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"MedianHouseholdIncome\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"MedianHouseholdIncome\\\"]\""},
+             "EntityProperty"], ",", "\"\<mean household income\>\""}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"median home sale price\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"MedianSalePrice\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"MedianSalePrice\\\"]\""},
+             "EntityProperty"], ",", "\"\<median home price\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"minimum wage\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"MinimumWage\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"MinimumWage\\\"]\""},
+             "EntityProperty"], ",", "\"\<minimum wage\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"rate of motor vehicle thefts\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"MotorVehicleTheftRate\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"MotorVehicleTheftRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<auto theft rate\>\""}], "}"}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"rate of murder and nonnegligent manslaughter\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"MurderNonnegligentManslaughterRate\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"MurderNonnegligentManslaughterRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<murder rate\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"new housing units value\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"NewPrivateHousingUnitsValue\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"NewPrivateHousingUnitsValue\\\"]\""},
+             "EntityProperty"], ",", "\"\<new housing value\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"per capita income\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"PerCapitaIncome\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"PerCapitaIncome\\\"]\""},
+             "EntityProperty"], ",", "\"\<per capita income\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"people per household\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"PersonsPerHousehold\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"PersonsPerHousehold\\\"]\""},
+             "EntityProperty"], ",", "\"\<people per home\>\""}], "}"}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{
+            TemplateBox[{"\"population\"",RowBox[{"EntityProperty", "[", 
+                RowBox[{"\"AdministrativeDivision\"", ",", "\"Population\""}],
+                 "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"Population\\\"]\""},
+             "EntityProperty"], ",", "\"\<population\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"population density\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"PopulationDensity\""}],
+                 "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"PopulationDensity\\\"]\""},
+             "EntityProperty"], ",", "\"\<population density\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"population net change\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"PopulationNetChange\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"PopulationNetChange\\\"]\""},
+             "EntityProperty"], ",", "\"\<population net change\>\""}], "}"}],
+           ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"total rate of property crime\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"PropertyCrimeRate\""}],
+                 "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"PropertyCrimeRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<property crime rate\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"residential rental vacancy rate\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"RentalVacancyRate\""}],
+                 "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"RentalVacancyRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<rental vacancy rate\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"retail sales per capita\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"RetailSalesPerCapita\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"RetailSalesPerCapita\\\"]\""},
+             "EntityProperty"], ",", "\"\<retail $ per capita\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"rate of robbery\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"RobberyRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"RobberyRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<robbery rate\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"total voter registration rate\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", 
+                  "\"TotalVoterRegistrationRate\""}], "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"TotalVoterRegistrationRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<% registered voters\>\""}], "}"}], 
+          ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"total voting rate\"",RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"TotalVotingRate\""}], 
+                "]"}],
+              "\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"TotalVotingRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<% who voted\>\""}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            
+            TemplateBox[{
+             "\"total rate of violent crime\"",
+              RowBox[{"EntityProperty", "[", 
+                
+                RowBox[{
+                 "\"AdministrativeDivision\"", ",", "\"ViolentCrimeRate\""}], 
+                "]"}],"\"EntityProperty[\\\"AdministrativeDivision\\\", \
+\\\"ViolentCrimeRate\\\"]\""},
+             "EntityProperty"], ",", "\"\<violent crime rate\>\""}], "}"}]}], 
+         "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<The map shows which of these demographic statistics?\>\""}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"rawChoices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"props", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"#", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "rawChoices"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"data", "=", 
+        RowBox[{"EntityValue", "[", 
+         RowBox[{"states", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"rawChoices", "[", 
+             RowBox[{"[", 
+              RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "\"\<Polygon\>\""}],
+            "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"rng", "=", 
+        RowBox[{"Through", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"Min", ",", "Max"}], "}"}], "@", 
+          RowBox[{"QuantityMagnitude", "[", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"All", ",", "1"}], "]"}], "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"GeoGraphics", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"GeoStyling", "[", "None", "]"}], ",", 
+              RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"ColorData", "[", "\"\<SunsetColors\>\"", "]"}], 
+                   "@", 
+                   RowBox[{"Rescale", "[", 
+                    RowBox[{
+                    RowBox[{"QuantityMagnitude", "[", "#1", "]"}], ",", 
+                    "h1"}], "]"}]}], ",", "#2"}], "}"}], "&"}], "@@@", 
+               "h2"}]}], "}"}], ",", 
+            RowBox[{"GeoProjection", "\[Rule]", "\"\<ApianI\>\""}], ",", 
+            RowBox[{"PlotLabel", "\[Rule]", 
+             RowBox[{"StringForm", "[", 
+              RowBox[{"\"\<LOW `` HIGH\>\"", ",", 
+               RowBox[{"Framed", "[", 
+                RowBox[{"ColorData", "[", 
+                 RowBox[{"\"\<SunsetColors\>\"", ",", "\"\<Image\>\""}], 
+                 "]"}], "]"}]}], "]"}]}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "480", "}"}], ",", 
+               RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "rng"}], ",", 
+           RowBox[{"h2", "\[Rule]", "data"}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Huma9\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6931456020743227`*^9, 3.693145634082183*^9}, {
+   3.69315219435618*^9, 3.6931522592371693`*^9}, {3.6931523172054377`*^9, 
+   3.693152461720677*^9}, {3.693152515635743*^9, 3.693152522297859*^9}, 
+   3.693152654915873*^9, {3.693152716611368*^9, 3.6931528435646467`*^9}, {
+   3.6931528828469067`*^9, 3.693152901109544*^9}, {3.6931529383290377`*^9, 
+   3.693152945744843*^9}, {3.693153025789813*^9, 3.693153037388894*^9}, {
+   3.69315311755381*^9, 3.693153124312694*^9}, {3.693153431161396*^9, 
+   3.6931535020273542`*^9}, {3.69315355087928*^9, 3.693153564118164*^9}, {
+   3.6931537389119864`*^9, 3.6931539317528763`*^9}, {3.693153993749345*^9, 
+   3.6931540341727457`*^9}, 3.693154123173991*^9, {3.693154255761595*^9, 
+   3.6931543099483957`*^9}, 3.69315435677553*^9, {3.6931544128521757`*^9, 
+   3.693154417976712*^9}, {3.6931544846617813`*^9, 3.6931545106043987`*^9}, 
+   3.693154783671158*^9, {3.693154838882098*^9, 3.693154858834855*^9}, {
+   3.6931549287421837`*^9, 3.693154932157339*^9}, {3.693154998769844*^9, 
+   3.6931550046410313`*^9}, {3.6931550723008347`*^9, 3.69315507882067*^9}, {
+   3.693155109094981*^9, 3.693155114205965*^9}, 3.693155406569128*^9, {
+   3.69315544841724*^9, 3.693155454106449*^9}, {3.693155559940624*^9, 
+   3.693155573666533*^9}, {3.6931559562236223`*^9, 3.693155974231127*^9}, {
+   3.693156423819592*^9, 3.693156493013129*^9}, {3.693156574017808*^9, 
+   3.6931565798989162`*^9}, {3.69315667931081*^9, 3.69315668085142*^9}, {
+   3.693156733201275*^9, 3.693156761495813*^9}, {3.6931568523516703`*^9, 
+   3.693156880685976*^9}, 3.693156957164895*^9, 3.6931583681705627`*^9, {
+   3.69315973858525*^9, 3.693159795051673*^9}, {3.693159834116922*^9, 
+   3.6931599554250193`*^9}, {3.693160209756124*^9, 3.693160234470574*^9}, {
+   3.6931602720867434`*^9, 3.6931602857147703`*^9}, {3.693160477357243*^9, 
+   3.693160537974118*^9}, 3.693160579054021*^9, {3.693160643887142*^9, 
+   3.693160685941867*^9}, {3.6931607533452663`*^9, 3.6931608165714397`*^9}, 
+   3.6931609018378887`*^9, {3.6931609698146763`*^9, 3.69316099249655*^9}, {
+   3.693161030938367*^9, 3.6931610431830378`*^9}, 3.69316107343743*^9, {
+   3.6931611619755507`*^9, 3.6931611803659163`*^9}, 3.693161219516553*^9, {
+   3.693161262908163*^9, 3.693161286146882*^9}, 3.6931613210734177`*^9, {
+   3.6931613561516542`*^9, 3.69316136681516*^9}, {3.693161409437258*^9, 
+   3.693161412711636*^9}, {3.693161456780592*^9, 3.693161517970738*^9}, {
+   3.693161575668805*^9, 3.69316161065525*^9}, {3.693161658265057*^9, 
+   3.693161680669702*^9}, 3.693161716868661*^9, {3.693161765534987*^9, 
+   3.69316177298709*^9}, 3.69316181580931*^9, 3.693161980273891*^9, {
+   3.693162012194283*^9, 3.693162055896285*^9}, 3.693162096855118*^9, {
+   3.6931621464409*^9, 3.693162158958213*^9}, {3.6931622014041977`*^9, 
+   3.6931622553872967`*^9}, {3.6931622861361113`*^9, 
+   3.6931623921539373`*^9}, {3.693162424542947*^9, 3.693162484617395*^9}, {
+   3.6931625211957083`*^9, 3.693162709609673*^9}, 3.693213876737852*^9, {
+   3.693213959509818*^9, 3.693214030125886*^9}, 3.693215851259759*^9, {
+   3.693215904568205*^9, 3.6932159320535307`*^9}, 3.6932159646096783`*^9, {
+   3.693216012100873*^9, 3.693216023314207*^9}, {3.693216054974186*^9, 
+   3.693216160736858*^9}, {3.693216192260964*^9, 3.693216275734943*^9}, {
+   3.6932163108190613`*^9, 3.693216363698326*^9}, {3.6932164021118193`*^9, 
+   3.6932165734137*^9}, {3.693216605922078*^9, 3.693216656602393*^9}, {
+   3.693216701214861*^9, 3.693216730847007*^9}, {3.693216763650279*^9, 
+   3.693216822049906*^9}, {3.693217188790688*^9, 3.693217222382244*^9}, 
+   3.693221499419573*^9, {3.693221683191155*^9, 3.69322170689069*^9}, 
+   3.6932217390030212`*^9, 3.693221770792901*^9, {3.693221807684997*^9, 
+   3.693221930880237*^9}, {3.69322201204671*^9, 3.693222029178632*^9}, {
+   3.693222080365864*^9, 3.693222115495677*^9}, {3.693222182364221*^9, 
+   3.693222214604671*^9}, {3.693222248279421*^9, 3.693222315922804*^9}, {
+   3.693222363055949*^9, 3.6932223782044764`*^9}, {3.6932224095266953`*^9, 
+   3.6932225098603888`*^9}, {3.6932225679684343`*^9, 
+   3.6932226935011587`*^9}, {3.693222733247362*^9, 3.6932227465185204`*^9}, 
+   3.693222782928892*^9, {3.693222843127549*^9, 3.6932229082857533`*^9}, {
+   3.693222943489094*^9, 3.693222969436597*^9}, {3.6932230076233053`*^9, 
+   3.693223016651569*^9}, {3.6932230681111097`*^9, 3.693223114376355*^9}, 
+   3.693223155827125*^9, {3.6932232054493732`*^9, 3.693223217637671*^9}, {
+   3.693223270512864*^9, 3.693223326763507*^9}, {3.6932233803139687`*^9, 
+   3.693223533357766*^9}, 3.693223577839603*^9, {3.693223614885178*^9, 
+   3.693223623089736*^9}, 3.693223664163567*^9, {3.693223695778585*^9, 
+   3.6932237048378887`*^9}, 3.693223782377385*^9, {3.693223859489355*^9, 
+   3.693223870654283*^9}, {3.693223902103202*^9, 3.693223930201281*^9}, 
+   3.693223983210981*^9, {3.693224022150362*^9, 3.693224063359552*^9}, 
+   3.6932241032408037`*^9, {3.69322414016355*^9, 3.693224222191636*^9}, {
+   3.69322428385725*^9, 3.693224381671336*^9}, {3.693224459793766*^9, 
+   3.6932245128608437`*^9}, {3.6932245542149143`*^9, 3.69322458202527*^9}, 
+   3.693224637243148*^9, {3.693224684510974*^9, 3.6932247549765167`*^9}, {
+   3.693224792528304*^9, 3.693224800764411*^9}, {3.6932248688539753`*^9, 
+   3.693224974348171*^9}, {3.693225045358451*^9, 3.6932250913900843`*^9}, 
+   3.693225182971779*^9, 3.693225238157814*^9, {3.693225275349235*^9, 
+   3.693225378369073*^9}, {3.6932254990059557`*^9, 3.693225550293432*^9}, {
+   3.6932255912743587`*^9, 3.693225689435789*^9}, {3.693225785565567*^9, 
+   3.693225795619918*^9}, {3.693225860157892*^9, 3.693225902190366*^9}, {
+   3.693225961243414*^9, 3.6932259692402487`*^9}, {3.693226025933847*^9, 
+   3.69322603261267*^9}, {3.6932262318311453`*^9, 3.693226313826022*^9}, {
+   3.693226349250951*^9, 3.693226359763623*^9}, {3.7177692048004103`*^9, 
+   3.717769220796927*^9}},ExpressionUUID->"69182e3a-7f77-40e5-a1a3-\
+ae9200439ac2"]
+},
+WindowSize->{1170, 1097},
+WindowMargins->{{3, Automatic}, {21, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 60174, 1281, 1638, "Input",ExpressionUUID->"69182e3a-7f77-40e5-a1a3-ae9200439ac2"]
+}
+]
+*)
+

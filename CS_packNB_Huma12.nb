@@ -1,0 +1,1071 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     48901,       1063]
+NotebookOptionsPosition[     48584,       1049]
+NotebookOutlinePosition[     48944,       1065]
+CellTagsIndexPosition[     48901,       1062]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"p", "=", "\"\<Pop\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"r", "=", "\"\<R&B/Soul/Hip-Hop\>\""}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"c", "=", "\"\<Country\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"data", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"data", "=", 
+          RowBox[{"DeleteDuplicatesBy", "[", 
+           RowBox[{
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Prisoner of Love\>\"", ",", "\"\<Perry Como\>\"", ",", 
+                  "1946", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hey! Ba-Ba-Re-Bop\>\"", ",", "\"\<Lionel Hampton\>\"", 
+                  ",", "1946", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<New Spanish Two Step\>\"", ",", "\"\<Bob Wills\>\"", 
+                  ",", "1946", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Near You\>\"", ",", "\"\<Francis Craig\>\"", ",", 
+                  "1947", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Ain't Nobody Here But Us Chickens\>\"", ",", 
+                  "\"\<Louis Jordan\>\"", ",", "1947", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Smoke! Smoke! Smoke! (That Cigarette)\>\"", ",", 
+                  "\"\<Tex Williams Western Caravan\>\"", ",", "1947", ",", 
+                  "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Twelfth Street Rag\>\"", ",", "\"\<Pee Wee Hunt\>\"", 
+                  ",", "1948", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Long Gone\>\"", ",", "\"\<Sonny Thompson\>\"", ",", 
+                  "1948", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bouquet of Roses\>\"", ",", "\"\<Eddy Arnold\>\"", ",", 
+                  "1948", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Riders in the Sky\>\"", ",", 
+                  "\"\<Vaughn Monroe Orchestra\>\"", ",", "1949", ",", "p"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Hucklebuck\>\"", ",", "\"\<Paul Williams\>\"", ",", 
+                  "1949", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Lovesick Blues\>\"", ",", 
+                  "\"\<Hank Williams and the Drifting Cowboys\>\"", ",", 
+                  "1949", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Goodnight, Irene\>\"", ",", 
+                  "\"\<Gordon Jenkins and The Weavers\>\"", ",", "1950", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Pink Champagne\>\"", ",", "\"\<Joe Liggins\>\"", ",", 
+                  "1950", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I'm Movin' On\>\"", ",", "\"\<Hank Snow\>\"", ",", 
+                  "1950", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Too Young\>\"", ",", "\"\<Nat King Cole\>\"", ",", 
+                  "1951", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Sixty Minute Man\>\"", ",", "\"\<The Dominoes\>\"", ",",
+                   "1951", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Cold, Cold Heart\>\"", ",", "\"\<Hank Williams\>\"", 
+                  ",", "1951", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Blue Tango\>\"", ",", "\"\<Leroy Anderson\>\"", ",", 
+                  "1952", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Lawdy Miss Clawdy\>\"", ",", "\"\<Lloyd Price\>\"", ",",
+                   "1952", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Wild Side of Life\>\"", ",", "\"\<Hank Thompson\>\"", 
+                  ",", "1952", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Song from Moulin Rouge\>\"", ",", "\"\<Percy Faith\>\"",
+                   ",", "1953", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<(Mama) He Treats Your Daughter Mean\>\"", ",", 
+                  "\"\<Ruth Brown\>\"", ",", "1953", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Kaw-Liga\>\"", ",", "\"\<Hank Williams\>\"", ",", 
+                  "1953", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Little Things Mean a Lot\>\"", ",", 
+                  "\"\<Francis Kitty Kallen\>\"", ",", "1954", ",", "p"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Work With Me, Annie\>\"", ",", "\"\<Midnighters\>\"", 
+                  ",", "1954", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Don't Hurt Anymore\>\"", ",", "\"\<Hank Snow\>\"", 
+                  ",", "1954", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Cherry Pink and Apple Blossom White\>\"", ",", 
+                  "\"\<Perez Prado\>\"", ",", "1955", ",", "p"}], "}"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Pledging My Love\>\"", ",", "\"\<Johnnyt Ace\>\"", ",", 
+                  "1955", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<In the Jailhouse Now\>\"", ",", "\"\<Webb Pierce\>\"", 
+                  ",", "1955", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Heartbreak Hotel\>\"", ",", "\"\<Elvis Presley\>\"", 
+                  ",", "1956", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Honky Tonk\>\"", ",", "\"\<Bill Doggett\>\"", ",", 
+                  "1956", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Crazy Arms\>\"", ",", "\"\<Ray Price\>\"", ",", "1956", 
+                  ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<All Shook Up\>\"", ",", "\"\<Elvis Presley\>\"", ",", 
+                  "1957", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Jailhouse Rock\>\"", ",", "\"\<Elvis Presley\>\"", ",", 
+                  "1957", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Gone\>\"", ",", "\"\<Ferlin Husky\>\"", ",", "1957", 
+                  ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Nel Blu Dipinto di Blu (Volare)\>\"", ",", 
+                  "\"\<Domenico Modugno\>\"", ",", "1958", ",", "p"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<What am I Loving For\>\"", ",", "\"\<Chuck Willis\>\"", 
+                  ",", "1958", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Oh Lonesome Me\>\"", ",", "\"\<Don Gibson\>\"", ",", 
+                  "1958", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Battle of New Orleans\>\"", ",", 
+                  "\"\<Johnny Horton\>\"", ",", "1959", ",", "p"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Stagger Lee\>\"", ",", "\"\<Lloyd Price\>\"", ",", 
+                  "1959", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Battle of New Orleans\>\"", ",", 
+                  "\"\<Johnny Horton\>\"", ",", "1959", ",", "c"}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Theme from \\\"A Summer Place\\\"\>\"", ",", 
+                  "\"\<Percy Faith\>\"", ",", "1960", ",", "p"}], "}"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Kiddio\>\"", ",", "\"\<Brook Benton\>\"", ",", "1960", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Please Help Me I'm Falling\>\"", ",", 
+                  "\"\<Hank Locklin\>\"", ",", "1960", ",", "c"}], "}"}], ",",
+                 "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Tossin' and Turnin'\>\"", ",", "\"\<Bobby Lewis\>\"", 
+                  ",", "1961", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Tossin' and Turnin'\>\"", ",", "\"\<Bobby Lewis\>\"", 
+                  ",", "1961", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Fall to Pieces\>\"", ",", "\"\<Patsy Cline\>\"", ",", 
+                  "1961", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Stranger on the Shore\>\"", ",", 
+                  "\"\<Mr. Acker Bilk\>\"", ",", "1962", ",", "p"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Soul Twist\>\"", ",", "\"\<King Curtis\>\"", ",", 
+                  "1962", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Wolverton Mountain\>\"", ",", "\"\<Claude King\>\"", 
+                  ",", "1962", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Sugar Shack\>\"", ",", 
+                  "\"\<Jimmy Glimmer and the Fireballs\>\"", ",", "1963", ",",
+                   "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Part Time Love\>\"", ",", 
+                  "\"\<Little Johnny Taylor\>\"", ",", "1963", ",", "r"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Still\>\"", ",", "\"\<Bill Anderson\>\"", ",", "1963", 
+                  ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Want to Hold Your Hand\>\"", ",", 
+                  "\"\<The Beatles\>\"", ",", "1964", ",", "p"}], "}"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Heart Skips a Beat\>\"", ",", "\"\<Buck Owens\>\"", 
+                  ",", "1964", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Wooly Bully\>\"", ",", 
+                  "\"\<Sam the Sham & the Pharaohs\>\"", ",", "1965", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Can't Help Myself (Sugar Pie Honey Bunch)\>\"", ",", 
+                  "\"\<Four Tops\>\"", ",", "1965", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<What's He Doing in My World\>\"", ",", 
+                  "\"\<Eddy Arnold\>\"", ",", "1965", ",", "c"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Ballad of the Green Berets\>\"", ",", 
+                  "\"\<S/Sgt. Barry Sadler\>\"", ",", "1966", ",", "p"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hold On! I'm Comin'\>\"", ",", "\"\<Sam & Dave\>\"", 
+                  ",", "1966", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Almost Persuaded\>\"", ",", "\"\<David Houston\>\"", 
+                  ",", "1966", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<To Sir with Love\>\"", ",", "\"\<Lulu\>\"", ",", "1967",
+                   ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Respect\>\"", ",", "\"\<Aretha Franklin\>\"", ",", 
+                  "1967", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<All the Time\>\"", ",", "\"\<Jack Greene\>\"", ",", 
+                  "1967", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hey Jude\>\"", ",", "\"\<The Beatles\>\"", ",", "1968", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Say It Loud \[LongDash] I'm Black and I'm Proud\>\"", 
+                  ",", "\"\<James Brown\>\"", ",", "1968", ",", "r"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Folsom Prison Blues\>\"", ",", "\"\<Johnny Cash\>\"", 
+                  ",", "1968", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Sugar, Sugar\>\"", ",", "\"\<The Archies\>\"", ",", 
+                  "1969", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<What Does It Take (To Win Your Love)\>\"", ",", 
+                  "\"\<Jr. Walker and the All Stars\>\"", ",", "1969", ",", 
+                  "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Life (Throw It Away If I Want To)\>\"", ",", 
+                  "\"\<Bill Anderson\>\"", ",", "1969", ",", "c"}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bridge Over Troubled Water\>\"", ",", 
+                  "\"\<Simon & Garfunkel\>\"", ",", "1970", ",", "p"}], "}"}],
+                 ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I'll Be There\>\"", ",", "\"\<Jackson 5\>\"", ",", 
+                  "1970", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hello Darlin'\>\"", ",", "\"\<Conway Twitty\>\"", ",", 
+                  "1970", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Joy to the World\>\"", ",", "\"\<Three Dog Night\>\"", 
+                  ",", "1971", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Mr. Big Stuff\>\"", ",", "\"\<Jean Knight\>\"", ",", 
+                  "1971", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Easy Loving\>\"", ",", "\"\<Freddie Hart\>\"", ",", 
+                  "1971", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The First Time Ever I Saw Your Face\>\"", ",", 
+                  "\"\<Roberta Flack\>\"", ",", "1972", ",", "p"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Let's Stay Together\>\"", ",", "\"\<Al Green\>\"", ",", 
+                  "1972", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Hang-Up Is You\>\"", ",", "\"\<Freddie Hart\>\"", 
+                  ",", "1972", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Tie a Yellow Ribbon 'Round the Old Oak Tree\>\"", ",", 
+                  "\"\<Tony Orlando and Dawn\>\"", ",", "1973", ",", "p"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Let's Get It On\>\"", ",", "\"\<Marvin Gaye\>\"", ",", 
+                  "1973", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<You've Never Been This Far Before\>\"", ",", 
+                  "\"\<Conway Twitty\>\"", ",", "1973", ",", "c"}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Way We Were\>\"", ",", "\"\<Barbra Steisand\>\"", 
+                  ",", "1974", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Feel Like Makin' Love\>\"", ",", 
+                  "\"\<Roberta Flack\>\"", ",", "1974", ",", "r"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<There Won't Be Anymore\>\"", ",", 
+                  "\"\<Charlie Rich\>\"", ",", "1974", ",", "c"}], "}"}], ",",
+                 "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Love Will Keep Us Together\>\"", ",", 
+                  "\"\<Captain & Tennille\>\"", ",", "1975", ",", "p"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Fight the Power Pt. 1\>\"", ",", 
+                  "\"\<Isley Brothers\>\"", ",", "1975", ",", "r"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Rhinestone Cowboy\>\"", ",", "\"\<Glen Campbell\>\"", 
+                  ",", "1975", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Silly Love Songs\>\"", ",", "\"\<Wings\>\"", ",", 
+                  "1976", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Disco Lady\>\"", ",", "\"\<Johnnie Taylor\>\"", ",", 
+                  "1976", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Convoy\>\"", ",", "\"\<C.W. McCall\>\"", ",", "1976", 
+                  ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Tonight's the Night (Gonna Be Alright)\>\"", ",", 
+                  "\"\<Rod Stewart\>\"", ",", "1977", ",", "p"}], "}"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Float On\>\"", ",", "\"\<Floaters\>\"", ",", "1977", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Luckenbach, Texas (Back to the Basics of Love)\>\"", 
+                  ",", "\"\<Waylon Jennings\>\"", ",", "1977", ",", "c"}], 
+                 "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Shadow Dancing\>\"", ",", "\"\<Andy Gibb\>\"", ",", 
+                  "1978", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Serpentine Fire\>\"", ",", "\"\<Earth, Wind & Fire\>\"",
+                   ",", "1978", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Mamas Don't Let Your Babies Grow Up to be Cowboys\>\"", 
+                  ",", "\"\<Waylon & Willie\>\"", ",", "1978", ",", "c"}], 
+                 "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Sharona\>\"", ",", "\"\<The Knack\>\"", ",", "1979", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Good Times\>\"", ",", "\"\<Chic\>\"", ",", "1979", ",", 
+                  "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Just Fall in Love Again\>\"", ",", 
+                  "\"\<Anne Murray\>\"", ",", "1979", ",", "c"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Call Me\>\"", ",", "\"\<Blondie\>\"", ",", "1980", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Let's Get Serious\>\"", ",", "\"\<Jermaine Jackson\>\"",
+                   ",", "1980", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Heart\>\"", ",", "\"\<Ronnie Milsap\>\"", ",", 
+                  "1980", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bette Davis Eyes\>\"", ",", "\"\<Kim Carnes\>\"", ",", 
+                  "1981", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Endless Love\>\"", ",", 
+                  "\"\<Diana Ross and Lionel Richie\>\"", ",", "1981", ",", 
+                  "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Fire and Smoke\>\"", ",", "\"\<Earl Thomas Conley\>\"", 
+                  ",", "1981", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Physical\>\"", ",", "\"\<Olivia Newton-John\>\"", ",", 
+                  "1982", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<That Girl\>\"", ",", "\"\<Stevie Wonder\>\"", ",", 
+                  "1982", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Always on My Mind\>\"", ",", "\"\<Willie Nelson\>\"", 
+                  ",", "1982", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Every Breath You Take\>\"", ",", "\"\<Police\>\"", ",", 
+                  "1983", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Sexual Healing\>\"", ",", "\"\<Marvin Gaye\>\"", ",", 
+                  "1983", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Jos\[EAcute] Cuervo\>\"", ",", "\"\<Shelly West\>\"", 
+                  ",", "1983", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<When Doves Cry\>\"", ",", "\"\<Prince\>\"", ",", "1984",
+                   ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<When Doves Cry\>\"", ",", "\"\<Prince\>\"", ",", "1984",
+                   ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<To All the Girls I've Loved Before\>\"", ",", 
+                  "\"\<Julio Iglesias and Willie Nelson\>\"", ",", "1984", 
+                  ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Careless Whisper\>\"", ",", "\"\<Wham!\>\"", ",", 
+                  "1985", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Rock Me Tonight (For Old Times Sake)\>\"", ",", 
+                  "\"\<Freddie Jackson\>\"", ",", "1985", ",", "r"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Lost in the Fifties Tonight\>\"", ",", 
+                  "\"\<Ronnie Milsap\>\"", ",", "1985", ",", "c"}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<That's What Friends Are For\>\"", ",", 
+                  "\"\<Dionne & Friends\>\"", ",", "1986", ",", "p"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<On My Own\>\"", ",", 
+                  "\"\<Patti Labelle and Michael McDonald\>\"", ",", "1986", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Never Be You\>\"", ",", "\"\<Rosanne Cash\>\"", ",", 
+                  "1986", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Walk Like an Egyptian\>\"", ",", "\"\<The Bangles\>\"", 
+                  ",", "1987", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Stop to Love\>\"", ",", "\"\<Luther Vandross\>\"", ",", 
+                  "1987", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Give Me Wings\>\"", ",", "\"\<Michael Johnson\>\"", ",",
+                   "1987", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Faith\>\"", ",", "\"\<George Michael\>\"", ",", "1988", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Want Her\>\"", ",", "\"\<Keith Sweat\>\"", ",", 
+                  "1988", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Don't Close Your Eyes\>\"", ",", 
+                  "\"\<Keith Whitley\>\"", ",", "1988", ",", "c"}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Look Away\>\"", ",", "\"\<Chicago\>\"", ",", "1989", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Superwoman\>\"", ",", "\"\<Karyn White\>\"", ",", 
+                  "1989", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<A Better Man\>\"", ",", "\"\<Clint Black\>\"", ",", 
+                  "1989", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hold On\>\"", ",", "\"\<Wilson Phillips\>\"", ",", 
+                  "1990", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hold On\>\"", ",", "\"\<En Vogue\>\"", ",", "1990", ",",
+                   "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Nobody's Home\>\"", ",", "\"\<Clint Black\>\"", ",", 
+                  "1990", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<(Everything I Do) I Do It for You\>\"", ",", 
+                  "\"\<Bryan Adams\>\"", ",", "1991", ",", "p"}], "}"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Written All Over Your Face\>\"", ",", 
+                  "\"\<Rude Boys\>\"", ",", "1991", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Don't Rock the Jukebox\>\"", ",", 
+                  "\"\<Alan Jackson\>\"", ",", "1991", ",", "c"}], "}"}], ",",
+                 "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<End of the Road\>\"", ",", "\"\<Boyz II Men\>\"", ",", 
+                  "1992", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Come and Talk to Me\>\"", ",", "\"\<Jodeci\>\"", ",", 
+                  "1992", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Saw the Light\>\"", ",", "\"\<Wynonna\>\"", ",", 
+                  "1992", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Will Always Love You\>\"", ",", 
+                  "\"\<Whitney Houston\>\"", ",", "1993", ",", "p"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Will Always Love You\>\"", ",", 
+                  "\"\<Whitney Houston\>\"", ",", "1993", ",", "r"}], "}"}], 
+                ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Chattahoochee\>\"", ",", "\"\<Alan Jackson\>\"", ",", 
+                  "1993", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Sign\>\"", ",", "\"\<Ace of Base\>\"", ",", "1994", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bump n' Grind\>\"", ",", "\"\<R. Kelly\>\"", ",", 
+                  "1994", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Swear\>\"", ",", "\"\<John Michael Montgomery\>\"", 
+                  ",", "1994", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Gangsta's Paradise\>\"", ",", "\"\<Coolio\>\"", ",", 
+                  "1995", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Creep\>\"", ",", "\"\<TLC\>\"", ",", "1995", ",", "r"}],
+                  "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Sold (The Grundy County Auction Incident)\>\"", ",", 
+                  "\"\<John Michael Montgomery\>\"", ",", "1995", ",", "c"}], 
+                 "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Macarena\>\"", ",", "\"\<Los del Rio\>\"", ",", "1996", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<You're Makin' Me High\>\"", ",", "\"\<Toni Braxton\>\"",
+                   ",", "1996", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Maria\>\"", ",", "\"\<Brooks & Dunn\>\"", ",", 
+                  "1996", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Candle in the Wind\>\"", ",", "\"\<Elton John\>\"", ",",
+                   "1997", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<In My Bed\>\"", ",", "\"\<Dru Hill\>\"", ",", "1997", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<It's Your Love\>\"", ",", 
+                  "\"\<Tim McGraw and Faith Hill\>\"", ",", "1997", ",", 
+                  "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Too Close\>\"", ",", "\"\<Next\>\"", ",", "1998", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Too Close\>\"", ",", "\"\<Next\>\"", ",", "1998", ",", 
+                  "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Just to See You Smile\>\"", ",", "\"\<Tim McGraw\>\"", 
+                  ",", "1998", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Believe\>\"", ",", "\"\<Cher\>\"", ",", "1999", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Fortunate\>\"", ",", "\"\<Maxwell\>\"", ",", "1999", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Amazed\>\"", ",", "\"\<Lonestar\>\"", ",", "1999", ",", 
+                  "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Breathe\>\"", ",", "\"\<Faith Hill\>\"", ",", "2000", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Let's Get Married\>\"", ",", "\"\<Jagged Edge\>\"", ",",
+                   "2000", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<How Do You Like Me Now?!\>\"", ",", 
+                  "\"\<Toby Keith\>\"", ",", "2000", ",", "c"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Hanging by a Moment\>\"", ",", "\"\<Lifehouse\>\"", ",",
+                   "2001", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Fiesta\>\"", ",", "\"\<R. Kelly\>\"", ",", "2001", ",", 
+                  "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Ain't Nothing 'Bout You\>\"", ",", 
+                  "\"\<Brooks & Dunn\>\"", ",", "2001", ",", "c"}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<How You Remind Me\>\"", ",", "\"\<Nickelback\>\"", ",", 
+                  "2002", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Foolish\>\"", ",", "\"\<Ashanti\>\"", ",", "2002", ",", 
+                  "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<The Good Stuff\>\"", ",", "\"\<Kenny Chesney\>\"", ",", 
+                  "2002", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<In da Club\>\"", ",", "\"\<50 Cent\>\"", ",", "2003", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<In da Club\>\"", ",", "\"\<50 Cent\>\"", ",", "2003", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<My Front Porch Looking In\>\"", ",", "\"\<Lonestar\>\"",
+                   ",", "2003", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Yeah!\>\"", ",", "\"\<Usher\>\"", ",", "2004", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<If I Ain't Got You\>\"", ",", "\"\<Alicia Keys\>\"", 
+                  ",", "2004", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Live Like You Were Dying\>\"", ",", 
+                  "\"\<Tim McGraw\>\"", ",", "2004", ",", "c"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<We Belong Together\>\"", ",", "\"\<Mariah Carey\>\"", 
+                  ",", "2005", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Let Me Love You\>\"", ",", "\"\<Mario\>\"", ",", "2005",
+                   ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<That's What I Love About Sunday\>\"", ",", 
+                  "\"\<Craig Morgan\>\"", ",", "2005", ",", "c"}], "}"}], ",",
+                 "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Bad Day\>\"", ",", "\"\<Daniel Powter\>\"", ",", "2006",
+                   ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Be Without You\>\"", ",", "\"\<Mary J. Blige\>\"", ",", 
+                  "2006", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<If You're Going Through Hell (Before the Devil Even \
+Knows)\>\"", ",", "\"\<Rodney Atkins\>\"", ",", "2006", ",", "c"}], "}"}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Irreplaceable\>\"", ",", "\"\<Beyonc\[EAcute]\>\"", ",",
+                   "2007", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Lost Without U\>\"", ",", "\"\<Robin Thicke\>\"", ",", 
+                  "2007", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Watching You\>\"", ",", "\"\<Rodney Atkins\>\"", ",", 
+                  "2007", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Low\>\"", ",", "\"\<Flo Rida\>\"", ",", "2008", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Like You'll Never See Me Again\>\"", ",", 
+                  "\"\<Alicia Keys\>\"", ",", "2008", ",", "r"}], "}"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Just Got Started Lovin' You\>\"", ",", 
+                  "\"\<James Otto\>\"", ",", "2008", ",", "c"}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Boom Boom Pow\>\"", ",", "\"\<The Black Eyed Peas\>\"", 
+                  ",", "2009", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Blame It\>\"", ",", "\"\<Jamie Foxx\>\"", ",", "2009", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<I Run to You\>\"", ",", "\"\<Lady Antebellum\>\"", ",", 
+                  "2009", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Tik Tok\>\"", ",", "\"\<Kesha\>\"", ",", "2010", ",", 
+                  "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Un-Thinkable (I'm Ready)\>\"", ",", 
+                  "\"\<Alicia Keys\>\"", ",", "2010", ",", "r"}], "}"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Love Like Crazy\>\"", ",", "\"\<Lee Brice\>\"", ",", 
+                  "2010", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Rolling in the Deep\>\"", ",", "\"\<Adele\>\"", ",", 
+                  "2011", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Sure Thing\>\"", ",", "\"\<Miguel\>\"", ",", "2011", 
+                  ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Crazy Girl\>\"", ",", "\"\<Eli Young Band\>\"", ",", 
+                  "2011", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Somebody That I Used to Know\>\"", ",", "\"\<Gotye\>\"",
+                   ",", "2012", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Love on Top\>\"", ",", "\"\<Beyonc\[EAcute]\>\"", ",", 
+                  "2012", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Time is Love\>\"", ",", "\"\<Josh Turner\>\"", ",", 
+                  "2012", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Thrift Shop\>\"", ",", 
+                  "\"\<Macklemore & Ryan Lewis\>\"", ",", "2013", ",", "p"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Thrift Shop\>\"", ",", 
+                  "\"\<Macklemore & Ryan Lewis\>\"", ",", "2013", ",", "r"}], 
+                 "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Cruise\>\"", ",", "\"\<Florida Georgia Line\>\"", ",", 
+                  "2013", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Happy\>\"", ",", "\"\<Pharrell Williams\>\"", ",", 
+                  "2014", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Happy\>\"", ",", "\"\<Pharrell Williams\>\"", ",", 
+                  "2014", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<This is How We Roll\>\"", ",", 
+                  "\"\<Florida Georgia Line\>\"", ",", "2014", ",", "c"}], 
+                 "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Uptown Funk\>\"", ",", 
+                  "\"\<Mark Ronson (featuring Bruno Mars)\>\"", ",", "2015", 
+                  ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<See You Again\>\"", ",", "\"\<Wiz Khalifa\>\"", ",", 
+                  "2015", ",", "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Take Your Time\>\"", ",", "\"\<Sam Hunt\>\"", ",", 
+                  "2015", ",", "c"}], "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Love Yourself\>\"", ",", "\"\<Justin Bieber\>\"", ",", 
+                  "2016", ",", "p"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<One Dance\>\"", ",", "\"\<Drake\>\"", ",", "2016", ",", 
+                  "r"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<H.O.L.Y.\>\"", ",", "\"\<Florida Georgia Line\>\"", ",",
+                   "2016", ",", "c"}], "}"}]}], "\[IndentingNewLine]", "}"}], 
+              ",", "4"}], "]"}], ",", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "<>", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "&"}]}], "]"}]}]}], "]"}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Which of these was the top `1` song (single) of `2`?\>\"", ",", 
+          
+          RowBox[{"data", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "4"}], "]"}], "]"}], ",", 
+          RowBox[{"data", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"\"\<\\\"\>\"", "<>", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "<>", "\"\<\\\" by \>\"", "<>", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], ")"}], "&"}], "/@", "data"}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Huma12\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.7083734168126707`*^9, 3.708373425379899*^9}, {
+   3.708373492149098*^9, 3.708373545019944*^9}, {3.708373582730493*^9, 
+   3.7083736670982523`*^9}, {3.708373717940014*^9, 3.708374307480954*^9}, {
+   3.7083743383229303`*^9, 3.7083743979981422`*^9}, {3.708374432580387*^9, 
+   3.7083756562723713`*^9}, {3.708375717472722*^9, 3.708375806694663*^9}, {
+   3.708375850584482*^9, 3.708376100670621*^9}, {3.708376133166273*^9, 
+   3.708376286085857*^9}, {3.708376910405401*^9, 3.708377062379463*^9}, {
+   3.7083772803638363`*^9, 3.708377971320825*^9}, {3.7083791166295557`*^9, 
+   3.708379233155414*^9}, {3.708379263396782*^9, 3.70837926362737*^9}, {
+   3.708379295459099*^9, 3.708379325322989*^9}, {3.708379438042646*^9, 
+   3.708379521170494*^9}, {3.708386333019264*^9, 3.708386478633349*^9}, {
+   3.708388140004736*^9, 3.7083881472578487`*^9}, {3.7083881839636374`*^9, 
+   3.708388274082456*^9}, {3.708388401714931*^9, 3.70838844041002*^9}, {
+   3.708388502241849*^9, 3.708388680705206*^9}, {3.708421535949561*^9, 
+   3.708421647427279*^9}, {3.70842438370254*^9, 3.708425127377282*^9}, {
+   3.708425175242579*^9, 3.708425242344564*^9}, {3.708425273920734*^9, 
+   3.708425320192377*^9}, {3.70842555137652*^9, 3.708425665139935*^9}, {
+   3.708427675939808*^9, 3.708428560853676*^9}, {3.7084457521414347`*^9, 
+   3.708445944816256*^9}, {3.708446013192357*^9, 3.7084463593262672`*^9}, {
+   3.708446565615624*^9, 3.708447497955584*^9}, {3.7084475322375593`*^9, 
+   3.7084480044738626`*^9}, {3.7084480357886543`*^9, 3.708448270200828*^9}, {
+   3.708448338067018*^9, 3.708448874142747*^9}, {3.708512985897935*^9, 
+   3.70851310623109*^9}, {3.708513155447731*^9, 3.708514224794582*^9}, {
+   3.7085260125719967`*^9, 3.70852601564215*^9}, {3.708526067251178*^9, 
+   3.7085261166993113`*^9}, {3.708526149944974*^9, 3.70852620368928*^9}, {
+   3.708526249107451*^9, 3.708526353991933*^9}, {3.708526386577998*^9, 
+   3.708526389031506*^9}, 3.708526419811441*^9, 3.708526473569503*^9, {
+   3.708526508475802*^9, 3.7085265340668573`*^9}, {3.708526578971568*^9, 
+   3.708526603570939*^9}, {3.708526652796733*^9, 3.708526677880479*^9}, {
+   3.708526910314077*^9, 
+   3.7085269109769573`*^9}},ExpressionUUID->"14f508bc-1286-4cf5-98ce-\
+4ccf324d4677"]
+},
+WindowSize->{1898, 1288},
+WindowMargins->{{3, Automatic}, {Automatic, 42}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 48022, 1027, 1837, "Input",ExpressionUUID->"14f508bc-1286-4cf5-98ce-4ccf324d4677"]
+}
+]
+*)
+
