@@ -1,0 +1,384 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19514,        376]
+NotebookOptionsPosition[     19199,        362]
+NotebookOutlinePosition[     19559,        378]
+CellTagsIndexPosition[     19516,        375]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<The Hound of the Baskervilles\>\"", "\[Rule]", "7"}], 
+          ",", 
+          RowBox[{"\"\<The Murders in the Rue Morgue\>\"", "\[Rule]", "7"}], 
+          ",", 
+          RowBox[{
+          "\"\<Posthumous Papers of the Pickwick Club\>\"", "\[Rule]", "10"}],
+           ",", 
+          RowBox[{"\"\<The Legend of Good Women\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{
+          "\"\<Lines Inscribed Upon a Cup Formed From a Skull\>\"", "\[Rule]",
+            "11"}], ",", 
+          RowBox[{
+          "\"\<The Red-Haired King and His Lady\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{"\"\<Recognitions and a Dream\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<Contending for a Soldier Fallen\>\"", "\[Rule]", "9"}],
+           ",", 
+          RowBox[{"\"\<A Midsummer Night's Dream\>\"", "\[Rule]", "6"}], ",", 
+          
+          RowBox[{"\"\<Antony and Cleopatra\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{
+          "\"\<It Is Almost the Year Two Thousand\>\"", "\[Rule]", "9"}], ",", 
+          RowBox[{"\"\<The Grapes of Wrath\>\"", "\[Rule]", "4"}], ",", 
+          RowBox[{"\"\<The Last of the Mohicans\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<Eaters of the Dead\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<The Bride Comes to Yellow Sky\>\"", "\[Rule]", "7"}], 
+          ",", 
+          RowBox[{"\"\<Children of the Corn\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<The Dalliance of the Eagles\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<Transcription of Organ Music\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<A Voyage to Brobdingnag\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{
+          "\"\<The Outlying Pickets of the New World\>\"", "\[Rule]", "10"}], 
+          ",", 
+          RowBox[{"\"\<Schr\[OE]der the Fisherman\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Alexander Throckmorton\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<The Nature of Gothic\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Paul Revere's Ride\>\"", "\[Rule]", "4"}], ",", 
+          RowBox[{"\"\<Evangeline\>\"", "\[Rule]", "4"}], ",", 
+          RowBox[{
+          "\"\<All Full of Tears and Flapdoodle\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{"\"\<Was Solomon Wise?\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<His Preposterous Heritage\>\"", "\[Rule]", "8"}], ",", 
+          
+          RowBox[{"\"\<The Captain Knuckles Under\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<Here There Be Tygers\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{
+          "\"\<The Ballad of the Flexible Bullet\>\"", "\[Rule]", "10"}], ",", 
+          RowBox[{"\"\<A Company of Laughing Faces\>\"", "\[Rule]", "9"}], 
+          ",", 
+          RowBox[{
+          "\"\<Tomorrow and Tomorrow and So Forth\>\"", "\[Rule]", "10"}], 
+          ",", 
+          RowBox[{"\"\<A Catastrophe\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<Continued Perplexities\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<Epitaphs from Chiabrera\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{"\"\<I Wandered Lonely as a Cloud\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<The Beautiful Toilet\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Lament of the Frontier Guard\>\"", "\[Rule]", "7"}], 
+          ",", 
+          RowBox[{"\"\<The Pequod Meets the Virgin\>\"", "\[Rule]", "7"}], 
+          ",", 
+          RowBox[{"\"\<Schools and Schoolmasters\>\"", "\[Rule]", "5"}], ",", 
+          
+          RowBox[{"\"\<Of the Darkening of Valinor\>\"", "\[Rule]", "9"}], 
+          ",", 
+          RowBox[{"\"\<The Legend of Jubal\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Hermaphroditus\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<The Emperor's Progress\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{
+          "\"\<Sir Launcelot and Queen Guinevere\>\"", "\[Rule]", "9"}], ",", 
+          
+          RowBox[{"\"\<The Ballad of Oriana\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{"\"\<On the Shortness of Human Life\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<Welcome to the Table\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<A Submarine Forest\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Accident or Incident\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<Marragansett Challenge\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<The Flesh and the Spirit\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Huswifery\>\"", "\[Rule]", "4"}], ",", 
+          RowBox[{"\"\<Much Occasion for Doing Good\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{
+          "\"\<Sinners in the Hands of an Angry God\>\"", "\[Rule]", "10"}], 
+          ",", 
+          RowBox[{
+          "\"\<The History of the Dividing Line\>\"", "\[Rule]", "10"}], ",", 
+          
+          RowBox[{"\"\<Poor Richard's Almanack\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<An Edict by the King of Prussia\>\"", "\[Rule]", "9"}],
+           ",", 
+          RowBox[{"\"\<Recapitulation\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<The Indian Burying Ground\>\"", "\[Rule]", "8"}], ",", 
+          
+          RowBox[{"\"\<Follow the Drinking Gourd\>\"", "\[Rule]", "6"}], ",", 
+          
+          RowBox[{"\"\<The Legend of Sleepy Hollow\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<Deer Hunted by Wolves\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<The Yellow Violet\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Formula to Destroy Life\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<Rappaccini's Daughter\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<The Fall of the House of Usher\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<The Cask of Amontillado\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{"\"\<Bartleby the Scrivener\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<The Divinity School Address\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<Rumors from an Aeolian Harp\>\"", "\[Rule]", "9"}], 
+          ",", 
+          RowBox[{"\"\<The Tide Rises, the Tide Falls\>\"", "\[Rule]", "7"}], 
+          ",", 
+          RowBox[{"\"\<Massachusetts to Virginia\>\"", "\[Rule]", "8"}], ",", 
+          
+          RowBox[{"\"\<The Deacon's Masterpiece\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<The Biglow Papers\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{
+          "\"\<Facing West from California's Shores\>\"", "\[Rule]", "9"}], 
+          ",", 
+          RowBox[{"\"\<The Dream of the Rood\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<The Corpus Christi Carol\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{
+          "\"\<Robin Hood and the Three Squires\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<A Change in Perspective\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<The Ballad of Dead Ladies\>\"", "\[Rule]", "7"}], ",", 
+          
+          RowBox[{
+          "\"\<The Nymph's Reply to the Shepherd\>\"", "\[Rule]", "8"}], ",", 
+          
+          RowBox[{"\"\<When Daffodils Begin to Peer\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<Mannerly Margery Milk and Ale\>\"", "\[Rule]", "9"}], 
+          ",", 
+          RowBox[{"\"\<A Litany in Time of Plague\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{"\"\<There is a Garden in her Face\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{"\"\<A Brief and True Report\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Pleasure Reconciled to Virtue\>\"", "\[Rule]", "8"}], 
+          ",", 
+          RowBox[{
+          "\"\<To the Water Nymphs Drinking at the Fountain\>\"", "\[Rule]", 
+           "11"}], ",", 
+          RowBox[{"\"\<Silence and Stealth of Days!\>\"", "\[Rule]", "6"}], 
+          ",", 
+          RowBox[{"\"\<Unprofitableness\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Ode on the Poetical Character\>\"", "\[Rule]", "10"}], 
+          ",", 
+          RowBox[{"\"\<Willie Brewed a Peck o' Maut\>\"", "\[Rule]", "7"}], 
+          ",", 
+          RowBox[{"\"\<The Chimney Sweeper\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<Expostulation and Reply\>\"", "\[Rule]", "8"}], ",", 
+          RowBox[{"\"\<Elegiac Stanzas\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<The Rime of the Ancient Mariner\>\"", "\[Rule]", "9"}],
+           ",", 
+          RowBox[{"\"\<Ozymandias\>\"", "\[Rule]", "5"}], ",", 
+          RowBox[{"\"\<Hymn to Intellectual Beauty\>\"", "\[Rule]", "9"}], 
+          ",", 
+          RowBox[{"\"\<Ode on a Grecian Urn\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Centre of Indifference\>\"", "\[Rule]", "7"}], ",", 
+          RowBox[{"\"\<Memorabilia\>\"", "\[Rule]", "6"}], ",", 
+          RowBox[{"\"\<Jabberwocky\>\"", "\[Rule]", "4"}]}], "|>"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"dat4", "=", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<a\>\"", "\[Rule]", "1"}], ",", 
+          RowBox[{"\"\<b\>\"", "\[Rule]", "1"}], ",", 
+          RowBox[{"\"\<c\>\"", "\[Rule]", "1"}], ",", 
+          RowBox[{"\"\<d\>\"", "\[Rule]", "1"}]}], "|>"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{"Not", "[", 
+          RowBox[{"MemberQ", "[", 
+           RowBox[{
+            RowBox[{"Counts", "[", 
+             RowBox[{"Values", "[", "dat4", "]"}], "]"}], ",", "1"}], "]"}], 
+          "]"}], ",", 
+         RowBox[{"dat4", "=", 
+          RowBox[{"RandomSample", "[", 
+           RowBox[{"data", ",", "4"}], "]"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"freq", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Count", "[", 
+           RowBox[{"dat4", ",", 
+            RowBox[{"dat4", "[", 
+             RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"Count", "[", 
+           RowBox[{"dat4", ",", 
+            RowBox[{"dat4", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"Count", "[", 
+           RowBox[{"dat4", ",", 
+            RowBox[{"dat4", "[", 
+             RowBox[{"[", "3", "]"}], "]"}]}], "]"}], ",", 
+          RowBox[{"Count", "[", 
+           RowBox[{"dat4", ",", 
+            RowBox[{"dat4", "[", 
+             RowBox[{"[", "4", "]"}], "]"}]}], "]"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{
+         RowBox[{"FirstPosition", "[", 
+          RowBox[{"freq", ",", "1"}], "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"noStr", "=", 
+        RowBox[{"IntegerName", "[", 
+         RowBox[{
+          RowBox[{"Values", "[", "dat4", "]"}], "[", 
+          RowBox[{"[", "ansNo", "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+        "\"\<Which of these titles has exactly \>\"", "<>", "noStr", "<>", 
+         "\"\< syllables in it?\>\""}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Keys", "[", "dat4", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "ansNo", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", "mixed"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lang9\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.694771546526207*^9, 3.694771562826325*^9}, {
+   3.6947716356708393`*^9, 3.694771798267338*^9}, {3.694771839480062*^9, 
+   3.694771878318589*^9}, {3.694772213240574*^9, 3.694772306027999*^9}, {
+   3.6947723497251453`*^9, 3.694772461602947*^9}, {3.6947755507095118`*^9, 
+   3.694775630126267*^9}, {3.694775669759976*^9, 3.694775717731113*^9}, {
+   3.694775882419662*^9, 3.694775913348215*^9}, {3.6947765843328114`*^9, 
+   3.694776619069826*^9}, {3.694776717475129*^9, 3.694776728532173*^9}, {
+   3.694776821992258*^9, 3.694776851025353*^9}, {3.6947769678394814`*^9, 
+   3.6947769747835083`*^9}, {3.694777165945139*^9, 3.694777172233693*^9}, {
+   3.694777297615817*^9, 3.694777346857203*^9}, {3.694777428533991*^9, 
+   3.6947774538308277`*^9}, {3.694777505233745*^9, 3.6947775147626963`*^9}, {
+   3.694777602118559*^9, 3.694777620959128*^9}, {3.694777684058744*^9, 
+   3.694777768495269*^9}, {3.694778012475019*^9, 3.6947780515410748`*^9}, {
+   3.6947781473698597`*^9, 3.6947781663546953`*^9}, {3.694778297833267*^9, 
+   3.694778321530775*^9}, {3.694778368300706*^9, 3.6947783894456453`*^9}, {
+   3.6947784443931217`*^9, 3.6947784700420103`*^9}, {3.694778533924958*^9, 
+   3.694778549029829*^9}, {3.694786418314205*^9, 3.694786434297114*^9}, {
+   3.694786484273986*^9, 3.694786494187263*^9}, {3.6947865581491756`*^9, 
+   3.694786569565733*^9}, {3.694786665881812*^9, 3.6947867018749866`*^9}, {
+   3.6947868441218147`*^9, 3.694786867969947*^9}, {3.6947869484781933`*^9, 
+   3.694786956023307*^9}, {3.6947870106899967`*^9, 3.6947870445146093`*^9}, {
+   3.694787140231166*^9, 3.694787160207597*^9}, {3.6947872708603163`*^9, 
+   3.6947872848691187`*^9}, {3.694787452637577*^9, 3.694787496566173*^9}, {
+   3.694787555665505*^9, 3.694787594906666*^9}, {3.694787651309883*^9, 
+   3.694787676334412*^9}, {3.694787755873858*^9, 3.6947877815711317`*^9}, {
+   3.69478789035995*^9, 3.694787908088797*^9}, {3.694788042350802*^9, 
+   3.694788097305414*^9}, {3.694788187086199*^9, 3.694788264984178*^9}, {
+   3.694788367973641*^9, 3.694788389198494*^9}, {3.694788424976802*^9, 
+   3.694788443640973*^9}, {3.694788559709976*^9, 3.6947885944482*^9}, {
+   3.694788720829296*^9, 3.694788741845461*^9}, {3.694788828337566*^9, 
+   3.694788849258379*^9}, {3.69478890422068*^9, 3.694788916604991*^9}, {
+   3.694789011529297*^9, 3.694789041082623*^9}, {3.694789102421957*^9, 
+   3.69478911845407*^9}, {3.694789205321803*^9, 3.694789238971443*^9}, {
+   3.69478939314651*^9, 3.6947894087860413`*^9}, {3.6947895223676434`*^9, 
+   3.694789543312583*^9}, {3.694789584978471*^9, 3.69478960974757*^9}, {
+   3.694789690351129*^9, 3.694789707847767*^9}, {3.694789860878676*^9, 
+   3.694789925489749*^9}, {3.694789970155587*^9, 3.6947899900046453`*^9}, {
+   3.6947901572604427`*^9, 3.694790176388921*^9}, {3.694790234735612*^9, 
+   3.694790245024437*^9}, {3.694790294410451*^9, 3.694790311867525*^9}, {
+   3.69479034794915*^9, 3.6947903667100687`*^9}, {3.694794125125927*^9, 
+   3.6947942295615177`*^9}, {3.694794266100151*^9, 3.694794321198072*^9}, {
+   3.6947943738492413`*^9, 3.694794402929447*^9}, {3.6947944512124243`*^9, 
+   3.694794490102466*^9}, {3.6947945331692047`*^9, 3.69479465103828*^9}, {
+   3.69479469138421*^9, 3.694794819414694*^9}, {3.694794855248218*^9, 
+   3.6947948720971117`*^9}, {3.694794910267847*^9, 3.694794965117773*^9}, {
+   3.6947950524260597`*^9, 3.694795167624237*^9}, {3.694795306623674*^9, 
+   3.694795309238701*^9}, {3.694795394090485*^9, 3.6947954571177607`*^9}, {
+   3.694795490943363*^9, 3.6947955609949293`*^9}, {3.694795596084586*^9, 
+   3.694795679040883*^9}, {3.6947958570493717`*^9, 3.694795885259201*^9}, {
+   3.694795961470379*^9, 3.694795979535389*^9}, {3.694796028402156*^9, 
+   3.6947960340019007`*^9}, {3.694796105861432*^9, 3.694796229372387*^9}, {
+   3.694796275702167*^9, 3.694796295382884*^9}, {3.694796339840735*^9, 
+   3.694796377570726*^9}, {3.6947964141723423`*^9, 3.6947964402614927`*^9}, {
+   3.6947964733273897`*^9, 3.694796504080658*^9}, {3.694796552219078*^9, 
+   3.694796621038721*^9}, {3.69479669074584*^9, 3.694796717907138*^9}, {
+   3.6947967639020643`*^9, 3.6947967883912*^9}, {3.694796831712908*^9, 
+   3.694796863346233*^9}, {3.694796908364554*^9, 3.694796967295765*^9}, {
+   3.694797583521667*^9, 3.69479761731538*^9}, {3.694797735833085*^9, 
+   3.694797819381031*^9}, {3.694797858855589*^9, 3.6947978743837767`*^9}, {
+   3.694797913961668*^9, 3.694797980205243*^9}, {3.6947980248552113`*^9, 
+   3.694798074689885*^9}, {3.694798105979431*^9, 3.69479812860452*^9}, {
+   3.6947982107543716`*^9, 3.694798252706523*^9}, {3.694798298228613*^9, 
+   3.6947983167896643`*^9}, {3.6947984121320763`*^9, 3.694798427763143*^9}, {
+   3.6947989035921993`*^9, 3.694798969554213*^9}, {3.694799008438835*^9, 
+   3.694799170090125*^9}, {3.694799350678309*^9, 3.694799375325803*^9}, 
+   3.694799451706653*^9, {3.694799536182543*^9, 3.6947996565070467`*^9}, {
+   3.69479969715866*^9, 3.694799767167832*^9}, 3.694799929513858*^9, {
+   3.694800069801856*^9, 3.694800136858284*^9}, {3.694800199166923*^9, 
+   3.69480024520138*^9}, {3.694800293940267*^9, 3.694800296250127*^9}, 
+   3.6948003302522*^9, {3.6948003782966957`*^9, 3.694800383831851*^9}, {
+   3.694800638348338*^9, 3.694800648699099*^9}, {3.6948007528024263`*^9, 
+   3.6948007563300123`*^9}, {3.69480079300453*^9, 3.6948009896270437`*^9}, 
+   3.694801093521428*^9, {3.694801241657728*^9, 3.694801245967849*^9}, {
+   3.6948012763545923`*^9, 3.694801301242693*^9}, {3.69480136936726*^9, 
+   3.694801500571864*^9}, {3.694801613995227*^9, 3.694801711199175*^9}, {
+   3.694801799981291*^9, 3.6948018115393953`*^9}, {3.694802447667145*^9, 
+   3.6948024962520733`*^9}, {3.694802526334795*^9, 3.694802546046711*^9}, {
+   3.6948026200855627`*^9, 3.694802623481893*^9}, {3.6948026572138033`*^9, 
+   3.694802682348551*^9}, {3.694802723824991*^9, 3.694802770721053*^9}, {
+   3.6948028558010263`*^9, 3.694802889744851*^9}, {3.694802941883367*^9, 
+   3.694802944817499*^9}, {3.6948030148867817`*^9, 3.6948030166688538`*^9}, {
+   3.694804019095393*^9, 3.694804042182579*^9}, {3.694804091296928*^9, 
+   3.694804124346072*^9}, {3.6948044138390512`*^9, 
+   3.694804427956448*^9}},ExpressionUUID->"6c550a60-7918-4543-b9fb-\
+55abe63d9244"]
+},
+WindowSize->{1195, 1067},
+WindowMargins->{{2, Automatic}, {Automatic, 40}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 18637, 340, 934, "Input",ExpressionUUID->"6c550a60-7918-4543-b9fb-55abe63d9244"]
+}
+]
+*)
+

@@ -1,0 +1,114 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4145,        106]
+NotebookOptionsPosition[      3831,         92]
+NotebookOutlinePosition[      4192,        108]
+CellTagsIndexPosition[      4149,        105]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"choices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+           "\"\<A\>\"", ",", "\"\<B\>\"", ",", "\"\<C\>\"", ",", "\"\<D\>\"", 
+            ",", "\"\<E\>\"", ",", "\"\<F\>\"", ",", "\"\<G\>\"", ",", 
+            "\"\<H\>\"", ",", "\"\<I\>\"", ",", "\"\<J\>\"", ",", "\"\<K\>\"",
+             ",", "\"\<L\>\"", ",", "\"\<M\>\"", ",", "\"\<N\>\"", ",", 
+            "\"\<O\>\"", ",", "\"\<P\>\"", ",", "\"\<Q\>\"", ",", "\"\<R\>\"",
+             ",", "\"\<S\>\"", ",", "\"\<T\>\"", ",", "\"\<U\>\"", ",", 
+            "\"\<V\>\"", ",", "\"\<W\>\"", ",", "\"\<X\>\"", ",", "\"\<Y\>\"",
+             ",", "\"\<Z\>\""}], "}"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<The image shows which letter in American Sign Language?\>\""}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"Image", "[", 
+           RowBox[{
+            RowBox[{"Import", "[", 
+             RowBox[{"urlStem", "<>", "\"\<images/Lang14/\>\"", "<>", 
+              RowBox[{"ToLowerCase", "[", "h1", "]"}], "<>", "\"\<.jpg\>\""}],
+              "]"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "480", "}"}], ",", 
+               RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"choices", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lang14\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.703334782625702*^9, 3.703334795871993*^9}, {
+   3.70334989630581*^9, 3.7033500223504753`*^9}, {3.70335933184194*^9, 
+   3.703359382763966*^9}, {3.703359415767048*^9, 3.703359558309884*^9}, {
+   3.7033596019749117`*^9, 3.703359634704439*^9}, {3.703359683197098*^9, 
+   3.703359698723668*^9}, {3.703359750793625*^9, 3.703359764391152*^9}, 
+   3.703359905096712*^9, {3.7033600433033953`*^9, 3.703360065790434*^9}, {
+   3.703360215647736*^9, 3.703360235766058*^9}, {3.703360557080699*^9, 
+   3.7033605609901733`*^9}, {3.703360702863489*^9, 
+   3.703360728167796*^9}},ExpressionUUID->"33a13156-d942-4b94-9033-\
+643c07fd5f07"]
+},
+WindowSize->{1262, 1057},
+WindowMargins->{{-1, Automatic}, {37, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3269, 70, 241, "Input",ExpressionUUID->"33a13156-d942-4b94-9033-643c07fd5f07"]
+}
+]
+*)
+
