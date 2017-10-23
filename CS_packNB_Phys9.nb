@@ -1,0 +1,348 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     16809,        340]
+NotebookOptionsPosition[     16493,        326]
+NotebookOutlinePosition[     16853,        342]
+CellTagsIndexPosition[     16810,        339]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"all", "=", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<jerk\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"meters\\\",SuperscriptBox[\\\"\
+seconds\\\",\\\"3\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<acceleration\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"meters\\\",SuperscriptBox[\\\"\
+seconds\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<velocity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"meters\\\",\\\"second\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<length\>\"", "\[Rule]", "\"\<meters\>\""}], ",", 
+          RowBox[{"\"\<time\>\"", "\[Rule]", "\"\<seconds\>\""}], ",", 
+          RowBox[{"\"\<mass\>\"", "\[Rule]", "\"\<kilograms\>\""}], ",", 
+          RowBox[{"\"\<electric current\>\"", "\[Rule]", "\"\<amperes\>\""}], 
+          ",", 
+          RowBox[{"\"\<temperature\>\"", "\[Rule]", "\"\<kelvins\>\""}], ",", 
+          
+          RowBox[{"\"\<amount of substance\>\"", "\[Rule]", "\"\<moles\>\""}],
+           ",", 
+          RowBox[{"\"\<light intensity\>\"", "\[Rule]", "\"\<candelas\>\""}], 
+          ",", 
+          RowBox[{"\"\<angular acceleration\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"radians\\\",SuperscriptBox[\\\"\
+seconds\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<angular velocity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"radians\\\",\\\"second\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<angular momentum\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],\\\"second\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<area\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*SuperscriptBox[\\\"meters\\\",\\\"2\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<volume\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*SuperscriptBox[\\\"meters\\\",\\\"3\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<absorbed radiation\>\"", "\[Rule]", "\"\<grays\>\""}], 
+          ",", 
+          RowBox[{"\"\<absorbed dose rate\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"grays\\\",\\\"second\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<area density\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",SuperscriptBox[\\\"\
+meters\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<capacitance\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[SuperscriptBox[\\\"amperes\\\
+\",\\\"2\\\"],SuperscriptBox[\\\"seconds\\\",\\\"4\\\"]]],RowBox[List[\\\"\
+kilogram\\\",SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]]]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<catalytic activity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"moles\\\",\\\"second\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<molar concentration\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"moles\\\",SuperscriptBox[\\\"meters\\\
+\",\\\"3\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<crackle\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"meters\\\",SuperscriptBox[\\\"\
+seconds\\\",\\\"5\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<jounce\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"meters\\\",SuperscriptBox[\\\"\
+seconds\\\",\\\"4\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<current density\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"amperes\\\",SuperscriptBox[\\\"\
+meters\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{
+          "\"\<electric charge\>\"", "\[Rule]", "\"\<ampere seconds\>\""}], 
+          ",", 
+          RowBox[{"\"\<electrical conductance\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[SuperscriptBox[\\\"amperes\\\
+\",\\\"2\\\"],SuperscriptBox[\\\"seconds\\\",\\\"3\\\"]]],RowBox[List[\\\"\
+kilogram\\\",SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]]]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<electrical potential\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],RowBox[List[\\\"ampere\\\",\
+SuperscriptBox[\\\"seconds\\\",\\\"3\\\"]]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<electrical resistance\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],RowBox[List[\\\"ampere\\\",\
+SuperscriptBox[\\\"seconds\\\",\\\"3\\\"]]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<energy\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],SuperscriptBox[\\\"seconds\\\",\\\"\
+2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<force\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\\\"meters\\\
+\"]],SuperscriptBox[\\\"seconds\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<impulse\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\\\"meters\\\
+\"]],\\\"second\\\"]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<magnetic field strength\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"amperes\\\",\\\"meter\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<magnetic flux\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],RowBox[List[\\\"ampere\\\",\
+SuperscriptBox[\\\"seconds\\\",\\\"2\\\"]]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<magnetic flux density\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",RowBox[List[\\\"ampere\
+\\\",SuperscriptBox[\\\"seconds\\\",\\\"2\\\"]]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          
+          RowBox[{"\"\<volume density\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",SuperscriptBox[\\\"\
+meters\\\",\\\"3\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<moment of inertia\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",SuperscriptBox[\\\"\
+meters\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<momentum\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\\\"meters\\\
+\"]],\\\"second\\\"]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<pressure\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",RowBox[List[\\\"meter\\\
+\",SuperscriptBox[\\\"seconds\\\",\\\"2\\\"]]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<chemical reaction rate\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"moles\\\",RowBox[List[SuperscriptBox[\
+\\\"meters\\\",\\\"2\\\"],\\\"second\\\"]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<specific volume\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[SuperscriptBox[\\\"meters\\\",\\\"3\\\"],\
+\\\"kilogram\\\"]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<surface tension\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",SuperscriptBox[\\\"\
+seconds\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<thermal conductivity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"watts\\\",RowBox[List[\\\"meters\\\",\
+\\\"kelvin\\\"]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<torque\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],SuperscriptBox[\\\"seconds\\\",\\\"\
+2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<work\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],SuperscriptBox[\\\"seconds\\\",\\\"\
+2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<elasticity (Young's modulus)\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",RowBox[List[\\\"meters\
+\\\",SuperscriptBox[\\\"seconds\\\",\\\"2\\\"]]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          
+          RowBox[{"\"\<flow rate\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"meters\\\",\\\"second\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<fluidity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"meter\\\",\\\"seconds\\\"\
+]],\\\"kilogram\\\"]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<dynamic viscosity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",RowBox[List[\\\"meter\\\
+\",\\\"second\\\"]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<kinematic viscosity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[SuperscriptBox[\\\"meters\\\",\\\"2\\\"],\
+\\\"second\\\"]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<thermal capacity\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],RowBox[List[\\\"kelvin\\\",\
+SuperscriptBox[\\\"seconds\\\",\\\"2\\\"]]]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<rotational stiffness\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[RowBox[List[\\\"kilogram\\\",\
+SuperscriptBox[\\\"meters\\\",\\\"2\\\"]]],\\\"radian\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<stiffness\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"kilograms\\\",SuperscriptBox[\\\"\
+seconds\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<curvature\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"1\\\",\\\"meters\\\"]\\)\>\"", 
+            "\"\<\>"}]}], ",", 
+          RowBox[{"\"\<luminance\>\"", "\[Rule]", 
+           RowBox[{
+           "\"\<\\!\\(\\*FractionBox[\\\"candelas\\\",SuperscriptBox[\\\"\
+meters\\\",\\\"2\\\"]]\\)\>\"", "\"\<\>"}]}]}], "|>"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"data", "=", 
+        RowBox[{"<|", "|>"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"While", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
+         RowBox[{"data", "=", 
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"all", ",", "4"}], "]"}], "]"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Values", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"\"\<In the metric system, \>\"", "<>", 
+         RowBox[{
+          RowBox[{"Keys", "[", "data", "]"}], "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "<>", 
+         "\"\< is measured in which of these units?\>\""}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Phys9\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6958222439809713`*^9, 3.6958224550948067`*^9}, {
+   3.695822489594657*^9, 3.69582252068264*^9}, {3.695822562748764*^9, 
+   3.695822578606105*^9}, {3.695822629687188*^9, 3.695822774801303*^9}, 
+   3.695822816394549*^9, {3.695822871883469*^9, 3.6958229036669073`*^9}, {
+   3.695823351700252*^9, 3.6958233671785793`*^9}, {3.695823424622365*^9, 
+   3.695823475895644*^9}, {3.69582594904317*^9, 3.695825991468512*^9}, {
+   3.695826177920101*^9, 3.695826201239057*^9}, {3.6958266028999577`*^9, 
+   3.695826613459838*^9}, {3.6958266461580667`*^9, 3.695826695039743*^9}, {
+   3.695826783221051*^9, 3.69582684012743*^9}, {3.695826890042852*^9, 
+   3.6958269095463953`*^9}, {3.695828165122591*^9, 3.695828201186467*^9}, {
+   3.695828303977116*^9, 3.6958283261932*^9}, {3.695828370333109*^9, 
+   3.6958284095089827`*^9}, {3.695830387135231*^9, 3.695830387389886*^9}, {
+   3.695830422016621*^9, 3.695830456311412*^9}, {3.695830511405805*^9, 
+   3.695830524844643*^9}, {3.695830583268284*^9, 3.695830648192974*^9}, {
+   3.6958306802858257`*^9, 3.695830754146014*^9}, {3.6958308137479677`*^9, 
+   3.695830864269382*^9}, {3.695830907224983*^9, 3.695831016099242*^9}, {
+   3.695831067775216*^9, 3.695831103217677*^9}, {3.695831173974513*^9, 
+   3.695831219701273*^9}, {3.695831262890542*^9, 3.695831337589534*^9}, {
+   3.695831398465897*^9, 3.695831427194466*^9}, {3.695831502623464*^9, 
+   3.695831520319096*^9}, {3.695831625677487*^9, 3.695831730312546*^9}, {
+   3.695831776795018*^9, 3.6958318371881332`*^9}, {3.695831892643084*^9, 
+   3.6958320327177067`*^9}, {3.695832087803447*^9, 3.695832125677539*^9}, {
+   3.6958360120782948`*^9, 3.695836138960393*^9}, {3.695836332532782*^9, 
+   3.6958365109934607`*^9}, {3.695836549688458*^9, 3.695836590925215*^9}, {
+   3.695836637748699*^9, 3.695836674824964*^9}, {3.695836724841013*^9, 
+   3.695836744756525*^9}, {3.695836876151145*^9, 3.695836893068165*^9}, {
+   3.695837017574972*^9, 3.695837050531077*^9}, {3.695837202647908*^9, 
+   3.695837252493339*^9}, {3.695837343078548*^9, 3.695837373210545*^9}, {
+   3.6958375320635653`*^9, 3.695837549722456*^9}, {3.6958376214675293`*^9, 
+   3.695837661535343*^9}, {3.695837700823123*^9, 3.695837746467115*^9}, {
+   3.6958378273088083`*^9, 3.695837853264042*^9}, {3.6958382852730923`*^9, 
+   3.695838306252161*^9}, {3.695838341703206*^9, 3.695838354022332*^9}, {
+   3.695838477865934*^9, 3.69583849738903*^9}, {3.695838597903325*^9, 
+   3.695838635595977*^9}, {3.695838718781197*^9, 3.695838780594836*^9}, {
+   3.695838811352947*^9, 3.695838824296445*^9}, {3.695838863711557*^9, 
+   3.695838873494631*^9}, {3.695839378474688*^9, 3.695839389306238*^9}, {
+   3.69583942263332*^9, 3.69583944391164*^9}, {3.695839525016045*^9, 
+   3.6958395572448177`*^9}, {3.695839588413115*^9, 3.6958395912758293`*^9}, {
+   3.695839628966321*^9, 3.695839658089229*^9}, {3.695840186424279*^9, 
+   3.695840210523014*^9}, {3.695840441172155*^9, 3.6958404730629797`*^9}, {
+   3.695840766092917*^9, 3.695840794066152*^9}, 3.695840830224585*^9, {
+   3.695840896306473*^9, 3.695840909336684*^9}, {3.695840993021908*^9, 
+   3.69584119446245*^9}, 
+   3.695841245905815*^9},ExpressionUUID->"da49301c-657e-4f1e-aaaf-\
+48dc717d2362"]
+},
+WindowSize->{1201, 1027},
+WindowMargins->{{2, Automatic}, {Automatic, 62}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 15931, 304, 1438, "Input",ExpressionUUID->"da49301c-657e-4f1e-aaaf-48dc717d2362"]
+}
+]
+*)
+

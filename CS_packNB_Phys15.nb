@@ -1,0 +1,157 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5863,        149]
+NotebookOptionsPosition[      5549,        135]
+NotebookOutlinePosition[      5909,        151]
+CellTagsIndexPosition[      5866,        148]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"ke", "=", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "1000"}], "}"}], "]"}], ",", "\"\<Joules\>\""}],
+          "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mass", "=", 
+        RowBox[{"Quantity", "[", 
+         RowBox[{
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "40"}], "}"}], "]"}], ",", 
+          "\"\<Kilograms\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"formula", "=", 
+        RowBox[{"HoldForm", "[", 
+         RowBox[{
+          SubscriptBox["EE", "k"], "\[Equal]", 
+          RowBox[{
+           FractionBox["1", "2"], "m", " ", 
+           SuperscriptBox["v", "2"]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"ansNo", "=", 
+        RowBox[{"N", "[", 
+         RowBox[{"Sqrt", "[", 
+          FractionBox[
+           RowBox[{"2", " ", 
+            RowBox[{"QuantityMagnitude", "[", "ke", "]"}]}], 
+           RowBox[{"QuantityMagnitude", "[", "mass", "]"}]], "]"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{
+           RowBox[{"EE", "/:", 
+            RowBox[{"MakeBoxes", "[", 
+             RowBox[{"EE", ",", "_"}], "]"}], ":=", 
+            RowBox[{"RowBox", "[", 
+             RowBox[{"{", "\"\<E\>\"", "}"}], "]"}]}], ";", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Kinetic energy: `1`. If an object's kinetic energy is `2` \
+and its mass is `3`, then what is its approximate velocity?\>\"", ",", "h1", 
+             ",", "h2", ",", "h3"}], "]"}]}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"h1", "\[Rule]", "formula"}], ",", 
+           RowBox[{"h2", "\[Rule]", "ke"}], ",", 
+           RowBox[{"h3", "\[Rule]", "mass"}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Quantity", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Meters\>\"", "/", "\"\<Seconds\>\""}]}], "]"}], 
+          "&"}], "/@", 
+         RowBox[{"Round", "[", 
+          RowBox[{
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomReal", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{".5", ",", "22"}], "}"}], ",", "3"}], "]"}], ",", 
+             "ansNo"}], "]"}], ",", ".01"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Phys15\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.700230893331532*^9, 3.700231059442648*^9}, {
+   3.7002310959979477`*^9, 3.70023115055892*^9}, {3.700235545868945*^9, 
+   3.700235669886035*^9}, {3.7002373627766743`*^9, 3.700237397456629*^9}, {
+   3.7002376206288023`*^9, 3.700237697503467*^9}, {3.700237806550147*^9, 
+   3.70023784466241*^9}, {3.7002379112188396`*^9, 3.700238025455319*^9}, {
+   3.700238065819603*^9, 3.700238129139406*^9}, {3.700238184055771*^9, 
+   3.7002381945839863`*^9}, {3.7002384174356213`*^9, 
+   3.7002384270584917`*^9}, {3.7002384714447403`*^9, 
+   3.7002385011662207`*^9}, {3.700238561226115*^9, 3.700238613555368*^9}, {
+   3.7002386586151447`*^9, 3.700238700751544*^9}, {3.700238814102367*^9, 
+   3.700238931202814*^9}, {3.700238965437168*^9, 3.700238971996014*^9}, {
+   3.700239006543754*^9, 3.700239032319065*^9}, 3.7002390779939337`*^9, 
+   3.700239133413878*^9, {3.700239217361603*^9, 3.700239218495839*^9}, {
+   3.700239259143231*^9, 3.7002392713396473`*^9}, {3.700240952741275*^9, 
+   3.700240958948221*^9}, {3.700248158586007*^9, 3.700248282636608*^9}, {
+   3.700249713132045*^9, 3.70024980664534*^9}, {3.709063235033394*^9, 
+   3.709063259432151*^9}, {3.709063340417582*^9, 3.709063367418812*^9}, {
+   3.7090633991611156`*^9, 3.70906342943303*^9}, {3.709063466772049*^9, 
+   3.709063576607568*^9}, {3.7090636604800787`*^9, 
+   3.709063694887656*^9}},ExpressionUUID->"b6b21e1e-75f0-474f-a6e9-\
+579d4f1ef4c2"]
+},
+WindowSize->{1728, 1251},
+WindowMargins->{{7, Automatic}, {48, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4987, 113, 378, "Input",ExpressionUUID->"b6b21e1e-75f0-474f-a6e9-579d4f1ef4c2"]
+}
+]
+*)
+

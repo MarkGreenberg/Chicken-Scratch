@@ -1,0 +1,233 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11678,        225]
+NotebookOptionsPosition[     11363,        211]
+NotebookOutlinePosition[     11723,        227]
+CellTagsIndexPosition[     11680,        224]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"Sort", "[", 
+         RowBox[{"RandomSample", "[", 
+          RowBox[{
+           RowBox[{"<|", 
+            RowBox[{
+             RowBox[{"\"\<aluminum on aluminum\>\"", "\[Rule]", "1.25"}], ",", 
+             RowBox[{"\"\<aluminum-bronze on steel\>\"", "\[Rule]", ".45"}], 
+             ",", 
+             RowBox[{"\"\<aluminum on mild steel\>\"", "\[Rule]", ".61"}], 
+             ",", 
+             RowBox[{"\"\<break material on cast iron\>\"", "\[Rule]", ".4"}],
+              ",", 
+             RowBox[{"\"\<brass on steel\>\"", "\[Rule]", ".35"}], ",", 
+             RowBox[{"\"\<brass on cast iron\>\"", "\[Rule]", ".3"}], ",", 
+             RowBox[{"\"\<brick on wood\>\"", "\[Rule]", ".6"}], ",", 
+             RowBox[{"\"\<bronze on cast iron\>\"", "\[Rule]", ".22"}], ",", 
+             RowBox[{"\"\<bronze on titanium\>\"", "\[Rule]", ".36"}], ",", 
+             RowBox[{"\"\<sintered bronze on steel\>\"", "\[Rule]", ".13"}], 
+             ",", 
+             RowBox[{"\"\<cadmium on cadmium\>\"", "\[Rule]", ".5"}], ",", 
+             RowBox[{"\"\<cadmium on chromium\>\"", "\[Rule]", ".41"}], ",", 
+             RowBox[{"\"\<cadmium on mild steel\>\"", "\[Rule]", ".46"}], ",", 
+             RowBox[{"\"\<cast iron on cast iron\>\"", "\[Rule]", "1.1"}], 
+             ",", 
+             RowBox[{"\"\<cast iron on oak\>\"", "\[Rule]", ".49"}], ",", 
+             RowBox[{"\"\<cast iron on mild steel\>\"", "\[Rule]", ".4"}], 
+             ",", 
+             RowBox[{"\"\<tire rubber on asphalt\>\"", "\[Rule]", ".72"}], 
+             ",", 
+             RowBox[{"\"\<tire rubber on grass\>\"", "\[Rule]", ".35"}], ",", 
+             
+             RowBox[{"\"\<hard carbon on carbon\>\"", "\[Rule]", ".16"}], ",", 
+             RowBox[{"\"\<carbon on stell\>\"", "\[Rule]", ".14"}], ",", 
+             RowBox[{"\"\<chromium on chromium\>\"", "\[Rule]", ".41"}], ",", 
+             
+             RowBox[{"\"\<chromium on zirconia\>\"", "\[Rule]", ".61"}], ",", 
+             
+             RowBox[{"\"\<cobalt on cobalt\>\"", "\[Rule]", ".56"}], ",", 
+             RowBox[{"\"\<cobalt on chromium\>\"", "\[Rule]", ".41"}], ",", 
+             RowBox[{"\"\<cobalt on cast iron\>\"", "\[Rule]", ".41"}], ",", 
+             RowBox[{"\"\<cobalt on lead\>\"", "\[Rule]", ".55"}], ",", 
+             RowBox[{"\"\<copper-lead alloy on stell\>\"", "\[Rule]", ".22"}],
+              ",", 
+             RowBox[{"\"\<copper on copper\>\"", "\[Rule]", "1"}], ",", 
+             RowBox[{"\"\<copper on cast iron\>\"", "\[Rule]", "1.05"}], ",", 
+             
+             RowBox[{"\"\<copper on mild steel\>\"", "\[Rule]", ".53"}], ",", 
+             
+             RowBox[{"\"\<diamond on diamond\>\"", "\[Rule]", ".1"}], ",", 
+             RowBox[{"\"\<diamond on metal\>\"", "\[Rule]", ".125"}], ",", 
+             RowBox[{"\"\<glass on glass\>\"", "\[Rule]", ".95"}], ",", 
+             RowBox[{"\"\<glass on metal\>\"", "\[Rule]", ".6"}], ",", 
+             RowBox[{"\"\<glass on teflon\>\"", "\[Rule]", ".1"}], ",", 
+             RowBox[{"\"\<glass on nickel\>\"", "\[Rule]", ".78"}], ",", 
+             RowBox[{"\"\<gold on gold\>\"", "\[Rule]", ".49"}], ",", 
+             RowBox[{"\"\<gold on silver\>\"", "\[Rule]", ".53"}], ",", 
+             RowBox[{"\"\<gold on lead\>\"", "\[Rule]", ".61"}], ",", 
+             RowBox[{"\"\<graphite on steel\>\"", "\[Rule]", ".1"}], ",", 
+             RowBox[{"\"\<graphite on graphite\>\"", "\[Rule]", ".1"}], ",", 
+             RowBox[{"\"\<hemp rope on timber\>\"", "\[Rule]", ".5"}], ",", 
+             RowBox[{"\"\<horseshoe on rubber\>\"", "\[Rule]", ".68"}], ",", 
+             RowBox[{"\"\<horseshoe on concrete\>\"", "\[Rule]", ".58"}], ",", 
+             RowBox[{"\"\<ice on ice\>\"", "\[Rule]", ".055"}], ",", 
+             RowBox[{"\"\<ice on wood\>\"", "\[Rule]", ".05"}], ",", 
+             RowBox[{"\"\<ice on steel\>\"", "\[Rule]", ".03"}], ",", 
+             RowBox[{"\"\<iron on iron\>\"", "\[Rule]", "1"}], ",", 
+             RowBox[{"\"\<lead on cast iron\>\"", "\[Rule]", ".43"}], ",", 
+             RowBox[{"\"\<leather on oak\>\"", "\[Rule]", ".61"}], ",", 
+             RowBox[{"\"\<leather on metal\>\"", "\[Rule]", ".4"}], ",", 
+             RowBox[{"\"\<leather on wood\>\"", "\[Rule]", ".35"}], ",", 
+             RowBox[{"\"\<leather fiber on cast iron\>\"", "\[Rule]", ".31"}],
+              ",", 
+             RowBox[{"\"\<leather fiber on aluminum\>\"", "\[Rule]", ".3"}], 
+             ",", 
+             RowBox[{"\"\<magnesium on magnesium\>\"", "\[Rule]", ".6"}], ",", 
+             RowBox[{"\"\<masonry on brick\>\"", "\[Rule]", ".65"}], ",", 
+             RowBox[{"\"\<nickel on nickel\>\"", "\[Rule]", ".9"}], ",", 
+             RowBox[{"\"\<nickel on mild steel\>\"", "\[Rule]", ".64"}], ",", 
+             
+             RowBox[{"\"\<nylon on nylon\>\"", "\[Rule]", ".2"}], ",", 
+             RowBox[{"\"\<oak on oak\>\"", "\[Rule]", ".49"}], ",", 
+             RowBox[{"\"\<paper on cast iron\>\"", "\[Rule]", ".2"}], ",", 
+             RowBox[{"\"\<phosphor bronze on steel\>\"", "\[Rule]", ".35"}], 
+             ",", 
+             RowBox[{"\"\<platinum on platinum\>\"", "\[Rule]", "1.2"}], ",", 
+             
+             RowBox[{"\"\<plexiglas on plexiglas\>\"", "\[Rule]", ".8"}], ",", 
+             RowBox[{"\"\<plexiglas on steel\>\"", "\[Rule]", ".45"}], ",", 
+             RowBox[{"\"\<polystyrene on polystyrene\>\"", "\[Rule]", ".5"}], 
+             ",", 
+             RowBox[{"\"\<polystyrene on steel\>\"", "\[Rule]", ".325"}], ",", 
+             RowBox[{"\"\<polythene on steel\>\"", "\[Rule]", ".2"}], ",", 
+             RowBox[{"\"\<rubber on rubber\>\"", "\[Rule]", "1.16"}], ",", 
+             RowBox[{"\"\<rubber on cardboard\>\"", "\[Rule]", ".65"}], ",", 
+             RowBox[{"\"\<tire rubber on concrete\>\"", "\[Rule]", ".725"}], 
+             ",", 
+             RowBox[{"\"\<silver on silver\>\"", "\[Rule]", "1.4"}], ",", 
+             RowBox[{"\"\<silver on zirconium\>\"", "\[Rule]", ".39"}], ",", 
+             RowBox[{"\"\<sapphire on sapphire\>\"", "\[Rule]", ".2"}], ",", 
+             RowBox[{"\"\<skin on metal\>\"", "\[Rule]", ".9"}], ",", 
+             RowBox[{"\"\<steel on steel\>\"", "\[Rule]", ".65"}], ",", 
+             RowBox[{"\"\<straw fiber on cast iron\>\"", "\[Rule]", ".26"}], 
+             ",", 
+             RowBox[{"\"\<straw fiber on aluminum\>\"", "\[Rule]", ".27"}], 
+             ",", 
+             RowBox[{"\"\<tarred fiber on cast iron\>\"", "\[Rule]", ".15"}], 
+             ",", 
+             RowBox[{"\"\<tarred fiber on aluminum\>\"", "\[Rule]", ".18"}], 
+             ",", 
+             RowBox[{
+             "\"\<polytetrafluoroethylene on polytetrafluoroethylene\>\"", 
+              "\[Rule]", ".04"}], ",", 
+             RowBox[{
+             "\"\<polytetrafluoroethylene on steel\>\"", "\[Rule]", ".125"}], 
+             ",", 
+             RowBox[{"\"\<tungsten carbide on steel\>\"", "\[Rule]", ".5"}], 
+             ",", 
+             RowBox[{
+             "\"\<tungsten carbide on tungsten carbide\>\"", "\[Rule]", 
+              ".225"}], ",", 
+             RowBox[{"\"\<tungsten carbide on copper\>\"", "\[Rule]", ".35"}],
+              ",", 
+             RowBox[{"\"\<Tungsten carbide on iron\>\"", "\[Rule]", ".8"}], 
+             ",", 
+             RowBox[{"\"\<tin on cast iron\>\"", "\[Rule]", ".32"}], ",", 
+             RowBox[{"\"\<wood on metal\>\"", "\[Rule]", ".4"}], ",", 
+             RowBox[{"\"\<wood on concrete\>\"", "\[Rule]", ".62"}], ",", 
+             RowBox[{"\"\<wood on stone\>\"", "\[Rule]", ".3"}], ",", 
+             RowBox[{"\"\<wood on brick\>\"", "\[Rule]", ".6"}], ",", 
+             RowBox[{"\"\<waxed wood on wet snow\>\"", "\[Rule]", ".14"}], 
+             ",", 
+             RowBox[{"\"\<waxed wood on dry snow\>\"", "\[Rule]", ".04"}], 
+             ",", 
+             RowBox[{"\"\<zinc on cast iron\>\"", "\[Rule]", ".85"}], ",", 
+             RowBox[{"\"\<zinc on zinc\>\"", "\[Rule]", ".6"}]}], "|>"}], ",",
+            "4"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<Which of these pairs has the lowest friction coefficient?\>\""}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Phys11\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.699963064808515*^9, 3.699963077825412*^9}, {
+   3.699974369016964*^9, 3.6999743692445517`*^9}, {3.6999744116631308`*^9, 
+   3.699974652482957*^9}, {3.699974691165656*^9, 3.699974896047271*^9}, {
+   3.699974960971117*^9, 3.69997529029935*^9}, {3.699975322669239*^9, 
+   3.6999753967048388`*^9}, {3.6999754360782423`*^9, 
+   3.6999754620278683`*^9}, {3.699975654773582*^9, 3.699976060345839*^9}, {
+   3.699976091068071*^9, 3.6999762610043087`*^9}, {3.699976831778097*^9, 
+   3.699977047282258*^9}, {3.699977116838162*^9, 3.699977503272676*^9}, {
+   3.699977547259034*^9, 3.6999776365992517`*^9}, {3.699977681274638*^9, 
+   3.69997812128695*^9}, {3.6999781545963984`*^9, 3.699978174514131*^9}, {
+   3.699978320496976*^9, 3.6999786993352127`*^9}, {3.699978764039036*^9, 
+   3.699978769831731*^9}, {3.699978880270114*^9, 3.699978884710507*^9}, {
+   3.6999789905717773`*^9, 3.69997901680416*^9}, {3.699979134047865*^9, 
+   3.699979137734151*^9}, {3.699979339593856*^9, 3.699979475097322*^9}, {
+   3.699979557620377*^9, 3.699979580174657*^9}, {3.699979611788624*^9, 
+   3.69997971058882*^9}, {3.699979749417357*^9, 3.699979775071931*^9}, {
+   3.6999799278430843`*^9, 3.699979950456764*^9}, {3.699979984767226*^9, 
+   3.6999799861751957`*^9}, 3.6999800708773527`*^9, {3.699980129360509*^9, 
+   3.699980130501768*^9}, {3.69998019067132*^9, 
+   3.699980202244692*^9}},ExpressionUUID->"bc3973c3-3aec-48b3-9157-\
+c837ab514b36"]
+},
+WindowSize->{1187, 1054},
+WindowMargins->{{0, Automatic}, {Automatic, 45}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 10801, 189, 703, "Input",ExpressionUUID->"bc3973c3-3aec-48b3-9157-c837ab514b36"]
+}
+]
+*)
+

@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7176,        163]
+NotebookOptionsPosition[      6861,        149]
+NotebookOutlinePosition[      7222,        165]
+CellTagsIndexPosition[      7179,        162]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"watts", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "12", ",", "15", ",", "20", ",", "25", ",", "30", ",", "50", ",", 
+          "60", ",", "75", ",", "100", ",", "120", ",", "150", ",", "200", 
+          ",", "250", ",", "300"}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"volts", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "9", ",", "12", ",", "24", ",", "75", ",", "100", ",", "120", ",", 
+          "230", ",", "240", ",", "400", ",", "600"}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"watt", "=", 
+        RowBox[{"RandomChoice", "[", "watts", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"volt", "=", 
+        RowBox[{"RandomChoice", "[", "volts", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        FractionBox["watt", "volt"]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"disPool", "=", 
+        RowBox[{"DeleteCases", "[", 
+         RowBox[{
+          RowBox[{"DeleteDuplicates", "[", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{"Outer", "[", 
+             RowBox[{"Divide", ",", "watts", ",", "volts"}], "]"}], "]"}], 
+           "]"}], ",", "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"II", "/:", 
+            RowBox[{"MakeBoxes", "[", 
+             RowBox[{"II", ",", "_"}], "]"}], ":=", 
+            RowBox[{"RowBox", "[", 
+             RowBox[{"{", "\"\<I\>\"", "}"}], "]"}]}], ";", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<`1`, where `2` is electric power (watts), `3` is voltage \
+(volts), and `4` is current (amperes). A `5`-Watt light bulb on a `6`-volt \
+source would draw how much current?\>\"", ",", 
+             RowBox[{"P", "\[Equal]", 
+              RowBox[{"V", " ", "II"}]}], ",", " ", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<P\>\"", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<V\>\"", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<I\>\"", ",", "Italic"}], "]"}], ",", "holder1", 
+             ",", "holder2"}], "]"}]}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"holder1", "\[Rule]", "watt"}], ",", 
+           RowBox[{"holder2", "\[Rule]", "volt"}]}], "}"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Clear", "[", "II", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< amps\>\""}], 
+          "&"}], "/@", 
+         RowBox[{"Round", "[", 
+          RowBox[{
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{"disPool", ",", "3"}], "]"}], ",", "ansNo"}], "]"}], 
+           ",", ".01"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Phys12\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.699983409943836*^9, 3.699983424949113*^9}, {
+   3.700046296573551*^9, 3.700046550848778*^9}, {3.700046592812502*^9, 
+   3.700046665702479*^9}, {3.700047990938374*^9, 3.700048064821726*^9}, {
+   3.700048095255332*^9, 3.700048191250822*^9}, 3.700049202853753*^9, {
+   3.7000492510633297`*^9, 3.700049253767187*^9}, {3.70004932618062*^9, 
+   3.700049349932187*^9}, {3.700049641756226*^9, 3.700049776688775*^9}, {
+   3.700050439770657*^9, 3.700050462298182*^9}, {3.7000505091420918`*^9, 
+   3.700050542270317*^9}, {3.700050575177525*^9, 3.700050651243389*^9}, {
+   3.700050684381078*^9, 3.700050749983914*^9}, {3.70005083592657*^9, 
+   3.700050836452684*^9}, {3.700050876590541*^9, 3.7000509079529963`*^9}, {
+   3.700050960371546*^9, 3.700050989891746*^9}, {3.700051028295158*^9, 
+   3.700051028453602*^9}, 3.700051144891931*^9, {3.700051178605459*^9, 
+   3.7000512234072113`*^9}, {3.700052834854126*^9, 3.700052835004674*^9}, {
+   3.7000537978510733`*^9, 3.70005386778808*^9}, {3.70005392692939*^9, 
+   3.700054027589117*^9}, {3.700054073727571*^9, 3.700054115057437*^9}, {
+   3.70005416751968*^9, 3.7000542927845383`*^9}, {3.700054327099215*^9, 
+   3.700054348202951*^9}, {3.700054389718552*^9, 3.7000543905726833`*^9}, {
+   3.7000544487291803`*^9, 3.700054570412745*^9}, {3.700054676227517*^9, 
+   3.7000546980749397`*^9}, {3.700054813050408*^9, 3.7000548156162577`*^9}, {
+   3.700054898286234*^9, 3.700054900460224*^9}, {3.7000549667143373`*^9, 
+   3.700054977968704*^9}, {3.7090294999997387`*^9, 3.709029517884088*^9}, {
+   3.709030188084453*^9, 3.709030235514371*^9}, {3.709030305082198*^9, 
+   3.709030338153181*^9}, {3.7090303781866617`*^9, 3.70903041848879*^9}, {
+   3.7090304534335957`*^9, 3.7090304946485577`*^9}, {3.709037358743404*^9, 
+   3.7090373662040567`*^9}, {3.70903776431704*^9, 3.709037773315934*^9}, {
+   3.709037845636362*^9, 3.70903785042787*^9}, 3.7090380243622437`*^9, {
+   3.709038066036413*^9, 3.70903807102743*^9}, {3.709039337591321*^9, 
+   3.70903937407812*^9}, {3.709039461943262*^9, 3.70903947411862*^9}, {
+   3.7090395827818003`*^9, 3.709039597549562*^9}, {3.7090397523214207`*^9, 
+   3.709039755045985*^9}, {3.7090399619410553`*^9, 
+   3.709039972604827*^9}},ExpressionUUID->"a1ee4b8e-287f-49a6-b0f7-\
+86f3a0484e5c"]
+},
+WindowSize->{1706, 1284},
+WindowMargins->{{24, Automatic}, {Automatic, 43}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 6299, 127, 460, "Input",ExpressionUUID->"a1ee4b8e-287f-49a6-b0f7-86f3a0484e5c"]
+}
+]
+*)
+
