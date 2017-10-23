@@ -1,0 +1,157 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5884,        149]
+NotebookOptionsPosition[      5569,        135]
+NotebookOutlinePosition[      5930,        151]
+CellTagsIndexPosition[      5887,        148]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"nos", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"ToString", "[", "#", "]"}], "&"}], "/@", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1", ",", "20"}], "}"}], ",", "5"}], "]"}]}], ",", 
+          "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ops", "=", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"RandomChoice", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
+             "\"\< + \>\"", ",", "\"\< - \>\"", ",", "\"\< * \>\"", ",", 
+              "\"\< / \>\""}], "}"}], ",", "4"}], "]"}], ",", "4"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "}"}], ",", 
+          RowBox[{"{", "}"}], ",", 
+          RowBox[{"{", "}"}], ",", 
+          RowBox[{"{", "}"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "<", "5"}], ",", 
+         RowBox[{"i", "++"}], ",", 
+         RowBox[{
+          RowBox[{"choices", "[", 
+           RowBox[{"[", "i", "]"}], "]"}], "=", 
+          RowBox[{"StringJoin", "[", 
+           RowBox[{"Riffle", "[", 
+            RowBox[{
+             RowBox[{"nos", "[", 
+              RowBox[{"[", "i", "]"}], "]"}], ",", 
+             RowBox[{"ops", "[", 
+              RowBox[{"[", "i", "]"}], "]"}]}], "]"}], "]"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"qNo", "=", 
+        RowBox[{"ToExpression", "[", 
+         RowBox[{"choices", "[", 
+          RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Which of these numeric expressions simplifies to the number \
+`1`?\>\"", ",", "qNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Hold", "[", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"\"\</\>\"", "\[Rule]", 
+                RowBox[{"FromCharacterCode", "[", "247", "]"}]}], ",", 
+               RowBox[{"\"\<*\>\"", "\[Rule]", 
+                RowBox[{"FromCharacterCode", "[", "8226", "]"}]}]}], "}"}]}], 
+            "]"}], "]"}], "&"}], "/@", "mixed"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb12\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.696680131766987*^9, 3.696680166296906*^9}, {
+   3.6966802961171293`*^9, 3.696680369349655*^9}, {3.6966805834681587`*^9, 
+   3.696680875733581*^9}, {3.696680926832176*^9, 3.696680952057498*^9}, {
+   3.696681039999598*^9, 3.6966810915462914`*^9}, {3.696681177005807*^9, 
+   3.696681203909945*^9}, {3.6966814122088833`*^9, 3.696681547053924*^9}, 
+   3.696681595314431*^9, {3.696681641067271*^9, 3.696681667941588*^9}, {
+   3.696681775498953*^9, 3.696681776057376*^9}, {3.696681817388619*^9, 
+   3.696681871591151*^9}, {3.696682649988474*^9, 3.696682946545516*^9}, {
+   3.696683038207131*^9, 3.696683047471542*^9}, {3.6966831088010597`*^9, 
+   3.696683127819322*^9}, {3.696683207189595*^9, 3.696683243176429*^9}, 
+   3.696683582224845*^9, {3.696683653236493*^9, 3.696683654473963*^9}, {
+   3.696683691334396*^9, 3.696683692404892*^9}, {3.69668374448009*^9, 
+   3.6966837447759857`*^9}, {3.696683776834194*^9, 3.69668383026824*^9}, {
+   3.69668390004832*^9, 3.696683901494568*^9}, {3.6966839889802847`*^9, 
+   3.696683990298424*^9}, {3.696684028661694*^9, 3.696684184973297*^9}, {
+   3.696684227823002*^9, 3.696684276561742*^9}, {3.696684308354992*^9, 
+   3.6966843314586897`*^9}, {3.696685098728997*^9, 3.6966851502969723`*^9}, {
+   3.696685279584838*^9, 3.696685292888076*^9}, {3.69668541088736*^9, 
+   3.696685432014997*^9}, {3.709319573195271*^9, 
+   3.709319574514337*^9}},ExpressionUUID->"a95f1176-6e4e-4a93-b256-\
+d1aad7600334"]
+},
+WindowSize->{1893, 1281},
+WindowMargins->{{-1, Automatic}, {Automatic, 49}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5007, 113, 304, "Input",ExpressionUUID->"a95f1176-6e4e-4a93-b256-d1aad7600334"]
+}
+]
+*)
+

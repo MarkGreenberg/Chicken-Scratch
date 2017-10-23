@@ -1,0 +1,212 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7989,        204]
+NotebookOptionsPosition[      7675,        190]
+NotebookOutlinePosition[      8035,        206]
+CellTagsIndexPosition[      7992,        203]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"man1", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "9.999"}], "}"}], "]"}], ",", ".01"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"exp1", "=", 
+        RowBox[{
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"{", 
+           RowBox[{"5", ",", "40"}], "}"}], "]"}], "*", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+           RowBox[{"-", "1"}], ",", "1"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"man2", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{
+          RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "9.999"}], "}"}], "]"}], ",", ".01"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"exp2", "=", 
+        RowBox[{
+         RowBox[{"RandomInteger", "[", 
+          RowBox[{"{", 
+           RowBox[{"5", ",", "40"}], "}"}], "]"}], "*", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+           RowBox[{"-", "1"}], ",", "1"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"no1", "=", 
+        RowBox[{"ScientificForm", "[", 
+         RowBox[{"man1", "*", 
+          RowBox[{"10", "^", "exp1"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"no2", "=", 
+        RowBox[{"ScientificForm", "[", 
+         RowBox[{"man2", "*", 
+          RowBox[{"10", "^", "exp2"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"manDiv", "=", 
+        RowBox[{"(", 
+         RowBox[{"man1", "/", "man2"}], ")"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ansExp", "=", 
+        RowBox[{"exp1", "-", "exp2"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"manDiv", "<", "1"}], ",", 
+         RowBox[{
+          RowBox[{"manDiv", "*=", "10"}], ";", 
+          RowBox[{"ansExp", "-=", "1"}]}]}], "]"}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"manDiv", "=", 
+        RowBox[{"Round", "[", 
+         RowBox[{"manDiv", ",", ".01"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       
+       RowBox[{"ansNo", "=", 
+        RowBox[{"manDiv", "*", 
+         RowBox[{"10", "^", "ansExp"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"disExps", "=", 
+        RowBox[{
+         RowBox[{"Range", "[", 
+          RowBox[{
+           RowBox[{"ansExp", "-", "12"}], ",", 
+           RowBox[{"ansExp", "+", "12"}]}], "]"}], "/.", 
+         RowBox[{"ansExp", "\[Rule]", 
+          RowBox[{"-", "ansExp"}]}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"disMans", "=", 
+        RowBox[{"{", 
+         RowBox[{"manDiv", ",", 
+          RowBox[{"Round", "[", 
+           RowBox[{
+            RowBox[{"RandomReal", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "9.99"}], "}"}], "]"}], ",", ".01"}], "]"}], 
+          ",", 
+          RowBox[{"Round", "[", 
+           RowBox[{
+            RowBox[{"RandomReal", "[", 
+             RowBox[{"{", 
+              RowBox[{"1", ",", "9.99"}], "}"}], "]"}], ",", ".01"}], "]"}]}],
+          "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"disses", "=", 
+        RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"For", "[", 
+        RowBox[{
+         RowBox[{"i", "=", "1"}], ",", 
+         RowBox[{"i", "\[LessEqual]", 
+          RowBox[{"Length", "[", "disExps", "]"}]}], ",", 
+         RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"For", "[", 
+          RowBox[{
+           RowBox[{"j", "=", "1"}], ",", 
+           RowBox[{"j", "\[LessEqual]", 
+            RowBox[{"Length", "[", "disMans", "]"}]}], ",", 
+           RowBox[{"j", "++"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"disses", "=", 
+            RowBox[{"Append", "[", 
+             RowBox[{"disses", ",", 
+              RowBox[{"ScientificForm", "[", 
+               RowBox[{
+                RowBox[{"disMans", "[", 
+                 RowBox[{"[", "j", "]"}], "]"}], "*", 
+                RowBox[{"10", "^", 
+                 RowBox[{"disExps", "[", 
+                  RowBox[{"[", "i", "]"}], "]"}]}]}], "]"}]}], "]"}]}]}], 
+          "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Prepend", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{"disses", ",", "3"}], "]"}], ",", "ansNo"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Which of these is the approximate quotient of `1` divided by \
+`2`?\>\"", ",", "no1", ",", "no2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb15\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6967043491095657`*^9, 3.6967043712177973`*^9}, {
+   3.696764881676711*^9, 3.696765001112196*^9}, {3.696765041297853*^9, 
+   3.6967651689745197`*^9}, {3.696765214075316*^9, 3.696765226971417*^9}, {
+   3.69676527284385*^9, 3.696765563915434*^9}, {3.696765629989457*^9, 
+   3.696765640789975*^9}, {3.696765978551672*^9, 3.696766050362913*^9}, {
+   3.696767167020975*^9, 3.696767200145543*^9}, 3.696773980909029*^9, {
+   3.696774107376749*^9, 3.696774171762867*^9}, {3.696774529612576*^9, 
+   3.696774700474887*^9}, {3.696774730724143*^9, 3.696774907900054*^9}, 
+   3.696775698123567*^9, {3.69677608265338*^9, 3.696776175160541*^9}, {
+   3.696776335289222*^9, 3.6967764748627996`*^9}, {3.69677653637745*^9, 
+   3.696776560379054*^9}, {3.696776600069257*^9, 3.696776654935216*^9}, {
+   3.696776745268474*^9, 3.696776751563942*^9}, {3.696776792055675*^9, 
+   3.6967768117825117`*^9}, {3.696776844912258*^9, 3.696777069995894*^9}, {
+   3.6967771465113773`*^9, 3.696777281148739*^9}, {3.696777670553317*^9, 
+   3.696777671471826*^9}, {3.69677774273284*^9, 3.696777810206403*^9}, {
+   3.69677784828185*^9, 3.6967778826988783`*^9}, {3.696778124830752*^9, 
+   3.69677812693824*^9}, {3.696778172450816*^9, 
+   3.696778188529071*^9}},ExpressionUUID->"5e24d0b9-799d-4c92-a48e-\
+692b59937646"]
+},
+WindowSize->{1203, 1030},
+WindowMargins->{{1, Automatic}, {Automatic, 43}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 7113, 168, 556, "Input",ExpressionUUID->"5e24d0b9-799d-4c92-a48e-692b59937646"]
+}
+]
+*)
+

@@ -1,0 +1,122 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4238,        114]
+NotebookOptionsPosition[      3924,        100]
+NotebookOutlinePosition[      4285,        116]
+CellTagsIndexPosition[      4242,        113]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"deg", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "359"}], "}"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"nos", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Round", "[", 
+           RowBox[{"#", ",", ".0001"}], "]"}], "&"}], "/@", 
+         RowBox[{"Take", "[", 
+          RowBox[{
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"RandomReal", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"deg", ",", 
+                RowBox[{"deg", "+", "1"}]}], "}"}], ",", "6"}], "]"}], "]"}], 
+           ",", "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{
+            RowBox[{"DMSString", "[", "#", "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"\"\<\[Degree]\>\"", "\[Rule]", "\"\<\[Degree] \>\""}], 
+              ",", 
+              RowBox[{"\"\<'\>\"", "\[Rule]", "\"\<' \>\""}]}], "}"}]}], 
+           "]"}], "&"}], "/@", "nos"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<Angles are often measured in degrees, minutes, and seconds. \
+Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"", 
+          ",", 
+          RowBox[{"nos", "[", 
+           RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb13\>\"", ",", 
+   
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.6966874011868353`*^9, {3.696689645462016*^9, 3.6966896467632723`*^9}, {
+   3.696689683237158*^9, 3.696689759440675*^9}, {3.696689803426497*^9, 
+   3.6966900989273157`*^9}, 3.6966901672519712`*^9, {3.696690212725366*^9, 
+   3.696690214715927*^9}, {3.696690707997724*^9, 3.6966907166052732`*^9}, {
+   3.696690781192628*^9, 3.696690868139504*^9}, {3.696690920439308*^9, 
+   3.696691024506666*^9}, {3.6966911379939833`*^9, 3.696691184602365*^9}, {
+   3.6966912291660357`*^9, 3.696691249965742*^9}, {3.696691379534107*^9, 
+   3.696691401493206*^9}, 3.696691453393819*^9, 3.69669373945603*^9, {
+   3.7155976808967447`*^9, 3.715597700407481*^9}, {3.7155980776637983`*^9, 
+   3.715598105576062*^9}, {3.715598149479514*^9, 
+   3.715598195294615*^9}},ExpressionUUID->"f564f766-81f4-493a-be40-\
+7c52426809bb"]
+},
+WindowSize->{1489, 1086},
+WindowMargins->{{0, Automatic}, {Automatic, 117}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 3362, 78, 241, "Input",ExpressionUUID->"f564f766-81f4-493a-be40-7c52426809bb"]
+}
+]
+*)
+
