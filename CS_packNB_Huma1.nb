@@ -1,0 +1,167 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      6085,        159]
+NotebookOptionsPosition[      5770,        145]
+NotebookOutlinePosition[      6131,        161]
+CellTagsIndexPosition[      6088,        158]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"state", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"CountryData", "[", "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"city", "=", 
+           RowBox[{"First", "[", 
+            RowBox[{"CountryData", "[", 
+             RowBox[{"state", ",", "\"\<LargestCities\>\""}], "]"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"qStr", "=", 
+           RowBox[{"\"\<the city of \>\"", "<>", 
+            RowBox[{"EntityValue", "[", 
+             RowBox[{"city", ",", "\"\<Name\>\""}], "]"}], "<>", 
+            "\"\< in \>\"", "<>", 
+            RowBox[{"EntityValue", "[", 
+             RowBox[{"state", ",", "\"\<Name\>\""}], "]"}]}]}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"range", "=", 
+           RowBox[{"Delete", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{
+               RowBox[{"-", "24"}], ",", "24"}], "]"}], ",", "25"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"state", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"AdministrativeDivisionData", "[", 
+             TemplateBox[{"\"all US states\"",RowBox[{"EntityClass", "[", 
+                 
+                 RowBox[{
+                  "\"AdministrativeDivision\"", ",", 
+                   "\"USStatesAllStates\""}], "]"}],
+               "\"EntityClass[\\\"AdministrativeDivision\\\", \
+\\\"USStatesAllStates\\\"]\"","\"administrative divisions\""},
+              "EntityClass"], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"city", "=", 
+           RowBox[{"EntityValue", "[", 
+            RowBox[{"state", ",", "\"\<CapitalCity\>\""}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"qStr", "=", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"EntityValue", "[", 
+               RowBox[{"city", ",", "\"\<Name\>\""}], "]"}], "<>", 
+              "\"\<, \>\"", "<>", 
+              RowBox[{"EntityValue", "[", 
+               RowBox[{"state", ",", "\"\<Name\>\""}], "]"}]}], ",", 
+             RowBox[{"\"\<, United States\>\"", "\[Rule]", "\"\<\>\""}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"range", "=", 
+           RowBox[{"Delete", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{
+               RowBox[{"-", "6"}], ",", "6"}], "]"}], ",", "7"}], "]"}]}]}]}],
+         "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{
+        "\"\<What time is it in \>\"", "<>", "qStr", "<>", "\"\<?\>\""}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"ansNo", "=", 
+        RowBox[{"LocalTime", "[", "city", "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choiceNos", "=", 
+        RowBox[{"Prepend", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"DatePlus", "[", 
+             RowBox[{"ansNo", ",", 
+              RowBox[{"{", 
+               RowBox[{"#", ",", "\"\<Hour\>\""}], "}"}]}], "]"}], "&"}], "/@", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"range", ",", "3"}], "]"}]}], ",", "ansNo"}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"DateString", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Hour12Short\>\"", ",", "\"\<:\>\"", ",", "\"\<Minute\>\"", 
+              ",", "\"\< \>\"", ",", "\"\<AMPM\>\"", ",", "\"\< on \>\"", 
+              ",", "\"\<DayName\>\""}], "}"}]}], "]"}], "&"}], "/@", 
+         "choiceNos"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Huma1\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.683562696854992*^9, {3.683562732692815*^9, 3.683562741105504*^9}, {
+   3.683562778063867*^9, 3.683562812186426*^9}, {3.68356307059435*^9, 
+   3.683563128418716*^9}, {3.6835633217943687`*^9, 
+   3.683563347046773*^9}},ExpressionUUID->"2a50ef4e-2cb1-4868-b7dc-\
+f2088974c267"]
+},
+WindowSize->{1231, 1026},
+WindowMargins->{{-3, Automatic}, {Automatic, 50}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 5208, 123, 487, "Input",ExpressionUUID->"2a50ef4e-2cb1-4868-b7dc-f2088974c267"]
+}
+]
+*)
+
