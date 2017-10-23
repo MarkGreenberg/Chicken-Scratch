@@ -1,0 +1,744 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30920,        736]
+NotebookOptionsPosition[     30604,        722]
+NotebookOutlinePosition[     30964,        738]
+CellTagsIndexPosition[     30921,        735]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"poets", "=", "\[IndentingNewLine]", 
+        RowBox[{"<|", 
+         RowBox[{
+          RowBox[{"\"\<Maya Angelou\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Phenomenal Woman\>\"", ",", 
+               "\"\<Pretty women wonder where my secret lies...\>\""}], "}"}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Pusher\>\"", ",", 
+               "\"\<He bad/O he bad/He make a honky/poot...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Caged Bird\>\"", ",", 
+               "\"\<A free bird leaps/on the back of the wind...\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Still I Rise\>\"", ",", 
+               "\"\<You may write me down in history/With your bitter, \
+twisted lies...\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Walt Whitman\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<O Captain! My Captain! our fearful trip is done...\>\""}],
+               "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Song of Myself\>\"", ",", 
+               "\"\<I celebrate myself, and sing myself...\>\""}], "}"}], ",",
+              "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<I hear America singing, the varied carols I \
+hear...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<When I heard the learn'd astronomer,/When the proofs, the \
+figures...\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Emily Dickinson\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<I taste a liquor never brewed\[LongDash]/From Tankards \
+scooped in Pearl\[LongDash]...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<I felt a Funeral, in my Brain,/And Mourners to and fro...\
+\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<Because I could not stop for Death\[LongDash]/He kindly \
+stopped for me\[LongDash]...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<I starded Early\[LongDash]Took my Dog\[LongDash]/And \
+visited the Sea\[LongDash]...\>\""}], "}"}]}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<William Wordsworth\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<To a Skylark\>\"", ",", 
+               "\"\<Ethereal minstrel! pilgrim of the sky!...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<I wandered lonely as a cloud/That floats on \
+high...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Above Tintern Abbey\>\"", ",", 
+               "\"\<Five years have passed; five summers...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Tables Turned\>\"", ",", 
+               "\"\<Up! up! my friend, and clear your looks...\>\""}], 
+              "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Ezra Pound\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Coming of War: Actaeon\>\"", ",", 
+               "\"\<An image of Lethe,/and the fields/Full of faint \
+light...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Meditatio\>\"", ",", 
+               "\"\<When I carefully consider the curious habits of dogs...\>\
+\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<In a Station of the Metro\>\"", ",", 
+               "\"\<The apparition of these faces...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<A Pact\>\"", ",", 
+               "\"\<I make a pact with you, Walt Whitman\[LongDash]...\>\""}],
+               "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<William Blake\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Tyger\>\"", ",", 
+               "\"\<Tyger! Tyger! burning bright/In the forest of the \
+night...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<A Poison Tree\>\"", ",", 
+               "\"\<I was angry with my friend...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Auguries of Innocence\>\"", ",", 
+               "\"\<To see a world in a grain of sand...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Chimney Sweeper\>\"", ",", 
+               "\"\<When my mother died I was very young...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<Percy Bysshe Shelley\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ode to the West Wind\>\"", ",", 
+               "\"\<O wild West Wind, thou breath of Autumn's being...\>\""}],
+               "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ozymandias\>\"", ",", 
+               "\"\<I met a traveller from an antique land...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<To a Skylark\>\"", ",", 
+               "\"\<Hail to thee, blithe Spirit!...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<To Night\>\"", ",", 
+               "\"\<Swiftly walk over the western wave,/Spirit of Night!...\>\
+\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<John Keats\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ode to a Nightingale\>\"", ",", 
+               "\"\<My heart aches, and a drowsy numbness pains/My sense...\>\
+\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ode On a Grecian Urn\>\"", ",", " ", 
+               "\"\<Thou still unravish'd bride of quietness,...\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Hyperion\>\"", ",", 
+               "\"\<Deep in the shady sadness of a vale...\>\""}], "}"}], ",",
+              "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<To Autumn\>\"", ",", 
+               "\"\<Seasons of mists and mellow fruitfulness,...\>\""}], 
+              "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Sylvia Plath\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Daddy\>\"", ",", 
+               "\"\<You do not do, you do not do/Any more...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Frog Autumn\>\"", ",", 
+               "\"\<Summer grows old, cold-blooded mother....\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Lesbos\>\"", ",", 
+               "\"\<Viciousness in the kitchen!/The potatoes hiss....\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Contusion\>\"", ",", 
+               "\"\<Color floods to the spot, dull purple....\>\""}], "}"}]}],
+             "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Langston Hughes\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<I, too, sing America.//I am the darker brother....\>\""}],
+               "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Harlem\>\"", ",", 
+               "\"\<What happens to a dream deferred?...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Theme for English B\>\"", ",", 
+               "\"\<The instructor said,/Go home and write...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Weary Blues\>\"", ",", 
+               "\"\<Droning a drowsy syncopated tune,...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<Vachel Lindsay\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Congo\>\"", ",", 
+               "\"\<Fat black bucks in a wine-barrel room,...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Abraham Lincoln Walks at Midnight\>\"", ",", 
+               "\"\<It is portentous, and a thing of state...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Leaden-Eyed\>\"", ",", 
+               
+               "\"\<Let not young souls be smothered out before/They do \
+quaint deeds...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<A Sense of Humor\>\"", ",", 
+               "\"\<No man should stand before the moon/To make sweet song...\
+\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<Henry Wadsworth Longfellow\>\"", "\[Rule]", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<A Psalm of Life\>\"", ",", 
+               "\"\<Tell me not, in mournful numbers,...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<The tide rises, the tide falls,/The twilight darkens...\>\
+\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Paul Revere's Ride\>\"", ",", 
+               "\"\<Listen, my children, and you shall hear...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<My Lost Youth\>\"", ",", 
+               "\"\<Often I think of the beautiful town/That is seated by the \
+sea;...\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Edgar Allan Poe\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Raven\>\"", ",", 
+               "\"\<Once upon a midnight dreary, while I pondered, weak and \
+weary,...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Annabel Lee\>\"", ",", 
+               "\"\<It was many and many a year ago,/In a kingdom by the \
+sea,...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Bells\>\"", ",", 
+               "\"\<Hear the sledges with the bells\[LongDash]/Silver \
+bells!...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Eldorado\>\"", ",", 
+               "\"\<Gaily bedight,/A gallant knight,/In sunshine and in \
+shadow,...\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Gary Soto\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ode to La Tortilla\>\"", ",", 
+               "\"\<They are flutes/When rolled, butter/Dripping \
+down...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<A Red Palm\>\"", ",", 
+               "\"\<You're in this dream of cotton plants....\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Evolved People\>\"", ",", 
+               "\"\<At 7-Eleven, my half-brothers ate two hotdogs,...\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Tuba Player\>\"", ",", 
+               "\"\<We knew volcanic pimples/And boredom,...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<E. E. Cummings\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\[Alpha]", ",", 
+               "\"\<who knows if the moon's/a balloon,coming out of a keen \
+city...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\[Alpha]", ",", 
+               "\"\<in Just\[LongDash]/spring     when the world is \
+mud-/luscious...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\[Alpha]", ",", "\"\<annie died the other day...\>\""}], "}"}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\[Alpha]", ",", 
+               "\"\<anyone lived in a pretty how town...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Edward Lear\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<There was an Old Man in a tree,...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<The Owl and the Pussy-cat went to sea/In a beautiful pea \
+green boat,...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<There was a Young Lady of Troy,...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Pelican Chorus\>\"", ",", 
+               "\"\<King and Queen of the Pelicans we;...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<Rudyard Kipling\>\"", "\[Rule]", "\[IndentingNewLine]", " ", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<If\>\"", ",", 
+               "\"\<If you can keep your head when all about you/Are losing \
+theirs...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Ballad of East and West\>\"", ",", 
+               "\"\<Oh, East is East, and West is West,...\>\""}], "}"}], ",",
+              "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<We and They\>\"", ",", 
+               "\"\<Father and Mother, and Me,/Sister and Auntie \
+say...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<You mustn't swim till you're six weeks old,...\>\""}], 
+              "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Lord Byron\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<She walks in beauty, like the night/Of cloudless \
+climes...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<A spirit passed before me: I beheld/The face of \
+immortality...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<When we two parted/In silence and tears,...\>\""}], "}"}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Darkness\>\"", ",", 
+               "\"\<I had a dream, which was not all a dream....\>\""}], 
+              "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Pablo Neruda\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Love Sonnet XVII\>\"", ",", 
+               "\"\<I do not love you as if you were a salt rose, or topaz...\
+\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<If You Forget Me\>\"", ",", 
+               "\"\<I want you to know/one thing....\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Morning\>\"", ",", 
+               "\"\<Naked you are simple as one of your hands;...\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Saddest Poem\>\"", ",", 
+               "\"\<I can write the saddest poem of all tonight....\>\""}], 
+              "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Robert Frost\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Road Not Taken\>\"", ",", 
+               "\"\<Two roads diverged in a yellow wood,...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Nothing Gold Can Stay\>\"", ",", 
+               "\"\<Nature's first green is gold,...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Stopping By Woods on a Snowy Evening\>\"", ",", 
+               "\"\<Whose woods these are I think I know....\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Fire and Ice\>\"", ",", 
+               "\"\<Some say the world will end in fire,...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<Elizabeth Barrett Browning\>\"", "\[Rule]", 
+           "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Sonnet 43\>\"", ",", 
+               "\"\<How do I love thee? Let me count the ways....\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Cry of the Children\>\"", ",", 
+               "\"\<Do ye hear the children weeping, O my brothers,...\>\""}],
+               "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Sonnet 14\>\"", ",", 
+               "\"\<If thou must love me, let it be for nought...\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Deserted Garden\>\"", ",", 
+               "\"\<I mind me in the days departed,...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Denise Levertov\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Mutes\>\"", ",", 
+               "\"\<Those groans men use/passing a woman on the \
+street...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Elves\>\"", ",", 
+               "\"\<Elves are no smaller/than men, and walk/as men \
+do,...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Intrusion\>\"", ",", 
+               "\"\<After I had cut off my hands/and grown new ones...\>\""}],
+               "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Wedding Ring\>\"", ",", 
+               "\"\<My wedding-ring lies in a basket/as if at the bottom of a \
+well....\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Dylan Thomas\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<Do not go gentle into that good night,...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Fern Hill\>\"", ",", 
+               "\"\<Now as I was young and easy under the apple \
+boughs...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<And death shall have no dominion....\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<Find meat on bones that soon have none,/And \
+drink...\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<Anne Sexton\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<Anna who was mad,/I have a knife in my armpit....\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Baby Picture\>\"", ",", 
+               "\"\<It's in the heart of the grape/where that smile \
+lies....\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Road Back\>\"", ",", 
+               "\"\<The dar is heavy with children/tugged back from \
+summer,...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Song for a Lady\>\"", ",", 
+               "\"\<On the day of breasts and small hips...\>\""}], "}"}]}], 
+            "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<William Butler Yeats\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<When you are old and grey and full of sleep,...\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<A Drinking Song\>\"", ",", 
+               "\"\<Wine comes in at the mouth/And love comes in at the \
+eye;...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Adam's Curse\>\"", ",", 
+               "\"\<We sat together at one summer's end,...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Among School Children\>\"", ",", 
+               "\"\<I walk through the long schoolroom questioning;...\>\""}],
+               "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{"\"\<H.D.\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Halcyon\>\"", ",", 
+               "\"\<I'm not here,/everything's vague, blurred \
+everywhere,...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Wind Sleepers\>\"", ",", 
+               "\"\<Whiter/than the crust/left by the tide,...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Triplex\>\"", ",", 
+               "\"\<Let them not war in me/these three,...\>\""}], "}"}], ",",
+              "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Sea Iris\>\"", ",", 
+               "\"\<Weed, moss-weed,/root tangled in sand,/sea-iris...\>\""}],
+               "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "\"\<Samuel Taylor Coleridge\>\"", "\[Rule]", "\[IndentingNewLine]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Kubla Khan\>\"", ",", 
+               "\"\<In Xanadu did Kubla Khan/A stately pleasure-dome \
+decree:...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Rime of the Ancient Mariner\>\"", ",", 
+               "\"\<It is an ancient Mariner,/And he stoppeth one of \
+three....\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Frost at Midnight\>\"", ",", 
+               "\"\<The Frost performs its secret ministry,...\>\""}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Epigram\>\"", ",", 
+               "\"\<Sir, I admit your general rule,/That every poet is a \
+fool,...\>\""}], "}"}]}], "}"}]}]}], "|>"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"Keys", "[", "poets", "]"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"poem", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{"poets", "[", 
+          RowBox[{"choices", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"poem", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", "\"\<\[Alpha]\>\""}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{"q", "=", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{
+            "\"\<Who wrote the poem beginning with the words \\\"\>\"", "<>", 
+             
+             RowBox[{"poem", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "<>", "\"\<\\\"?\>\""}], ",", 
+            RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"q", "=", 
+          RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"\"\<Who wrote the poem \\\"\>\"", "<>", 
+             RowBox[{"poem", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "<>", 
+             "\"\<\\\" which begins \\\"\>\"", "<>", 
+             RowBox[{"poem", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "<>", "\"\<\\\"?\>\""}], ",", 
+            RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}]}], 
+        "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lite2\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{3.683382367891472*^9, 
+  3.68338241288892*^9},ExpressionUUID->"d5d162c1-5ac4-4406-bd99-6bc8434ec836"]
+},
+WindowSize->{1233, 1008},
+WindowMargins->{{1, Automatic}, {Automatic, 52}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 30042, 700, 3118, "Input",ExpressionUUID->"d5d162c1-5ac4-4406-bd99-6bc8434ec836"]
+}
+]
+*)
+

@@ -1,0 +1,331 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14595,        323]
+NotebookOptionsPosition[     14279,        309]
+NotebookOutlinePosition[     14639,        325]
+CellTagsIndexPosition[     14596,        322]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"\"\<Anatole France\>\"", ",", 
+            RowBox[{"{", "\"\<Penguin Island\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Anne McCaffrey\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Pern,\>\"", "\"\<Central Worlds\>\""}], "}"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Clive Barker\>\"", ",", 
+            RowBox[{"{", "\"\<The Abarat\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<C.S. Lewis\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Charn\>\"", ",", "\"\<Narnia\>\""}], "}"}]}], "}"}],
+           ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Dante Alighieri\>\"", ",", 
+            RowBox[{"{", "\"\<Purgatory\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Edgar Rice Burroughs\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Pellucidar\>\"", ",", "\"\<Barsoom\>\"", ",", 
+              "\"\<Amtor\>\"", ",", "\"\<Caprona\>\""}], "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Frank Herbert\>\"", ",", 
+            RowBox[{"{", "\"\<Arrakis\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<George MacDonald Fraser\>\"", ",", 
+            RowBox[{"{", "\"\<Strackenz\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<George Orwell\>\"", ",", 
+            RowBox[{"{", "\"\<Oceana\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<George R.R. Martin\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Westeros\>\"", ",", "\"\<Essos\>\"", ",", 
+              "\"\<Iron Islands\>\""}], "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<H.G. Wells\>\"", ",", 
+            RowBox[{"{", "\"\<The Island of Doctor Moreau\>\"", "}"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<H.P. Lovecraft\>\"", ",", 
+            RowBox[{"{", "\"\<Dreamlands\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Ian Fleming\>\"", ",", 
+            RowBox[{"{", "\"\<San Monique\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Isaac Asimov\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Trantor\>\"", ",", "\"\<The Galactic Empire\>\""}], 
+             "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<James Gurney\>\"", ",", 
+            RowBox[{"{", "\"\<Dinotopia\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<James Hilton\>\"", ",", 
+            RowBox[{"{", "\"\<Shangri-La\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<J.K. Rowling\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Wizarding World\>\"", ",", "\"\<The Burrow\>\"", ",", 
+              "\"\<Hogwarts\>\"", ",", "\"\<Azkaban\>\"", ",", 
+              "\"\<Nurmengard\>\""}], "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<J.M. Barrie\>\"", ",", 
+            RowBox[{"{", "\"\<Neverland\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Jonathan Swift\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Lilliput\>\"", ",", "\"\<Blefuscu\>\"", ",", 
+              "\"\<Brobdingnag\>\"", ",", "\"\<Glubbdubdrib\>\""}], "}"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Joseph Conrad\>\"", ",", 
+            RowBox[{"{", "\"\<Patusan\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<J.R.R. Tolkien\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Middle-Earth\>\"", ",", "\"\<The Shire\>\"", ",", 
+              "\"\<Gondor\>\"", ",", "\"\<Rohan\>\"", ",", 
+              "\"\<Rivendell\>\"", ",", "\"\<Lothl\[OAcute]rien\>\"", ",", 
+              "\"\<Mordor\>\""}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          
+          RowBox[{"{", 
+           RowBox[{"\"\<Jules Vern\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Nautilus\>\"", ",", "\"\<Lincoln Island\>\""}], 
+             "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Katherine Paterson\>\"", ",", 
+            RowBox[{"{", "\"\<Terabithia\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Kurt Vonnegut\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Tralfamadore\>\"", ",", "\"\<San Lorenzo\>\""}], 
+             "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Lewis Carroll\>\"", ",", 
+            RowBox[{"{", "\"\<Wonderland\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<L. Frank Baum\>\"", ",", 
+            RowBox[{"{", "\"\<Oz\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Madeleine L'Engle\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Uriel\>\"", ",", "\"\<Vespugia\>\""}], "}"}]}], 
+           "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Mark Twain\>\"", ",", 
+            RowBox[{"{", "\"\<Gondour\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Micheal Crichton\>\"", ",", 
+            RowBox[{"{", "\"\<Isla Nublar\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Philip Jose Farmer\>\"", ",", 
+            RowBox[{"{", "\"\<Riverworld\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Pierre Boulle\>\"", ",", 
+            RowBox[{"{", "\"\<Planet of the Apes\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Piers Anthony\>\"", ",", 
+            RowBox[{"{", "\"\<Xanth\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Roald Dahl\>\"", ",", 
+            RowBox[{"{", "\"\<Loompa Land\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Robert A. Heinlein\>\"", ",", 
+            RowBox[{"{", "\"\<Klendathu\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Samuel Taylor Coleridge\>\"", ",", 
+            RowBox[{"{", "\"\<Xanadu\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Stephen King\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<All-World\>\"", ",", "\"\<Mid-World\>\""}], "}"}]}],
+            "}"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Theodor Seuss Geisel\>\"", ",", 
+            RowBox[{"{", "\"\<Whoville\>\"", "}"}]}], "}"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"\"\<Ursula K. Le Guin\>\"", ",", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Earthsea\>\"", ",", "\"\<Orsinia\>\"", ",", "\"\<Terra\>\"",
+               ",", "\"\<Gethen\>\""}], "}"}]}], "}"}]}], "}"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ansData", "=", 
+        RowBox[{"RandomChoice", "[", "data", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{
+          "\"\<Which of these fictional settings is the brain-child of the \
+writer \>\"", "<>", 
+           RowBox[{"ansData", "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "<>", "\"\<?\>\""}], ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{"Prepend", "[", 
+         RowBox[{
+          RowBox[{"RandomSample", "[", 
+           RowBox[{
+            RowBox[{"Complement", "[", 
+             RowBox[{
+              RowBox[{"Flatten", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"#", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "data"}], 
+               "]"}], ",", 
+              RowBox[{"ansData", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "]"}], ",", "3"}], "]"}], 
+          ",", 
+          RowBox[{"RandomChoice", "[", 
+           RowBox[{"ansData", "[", 
+            RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lite6\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.686258059995727*^9, 3.686258087931652*^9}, {
+   3.6862581234939747`*^9, 3.686258185104514*^9}, {3.686263141104856*^9, 
+   3.686263143664068*^9}, {3.686263187803462*^9, 3.686263243068912*^9}, {
+   3.686263275022101*^9, 3.686263278654982*^9}, {3.6862633529316187`*^9, 
+   3.686263414685631*^9}, {3.6862634512084703`*^9, 3.686263498977888*^9}, {
+   3.686263592687611*^9, 3.68626361791934*^9}, {3.686271233409555*^9, 
+   3.686271263969654*^9}, {3.686271306621108*^9, 3.686271332445345*^9}, {
+   3.6862713676800337`*^9, 3.686271403216823*^9}, {3.6862714503884163`*^9, 
+   3.686271472420306*^9}, {3.686271673983597*^9, 3.6862717218164473`*^9}, {
+   3.686271761020277*^9, 3.6862717954203367`*^9}, {3.6862718537365217`*^9, 
+   3.68627193482006*^9}, 3.686272029913479*^9, {3.6862721371824627`*^9, 
+   3.6862721670708733`*^9}, {3.686272252452364*^9, 3.686272294661415*^9}, {
+   3.686272370130124*^9, 3.686272386417527*^9}, {3.686272431677709*^9, 
+   3.68627243472573*^9}, {3.6862725437146807`*^9, 3.6862726083170547`*^9}, {
+   3.68627265384828*^9, 3.686272689057069*^9}, {3.686272777830442*^9, 
+   3.686272828128642*^9}, {3.6862728746111794`*^9, 3.6862729597748632`*^9}, {
+   3.686272997793455*^9, 3.686273020721651*^9}, {3.6862731797627373`*^9, 
+   3.6862732531338873`*^9}, {3.686273665306704*^9, 3.686273701052294*^9}, {
+   3.686273811186282*^9, 3.6862738462824078`*^9}, {3.686274441520878*^9, 
+   3.6862744499864893`*^9}, {3.6862745799996567`*^9, 
+   3.6862745844580717`*^9}, {3.6862746579314938`*^9, 
+   3.6862747315183477`*^9}, {3.6862748575014*^9, 3.68627489512187*^9}, {
+   3.686275232816413*^9, 3.6862752856900063`*^9}, {3.6862753453414288`*^9, 
+   3.686275368145176*^9}, {3.6862754042729273`*^9, 3.686275428090822*^9}, {
+   3.686275483524267*^9, 3.6862754866937027`*^9}, {3.686275531750643*^9, 
+   3.686275536465435*^9}, {3.686275610402763*^9, 3.686275653558977*^9}, {
+   3.6862757642245626`*^9, 3.6862757726127853`*^9}, {3.686276054808736*^9, 
+   3.686276124412653*^9}, {3.686276182077387*^9, 3.686276216321474*^9}, {
+   3.686276404536476*^9, 3.686276455420147*^9}, 3.686276507656654*^9, {
+   3.6862768045268173`*^9, 3.686276825318179*^9}, {3.686305340237447*^9, 
+   3.686305361733461*^9}, {3.686305409203348*^9, 3.686305432356443*^9}, {
+   3.6863055761697598`*^9, 3.686305584194252*^9}, {3.686305965493092*^9, 
+   3.6863059696380787`*^9}, {3.686306155462331*^9, 3.686306164326515*^9}, {
+   3.6863063598569393`*^9, 3.686306379123393*^9}, {3.686306633861421*^9, 
+   3.686306644605907*^9}, {3.6863071136862507`*^9, 3.686307148058445*^9}, {
+   3.686313996089703*^9, 3.6863140259272127`*^9}, {3.68631418285879*^9, 
+   3.6863142091266947`*^9}, {3.686314631865481*^9, 3.6863146530284224`*^9}, {
+   3.686314851099907*^9, 3.686314877435629*^9}, {3.6863154751476707`*^9, 
+   3.6863155003254747`*^9}, {3.6863155947615747`*^9, 3.686315600552466*^9}, {
+   3.686315700758213*^9, 3.686315719671215*^9}, {3.686315842909587*^9, 
+   3.6863158888942823`*^9}, {3.686318448094751*^9, 3.6863185333373833`*^9}, {
+   3.68631860257413*^9, 3.68631886669919*^9}, {3.6863190262590437`*^9, 
+   3.686319147145545*^9}, {3.686319228184842*^9, 3.6863192364719677`*^9}, {
+   3.686319280645314*^9, 3.686319316871476*^9}, 3.686319412991716*^9, {
+   3.686319452264517*^9, 
+   3.686319463743669*^9}},ExpressionUUID->"9bb699fa-76b7-4c31-a615-\
+aac384a3c63e"]
+},
+WindowSize->{1193, 1038},
+WindowMargins->{{2, Automatic}, {Automatic, 42}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 13717, 287, 1039, "Input",ExpressionUUID->"9bb699fa-76b7-4c31-a615-aac384a3c63e"]
+}
+]
+*)
+

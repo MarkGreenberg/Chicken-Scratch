@@ -1,0 +1,534 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29142,        526]
+NotebookOptionsPosition[     28825,        512]
+NotebookOutlinePosition[     29186,        528]
+CellTagsIndexPosition[     29143,        525]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"data", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"<|", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"\"\<Moby Dick by Herman Melville\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Call me Ishmael.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<He looked like a man cut away from the stake....\>\"", 
+               ",", "\[IndentingNewLine]", 
+               "\"\<It was the devious-cruising Rachel, that... only found \
+another orphan.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Zorba the Greek by Nikos Kazantzakis\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<I first met him in Piraeus.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<If a woman sleeps alone it puts a shame on all men.\>\"", 
+               ",", "\[IndentingNewLine]", 
+               "\"\<...If you ever pass through our village, be good enough \
+to spend the night.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<The Canterbury Tales by Geoffrey Chaucer\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<When April with his showers sweet the drought of March as \
+pierced to the root....\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<If evening and morning are in agreement, let us see now \
+who shall tell the first story.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<I know no more, my tale is at an end.\>\""}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Life on the Mississippi by Mark Twain\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<The Mississippi is well worth reading about.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<We were getting down now into the migrating negro region.\
+\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<There ended one of the most enjoyable five-thousand-mile \
+journeys I have ever had the good fortune to make.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Old Man and the Sea by Ernest Hemingway\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<He was an old man who fished alone....\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<A man can be destroyed but not defeated.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<The old man was dreaming about lions.\>\""}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Daisy Miller by Henry James\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<At the little town of Vevey, in Switzerland, there is a \
+particularly comfortable hotel.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<I have never allowed a gentleman to dictate to me, or to \
+interfere with anything I do.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<...he is much interested in a very clever foreign lady.\>\
+\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<1984 by George Orwell\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<It was a bright cold day in April, and the clocks were \
+striking thirteen.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<If you want a picture of the future, imagine a boot \
+stamping on a human face\[LongDash]for ever.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<He had won the victory over himself. He loved Big \
+Brother.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Kidnapped by Robert Lewis Stevenson\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<I will begin the story of my adventure... early in the \
+month of June, the year of grace 1751.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<I have seen wicked men and fools...; and I believe they \
+both get paid in the end; but the fools first.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<The hand of Providence brought me in my drifting to the \
+very doors of the British Linen Company's bank.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Stranger in a Strange Land by Robert A. Heinlein\>\"", 
+             "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Once upon a time there was a Martian named Valentine \
+Michael Smith.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<I do know that the slickest way to lie is to tell the \
+right amount of truth\[LongDash]then shut up.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<Mike pushed back his halo and got to work. He could see a \
+lot of changes he wanted to make\[LongDash]\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<The Adventures of Huckleberry Finn by Mark Twain\>\"", 
+             "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<You don't know about me without you have read a book by \
+the name of The Adventures of Tom Sawyer.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Hain't we got all the fools in town on our side? And \
+hain't that a big enough majority in any town?\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<Aunt Sally she's going to adopt me and sivilize me, and I \
+can't stand it. I been there before.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<The Stranger by Albert Camus\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Mother died today. Or, maybe, yesterday; I can't be \
+sure.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<I may not have been sure about what really did interest \
+me, but I was absolutely sure about what didn't.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<...On the day of my execution there should be a huge \
+crowd of spectators....\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Candide by Voltaire\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<In the castle of Baron Thunder-ten-tronckh in Westphalia, \
+there once lived a youth....\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<If this is the best of possible worlds, what then are the \
+others?\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Well said,... but we must cultivate our garden.\>\""}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<The Lost World by Sir Arthur Conan Doyle\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Mr. Hungerton, her father, really was the most tactless \
+person upon earth.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<...They looked like monstrous kangaroos, twenty feet in \
+length, and with skins like black crocodiles.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<Lord Roxton said nothing, but a brown hand was stretched \
+out to me across the table.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Gulliver's Travels by Jonathan Swift\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<My father had a small estate in Nottinghamshire; I was the \
+third of five sons.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<He looked like a man cut away from the stake....\>\"", 
+               ",", "\[IndentingNewLine]", 
+               "\"\<I dwell the longer upon this subject from the desire I \
+have to make the society of an English Yahoo by any means....\>\""}], "}"}]}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<The Red Badge of Courage by Stephen Crane\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<The cold passed reluctantly from the earth, and the \
+retiring fogs revealed an army stretched out on the hills, resting.\>\"", ",",
+                "\[IndentingNewLine]", 
+               "\"\<He saw that it was an ironical thing for him to be \
+running thus toward that which he had been at such pains to avoid.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<Over the river a golden ray of sun came through the hosts \
+of leaden rain clouds.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Eaters of the Dead by Michael Crichton\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Praise be to God, the Merciful, the Compassionate, the \
+Lord of the Two Worlds....\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<The Northmen believe that how a man dies determines his \
+condition in the afterlife, and they value the death of a warrior above \
+all.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<I had view of the gleaming rooftops of the grat hall of \
+Hurot, and, turning away, of the vast ocean before us.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Last of the Mohicans by James Fenimore Cooper\>\"", 
+             "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<...The toils and dangers of the wilderness were to be \
+encountered before the adverse hosts could meet.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<It is better for a man to die at peace with himself than \
+to live haunted by an evil conscience!\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<...I lived to see the last warrior of the wise race of \
+the Mohicans.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Ivanhoe by Sir Walter Scott\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<In that pleasant district of merry England which is \
+watered by the River Don, there extended in ancient times a large \
+forest....\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<We are like the herb which flourisheth most when trampled \
+upon.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<[He] distinguished himself in the service of Richard, and \
+was graced with further marks of royal favor.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<The Trial by Franz Kafka\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Someone must have been telling lies about Joseph K., for \
+without having done anything wrong he was arrested.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<It would have been so pointless to kill himself that, \
+even if he had wanted to, the pointlessness would have made him unable.\>\"", 
+               ",", "\[IndentingNewLine]", 
+               "\"\<It was as if the shame of it must outlive them.\>\""}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Siddhartha by Hermann Hesse\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<In the shade of the house... the handsome Brahmin's son \
+grew up with his friend Govinda.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<It is not for me to judge another man's life. I must \
+judge, choose, spurn, purely for myself.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<The man's smile reminded him of everything that he had \
+ever loved, of everything that had ever been of value and holy in his life.\>\
+\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<The Grapes of Wrath by John Steinbeck\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<To the red country and part of the gray country of \
+Oklahoma, the last rains came gently....\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Repression works only to strengthen and knit the \
+repressed.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Her fingers moved gently in his hair... Her lips came \
+together and smiled mysteriously.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Pilgrim's Progress by John Bunyan\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<As I walked through the wilderness of this world, I \
+lighted on a certain place, where was a Den.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<It is always hard to see the purpose in wilderness \
+wanderings until after they are over.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Behold, I lay none other burden upon thee than what thou \
+hast already. Hold fast, till I come.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<The Hunchback of Notre Dame by Victor Hugo\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<...The good people of Paris were awakened by a grand peal \
+from the bells in the three districts of the City.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<He reached for his pocket, and found there, only reality.\
+\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<When those who found this skeleton attempted to disengage \
+it..., it crumbled to dust.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Robinson Crusoe by Daniel Defoe\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<I was born in the year 1632, in the city of York, of a \
+good family.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Thus fear of danger is ten thousand times more terrifying \
+than danger itself.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<[I have] learned sufficiently to know the value of \
+retirement, and the blessing of ending our days in peace.\>\""}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Don Quixote by Miguel Cervantes\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<In a village of La Mancha... there lived not so long ago a \
+gentleman.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Finally, from so little sleeping and so much reading, his \
+brain dried up and he went completely out of his mind.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<False books of chivalry are already failing, no doubt, \
+thanks to this tale of the genuine Don Quixote. Vale!.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Through the Looking Glass by Lewis Carroll\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<One thing is for certain, that the white kitten had had \
+nothing to do with it\[LongDash]it was the black kitten's fault \
+entirely.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<I know who I WAS when I got up this morning, but I think \
+I must have been changed several times since then.\>\"", ",", 
+               "\[IndentingNewLine]", "\"\<Which do you think it was?\>\""}], 
+              "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<The Arabian Nights\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<It is related that in ancient times there was a King of \
+the countries of India and China....\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<For surely a king is first a man. And so it must follow \
+that a king does as all men do: the best he can.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<Blessings and peace be on the Imam of his \
+Majesty....\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<A Raisin in the Sun by Lorraine Hansberry\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Come on now, boy, it's seven-thirty!\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<He said everybody ought to learn how to sit down and hate \
+each other with good Chrisitan fellowship.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<All right, honey\[LongDash]go on down. I be down \
+directly.\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"\"\<Hamlet by William Shakespeare\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Who's there?\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<There is nothing either good or bad, but thinking makes \
+it so.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Go, bid the soldiers shoot.\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<Children of Dune by Frank Herbert\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<MuadDib's teachings have become the playground of \
+scholastics....\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<One uses power by grasping it lightly. To grasp too \
+strongly is to be taken over by power, and thus to become its victim.\>\"", 
+               ",", "\[IndentingNewLine]", 
+               "\"\<\\\"One of us had to accept the agony,\\\" she said, \
+\\\"and he was always the stronger.\\\"\>\""}], "}"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"\"\<The Two Towers by J.R.R. Tolkien\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<Aragorn sped on up the hill.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<There are some things that it is better to begin than to \
+refuse, even though the end may be dark.\>\"", ",", "\[IndentingNewLine]", 
+               "\"\<Frodo was alive but taken by the Enemy.\>\""}], "}"}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<A Tale of Two Cities by Charles Dickens\>\"", "\[Rule]", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+              "\"\<It was the best of times, it was the worst of times.\>\"", 
+               ",", "\[IndentingNewLine]", 
+               "\"\<A multitude of people and yet solitude.\>\"", ",", 
+               "\[IndentingNewLine]", 
+               "\"\<After standing with the bridle over his heavily-splashed \
+arm,... he turned to walk down the hill.\>\""}], "}"}]}]}], 
+           "\[IndentingNewLine]", "|>"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"tA", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringSplit", "[", 
+           RowBox[{"#", ",", "\"\< by \>\""}], "]"}], "&"}], "/@", 
+         RowBox[{"Keys", "[", "data", "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"StringForm", "[", 
+           RowBox[{"\"\<`1` by `2`\>\"", ",", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], ",", "Italic"}], "]"}], ",", 
+            RowBox[{"#", "[", 
+             RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "&"}], "/@", "tA"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"bme", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "3"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"qStr", "=", 
+        RowBox[{"{", 
+         RowBox[{
+         "\"\<begins\>\"", ",", "\"\<contains\>\"", ",", "\"\<ends\>\""}], 
+         "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"\"\<Which \>\"", "<>", 
+         RowBox[{"qStr", "[", 
+          RowBox[{"[", "bme", "]"}], "]"}], "<>", "\"\< \\\"\>\"", "<>", 
+         RowBox[{"data", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "bme"}], "]"}], "]"}], "<>", "\"\<\\\"?\>\""}]}],
+        ";", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
+     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lite8\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.6903845193324327`*^9, {3.690384633018766*^9, 3.6903846394563913`*^9}, {
+   3.690384956850971*^9, 3.690385058065034*^9}, {3.6903851884708977`*^9, 
+   3.6903852214491873`*^9}, {3.6903853072684298`*^9, 3.69038541859378*^9}, {
+   3.690385473200596*^9, 3.690385532925063*^9}, {3.690385728846113*^9, 
+   3.690385749713614*^9}, {3.690385834093795*^9, 3.6903858661086483`*^9}, {
+   3.690385956257523*^9, 3.6903860135557127`*^9}, {3.690386664570569*^9, 
+   3.6903866950111837`*^9}, {3.6903867449026947`*^9, 
+   3.6903867625582657`*^9}, {3.69038703969279*^9, 3.6903870463957043`*^9}, {
+   3.6903871198480883`*^9, 3.6903871353600683`*^9}, {3.690387341081788*^9, 
+   3.690387358074192*^9}, {3.690387497409182*^9, 3.690387546082347*^9}, {
+   3.6903888329037523`*^9, 3.690388878071741*^9}, {3.690388919282701*^9, 
+   3.690388929658826*^9}, 3.690389000659739*^9, {3.690389077907737*^9, 
+   3.690389133060944*^9}, {3.6903892272654457`*^9, 3.69038924855296*^9}, 
+   3.690389306210297*^9, {3.690389361184885*^9, 3.69038939655917*^9}, {
+   3.6903894696130877`*^9, 3.690389492933197*^9}, 3.690389585535502*^9, {
+   3.690389631901608*^9, 3.6903896345396*^9}, {3.690389691207086*^9, 
+   3.6903897512899923`*^9}, {3.690389858998946*^9, 3.69038989546415*^9}, {
+   3.69039007209554*^9, 3.690390087152143*^9}, {3.6903901687416687`*^9, 
+   3.69039020695112*^9}, {3.69039026671427*^9, 3.690390304347329*^9}, {
+   3.690390464882753*^9, 3.690390473549015*^9}, {3.690390513494184*^9, 
+   3.690390523622097*^9}, {3.690390572337432*^9, 3.6903906212355757`*^9}, {
+   3.6903906867907057`*^9, 3.690390722567178*^9}, 3.690390909063348*^9, {
+   3.690390961837162*^9, 3.690391003356823*^9}, {3.69039108421765*^9, 
+   3.6903911239862432`*^9}, 3.6903912381112547`*^9, {3.6903913684648943`*^9, 
+   3.690391476299144*^9}, {3.690391582545203*^9, 3.690391599014701*^9}, 
+   3.690391730718156*^9, {3.690391779772434*^9, 3.6903919985086613`*^9}, {
+   3.6903920612160597`*^9, 3.690392124418912*^9}, {3.6903922028232107`*^9, 
+   3.690392239057006*^9}, {3.6903923181022387`*^9, 3.69039237611763*^9}, {
+   3.69039252470184*^9, 3.690392571951579*^9}, {3.690392648900567*^9, 
+   3.690392662323683*^9}, {3.690392736536687*^9, 3.690392765825574*^9}, {
+   3.69039293487461*^9, 3.690392986803988*^9}, {3.6903930435910053`*^9, 
+   3.6903930590072527`*^9}, {3.690393094401478*^9, 3.690393137346404*^9}, {
+   3.690393226455916*^9, 3.690393246775848*^9}, 3.6903933626878633`*^9, {
+   3.690393429938838*^9, 3.690393448331255*^9}, {3.690393516565782*^9, 
+   3.690393562111161*^9}, {3.690393674988619*^9, 3.690393725726357*^9}, {
+   3.6903938300525637`*^9, 3.69039390590449*^9}, {3.6903939573949413`*^9, 
+   3.690393973450714*^9}, {3.6903940626231613`*^9, 3.6903940921359987`*^9}, {
+   3.6903941574204073`*^9, 3.6903941787722893`*^9}, 3.690394391694477*^9, {
+   3.69039442832339*^9, 3.6903944378734217`*^9}, {3.690394507804517*^9, 
+   3.690394563822446*^9}, {3.6903948093879147`*^9, 3.690394850077235*^9}, {
+   3.690394932711873*^9, 3.690394935025321*^9}, {3.690395007116829*^9, 
+   3.690395019100971*^9}, {3.690395062991734*^9, 3.690395113209264*^9}, 
+   3.690395234614461*^9, {3.690395368032345*^9, 3.690395378535357*^9}, {
+   3.6903954317934103`*^9, 3.690395443993236*^9}, {3.690395496244625*^9, 
+   3.690395542957951*^9}, {3.690395625451047*^9, 3.690395670651924*^9}, {
+   3.690395734470294*^9, 3.69039577250546*^9}, {3.690395812182001*^9, 
+   3.6903958287160463`*^9}, {3.690395879086978*^9, 3.690395910399498*^9}, {
+   3.6903959966140003`*^9, 3.6903960297179193`*^9}, {3.690396130586151*^9, 
+   3.690396141501226*^9}, {3.690404179456131*^9, 3.690404194492241*^9}, {
+   3.690404248311963*^9, 3.690404304354835*^9}, {3.6904043822955103`*^9, 
+   3.690404435776238*^9}, 3.6904045303418627`*^9, {3.690404577209284*^9, 
+   3.690404607680255*^9}, {3.6904046792282343`*^9, 3.690404727958007*^9}, {
+   3.690404879220935*^9, 3.690404881454226*^9}, {3.690404959074604*^9, 
+   3.690405008179634*^9}, {3.6904050750077267`*^9, 3.690405090919435*^9}, {
+   3.690405156795746*^9, 3.6904052047010098`*^9}, {3.690405331732223*^9, 
+   3.690405374917468*^9}, 3.690405439183813*^9, {3.6904054972615*^9, 
+   3.690405519716399*^9}, {3.6904056603075743`*^9, 3.690405709982308*^9}, {
+   3.690406036558148*^9, 3.6904061088327017`*^9}, 3.6904061955167723`*^9, {
+   3.690406407393696*^9, 3.690406509787826*^9}, {3.690406589162044*^9, 
+   3.690406596536976*^9}, {3.690406693764844*^9, 3.6904067014381638`*^9}, {
+   3.690406834828692*^9, 3.690406914295463*^9}, {3.6904070222614098`*^9, 
+   3.690407069775154*^9}, 3.690407155205677*^9, {3.690407242803465*^9, 
+   3.690407327492498*^9}, {3.690407389472561*^9, 3.69040741346382*^9}, 
+   3.690407526709606*^9, {3.690407620516961*^9, 3.690407635060048*^9}, {
+   3.6904077116793537`*^9, 3.690407725839026*^9}, 3.690407776425415*^9, {
+   3.690449666185668*^9, 3.690449705194792*^9}, {3.6904497963125753`*^9, 
+   3.690449834744706*^9}, {3.6904498706035423`*^9, 3.69044987450707*^9}, {
+   3.690449958467958*^9, 3.690450040652647*^9}, 3.690450189638167*^9, {
+   3.690452150607401*^9, 3.690452171678234*^9}, {3.690452385401266*^9, 
+   3.6904524217534103`*^9}, {3.690452521359868*^9, 3.690452535599864*^9}, 
+   3.690452728896496*^9, {3.6904528027674007`*^9, 3.690452836344512*^9}, {
+   3.690453005041252*^9, 3.690453064289214*^9}, 3.690453228409404*^9, {
+   3.690453367554842*^9, 3.6904533981770906`*^9}, {3.690453556506044*^9, 
+   3.6904535878023167`*^9}, {3.690453740540761*^9, 3.690453864959923*^9}, {
+   3.690453896441683*^9, 3.690453917987637*^9}, {3.690453949750098*^9, 
+   3.690453977709609*^9}, {3.690454013240664*^9, 3.690454113629204*^9}, 
+   3.6904544108730917`*^9, 3.690454575825807*^9, {3.690454695533683*^9, 
+   3.690454704358149*^9}, {3.6904550139368153`*^9, 3.690455020486866*^9}, {
+   3.69045535781497*^9, 3.690455375832306*^9}, {3.690455439834599*^9, 
+   3.690455459675304*^9}, {3.690455495645254*^9, 3.690455612291259*^9}, {
+   3.6904556551447687`*^9, 3.6904557844678926`*^9}, 3.690455816565659*^9, 
+   3.690455868759385*^9, {3.69045592161012*^9, 3.6904559239688883`*^9}, {
+   3.690456030341548*^9, 3.690456149915872*^9}, {3.690456242610531*^9, 
+   3.690456297858844*^9}, {3.690456331749103*^9, 3.690456392535737*^9}, {
+   3.690458011751381*^9, 3.690458012725011*^9}, 3.690458078088642*^9, {
+   3.690458123690483*^9, 3.6904581378252163`*^9}, {3.690458170462541*^9, 
+   3.690458183390745*^9}},ExpressionUUID->"5a39cf82-7632-46d6-90b8-\
+5a9069b644ba"]
+},
+WindowSize->{1207, 1034},
+WindowMargins->{{-1, Automatic}, {58, Automatic}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 28263, 490, 3076, "Input",ExpressionUUID->"5a39cf82-7632-46d6-90b8-5a9069b644ba"]
+}
+]
+*)
+

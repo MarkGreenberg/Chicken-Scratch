@@ -1,0 +1,846 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     38456,        838]
+NotebookOptionsPosition[     38140,        824]
+NotebookOutlinePosition[     38500,        840]
+CellTagsIndexPosition[     38457,        837]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Delayed", "[", "\[IndentingNewLine]", 
+    RowBox[{"APIFunction", "[", 
+     RowBox[{
+      RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"pols", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"\"\<The Color Purple\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  
+                  TemplateBox[{
+                   "\"Georgia, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Georgia\"", ",", "\"UnitedStates\""}], "}"}]}],
+                     "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Georgia\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                   "Entity"], ",", 
+                  
+                  TemplateBox[{
+                   "\"Tennessee, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Tennessee\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                    "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Tennessee\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                   "Entity"]}], "}"}], ",", 
+                RowBox[{"{", 
+                 TemplateBox[{"\"Memphis\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Memphis\"", ",", "\"Tennessee\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                   "\"Entity[\\\"City\\\", {\\\"Memphis\\\", \
+\\\"Tennessee\\\", \\\"UnitedStates\\\"}]\"","\"city\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Beloved\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 "\"Kentucky, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Kentucky\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                  "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Kentucky\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                 "Entity"], ",", 
+                
+                TemplateBox[{
+                 "\"Ohio, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Ohio\"", ",", "\"UnitedStates\""}], "}"}]}], 
+                    "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Ohio\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                 "Entity"]}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Great Gatsby\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"New York, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"NewYork\"", ",", "\"UnitedStates\""}], "}"}]}],
+                     "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"NewYork\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 TemplateBox[{"\"Long Island\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Island\"", ",", "\"LongIslandNewYork\""}], 
+                    "]"}],"\"Entity[\\\"Island\\\", \
+\\\"LongIslandNewYork\\\"]\"","\"island\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Gilgamesh\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"Iraq\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Iraq\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"Iraq\\\"]\"","\"country\""},
+                  
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"GeoPosition", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"31.3249", ",", "45.6384"}], "}"}], "]"}], "}"}]}],
+                "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Cannery Row\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"California, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"California\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"California\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                  
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Monterey County, California, United States\"",
+                   RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"MontereyCounty\"", ",", "\"California\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"MontereyCounty\\\", \\\"California\\\", \\\"UnitedStates\\\"}]\"",
+                   "\"administrative division\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Grapes of Wrath\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                
+                TemplateBox[{
+                 "\"Oklahoma, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Oklahoma\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                  "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Oklahoma\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                 "Entity"], ",", 
+                
+                TemplateBox[{
+                 "\"California, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"California\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                  "\"Entity[\\\"AdministrativeDivision\\\", {\\\"California\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                 "Entity"]}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Jungle\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Illinois, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Illinois\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Illinois\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 TemplateBox[{"\"Chicago\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Chicago\"", ",", "\"Illinois\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                   
+                   "\"Entity[\\\"City\\\", {\\\"Chicago\\\", \
+\\\"Illinois\\\", \\\"UnitedStates\\\"}]\"","\"city\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<War and Peace\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"Russia\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Russia\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"Russia\\\"]\"",
+                   "\"country\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  TemplateBox[{"\"Moscow\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Moscow\"", ",", "\"Moscow\"", ",", "\"Russia\""}], 
+                    "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"Moscow\\\", \\\"Moscow\\\", \
+\\\"Russia\\\"}]\"","\"city\""},
+                   "Entity"], ",", 
+                  TemplateBox[{"\"Saint Petersburg\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"SaintPetersburg\"", ",", "\"SaintPetersburg\"", ",", 
+                    "\"Russia\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"SaintPetersburg\\\", \
+\\\"SaintPetersburg\\\", \\\"Russia\\\"}]\"","\"city\""},
+                   "Entity"]}], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Sound and the Fury\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Mississippi, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Mississippi\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Mississippi\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Jefferson County, Mississippi, United States\"",
+                   RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"JeffersonCounty\"", ",", "\"Mississippi\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"JeffersonCounty\\\", \\\"Mississippi\\\", \\\"UnitedStates\\\"}]\"",
+                   "\"administrative division\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Death Comes for the Archbishop\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"New Mexico, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"NewMexico\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", {\\\"NewMexico\\\
+\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Cibola County, New Mexico, United States\"",
+                   RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"CibolaCounty\"", ",", "\"NewMexico\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"CibolaCounty\\\", \\\"NewMexico\\\", \\\"UnitedStates\\\"}]\"",
+                   "\"administrative division\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Beowulf\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{"\"Sweden\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Sweden\""}], "]"}],
+                  "\"Entity[\\\"Country\\\", \\\"Sweden\\\"]\"","\"country\""},
+                 "Entity"], ",", 
+                TemplateBox[{"\"Denmark\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Denmark\""}], "]"}],
+                  "\"Entity[\\\"Country\\\", \\\"Denmark\\\"]\"",
+                  "\"country\""},
+                 "Entity"]}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Last of the Mohicans\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"New York, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"NewYork\"", ",", "\"UnitedStates\""}], "}"}]}],
+                     "]"}],"\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"NewYork\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"GeoPosition", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"43.4206", ",", 
+                    RowBox[{"-", "73.7093"}]}], "}"}], "]"}], "}"}]}], 
+               "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Les Mis\[EAcute]rables\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"France\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"France\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"France\\\"]\"",
+                   "\"country\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  
+                  TemplateBox[{
+                   "\"Digne\[Hyphen]les\[Hyphen]Bains\"",
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"DigneLesBains\"", ",", "\"ProvenceAlpesCoteDAzur\"", 
+                    ",", "\"France\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"DigneLesBains\\\", \
+\\\"ProvenceAlpesCoteDAzur\\\", \\\"France\\\"}]\"","\"city\""},
+                   "Entity"], ",", 
+                  TemplateBox[{"\"Paris\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Paris\"", ",", "\"IleDeFrance\"", ",", "\"France\""}], 
+                    "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"Paris\\\", \\\"IleDeFrance\\\
+\", \\\"France\\\"}]\"","\"city\""},
+                   "Entity"], ",", 
+                  TemplateBox[{"\"Montreuil\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Montreuil\"", ",", "\"IleDeFrance\"", ",", 
+                    "\"France\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"Montreuil\\\", \
+\\\"IleDeFrance\\\", \\\"France\\\"}]\"","\"city\""},
+                   "Entity"]}], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<For Whom the Bell Tolls\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"Spain\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Spain\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"Spain\\\"]\"","\"country\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"GeoPosition", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"40.95", ",", 
+                    RowBox[{"-", "4.1167"}]}], "}"}], "]"}], "}"}]}], "}"}]}],
+              "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Siddhartha\>\"", ",", 
+              RowBox[{"{", 
+               TemplateBox[{"\"India\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Country\"", ",", "\"India\""}], "]"}],
+                 "\"Entity[\\\"Country\\\", \\\"India\\\"]\"","\"country\""},
+                "Entity"], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Don Quixote de la Mancha\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"Spain\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Spain\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"Spain\\\"]\"","\"country\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"GeoPosition", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"39.8666", ",", 
+                    RowBox[{"-", "4.01666"}]}], "}"}], "]"}], "}"}]}], 
+               "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<One Hundred Years of Solitude\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"Colombia\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Colombia\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"Colombia\\\"]\"",
+                   "\"country\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 TemplateBox[{"\"Aracataca\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Aracataca\"", ",", "\"Magdalena\"", ",", 
+                    "\"Colombia\""}], "}"}]}], "]"}],
+                   "\"Entity[\\\"City\\\", {\\\"Aracataca\\\", \
+\\\"Magdalena\\\", \\\"Colombia\\\"}]\"","\"city\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Sons and Lovers\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"England, United Kingdom\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"England\"", ",", "\"UnitedKingdom\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"England\\\", \\\"UnitedKingdom\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Derbyshire, England, United Kingdom\"",
+                   RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Derbyshire\"", ",", "\"England\"", ",", 
+                    "\"UnitedKingdom\""}], "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Derbyshire\\\", \\\"England\\\", \\\"UnitedKingdom\\\"}]\"",
+                   "\"administrative division\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<\[CapitalOE]dipus Rex\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"Greece\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Greece\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"Greece\\\"]\"",
+                   "\"country\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"GeoPosition", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"38.317", ",", "23.317"}], "}"}], "]"}], "}"}]}], 
+               "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Rubiayat of Omar Khayyam\>\"", ",", 
+              RowBox[{"{", 
+               TemplateBox[{"\"Iran\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Country\"", ",", "\"Iran\""}], "]"}],
+                 "\"Entity[\\\"Country\\\", \\\"Iran\\\"]\"","\"country\""},
+                "Entity"], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Call of the Wild\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  
+                  TemplateBox[{
+                   "\"California, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"California\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                    "\"Entity[\\\"AdministrativeDivision\\\", {\\\"California\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                   "Entity"], ",", 
+                  
+                  TemplateBox[{
+                   "\"Washington, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Washington\"", ",", "\"UnitedStates\""}], 
+                    "}"}]}], "]"}],
+                    "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Washington\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                   "Entity"], ",", 
+                  
+                  TemplateBox[{
+                   "\"British Columbia, Canada\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"BritishColumbia\"", ",", "\"Canada\""}], 
+                    "}"}]}], "]"}],
+                    "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"BritishColumbia\\\", \\\"Canada\\\"}]\"","\"administrative division\""},
+                   "Entity"]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  TemplateBox[{"\"Skagway\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Skagway\"", ",", "\"Alaska\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"Skagway\\\", \\\"Alaska\\\", \
+\\\"UnitedStates\\\"}]\"","\"city\""},
+                   "Entity"], ",", 
+                  TemplateBox[{"\"Seattle\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Seattle\"", ",", "\"Washington\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"Seattle\\\", \
+\\\"Washington\\\", \\\"UnitedStates\\\"}]\"","\"city\""},
+                   "Entity"], ",", 
+                  TemplateBox[{"\"Santa Clara\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"SantaClara\"", ",", "\"California\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"SantaClara\\\", \
+\\\"California\\\", \\\"UnitedStates\\\"}]\"","\"city\""},
+                   "Entity"]}], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Fanny Hill\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"England, United Kingdom\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"England\"", ",", "\"UnitedKingdom\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"England\\\", \\\"UnitedKingdom\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  TemplateBox[{"\"Liverpool\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Liverpool\"", ",", "\"Liverpool\"", ",", 
+                    "\"UnitedKingdom\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"Liverpool\\\", \\\"Liverpool\
+\\\", \\\"UnitedKingdom\\\"}]\"","\"city\""},
+                   "Entity"], ",", 
+                  TemplateBox[{"\"London\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"London\"", ",", "\"GreaterLondon\"", ",", 
+                    "\"UnitedKingdom\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"London\\\", \
+\\\"GreaterLondon\\\", \\\"UnitedKingdom\\\"}]\"","\"city\""},
+                   "Entity"]}], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Iliad\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  TemplateBox[{"\"Greece\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Greece\""}], "]"}],
+                    "\"Entity[\\\"Country\\\", \\\"Greece\\\"]\"",
+                    "\"country\""},
+                   "Entity"], ",", 
+                  
+                  TemplateBox[{
+                   "\"\[CapitalCCedilla]anakkale, Turkey\"",
+                    RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Canakkale\"", ",", "\"Turkey\""}], "}"}]}], 
+                    "]"}],
+                    "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Canakkale\\\", \\\"Turkey\\\"}]\"","\"administrative division\""},
+                   "Entity"]}], "}"}], ",", 
+                RowBox[{"{", 
+                 TemplateBox[{"\"Athens\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Athens\"", ",", "\"Attiki\"", ",", "\"Greece\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"City\\\", {\\\"Athens\\\", \\\"Attiki\\\", \
+\\\"Greece\\\"}]\"","\"city\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Riders of the Purple Sage\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"Utah, United States\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Utah\"", ",", "\"UnitedStates\""}], "}"}]}], 
+                    "]"}],"\"Entity[\\\"AdministrativeDivision\\\", {\\\"Utah\
+\\\", \\\"UnitedStates\\\"}]\"","\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Kane County, Utah, United States\"",
+                   RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"KaneCounty\"", ",", "\"Utah\"", ",", 
+                    "\"UnitedStates\""}], "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"KaneCounty\\\", \\\"Utah\\\", \\\"UnitedStates\\\"}]\"",
+                   "\"administrative division\""},
+                  "Entity"], "}"}]}], "}"}]}], "}"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Tarzan of the Apes\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                TemplateBox[{"\"Guinea\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Guinea\""}], "]"}],
+                  "\"Entity[\\\"Country\\\", \\\"Guinea\\\"]\"","\"country\""},
+                 "Entity"], ",", 
+                TemplateBox[{"\"Ivory Coast\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"IvoryCoast\""}], "]"}],
+                  "\"Entity[\\\"Country\\\", \\\"IvoryCoast\\\"]\"",
+                  "\"country\""},
+                 "Entity"], ",", 
+                TemplateBox[{"\"Sierra Leone\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"SierraLeone\""}], "]"}],
+                  "\"Entity[\\\"Country\\\", \\\"SierraLeone\\\"]\"",
+                  "\"country\""},
+                 "Entity"], ",", 
+                TemplateBox[{"\"Liberia\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"Liberia\""}], "]"}],
+                  "\"Entity[\\\"Country\\\", \\\"Liberia\\\"]\"",
+                  "\"country\""},
+                 "Entity"]}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<The Good Earth\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 TemplateBox[{"\"China\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"China\""}], "]"}],
+                   "\"Entity[\\\"Country\\\", \\\"China\\\"]\"","\"country\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  TemplateBox[{"\"Anhui, China\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Anhui\"", ",", "\"China\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"AdministrativeDivision\\\", {\\\"Anhui\\\", \
+\\\"China\\\"}]\"","\"administrative division\""},
+                   "Entity"], ",", 
+                  TemplateBox[{"\"Jiangsu, China\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"Jiangsu\"", ",", "\"China\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"Jiangsu\\\", \\\"China\\\"}]\"","\"administrative division\""},
+                   "Entity"]}], "}"}]}], "}"}]}], "}"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Follow the Rabbit Proof Fence\>\"", ",", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 
+                 TemplateBox[{
+                  "\"Western Australia, Australia\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"AdministrativeDivision\"", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"\"WesternAustralia\"", ",", "\"Australia\""}], 
+                    "}"}]}], "]"}],
+                   "\"Entity[\\\"AdministrativeDivision\\\", \
+{\\\"WesternAustralia\\\", \\\"Australia\\\"}]\"",
+                   "\"administrative division\""},
+                  "Entity"], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  TemplateBox[{"\"Perth\"",RowBox[{"Entity", "[", 
+                    RowBox[{"\"City\"", ",", 
+                    RowBox[{"{", 
+                    
+                    RowBox[{
+                    "\"Perth\"", ",", "\"WesternAustralia\"", ",", 
+                    "\"Australia\""}], "}"}]}], "]"}],
+                    "\"Entity[\\\"City\\\", {\\\"Perth\\\", \
+\\\"WesternAustralia\\\", \\\"Australia\\\"}]\"","\"city\""},
+                   "Entity"], ",", 
+                  RowBox[{"GeoPosition", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "23.358"}], ",", "120.781"}], "}"}], "]"}]}],
+                  "}"}]}], "}"}]}], "}"}]}], "}"}], ",", "4"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"First", "[", "#", "]"}], "&"}], "/@", "pols"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"ans", "=", 
+        RowBox[{
+         RowBox[{"Position", "[", 
+          RowBox[{"mixed", ",", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+         RowBox[{"[", 
+          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Style", "[", 
+           RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", "mixed"}]}], ";",
+        "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+         "\"\<The map shows the setting location for which of these pieces of \
+literature?\>\"", ",", 
+          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"pic", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"GeoListPlot", "[", 
+           RowBox[{"h1", ",", 
+            RowBox[{"GeoBackground", "\[Rule]", "\"\<ReliefMap\>\""}], ",", 
+            RowBox[{"GeoRangePadding", "\[Rule]", 
+             RowBox[{"Quantity", "[", 
+              RowBox[{"75", ",", "\"\<Miles\>\""}], "]"}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"PlotStyle", "\[Rule]", " ", 
+             RowBox[{"{", 
+              RowBox[{"Purple", ",", 
+               RowBox[{"RGBColor", "[", 
+                RowBox[{"1", ",", "1", ",", "0", ",", "1"}], "]"}]}], "}"}]}],
+             ",", 
+            RowBox[{"PlotLegends", "\[Rule]", "None"}], ",", 
+            RowBox[{"ImageSize", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"{", "480", "}"}], ",", 
+               RowBox[{"{", "520", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"pols", "[", 
+           RowBox[{"[", 
+            RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"InputForm", "[", 
+         RowBox[{"{", 
+          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lite4\>\"", ",", 
+   RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ CellChangeTimes->{
+  3.683384637957686*^9, 3.683384729257093*^9, {3.6833847613861027`*^9, 
+   3.683384786128922*^9}, {3.6833850192963123`*^9, 3.683385044080654*^9}, {
+   3.683385270524095*^9, 3.6833852837790747`*^9}, 3.688140476670554*^9, {
+   3.68814058585364*^9, 3.6881405882696877`*^9}, {3.688140628448118*^9, 
+   3.688140666472185*^9}, {3.6881407007967176`*^9, 3.688140701179768*^9}, {
+   3.68814121312508*^9, 3.6881412482520847`*^9}, {3.688141281307098*^9, 
+   3.688141281887517*^9}, {3.688141379296946*^9, 3.6881413799690313`*^9}, 
+   3.695899604788794*^9},ExpressionUUID->"bbb67674-d6f6-4712-98f4-\
+a01359d59785"]
+},
+WindowSize->{1224, 1054},
+WindowMargins->{{0, Automatic}, {Automatic, 42}},
+FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
+10, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 37578, 802, 1223, "Input",ExpressionUUID->"bbb67674-d6f6-4712-98f4-a01359d59785"]
+}
+]
+*)
+
