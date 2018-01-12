@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6808,        162]
-NotebookOptionsPosition[      6494,        148]
-NotebookOutlinePosition[      6854,        164]
-CellTagsIndexPosition[      6811,        161]
+NotebookDataLength[      7911,        180]
+NotebookOptionsPosition[      7595,        166]
+NotebookOutlinePosition[      7957,        182]
+CellTagsIndexPosition[      7914,        179]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,81 +26,89 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"inLangs", "=", 
+       RowBox[{"data", "=", 
         RowBox[{"<|", "|>"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"While", "[", 
         RowBox[{
          RowBox[{
-          RowBox[{"Length", "[", "inLangs", "]"}], "<", "3"}], ",", 
+          RowBox[{"Length", "[", "data", "]"}], "<", "2"}], ",", 
          "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"choices", "=", 
            RowBox[{"RandomWord", "[", "4", "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"inLangs", "=", 
-           RowBox[{"WordTranslation", "[", 
+          RowBox[{"eng", "=", 
+           RowBox[{"choices", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"DeleteCases", "[", 
             RowBox[{
-             RowBox[{"choices", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "All"}], "]"}]}]}]}], 
-        "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"lang3", "=", 
-        RowBox[{"KeyMap", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"EntityValue", "[", 
-            RowBox[{"#", ",", "\"\<Name\>\""}], "]"}], "&"}], ",", 
-          RowBox[{"RandomSample", "[", 
-           RowBox[{"inLangs", ",", "3"}], "]"}]}], "]"}]}], ";", 
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{
+               RowBox[{"DeleteMissing", "[", 
+                RowBox[{
+                 RowBox[{"WordTranslation", "[", 
+                  RowBox[{"eng", ",", "All"}], "]"}], ",", "Infinity"}], 
+                "]"}], ",", 
+               RowBox[{"w_String", "/;", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"EditDistance", "[", 
+                   RowBox[{"w", ",", "eng", ",", 
+                    RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "/", 
+                  RowBox[{"Min", "[", 
+                   RowBox[{
+                    RowBox[{"StringLength", "[", "w", "]"}], ",", 
+                    RowBox[{"StringLength", "[", "eng", "]"}]}], "]"}]}], "<",
+                  ".45"}]}], ",", "Infinity"}], "]"}], ",", 
+             RowBox[{"{", "}"}]}], "]"}]}]}]}], "]"}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"langs", "=", 
-        RowBox[{"Keys", "[", "lang3", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"words", "=", 
+       RowBox[{"dat2", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"data", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"word1", "=", 
+        RowBox[{"ToCharacterCode", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{
+           RowBox[{"Values", "[", "dat2", "]"}], "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"lang1", "=", 
         RowBox[{
-         RowBox[{
-          RowBox[{"ToCharacterCode", "[", 
-           RowBox[{"RandomChoice", "[", "#", "]"}], "]"}], "&"}], "/@", 
-         "lang3"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"Print", "[", 
-        RowBox[{"langs", ",", "words"}], "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"Keys", "[", "dat2", "]"}], "[", 
+         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"word2", "=", 
+        RowBox[{"ToCharacterCode", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{
+           RowBox[{"Values", "[", "dat2", "]"}], "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"lang2", "=", 
+        RowBox[{
+         RowBox[{"Keys", "[", "dat2", "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"q", "=", 
         RowBox[{
          RowBox[{"Hold", "[", 
           RowBox[{"StringForm", "[", 
            RowBox[{
-           "\"\<In the `1` language, the word is `2`; in `3` it is `4`; and \
-in `5` it is `6`. What is the word in English?\>\"", ",", "h1", ",", 
+           "\"\<It's `1` in the `2` language; in `3` it's `4`. What word is \
+it in English?\>\"", ",", 
             RowBox[{"Style", "[", 
              RowBox[{
-              RowBox[{"FromCharacterCode", "[", "h2", "]"}], ",", "Italic"}], 
-             "]"}], ",", "h3", ",", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], ",", "Italic"}], 
+             "]"}], ",", "h2", ",", "h3", ",", 
             RowBox[{"Style", "[", 
              RowBox[{
               RowBox[{"FromCharacterCode", "[", "h4", "]"}], ",", "Italic"}], 
-             "]"}], ",", "h5", ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"FromCharacterCode", "[", "h6", "]"}], ",", "Italic"}], 
              "]"}]}], "]"}], "]"}], "/.", 
          RowBox[{"{", 
           RowBox[{
-           RowBox[{"h1", "\[Rule]", 
-            RowBox[{"langs", "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
-           RowBox[{"h2", "\[Rule]", 
-            RowBox[{"words", "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}], ",", 
-           RowBox[{"h3", "\[Rule]", 
-            RowBox[{"langs", "[", 
-             RowBox[{"[", "2", "]"}], "]"}]}], ",", 
-           RowBox[{"h4", "\[Rule]", 
-            RowBox[{"words", "[", 
-             RowBox[{"[", "2", "]"}], "]"}]}], ",", 
-           RowBox[{"h5", "\[Rule]", 
-            RowBox[{"langs", "[", 
-             RowBox[{"[", "3", "]"}], "]"}]}], ",", 
-           RowBox[{"h6", "\[Rule]", 
-            RowBox[{"words", "[", 
-             RowBox[{"[", "3", "]"}], "]"}]}]}], "}"}]}]}], ";", 
+           RowBox[{"h1", "\[Rule]", "word1"}], ",", 
+           RowBox[{"h2", "\[Rule]", "lang1"}], ",", 
+           RowBox[{"h3", "\[Rule]", "lang2"}], ",", 
+           RowBox[{"h4", "\[Rule]", "word2"}]}], "}"}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
@@ -143,11 +151,21 @@ in `5` it is `6`. What is the word in English?\>\"", ",", "h1", ",",
    3.687974636527666*^9, 3.687974814558075*^9}, {3.687974848257112*^9, 
    3.6879748936512737`*^9}, {3.687974938348421*^9, 3.687975077922414*^9}, {
    3.687975151113256*^9, 3.687975302116835*^9}, {3.687975431774268*^9, 
-   3.687975443052112*^9}},ExpressionUUID->"496e333c-d8ce-48fe-b816-\
-7745b90230c2"]
+   3.687975443052112*^9}, {3.724754132521949*^9, 3.724754132695489*^9}, {
+   3.724766177734312*^9, 3.7247661842360687`*^9}, {3.724766218401746*^9, 
+   3.724766233800613*^9}, {3.724775194282791*^9, 3.724775372903414*^9}, {
+   3.724775414415606*^9, 3.724775512809956*^9}, {3.724775584935629*^9, 
+   3.7247755964467077`*^9}, {3.724775755167066*^9, 3.724775755438383*^9}, {
+   3.72478504268379*^9, 3.724785135498543*^9}, {3.724785169827424*^9, 
+   3.7247854317134333`*^9}, {3.724785517105104*^9, 3.724785552111514*^9}, {
+   3.7247856125602427`*^9, 3.7247856412470217`*^9}, {3.72478588911896*^9, 
+   3.724785890629855*^9}, {3.724786109981477*^9, 3.724786140373334*^9}, {
+   3.724789597732276*^9, 
+   3.7247896042357063`*^9}},ExpressionUUID->"510d19a0-630b-4d07-90e0-\
+cbb566eda2ec"]
 },
-WindowSize->{1192, 1050},
-WindowMargins->{{0, Automatic}, {Automatic, 36}},
+WindowSize->{1171, 1321},
+WindowMargins->{{145, Automatic}, {Automatic, 33}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 10, 2017)",
 StyleDefinitions->"Default.nb"
@@ -163,7 +181,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5932, 126, 388, "Input",ExpressionUUID->"496e333c-d8ce-48fe-b816-7745b90230c2"]
+Cell[558, 20, 7033, 144, 451, "Input",ExpressionUUID->"510d19a0-630b-4d07-90e0-cbb566eda2ec"]
 }
 ]
 *)
