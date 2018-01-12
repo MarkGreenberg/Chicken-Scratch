@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    108595,       2213]
-NotebookOptionsPosition[    108277,       2199]
-NotebookOutlinePosition[    108637,       2215]
-CellTagsIndexPosition[    108594,       2212]
+NotebookDataLength[    111927,       2258]
+NotebookOptionsPosition[    111609,       2244]
+NotebookOutlinePosition[    111969,       2260]
+CellTagsIndexPosition[    111926,       2257]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1735,77 +1735,90 @@ Cell[BoxData[
        "\[IndentingNewLine]", "\[IndentingNewLine]", 
        RowBox[{"pic", "=", 
         RowBox[{
-         RowBox[{"Hold", "[", 
+         RowBox[{"Hold", "[", "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"GeoListPlot", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
+           RowBox[{"Column", "[", 
+            RowBox[{"{", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"GeoListPlot", "[", "\[IndentingNewLine]", 
                RowBox[{
-                RowBox[{
-                 RowBox[{"#", "[", 
-                  RowBox[{"[", "3", "]"}], "]"}], "&"}], "/@", 
-                RowBox[{
-                 RowBox[{"Values", "[", "h1", "]"}], "[", 
-                 RowBox[{"[", 
-                  RowBox[{"2", ";;", "4"}], "]"}], "]"}]}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"Values", "[", "h1", "]"}], "[", 
-                 RowBox[{"[", 
-                  RowBox[{"1", ",", "3"}], "]"}], "]"}], "}"}]}], "}"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"PlotMarkers", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"Style", "[", 
-                 RowBox[{"\"\<\[Times]\>\"", ",", "30"}], "]"}], ",", 
-                RowBox[{"Style", "[", 
-                 RowBox[{"\"\<\[Times]\>\"", ",", "30", ",", "Bold"}], 
-                 "]"}]}], "}"}]}], ",", 
-             RowBox[{"PlotStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"Black", ",", "Blue"}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"GeoLabels", "\[Rule]", 
-              RowBox[{"(", 
-               RowBox[{
-                RowBox[{"Inset", "[", 
+                RowBox[{"Table", "[", 
                  RowBox[{
-                  RowBox[{
-                   RowBox[{"Position", "[", 
-                    RowBox[{
-                    RowBox[{"Values", "[", "h1", "]"}], ",", "#2"}], "]"}], "/.", 
+                  RowBox[{"{", 
                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"{", 
-                    RowBox[{"k_", ",", "3"}], "}"}], "}"}], "\[RuleDelayed]", 
-                    
-                    RowBox[{"Style", "[", 
+                    RowBox[{"Values", "[", "h1", "]"}], "[", 
+                    RowBox[{"[", 
+                    RowBox[{"n", ",", "3"}], "]"}], "]"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"GeoRange", "\[Rule]", "\"\<World\>\""}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"PlotMarkers", "\[Rule]", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<\[Times]\>\"", ",", "30", ",", "Bold"}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"PlotStyle", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Blue", ",", "Red", ",", "Gray", ",", "Orange"}], 
+                  "}"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
                     RowBox[{
                     RowBox[{"DateString", "[", 
                     RowBox[{
-                    RowBox[{"h1", "[", 
+                    RowBox[{
+                    RowBox[{"Values", "[", "h1", "]"}], "[", 
                     RowBox[{"[", 
-                    RowBox[{"k", ",", "1"}], "]"}], "]"}], ",", 
-                    RowBox[{"{", "\"\<Year\>\"", "}"}]}], "]"}], ",", "15"}], 
-                    "]"}]}]}], ",", "#2", ",", 
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", 
-                    RowBox[{"-", "2"}]}], "}"}]}], "]"}], "&"}], ")"}]}], ",",
-              "\[IndentingNewLine]", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}], ",", 
-             RowBox[{"ImagePadding", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", 
-                 RowBox[{"4", ",", "4"}], "}"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"18", ",", "18"}], "}"}]}], "}"}]}]}], "]"}], "/.", 
+                    RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"{", "\"\<Year\>\"", "}"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "32"}], "}"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"DateString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Values", "[", "h1", "]"}], "[", 
+                    RowBox[{"[", 
+                    RowBox[{"2", ",", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"{", "\"\<Year\>\"", "}"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Red", ",", "24"}], "}"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"DateString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Values", "[", "h1", "]"}], "[", 
+                    RowBox[{"[", 
+                    RowBox[{"3", ",", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"{", "\"\<Year\>\"", "}"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Gray", ",", "24"}], "}"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"Style", "[", 
+                    RowBox[{
+                    RowBox[{"DateString", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Values", "[", "h1", "]"}], "[", 
+                    RowBox[{"[", 
+                    RowBox[{"4", ",", "1"}], "]"}], "]"}], ",", 
+                    RowBox[{"{", "\"\<Year\>\"", "}"}]}], "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"Orange", ",", "24"}], "}"}]}], "]"}]}], "}"}], 
+                 "}"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"ItemSize", "\[Rule]", "9.5"}]}], "]"}]}], 
+             "\[IndentingNewLine]", "}"}], "]"}], "/.", 
            RowBox[{
             RowBox[{"Legended", "[", 
              RowBox[{"a_", ",", "b_"}], "]"}], "\[Rule]", "a"}]}], "]"}], "/.", 
@@ -1815,7 +1828,7 @@ Cell[BoxData[
        RowBox[{
        "q", "=", 
         "\"\<The map shows the locations and years sunk of four shipwrecks. \
-Which wreck is the blue marker?\>\""}], ";", "\[IndentingNewLine]", 
+Which is marked blue?\>\""}], ";", "\[IndentingNewLine]", 
        RowBox[{"riffled", "=", 
         RowBox[{"Partition", "[", 
          RowBox[{
@@ -2193,11 +2206,43 @@ Which wreck is the blue marker?\>\""}], ";", "\[IndentingNewLine]",
    3.705077195315516*^9}, {3.705077313451434*^9, 3.7050773430132113`*^9}, {
    3.705077446320972*^9, 3.70507746492662*^9}, {3.705078987893256*^9, 
    3.705079103433346*^9}, {3.705079158672011*^9, 3.705079177786806*^9}, {
-   3.7050792373729763`*^9, 
-   3.705079238024522*^9}},ExpressionUUID->"3970621a-f41a-4476-b2b9-\
-983d882fa6c1"]
+   3.7050792373729763`*^9, 3.705079238024522*^9}, {3.7246903910609293`*^9, 
+   3.724690399009308*^9}, {3.724690430369072*^9, 3.724690452359973*^9}, {
+   3.7246905507793293`*^9, 3.724690563401864*^9}, {3.724690712073875*^9, 
+   3.724690717393593*^9}, {3.724690791797681*^9, 3.724690793554368*^9}, {
+   3.7246913013028307`*^9, 3.7246913486776953`*^9}, {3.7246983631049557`*^9, 
+   3.724698392799445*^9}, {3.724698424049416*^9, 3.7246984363992147`*^9}, {
+   3.7246984728894367`*^9, 3.7246985370311003`*^9}, {3.7246987060238943`*^9, 
+   3.724698744893916*^9}, {3.724698803197527*^9, 3.724698856053369*^9}, {
+   3.724698888213203*^9, 3.7246989906116858`*^9}, {3.72469921649302*^9, 
+   3.72469922156464*^9}, {3.7246997487377768`*^9, 3.724699761071988*^9}, {
+   3.724699793768477*^9, 3.7246998731615*^9}, {3.7246999607304897`*^9, 
+   3.724699974543244*^9}, {3.724700078030767*^9, 3.7247000876779337`*^9}, {
+   3.7247001339440393`*^9, 3.724700138255315*^9}, {3.724700179134169*^9, 
+   3.724700185845354*^9}, {3.7247002218693113`*^9, 3.724700239533807*^9}, {
+   3.724700330013238*^9, 3.7247003431325293`*^9}, 3.724700409722349*^9, 
+   3.724700451614182*^9, {3.724700545676092*^9, 3.724700570789309*^9}, {
+   3.724700607093514*^9, 3.724700611397049*^9}, {3.724700670219234*^9, 
+   3.724700706107708*^9}, {3.724700785552062*^9, 3.724700834673546*^9}, {
+   3.724700867402069*^9, 3.724700911872983*^9}, {3.7247010192494926`*^9, 
+   3.724701029952217*^9}, {3.724701066137741*^9, 3.724701111498253*^9}, {
+   3.7247011491448393`*^9, 3.724701233960375*^9}, {3.724701405704471*^9, 
+   3.72470140988789*^9}, {3.72470145854465*^9, 3.724701486269906*^9}, {
+   3.7247015224724703`*^9, 3.724701523553034*^9}, {3.724701566871819*^9, 
+   3.7247015673991327`*^9}, {3.7247016204585667`*^9, 3.72470162503139*^9}, {
+   3.724701692048102*^9, 3.7247017215013857`*^9}, {3.724701769085881*^9, 
+   3.724701774301*^9}, {3.724701864338776*^9, 3.724702005526072*^9}, {
+   3.724702039836669*^9, 3.72470204049972*^9}, {3.724702113252223*^9, 
+   3.724702117923223*^9}, {3.72470215122958*^9, 3.724702246188026*^9}, {
+   3.724702286429516*^9, 3.724702319922761*^9}, {3.724702351002839*^9, 
+   3.724702396489682*^9}, {3.7247024515462008`*^9, 3.724702510593261*^9}, {
+   3.724702577187274*^9, 3.724702618705408*^9}, {3.724702690259144*^9, 
+   3.724702737729569*^9}, {3.724702845762288*^9, 3.724702858806636*^9}, {
+   3.724702941304639*^9, 
+   3.7247029786715937`*^9}},ExpressionUUID->"b6c77571-1fae-4ccc-984f-\
+b3aab848d14b"]
 },
-WindowSize->{1888, 1266},
+WindowSize->{1794, 1266},
 WindowMargins->{{9, Automatic}, {Automatic, 52}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 10, 2017)",
@@ -2214,7 +2259,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 107715, 2177, 4155, "Input",ExpressionUUID->"3970621a-f41a-4476-b2b9-983d882fa6c1"]
+Cell[558, 20, 111047, 2222, 4386, "Input",ExpressionUUID->"b6c77571-1fae-4ccc-984f-b3aab848d14b"]
 }
 ]
 *)
