@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5175,        137]
-NotebookOptionsPosition[      4860,        123]
-NotebookOutlinePosition[      5221,        139]
-CellTagsIndexPosition[      5178,        136]
+NotebookDataLength[      6964,        174]
+NotebookOptionsPosition[      6519,        157]
+NotebookOutlinePosition[      6881,        173]
+CellTagsIndexPosition[      6838,        170]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -29,18 +31,21 @@ Cell[BoxData[
        RowBox[{"vertCt", "=", 
         RowBox[{"RandomInteger", "[", 
          RowBox[{"{", 
-          RowBox[{"4", ",", "15"}], "}"}], "]"}]}], ";", 
+          RowBox[{"4", ",", "12"}], "}"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"thisV", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"Range", "[", "vertCt", "]"}], "]"}]}], ";", 
+        RowBox[{"RandomInteger", "[", "vertCt", "]"}]}], ";", 
        "\[IndentingNewLine]", 
+       RowBox[{"maxEdge", "=", 
+        RowBox[{
+         RowBox[{".5", " ", 
+          SuperscriptBox["vertCt", "2"]}], "-", 
+         RowBox[{".5", " ", "vertCt"}]}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"edgeCt", "=", 
-        RowBox[{"vertCt", "+", 
-         RowBox[{"RandomInteger", "[", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"-", "2"}], ",", "6"}], "}"}], "]"}]}]}], ";", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", 
+           RowBox[{"Floor", "[", "maxEdge", "]"}]}], "}"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"graph", "=", 
         RowBox[{"RandomGraph", "[", 
@@ -117,12 +122,41 @@ number ``?\>\"", ",", "thisV"}], "]"}], ",",
    3.682942382740387*^9}, 3.682942706958644*^9, {3.682945187914549*^9, 
    3.682945203920959*^9}, {3.683626731743505*^9, 3.6836267442456837`*^9}, {
    3.687446955914589*^9, 3.6874470566781483`*^9}, {3.6874471495404263`*^9, 
-   3.687447150379959*^9}, {3.715525677749398*^9, 
-   3.715525689075838*^9}},ExpressionUUID->"fa80eae9-0c03-4402-9ce9-\
-6bfcfca69971"]
+   3.687447150379959*^9}, {3.715525677749398*^9, 3.715525689075838*^9}, {
+   3.7260568789421577`*^9, 3.7260568942865047`*^9}, {3.72605788082754*^9, 
+   3.726058036010289*^9}, {3.726058201322587*^9, 3.726058205705511*^9}, {
+   3.726058308529953*^9, 3.7260583270087013`*^9}, {3.7260585759529867`*^9, 
+   3.726058577215659*^9}, {3.726058629264702*^9, 3.7260586395192842`*^9}, {
+   3.726058806166662*^9, 3.7260588423345413`*^9}, {3.726059055142302*^9, 
+   3.7260590849820833`*^9}, {3.726059120254203*^9, 
+   3.726059148933025*^9}},ExpressionUUID->"f7338e11-86d3-4be0-a34b-\
+c78d4b6719fc"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap4\"",
+     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap4"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap4"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.6829423515722227`*^9, 3.682942389051862*^9, 3.6829427203415947`*^9, 
+   3.682945221516543*^9, 3.683626750709207*^9, 3.687447154447872*^9, 
+   3.715525701118202*^9, {3.726056896111033*^9, 3.726057021359153*^9}, {
+   3.726058064320073*^9, 3.726058083297944*^9}, {3.726058208121489*^9, 
+   3.7260582335311527`*^9}, {3.726058313950947*^9, 3.726058329750752*^9}, {
+   3.7260585794242077`*^9, 3.7260585941032267`*^9}, {3.726058632474037*^9, 
+   3.726058641233919*^9}, {3.726058676785239*^9, 3.726058717126698*^9}, 
+   3.726058864924684*^9, 
+   3.726059160810548*^9},ExpressionUUID->"48982837-808e-4a57-982f-\
+b5535b1cff08"]
+}, Open  ]]
 },
-WindowSize->{1914, 1129},
-WindowMargins->{{2, Automatic}, {Automatic, 126}},
+WindowSize->{1245, 1012},
+WindowMargins->{{11, Automatic}, {Automatic, 142}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 10, 2017)",
 StyleDefinitions->"Default.nb"
@@ -138,7 +172,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4298, 101, 325, "Input",ExpressionUUID->"fa80eae9-0c03-4402-9ce9-6bfcfca69971"]
+Cell[CellGroupData[{
+Cell[580, 22, 4893, 110, 377, "Input",ExpressionUUID->"f7338e11-86d3-4be0-a34b-c78d4b6719fc"],
+Cell[5476, 134, 1027, 20, 71, "Output",ExpressionUUID->"48982837-808e-4a57-982f-b5535b1cff08"]
+}, Open  ]]
 }
 ]
 *)
