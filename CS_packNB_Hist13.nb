@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13621,        283]
-NotebookOptionsPosition[     13305,        269]
-NotebookOutlinePosition[     13665,        285]
-CellTagsIndexPosition[     13622,        282]
+NotebookDataLength[     13998,        290]
+NotebookOptionsPosition[     13682,        276]
+NotebookOutlinePosition[     14042,        292]
+CellTagsIndexPosition[     13999,        289]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -196,14 +196,20 @@ Cell[BoxData[
              RowBox[{"{", "\"\<Kenneth David Kaunda\>\"", "}"}]}]}], 
            "\[IndentingNewLine]", "|>"}], ",", "4"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
+       RowBox[{"preQ", "=", 
+        RowBox[{"ToCharacterCode", "[", 
+         RowBox[{
+          RowBox[{"RandomChoice", "[", 
+           RowBox[{
+            RowBox[{"Values", "[", "data", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
+          "\"\< is best known for being a leader in which of these countries?\
+\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"q", "=", 
         RowBox[{
-         RowBox[{"RandomChoice", "[", 
-          RowBox[{
-           RowBox[{"Values", "[", "data", "]"}], "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-         "\"\< is best known for being a leader in which of these \
-countries?\>\""}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"Hold", "[", 
+          RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", "preQ"}]}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"choices", "=", 
         RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
@@ -263,8 +269,9 @@ countries?\>\""}]}], ";", "\[IndentingNewLine]",
    3.705238702412022*^9}, {3.705238776515812*^9, 3.705238783682969*^9}, {
    3.705238869163581*^9, 3.705238952595872*^9}, {3.705239444831726*^9, 
    3.705239493750514*^9}, {3.705239726529043*^9, 3.70523975255295*^9}, {
-   3.705239819568568*^9, 
-   3.705239833319199*^9}},ExpressionUUID->"177312c4-d146-4241-b398-\
+   3.705239819568568*^9, 3.705239833319199*^9}, {3.7260559043923073`*^9, 
+   3.726055917655085*^9}, {3.726055978766756*^9, 
+   3.726056067916198*^9}},ExpressionUUID->"177312c4-d146-4241-b398-\
 d6f5f80614e1"]
 },
 WindowSize->{1899, 1204},
@@ -284,7 +291,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12743, 247, 1039, "Input",ExpressionUUID->"177312c4-d146-4241-b398-d6f5f80614e1"]
+Cell[558, 20, 13120, 254, 1060, "Input",ExpressionUUID->"177312c4-d146-4241-b398-d6f5f80614e1"]
 }
 ]
 *)
