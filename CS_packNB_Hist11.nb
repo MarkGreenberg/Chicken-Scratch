@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    111927,       2258]
-NotebookOptionsPosition[    111609,       2244]
-NotebookOutlinePosition[    111969,       2260]
-CellTagsIndexPosition[    111926,       2257]
+NotebookDataLength[    112733,       2271]
+NotebookOptionsPosition[    112415,       2257]
+NotebookOutlinePosition[    112775,       2273]
+CellTagsIndexPosition[    112732,       2270]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1732,7 +1732,8 @@ Cell[BoxData[
                 RowBox[{"{", 
                  RowBox[{"12.25", ",", "121"}], "}"}], "]"}]}], "}"}]}]}], 
            "\[IndentingNewLine]", "|>"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Clear", "[", "a", "]"}], ";", "\[IndentingNewLine]", 
        RowBox[{"pic", "=", 
         RowBox[{
          RowBox[{"Hold", "[", "\[IndentingNewLine]", 
@@ -1822,13 +1823,17 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Legended", "[", 
              RowBox[{"a_", ",", "b_"}], "]"}], "\[Rule]", "a"}]}], "]"}], "/.", 
-         RowBox[{"{", 
-          RowBox[{"h1", "\[Rule]", "data"}], "}"}]}]}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"h1", "\[Rule]", "data"}]}]}], ";", "\[IndentingNewLine]", 
+       "\[IndentingNewLine]", 
        RowBox[{
        "q", "=", 
         "\"\<The map shows the locations and years sunk of four shipwrecks. \
 Which is marked blue?\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"encodedShips", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ToCharacterCode", "[", "#", "]"}], "&"}], "/@", 
+         RowBox[{"Keys", "[", "data", "]"}]}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"riffled", "=", 
         RowBox[{"Partition", "[", 
          RowBox[{
@@ -1838,21 +1843,23 @@ Which is marked blue?\>\""}], ";", "\[IndentingNewLine]",
              RowBox[{
               RowBox[{"#", "[", 
                RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", 
-             RowBox[{"Values", "[", "data", "]"}]}], ",", 
-            RowBox[{"Keys", "[", "data", "]"}]}], "]"}], ",", "2"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
+             RowBox[{"Values", "[", "data", "]"}]}], ",", "encodedShips"}], 
+           "]"}], ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"choices", "=", 
         RowBox[{
          RowBox[{
-          RowBox[{"StringForm", "[", 
-           RowBox[{"\"\<`1` `2`\>\"", ",", 
-            RowBox[{"#", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{
-              RowBox[{"#", "[", 
-               RowBox[{"[", "2", "]"}], "]"}], ",", "Italic"}], "]"}]}], 
-           "]"}], "&"}], "/@", "riffled"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Hold", "[", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{"\"\<`1` `2`\>\"", ",", 
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"FromCharacterCode", "[", 
+                RowBox[{"#", "[", 
+                 RowBox[{"[", "2", "]"}], "]"}], "]"}], ",", "Italic"}], 
+              "]"}]}], "]"}], "]"}], "&"}], "/@", "riffled"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -2238,12 +2245,18 @@ Which is marked blue?\>\""}], ";", "\[IndentingNewLine]",
    3.724702396489682*^9}, {3.7247024515462008`*^9, 3.724702510593261*^9}, {
    3.724702577187274*^9, 3.724702618705408*^9}, {3.724702690259144*^9, 
    3.724702737729569*^9}, {3.724702845762288*^9, 3.724702858806636*^9}, {
-   3.724702941304639*^9, 
-   3.7247029786715937`*^9}},ExpressionUUID->"b6c77571-1fae-4ccc-984f-\
-b3aab848d14b"]
+   3.724702941304639*^9, 3.7247029786715937`*^9}, {3.7260847140233393`*^9, 
+   3.726084716650093*^9}, {3.726084765309598*^9, 3.726084808282127*^9}, {
+   3.726086893067048*^9, 3.726086899810308*^9}, {3.72612713148678*^9, 
+   3.726127148750868*^9}, {3.7261271881344137`*^9, 3.726127197688439*^9}, {
+   3.726128173345422*^9, 3.726128273356811*^9}, {3.726128458021316*^9, 
+   3.726128477109337*^9}, {3.726128528132181*^9, 3.7261286065317*^9}, {
+   3.726128746156992*^9, 3.726128754860586*^9}, {3.726128886567767*^9, 
+   3.72612893139471*^9}},ExpressionUUID->"08347204-9d0f-447c-a51a-\
+e1ad0679c36f"]
 },
-WindowSize->{1794, 1266},
-WindowMargins->{{9, Automatic}, {Automatic, 52}},
+WindowSize->{1294, 1321},
+WindowMargins->{{1, Automatic}, {Automatic, 36}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 10, 2017)",
 StyleDefinitions->"Default.nb"
@@ -2259,7 +2272,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 111047, 2222, 4386, "Input",ExpressionUUID->"b6c77571-1fae-4ccc-984f-b3aab848d14b"]
+Cell[558, 20, 111853, 2235, 4407, "Input",ExpressionUUID->"08347204-9d0f-447c-a51a-e1ad0679c36f"]
 }
 ]
 *)
