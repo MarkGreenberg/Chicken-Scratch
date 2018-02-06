@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6085,        159]
-NotebookOptionsPosition[      5770,        145]
-NotebookOutlinePosition[      6131,        161]
-CellTagsIndexPosition[      6088,        158]
+NotebookDataLength[      6953,        173]
+NotebookOptionsPosition[      6638,        159]
+NotebookOutlinePosition[      6999,        175]
+CellTagsIndexPosition[      6956,        172]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -32,32 +32,30 @@ Cell[BoxData[
           RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
          "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"state", "=", 
+          RowBox[{"stateEnt", "=", 
            RowBox[{"RandomChoice", "[", 
             RowBox[{"CountryData", "[", "]"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"city", "=", 
-           RowBox[{"First", "[", 
+          RowBox[{"state", "=", 
+           RowBox[{"stateEnt", "[", "\"\<Name\>\"", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"cityEnt", "=", 
+           RowBox[{"RandomChoice", "[", 
             RowBox[{"CountryData", "[", 
-             RowBox[{"state", ",", "\"\<LargestCities\>\""}], "]"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
-          RowBox[{"qStr", "=", 
-           RowBox[{"\"\<the city of \>\"", "<>", 
-            RowBox[{"EntityValue", "[", 
-             RowBox[{"city", ",", "\"\<Name\>\""}], "]"}], "<>", 
-            "\"\< in \>\"", "<>", 
-            RowBox[{"EntityValue", "[", 
-             RowBox[{"state", ",", "\"\<Name\>\""}], "]"}]}]}]}], ",", 
-         "\[IndentingNewLine]", 
-         RowBox[{
+             RowBox[{"stateEnt", ",", "\"\<LargestCities\>\""}], "]"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"city", "=", 
+           RowBox[{"cityEnt", "[", "\"\<Name\>\"", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"range", "=", 
            RowBox[{"Delete", "[", 
             RowBox[{
              RowBox[{"Range", "[", 
               RowBox[{
-               RowBox[{"-", "24"}], ",", "24"}], "]"}], ",", "25"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
-          RowBox[{"state", "=", 
+               RowBox[{"-", "24"}], ",", "24"}], "]"}], ",", "25"}], 
+            "]"}]}]}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"stateEnt", "=", 
            RowBox[{"RandomChoice", "[", 
             RowBox[{"AdministrativeDivisionData", "[", 
              TemplateBox[{"\"all US states\"",RowBox[{"EntityClass", "[", 
@@ -68,21 +66,26 @@ Cell[BoxData[
                "\"EntityClass[\\\"AdministrativeDivision\\\", \
 \\\"USStatesAllStates\\\"]\"","\"administrative divisions\""},
               "EntityClass"], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"city", "=", 
-           RowBox[{"EntityValue", "[", 
-            RowBox[{"state", ",", "\"\<CapitalCity\>\""}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"qStr", "=", 
-           RowBox[{"StringReplace", "[", 
+          RowBox[{"state", "=", 
+           RowBox[{"StringDelete", "[", 
             RowBox[{
-             RowBox[{
-              RowBox[{"EntityValue", "[", 
-               RowBox[{"city", ",", "\"\<Name\>\""}], "]"}], "<>", 
-              "\"\<, \>\"", "<>", 
-              RowBox[{"EntityValue", "[", 
-               RowBox[{"state", ",", "\"\<Name\>\""}], "]"}]}], ",", 
-             RowBox[{"\"\<, United States\>\"", "\[Rule]", "\"\<\>\""}]}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"stateEnt", "[", "\"\<Name\>\"", "]"}], ",", 
+             "\"\<, United States\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"cityEnt", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"CityData", "[", 
+             RowBox[{"Flatten", "[", 
+              RowBox[{"{", 
+               RowBox[{"All", ",", 
+                RowBox[{"StringSplit", "[", 
+                 RowBox[{
+                  RowBox[{"StringDelete", "[", 
+                   RowBox[{"state", ",", "\"\< \>\""}], "]"}], ",", 
+                  "\"\<,\>\""}], "]"}]}], "}"}], "]"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"city", "=", 
+           RowBox[{"cityEnt", "[", "\"\<Name\>\"", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"range", "=", 
            RowBox[{"Delete", "[", 
             RowBox[{
@@ -91,11 +94,13 @@ Cell[BoxData[
                RowBox[{"-", "6"}], ",", "6"}], "]"}], ",", "7"}], "]"}]}]}]}],
          "]"}], ";", "\[IndentingNewLine]", 
        RowBox[{"q", "=", 
-        RowBox[{
-        "\"\<What time is it in \>\"", "<>", "qStr", "<>", "\"\<?\>\""}]}], 
-       ";", "\[IndentingNewLine]", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<What time is it in `1`, `2`?\>\"", ",", "city", ",", "state"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"ansNo", "=", 
-        RowBox[{"LocalTime", "[", "city", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"LocalTime", "[", "cityEnt", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"choiceNos", "=", 
         RowBox[{"Prepend", "[", 
          RowBox[{
@@ -116,9 +121,8 @@ Cell[BoxData[
             RowBox[{"{", 
              RowBox[{
              "\"\<Hour12Short\>\"", ",", "\"\<:\>\"", ",", "\"\<Minute\>\"", 
-              ",", "\"\< \>\"", ",", "\"\<AMPM\>\"", ",", "\"\< on \>\"", 
-              ",", "\"\<DayName\>\""}], "}"}]}], "]"}], "&"}], "/@", 
-         "choiceNos"}]}], ";", "\[IndentingNewLine]", 
+              ",", "\"\< \>\"", ",", "\"\<AMPM\>\""}], "}"}]}], "]"}], "&"}], 
+         "/@", "choiceNos"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -139,9 +143,19 @@ Cell[BoxData[
  CellChangeTimes->{
   3.683562696854992*^9, {3.683562732692815*^9, 3.683562741105504*^9}, {
    3.683562778063867*^9, 3.683562812186426*^9}, {3.68356307059435*^9, 
-   3.683563128418716*^9}, {3.6835633217943687`*^9, 
-   3.683563347046773*^9}},ExpressionUUID->"2a50ef4e-2cb1-4868-b7dc-\
-f2088974c267"]
+   3.683563128418716*^9}, {3.6835633217943687`*^9, 3.683563347046773*^9}, {
+   3.7269086269946327`*^9, 3.726908659945714*^9}, {3.726922312381831*^9, 
+   3.72692232811604*^9}, 3.726923455972134*^9, {3.726924725761519*^9, 
+   3.726924733305088*^9}, {3.72692484596384*^9, 3.7269248480957003`*^9}, 
+   3.7269248833747177`*^9, {3.726924974094496*^9, 3.726925116237296*^9}, {
+   3.726925252829678*^9, 3.726925367052884*^9}, {3.726925402118046*^9, 
+   3.726925490028385*^9}, 3.72692554111018*^9, {3.726925682907961*^9, 
+   3.72692570835501*^9}, {3.7269259457469187`*^9, 3.7269259641635447`*^9}, {
+   3.7269260010900793`*^9, 3.726926021144904*^9}, 3.7269260984501143`*^9, {
+   3.726926140032868*^9, 3.7269261546271133`*^9}, {3.726926329367272*^9, 
+   3.726926335455037*^9}, {3.726926919606295*^9, 
+   3.726926952757327*^9}},ExpressionUUID->"bb57923f-2b38-4538-9e8a-\
+59d22a23bc17"]
 },
 WindowSize->{1231, 1026},
 WindowMargins->{{-3, Automatic}, {Automatic, 50}},
@@ -160,7 +174,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5208, 123, 487, "Input",ExpressionUUID->"2a50ef4e-2cb1-4868-b7dc-f2088974c267"]
+Cell[558, 20, 6076, 137, 529, "Input",ExpressionUUID->"bb57923f-2b38-4538-9e8a-59d22a23bc17"]
 }
 ]
 *)
