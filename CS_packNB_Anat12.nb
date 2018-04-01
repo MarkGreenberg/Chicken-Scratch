@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8745,        209]
-NotebookOptionsPosition[      8431,        195]
-NotebookOutlinePosition[      8791,        211]
-CellTagsIndexPosition[      8748,        208]
+NotebookDataLength[     54238,       1068]
+NotebookOptionsPosition[     53695,       1050]
+NotebookOutlinePosition[     54055,       1066]
+CellTagsIndexPosition[     54012,       1063]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,142 +26,813 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"ordinalizeF", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Module", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"mod", "=", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ordinalizeF", "=", 
+           RowBox[{
+            RowBox[{"Module", "[", 
              RowBox[{
-              RowBox[{"Boole", "[", 
-               RowBox[{"!", 
-                RowBox[{"MemberQ", "[", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{"11", ",", "12"}], "}"}], ",", 
-                  RowBox[{"Mod", "[", 
-                   RowBox[{
-                    RowBox[{"Abs", "[", "#", "]"}], ",", "100"}], "]"}]}], 
-                 "]"}]}], "]"}], " ", 
-              RowBox[{"Mod", "[", 
-               RowBox[{
-                RowBox[{"Abs", "[", "#", "]"}], ",", "10"}], "]"}]}]}], "}"}],
-            ",", 
-           RowBox[{"With", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"suffix", "=", 
-               RowBox[{"Switch", "[", 
-                RowBox[{
-                "mod", ",", "1", ",", "\"\<st\>\"", ",", "2", ",", 
-                 "\"\<nd\>\"", ",", "3", ",", "\"\<rd\>\"", ",", "_", ",", 
-                 "\"\<th\>\""}], "]"}]}], "}"}], ",", 
-             RowBox[{"Row", "[", 
               RowBox[{"{", 
+               RowBox[{"mod", "=", 
+                RowBox[{
+                 RowBox[{"Boole", "[", 
+                  RowBox[{"!", 
+                   RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "12"}], "}"}], ",", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"Abs", "[", "#", "]"}], ",", "100"}], "]"}]}], 
+                    "]"}]}], "]"}], " ", 
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{"Abs", "[", "#", "]"}], ",", "10"}], "]"}]}]}], 
+               "}"}], ",", 
+              RowBox[{"With", "[", 
                RowBox[{
-                RowBox[{"ToString", "@", "#"}], ",", "suffix"}], "}"}], 
-              "]"}]}], "]"}]}], "]"}], "&"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"perc", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"1", ",", "99"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"prop", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
-          RowBox[{"<|", 
-           RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"suffix", "=", 
+                  RowBox[{"Switch", "[", 
+                   RowBox[{
+                   "mod", ",", "1", ",", "\"\<st\>\"", ",", "2", ",", 
+                    "\"\<nd\>\"", ",", "3", ",", "\"\<rd\>\"", ",", "_", ",", 
+                    "\"\<th\>\""}], "]"}]}], "}"}], ",", 
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"ToString", "@", "#"}], ",", "suffix"}], "}"}], 
+                 "]"}]}], "]"}]}], "]"}], "&"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"perc", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "99"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"prop", "=", 
+           RowBox[{"RandomSample", "[", 
             RowBox[{
-            "\"\<BMI\>\"", "\[Rule]", "\"\<body mass index (BMI)\>\""}], ",", 
-            
-            RowBox[{"\"\<Height\>\"", "\[Rule]", "\"\<height\>\""}], ",", 
-            RowBox[{"\"\<Weight\>\"", "\[Rule]", "\"\<weight\>\""}]}], "|>"}],
-           ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"age", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"2", ",", "20"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"sex", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"Entity", "[", 
-            RowBox[{"\"\<Gender\>\"", ",", "\"\<Male\>\""}], "]"}], ",", 
-           RowBox[{"Entity", "[", 
-            RowBox[{"\"\<Gender\>\"", ",", "\"\<Female\>\""}], "]"}]}], "}"}],
-          "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<What is the `1` percentile `2` for a human `3` at age `4`?\>\"",
-           ",", 
-          RowBox[{"ordinalizeF", "[", "perc", "]"}], ",", 
-          RowBox[{
-           RowBox[{"Values", "[", "prop", "]"}], "[", 
-           RowBox[{"[", "1", "]"}], "]"}], ",", "sex", ",", "age"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"ansNo", "=", 
-        RowBox[{"Round", "[", 
-         RowBox[{
-          RowBox[{"HumanGrowthData", "[", 
-           RowBox[{
-            RowBox[{"<|", 
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{
+               "\"\<BMI\>\"", "\[Rule]", "\"\<body mass index (BMI)\>\""}], 
+               ",", 
+               RowBox[{"\"\<Height\>\"", "\[Rule]", "\"\<height\>\""}], ",", 
+               RowBox[{"\"\<Weight\>\"", "\[Rule]", "\"\<weight\>\""}]}], 
+              "|>"}], ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"age", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", "20"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"sex", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"{", 
              RowBox[{
-              RowBox[{"\"\<Age\>\"", "\[Rule]", 
-               RowBox[{"Quantity", "[", 
-                RowBox[{"age", ",", "\"\<Years\>\""}], "]"}]}], ",", 
-              RowBox[{"\"\<Gender\>\"", "\[Rule]", "sex"}]}], "|>"}], ",", 
+              RowBox[{"Entity", "[", 
+               RowBox[{"\"\<Gender\>\"", ",", "\"\<Male\>\""}], "]"}], ",", 
+              RowBox[{"Entity", "[", 
+               RowBox[{"\"\<Gender\>\"", ",", "\"\<Female\>\""}], "]"}]}], 
+             "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
             RowBox[{
-             RowBox[{"Keys", "[", "prop", "]"}], "[", 
-             RowBox[{"[", "1", "]"}], "]"}], ",", 
-            RowBox[{"N", "[", 
-             RowBox[{"perc", "/", "100"}], "]"}]}], "]"}], ",", ".01"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"ansSD", "=", 
-        RowBox[{
-         RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], "/", "4"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansUn", "=", 
-        RowBox[{"QuantityUnit", "[", "ansNo", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Take", "[", 
+            "\"\<What is the `1` percentile `2` for a human `3` at age `4`?\>\
+\"", ",", 
+             RowBox[{"ordinalizeF", "[", "perc", "]"}], ",", 
+             RowBox[{
+              RowBox[{"Values", "[", "prop", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", "sex", ",", "age"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"HumanGrowthData", "[", 
+              RowBox[{
+               RowBox[{"<|", 
+                RowBox[{
+                 RowBox[{"\"\<Age\>\"", "\[Rule]", 
+                  RowBox[{"Quantity", "[", 
+                   RowBox[{"age", ",", "\"\<Years\>\""}], "]"}]}], ",", 
+                 RowBox[{"\"\<Gender\>\"", "\[Rule]", "sex"}]}], "|>"}], ",", 
+               
+               RowBox[{
+                RowBox[{"Keys", "[", "prop", "]"}], "[", 
+                RowBox[{"[", "1", "]"}], "]"}], ",", 
+               RowBox[{"N", "[", 
+                RowBox[{"perc", "/", "100"}], "]"}]}], "]"}], ",", ".01"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ansSD", "=", 
+           RowBox[{
+            RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], "/", "4"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"ansUn", "=", 
+           RowBox[{"QuantityUnit", "[", "ansNo", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Quantity", "[", 
+                   RowBox[{"#", ",", "ansUn"}], "]"}], "&"}], "/@", 
+                 RowBox[{"Round", "[", 
+                  RowBox[{
+                   RowBox[{"RandomVariate", "[", 
+                    RowBox[{
+                    RowBox[{"NormalDistribution", "[", 
+                    RowBox[{
+                    RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], ",", 
+                    "ansSD"}], "]"}], ",", "5"}], "]"}], ",", ".01"}], 
+                  "]"}]}], ",", "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"DeleteDuplicates", "[", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"<|", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"\"\<appendix\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "52.52433135755072`"}], ",", 
+                  RowBox[{"-", "103.34722699566034`"}], ",", 
+                  "873.8237051314916`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<ascending aorta\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"28.480240932796473`", ",", 
+                  RowBox[{"-", "135.40609870722614`"}], ",", 
+                  "1229.097540281175`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<atlas\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.5724277514929702`"}], ",", 
+                  RowBox[{"-", "69.98404118435818`"}], ",", 
+                  "1468.7474237085605`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<axis\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "1.1792362276390582`"}], ",", 
+                  RowBox[{"-", "63.1744998823742`"}], ",", 
+                  "1450.261114160523`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<conus artery\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"18.217028019947502`", ",", 
+                  RowBox[{"-", "161.1092624469972`"}], ",", 
+                  "1255.2009298260784`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<diaphragm\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "1.3091566029686685`"}], ",", 
+                  RowBox[{"-", "109.95068047150484`"}], ",", 
+                  "1091.9310488680333`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<duodenum\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "18.625240094493275`"}], ",", 
+                  RowBox[{"-", "129.33760927934296`"}], ",", 
+                  "1029.8042031264843`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<esophagus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"4.3825395289914`", ",", 
+                  RowBox[{"-", "94.40152244266818`"}], ",", 
+                  "1252.0480532234014`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<ethmoid bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.5576871984125988`"}], ",", 
+                  RowBox[{"-", "151.6157000903509`"}], ",", 
+                  "1513.9101000771532`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<first lumbar vertebra\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.8265816671166044`"}], ",", 
+                  RowBox[{"-", "65.572577313125`"}], ",", 
+                  "1047.896398532241`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<frontal bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.4464373340687364`"}], ",", 
+                  RowBox[{"-", "134.0917361995419`"}], ",", 
+                  "1571.486055809475`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<frontal lobe\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.5712009245115497`"}], ",", 
+                  RowBox[{"-", "102.25550499765734`"}], ",", 
+                  "1583.281477889566`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<gallbladder\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "44.885338327717`"}], ",", 
+                  RowBox[{"-", "152.47931986158662`"}], ",", 
+                  "1071.7954843561474`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<heart\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"15.730657958199581`", ",", 
+                  RowBox[{"-", "128.21278334902007`"}], ",", 
+                  "1223.8352957367065`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<hemiazygos vein\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"5.792403639391371`", ",", 
+                  RowBox[{"-", "72.36404154688141`"}], ",", 
+                  "1122.6402458581458`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<hyoid bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.6306352077694005`"}], ",", 
+                  RowBox[{"-", "107.15872763683335`"}], ",", 
+                  "1435.3316990943981`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<larynx\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"0.3812836945435599`", ",", 
+                  RowBox[{"-", "98.15014019410309`"}], ",", 
+                  "1417.8980143032966`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left cornea\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"29.790641705251232`", ",", 
+                  RowBox[{"-", "162.28156376348124`"}], ",", 
+                  "1517.7676218181432`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left deltoid\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"144.48506991544144`", ",", 
+                  RowBox[{"-", "80.47838473290822`"}], ",", 
+                  "1263.3881410649547`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left gemellus superior\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"86.72678063492853`", ",", 
+                  RowBox[{"-", "53.32140450070239`"}], ",", 
+                  "809.2418983340671`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left gracilis\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"32.13288818307138`", ",", 
+                  RowBox[{"-", "97.20039018303852`"}], ",", 
+                  "540.2741452389596`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left hamate bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"245.03069181759156`", ",", 
+                  RowBox[{"-", "122.20546266198593`"}], ",", 
+                  "790.2075865717097`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left inferior rectus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"22.071906566680855`", ",", 
+                  RowBox[{"-", "138.78082623668539`"}], ",", 
+                  "1514.2645728629927`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left lacrimal bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"11.628445561263243`", ",", 
+                  RowBox[{"-", "158.6429505513728`"}], ",", 
+                  "1512.0092674765838`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left lateral cuneiform bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"97.92744330989319`", ",", 
+                  RowBox[{"-", "113.13506999021645`"}], ",", 
+                  RowBox[{"-", "28.351510835081527`"}]}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left latissimus dorsi\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"70.20016813688892`", ",", 
+                  RowBox[{"-", "40.53019213337126`"}], ",", 
+                  "1085.524784899281`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left lung\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"67.69923184316302`", ",", 
+                  RowBox[{"-", "91.6751321125963`"}], ",", 
+                  "1232.1989100763035`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left maxilla\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"11.348834941105183`", ",", 
+                  RowBox[{"-", "163.08718548734774`"}], ",", 
+                  "1493.4201322596386`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left patella\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"80.23284411420507`", ",", 
+                  RowBox[{"-", "114.13685731433641`"}], ",", 
+                  "381.495511043819`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               
+               RowBox[{"\"\<left pisiform\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"234.38092211049508`", ",", 
+                  RowBox[{"-", "131.90266473677562`"}], ",", 
+                  "795.3517663018634`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left radius\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"245.47012984609384`", ",", 
+                  RowBox[{"-", "93.24384098542056`"}], ",", 
+                  "918.7821102329586`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left scapula\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"122.14457703658084`", ",", 
+                  RowBox[{"-", "42.596172068084336`"}], ",", 
+                  "1266.6647777688122`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left sclera\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"29.15199347817094`", ",", 
+                  RowBox[{"-", "151.94001053077443`"}], ",", 
+                  "1518.0845866809802`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left stapes\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"38.099563399093135`", ",", 
+                  RowBox[{"-", "80.84726618370091`"}], ",", 
+                  "1509.2548775529888`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left supinator\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"239.5803026213074`", ",", 
+                  RowBox[{"-", "74.39165911535143`"}], ",", 
+                  "994.1087936848146`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left talus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"70.42854377762315`", ",", 
+                  RowBox[{"-", "77.75696746095832`"}], ",", 
+                  RowBox[{"-", "16.52352932164238`"}]}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left tibia\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"69.39903619302297`", ",", 
+                  RowBox[{"-", "80.38182652984521`"}], ",", 
+                  "184.40141722352425`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left transversus thoracis\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"54.799931794992645`", ",", 
+                  RowBox[{"-", "178.14599628643296`"}], ",", 
+                  "1213.8853850791043`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left tympanic membrane\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"40.3851808631676`", ",", 
+                  RowBox[{"-", "84.35358080907774`"}], ",", 
+                  "1506.6137347112715`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<left ulna\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"220.31010121396915`", ",", 
+                  RowBox[{"-", "87.69652035438898`"}], ",", 
+                  "929.4239975977903`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left upper secondary canine tooth\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"15.956766891289467`", ",", 
+                  RowBox[{"-", "169.55527331345098`"}], ",", 
+                  "1468.849410390301`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<left zygomatic bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"47.80256772860064`", ",", 
+                  RowBox[{"-", "143.14060753838507`"}], ",", 
+                  "1509.56452966361`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               
+               RowBox[{"\"\<liver\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "11.818686204140594`"}], ",", 
+                  RowBox[{"-", "125.32922411925813`"}], ",", 
+                  "1093.1483606406782`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<mandible\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.5346757963563812`"}], ",", 
+                  RowBox[{"-", "123.73811033635621`"}], ",", 
+                  "1471.9766386934452`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<medulla oblongata\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.8356646632035274`"}], ",", 
+                  RowBox[{"-", "64.9296451142614`"}], ",", 
+                  "1486.5591927859646`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<middle cardiac vein\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"35.2294241982402`", ",", 
+                  RowBox[{"-", "133.24866330902256`"}], ",", 
+                  "1196.5422467378157`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<orbicularis oris\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.0038985814755651536`"}], ",", 
+                  RowBox[{"-", "155.9869655231785`"}], ",", 
+                  "1463.0293789332563`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<occipital bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.6884887489177647`"}], ",", 
+                  RowBox[{"-", "39.46961855193315`"}], ",", 
+                  "1534.6618907051288`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<pancreas\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"10.89727961521593`", ",", 
+                  RowBox[{"-", "114.4368695264765`"}], ",", 
+                  "1047.694434889188`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<penis\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.6887916685561284`"}], ",", 
+                  RowBox[{"-", "127.80737091651821`"}], ",", 
+                  "744.7742244004512`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<pharynx\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "2.2146015884266097`"}], ",", 
+                  RowBox[{"-", "100.04890098788111`"}], ",", 
+                  "1444.9285789906444`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<pituitary gland\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.653509731525821`"}], ",", 
+                  RowBox[{"-", "105.17259070224995`"}], ",", 
+                  "1529.107401226493`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<rectum\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"1.5734415869712397`", ",", 
+                  RowBox[{"-", "40.895046084539736`"}], ",", 
+                  "818.133463102119`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               
+               RowBox[{
+               "\"\<right circumflex scapular artery\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "139.53926907427743`"}], ",", 
+                  RowBox[{"-", "68.88600439805691`"}], ",", 
+                  "1288.4983506720037`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right clavicle\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "78.0490201502907`"}], ",", 
+                  RowBox[{"-", "101.58111235114684`"}], ",", 
+                  "1335.6809442781228`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right cuboid bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "99.50561267528906`"}], ",", 
+                  RowBox[{"-", "99.69572465425297`"}], ",", 
+                  RowBox[{"-", "37.38783658537107`"}]}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right external jugular vein\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "46.34660676283964`"}], ",", 
+                  RowBox[{"-", "94.32025710408566`"}], ",", 
+                  "1406.4413196262572`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right eyeball\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "30.453857265164004`"}], ",", 
+                  RowBox[{"-", "152.4415307941087`"}], ",", 
+                  "1518.0413976796103`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right femur\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "70.23447346833674`"}], ",", 
+                  RowBox[{"-", "76.11570727117692`"}], ",", 
+                  "601.080794464613`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               
+               RowBox[{"\"\<right fibularis brevis\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "97.38079380289464`"}], ",", 
+                  RowBox[{"-", "58.78794291551882`"}], ",", 
+                  "63.83881370438689`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<right hip bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "75.43165952657797`"}], ",", 
+                  RowBox[{"-", "72.17591383857362`"}], ",", 
+                  "854.9130155916125`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<right humerus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "180.26348882461008`"}], ",", 
+                  RowBox[{"-", "72.48361030523542`"}], ",", 
+                  "1182.8671546858805`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right iliopsoas\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "62.297151229776645`"}], ",", 
+                  RowBox[{"-", "73.93581670017949`"}], ",", 
+                  "916.958579882039`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               
+               RowBox[{"\"\<right incus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "42.08169474807295`"}], ",", 
+                  RowBox[{"-", "82.92873462884022`"}], ",", 
+                  "1510.9278821699377`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right lacrimal gland\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "41.17900113450138`"}], ",", 
+                  RowBox[{"-", "154.6352982241644`"}], ",", 
+                  "1529.0793381743536`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right lunate bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "245.27500109128394`"}], ",", 
+                  RowBox[{"-", "118.54183830990704`"}], ",", 
+                  "802.7621064247516`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<right malleus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "41.10268930793439`"}], ",", 
+                  RowBox[{"-", "84.89099260000633`"}], ",", 
+                  "1510.2362809581878`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right nasal bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "5.583793083339666`"}], ",", 
+                  RowBox[{"-", "178.47800535668674`"}], ",", 
+                  "1517.3902293284127`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right occipitofrontalis\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "37.460135408125225`"}], ",", 
+                  RowBox[{"-", "87.89043704178201`"}], ",", 
+                  "1553.0488519331245`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right optic nerve\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "18.269830896714666`"}], ",", 
+                  RowBox[{"-", "125.3950036039022`"}], ",", 
+                  "1527.403853595076`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<right palatine bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "8.062583599700215`"}], ",", 
+                  RowBox[{"-", "126.93878493997052`"}], ",", 
+                  "1491.6904304457196`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right parietal bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "32.87045306263368`"}], ",", 
+                  RowBox[{"-", "60.605448091613596`"}], ",", 
+                  "1580.7188592736666`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right parotid gland\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "43.353993879599294`"}], ",", 
+                  RowBox[{"-", "113.03636248050644`"}], ",", 
+                  "1480.0474102907021`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right scaphoid\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "261.6966530330196`"}], ",", 
+                  RowBox[{"-", "118.51337227236024`"}], ",", 
+                  "805.2446490797644`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<right soleus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "76.39572306475462`"}], ",", 
+                  RowBox[{"-", "54.44384315294678`"}], ",", 
+                  "196.38689669757292`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right temporal bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "59.78733942023467`"}], ",", 
+                  RowBox[{"-", "84.39465200514816`"}], ",", 
+                  "1511.8295083899534`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<right thoraco\[Hyphen]acromial artery\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "122.58411397351705`"}], ",", 
+                  RowBox[{"-", "124.10005179142928`"}], ",", 
+                  "1268.9303618368072`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<right triquetral\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "237.5269797570989`"}], ",", 
+                  RowBox[{"-", "122.40211073129618`"}], ",", 
+                  "794.895931094887`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               
+               RowBox[{"\"\<sacrum\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.6149893313095924`"}], ",", 
+                  RowBox[{"-", "26.41294572162294`"}], ",", 
+                  "862.1678891902867`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<seventh cervical vertebra\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"0.07317052316279693`", ",", 
+                  RowBox[{"-", "56.82862628048025`"}], ",", 
+                  "1377.0269528993426`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<sixth thoracic vertebra\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.6139354191912199`"}], ",", 
+                  RowBox[{"-", "25.732132107100846`"}], ",", 
+                  "1243.3760277725512`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<small intestine\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "14.464791217466662`"}], ",", 
+                  RowBox[{"-", "133.5251480003277`"}], ",", 
+                  "941.571387597439`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               
+               RowBox[{"\"\<sphenoid bone\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.6978100577439558`"}], ",", 
+                  RowBox[{"-", "117.83984386200544`"}], ",", 
+                  "1521.8210949732988`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<sternum\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.39548721056776465`"}], ",", 
+                  RowBox[{"-", "179.1421064956432`"}], ",", 
+                  "1248.3383431837144`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<stomach\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"35.476813469127435`", ",", 
+                  RowBox[{"-", "137.27109192537287`"}], ",", 
+                  "1096.4182399850004`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<straight sinus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.953428395933369`"}], ",", 
+                  RowBox[{"-", "25.186303171872495`"}], ",", 
+                  "1526.5076540814964`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<superior vena cava\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "15.28957209988699`"}], ",", 
+                  RowBox[{"-", "115.6523980673074`"}], ",", 
+                  "1292.0448042730102`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<thymus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.5400254581355239`"}], ",", 
+                  RowBox[{"-", "134.67765073437653`"}], ",", 
+                  "1289.8919764817965`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<tongue\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"0.06625945684202353`", ",", 
+                  RowBox[{"-", "115.75970341406374`"}], ",", 
+                  "1465.9354414571983`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<tonsil\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"1.1304020662720669`", ",", 
+                  RowBox[{"-", "111.95104804205731`"}], ",", 
+                  "1469.3608376944203`"}], "}"}]}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"\"\<urinary bladder\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.7265548164214022`"}], ",", 
+                  RowBox[{"-", "89.6754121731304`"}], ",", 
+                  "813.9775378907302`"}], "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"\"\<vomer\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "0.5834607673083473`"}], ",", 
+                  RowBox[{"-", "142.95444546364774`"}], ",", 
+                  "1494.4581010236318`"}], "}"}]}]}], "\[IndentingNewLine]", 
+              "|>"}], ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"name1", "=", 
+           RowBox[{
+            RowBox[{"Keys", "[", "data", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"name2", "=", 
+           RowBox[{
+            RowBox[{"Keys", "[", "data", "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"distCm", "=", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"EuclideanDistance", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Values", "[", "data", "]"}], "[", 
+                 RowBox[{"[", "1", "]"}], "]"}], ",", 
+                RowBox[{
+                 RowBox[{"Values", "[", "data", "]"}], "[", 
+                 RowBox[{"[", "2", "]"}], "]"}]}], "]"}], "*", ".11375"}], 
+             ",", "\"\<Centimeters\>\""}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"distFt", "=", 
+           RowBox[{"UnitConvert", "[", 
+            RowBox[{"distCm", ",", "\"\<Inches\>\""}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<In a 6-foot prone person, how far apart, center to center, is \
+the \>\"", "<>", "name1", "<>", "\"\< from the \>\"", "<>", "name2", "<>", 
+            "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choicesCm", "=", 
            RowBox[{"Prepend", "[", 
             RowBox[{
              RowBox[{
               RowBox[{
                RowBox[{"Quantity", "[", 
-                RowBox[{"#", ",", "ansUn"}], "]"}], "&"}], "/@", 
-              RowBox[{"Round", "[", 
+                RowBox[{"#", ",", "\"\<Centimeters\>\""}], "]"}], "&"}], "/@", 
+              RowBox[{"RandomSample", "[", 
                RowBox[{
-                RowBox[{"RandomVariate", "[", 
-                 RowBox[{
-                  RowBox[{"NormalDistribution", "[", 
-                   RowBox[{
-                    RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], ",", 
-                    "ansSD"}], "]"}], ",", "5"}], "]"}], ",", ".01"}], 
-               "]"}]}], ",", "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Anat12\>\"", ",", 
-   
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "150", ",", ".01"}], "]"}], ",", "3"}], 
+               "]"}]}], ",", "distCm"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringForm", "[", 
+              RowBox[{"\"\<`1` (`2`)\>\"", ",", 
+               RowBox[{"Round", "[", 
+                RowBox[{
+                 RowBox[{"UnitConvert", "[", 
+                  RowBox[{"#", ",", "\"\<Inches\>\""}], "]"}], ",", ".01"}], 
+                "]"}], ",", 
+               RowBox[{"Round", "[", 
+                RowBox[{"#", ",", ".01"}], "]"}]}], "]"}], "&"}], "/@", 
+            "choicesCm"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
+        "\[IndentingNewLine]", "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Anat12\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.7016011082799997`*^9, 3.701601120434113*^9}, {
    3.701602136574086*^9, 3.701602296747463*^9}, {3.701602336893227*^9, 
@@ -190,11 +861,195 @@ Cell[BoxData[
    3.7016167858178387`*^9, 3.701616787094203*^9}, {3.730218987432275*^9, 
    3.7302190045074673`*^9}, {3.730219177508643*^9, 3.7302191790596867`*^9}, {
    3.7302194370511436`*^9, 3.730219439273644*^9}, {3.73021954101089*^9, 
-   3.7302195669934177`*^9}},ExpressionUUID->"7ccb6ce3-a357-4c89-9d42-\
-259ef0950f8a"]
+   3.7302195669934177`*^9}, {3.731432859522018*^9, 3.731432887808115*^9}, {
+   3.7314329636816263`*^9, 3.731433007775526*^9}, {3.731433051546102*^9, 
+   3.731433071230617*^9}, {3.731434680144267*^9, 3.731434879622373*^9}, {
+   3.731435050870508*^9, 3.731435109285438*^9}, {3.731435876426415*^9, 
+   3.7314358805864277`*^9}, {3.731436079865634*^9, 3.7314360836016207`*^9}, {
+   3.7314361163862677`*^9, 3.73143612273731*^9}, {3.731436185418528*^9, 
+   3.731436225049059*^9}, {3.7314362555208807`*^9, 3.73143625917689*^9}, {
+   3.731436301872642*^9, 3.731436305544572*^9}, {3.731436341448514*^9, 
+   3.731436362745268*^9}, {3.731436396833687*^9, 3.731436398976391*^9}, {
+   3.73143643757609*^9, 3.731436440688169*^9}, {3.731436517448946*^9, 
+   3.731436520072946*^9}, {3.731436560392832*^9, 3.731436564177161*^9}, {
+   3.731436598344777*^9, 3.7314366320647287`*^9}, {3.731436734664302*^9, 
+   3.731436737864193*^9}, 3.731436769432164*^9, {3.731436839808901*^9, 
+   3.731436842239606*^9}, {3.731436875639668*^9, 3.731436878623515*^9}, {
+   3.7314369429595203`*^9, 3.7314369460632267`*^9}, {3.731436992191317*^9, 
+   3.731436994479162*^9}, {3.7314370599270077`*^9, 3.731437062870907*^9}, {
+   3.731437111126803*^9, 3.731437114454677*^9}, {3.731437161814653*^9, 
+   3.73143716556656*^9}, {3.731437971283515*^9, 3.731437988186714*^9}, {
+   3.731438027603133*^9, 3.731438032019021*^9}, {3.731438081139073*^9, 
+   3.7314380849147778`*^9}, {3.731438135778809*^9, 3.731438138714633*^9}, {
+   3.731438178978487*^9, 3.7314381811144943`*^9}, {3.7314382276663713`*^9, 
+   3.731438230226203*^9}, {3.731438282642276*^9, 3.7314382850660133`*^9}, {
+   3.731438332881999*^9, 3.7314383353857327`*^9}, {3.73143837103365*^9, 
+   3.7314383739140873`*^9}, {3.7314384057619047`*^9, 
+   3.7314384085776043`*^9}, {3.731438455057753*^9, 3.7314384573294086`*^9}, {
+   3.73143848757725*^9, 3.73143849012945*^9}, {3.731438520145707*^9, 
+   3.731438522633582*^9}, {3.731438565730093*^9, 3.7314385684900503`*^9}, {
+   3.731438600721764*^9, 3.73143860344981*^9}, {3.731438638994067*^9, 
+   3.7314386417058163`*^9}, {3.731438674434276*^9, 3.731438677185437*^9}, {
+   3.731438717121505*^9, 3.731438761617347*^9}, {3.731438793673353*^9, 
+   3.73143879676091*^9}, {3.731439321191152*^9, 3.731439330295082*^9}, {
+   3.7314393893508787`*^9, 3.731439393422966*^9}, {3.731439447326952*^9, 
+   3.7314394521426487`*^9}, {3.731439524110559*^9, 3.731439530046526*^9}, {
+   3.731439681390109*^9, 3.731439685686181*^9}, {3.7314397733897533`*^9, 
+   3.731439776893447*^9}, {3.731439822469393*^9, 3.731439843677259*^9}, {
+   3.731439881845112*^9, 3.731439887164988*^9}, {3.731494594762437*^9, 
+   3.731494597738442*^9}, {3.731494664274082*^9, 3.7314946681461697`*^9}, {
+   3.7314947507540216`*^9, 3.731494755529808*^9}, {3.731494844161663*^9, 
+   3.731494847241303*^9}, {3.73150597863492*^9, 3.731505981834618*^9}, {
+   3.731506033250482*^9, 3.731506036122446*^9}, {3.731506098818924*^9, 
+   3.731506103690639*^9}, {3.731518820212997*^9, 3.731518824892907*^9}, {
+   3.731518922028514*^9, 3.731518925596451*^9}, {3.731519069844028*^9, 
+   3.731519073115939*^9}, {3.731519240875757*^9, 3.7315192456352377`*^9}, {
+   3.73151930645158*^9, 3.731519310922961*^9}, {3.731519377595002*^9, 
+   3.7315193808587723`*^9}, {3.731519460178776*^9, 3.731519462530607*^9}, {
+   3.7315195359544983`*^9, 3.731519539130343*^9}, {3.731519576162265*^9, 
+   3.7315195792020903`*^9}, {3.731519658673888*^9, 3.7315196612500057`*^9}, {
+   3.7315197217618713`*^9, 3.731519724425664*^9}, {3.731521090677746*^9, 
+   3.73152109319761*^9}, {3.731521235365037*^9, 3.73152123838135*^9}, {
+   3.73152134824508*^9, 3.731521357500646*^9}, {3.731521446276752*^9, 
+   3.731521449028513*^9}, {3.731521485436644*^9, 3.731521488596622*^9}, {
+   3.7315215581002483`*^9, 3.731521560580517*^9}, {3.731521612476272*^9, 
+   3.731521615164042*^9}, {3.731521662244232*^9, 3.7315216659720984`*^9}, {
+   3.731522422001135*^9, 3.7315224248092947`*^9}, {3.7315225117533627`*^9, 
+   3.7315225143055677`*^9}, {3.731522636080468*^9, 3.7315226389524508`*^9}, {
+   3.731522700840349*^9, 3.7315227037282343`*^9}, {3.731522784704364*^9, 
+   3.731522788703917*^9}, {3.731523092462994*^9, 3.731523095062953*^9}, {
+   3.7315231407430897`*^9, 3.731523149134692*^9}, {3.7315231883350077`*^9, 
+   3.731523191422859*^9}, {3.7315232349347563`*^9, 3.7315232384064283`*^9}, {
+   3.731523306134152*^9, 3.7315233097022667`*^9}, {3.7315233507826157`*^9, 
+   3.7315233542300673`*^9}, {3.731523405199378*^9, 3.731523408110003*^9}, {
+   3.73152351431785*^9, 3.731523516365575*^9}, {3.731523563421796*^9, 
+   3.73152356703755*^9}, {3.731523721357019*^9, 3.731523723780895*^9}, {
+   3.7315237720768948`*^9, 3.731523868123818*^9}, {3.731591861734788*^9, 
+   3.731591928079303*^9}, {3.731591992214267*^9, 3.7315921402209587`*^9}, {
+   3.7315921958615503`*^9, 3.7315923291082087`*^9}, {3.731592386341258*^9, 
+   3.731592400128399*^9}, {3.731592430381074*^9, 3.731592516107033*^9}, {
+   3.731592554796419*^9, 3.731592619402817*^9}, {3.731592736187832*^9, 
+   3.73159279063413*^9}, {3.731592860099367*^9, 3.731592913329365*^9}, {
+   3.731592946650074*^9, 3.731593152265129*^9}, {3.731593224449688*^9, 
+   3.731593227474306*^9}, {3.731593324753868*^9, 3.7315933279766273`*^9}, {
+   3.731593390320812*^9, 3.731593420728125*^9}, {3.731593523266755*^9, 
+   3.7315935582324553`*^9}},ExpressionUUID->"bfa929b4-7d76-4277-b51b-\
+4f2e03de314d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"pip", "=", 
+   RowBox[{"EntityValue", "[", 
+    RowBox[{
+     TemplateBox[{
+      "\"left upper secondary canine tooth\"",RowBox[{"Entity", "[", 
+         RowBox[{
+          "\"AnatomicalStructure\"", ",", 
+           "\"LeftUpperSecondaryCanineTooth\""}], "]"}],
+       "\"Entity[\\\"AnatomicalStructure\\\", \
+\\\"LeftUpperSecondaryCanineTooth\\\"]\"","\"anatomical structure\""},
+      "Entity"], ",", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Name\>\"", ",", "\"\<EnclosingSphere\>\""}], "}"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<|", 
+  RowBox[{
+   RowBox[{"pip", "[", 
+    RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", 
+   RowBox[{"pip", "[", 
+    RowBox[{"[", 
+     RowBox[{"2", ",", "1"}], "]"}], "]"}]}], "|>"}]}], "Input",
+ CellChangeTimes->{{3.731434962693367*^9, 3.73143501604058*^9}, {
+   3.7314351304776907`*^9, 3.7314351315341167`*^9}, {3.731435171621169*^9, 
+   3.731435209764748*^9}, {3.731435346805187*^9, 3.731435352939995*^9}, {
+   3.731435497635536*^9, 3.731435557314189*^9}, {3.731435683723013*^9, 
+   3.731435854472929*^9}, 3.7314360630747843`*^9, 3.7314360988351583`*^9, {
+   3.731436145058573*^9, 3.731436160762692*^9}, 3.73143620824232*^9, 
+   3.731436239212804*^9, 3.731436286049945*^9, 3.731436323633815*^9, 
+   3.731436368849684*^9, 3.731436415457569*^9, 3.731436505497998*^9, 
+   3.7314365357062397`*^9, 3.731436583474215*^9, 3.731436616946291*^9, 
+   3.7314366614415207`*^9, 3.731436712377351*^9, 3.731436777121097*^9, 
+   3.731436822384861*^9, 3.731436863048708*^9, 3.731436929752655*^9, 
+   3.731436976336567*^9, 3.731437016808374*^9, 3.731437094976219*^9, 
+   3.7314371440797443`*^9, 3.731437920404592*^9, 3.731438014499383*^9, 
+   3.7314380636600513`*^9, 3.731438117203763*^9, 3.731438162187673*^9, 
+   3.7314382106275377`*^9, 3.731438254883288*^9, 3.731438317034596*^9, 
+   3.731438353403638*^9, 3.731438390273911*^9, 3.731438437922763*^9, 
+   3.731438473019511*^9, 3.731438506538445*^9, 3.7314385508836412`*^9, 
+   3.731438585546052*^9, 3.73143862042669*^9, 3.731438654986011*^9, 
+   3.731438704218339*^9, 3.731438735025977*^9, 3.731438776426293*^9, {
+   3.731439296734004*^9, 3.731439299215148*^9}, {3.731439364757737*^9, 
+   3.731439366790524*^9}, {3.731439401333579*^9, 3.73143942611812*^9}, {
+   3.731439478942236*^9, 3.731439482166903*^9}, {3.7314395445011387`*^9, 
+   3.731439546589802*^9}, {3.7314395867006083`*^9, 3.7314395902855177`*^9}, {
+   3.731439630388021*^9, 3.731439657964243*^9}, {3.731439714428349*^9, 
+   3.731439719862009*^9}, {3.731439788324007*^9, 3.731439792389933*^9}, {
+   3.731439854044705*^9, 3.731439856469317*^9}, {3.7314399058268557`*^9, 
+   3.731439907804517*^9}, {3.731494715800377*^9, 3.731494721275576*^9}, {
+   3.731494772575378*^9, 3.731494809633705*^9}, {3.73150594636939*^9, 
+   3.7315059484619303`*^9}, {3.731505990800249*^9, 3.7315059917707*^9}, {
+   3.731506063617001*^9, 3.731506066220044*^9}, {3.731518467551004*^9, 
+   3.731518470672531*^9}, {3.731518598532419*^9, 3.731518600357794*^9}, {
+   3.731518671027418*^9, 3.731518674692321*^9}, {3.7315187874939528`*^9, 
+   3.731518788222108*^9}, {3.7315188450510693`*^9, 3.731518863276301*^9}, {
+   3.731518953169835*^9, 3.731518984443632*^9}, {3.731519027450255*^9, 
+   3.731519029532549*^9}, 3.73151922325991*^9, 3.731519279955505*^9, {
+   3.731519335569318*^9, 3.731519356827546*^9}, {3.7315194198909903`*^9, 
+   3.731519441659295*^9}, 3.7315195129387913`*^9, 3.731519559443122*^9, 
+   3.731519638970385*^9, 3.731519705034184*^9, 3.731521071662984*^9, 
+   3.731521131717667*^9, 3.731521217692848*^9, {3.731521297419726*^9, 
+   3.731521303628211*^9}, 3.7315214231167097`*^9, 3.73152146789275*^9, 
+   3.7315215128215313`*^9, 3.731521543707366*^9, {3.731521581891889*^9, 
+   3.731521590124984*^9}, 3.7315216445559807`*^9, {3.731522381218033*^9, 
+   3.731522407353147*^9}, 3.73152249554466*^9, {3.731522541944748*^9, 
+   3.731522565080571*^9}, 3.731522617047976*^9, 3.731522681216291*^9, {
+   3.7315227504717283`*^9, 3.7315227626559753`*^9}, {3.731522860815784*^9, 
+   3.7315229341915007`*^9}, 3.7315229963512087`*^9, 3.73152302983927*^9, 
+   3.731523079702539*^9, 3.731523121574966*^9, 3.731523170606839*^9, 
+   3.731523217190671*^9, {3.731523270580638*^9, 3.731523277318272*^9}, 
+   3.73152333131805*^9, {3.7315233765559*^9, 3.7315233771661*^9}, 
+   3.73152343099721*^9, 3.7315234918215*^9, 3.731523537517666*^9, 
+   3.731523697060877*^9},ExpressionUUID->"803c2b9b-23f1-485d-b673-\
+17844d3fe66a"],
+
+Cell[BoxData[
+ RowBox[{"\[LeftAssociation]", 
+  RowBox[{"\<\"left upper secondary canine tooth\"\>", "\[Rule]", 
+   RowBox[{"{", 
+    RowBox[{"15.956766891289467`", ",", 
+     RowBox[{"-", "169.55527331345098`"}], ",", "1468.849410390301`"}], 
+    "}"}]}], "\[RightAssociation]"}]], "Output",
+ CellChangeTimes->{
+  3.731439661750145*^9, 3.731439758665256*^9, 3.731439808980056*^9, 
+   3.7314398710842943`*^9, 3.731494579811096*^9, 3.73149464566853*^9, 
+   3.731494729531207*^9, 3.731494791050901*^9, 3.731494827747478*^9, 
+   3.7315059620856*^9, 3.7315060040395317`*^9, 3.731506077152382*^9, 
+   3.7315184879184237`*^9, 3.731518652926214*^9, 3.73151876900347*^9, 
+   3.731518804636051*^9, {3.731518892283518*^9, 3.731518900750843*^9}, {
+   3.731518971930397*^9, 3.731518999654533*^9}, 3.731519048137698*^9, 
+   3.731519225867461*^9, 3.731519282029166*^9, {3.731519338779408*^9, 
+   3.731519358869907*^9}, {3.731519422037877*^9, 3.731519443438837*^9}, 
+   3.731519515566059*^9, 3.731519561796894*^9, 3.7315196429740334`*^9, 
+   3.731519707860306*^9, 3.731521074453364*^9, 3.7315211341093407`*^9, 
+   3.7315212196008797`*^9, 3.7315213178152857`*^9, 3.7315214249086723`*^9, 
+   3.731521470508761*^9, 3.731521515522361*^9, 3.731521546207254*^9, {
+   3.731521584061167*^9, 3.73152159951943*^9}, 3.731521647132914*^9, {
+   3.7315223838813353`*^9, 3.731522409515153*^9}, 3.7315224975968103`*^9, {
+   3.731522543987898*^9, 3.731522567028945*^9}, 3.731522619251326*^9, 
+   3.731522683008916*^9, {3.73152275300873*^9, 3.731522764242566*^9}, {
+   3.731522862957238*^9, 3.731522936042631*^9}, 3.731522998253351*^9, 
+   3.7315230317611237`*^9, 3.731523081783811*^9, 3.7315231235597477`*^9, 
+   3.7315231726121683`*^9, 3.7315232193151197`*^9, 3.731523294781001*^9, 
+   3.731523333920576*^9, 3.731523387438702*^9, 3.7315234325414543`*^9, 
+   3.731523494001524*^9, 3.731523539509087*^9, 
+   3.731523699870184*^9},ExpressionUUID->"d88e4d5f-0aa7-448b-96d0-\
+a8c15d7acba4"]
+}, Open  ]]
 },
-WindowSize->{1240, 1044},
-WindowMargins->{{1, Automatic}, {53, Automatic}},
+WindowSize->{1240, 1326},
+WindowMargins->{{1, Automatic}, {Automatic, 16}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 10, 2017)",
 StyleDefinitions->"Default.nb"
@@ -210,7 +1065,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7869, 173, 430, "Input",ExpressionUUID->"7ccb6ce3-a357-4c89-9d42-259ef0950f8a"]
+Cell[558, 20, 46665, 916, 2740, "Input",ExpressionUUID->"bfa929b4-7d76-4277-b51b-4f2e03de314d"],
+Cell[CellGroupData[{
+Cell[47248, 940, 4474, 74, 61, "Input",ExpressionUUID->"803c2b9b-23f1-485d-b673-17844d3fe66a"],
+Cell[51725, 1016, 1954, 31, 37, "Output",ExpressionUUID->"d88e4d5f-0aa7-448b-96d0-a8c15d7acba4"]
+}, Open  ]]
 }
 ]
 *)
