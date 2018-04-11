@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7192,        185]
-NotebookOptionsPosition[      6877,        171]
-NotebookOutlinePosition[      7238,        187]
-CellTagsIndexPosition[      7195,        184]
+NotebookDataLength[     13124,        297]
+NotebookOptionsPosition[     12809,        283]
+NotebookOutlinePosition[     13169,        299]
+CellTagsIndexPosition[     13126,        296]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,151 +26,263 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"books", "=", 
-        RowBox[{"{", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Moby Dick\>\"", ",", "\"\<OL6984724M\>\"", ",", "28807", ",", 
-            "1273662"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Ulysses\>\"", ",", "\"\<OL6652730M\>\"", ",", "12202", ",", 
-            "1558765"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Jane Eyre\>\"", ",", "\"\<OL14015946M\>\"", ",", "54257", ",",
-             "1113958"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<The Red Badge of Courage\>\"", ",", "\"\<OL7180620M\>\"", ",",
-             "2294", ",", "288216"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Emma\>\"", ",", "\"\<OL24234129M\>\"", ",", "7153", ",", 
-            "505523"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Huckleberry Finn\>\"", ",", "\"\<OL13991894M\>\"", ",", 
-            "5883", ",", "588666"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Great Expectations\>\"", ",", "\"\<OL24627022M\>\"", ",", 
-            "1182", ",", "1029854"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Frankenstein\>\"", ",", "\"\<OL24326648M\>\"", ",", "17463", 
-            ",", "434099"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Robinson Crusoe\>\"", ",", "\"\<OL24172971M\>\"", ",", 
-            "47048", ",", "1299316"}], "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<Last of the Mohicans\>\"", ",", "\"\<OL7091179M\>\"", ",", 
-            "8776", ",", "884942"}], "}"}]}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"fourBooks", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{"books", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{
-          RowBox[{"First", "[", "#", "]"}], "&"}], "/@", "fourBooks"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{"ansBook", "=", 
-        RowBox[{"fourBooks", "[", 
-         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"beg", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"ansBook", "[", 
-            RowBox[{"[", "3", "]"}], "]"}], ",", 
-           RowBox[{
-            RowBox[{"ansBook", "[", 
-             RowBox[{"[", "4", "]"}], "]"}], "-", "240"}]}], "}"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"end", "=", 
-        RowBox[{"beg", "+", "240"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"openLib", "=", 
-        RowBox[{"ServiceConnect", "[", "\"\<OpenLibrary\>\"", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"text", "=", 
-        RowBox[{"openLib", "[", 
-         RowBox[{"\"\<BookText\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"\"\<BibKeys\>\"", "\[Rule]", 
-            RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"books", "=", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
              RowBox[{"{", 
-              RowBox[{"\"\<OLID\>\"", ",", 
-               RowBox[{"ansBook", "[", 
-                RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "}"}]}], "}"}]}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"snip", "=", 
-        RowBox[{"StringTake", "[", 
-         RowBox[{
-          RowBox[{"text", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"beg", ",", "end"}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"snip", "=", 
-        RowBox[{"StringReplace", "[", 
-         RowBox[{"snip", ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"RegularExpression", "[", "\"\<^\\\\S*\\\\s\>\"", "]"}], 
-             "\[Rule]", "\"\<\>\""}], ",", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"Shortest", "[", 
-               RowBox[{"\"\<\\n\\n\\n\>\"", "~~", "__", "~~", "\"\<\\n\>\""}],
-                "]"}], ".."}], "\[Rule]", "\"\< \>\""}], ",", 
-            RowBox[{"\"\<- \\n\>\"", "\[Rule]", "\"\<\>\""}], ",", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"Except", "[", "\"\<\\n\>\"", "]"}], "~~", 
-              "\"\<\\n\>\""}], "\[Rule]", "\"\< \>\""}], ",", 
-            RowBox[{
-             RowBox[{"RegularExpression", "[", "\"\<\\\\s\\\\S*$\>\"", "]"}], 
-             "\[Rule]", "\"\<\>\""}]}], "}"}]}], "]"}]}], ";", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-          RowBox[{"StringForm", "[", 
-           RowBox[{
-           "\"\<Which novel is this passage scanned from?\\n`` \>\"", ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{
               RowBox[{
-              "\"\<\\\"...\>\"", "<>", "snip", "<>", "\"\<...\\\"\>\""}], ",",
-               "24"}], "]"}]}], "]"}], ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lite3\>\"", ",", 
+              "\"\<Moby Dick\>\"", ",", "\"\<OL6984724M\>\"", ",", "28807", 
+               ",", "1273662"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Ulysses\>\"", ",", "\"\<OL6652730M\>\"", ",", "12202", ",",
+                "1558765"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Jane Eyre\>\"", ",", "\"\<OL14015946M\>\"", ",", "54257", 
+               ",", "1113958"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<The Red Badge of Courage\>\"", ",", "\"\<OL7180620M\>\"", 
+               ",", "2294", ",", "288216"}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Emma\>\"", ",", "\"\<OL24234129M\>\"", ",", "7153", ",", 
+               "505523"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Huckleberry Finn\>\"", ",", "\"\<OL13991894M\>\"", ",", 
+               "5883", ",", "588666"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Great Expectations\>\"", ",", "\"\<OL24627022M\>\"", ",", 
+               "1182", ",", "1029854"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Frankenstein\>\"", ",", "\"\<OL24326648M\>\"", ",", 
+               "17463", ",", "434099"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Robinson Crusoe\>\"", ",", "\"\<OL24172971M\>\"", ",", 
+               "47048", ",", "1299316"}], "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<Last of the Mohicans\>\"", ",", "\"\<OL7091179M\>\"", ",", 
+               "8776", ",", "884942"}], "}"}]}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"fourBooks", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"books", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"First", "[", "#", "]"}], "&"}], "/@", "fourBooks"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"ansBook", "=", 
+           RowBox[{"fourBooks", "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"beg", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"ansBook", "[", 
+               RowBox[{"[", "3", "]"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"ansBook", "[", 
+                RowBox[{"[", "4", "]"}], "]"}], "-", "240"}]}], "}"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"end", "=", 
+           RowBox[{"beg", "+", "240"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"openLib", "=", 
+           RowBox[{"ServiceConnect", "[", "\"\<OpenLibrary\>\"", "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"text", "=", 
+           RowBox[{"openLib", "[", 
+            RowBox[{"\"\<BookText\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{"\"\<BibKeys\>\"", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<OLID\>\"", ",", 
+                  RowBox[{"ansBook", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "}"}]}], "}"}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"snip", "=", 
+           RowBox[{"StringTake", "[", 
+            RowBox[{
+             RowBox[{"text", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"beg", ",", "end"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"snip", "=", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{"snip", ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                "RegularExpression", "[", "\"\<^\\\\S*\\\\s\>\"", "]"}], 
+                "\[Rule]", "\"\<\>\""}], ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Shortest", "[", 
+                  RowBox[{
+                  "\"\<\\n\\n\\n\>\"", "~~", "__", "~~", "\"\<\\n\>\""}], 
+                  "]"}], ".."}], "\[Rule]", "\"\< \>\""}], ",", 
+               RowBox[{"\"\<- \\n\>\"", "\[Rule]", "\"\<\>\""}], ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Except", "[", "\"\<\\n\>\"", "]"}], "~~", 
+                 "\"\<\\n\>\""}], "\[Rule]", "\"\< \>\""}], ",", 
+               RowBox[{
+                RowBox[{
+                "RegularExpression", "[", "\"\<\\\\s\\\\S*$\>\"", "]"}], 
+                "\[Rule]", "\"\<\>\""}]}], "}"}]}], "]"}]}], ";", 
+          RowBox[{"q", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"StringForm", "[", 
+              RowBox[{
+              "\"\<Which novel is this passage scanned from?\\n`` \>\"", ",", 
+               
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{
+                 "\"\<\\\"...\>\"", "<>", "snip", "<>", "\"\<...\\\"\>\""}], 
+                 ",", "24"}], "]"}]}], "]"}], ",", 
+             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<Genesis\>\"", ",", "\"\<Exodus\>\"", ",", 
+             "\"\<Leviticus\>\"", ",", "\"\<Numbers\>\"", ",", 
+             "\"\<Deuteronomy\>\"", ",", "\"\<Joshua\>\"", ",", 
+             "\"\<Judges\>\"", ",", "\"\<Ruth\>\"", ",", "\"\<1 Samuel\>\"", 
+             ",", "\"\<2 Samuel\>\"", ",", "\"\<1 Kings\>\"", ",", 
+             "\"\<2 Kings\>\"", ",", "\"\<1 Chronicles\>\"", ",", 
+             "\"\<2 Chronicles\>\"", ",", "\"\<Ezra\>\"", ",", 
+             "\"\<Nehemiah\>\"", ",", "\"\<Esther\>\"", ",", "\"\<Job\>\"", 
+             ",", "\"\<Psalms\>\"", ",", "\"\<Proverbs\>\"", ",", 
+             "\"\<Ecclesiastes\>\"", ",", "\"\<Song of Solomon\>\"", ",", 
+             "\"\<Isaiah\>\"", ",", "\"\<Jeremiah\>\"", ",", 
+             "\"\<Lamentations\>\"", ",", "\"\<Ezekiel\>\"", ",", 
+             "\"\<Daniel\>\"", ",", "\"\<Hosea\>\"", ",", "\"\<Joel\>\"", 
+             ",", "\"\<Amos\>\"", ",", "\"\<Obadiah\>\"", ",", 
+             "\"\<Jonah\>\"", ",", "\"\<Micah\>\"", ",", "\"\<Nahum\>\"", 
+             ",", "\"\<Habakkuk\>\"", ",", "\"\<Zephaniah\>\"", ",", 
+             "\"\<Haggai\>\"", ",", "\"\<Zachariah\>\"", ",", 
+             "\"\<Malachi\>\"", ",", "\"\<Matthew\>\"", ",", "\"\<Mark\>\"", 
+             ",", "\"\<Luke\>\"", ",", "\"\<John\>\"", ",", "\"\<Acts\>\"", 
+             ",", "\"\<Romans\>\"", ",", "\"\<1 Corinthians\>\"", ",", 
+             "\"\<2 Corinthians\>\"", ",", "\"\<Galatians\>\"", ",", 
+             "\"\<Ephesians\>\"", ",", "\"\<Philippians\>\"", ",", 
+             "\"\<Colossians\>\"", ",", "\"\<1 Thessalonians\>\"", ",", 
+             "\"\<2 Thessalonians\>\"", ",", "\"\<1 Timothy\>\"", ",", 
+             "\"\<2 Timothy\>\"", ",", "\"\<Titus\>\"", ",", 
+             "\"\<Philemon\>\"", ",", "\"\<Hebrews\>\"", ",", "\"\<James\>\"",
+              ",", "\"\<1 Peter\>\"", ",", "\"\<2 Peter\>\"", ",", 
+             "\"\<1 John\>\"", ",", "\"\<2 John\>\"", ",", "\"\<3 John\>\"", 
+             ",", "\"\<Jude\>\"", ",", "\"\<Revelation\>\""}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansPos", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"2", ",", "65"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pre", "=", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"ansPos", "-", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"book", "=", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", "ansPos", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"post", "=", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"ansPos", "+", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"Drop", "[", 
+                RowBox[{"data", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"ansPos", "-", "1"}], ",", 
+                   RowBox[{"ansPos", "+", "1"}]}], "}"}]}], "]"}], ",", "3"}],
+               "]"}], ",", "book"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<In the King James version of the Bible, which of these books \
+comes between `1` and `2`?\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"pre", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"post", ",", "Italic"}], "]"}]}], "]"}]}], ";", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lite3\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.683383365394298*^9, 3.683383801638105*^9, {3.685036705607153*^9, 
-   3.6850367061885557`*^9}},ExpressionUUID->"1fdac13c-4c26-4f9a-9804-\
-ed251254bade"]
+   3.6850367061885557`*^9}, {3.732465175762116*^9, 3.7324651988076277`*^9}, {
+   3.732465261120161*^9, 3.7324653184305363`*^9}, {3.732465367488364*^9, 
+   3.7324653704465227`*^9}, {3.732465417846908*^9, 3.732465428894527*^9}, {
+   3.732465465462585*^9, 3.732465598220976*^9}, 3.7324656468539963`*^9, {
+   3.7324659898686438`*^9, 3.732466006932085*^9}, {3.732466049004599*^9, 
+   3.7324668185306873`*^9}, {3.7324668513481703`*^9, 3.73246685333845*^9}, {
+   3.7324668854108887`*^9, 3.732466897138342*^9}, {3.7324670358264217`*^9, 
+   3.732467214169434*^9}, {3.732467263394649*^9, 3.732467280737274*^9}, {
+   3.732467450913275*^9, 3.732467553416423*^9}, {3.732467653026106*^9, 
+   3.73246768488807*^9}},ExpressionUUID->"971a7e15-79a2-4297-af46-\
+4eccb773594f"]
 },
-WindowSize->{1237, 1051},
-WindowMargins->{{-2, Automatic}, {49, Automatic}},
+WindowSize->{1618, 1344},
+WindowMargins->{{-2, Automatic}, {Automatic, 2}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 10, 2017)",
 StyleDefinitions->"Default.nb"
@@ -186,7 +298,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6315, 149, 619, "Input",ExpressionUUID->"1fdac13c-4c26-4f9a-9804-ed251254bade"]
+Cell[558, 20, 12247, 261, 997, "Input",ExpressionUUID->"971a7e15-79a2-4297-af46-4eccb773594f"]
 }
 ]
 *)
