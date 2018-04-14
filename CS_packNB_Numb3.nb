@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3464,         96]
-NotebookOptionsPosition[      3151,         82]
-NotebookOutlinePosition[      3511,         98]
-CellTagsIndexPosition[      3468,         95]
+NotebookDataLength[      9341,        219]
+NotebookOptionsPosition[      9027,        205]
+NotebookOutlinePosition[      9387,        221]
+CellTagsIndexPosition[      9344,        218]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,49 +26,151 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"arabics", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
-          RowBox[{"Range", "[", "599", "]"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"addNo", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"5", ",", "600"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"sumNo", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"arabics", "[", 
-          RowBox[{"[", "1", "]"}], "]"}], "+", "addNo"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"RomanNumeral", "[", "arabics", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"StringForm", "[", 
-           RowBox[{"\"\<What is `1`-`2`?\>\"", ",", 
-            RowBox[{"RomanNumeral", "[", "sumNo", "]"}], ",", 
-            RowBox[{"RomanNumeral", "[", "addNo", "]"}]}], "]"}], ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb3\>\"", ",", 
+          RowBox[{"arabics", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", "599", "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"addNo", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"5", ",", "600"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"sumNo", "=", 
+           RowBox[{
+            RowBox[{"arabics", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "+", "addNo"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"RomanNumeral", "[", "arabics", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"StringForm", "[", 
+              RowBox[{"\"\<What is `1`-`2`?\>\"", ",", 
+               RowBox[{"RomanNumeral", "[", "sumNo", "]"}], ",", 
+               RowBox[{"RomanNumeral", "[", "addNo", "]"}]}], "]"}], ",", 
+             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"fibCt", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"6", ",", "38"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"fibNo", "=", 
+           RowBox[{"Fibonacci", "[", "fibCt", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pre", "=", 
+           RowBox[{"Fibonacci", "[", 
+            RowBox[{"fibCt", "-", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          
+          RowBox[{"preDis", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{
+                 RowBox[{"Round", "[", 
+                  FractionBox["fibNo", "3"], "]"}], ",", 
+                 RowBox[{"fibNo", "-", "1"}]}], "]"}], ",", "pre"}], "]"}], 
+             ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"post", "=", 
+           RowBox[{"Fibonacci", "[", 
+            RowBox[{"fibCt", "+", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          
+          RowBox[{"postDis", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{
+                 RowBox[{"fibNo", "+", "1"}], ",", 
+                 RowBox[{"3", " ", "fibNo"}]}], "]"}], ",", "post"}], "]"}], 
+             ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"choices", "=", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{"preDis", ",", "pre"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"q", "=", 
+              RowBox[{"StringForm", "[", 
+               RowBox[{
+               "\"\<Before `1`, what is the previous Fibonacci number?\>\"", 
+                ",", 
+                RowBox[{"NumberForm", "[", 
+                 RowBox[{"fibNo", ",", 
+                  RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}]}], 
+               "]"}]}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"choices", "=", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{"postDis", ",", "post"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"q", "=", 
+              RowBox[{"StringForm", "[", 
+               RowBox[{
+               "\"\<After `1`, what is the next Fibonacci number?\>\"", ",", 
+                RowBox[{"NumberForm", "[", 
+                 RowBox[{"fibNo", ",", 
+                  RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}]}], 
+               "]"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"NumberForm", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"DigitBlock", "\[Rule]", "3"}]}], "]"}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Numb3\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.682786955469304*^9, {3.682787051824436*^9, 3.682787089347061*^9}, {
@@ -76,9 +178,30 @@ Cell[BoxData[
    3.6841620123801527`*^9, 3.684162113448666*^9}, {3.684162156881262*^9, 
    3.684162162081091*^9}, {3.684162220647252*^9, 3.684162246030511*^9}, {
    3.68416229748214*^9, 3.684162304833551*^9}, {3.684162397152663*^9, 
-   3.684162600695912*^9}, {3.684162720974428*^9, 
-   3.684162729766767*^9}},ExpressionUUID->"e987e939-24e1-4e80-b53e-\
-08b496fdbca2"]
+   3.684162600695912*^9}, {3.684162720974428*^9, 3.684162729766767*^9}, {
+   3.732708040350054*^9, 3.732708077451404*^9}, {3.7327081108535357`*^9, 
+   3.732708134161128*^9}, {3.7327083742340517`*^9, 3.7327084278728523`*^9}, {
+   3.732708549248312*^9, 3.732708574175803*^9}, 3.732708621320509*^9, {
+   3.732708684831403*^9, 3.732708806583787*^9}, {3.732715471769628*^9, 
+   3.7327155017516336`*^9}, 3.7327155576315327`*^9, {3.732715614639317*^9, 
+   3.732715614926903*^9}, {3.732715659223749*^9, 3.732715672822822*^9}, {
+   3.7327157296314583`*^9, 3.732715968061619*^9}, {3.7327160050854473`*^9, 
+   3.7327160347493134`*^9}, {3.732716190717182*^9, 3.7327162625481977`*^9}, {
+   3.732716295620263*^9, 3.732716323684063*^9}, {3.732716369332635*^9, 
+   3.732716419188466*^9}, {3.7327165509228163`*^9, 3.732716668122418*^9}, {
+   3.7327166999802*^9, 3.732716883640847*^9}, {3.732716922457829*^9, 
+   3.732716955928647*^9}, {3.732717070296299*^9, 3.7327171378396587`*^9}, {
+   3.732717187528462*^9, 3.732717188487391*^9}, {3.7327172303846827`*^9, 
+   3.732717239735366*^9}, {3.7327175834388103`*^9, 3.732717593325748*^9}, {
+   3.732717738237821*^9, 3.7327177539737663`*^9}, 3.732717785174851*^9, 
+   3.732717828029709*^9, {3.7327178724203653`*^9, 3.7327179170205593`*^9}, 
+   3.7327179702845097`*^9, {3.732718006636492*^9, 3.7327180579317627`*^9}, {
+   3.732718112908271*^9, 3.7327182008704357`*^9}, 3.732718683000952*^9, {
+   3.7327188448203173`*^9, 3.732718873610036*^9}, 3.732719056209609*^9, {
+   3.732719311808353*^9, 3.7327193121830263`*^9}, {3.732719366248143*^9, 
+   3.732719387967045*^9}, {3.732719920214191*^9, 
+   3.732719943388544*^9}},ExpressionUUID->"8d7bf275-3704-4326-901b-\
+ac455a14597b"]
 },
 WindowSize->{1252, 1077},
 WindowMargins->{{2, Automatic}, {Automatic, 30}},
@@ -97,7 +220,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2589, 60, 262, "Input",ExpressionUUID->"e987e939-24e1-4e80-b53e-08b496fdbca2"]
+Cell[558, 20, 8465, 183, 743, "Input",ExpressionUUID->"8d7bf275-3704-4326-901b-ac455a14597b"]
 }
 ]
 *)
