@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4238,        114]
-NotebookOptionsPosition[      3924,        100]
-NotebookOutlinePosition[      4285,        116]
-CellTagsIndexPosition[      4242,        113]
+NotebookDataLength[     14030,        322]
+NotebookOptionsPosition[     13716,        308]
+NotebookOutlinePosition[     14075,        324]
+CellTagsIndexPosition[     14032,        321]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,63 +26,244 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"deg", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"1", ",", "359"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"nos", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Round", "[", 
-           RowBox[{"#", ",", ".0001"}], "]"}], "&"}], "/@", 
-         RowBox[{"Take", "[", 
-          RowBox[{
-           RowBox[{"DeleteDuplicates", "[", 
-            RowBox[{"RandomReal", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{"deg", ",", 
-                RowBox[{"deg", "+", "1"}]}], "}"}], ",", "6"}], "]"}], "]"}], 
-           ",", "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"StringReplace", "[", 
-           RowBox[{
-            RowBox[{"DMSString", "[", "#", "]"}], ",", 
+          RowBox[{"deg", "=", 
+           RowBox[{"RandomInteger", "[", 
             RowBox[{"{", 
+             RowBox[{"1", ",", "359"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"nos", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Round", "[", 
+              RowBox[{"#", ",", ".0001"}], "]"}], "&"}], "/@", 
+            RowBox[{"Take", "[", 
              RowBox[{
-              RowBox[{"\"\<\[Degree]\>\"", "\[Rule]", "\"\<\[Degree] \>\""}], 
-              ",", 
-              RowBox[{"\"\<'\>\"", "\[Rule]", "\"\<' \>\""}]}], "}"}]}], 
-           "]"}], "&"}], "/@", "nos"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<Angles are often measured in degrees, minutes, and seconds. \
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"RandomReal", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"deg", ",", 
+                   RowBox[{"deg", "+", "1"}]}], "}"}], ",", "6"}], "]"}], 
+               "]"}], ",", "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{"DMSString", "[", "#", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                 "\"\<\[Degree]\>\"", "\[Rule]", "\"\<\[Degree] \>\""}], ",", 
+                 
+                 RowBox[{"\"\<'\>\"", "\[Rule]", "\"\<' \>\""}]}], "}"}]}], 
+              "]"}], "&"}], "/@", "nos"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Angles are often measured in degrees, minutes, and seconds. \
 Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"", 
-          ",", 
-          RowBox[{"nos", "[", 
-           RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb13\>\"", ",", 
-   
+             ",", 
+             RowBox[{"nos", "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"nos", "=", 
+           RowBox[{"{", 
+            RowBox[{"\[Pi]", ",", "E", ",", "GoldenRatio", ",", 
+             RowBox[{"2", " ", "\[Pi]"}]}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"nam", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<\[Pi]\>\"", ",", "\"\<e\>\"", ",", "\"\<\[CapitalPhi]\>\"", 
+             ",", "\"\<\[Tau]\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pat", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1", ",", "4"}], "}"}], ",", "3"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Switch", "[", 
+           RowBox[{
+            RowBox[{"pat", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], ",", "\[IndentingNewLine]", "1", 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"exp", "=", 
+              RowBox[{"Plus", "[", 
+               RowBox[{
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
+             ";", "\[IndentingNewLine]", 
+             RowBox[{"str", "=", 
+              RowBox[{
+               RowBox[{"nam", "[", 
+                RowBox[{"[", 
+                 RowBox[{"pat", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "<>", 
+               "\"\< + \>\"", "<>", 
+               RowBox[{"nam", "[", 
+                RowBox[{"[", 
+                 RowBox[{"pat", "[", 
+                  RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"dis", "=", 
+              RowBox[{"RandomReal", "[", 
+               RowBox[{"10", ",", "3"}], "]"}]}]}], ",", 
+            "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"exp", "=", 
+              RowBox[{"Times", "[", 
+               RowBox[{
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
+             ";", "\[IndentingNewLine]", 
+             RowBox[{"str", "=", 
+              RowBox[{
+               RowBox[{"nam", "[", 
+                RowBox[{"[", 
+                 RowBox[{"pat", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "<>", 
+               "\"\< \!\(\*StyleBox[\"\[Times]\", \
+\"OperatorCharacter\"]\)\!\(\*StyleBox[\" \", \"OperatorCharacter\"]\)\>\"", "<>", 
+               RowBox[{"nam", "[", 
+                RowBox[{"[", 
+                 RowBox[{"pat", "[", 
+                  RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"dis", "=", 
+              RowBox[{"RandomReal", "[", 
+               RowBox[{"30", ",", "3"}], "]"}]}]}], ",", 
+            "\[IndentingNewLine]", "3", ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"exp", "=", 
+              RowBox[{"Divide", "[", 
+               RowBox[{
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
+             ";", "\[IndentingNewLine]", 
+             RowBox[{"str", "=", 
+              RowBox[{"DisplayForm", "[", 
+               RowBox[{"FractionBox", "[", 
+                RowBox[{
+                 RowBox[{"nam", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"pat", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
+                 RowBox[{"nam", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"pat", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"dis", "=", 
+              RowBox[{"RandomReal", "[", 
+               RowBox[{"2", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]",
+             "4", ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"exp", "=", 
+              RowBox[{"Power", "[", 
+               RowBox[{
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
+                RowBox[{"nos", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"pat", "[", 
+                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
+             ";", "\[IndentingNewLine]", 
+             RowBox[{"str", "=", 
+              RowBox[{"DisplayForm", "[", 
+               RowBox[{"SuperscriptBox", "[", 
+                RowBox[{
+                 RowBox[{"nam", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"pat", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
+                 RowBox[{"nam", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"pat", "[", 
+                    RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"dis", "=", 
+              RowBox[{"Tan", "[", 
+               RowBox[{"RandomReal", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{".27", ",", "1.57"}], "}"}], ",", "3"}], "]"}], 
+               "]"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"Prepend", "[", 
+              RowBox[{"dis", ",", "exp"}], "]"}], ",", ".0001"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<What's the approximate value of `1`?\>\"", ",", "str"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Numb13\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.6966874011868353`*^9, {3.696689645462016*^9, 3.6966896467632723`*^9}, {
@@ -94,12 +275,39 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
    3.6966912291660357`*^9, 3.696691249965742*^9}, {3.696691379534107*^9, 
    3.696691401493206*^9}, 3.696691453393819*^9, 3.69669373945603*^9, {
    3.7155976808967447`*^9, 3.715597700407481*^9}, {3.7155980776637983`*^9, 
-   3.715598105576062*^9}, {3.715598149479514*^9, 
-   3.715598195294615*^9}},ExpressionUUID->"f564f766-81f4-493a-be40-\
-7c52426809bb"]
+   3.715598105576062*^9}, {3.715598149479514*^9, 3.715598195294615*^9}, {
+   3.733247567472221*^9, 3.733247611931302*^9}, {3.733248012338509*^9, 
+   3.733248088554805*^9}, {3.733248677903359*^9, 3.7332487226064663`*^9}, {
+   3.7332489035826178`*^9, 3.733248912861917*^9}, {3.733248946357272*^9, 
+   3.733249027773704*^9}, {3.73324909319691*^9, 3.7332491551404867`*^9}, {
+   3.73324920868502*^9, 3.7332492211083517`*^9}, {3.7332492632200527`*^9, 
+   3.733249343891865*^9}, 3.733249469819675*^9, {3.733249647251004*^9, 
+   3.733249828017728*^9}, {3.733250039978784*^9, 3.733250124033594*^9}, {
+   3.7332501558884*^9, 3.733250167576701*^9}, {3.7332502617129507`*^9, 
+   3.733250329152083*^9}, {3.733250389704238*^9, 3.7332505223831797`*^9}, {
+   3.7332511783251534`*^9, 3.733251325603743*^9}, {3.733251375244349*^9, 
+   3.733251408291133*^9}, {3.7332514388200827`*^9, 3.733251490740116*^9}, {
+   3.733256088101185*^9, 3.7332561595482063`*^9}, {3.733256251012115*^9, 
+   3.7332562586036987`*^9}, {3.733259609036476*^9, 3.7332596422358217`*^9}, {
+   3.7332597915562487`*^9, 3.733259800995028*^9}, {3.733259956187127*^9, 
+   3.7332601055618343`*^9}, {3.733260191035338*^9, 3.7332602391630907`*^9}, {
+   3.733260277441463*^9, 3.733260548544186*^9}, {3.73326062892843*^9, 
+   3.733260661351676*^9}, {3.733260748521929*^9, 3.7332607656515207`*^9}, {
+   3.7332608038415613`*^9, 3.7332608649513407`*^9}, {3.7332609116318607`*^9, 
+   3.733260967359229*^9}, {3.733261040536097*^9, 3.733261195475021*^9}, {
+   3.733261226718121*^9, 3.733261265214237*^9}, {3.733261299438264*^9, 
+   3.7332613465974417`*^9}, 3.733261692117689*^9, {3.733261734236684*^9, 
+   3.733261744067896*^9}, {3.733261821731647*^9, 3.7332618446196203`*^9}, {
+   3.733261914844442*^9, 3.733261919829034*^9}, {3.733261965368046*^9, 
+   3.7332619685001802`*^9}, {3.733317172424842*^9, 3.733317327167364*^9}, {
+   3.733317420238893*^9, 3.733317432934761*^9}, {3.73331780006203*^9, 
+   3.733317869384789*^9}, {3.733317919045899*^9, 3.733318006773789*^9}, {
+   3.733318102493106*^9, 3.7333181239876823`*^9}, {3.733318449492014*^9, 
+   3.7333184723153667`*^9}},ExpressionUUID->"8c4e857a-9a07-4272-97c6-\
+1061dce20bbe"]
 },
-WindowSize->{1489, 1086},
-WindowMargins->{{0, Automatic}, {Automatic, 117}},
+WindowSize->{1253, 1207},
+WindowMargins->{{0, Automatic}, {Automatic, 1}},
 FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
 10, 2017)",
 StyleDefinitions->"Default.nb"
@@ -115,7 +323,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3362, 78, 241, "Input",ExpressionUUID->"f564f766-81f4-493a-be40-7c52426809bb"]
+Cell[558, 20, 13154, 286, 934, "Input",ExpressionUUID->"8c4e857a-9a07-4272-97c6-1061dce20bbe"]
 }
 ]
 *)
