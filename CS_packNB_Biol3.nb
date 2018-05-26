@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7796,        156]
-NotebookOptionsPosition[      7483,        142]
-NotebookOutlinePosition[      7842,        158]
-CellTagsIndexPosition[      7799,        155]
+NotebookDataLength[     96158,       1902]
+NotebookOptionsPosition[     95180,       1877]
+NotebookOutlinePosition[     95558,       1894]
+CellTagsIndexPosition[     95515,       1891]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,87 +26,1444 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"choices", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<aardvark\>\"", ",", "\"\<alligator\>\"", ",", 
-            "\"\<antelope\>\"", ",", "\"\<armadillo\>\"", ",", 
-            "\"\<arowana\>\"", ",", "\"\<badger\>\"", ",", "\"\<bear\>\"", 
-            ",", "\"\<bluegill\>\"", ",", "\"\<bullfrog\>\"", ",", 
-            "\"\<caiman\>\"", ",", "\"\<camel\>\"", ",", "\"\<caribou\>\"", 
-            ",", "\"\<chinchilla\>\"", ",", "\"\<chimpanzee\>\"", ",", 
-            "\"\<chipmunk\>\"", ",", "\"\<chuckwalla\>\"", ",", 
-            "\"\<coati\>\"", ",", "\"\<cobra\>\"", ",", "\"\<condor\>\"", 
-            ",", "\"\<cormorant\>\"", ",", "\"\<cougar\>\"", ",", 
-            "\"\<coyote\>\"", ",", "\"\<crocodile\>\"", ",", "\"\<deer\>\"", 
-            ",", "\"\<dingo\>\"", ",", "\"\<dugon\>\"", ",", "\"\<eagle\>\"", 
-            ",", "\"\<egret\>\"", ",", "\"\<elephant\>\"", ",", "\"\<emu\>\"",
-             ",", "\"\<falcon\>\"", ",", "\"\<flounder\>\"", ",", 
-            "\"\<fox\>\"", ",", "\"\<galago\>\"", ",", "\"\<gibbon\>\"", ",", 
-            "\"\<giraffe\>\"", ",", "\"\<hawk\>\"", ",", "\"\<hedgehog\>\"", 
-            ",", "\"\<hippopotamus\>\"", ",", "\"\<hummingbird\>\"", ",", 
-            "\"\<hyena\>\"", ",", "\"\<ibex\>\"", ",", "\"\<javalina\>\"", 
-            ",", "\"\<kangaroo\>\"", ",", "\"\<koala\>\"", ",", 
-            "\"\<llama\>\"", ",", "\"\<lemur\>\"", ",", "\"\<leopard\>\"", 
-            ",", "\"\<loon\>\"", ",", "\"\<lynx\>\"", ",", "\"\<marmoset\>\"",
-             ",", "\"\<marmot\>\"", ",", "\"\<meerkat\>\"", ",", 
-            "\"\<mongoose\>\"", ",", "\"\<moose\>\"", ",", "\"\<nutria\>\"", 
-            ",", "\"\<ocelot\>\"", ",", "\"\<orangutan\>\"", ",", 
-            "\"\<oryx\>\"", ",", "\"\<otter\>\"", ",", "\"\<owl\>\"", ",", 
-            "\"\<paku\>\"", ",", "\"\<panda\>\"", ",", "\"\<parrot\>\"", ",", 
-            "\"\<penguin\>\"", ",", "\"\<pigeon\>\"", ",", "\"\<pika\>\"", 
-            ",", "\"\<platypus\>\"", ",", "\"\<porcupine\>\"", ",", 
-            "\"\<possum\>\"", ",", "\"\<ptarmigan\>\"", ",", "\"\<rabbit\>\"",
-             ",", "\"\<raven\>\"", ",", "\"\<rhinoceros\>\"", ",", 
-            "\"\<ringtail\>\"", ",", "\"\<roadrunner\>\"", ",", 
-            "\"\<scrod\>\"", ",", "\"\<sloth\>\"", ",", "\"\<sturgeon\>\"", 
-            ",", "\"\<tapir\>\"", ",", "\"\<tarpon\>\"", ",", 
-            "\"\<tarsier\>\"", ",", "\"\<tiger\>\"", ",", "\"\<tuna\>\"", 
-            ",", "\"\<viper\>\"", ",", "\"\<vole\>\"", ",", "\"\<vulture\>\"",
-             ",", "\"\<walrus\>\"", ",", "\"\<weasel\>\"", ",", 
-            "\"\<wildebeest\>\"", ",", "\"\<wombat\>\""}], "}"}], ",", "4"}], 
-         "]"}]}], ";", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-         "\"\<This is a word cloud generated from the Wikipedia article on \
-one of these four animals. Which one?\>\"", ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       RowBox[{"pic", "=", 
-        RowBox[{"WordCloud", "[", 
-         RowBox[{
-          RowBox[{"DeleteStopwords", "[", 
-           RowBox[{"StringDelete", "[", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
             RowBox[{
-             RowBox[{"WikipediaData", "[", 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"\"\<aardvark\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<aardvark\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<alligator\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<alligator\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<anaconda\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<anaconda\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<antelope\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<antelope\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<armadillo\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<armadillo\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<arowana\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<arowana\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<avocet\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<avocet\>\"", "~~", 
+                    RowBox[{"\"\<s\>\"", "..."}]}], ",", "\"\<avosetta\>\""}],
+                   "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<badger\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<badger\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<bear\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bear\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<bluegill\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bluegill\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<bullfrog\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bullfrog\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<caiman\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<caiman\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<camel\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<camel\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<caribou\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<caribou\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<chigger\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<chigger\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<chinchilla\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<chinchilla\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<chimpanzee\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<chimpanzee\>\"", "~~", 
+                    RowBox[{"\"\<s\>\"", "..."}]}], ",", 
+                   RowBox[{"\"\<chimp\>\"", "~~", 
+                    RowBox[{"\"\<s\>\"", "..."}]}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<chipmunk\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<chipmunk\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<chuckwalla\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<chuckwalla\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<coati\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<coati\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<cobra\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<cobra\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<condor\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<condor\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<cormorant\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<cormorant\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<cougar\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<cougar\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<coyote\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<coyote\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<crocodile\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<crocod\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<deer\>\"", ",", 
+                 RowBox[{"{", "\"\<deer\>\"", "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<dingo\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<dingo\>\"", "~~", 
+                   RowBox[{"\"\<es\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<dodo\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<dodo\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<dugong\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<dugong\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<eagle\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<eagle\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<earwig\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<earwig\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<egret\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<egret\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<elephant\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<elephant\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<emu\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<emu\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<falcon\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<falco\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<flounder\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<flounder\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<fox\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<fox\>\"", "~~", 
+                   RowBox[{"\"\<es\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<galago\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<galago\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<gibbon\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<gibbon\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<giraffe\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<giraff\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<hawk\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<hawk\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<hedgehog\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<hedgehog\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<hippopotamus\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<hippo\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<hummingbird\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<hummingbird\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<hyena\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<hyena\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<ibex\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<ibex\>\"", "~~", 
+                   RowBox[{"\"\<es\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<javalina\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<javalina\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<kangaroo\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<kangaroo\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<koala\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<koala\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<llama\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<l\>\"", "..."}], "~~", "\"\<lama\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<lemming\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<lemming\>\"", "~~", 
+                    RowBox[{"\"\<s\>\"", "..."}]}], ",", "\"\<(D.\>\"", ",", 
+                   "\"\<(L.\>\""}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<lemur\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<lemur\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<leopard\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<leopard\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<loon\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<loon\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<lynx\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<lynx\>\"", "~~", 
+                   RowBox[{"\"\<es\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<mammoth\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<mamm\>\"", "~~", 
+                   RowBox[{"{", 
+                    RowBox[{"\"\<o\>\"", ",", "\"\<u\>\""}], "}"}], "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<marmoset\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<marmoset\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<marmot\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<marmot\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<meerkat\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<meerkat\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<mongoose\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<mongoose\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<moose\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<moose\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<mouse\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<mouse\>\"", ",", "\"\<mice\>\"", ",", "\"\<mus\>\""}], 
+                  "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<narwhal\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<narwhal\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<nutria\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<nutria\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<ocelot\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<ocelot\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<orangutan\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<orangutan\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<oryx\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<oryx\>\"", "~~", 
+                   RowBox[{"\"\<es\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<osprey\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<osprey\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<otter\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<otter\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<owl\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<owl\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<pacu\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<pacu\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<panda\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<panda\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<parrot\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<parrot\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<peacock\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<pea\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<penguin\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<penguin\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<pigeon\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<pigeon\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<pika\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<pika\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<platypus\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<platypus\>\"", "~~", 
+                   RowBox[{"\"\<es\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<plover\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<plover\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<porcupine\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<porcupine\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<possum\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<o\>\"", "..."}], "~~", "\"\<possum\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<ptarmigan\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<ptarmigan\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<rabbit\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<rabbit\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<rat\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"WordBoundary", "~~", "\"\<rat\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<raven\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<raven\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<rhinoceros\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<rhino\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}], "~~", 
+                   RowBox[{"\"\<ceros\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<ringtail\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\"\<ringtail\>\"", "~~", 
+                    RowBox[{"\"\<s\>\"", "..."}]}], ",", 
+                   "\"\<ring-tailed\>\""}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<roadrunner\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<roadrunner\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<sandpiper\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<sandpiper\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<scrod\>\"", ",", 
+                 RowBox[{"{", "\"\<scrod\>\"", "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<sloth\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<sloth\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<sturgeon\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<sturgeon\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<tapir\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tapir\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<tarantula\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tarantula\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<tarpon\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tarpon\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<tarsier\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tarsi\>\"", "~~", 
+                   RowBox[{"LetterCharacter", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<termite\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<termite\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<tiger\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tiger\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<tuna\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tuna\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<viper\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<viper\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<vole\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<vole\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<vulture\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<vulture\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<walrus\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<walrus\>\"", "~~", 
+                   RowBox[{"\"\<es\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<weasel\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<weasel\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<wildebeest\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<wildebeest\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<wombat\>\"", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<wombat\>\"", "~~", 
+                   RowBox[{"\"\<s\>\"", "..."}]}], "}"}]}], "}"}]}], "}"}], 
+             ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
               RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
-             RowBox[{"RegularExpression", "[", 
-              RowBox[{"\"\<(\>\"", "<>", 
-               RowBox[{"choices", "[", 
-                RowBox[{"[", "1", "]"}], "]"}], "<>", 
-               "\"\<e?s?i?|species|000)\>\""}], "]"}], ",", 
-             RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "]"}], ",", 
-          RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          RowBox[{
+          "q", "=", 
+           "\"\<This word cloud is for the Wikipedia article on which of \
+these four animals? (The animal's name does not appear in the word \
+cloud.)\>\""}], ";", 
+          RowBox[{"pic", "=", 
+           RowBox[{"WordCloud", "[", 
+            RowBox[{
+             RowBox[{"DeleteStopwords", "[", 
+              RowBox[{"StringDelete", "[", 
+               RowBox[{
+                RowBox[{"WikipediaData", "[", 
+                 RowBox[{"data", "[", 
+                  RowBox[{"[", 
+                   RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], ",", 
+                RowBox[{"Append", "[", 
+                 RowBox[{
+                  RowBox[{"Append", "[", 
+                   RowBox[{
+                    RowBox[{"data", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", 
+                    "\"\<species\>\""}], "]"}], ",", "\"\<genus\>\""}], "]"}],
+                 ",", 
+                RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "]"}], 
+             ",", 
+             RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"SortBy", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"{", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<African bush elephant\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"1300","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<American alligator\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "998.6940476974954406751`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<American eel\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "8.88793609998334`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<andean condor\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "23.1485375294121459759`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<antelope jack rabbit\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "116.6157182053128450992`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<asian golden cat\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "29.7624053949584733976`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<asp\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "10.9128819781514402458`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<atlantic spotted dolphin\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   
+                   TemplateBox[{
+                    "279.9870729747945275182`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bald eagle\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"10.365","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bandang\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "16.9755941882355737157`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bat ray\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "99.5497344895814715755`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<black flying fox\>\"", ",", "\"\<-es\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "23.707629826312996`","\"oz\"","ounces","\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<black rhinoceros\>\"", ",", "\"\<-es\>\"", ",", 
+                   TemplateBox[{"2300","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<blue tilefish\>\"", ",", "\"\<-\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "36.3762732605048008193`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<boa constrictor\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "59.5248107899169467952`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bobcat\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "18.9597545478994719422`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<bonobo\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"71.5","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<brown bear\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"965","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<california condor\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"25","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<cape fox\>\"", ",", "\"\<-es\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "7.62777380933458`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<capybara\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "121.2542442016826693976`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<celebes wild boar\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "167.5513192605069613495`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<cheetah\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"104.5","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<common chimpanzee\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"104","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<common merganser\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"53","\"oz\"","ounces","\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<common octopus\>\"", ",", "\"\<-es\>\"", ",", 
+                   TemplateBox[{"22","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<crested fireback\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "76.0153880013457898333`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<domestic goat\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "134.481979932775324241`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<dugong\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"800","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<black duiker\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "39.9036694554628421109`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<eastern long-beaked echidna\>\"", ",", "\"\<-s\>\"", 
+                   ",", 
+                   
+                   TemplateBox[{
+                    "26.121691597237408`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Egyptian vulture\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "73.4403887790264196904`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<emu\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{
+                    "85.8149355554635982964`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<erect-crested penguin\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "7.936641438655592906`2.","\"lb\"","pounds","\"Pounds\""},
+                    
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<giant panda\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"230","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<giraffe\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "1763.6980974790206457838`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<gorilla\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "278.25753550484103`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<great cormorant\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "8.000134570164839`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<great white shark\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "5000.0841063530235307971`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<green sea turtle\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"350","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<halibut\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "40.0139005865552809012`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<hamadryas baboon\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "39.6832071932779645301`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<harbor seal\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "60.4066598386564571181`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<hippopotamus\>\"", ",", "\"\<hippopotami\>\"", ",", 
+                   TemplateBox[{"3650","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<horned puffin\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "21.8345824467902755948`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Horsfield's tarsier\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "4.3210603388236`","\"oz\"","ounces","\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<human\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "136.7637643463888072015`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<Humboldt squid\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"75","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<indo-pacific tarpon\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "21.8257639563028804916`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<jaguar\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"178.5","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<killer whale\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "16001.1509893784148088734`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<king cobra\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "17.6369809747902064579`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<klipspringer\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "26.4554714621853096868`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<lion\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"350","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<llama\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "249.122356268911666217`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<long-tailed pangolin\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "73.72222773500356`","\"oz\"","ounces","\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<longtail tuna\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"79","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<mackerel shark\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "103.672378792438682335`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<mahi-mahi\>\"", ",", "\"\<-\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "48.501697680673067759`2.","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<Malagasy civet\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "79.7191540060517331894`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<marine otter\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "24.681543915740914`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Mexican cottontail\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "87.81593923195842`","\"oz\"","ounces","\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<mountain nyala\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "477.30162436374314`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<northern fur seal\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "122.27899688877042`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<nutria\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "17.3062875815128900867`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<ostrich\>\"", ",", "\"\<-es\>\"", ",", 
+                   TemplateBox[{"185","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<pacific cod\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "27.5247134337819659533`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<parma wallaby\>\"", ",", "\"\<parma wallabies\>\"", 
+                   ",", 
+                   
+                   TemplateBox[{
+                    "9.3696461428572971807`2.","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<pelican\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "21.054146038655808959`2.","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Peruvian spider monkey\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "13.2277357310926548434`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<pink-footed goose\>\"", ",", 
+                   "\"\<pink-footed geese\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "93.2996293566401921619`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<pygmy hog\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "17.6369809747902064579`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<purple-faced langur\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "15.612696483408662`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<red deer\>\"", ",", "\"\<-\>\"", ",", 
+                   TemplateBox[{"700","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<red kangaroo\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "121.2542442016826693976`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<rhesus monkey\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "18.1550672909246687725`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<ringtail\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "35.8030713788241191094`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Russian sturgeon\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "139.4423808319350698073`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<scimitar oryx\>\"", ",", "\"\<-es\>\"", ",", 
+                   TemplateBox[{"385","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<shoebill\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "13.1924617691430744304`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<silky shark\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "419.5396849378220361158`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<six-banded armadillo\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "10.692419715966562665`2.","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<slimehead\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "8.4877970941177868578`2.","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<snow goose\>\"", ",", "\"\<snow geese\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "99.00166530578987`","\"oz\"","ounces","\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<snow leopard\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "105.4085191071446`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<South American sea lion\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "457.4591940336209800002`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<South American tapir\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "551.1556554621939518074`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<southern flounder\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "11.313020984016994`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<southern naked-tailed armadillo\>\"", ",", 
+                   "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "8.791968877254263`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<southern royal albatross\>\"", ",", "\"\<-es\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "19.8416035966389822651`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<southern stingray\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "164.4207551374816997032`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<speckled hind\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "36.3762732605048008193`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<spoonbill\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "65.8917609218162113265`2.","\"oz\"","ounces",
+                    "\"Ounces\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tarbagan marmot\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "13.089946817227107`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<tiger\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "263.8933278352984641254`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<walleye\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "24.2508488403365338796`2.","\"lb\"","pounds",
+                    "\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<warthog\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"225","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<whale-shark\>\"", ",", "\"\<-s\>\"", ",", 
+                   
+                   TemplateBox[{
+                    "41226.44302857211`","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<white-tailed deer\>\"", ",", "\"\<-\>\"", ",", 
+                   TemplateBox[{"210","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<whooping crane\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"15.1","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<wild turkey\>\"", ",", "\"\<-s\>\"", ",", 
+                   TemplateBox[{"14.65","\"lb\"","pounds","\"Pounds\""},
+                    "Quantity"]}], "}"}]}], "}"}], ",", "2"}], "]"}], ",", 
+             "Last"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"str1", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"StringContainsQ", "[", 
+              RowBox[{
+               RowBox[{"data", "[", 
+                RowBox[{"[", 
+                 RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", 
+               RowBox[{"StartOfString", "~~", "\"\<-\>\""}]}], "]"}], ",", 
+             RowBox[{
+              RowBox[{"data", "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "1"}], "]"}], "]"}], "<>", 
+              RowBox[{"StringDrop", "[", 
+               RowBox[{
+                RowBox[{"data", "[", 
+                 RowBox[{"[", 
+                  RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", "1"}], "]"}]}], 
+             ",", 
+             RowBox[{"data", "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"str2", "=", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<How many `1` would it take to weight as much as one `2`? \
+(average adult animals)\>\"", ",", "str1", ",", "str2"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"data", "[", 
+               RowBox[{"[", 
+                RowBox[{"2", ",", "3"}], "]"}], "]"}], 
+              RowBox[{"data", "[", 
+               RowBox[{"[", 
+                RowBox[{"1", ",", "3"}], "]"}], "]"}]], ",", ".01"}], "]"}]}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"dis", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"RandomReal", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"1", ",", 
+                 RowBox[{"Max", "[", 
+                  RowBox[{"10", ",", 
+                   RowBox[{"2", "*", "ansNo"}]}], "]"}]}], "}"}], ",", "3"}], 
+              "]"}], ",", ".01"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{"dis", ",", "ansNo"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Biol3\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6831303976399717`*^9, 3.6831303987811813`*^9}, {
@@ -136,14 +1493,393 @@ one of these four animals. Which one?\>\"", ",",
    3.684873375575259*^9, 3.6848733805644083`*^9}, {3.6848734527642803`*^9, 
    3.684873459832262*^9}, {3.684873511255197*^9, 3.684873515371152*^9}, {
    3.684873557350753*^9, 3.684873561388837*^9}, {3.6848736318203487`*^9, 
-   3.684873636144717*^9}, {3.684873675045233*^9, 
-   3.684873678274517*^9}},ExpressionUUID->"6e286f32-7a3e-4f85-bc6d-\
-c0a50e71bb51"]
+   3.684873636144717*^9}, {3.684873675045233*^9, 3.684873678274517*^9}, {
+   3.7361834110855093`*^9, 3.7361834164118757`*^9}, {3.736183513643939*^9, 
+   3.736183520843369*^9}, {3.736183652284585*^9, 3.736183656354843*^9}, {
+   3.736183710058978*^9, 3.736183714242025*^9}, {3.7361837662511253`*^9, 
+   3.736183770282283*^9}, {3.736183830987471*^9, 3.736183835106456*^9}, {
+   3.736183878754641*^9, 3.7361838809617662`*^9}, {3.736183940242741*^9, 
+   3.7361839475146093`*^9}, {3.7361840354193697`*^9, 3.736184038953616*^9}, {
+   3.7361840968667192`*^9, 3.7361841003211412`*^9}, {3.7361842925866823`*^9, 
+   3.7361842966010027`*^9}, {3.736184354657989*^9, 3.736184358128666*^9}, {
+   3.736184444120393*^9, 3.736184447575924*^9}, {3.736184516000516*^9, 
+   3.736184520271511*^9}, {3.7361846095284853`*^9, 3.7361846143671083`*^9}, {
+   3.736184858975614*^9, 3.736184864694386*^9}, {3.7361863476943693`*^9, 
+   3.7361864316758842`*^9}, {3.736186489605886*^9, 3.736186491435954*^9}, {
+   3.736186525468025*^9, 3.736186645346706*^9}, {3.7361869094036903`*^9, 
+   3.7361869242256413`*^9}, {3.7361873714983*^9, 3.736187388859557*^9}, {
+   3.736187448969939*^9, 3.736187451761526*^9}, {3.736187570809272*^9, 
+   3.7361875742405643`*^9}, {3.736187712018449*^9, 3.736187715648588*^9}, {
+   3.736187782566877*^9, 3.736187782861466*^9}, {3.736187837776733*^9, 
+   3.7361878414001703`*^9}, {3.736187882952907*^9, 3.7361879131841383`*^9}, {
+   3.7361880354802637`*^9, 3.7361880393366623`*^9}, {3.7361881432411613`*^9, 
+   3.736188163478793*^9}, {3.736188222047922*^9, 3.736188225439396*^9}, {
+   3.736188291776012*^9, 3.7361883222472982`*^9}, {3.7361886604868298`*^9, 
+   3.73618866416604*^9}, {3.736188713295126*^9, 3.736188716694007*^9}, {
+   3.73618877857469*^9, 3.736188781846909*^9}, {3.736188848062655*^9, 
+   3.736188864406639*^9}, {3.736188965669495*^9, 3.7361890199493113`*^9}, {
+   3.736189141181447*^9, 3.73618922700364*^9}, {3.736189490540173*^9, 
+   3.736189553074732*^9}, 3.736189585869471*^9, {3.736189650731627*^9, 
+   3.7361897099143476`*^9}, {3.736189772891047*^9, 3.73618981685093*^9}, {
+   3.736189932771475*^9, 3.736190065507882*^9}, {3.7362063867615023`*^9, 
+   3.73620641695613*^9}, {3.736206572953122*^9, 3.7362065753207083`*^9}, {
+   3.7362066649766912`*^9, 3.736206702841611*^9}, {3.736206951112337*^9, 
+   3.736207097504086*^9}, {3.736207390559044*^9, 3.7362073952303658`*^9}, {
+   3.7362075143429956`*^9, 3.736207577486946*^9}, {3.736207621158358*^9, 
+   3.736207730948525*^9}, {3.736207816508485*^9, 3.736207833411859*^9}, {
+   3.73620787697225*^9, 3.7362079176833973`*^9}, {3.736208015443466*^9, 
+   3.736208054619348*^9}, 3.736208173675187*^9, {3.736208254731203*^9, 
+   3.736208294906041*^9}, {3.736208328140731*^9, 3.73620845130512*^9}, {
+   3.736208588459195*^9, 3.736208595594717*^9}, {3.7362087109067717`*^9, 
+   3.736208713266252*^9}, {3.736208744769952*^9, 3.736208756473278*^9}, {
+   3.73620912893692*^9, 3.736209161018683*^9}, {3.7362092539688873`*^9, 
+   3.736209256528981*^9}, {3.736209450056528*^9, 3.7362094879716177`*^9}, {
+   3.736209576391816*^9, 3.736209590710643*^9}, {3.7362096997676897`*^9, 
+   3.736209709606879*^9}, {3.7362491146464577`*^9, 3.736249132756793*^9}, {
+   3.736249410116959*^9, 3.736249440683301*^9}, {3.736249513324821*^9, 
+   3.736249522035778*^9}, {3.7362495535583467`*^9, 3.736249560695334*^9}, {
+   3.73624961179697*^9, 3.7362496174360867`*^9}, {3.736249652449664*^9, 
+   3.736249653446834*^9}, {3.736249692437573*^9, 3.736249702299653*^9}, {
+   3.736249790580003*^9, 3.736249795643437*^9}, {3.7362499047079163`*^9, 
+   3.736249942801365*^9}, {3.7362500737159224`*^9, 3.7362500869300013`*^9}, {
+   3.736252767843062*^9, 3.736252770337594*^9}, {3.736252852278034*^9, 
+   3.736252890976318*^9}, {3.7362529896589527`*^9, 3.736253017163656*^9}, {
+   3.736253049804833*^9, 3.736253053000228*^9}, {3.73625323441745*^9, 
+   3.7362532384640923`*^9}, {3.736253313829509*^9, 3.736253375910892*^9}, {
+   3.73625378501511*^9, 3.7362538428493013`*^9}, 3.736253924664345*^9, {
+   3.736254272644943*^9, 3.736254288787642*^9}, {3.736254351293559*^9, 
+   3.7362543704279137`*^9}, {3.736254443261009*^9, 3.736254467587439*^9}, {
+   3.736254549226158*^9, 3.7362545533980703`*^9}, {3.7362547596047497`*^9, 
+   3.736254776206032*^9}, {3.736254909012569*^9, 3.736254954613214*^9}, {
+   3.736255021723414*^9, 3.736255080533243*^9}, {3.736255166803769*^9, 
+   3.7362551867860193`*^9}, {3.7362554265471573`*^9, 3.736255443889564*^9}, {
+   3.736255875521858*^9, 3.736255900088179*^9}, {3.736256712022591*^9, 
+   3.7362567226535397`*^9}, {3.736256815622745*^9, 3.7362568324856367`*^9}, {
+   3.736256884062336*^9, 3.736256893389175*^9}, {3.736256947446513*^9, 
+   3.736256966269343*^9}, {3.736257102384009*^9, 3.736257115758*^9}, {
+   3.7362571661503143`*^9, 3.736257242820291*^9}, {3.73625729905583*^9, 
+   3.73625731885326*^9}, {3.73625736813404*^9, 3.736257380581438*^9}, {
+   3.7362574329185343`*^9, 3.736257448294873*^9}, {3.73625752355823*^9, 
+   3.736257537421479*^9}, {3.736257579205315*^9, 3.736257600163835*^9}, {
+   3.73625769406874*^9, 3.736257719557714*^9}, {3.736257805310391*^9, 
+   3.736257816804249*^9}, {3.736257875044807*^9, 3.736257889011609*^9}, {
+   3.736257938670525*^9, 3.736257960884779*^9}, {3.736258022037668*^9, 
+   3.736258039226701*^9}, {3.7362581073639393`*^9, 3.736258121698646*^9}, {
+   3.736258193499832*^9, 3.736258224203718*^9}, {3.7362582968439617`*^9, 
+   3.7362583129954023`*^9}, {3.736258387812952*^9, 3.7362584182288637`*^9}, {
+   3.736258502739909*^9, 3.7362585125151863`*^9}, {3.736258576387437*^9, 
+   3.736258589506029*^9}, {3.73625863186049*^9, 3.736258644154191*^9}, {
+   3.736258697731564*^9, 3.736258712706292*^9}, {3.736258783299286*^9, 
+   3.736258808225733*^9}, {3.736258872675222*^9, 3.736258873684237*^9}, {
+   3.736258931570261*^9, 3.736258939041605*^9}, {3.736258989106867*^9, 
+   3.736259024898676*^9}, {3.736259063788681*^9, 3.736259077370886*^9}, {
+   3.7362591636515102`*^9, 3.736259177177751*^9}, {3.7362592594593773`*^9, 
+   3.736259270178411*^9}, {3.7362593186198378`*^9, 3.736259333898218*^9}, {
+   3.736259404859062*^9, 3.7362594140910378`*^9}, {3.7362594726514807`*^9, 
+   3.7362594830818377`*^9}, {3.7362595601299686`*^9, 3.736259597848102*^9}, {
+   3.736259641882131*^9, 3.736259644705339*^9}, {3.736259689733823*^9, 
+   3.7362597028568287`*^9}, {3.7362597799139233`*^9, 
+   3.7362598118320293`*^9}, {3.736259865089768*^9, 3.736259890208613*^9}, {
+   3.736259932250477*^9, 3.736259947609396*^9}, {3.736259984329094*^9, 
+   3.736259996816341*^9}, {3.736260096851059*^9, 3.7362601075615063`*^9}, {
+   3.736260212658607*^9, 3.7362602218892603`*^9}, {3.7362602677141647`*^9, 
+   3.7362602803765993`*^9}, {3.736260362649045*^9, 3.736260375192483*^9}, {
+   3.736260432010192*^9, 3.736260445016807*^9}, {3.73626053776298*^9, 
+   3.736260573336299*^9}, {3.736260615833352*^9, 3.7362606277206717`*^9}, {
+   3.73626156480864*^9, 3.736261576789976*^9}, {3.736261645583436*^9, 
+   3.736261658941616*^9}, {3.736261705247108*^9, 3.73626174481393*^9}, {
+   3.7362620217307777`*^9, 3.736262164921578*^9}, {3.736262427227894*^9, 
+   3.7362624370909033`*^9}, {3.736262710760745*^9, 3.7362627577457743`*^9}, {
+   3.736262849721859*^9, 3.736262916080657*^9}, {3.736262958657157*^9, 
+   3.736262964984873*^9}, {3.736263044440443*^9, 3.736263099528139*^9}, {
+   3.73626320719239*^9, 3.736263221263053*^9}, {3.7362632700589867`*^9, 
+   3.736263270551597*^9}, {3.736263322962192*^9, 3.736263335903281*^9}, 
+   3.736263437282683*^9, {3.736263473263338*^9, 3.7362634915374603`*^9}, 
+   3.736263531538953*^9, {3.736263608969244*^9, 3.736263610286407*^9}, {
+   3.7362639371273127`*^9, 3.736263947566942*^9}, {3.736264012096554*^9, 
+   3.736264032284865*^9}, {3.7362641214478693`*^9, 3.736264124524498*^9}, {
+   3.736264213567646*^9, 3.736264406064065*^9}, {3.736264472092207*^9, 
+   3.7362644739553556`*^9}, {3.73626478233365*^9, 3.7362648253645887`*^9}, {
+   3.7362648772914753`*^9, 3.7362648909873047`*^9}, {3.7362649494788513`*^9, 
+   3.7362649708833847`*^9}, {3.7362650585336857`*^9, 3.736265071452582*^9}, {
+   3.73626514813314*^9, 3.736265160172502*^9}, {3.736265217116871*^9, 
+   3.7362652304430923`*^9}, {3.736265265981454*^9, 3.736265283692281*^9}, {
+   3.736265390147767*^9, 3.736265403770327*^9}, {3.736268067680566*^9, 
+   3.736268096833112*^9}, 3.736268350240983*^9, {3.7362683900673943`*^9, 
+   3.736268422758512*^9}, {3.736269101595276*^9, 3.736269120454365*^9}, {
+   3.73626919289954*^9, 3.736269201133401*^9}, 3.736269546742755*^9, 
+   3.7362698687093983`*^9, {3.736270011157892*^9, 3.736270031499736*^9}, {
+   3.7362700976694603`*^9, 3.7362701145158873`*^9}, {3.7362702242305107`*^9, 
+   3.7362702482116632`*^9}, {3.736270366876193*^9, 3.736270390410636*^9}, 
+   3.7362704736618853`*^9, {3.736270651895316*^9, 3.73627068882661*^9}, {
+   3.736270719768846*^9, 3.736270788610099*^9}, {3.736270876740192*^9, 
+   3.7362708947616158`*^9}, {3.73627099426632*^9, 3.7362710152249937`*^9}, {
+   3.736271078236356*^9, 3.7362710959441853`*^9}, {3.7362713033314962`*^9, 
+   3.7362713194242277`*^9}, {3.736271415986203*^9, 3.736271448799958*^9}, {
+   3.736271504058361*^9, 3.736271536287236*^9}, {3.7362719113622713`*^9, 
+   3.736271950077997*^9}, {3.7362720244338017`*^9, 3.7362721296357718`*^9}, {
+   3.736272553033599*^9, 3.736272570028489*^9}, {3.7362726729974003`*^9, 
+   3.736272707243541*^9}, {3.736272821307106*^9, 3.736272848226993*^9}, {
+   3.736272978610015*^9, 3.736272996290951*^9}, {3.736273090202174*^9, 
+   3.736273114227036*^9}, {3.736273191337407*^9, 3.736273215580083*^9}, {
+   3.736273296809244*^9, 3.736273316758037*^9}, 3.736273375378002*^9, {
+   3.736273406125263*^9, 3.736273414009335*^9}, {3.7362734722570047`*^9, 
+   3.7362734883458223`*^9}, {3.736273546896832*^9, 3.736273591608912*^9}, {
+   3.736273649792429*^9, 3.7362736840734262`*^9}, {3.736273951727716*^9, 
+   3.736274002692174*^9}, {3.7362740902555017`*^9, 3.736274111843598*^9}, 
+   3.736274187247239*^9, {3.736274285326775*^9, 3.736274309123351*^9}, 
+   3.736274367352532*^9, {3.736274460303904*^9, 3.736274482077868*^9}, {
+   3.736274559126367*^9, 3.736274579922879*^9}, {3.736274659174258*^9, 
+   3.736274676478414*^9}, {3.736274776389201*^9, 3.736274798629775*^9}, {
+   3.7362748706128473`*^9, 3.736274903640985*^9}, {3.736274961068758*^9, 
+   3.736274991997854*^9}, {3.7362750762439423`*^9, 3.736275096189137*^9}, 
+   3.7362751735976553`*^9, {3.736275619976104*^9, 3.736275635046936*^9}, {
+   3.7362756983945932`*^9, 3.736275739538918*^9}, 3.7362758248822327`*^9, {
+   3.736275859937503*^9, 3.736275872646062*^9}, 3.73627603941781*^9, {
+   3.736277146949972*^9, 3.736277174303876*^9}, {3.736277280453846*^9, 
+   3.736277302743739*^9}, {3.736277411142413*^9, 3.7362774294748917`*^9}, {
+   3.736277487294023*^9, 3.736277502930748*^9}, {3.736277586253272*^9, 
+   3.736277605763667*^9}, {3.736277681125436*^9, 3.736277702506262*^9}, {
+   3.736277776941235*^9, 3.736277796380962*^9}, 3.7362778374741592`*^9, {
+   3.736277900443953*^9, 3.7362779293359957`*^9}, {3.736278016395281*^9, 
+   3.7362780315514593`*^9}, {3.73627808274702*^9, 3.736278106255278*^9}, {
+   3.736279218631463*^9, 3.736279247419663*^9}, {3.73627961705444*^9, 
+   3.736279645546249*^9}, 3.7362798351899443`*^9, 3.736279866887712*^9, {
+   3.736279914290132*^9, 3.736279923070861*^9}, {3.7362800341253653`*^9, 
+   3.736280050993198*^9}, {3.736280120461153*^9, 3.7362801394407578`*^9}, {
+   3.736280219301153*^9, 3.736280244568657*^9}, 3.7362803125912313`*^9, {
+   3.736280357337839*^9, 3.736280363904204*^9}, {3.736280496843721*^9, 
+   3.736280533447925*^9}, {3.736280611172073*^9, 3.736280644575789*^9}, 
+   3.736280708241477*^9, {3.736280806707429*^9, 3.736280821559026*^9}, {
+   3.736280879714013*^9, 3.7362809012708*^9}, {3.7362809693556213`*^9, 
+   3.7362810015353603`*^9}, 3.7362810615734997`*^9, {3.7362811002722597`*^9, 
+   3.736281109598751*^9}, 3.736281174834612*^9, {3.736281238120726*^9, 
+   3.736281248286571*^9}, 3.736281332282362*^9, {3.736281374326573*^9, 
+   3.736281385918133*^9}, {3.7362814695217133`*^9, 3.736281481380241*^9}, {
+   3.736281542658227*^9, 3.736281562821513*^9}, 3.736281623433159*^9, {
+   3.736282710395959*^9, 3.736282721555402*^9}, {3.736282793949966*^9, 
+   3.7362828191541843`*^9}, {3.736282875966497*^9, 3.736282904361642*^9}, {
+   3.736282966405808*^9, 3.73628298635369*^9}, {3.736283035543909*^9, 
+   3.736283049761402*^9}, 3.7362831129416027`*^9, {3.736283165420931*^9, 
+   3.736283196718616*^9}, {3.7362832486205807`*^9, 3.736283253177701*^9}, {
+   3.7362837306806917`*^9, 3.736283744486805*^9}, {3.736283798610423*^9, 
+   3.736283820686627*^9}, {3.736294023643607*^9, 3.73629404520533*^9}, {
+   3.7362941325934153`*^9, 3.736294149022086*^9}, {3.736294227464979*^9, 
+   3.7362942568767147`*^9}, {3.736294327930111*^9, 3.73629434989226*^9}, {
+   3.736294455607812*^9, 3.736294478824774*^9}, {3.736294562574839*^9, 
+   3.736294582314992*^9}, {3.736294844286223*^9, 3.7362948693380337`*^9}, {
+   3.7362949909499493`*^9, 3.736295007865534*^9}, {3.73629509123962*^9, 
+   3.736295105064863*^9}, {3.736295193732397*^9, 3.7362952124565496`*^9}, {
+   3.7362953760931463`*^9, 3.736295401465414*^9}, {3.736295461693181*^9, 
+   3.736295477455237*^9}, {3.7362955875652637`*^9, 3.736295607849421*^9}, 
+   3.736295730647875*^9, {3.736295767329796*^9, 3.736295796032599*^9}, {
+   3.7362958340084257`*^9, 3.736295843256736*^9}, {3.7363375171636267`*^9, 
+   3.7363375328076982`*^9}, {3.736337594379692*^9, 3.73633761304745*^9}, {
+   3.736337692691345*^9, 3.7363377075829163`*^9}, {3.736337770211524*^9, 
+   3.736337788646669*^9}, {3.736338280156715*^9, 3.7363382960768967`*^9}, {
+   3.736338423841186*^9, 3.736338440396649*^9}, {3.7363386311285887`*^9, 
+   3.736338646249885*^9}, {3.7363387724965963`*^9, 3.736338791841629*^9}, {
+   3.736338885281919*^9, 3.736338910284624*^9}, {3.7363389999610443`*^9, 
+   3.736339015707879*^9}, {3.736339091447504*^9, 3.736339104563241*^9}, {
+   3.7363391642799187`*^9, 3.736339181208272*^9}, {3.736339265158209*^9, 
+   3.7363392934088373`*^9}, {3.736339367197917*^9, 3.736339386473584*^9}, {
+   3.736339460294067*^9, 3.736339477905774*^9}, {3.736339540512116*^9, 
+   3.736339555966539*^9}, {3.736339650757918*^9, 3.7363396708487453`*^9}, {
+   3.7363397592611303`*^9, 3.736339779520994*^9}, {3.736339855813081*^9, 
+   3.736339894256201*^9}, {3.736339927402255*^9, 3.736339929335744*^9}, {
+   3.736339972111512*^9, 3.73633997247589*^9}, {3.736340006287499*^9, 
+   3.736340012830749*^9}, {3.7363400677512503`*^9, 3.736340166142043*^9}, {
+   3.736340285862359*^9, 3.736340305125905*^9}, {3.736340356510305*^9, 
+   3.736340400821563*^9}, {3.736340615336055*^9, 3.7363406612210503`*^9}},
+ CellLabel->
+  "In[2132]:=",ExpressionUUID->"8e69f80f-dde0-43e7-b5fa-b95b4bcfd8d6"],
+
+Cell["\<\
+The cells below are useful for finding new entries for the database in the \
+second block.\
+\>", "Text",
+ CellChangeTimes->{{3.7362606670439663`*^9, 
+  3.73626070827544*^9}},ExpressionUUID->"48f157f5-ab8e-4c0e-b534-\
+32e6ea648a09"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"EntityValue", "[", 
+  RowBox[{
+   TemplateBox[{"\"purple-faced langur\"",RowBox[{"Entity", "[", 
+       RowBox[{"\"Species\"", ",", "\"Species:TrachypithecusVetulus\""}], 
+       "]"}],"\"Entity[\\\"Species\\\", \
+\\\"Species:TrachypithecusVetulus\\\"]\"","\"species specification\""},
+    "Entity"], ",", 
+   RowBox[{"{", 
+    RowBox[{"\"\<CommonName\>\"", ",", "\"\<Weight\>\""}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.736187214861867*^9, 3.7361872719823236`*^9}, {
+   3.736187310068721*^9, 3.736187356167038*^9}, {3.736187416000729*^9, 
+   3.736187416738092*^9}, {3.736187463920361*^9, 3.736187467161813*^9}, {
+   3.73618751109464*^9, 3.736187511682105*^9}, {3.736187596823969*^9, 
+   3.7361876290087347`*^9}, {3.73618781163116*^9, 3.736187812289351*^9}, {
+   3.7361878486471663`*^9, 3.736187850689587*^9}, {3.73618793343186*^9, 
+   3.7361879351846523`*^9}, {3.736188001308717*^9, 3.736188003273312*^9}, {
+   3.736188051453865*^9, 3.736188052329061*^9}, {3.736188198191242*^9, 
+   3.7361881988891077`*^9}, {3.736188256277882*^9, 3.736188258344207*^9}, {
+   3.7361883651655273`*^9, 3.7361883698238163`*^9}, {3.7361884049401293`*^9, 
+   3.736188438031604*^9}, {3.7361884792519207`*^9, 3.736188480615844*^9}, {
+   3.736188522300016*^9, 3.7361885432388973`*^9}, {3.736188576557147*^9, 
+   3.7361885798548737`*^9}, {3.736188622323352*^9, 3.736188624695024*^9}, {
+   3.736188672500738*^9, 3.736188673711047*^9}, {3.736188728900515*^9, 
+   3.736188733030982*^9}, {3.736188876412086*^9, 3.736188879390099*^9}, {
+   3.73618904466072*^9, 3.736189047102029*^9}, {3.736206287575699*^9, 
+   3.7362062883888187`*^9}, {3.736206442485565*^9, 3.736206448881379*^9}, {
+   3.736206479575775*^9, 3.736206483872581*^9}, {3.736206540886417*^9, 
+   3.736206541713388*^9}, {3.736206632246982*^9, 3.7362066447366047`*^9}, {
+   3.7362067556222153`*^9, 3.736206756393211*^9}, {3.736206811878025*^9, 
+   3.736206814151574*^9}, {3.736207127331541*^9, 3.7362071296873817`*^9}, {
+   3.736207211012579*^9, 3.736207211791211*^9}, {3.736208547503317*^9, 
+   3.736208550195685*^9}, {3.736208623630859*^9, 3.73620862721776*^9}, {
+   3.736208680550851*^9, 3.736208681202051*^9}, {3.7362090504137697`*^9, 
+   3.736209051913349*^9}, {3.736209215197074*^9, 3.736209220633099*^9}, {
+   3.736209273756089*^9, 3.736209275688044*^9}, {3.736209527652082*^9, 
+   3.736209529823606*^9}, {3.736209629139515*^9, 3.73620963295868*^9}, 
+   3.7362096779802647`*^9, {3.736249007253216*^9, 3.736249007913383*^9}, 
+   3.736249098676386*^9, {3.736249192042931*^9, 3.736249193300853*^9}, 
+   3.7362492275146914`*^9, {3.736249583665183*^9, 3.7362495863552923`*^9}, {
+   3.736249744416246*^9, 3.736249746667788*^9}, {3.7362500432062273`*^9, 
+   3.736250046329473*^9}, {3.736250105086046*^9, 3.7362501060329313`*^9}, {
+   3.736252925084841*^9, 3.736252925656147*^9}, {3.73625317242789*^9, 
+   3.736253183361204*^9}, {3.736253388331249*^9, 3.7362533905745163`*^9}, {
+   3.736253568107551*^9, 3.736253618524509*^9}, {3.736253962530167*^9, 
+   3.736253969324497*^9}, {3.736254153268903*^9, 3.7362541613156557`*^9}, {
+   3.7362542135914297`*^9, 3.736254220531122*^9}, {3.7362543192399187`*^9, 
+   3.736254321740698*^9}, {3.736254391440619*^9, 3.7362543978519773`*^9}, {
+   3.736254702896009*^9, 3.736254704962151*^9}, {3.736254802727173*^9, 
+   3.736254805283208*^9}, 3.736254855496167*^9, {3.736254983327219*^9, 
+   3.73625498597825*^9}, {3.7362551387198677`*^9, 3.736255140184396*^9}, {
+   3.736255196045541*^9, 3.736255197249634*^9}, 3.7362554029742203`*^9, {
+   3.7362554789816847`*^9, 3.73625547980801*^9}, {3.7362560062205763`*^9, 
+   3.736256018765299*^9}, 3.736256698667254*^9, 3.7362567986350517`*^9, 
+   3.7362568642598753`*^9, 3.736256923987831*^9, 3.7362570624181557`*^9, 
+   3.736257144786972*^9, 3.736257215720744*^9, 3.7362572811957083`*^9, 
+   3.736257346035603*^9, 3.736257412402087*^9, 3.7362574843135757`*^9, 
+   3.7362575587129087`*^9, 3.736257639601779*^9, 3.736257784824691*^9, 
+   3.7362578565208397`*^9, 3.7362579054005613`*^9, 3.736258000440357*^9, 
+   3.736258090113162*^9, 3.736258147351987*^9, 3.7362582574717817`*^9, 
+   3.7362583318877277`*^9, 3.736258459479158*^9, 3.736258552527213*^9, 
+   3.736258616390834*^9, 3.736258665742731*^9, 3.7362587574940033`*^9, 
+   3.7362588514621887`*^9, 3.736258967613694*^9, 3.736259044213162*^9, {
+   3.736259131373467*^9, 3.736259146987919*^9}, 3.736259239524892*^9, 
+   3.736259298060409*^9, 3.736259380812131*^9, 3.7362594570999937`*^9, 
+   3.7362595163984537`*^9, 3.736259624083214*^9, 3.736259745691309*^9, 
+   3.736259840963995*^9, 3.7362599123785133`*^9, 3.7362599668666553`*^9, 
+   3.736260071482418*^9, 3.736260189900024*^9, 3.736260250698669*^9, 
+   3.736260346466969*^9, 3.736260408395701*^9, 3.7362604823796663`*^9, 
+   3.736260594481792*^9, 3.736261545831238*^9, 3.73626162984593*^9, 
+   3.736261682350596*^9, 3.736264767615902*^9, 3.7362650401424847`*^9, 
+   3.736265119806217*^9, 3.7362651958515177`*^9, 3.736265246029304*^9, 
+   3.7362653645805597`*^9},
+ CellLabel->
+  "In[1585]:=",ExpressionUUID->"caad9e97-20f1-4b21-94c3-06650812a722"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"purple-faced langur\"\>", ",", 
+   TemplateBox[{"15.612696483408662`","\"lb\"","pounds","\"Pounds\""},
+    "Quantity"]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.7361873220309668`*^9, 3.736187358601511*^9, 3.736187437143032*^9, 
+   3.736187484344646*^9, 3.7361875558340178`*^9, {3.736187613394582*^9, 
+   3.736187641674823*^9}, 3.736187824730555*^9, {3.736187862892641*^9, 
+   3.7361878688039627`*^9}, 3.736188014598031*^9, 3.7361880644780397`*^9, 
+   3.7361882078440866`*^9, 3.736188272219915*^9, 3.736188423787468*^9, 
+   3.736188526124033*^9, 3.736188564123927*^9, 3.736188641179812*^9, 
+   3.7361886827467747`*^9, 3.736188743396288*^9, 3.736188948992997*^9, 
+   3.7361890730356073`*^9, 3.736206361676675*^9, {3.7362064663625317`*^9, 
+   3.736206494713236*^9}, 3.736206553938629*^9, 3.736206655627953*^9, 
+   3.736206792371489*^9, 3.736207143021249*^9, 3.736207328738226*^9, 
+   3.736208568039538*^9, 3.736208642323594*^9, 3.736208693216577*^9, 
+   3.736209076787356*^9, 3.7362092355530148`*^9, 3.736209297048758*^9, 
+   3.7362095480758877`*^9, 3.736209680817236*^9, {3.7362490711013117`*^9, 
+   3.736249100904621*^9}, 3.736249229311913*^9, 3.736249595836411*^9, 
+   3.736249774931203*^9, 3.736250061764838*^9, 3.736252756452178*^9, 
+   3.736252937923682*^9, 3.7362532124975357`*^9, {3.736253570494728*^9, 
+   3.73625362022029*^9}, 3.7362540170301323`*^9, {3.73625424935297*^9, 
+   3.736254256780005*^9}, 3.7362543343206043`*^9, 3.736254418580718*^9, 
+   3.736254719115641*^9, {3.736254849679669*^9, 3.7362548577841787`*^9}, 
+   3.7362550043443317`*^9, 3.736255152796938*^9, 3.736255405697134*^9, 
+   3.7362554952251472`*^9, {3.736256008798834*^9, 3.736256020425021*^9}, 
+   3.736256702921274*^9, 3.7362568012137127`*^9, 3.736256866053788*^9, 
+   3.7362569258122168`*^9, 3.7362570647594547`*^9, 3.7362571468993*^9, 
+   3.736257217558305*^9, 3.736257283907188*^9, 3.736257348581252*^9, 
+   3.73625741437123*^9, 3.736257486533457*^9, 3.7362575640274267`*^9, 
+   3.7362576413541183`*^9, 3.736257787045836*^9, 3.73625785837226*^9, 
+   3.736257907339663*^9, 3.736258003779605*^9, 3.7362580920069447`*^9, 
+   3.73625814993843*^9, 3.7362582599006042`*^9, 3.736258334023797*^9, 
+   3.736258461526455*^9, 3.736258554820705*^9, 3.7362586190500593`*^9, 
+   3.736258668247246*^9, 3.736258759566976*^9, 3.736258853883409*^9, 
+   3.736258969808978*^9, 3.7362590463002987`*^9, 3.736259133820264*^9, 
+   3.7362592440717707`*^9, 3.7362593013333*^9, 3.736259383804904*^9, 
+   3.736259459080858*^9, 3.73625951893994*^9, 3.736259626519146*^9, 
+   3.736259748432873*^9, 3.736259843118615*^9, 3.736259915547737*^9, 
+   3.736259969175281*^9, 3.736260073819151*^9, 3.736260191937554*^9, 
+   3.736260252747353*^9, 3.7362603486854553`*^9, 3.736260410490081*^9, 
+   3.73626048449165*^9, 3.736260598857317*^9, 3.736261548662775*^9, 
+   3.736261632015081*^9, 3.7362616842432947`*^9, 3.7362647707063723`*^9, 
+   3.736265042604768*^9, 3.736265122861061*^9, 3.7362651977568893`*^9, 
+   3.73626524963056*^9, 3.736265367185828*^9},
+ CellLabel->
+  "Out[1585]=",ExpressionUUID->"735213b3-fbb4-4ee5-8c3b-8621ea04e8f2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  RowBox[{"Mean", "[", 
+   RowBox[{"{", 
+    RowBox[{"68", ",", "140"}], "}"}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.73625278603437*^9, 3.736252823098844*^9}, {
+  3.7362529487486143`*^9, 3.736252972346623*^9}, {3.736253261150034*^9, 
+  3.7362532933211527`*^9}, {3.736254731799055*^9, 3.736254739428597*^9}, {
+  3.7362576593511047`*^9, 3.7362576760995197`*^9}, {3.736258344808875*^9, 
+  3.7362583545137672`*^9}, {3.736259531793941*^9, 3.7362595431500607`*^9}, {
+  3.736260506126495*^9, 3.7362605150760612`*^9}},
+ CellLabel->
+  "In[1505]:=",ExpressionUUID->"86c7dcb0-650e-4d1d-804d-d0f708664de5"],
+
+Cell[BoxData["104.`"], "Output",
+ CellChangeTimes->{{3.736252803910788*^9, 3.736252824176236*^9}, 
+   3.7362529741164494`*^9, 3.7362532638538857`*^9, 3.7362532949673233`*^9, 
+   3.736254743160942*^9, 3.736257678999318*^9, 3.736258354917*^9, 
+   3.7362595460155687`*^9, 3.7362605183039494`*^9},
+ CellLabel->
+  "Out[1505]=",ExpressionUUID->"97f5405b-021c-4ad1-b101-b6a50e65153d"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"RandomEntity", "[", 
+  RowBox[{
+   RowBox[{"EntityClass", "[", 
+    RowBox[{"\"\<Species\>\"", ",", 
+     RowBox[{"\"\<Weight\>\"", " ", "\[Rule]", 
+      RowBox[{"Quantity", "[", 
+       RowBox[{
+        RowBox[{"Interval", "[", 
+         RowBox[{"{", 
+          RowBox[{"4", ",", "600"}], "}"}], "]"}], ",", "\"\<Pounds\>\""}], 
+       "]"}]}]}], "]"}], ",", "100"}], "]"}]], "Input",
+ CellChangeTimes->{{3.736255957849121*^9, 3.736255978632299*^9}, 
+   3.736256032637553*^9, {3.73625617710903*^9, 3.7362562416552896`*^9}, {
+   3.7362562876724157`*^9, 3.736256315351758*^9}, {3.7362564134180737`*^9, 
+   3.736256475223328*^9}, {3.736256592321014*^9, 3.736256649606819*^9}},
+ CellLabel->
+  "In[1582]:=",ExpressionUUID->"cd5a52ac-2fe4-495f-83fe-976620edcf99"]
 },
-WindowSize->{1229, 963},
-WindowMargins->{{0, Automatic}, {Automatic, 93}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1188, 1390},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowStatusArea->None,
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -157,7 +1893,17 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6921, 120, 388, "Input",ExpressionUUID->"6e286f32-7a3e-4f85-bc6d-c0a50e71bb51"]
+Cell[558, 20, 84269, 1674, 5353, "Input",ExpressionUUID->"8e69f80f-dde0-43e7-b5fa-b95b4bcfd8d6"],
+Cell[84830, 1696, 241, 6, 35, "Text",ExpressionUUID->"48f157f5-ab8e-4c0e-b534-32e6ea648a09"],
+Cell[CellGroupData[{
+Cell[85096, 1706, 5095, 75, 40, "Input",ExpressionUUID->"caad9e97-20f1-4b21-94c3-06650812a722"],
+Cell[90194, 1783, 3130, 47, 38, "Output",ExpressionUUID->"735213b3-fbb4-4ee5-8c3b-8621ea04e8f2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[93361, 1835, 637, 12, 30, "Input",ExpressionUUID->"86c7dcb0-650e-4d1d-804d-d0f708664de5"],
+Cell[94001, 1849, 377, 6, 34, "Output",ExpressionUUID->"97f5405b-021c-4ad1-b101-b6a50e65153d"]
+}, Open  ]],
+Cell[94393, 1858, 783, 17, 30, "Input",ExpressionUUID->"cd5a52ac-2fe4-495f-83fe-976620edcf99"]
 }
 ]
 *)
