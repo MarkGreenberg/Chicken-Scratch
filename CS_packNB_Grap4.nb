@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6964,        174]
-NotebookOptionsPosition[      6519,        157]
-NotebookOutlinePosition[      6881,        173]
-CellTagsIndexPosition[      6838,        170]
+NotebookDataLength[     12600,        282]
+NotebookOptionsPosition[     12291,        268]
+NotebookOutlinePosition[     12645,        284]
+CellTagsIndexPosition[     12602,        281]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -28,94 +26,203 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"vertCt", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"4", ",", "12"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"thisV", "=", 
-        RowBox[{"RandomInteger", "[", "vertCt", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"maxEdge", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{".5", " ", 
-          SuperscriptBox["vertCt", "2"]}], "-", 
-         RowBox[{".5", " ", "vertCt"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"edgeCt", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"3", ",", 
-           RowBox[{"Floor", "[", "maxEdge", "]"}]}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"graph", "=", 
-        RowBox[{"RandomGraph", "[", 
-         RowBox[{
+         RowBox[{"RandomInteger", "[", 
           RowBox[{"{", 
-           RowBox[{"vertCt", ",", "edgeCt"}], "}"}], ",", 
-          RowBox[{"VertexSize", "\[Rule]", "Medium"}], ",", 
-          RowBox[{"VertexStyle", "\[Rule]", 
-           RowBox[{"Directive", "[", 
-            RowBox[{"RGBColor", "[", "\"\<#89F\>\"", "]"}], "]"}]}], ",", 
-          RowBox[{"VertexLabels", "\[Rule]", "\"\<Index\>\""}], ",", 
-          RowBox[{"VertexLabelStyle", "\[Rule]", 
-           RowBox[{"Directive", "[", 
-            RowBox[{"Blue", ",", 
-             RowBox[{"FontSize", "\[Rule]", "15"}]}], "]"}]}], ",", 
-          RowBox[{"EdgeStyle", "\[Rule]", 
-           RowBox[{"Directive", "[", 
-            RowBox[{"Thick", ",", "Gray"}], "]"}]}], ",", 
-          RowBox[{"ImageSize", "\[Rule]", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"vertCt", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"4", ",", "12"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"thisV", "=", 
+           RowBox[{"RandomInteger", "[", "vertCt", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"maxEdge", "=", 
+           RowBox[{
+            RowBox[{".5", " ", 
+             SuperscriptBox["vertCt", "2"]}], "-", 
+            RowBox[{".5", " ", "vertCt"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"edgeCt", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"3", ",", 
+              RowBox[{"Floor", "[", "maxEdge", "]"}]}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"graph", "=", 
+           RowBox[{"RandomGraph", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"vertCt", ",", "edgeCt"}], "}"}], ",", 
+             RowBox[{"VertexSize", "\[Rule]", "Medium"}], ",", 
+             RowBox[{"VertexStyle", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"RGBColor", "[", "\"\<#89F\>\"", "]"}], "]"}]}], ",", 
+             RowBox[{"VertexLabels", "\[Rule]", "\"\<Index\>\""}], ",", 
+             RowBox[{"VertexLabelStyle", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"Blue", ",", 
+                RowBox[{"FontSize", "\[Rule]", "15"}]}], "]"}]}], ",", 
+             RowBox[{"EdgeStyle", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"Thick", ",", "Gray"}], "]"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"Rasterize", "[", 
+              RowBox[{"h1", ",", 
+               RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], "]"}], "/.", 
+            
+            RowBox[{"h1", "\[Rule]", "graph"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{"VertexDegree", "[", 
+            RowBox[{"graph", ",", "thisV"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"DeleteCases", "[", 
+                RowBox[{
+                 RowBox[{"Range", "[", 
+                  RowBox[{"0", ",", "6"}], "]"}], ",", "ansNo"}], "]"}], ",", 
+               "3"}], "]"}], ",", "ansNo"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          RowBox[{"q", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"StringForm", "[", 
+              RowBox[{
+              "\"\<In this vertex-edge graph, what is the degree of vertex \
+number ``?\>\"", ",", "thisV"}], "]"}], ",", 
+             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "q", "=", 
+           "\"\<If the arrows represent gifts between people, who ends up \
+with more gifts?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"names", "=", 
            RowBox[{"{", 
             RowBox[{
-             RowBox[{"{", "480", "}"}], ",", 
-             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"Rasterize", "[", 
-           RowBox[{"h1", ",", 
-            RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], "]"}], "/.", 
-         RowBox[{"h1", "\[Rule]", "graph"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"ansNo", "=", 
-        RowBox[{"VertexDegree", "[", 
-         RowBox[{"graph", ",", "thisV"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Prepend", "[", 
-         RowBox[{
-          RowBox[{"RandomSample", "[", 
+            "\"\<Mark\>\"", ",", "\"\<Jim\>\"", ",", "\"\<Lee\>\"", ",", 
+             "\"\<Jill\>\"", ",", "\"\<Sue\>\"", ",", "\"\<Jose\>\"", ",", 
+             "\"\<Elsa\>\"", ",", "\"\<Alan\>\"", ",", "\"\<Lisa\>\"", ",", 
+             "\"\<Lynn\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"edges", "=", 
            RowBox[{
-            RowBox[{"DeleteCases", "[", 
+            RowBox[{
              RowBox[{
-              RowBox[{"Range", "[", 
-               RowBox[{"0", ",", "6"}], "]"}], ",", "ansNo"}], "]"}], ",", 
-            "3"}], "]"}], ",", "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-          RowBox[{"StringForm", "[", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "1", "]"}], "]"}], "\[DirectedEdge]", 
+              RowBox[{"#", "[", 
+               RowBox[{"[", "2", "]"}], "]"}]}], "&"}], "/@", 
+            RowBox[{"Partition", "[", 
+             RowBox[{
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "10"}], "}"}], ",", "30"}], "]"}], ",", 
+              "2"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Graph", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{"1", ",", "10"}], "]"}], ",", "edges", ",", 
+             RowBox[{"GraphLayout", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<SpringElectricalEmbedding\>\"", ",", 
+                RowBox[{"\"\<Rotation\>\"", "\[Rule]", 
+                 FractionBox["\[Pi]", "2"]}]}], "}"}]}], ",", 
+             RowBox[{"EdgeStyle", "\[Rule]", "Blue"}], ",", 
+             RowBox[{"VertexLabels", "\[Rule]", 
+              RowBox[{"Thread", "[", 
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "10"}], "]"}], "\[Rule]", "names"}], 
+               "]"}]}], ",", 
+             RowBox[{"VertexLabelStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<Times New Roman\>\"", ",", "18"}], "}"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"UpTo", "[", "480", "]"}], ",", 
+                RowBox[{"UpTo", "[", "540", "]"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"AssociationThread", "[", 
+            RowBox[{"names", ",", 
+             RowBox[{
+              RowBox[{"VertexInDegree", "[", "pic", "]"}], "-", 
+              RowBox[{"VertexOutDegree", "[", "pic", "]"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"maxes", "=", 
+           RowBox[{"Select", "[", 
+            RowBox[{"data", ",", 
+             RowBox[{
+              RowBox[{"#", "==", 
+               RowBox[{"Max", "[", "data", "]"}]}], "&"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"rest", "=", 
+           RowBox[{"Complement", "[", 
+            RowBox[{"data", ",", "maxes"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"Take", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", "rest", "]"}], ",", "3"}], "]"}],
+               ",", 
+              RowBox[{"RandomSample", "[", 
+               RowBox[{"maxes", ",", "1"}], "]"}]}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
            RowBox[{
-           "\"\<In this vertex-edge graph, what is the degree of vertex \
-number ``?\>\"", ",", "thisV"}], "]"}], ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Grap4\>\"", ",", 
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "\[IndentingNewLine]", "]"}], "&"}]}], "]"}], "]"}], 
+   ",", "\[IndentingNewLine]", "\"\<CS_pack_Grap4\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6829418312466183`*^9, 3.682941836913295*^9}, {
    3.682942244242238*^9, 3.682942343591689*^9}, {3.6829423765495462`*^9, 
@@ -128,37 +235,41 @@ number ``?\>\"", ",", "thisV"}], "]"}], ",",
    3.726058308529953*^9, 3.7260583270087013`*^9}, {3.7260585759529867`*^9, 
    3.726058577215659*^9}, {3.726058629264702*^9, 3.7260586395192842`*^9}, {
    3.726058806166662*^9, 3.7260588423345413`*^9}, {3.726059055142302*^9, 
-   3.7260590849820833`*^9}, {3.726059120254203*^9, 
-   3.726059148933025*^9}},ExpressionUUID->"f7338e11-86d3-4be0-a34b-\
-c78d4b6719fc"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap4\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap4"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap4"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{
-  3.6829423515722227`*^9, 3.682942389051862*^9, 3.6829427203415947`*^9, 
-   3.682945221516543*^9, 3.683626750709207*^9, 3.687447154447872*^9, 
-   3.715525701118202*^9, {3.726056896111033*^9, 3.726057021359153*^9}, {
-   3.726058064320073*^9, 3.726058083297944*^9}, {3.726058208121489*^9, 
-   3.7260582335311527`*^9}, {3.726058313950947*^9, 3.726058329750752*^9}, {
-   3.7260585794242077`*^9, 3.7260585941032267`*^9}, {3.726058632474037*^9, 
-   3.726058641233919*^9}, {3.726058676785239*^9, 3.726058717126698*^9}, 
-   3.726058864924684*^9, 
-   3.726059160810548*^9},ExpressionUUID->"48982837-808e-4a57-982f-\
-b5535b1cff08"]
-}, Open  ]]
+   3.7260590849820833`*^9}, {3.726059120254203*^9, 3.726059148933025*^9}, {
+   3.73800897672468*^9, 3.738008997412825*^9}, {3.7380090342635193`*^9, 
+   3.738009167390543*^9}, {3.73800919751149*^9, 3.7380092862138844`*^9}, {
+   3.7380093262952833`*^9, 3.738009348542026*^9}, {3.738009380607452*^9, 
+   3.738009391837826*^9}, 3.7380215968782463`*^9, {3.738021782672887*^9, 
+   3.73802185632104*^9}, {3.738022063543907*^9, 3.738022088767147*^9}, {
+   3.738022159575838*^9, 3.738022223454667*^9}, {3.7380618509576693`*^9, 
+   3.738061893828861*^9}, {3.738061935141452*^9, 3.7380620499793367`*^9}, 
+   3.738062114268771*^9, {3.738062151596107*^9, 3.738062168043322*^9}, {
+   3.738062358339272*^9, 3.738062409474592*^9}, {3.738062609420027*^9, 
+   3.738062695161853*^9}, {3.738062964090404*^9, 3.7380629650895643`*^9}, {
+   3.7380638092255287`*^9, 3.738063822167165*^9}, {3.73806421077457*^9, 
+   3.7380642326859293`*^9}, {3.738064272168482*^9, 3.7380642746835938`*^9}, 
+   3.73806827516405*^9, {3.738068318963944*^9, 3.738068371811414*^9}, {
+   3.738068481339085*^9, 3.738068493555003*^9}, {3.738068526763123*^9, 
+   3.7380686801299343`*^9}, {3.7380687105629787`*^9, 
+   3.7380687257619543`*^9}, {3.738068833145915*^9, 3.738068856353709*^9}, {
+   3.7380689807070017`*^9, 3.738068994081318*^9}, {3.7380690510416718`*^9, 
+   3.738069051897867*^9}, {3.738069254089666*^9, 3.738069269096024*^9}, {
+   3.738069344472744*^9, 3.738069348728194*^9}, {3.738069501081162*^9, 
+   3.7380695262877083`*^9}, {3.738069566584059*^9, 3.7380695793597383`*^9}, {
+   3.7380696141999083`*^9, 3.7380696453589993`*^9}, {3.7380696818484573`*^9, 
+   3.7380696838791227`*^9}, {3.7380697894961767`*^9, 3.738069820167049*^9}, {
+   3.738070485629435*^9, 3.7380705000134068`*^9}, {3.738070560965186*^9, 
+   3.738070602780809*^9}, {3.738070837861218*^9, 3.738070838980156*^9}, {
+   3.738070880052211*^9, 3.7380708812513237`*^9}, {3.7380710244835052`*^9, 
+   3.738071078291401*^9}, {3.738071134212326*^9, 3.738071259523436*^9}, {
+   3.738071635211007*^9, 3.738071670985211*^9}},
+ CellLabel->
+  "In[1398]:=",ExpressionUUID->"f7338e11-86d3-4be0-a34b-c78d4b6719fc"]
 },
-WindowSize->{1245, 1012},
-WindowMargins->{{11, Automatic}, {Automatic, 142}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1380, 1349},
+WindowMargins->{{7, Automatic}, {Automatic, 4}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -172,10 +283,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 4893, 110, 377, "Input",ExpressionUUID->"f7338e11-86d3-4be0-a34b-c78d4b6719fc"],
-Cell[5476, 134, 1027, 20, 71, "Output",ExpressionUUID->"48982837-808e-4a57-982f-b5535b1cff08"]
-}, Open  ]]
+Cell[558, 20, 11729, 246, 807, "Input",ExpressionUUID->"f7338e11-86d3-4be0-a34b-c78d4b6719fc"]
 }
 ]
 *)
