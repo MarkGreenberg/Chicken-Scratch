@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5247,        135]
-NotebookOptionsPosition[      4934,        121]
-NotebookOutlinePosition[      5294,        137]
-CellTagsIndexPosition[      5251,        134]
+NotebookDataLength[     11046,        253]
+NotebookOptionsPosition[     10737,        239]
+NotebookOutlinePosition[     11091,        255]
+CellTagsIndexPosition[     11048,        252]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,81 +26,180 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"area1", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"4", ",", "200"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"area2", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"4", ",", "200"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansNo", "=", 
-        RowBox[{"Rationalize", "[", 
-         RowBox[{
-          FractionBox[
-           RowBox[{"\[Sqrt]", 
-            RowBox[{"(", 
-             RowBox[{"area1", "/", "\[Pi]"}], ")"}]}], 
-           RowBox[{"\[Sqrt]", 
-            RowBox[{"(", 
-             RowBox[{"area2", "/", "\[Pi]"}], ")"}]}]], ",", ".001"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"diss", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Rationalize", "[", 
-           RowBox[{"#", ",", ".001"}], "]"}], "&"}], "/@", " ", 
-         RowBox[{"Join", "[", 
-          RowBox[{
-           RowBox[{"RandomReal", "[", 
+          RowBox[{"area1", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"4", ",", "200"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"area2", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"4", ",", "200"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{"Rationalize", "[", 
+            RowBox[{
+             FractionBox[
+              RowBox[{"\[Sqrt]", 
+               RowBox[{"(", 
+                RowBox[{"area1", "/", "\[Pi]"}], ")"}]}], 
+              RowBox[{"\[Sqrt]", 
+               RowBox[{"(", 
+                RowBox[{"area2", "/", "\[Pi]"}], ")"}]}]], ",", ".001"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"diss", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Rationalize", "[", 
+              RowBox[{"#", ",", ".001"}], "]"}], "&"}], "/@", " ", 
+            RowBox[{"Join", "[", 
+             RowBox[{
+              RowBox[{"RandomReal", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{".01", ",", "1"}], "}"}], ",", "5"}], "]"}], ",", 
+              RowBox[{"RandomReal", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "7"}], "}"}], ",", "5"}], "]"}]}], 
+             "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{"diss", ",", "ansNo"}], "]"}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Circle `1` has an area of `2`. Circle `3` has an area of \
+`4`. What is the approximate ratio between the radius of `1` and the radius \
+of `3`?\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<A\>\"", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Quantity", "[", 
+              RowBox[{"area1", ",", "\"\<Meters\>\""}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<B\>\"", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Quantity", "[", 
+              RowBox[{"area2", ",", "\"\<Meters\>\""}], "]"}]}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"s1", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "120"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"s2", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "120"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"\"\<A triangle has two side lengths of \>\"", "<>", 
+            RowBox[{"ToString", "[", "s1", "]"}], "<>", "\"\< and \>\"", "<>", 
+            RowBox[{"ToString", "[", "s2", "]"}], "<>", 
+            "\"\<. Which of these describes the possible lengths of the third \
+side?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ansNo1", "=", 
+           RowBox[{"Abs", "[", 
+            RowBox[{"s1", "-", "s2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ansNo2", "=", 
+           RowBox[{"s1", "+", "s2"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"no1", "=", 
+           RowBox[{"Sqrt", "[", 
+            RowBox[{
+             SuperscriptBox["s1", 
+              RowBox[{"2", " "}]], "+", 
+             SuperscriptBox["s2", "2"]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"no2", "=", 
+           FractionBox[
+            RowBox[{"s1", "+", "s2"}], "2"]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"no3", "=", 
+           RowBox[{"RandomInteger", "[", 
             RowBox[{
              RowBox[{"{", 
-              RowBox[{".01", ",", "1"}], "}"}], ",", "5"}], "]"}], ",", 
-           RowBox[{"RandomReal", "[", 
+              RowBox[{"1", ",", "160"}], "}"}], ",", "10"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"no4", "=", 
+           RowBox[{"Round", "[", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{"1", ",", "7"}], "}"}], ",", "5"}], "]"}]}], "]"}]}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Take", "[", 
-         RowBox[{
-          RowBox[{"DeleteDuplicates", "[", 
+             RowBox[{"RandomReal", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"1", ",", "160"}], "}"}], ",", "6"}], "]"}], ",", 
+             ".001"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"nos", "=", 
            RowBox[{"Prepend", "[", 
-            RowBox[{"diss", ",", "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}],
-        ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<Circle `1` has an area of `2`. Circle `3` has an area of `4`. \
-What is the approximate ratio between the radius of `1` and the radius of \
-`3`?\>\"", ",", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<A\>\"", ",", "Italic"}], "]"}], ",", 
-          RowBox[{"Quantity", "[", 
-           RowBox[{"area1", ",", "\"\<Meters\>\""}], "]"}], ",", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<B\>\"", ",", "Italic"}], "]"}], ",", 
-          RowBox[{"Quantity", "[", 
-           RowBox[{"area2", ",", "\"\<Meters\>\""}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Geom2\>\"", ",", 
+            RowBox[{
+             RowBox[{"Partition", "[", 
+              RowBox[{
+               RowBox[{"RandomSample", "[", 
+                RowBox[{
+                 RowBox[{"DeleteCases", "[", 
+                  RowBox[{
+                   RowBox[{"DeleteDuplicates", "[", 
+                    RowBox[{"Join", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"no1", ",", "no2"}], "}"}], ",", "no3", ",", 
+                    "no4"}], "]"}], "]"}], ",", 
+                   RowBox[{"ansNo1", "|", "ansNo2"}]}], "]"}], ",", "6"}], 
+                "]"}], ",", "2"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"ansNo1", ",", "ansNo2"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Min", "[", "#", "]"}], "<", 
+               SubscriptBox["s", "3"], "<", 
+               RowBox[{"Max", "[", "#", "]"}]}], "&"}], ")"}], "/@", 
+            "nos"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Geom2\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.682874881519477*^9, 3.682874898908062*^9}, {
    3.682874975055539*^9, 3.6828750098736467`*^9}, {3.682875091496784*^9, 
@@ -115,14 +214,33 @@ What is the approximate ratio between the radius of `1` and the radius of \
    3.715526748040682*^9, 3.715526855009864*^9}, {3.715526896408618*^9, 
    3.715526909046767*^9}, 3.715527018120096*^9, {3.7155270654007263`*^9, 
    3.71552714245518*^9}, 3.7155271801342287`*^9, {3.715527236374673*^9, 
-   3.715527237389365*^9}, {3.715527268678199*^9, 
-   3.715527280109612*^9}},ExpressionUUID->"f03fa5e2-99d6-42e1-bc30-\
-2abf188c0fce"]
+   3.715527237389365*^9}, {3.715527268678199*^9, 3.715527280109612*^9}, {
+   3.740063530196878*^9, 3.7400635928591833`*^9}, {3.74006363470168*^9, 
+   3.7400640016892767`*^9}, {3.740064102897793*^9, 3.7400641909686737`*^9}, 
+   3.7400643764244957`*^9, {3.7400644111934834`*^9, 3.7400644236249313`*^9}, {
+   3.740064471544505*^9, 3.740064514831643*^9}, {3.7400646373704557`*^9, 
+   3.740064654686211*^9}, {3.740064776264625*^9, 3.740064809902985*^9}, {
+   3.740064877703125*^9, 3.740064877917768*^9}, {3.740064928670691*^9, 
+   3.740065025973641*^9}, 3.7400651716086082`*^9, 3.740065223302154*^9, {
+   3.740065267981738*^9, 3.7400655538845577`*^9}, {3.740065585102097*^9, 
+   3.74006585299636*^9}, {3.740067771760284*^9, 3.740067775997967*^9}, 
+   3.740067940150814*^9, {3.740067972783204*^9, 3.74006803219703*^9}, {
+   3.740068101823018*^9, 3.740068155245708*^9}, 3.7400681967255783`*^9, {
+   3.7400682388455353`*^9, 3.7400683454044247`*^9}, {3.740068398781542*^9, 
+   3.74006841547665*^9}, {3.740068554581506*^9, 3.740068554883993*^9}, {
+   3.740068602876708*^9, 3.740068682459803*^9}, {3.7400687256675863`*^9, 
+   3.740068827803104*^9}, {3.740068864828805*^9, 3.740068866826894*^9}, {
+   3.74006891338925*^9, 3.740068931795001*^9}, {3.7400689626527653`*^9, 
+   3.740068992994557*^9}, {3.740069026636639*^9, 3.740069095570434*^9}, {
+   3.740069126755862*^9, 3.740069131273802*^9}, {3.7400692005158052`*^9, 
+   3.740069206674053*^9}, {3.740069240875143*^9, 3.7400692425859833`*^9}, {
+   3.740069291255671*^9, 3.74006931940176*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"b935f411-d0b0-4fa8-9fb7-97f28a43a182"]
 },
 WindowSize->{1723, 1140},
-WindowMargins->{{2, Automatic}, {Automatic, 64}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowMargins->{{2, Automatic}, {Automatic, 7}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -136,7 +254,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4372, 99, 364, "Input",ExpressionUUID->"f03fa5e2-99d6-42e1-bc30-2abf188c0fce"]
+Cell[558, 20, 10175, 217, 789, "Input",ExpressionUUID->"b935f411-d0b0-4fa8-9fb7-97f28a43a182"]
 }
 ]
 *)
