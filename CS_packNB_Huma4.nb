@@ -10,18 +10,18 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40615,        872]
-NotebookOptionsPosition[     40209,        857]
-NotebookOutlinePosition[     40568,        873]
-CellTagsIndexPosition[     40525,        870]
+NotebookDataLength[     38165,        793]
+NotebookOptionsPosition[     37740,        777]
+NotebookOutlinePosition[     38118,        794]
+CellTagsIndexPosition[     38075,        791]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[" "], "Input",
  CellChangeTimes->{
-  3.7142308577789373`*^9},ExpressionUUID->"0a6339c2-57bf-468d-b96b-\
-f2ff8944ddca"],
+  3.7142308577789373`*^9},ExpressionUUID->"33e6fa05-de96-4e1a-981e-\
+5ff6c4285853"],
 
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
@@ -489,24 +489,27 @@ or present. Which could fly fastest?\>\"", ",",
            RowBox[{"{", 
             RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "2", ",", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"dates", "=", 
-           RowBox[{"{", 
+           RowBox[{
             RowBox[{
-             RowBox[{"Today", "-", 
-              RowBox[{"Quantity", "[", 
-               RowBox[{"4", ",", "\"\<Days\>\""}], "]"}]}], ",", 
-             RowBox[{"Today", "-", 
-              RowBox[{"Quantity", "[", 
-               RowBox[{"3", ",", "\"\<Days\>\""}], "]"}]}], ",", 
-             RowBox[{"Today", "-", 
-              RowBox[{"Quantity", "[", 
-               RowBox[{"2", ",", "\"\<Days\>\""}], "]"}]}], ",", 
-             RowBox[{"Today", "-", 
-              RowBox[{"Quantity", "[", 
-               RowBox[{"1", ",", "\"\<Days\>\""}], "]"}]}]}], "}"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"DateList", "[", "#", "]"}], "&"}], "/@", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Today", "-", 
+               RowBox[{"Quantity", "[", 
+                RowBox[{"4", ",", "\"\<Days\>\""}], "]"}]}], ",", 
+              RowBox[{"Today", "-", 
+               RowBox[{"Quantity", "[", 
+                RowBox[{"3", ",", "\"\<Days\>\""}], "]"}]}], ",", 
+              RowBox[{"Today", "-", 
+               RowBox[{"Quantity", "[", 
+                RowBox[{"2", ",", "\"\<Days\>\""}], "]"}]}], ",", 
+              RowBox[{"Today", "-", 
+               RowBox[{"Quantity", "[", 
+                RowBox[{"1", ",", "\"\<Days\>\""}], "]"}]}]}], "}"}]}]}], ";",
+           "\[IndentingNewLine]", 
           RowBox[{"days", "=", 
            RowBox[{"Append", "[", 
             RowBox[{
@@ -522,243 +525,119 @@ or present. Which could fly fastest?\>\"", ",",
                   RowBox[{"#", ",", "\"\<DayName\>\""}], "]"}], "&"}], "/@", 
                 "dates"}], "]"}]}], ",", "\"\<yesterday\>\""}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"order", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
           RowBox[{"mixedDates", "=", 
-           RowBox[{"RandomSample", "[", "dates", "]"}]}], ";", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "dates", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
+             "&"}], "/@", "order"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixedDays", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "days", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
+             "&"}], "/@", "order"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"hours", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"#", "/.", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "y_", ",", "m_", ",", "d_", ",", "h_", ",", "_", ",", "_"}],
+                   "}"}], "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                  "y", ",", "m", ",", "d", ",", "hh", ",", "0", ",", "0"}], 
+                  "}"}]}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"hh", ",", "1", ",", "24"}], "}"}]}], "]"}], "&"}], "/@",
+             "mixedDates"}]}], ";", "\[IndentingNewLine]", 
           "\[IndentingNewLine]", 
-          RowBox[{"dateStr", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"DateString", "[", 
-              RowBox[{"#", ",", "\"\<Date\>\""}], "]"}], "&"}], "/@", 
-            "mixedDates"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"dateLst", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"DateList", "[", "#", "]"}], "&"}], "/@", 
-            "mixedDates"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
             RowBox[{
-             RowBox[{"loca", "=", 
-              RowBox[{"WolframAlpha", "[", 
-               RowBox[{"\"\<Where am I?\>\"", ",", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                   "\"\<InferredNearestCityCenter:InternetData\>\"", ",", 
-                    "1"}], "}"}], ",", "\"\<ComputableData\>\""}], "}"}]}], 
-               "]"}]}], ";", "\[IndentingNewLine]", 
-             RowBox[{"StringForm", "[", 
+             RowBox[{"cityEnt", "=", 
+              RowBox[{"GeoNearest", "[", 
+               RowBox[{"\"\<City\>\"", ",", "Here"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"cityStr", "=", 
               RowBox[{
-              "\"\<The chart shows four days of temperatures in `1`. Which \
-day is the blue line?\>\"", ",", 
-               RowBox[{"StringReplace", "[", 
-                RowBox[{"loca", ",", 
-                 RowBox[{"\"\<, United States\>\"", "\[Rule]", "\"\<\>\""}]}],
-                 "]"}]}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-          "\[IndentingNewLine]", 
+               RowBox[{"cityEnt", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "2", ",", "1"}], "\[RightDoubleBracket]"}], 
+               "<>", "\"\<, \>\"", "<>", 
+               RowBox[{"cityEnt", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "2", ",", "2"}], 
+                "\[RightDoubleBracket]"}]}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<The chart shows four days of temperatures in \>\"", "<>", 
+              "cityStr", "<>", "\"\<. Which day is the blue line?\>\""}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
            RowBox[{
             RowBox[{"Hold", "[", "\[IndentingNewLine]", 
              RowBox[{
-              RowBox[{"query", "=", 
+              RowBox[{"temps", "=", 
                RowBox[{
                 RowBox[{
-                 RowBox[{
-                 "\"\<temperature in \>\"", "<>", "loca", "<>", 
-                  "\"\< on \>\"", "<>", "#"}], "&"}], "/@", "h1"}]}], ";", 
-              "\[IndentingNewLine]", 
-              RowBox[{"raw", "=", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"WolframAlpha", "[", 
-                  RowBox[{"#", ",", 
-                   RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    "\"\<TemperatureChart:WeatherData\>\"", ",", "1"}], "}"}],
-                     ",", "\"\<ComputableData\>\""}], "}"}]}], "]"}], "&"}], "/@",
-                 "query"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"dat1", "=", 
-               RowBox[{"Cases", "[", 
-                RowBox[{
-                 RowBox[{"raw", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"1", ",", "2"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"1", ",", "3"}], "]"}], "]"}], ",", "_", ",", "_",
-                     ",", "_"}], "}"}], ",", "t_"}], "}"}], "\[Rule]", "t"}], 
-                 ",", "Infinity"}], "]"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"dat2", "=", 
-               RowBox[{"Cases", "[", 
-                RowBox[{
-                 RowBox[{"raw", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"2", ",", "1"}], "]"}], "]"}], ",", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"2", ",", "1"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"2", ",", "2"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"2", ",", "3"}], "]"}], "]"}], ",", "_", ",", "_",
-                     ",", "_"}], "}"}], ",", "t_"}], "}"}], "\[Rule]", "t"}], 
-                 ",", "Infinity"}], "]"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"dat3", "=", 
-               RowBox[{"Cases", "[", 
-                RowBox[{
-                 RowBox[{"raw", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"3", ",", "1"}], "]"}], "]"}], ",", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"3", ",", "1"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"3", ",", "2"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"3", ",", "3"}], "]"}], "]"}], ",", "_", ",", "_",
-                     ",", "_"}], "}"}], ",", "t_"}], "}"}], "\[Rule]", "t"}], 
-                 ",", "Infinity"}], "]"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"dat4", "=", 
-               RowBox[{"Cases", "[", 
-                RowBox[{
-                 RowBox[{"raw", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"4", ",", "1"}], "]"}], "]"}], ",", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"4", ",", "1"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"4", ",", "2"}], "]"}], "]"}], ",", 
-                    RowBox[{"h2", "[", 
-                    RowBox[{"[", 
-                    RowBox[{"4", ",", "3"}], "]"}], "]"}], ",", "_", ",", "_",
-                     ",", "_"}], "}"}], ",", "t_"}], "}"}], "\[Rule]", "t"}], 
-                 ",", "Infinity"}], "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"AirTemperatureData", "[", "#", "]"}], "&"}], "/@", 
+                "h1"}]}], ";", "\[IndentingNewLine]", 
               RowBox[{"yRng", "=", 
                RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"Min", "[", 
-                  RowBox[{"Join", "[", 
-                   RowBox[{"dat1", ",", "dat2", ",", "dat3", ",", "dat4"}], 
-                   "]"}], "]"}], ",", 
-                 RowBox[{"Max", "[", 
-                  RowBox[{"Join", "[", 
-                   RowBox[{"dat1", ",", "dat2", ",", "dat3", ",", "dat4"}], 
-                   "]"}], "]"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"Overlay", "[", 
-               RowBox[{"{", "\[IndentingNewLine]", 
-                RowBox[{
-                 RowBox[{"ListLinePlot", "[", 
-                  RowBox[{"dat1", ",", 
-                   RowBox[{"PlotStyle", "\[Rule]", "Pink"}], ",", 
-                   RowBox[{"PlotRange", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"QuantityMagnitude", "[", 
+                   RowBox[{"Min", "[", "temps", "]"}], "]"}], "-", "2"}], ",", 
+                 RowBox[{
+                  RowBox[{"QuantityMagnitude", "[", 
+                   RowBox[{"Max", "[", "temps", "]"}], "]"}], "+", "2"}]}], 
+                "}"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
+               RowBox[{"temps", ",", "\[IndentingNewLine]", 
+                RowBox[{"PlotRange", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
                     RowBox[{"0", ",", "24"}], "}"}], ",", "yRng"}], "}"}]}], 
-                   ",", 
-                   RowBox[{"TicksStyle", "\[Rule]", "15"}], ",", 
-                   RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
-                   RowBox[{"AspectRatio", "\[Rule]", 
-                    FractionBox["9", "8"]}], ",", 
-                   RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], ",", 
-                 "\[IndentingNewLine]", 
-                 RowBox[{"ListLinePlot", "[", 
-                  RowBox[{"dat2", ",", 
-                   RowBox[{"PlotStyle", "\[Rule]", "Orange"}], ",", 
-                   RowBox[{"PlotRange", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"0", ",", "24"}], "}"}], ",", "yRng"}], "}"}]}], 
-                   ",", 
-                   RowBox[{"TicksStyle", "\[Rule]", "15"}], ",", 
-                   RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
-                   RowBox[{"AspectRatio", "\[Rule]", 
-                    FractionBox["9", "8"]}], ",", 
-                   RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], ",", 
-                 "\[IndentingNewLine]", 
-                 RowBox[{"ListLinePlot", "[", 
-                  RowBox[{"dat3", ",", 
-                   RowBox[{"PlotStyle", "\[Rule]", "Gray"}], ",", 
-                   RowBox[{"PlotRange", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"0", ",", "24"}], "}"}], ",", "yRng"}], "}"}]}], 
-                   ",", 
-                   RowBox[{"TicksStyle", "\[Rule]", "15"}], ",", 
-                   RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
-                   RowBox[{"AspectRatio", "\[Rule]", 
-                    FractionBox["9", "8"]}], ",", 
-                   RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], ",", 
-                 "\[IndentingNewLine]", 
-                 RowBox[{"ListLinePlot", "[", 
-                  RowBox[{"dat4", ",", 
-                   RowBox[{"PlotStyle", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"Thick", ",", "Blue"}], "}"}]}], ",", 
-                   RowBox[{"PlotRange", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"0", ",", "24"}], "}"}], ",", "yRng"}], "}"}]}], 
-                   ",", 
-                   RowBox[{"TicksStyle", "\[Rule]", "15"}], ",", 
-                   RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
-                   RowBox[{"AspectRatio", "\[Rule]", 
-                    FractionBox["9", "8"]}], ",", 
-                   RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], 
-                "\[IndentingNewLine]", "}"}], "]"}]}], "]"}], "/.", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"h1", "\[Rule]", "dateStr"}], ",", 
-              RowBox[{"h2", "\[Rule]", "dateLst"}]}], "}"}]}]}], ";", 
+                ",", 
+                RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"PlotStyle", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Pink", ",", "Orange", ",", "Green", ",", "Blue"}], 
+                  "}"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"AxesLabel", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"\"\<Time\>\"", ",", "\"\<\[Degree]F\>\""}], 
+                  "}"}]}], ",", 
+                RowBox[{"LabelStyle", "\[Rule]", 
+                 RowBox[{"Directive", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", 
+                   "Black", ",", "15"}], "]"}]}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"AspectRatio", "\[Rule]", 
+                 FractionBox["9", "8"]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", "hours"}]}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", "days"}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
-             RowBox[{"dates", ",", 
-              RowBox[{"mixedDates", "[", 
-               RowBox[{"[", "4", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+             RowBox[{"days", ",", 
+              RowBox[{
+              "mixedDays", "\[LeftDoubleBracket]", "4", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -851,14 +730,56 @@ day is the blue line?\>\"", ",",
    3.713366805512518*^9, 3.7133668094318857`*^9}, {3.713366844742073*^9, 
    3.713366891533658*^9}, {3.713366927588194*^9, 3.713366941412176*^9}, {
    3.713367011884816*^9, 3.713367059919142*^9}, {3.71345597266819*^9, 
-   3.713455983258329*^9}, {3.7134560140177794`*^9, 
-   3.713456067784936*^9}},ExpressionUUID->"5f66611e-8da4-41f7-950a-\
-59184824b0e5"]
+   3.713455983258329*^9}, {3.7134560140177794`*^9, 3.713456067784936*^9}, {
+   3.740154519120697*^9, 3.740154609786717*^9}, {3.740155106556205*^9, 
+   3.7401551509690533`*^9}, {3.740155231665225*^9, 3.740155245933298*^9}, {
+   3.740155344538465*^9, 3.740155406906646*^9}, {3.740155472859165*^9, 
+   3.740155505655718*^9}, {3.740155590745747*^9, 3.7401555915284224`*^9}, {
+   3.740155627224271*^9, 3.740155700998945*^9}, {3.740155759150063*^9, 
+   3.740155768895667*^9}, {3.740155874784954*^9, 3.740155888916407*^9}, {
+   3.740156524150309*^9, 3.74015654926954*^9}, {3.740156937507291*^9, 
+   3.7401569651629763`*^9}, {3.740157135716864*^9, 3.7401572195700083`*^9}, {
+   3.740157379347843*^9, 3.74015738038579*^9}, {3.740157446150519*^9, 
+   3.74015758821964*^9}, {3.740157711251676*^9, 3.740157713752611*^9}, {
+   3.740157774002211*^9, 3.740157818889909*^9}, {3.740157917657421*^9, 
+   3.7401579194159927`*^9}, {3.7401583033617373`*^9, 3.740158359367106*^9}, {
+   3.740158417031163*^9, 3.740158425420515*^9}, {3.740158553950226*^9, 
+   3.740158594572874*^9}, {3.740158646333959*^9, 3.740158657780182*^9}, {
+   3.740158708814918*^9, 3.740158709714966*^9}, {3.740158744965734*^9, 
+   3.740158826660668*^9}, {3.740158889277457*^9, 3.740158924987529*^9}, {
+   3.740160373178183*^9, 3.740160463479705*^9}, {3.740160495591484*^9, 
+   3.740160533056019*^9}, {3.7401605735849667`*^9, 3.740160745047323*^9}, 
+   3.7401610281444883`*^9, {3.740161226255896*^9, 3.740161268414592*^9}, {
+   3.740161370568248*^9, 3.7401613955667677`*^9}, {3.740161524374501*^9, 
+   3.7401615287336807`*^9}, {3.7401615701592207`*^9, 3.740161605125671*^9}, {
+   3.740161740984457*^9, 3.740161741933476*^9}, {3.7401618829997873`*^9, 
+   3.740161893029996*^9}, {3.74016280482906*^9, 3.740162837431254*^9}, {
+   3.7401629766457567`*^9, 3.740162995322289*^9}, 3.740163278140564*^9, {
+   3.7401633320499687`*^9, 3.740163350705893*^9}, {3.740163381194674*^9, 
+   3.740163545491764*^9}, {3.74016362109868*^9, 3.740163698904187*^9}, {
+   3.740163770972134*^9, 3.7401637942327833`*^9}, {3.740163825538369*^9, 
+   3.740163841863544*^9}, {3.740163885792457*^9, 3.740163889678605*^9}, {
+   3.7401639597932053`*^9, 3.740163960071712*^9}, {3.7401641679037523`*^9, 
+   3.740164196093853*^9}, {3.740164291015376*^9, 3.740164297678755*^9}, {
+   3.7401643578215723`*^9, 3.740164379518653*^9}, {3.740164573485952*^9, 
+   3.740164576182682*^9}, {3.740164642623179*^9, 3.740164685092929*^9}, {
+   3.740168423812524*^9, 3.740168485553821*^9}, {3.740168804555512*^9, 
+   3.74016881575285*^9}, {3.740169369238188*^9, 3.74016940152811*^9}, {
+   3.740170568807104*^9, 3.740170604701222*^9}, {3.740170846636137*^9, 
+   3.740170872500223*^9}, {3.740170980415061*^9, 3.7401710256585073`*^9}, {
+   3.740171077523328*^9, 3.740171083329729*^9}, {3.740171144683199*^9, 
+   3.740171168906601*^9}, 3.7401712007301283`*^9, {3.740171232997265*^9, 
+   3.740171236915207*^9}, {3.740171286212096*^9, 3.740171295282071*^9}, {
+   3.740171402731947*^9, 3.740171475744763*^9}, {3.740171540515378*^9, 
+   3.740171562650847*^9}, {3.740171781627282*^9, 3.7401717932328053`*^9}},
+ CellLabel->
+  "In[300]:=",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 },
-WindowSize->{1891, 1159},
+WindowSize->{1608, 1384},
 WindowMargins->{{0, Automatic}, {Automatic, 1}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowStatusArea->None,
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -872,8 +793,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 131, 3, 30, "Input",ExpressionUUID->"0a6339c2-57bf-468d-b96b-f2ff8944ddca"],
-Cell[692, 25, 39513, 830, 1471, "Input",ExpressionUUID->"5f66611e-8da4-41f7-950a-59184824b0e5"]
+Cell[558, 20, 131, 3, 30, "Input",ExpressionUUID->"33e6fa05-de96-4e1a-981e-5ff6c4285853"],
+Cell[692, 25, 37044, 750, 1491, "Input",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 }
 ]
 *)
