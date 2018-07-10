@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6698,        157]
-NotebookOptionsPosition[      6384,        143]
-NotebookOutlinePosition[      6744,        159]
-CellTagsIndexPosition[      6701,        156]
+NotebookDataLength[      7968,        185]
+NotebookOptionsPosition[      7659,        171]
+NotebookOutlinePosition[      8014,        187]
+CellTagsIndexPosition[      7971,        184]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,24 +35,43 @@ Cell[BoxData[
         RowBox[{"RandomInteger", "[", 
          RowBox[{"{", 
           RowBox[{"2", ",", "5"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"xPool", "=", 
-        RowBox[{"Switch", "[", 
-         RowBox[{"scen", ",", "0", ",", 
-          RowBox[{"Range", "[", 
-           RowBox[{"0", ",", "16"}], "]"}], ",", "1", ",", 
+       RowBox[{"odds", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{
           RowBox[{"{", 
            RowBox[{
            "1", ",", "3", ",", "5", ",", "7", ",", "9", ",", "11", ",", "13", 
-            ",", "15"}], "}"}], ",", "2", ",", 
+            ",", "15"}], "}"}], ",", "5"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"evens", "=", 
+        RowBox[{"RandomChoice", "[", 
+         RowBox[{
           RowBox[{"{", 
            RowBox[{
            "0", ",", "2", ",", "4", ",", "6", ",", "8", ",", "10", ",", "12", 
-            ",", "14", ",", "16"}], "}"}]}], "]"}]}], ";", 
+            ",", "14", ",", "16"}], "}"}], ",", "5"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
+       RowBox[{"oddEven", "=", 
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"RandomChoice", "[", "odds", "]"}], ",", 
+            RowBox[{"RandomChoice", "[", "evens", "]"}]}], "}"}], ",", 
+          RowBox[{"RandomInteger", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"1", ",", "16"}], "}"}], ",", "3"}], "]"}]}], "]"}]}], 
+       ";", "\[IndentingNewLine]", 
+       RowBox[{"xPool", "=", 
+        RowBox[{"Switch", "[", 
+         RowBox[{
+         "scen", ",", "0", ",", "oddEven", ",", "1", ",", "odds", ",", "2", 
+          ",", "evens"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"exps", "=", 
         RowBox[{"Sort", "[", 
          RowBox[{
-          RowBox[{"RandomSample", "[", 
+          RowBox[{"Take", "[", 
            RowBox[{"xPool", ",", "trmCt"}], "]"}], ",", "Greater"}], "]"}]}], 
        ";", "\[IndentingNewLine]", 
        RowBox[{"cos", "=", 
@@ -109,8 +128,10 @@ symmetry?\\n\\n``\>\"", ",", "h1"}], "]"}], "]"}], "/.",
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "choices"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Alge8\>\"", ",", 
+          RowBox[{
+           RowBox[{"ReleaseHold", "[", "q", "]"}], ",", "ans", ",", 
+           "choices"}], "}"}], "]"}], "&"}]}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Alge8\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6905379933974533`*^9, 3.6905379951186113`*^9}, {
    3.690543548934408*^9, 3.690543554601036*^9}, {3.6905436386600237`*^9, 
@@ -138,13 +159,20 @@ symmetry?\\n\\n``\>\"", ",", "h1"}], "]"}], "]"}], "/.",
    3.690558316766217*^9, 3.690558322263241*^9}, {3.690558720135145*^9, 
    3.690558737254923*^9}, {3.690558883489596*^9, 3.69055888397932*^9}, {
    3.690559330251568*^9, 3.690559341090488*^9}, {3.690559461131719*^9, 
-   3.6905595974309387`*^9}},ExpressionUUID->"91348848-272d-4b1b-8755-\
-a682231ca35d"]
+   3.6905595974309387`*^9}, {3.7401730179992647`*^9, 3.740173062175109*^9}, {
+   3.7402465607765903`*^9, 3.74024659132582*^9}, {3.740246627990898*^9, 
+   3.740246649925041*^9}, {3.7402467231978617`*^9, 3.740246755621616*^9}, {
+   3.740246800021282*^9, 3.7402468067496443`*^9}, {3.74024685388594*^9, 
+   3.740246955708168*^9}, {3.7402469953831*^9, 3.7402470098763866`*^9}, {
+   3.740247044740437*^9, 3.7402470858841553`*^9}, {3.740247124804451*^9, 
+   3.7402471254120197`*^9}, {3.740247361340083*^9, 3.740247379619791*^9}},
+ CellLabel->
+  "In[727]:=",ExpressionUUID->"a1abf5fc-dcf0-49ad-99d0-1e34e14ea90c"]
 },
 WindowSize->{1197, 1046},
 WindowMargins->{{5, Automatic}, {Automatic, 48}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -158,10 +186,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5822, 121, 346, "Input",ExpressionUUID->"91348848-272d-4b1b-8755-a682231ca35d"]
+Cell[558, 20, 7097, 149, 409, "Input",ExpressionUUID->"a1abf5fc-dcf0-49ad-99d0-1e34e14ea90c"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
