@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4405,        119]
-NotebookOptionsPosition[      4091,        105]
-NotebookOutlinePosition[      4452,        121]
-CellTagsIndexPosition[      4409,        118]
+NotebookDataLength[     16423,        326]
+NotebookOptionsPosition[     16113,        312]
+NotebookOutlinePosition[     16467,        328]
+CellTagsIndexPosition[     16424,        325]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,87 +26,294 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"choices", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
-          RowBox[{"WordData", "[", "]"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"def", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"StringReplace", "[", 
-          RowBox[{
-           RowBox[{"WordDefinition", "[", 
-            RowBox[{"choices", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "]"}], ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"choices", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"WordData", "[", "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"defs", "=", 
            RowBox[{
-            RowBox[{"choices", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", 
-            "\"\<\[FilledSmallSquare]\:fe0e\[FilledSmallSquare]\:fe0e\
-\[FilledSmallSquare]\:fe0e\>\""}]}], "]"}], "[", 
-         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"split", "=", 
-        RowBox[{"StringSplit", "[", "def", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"len", "=", 
-        RowBox[{"Length", "[", "split", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"a", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"1", ",", 
-           RowBox[{"len", "-", "3"}]}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"b", "=", 
-        RowBox[{"a", "+", "3"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"len", ">", "4"}], ",", 
-         RowBox[{"split", "=", 
-          RowBox[{"Take", "[", 
-           RowBox[{"split", ",", 
-            RowBox[{"{", 
-             RowBox[{"a", ",", "b"}], "}"}]}], "]"}]}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"snippet", "=", 
-        RowBox[{"StringRiffle", "[", "split", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"WordDefinition", "[", "#", "]"}], "&"}], "/@", 
+            "choices"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"xxWords", "=", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"TextWords", "[", "#", "]"}], "&"}], "/@", 
+             RowBox[{"defs", "\[LeftDoubleBracket]", 
+              RowBox[{"2", ";;", "4"}], "\[RightDoubleBracket]"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"qWord", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"Complement", "[", 
+             RowBox[{
+              RowBox[{"Flatten", "[", 
+               RowBox[{"TextWords", "[", 
+                RowBox[{
+                "defs", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "]"}], "]"}], ",", "xxWords"}], 
+             "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Of these dictionary entries, the definition of which one has \
+the word `1` in it?\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"qWord", ",", "Italic"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+            "\"\<Actions speak louder than words.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<All that glitters is not gold.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<An apple a day keeps the doctor away.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<As you sow, so shall you reap.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Beggars can\[CloseCurlyQuote]t be choosers.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<The best things in life are free.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Better late than never.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Better safe than sorry.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Beware of Greeks bearing gifts.\>\"",
+              ",", "\[IndentingNewLine]", 
+             "\"\<A bird in the hand is worth two in the bush.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<Birds of a feather flock together.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<A chain is only as strong as its weakest link.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<The clothes make the man.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Curiosity killed the cat.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<Do unto others as you would have them do unto you.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Don\[CloseCurlyQuote]t bite the hand that feeds you.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Don't count your chickens before they're hatched.\>\"", ",",
+              "\[IndentingNewLine]", 
+             "\"\<Don\[CloseCurlyQuote]t cry over spilt milk.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<Don\[CloseCurlyQuote]t cut off your nose to spite your \
+face.\>\"", ",", "\[IndentingNewLine]", 
+             "\"\<Don't judge a book by its cover.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<Don\[CloseCurlyQuote]t put all your eggs in one \
+basket.\>\"", ",", "\[IndentingNewLine]", 
+             "\"\<Don\[CloseCurlyQuote]t put off till tomorrow what you can \
+do today\>\"", ",", "\[IndentingNewLine]", 
+             "\"\<Don\[CloseCurlyQuote]t put the cart before the horse.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<The early bird gets the worm.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<He who hesitates is lost.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Home is where the heart is.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Honesty is the best policy.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Let sleeping dogs lie.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Little strokes fell great oaks.\>\"",
+              ",", "\[IndentingNewLine]", "\"\<Look before you leap.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Make hay while the sun shines.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Many hands make light work.\>\"", 
+             ",", "\[IndentingNewLine]", "\"\<Measure twice, cut once.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Necessity is the mother of invention.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<Never look a gift horse in the mouth.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<No man is an island.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<Nothing ventured, nothing gained.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<Out of the frying pan and into the fire.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<The pen is mightier than the sword.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<A penny saved is a penny earned.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<People who live in glass houses shouldn\[CloseCurlyQuote]t \
+throw stones.\>\"", ",", "\[IndentingNewLine]", 
+             "\"\<A picture is worth a thousand words.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Pride cometh before a fall.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<A rolling stone gathers no moss.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Seek and ye shall find.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Slow and steady wins the race.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<A stitch in time saves nine.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Stop and smell the roses.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Strike while the iron is hot.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<There\[CloseCurlyQuote]s no place like home.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<There's no such thing as a free lunch.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<There\[CloseCurlyQuote]s no time like the present.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Time flies when you\[CloseCurlyQuote]re having fun.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Too many cooks spoil the broth.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Two heads are better than one.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<Two wrongs don't make a right.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<Waste not, want not.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<A watched pot never boils.\>\"", ",",
+              "\[IndentingNewLine]", 
+             "\"\<Well done is better than well said.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<What you don't know can't hurt you.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<When the going gets tough, the tough get going.\>\"", ",", 
+             "\[IndentingNewLine]", "\"\<You are never too old to learn.\>\"",
+              ",", "\[IndentingNewLine]", "\"\<You are what you eat.\>\"", 
+             ",", "\[IndentingNewLine]", 
+             "\"\<You can't have your cake and eat it too.\>\"", ",", 
+             "\[IndentingNewLine]", 
+             "\"\<You can't teach an old dog new tricks.\>\""}], "}"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"adages", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"data", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"woMix", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToLowerCase", "[", 
+              RowBox[{"RandomSample", "[", 
+               RowBox[{"TextWords", "[", "#", "]"}], "]"}], "]"}], "&"}], "/@",
+             "adages"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qWord", "=", 
+           RowBox[{"woMix", "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{
-          "\"\<Which of these dictionary entries has a definition that \
-includes the words\\n\\\"\>\"", "<>", "snippet", "<>", "\"\<\\\"?\>\""}], ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lang4\>\"", ",", 
+           RowBox[{
+           "woMix", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+           "=", 
+           RowBox[{"Rest", "[", 
+            RowBox[{
+            "woMix", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"coMix", "=", 
+           RowBox[{"Map", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"StringJoin", "[", 
+               RowBox[{"RandomSample", "[", 
+                RowBox[{"Cases", "[", 
+                 RowBox[{
+                  RowBox[{"Characters", "[", "#", "]"}], ",", 
+                  RowBox[{"_", "?", "LetterQ"}]}], "]"}], "]"}], "]"}], "&"}],
+              ",", "woMix", ",", 
+             RowBox[{"{", "2", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringRiffle", "[", "#", "]"}], "&"}], "/@", 
+            "coMix"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which scrambled adage is missing the word `1`?\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"qWord", ",", "Italic"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lang4\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683370473445434*^9, 3.683370537842216*^9}, {
    3.683370719789631*^9, 3.683370739028277*^9}, 3.683371943393799*^9, {
    3.684954997187523*^9, 3.684955003654765*^9}, {3.684955037069696*^9, 
    3.684955083021591*^9}, {3.6849555055005503`*^9, 3.6849555108496323`*^9}, {
    3.684955685462891*^9, 3.684955703253008*^9}, 3.684955844339291*^9, 
-   3.684955898349882*^9, {3.684956047317458*^9, 
-   3.684956057660326*^9}},ExpressionUUID->"7733a88a-49b4-440e-8434-\
-affa5d73d1e7"]
+   3.684955898349882*^9, {3.684956047317458*^9, 3.684956057660326*^9}, 
+   3.742633562962167*^9, {3.742633593451865*^9, 3.7426336481248417`*^9}, {
+   3.742636923540101*^9, 3.7426369250885563`*^9}, {3.74263698359408*^9, 
+   3.742636985513163*^9}, {3.742637091298038*^9, 3.742637151488729*^9}, {
+   3.7426372934979277`*^9, 3.742637310927225*^9}, {3.7426373439030123`*^9, 
+   3.7426374190302353`*^9}, {3.7426375464885902`*^9, 3.742637570391695*^9}, {
+   3.7426376017822933`*^9, 3.742637797749279*^9}, 3.742638486533063*^9, {
+   3.7426386019970713`*^9, 3.742638605010934*^9}, {3.742638651915556*^9, 
+   3.7426386986198378`*^9}, {3.742638818098359*^9, 3.742638886799781*^9}, {
+   3.742638919226268*^9, 3.742638934336835*^9}, {3.742639034674086*^9, 
+   3.742639041345253*^9}, {3.74263914374652*^9, 3.742639165159223*^9}, {
+   3.742639248738035*^9, 3.742639301423685*^9}, {3.7426395640172253`*^9, 
+   3.742639566487109*^9}, {3.742639687003846*^9, 3.7426397777231216`*^9}, {
+   3.7426398200702763`*^9, 3.742639943685176*^9}, {3.7426400322971888`*^9, 
+   3.742640481710367*^9}, {3.742640513943604*^9, 3.742640557882081*^9}, {
+   3.7426406047106543`*^9, 3.742640654710271*^9}, {3.742666265331169*^9, 
+   3.742666272172181*^9}, {3.7426663455847263`*^9, 3.742666351828231*^9}, {
+   3.742666402665621*^9, 3.742666413564499*^9}, {3.7426664460570593`*^9, 
+   3.742666483652034*^9}, {3.7426665184967546`*^9, 3.742666558275981*^9}, {
+   3.742666590504525*^9, 3.742666594923586*^9}, {3.742666633976789*^9, 
+   3.7426667031806793`*^9}, {3.742666751808058*^9, 3.742666867802917*^9}, {
+   3.742666932879332*^9, 3.742666937274847*^9}, {3.742666968471389*^9, 
+   3.742666973434832*^9}, {3.74266703089522*^9, 3.742667034906342*^9}, {
+   3.7426670793191032`*^9, 3.742667217361845*^9}, {3.7426672576723747`*^9, 
+   3.742667431721034*^9}, {3.742667489485701*^9, 3.7426675770170927`*^9}, {
+   3.74266769682267*^9, 3.742667698124642*^9}, {3.742667745605172*^9, 
+   3.74266779754917*^9}, {3.742667911164337*^9, 3.7426679789168453`*^9}, {
+   3.7426680581402197`*^9, 3.7426681451148977`*^9}, {3.7426681788826303`*^9, 
+   3.742668265682147*^9}, {3.742668356963599*^9, 3.7426685162907553`*^9}, {
+   3.742668550770879*^9, 3.74266856488321*^9}, {3.742668661412119*^9, 
+   3.742668664914133*^9}, {3.742668747244039*^9, 3.742668775473806*^9}, {
+   3.742668826329289*^9, 3.742668926017439*^9}, {3.7426689989621058`*^9, 
+   3.742669025488946*^9}, {3.742669705856254*^9, 3.742669762446411*^9}, {
+   3.742669889303307*^9, 3.7426699028076897`*^9}, {3.742669942447136*^9, 
+   3.74267003316534*^9}, {3.742670080407156*^9, 3.742670091152193*^9}, {
+   3.742671502131795*^9, 3.742671518897081*^9}, {3.742671621771305*^9, 
+   3.742671642748152*^9}, {3.742671725635191*^9, 3.742671743288485*^9}, {
+   3.7426718490665913`*^9, 3.742671854903998*^9}, {3.742671890841751*^9, 
+   3.7426719001046267`*^9}, {3.74267200583363*^9, 3.742672017088524*^9}, {
+   3.7426721089065723`*^9, 3.742672114175544*^9}, {3.742672232664171*^9, 
+   3.7426722623186817`*^9}, {3.7426723588007393`*^9, 
+   3.7426723674064083`*^9}, {3.742672542448848*^9, 3.74267259323071*^9}, {
+   3.742672842728731*^9, 3.7426728703283854`*^9}},
+ CellLabel->
+  "In[1924]:=",ExpressionUUID->"50bc5a43-a3e2-4bde-9847-8cb8aeb1fa14"]
 },
-WindowSize->{1207, 1033},
-WindowMargins->{{12, Automatic}, {Automatic, 24}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1745, 1375},
+WindowMargins->{{0, Automatic}, {Automatic, 2}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -120,7 +327,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3529, 83, 346, "Input",ExpressionUUID->"7733a88a-49b4-440e-8434-affa5d73d1e7"]
+Cell[558, 20, 15551, 290, 1963, "Input",ExpressionUUID->"50bc5a43-a3e2-4bde-9847-8cb8aeb1fa14"]
 }
 ]
 *)
