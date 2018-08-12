@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7911,        180]
-NotebookOptionsPosition[      7595,        166]
-NotebookOutlinePosition[      7957,        182]
-CellTagsIndexPosition[      7914,        179]
+NotebookDataLength[     48173,       1044]
+NotebookOptionsPosition[     47862,       1030]
+NotebookOutlinePosition[     48216,       1046]
+CellTagsIndexPosition[     48173,       1043]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,106 +26,891 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"<|", "|>"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"While", "[", 
+       RowBox[{"Switch", "[", 
         RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Length", "[", "data", "]"}], "<", "2"}], ",", 
-         "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"choices", "=", 
-           RowBox[{"RandomWord", "[", "4", "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"eng", "=", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"data", "=", 
-           RowBox[{"DeleteCases", "[", 
+           RowBox[{"<|", "|>"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"While", "[", 
+           RowBox[{
             RowBox[{
-             RowBox[{"DeleteCases", "[", 
-              RowBox[{
-               RowBox[{"DeleteMissing", "[", 
-                RowBox[{
-                 RowBox[{"WordTranslation", "[", 
-                  RowBox[{"eng", ",", "All"}], "]"}], ",", "Infinity"}], 
-                "]"}], ",", 
-               RowBox[{"w_String", "/;", 
-                RowBox[{
+             RowBox[{"Length", "[", "data", "]"}], "<", "2"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"choices", "=", 
+              RowBox[{"RandomWord", "[", "4", "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"eng", "=", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"data", "=", 
+              RowBox[{"DeleteCases", "[", 
+               RowBox[{
+                RowBox[{"DeleteCases", "[", 
                  RowBox[{
-                  RowBox[{"EditDistance", "[", 
-                   RowBox[{"w", ",", "eng", ",", 
-                    RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "/", 
-                  RowBox[{"Min", "[", 
+                  RowBox[{"DeleteMissing", "[", 
                    RowBox[{
+                    RowBox[{"WordTranslation", "[", 
+                    RowBox[{"eng", ",", "All"}], "]"}], ",", "Infinity"}], 
+                   "]"}], ",", 
+                  RowBox[{"w_String", "/;", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"EditDistance", "[", 
+                    RowBox[{"w", ",", "eng", ",", 
+                    RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "/", 
+                    RowBox[{"Min", "[", 
+                    RowBox[{
                     RowBox[{"StringLength", "[", "w", "]"}], ",", 
                     RowBox[{"StringLength", "[", "eng", "]"}]}], "]"}]}], "<",
-                  ".45"}]}], ",", "Infinity"}], "]"}], ",", 
-             RowBox[{"{", "}"}]}], "]"}]}]}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"dat2", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{"data", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"word1", "=", 
-        RowBox[{"ToCharacterCode", "[", 
-         RowBox[{"RandomChoice", "[", 
-          RowBox[{
-           RowBox[{"Values", "[", "dat2", "]"}], "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"lang1", "=", 
-        RowBox[{
-         RowBox[{"Keys", "[", "dat2", "]"}], "[", 
-         RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"word2", "=", 
-        RowBox[{"ToCharacterCode", "[", 
-         RowBox[{"RandomChoice", "[", 
-          RowBox[{
-           RowBox[{"Values", "[", "dat2", "]"}], "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"lang2", "=", 
-        RowBox[{
-         RowBox[{"Keys", "[", "dat2", "]"}], "[", 
-         RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"StringForm", "[", 
+                     ".45"}]}], ",", "Infinity"}], "]"}], ",", 
+                RowBox[{"{", "}"}]}], "]"}]}]}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"dat2", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"data", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"word1", "=", 
+           RowBox[{"ToCharacterCode", "[", 
+            RowBox[{"RandomChoice", "[", 
+             RowBox[{
+              RowBox[{"Values", "[", "dat2", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"lang1", "=", 
            RowBox[{
-           "\"\<It's `1` in the `2` language; in `3` it's `4`. What word is \
-it in English?\>\"", ",", 
-            RowBox[{"Style", "[", 
+            RowBox[{"Keys", "[", "dat2", "]"}], "[", 
+            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"word2", "=", 
+           RowBox[{"ToCharacterCode", "[", 
+            RowBox[{"RandomChoice", "[", 
              RowBox[{
-              RowBox[{"FromCharacterCode", "[", "h1", "]"}], ",", "Italic"}], 
-             "]"}], ",", "h2", ",", "h3", ",", 
-            RowBox[{"Style", "[", 
+              RowBox[{"Values", "[", "dat2", "]"}], "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"lang2", "=", 
+           RowBox[{
+            RowBox[{"Keys", "[", "dat2", "]"}], "[", 
+            RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"StringForm", "[", 
+              RowBox[{
+              "\"\<It's `1` in the `2` language; in `3` it's `4`. What word \
+is it in English?\>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"FromCharacterCode", "[", "h1", "]"}], ",", 
+                 "Italic"}], "]"}], ",", "h2", ",", "h3", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{"FromCharacterCode", "[", "h4", "]"}], ",", 
+                 "Italic"}], "]"}]}], "]"}], "]"}], "/.", 
+            RowBox[{"{", 
              RowBox[{
-              RowBox[{"FromCharacterCode", "[", "h4", "]"}], ",", "Italic"}], 
-             "]"}]}], "]"}], "]"}], "/.", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"h1", "\[Rule]", "word1"}], ",", 
-           RowBox[{"h2", "\[Rule]", "lang1"}], ",", 
-           RowBox[{"h3", "\[Rule]", "lang2"}], ",", 
-           RowBox[{"h4", "\[Rule]", "word2"}]}], "}"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lang1\>\"", ",", 
+              RowBox[{"h1", "\[Rule]", "word1"}], ",", 
+              RowBox[{"h2", "\[Rule]", "lang1"}], ",", 
+              RowBox[{"h3", "\[Rule]", "lang2"}], ",", 
+              RowBox[{"h4", "\[Rule]", "word2"}]}], "}"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"<|", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+             "\"\<A leading authority is anyone who has guessed right more \
+than once.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "3"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "12"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"11", ",", "12"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "12"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "12"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "12"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<relative clause\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"6", ",", "12"}], "}"}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<After some time the hobbits heard him murmuring again.\>\"",
+               "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "3"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "5"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "3"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "12"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "9"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<At last they halted to make their camp.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"7", ",", "8"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "8"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "8"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "8"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<Character is a strange blending of flinty strength and \
+pliable warmth.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "5"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "8"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "11"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "11"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "11"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"6", ",", "11"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"2", ",", "11"}], "}"}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<It is time to show your users the fruits of all your hard \
+work.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "7"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "14"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "14"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"10", ",", "14"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "14"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "14"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "14"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<He who is afraid to ask is ashamed of learning.\>\"", 
+              "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "6"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"9", ",", "10"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "6"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "6"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "10"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<adjective phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "6"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "10"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<relative clause\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"2", ",", "6"}], "}"}], "}"}]}], "}"}]}], "}"}]}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<Never insult an alligator until after you have crossed the \
+river.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "4"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "11"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "11"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "11"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"9", ",", "11"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "11"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "4"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "4"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<Some things he has seen, and some things I have seen \
+myself.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "8"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"4", ",", "5"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "12"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "12"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<Still in that place our defence may last long.\>\"", 
+              "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "4"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "6"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"2", ",", "4"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "9"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<The best birthdays of all are those that haven't arrived \
+yet.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "3"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "5"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "11"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"4", ",", "5"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "11"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"9", ",", "11"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "11"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<relative clause\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"8", ",", "11"}], "}"}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<The road passed slowly, winding down the valley.\>\"", 
+              "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "8"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "8"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "8"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<The Shading group is the node that assigns a shader to a \
+surface.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "3"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "6"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "13"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"11", ",", "13"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "13"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "13"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<relative clause\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"7", ",", "13"}], "}"}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<The Trojans sailed out that same night, very wisely.\>\"", 
+              "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "7"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "7"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "4"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "6"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "9"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<adverb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"8", ",", "9"}], "}"}], "}"}]}], "}"}]}], "}"}]}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<The truth is not always dressed for the evening.\>\"", 
+              "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "9"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"7", ",", "9"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "9"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<The vessels of light trembled and sent up two jets of \
+flame.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"9", ",", "10"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"9", ",", "12"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "4"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "12"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "12"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "12"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<Their eyes burned and a hoarse cheer of elation broke from \
+their dry lips.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "7"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"12", ",", "14"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "9"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "14"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"10", ",", "14"}], "}"}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<There is no psychiatrist in the world like a puppy licking \
+your face.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "4"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "7"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"9", ",", "10"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"12", ",", "13"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"9", ",", "13"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "13"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "7"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "13"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"2", ",", "13"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "13"}], "}"}]}], "}"}]}], "}"}]}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<This malicious suggestion drove Cephalus mad with jealousy.\
+\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"1", ",", "3"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"7", ",", "8"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"4", ",", "8"}], "}"}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<adjective phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"6", ",", "8"}], "}"}], "}"}]}], "}"}]}], "}"}]}],
+              ",", "\[IndentingNewLine]", 
+             RowBox[{
+             "\"\<Those who bring sunshine to the lives of others cannot keep \
+it from themselves.\>\"", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"\"\<noun phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "7"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "9"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<prepositional phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"5", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"13", ",", "14"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<verb phrase\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"3", ",", "9"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"10", ",", "14"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "14"}], "}"}]}], "}"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<relative clause\>\"", ",", 
+                  RowBox[{"{", 
+                   RowBox[{"{", 
+                    RowBox[{"2", ",", "9"}], "}"}], "}"}]}], "}"}]}], 
+               "}"}]}]}], "\[IndentingNewLine]", "|>"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"datum", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"data", ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"txt", "=", 
+           RowBox[{
+            RowBox[{"Keys", "[", "datum", "]"}], "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"gram", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{
+             RowBox[{"Values", "[", "datum", "]"}], "\[LeftDoubleBracket]", 
+             "1", "\[RightDoubleBracket]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansStr", "=", 
+           RowBox[{
+           "gram", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"wordRange", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{
+            "gram", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"spaces", "=", 
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"StringPosition", "[", 
+              RowBox[{"txt", ",", "\"\< \>\""}], "]"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"charLims", "=", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                "wordRange", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "\[Equal]", "1"}], ",", "1", ",", 
+               
+               RowBox[{"spaces", "\[LeftDoubleBracket]", 
+                RowBox[{
+                 RowBox[{
+                 "wordRange", "\[LeftDoubleBracket]", "1", 
+                  "\[RightDoubleBracket]"}], "-", "1"}], 
+                "\[RightDoubleBracket]"}]}], "]"}], ",", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                "wordRange", "\[LeftDoubleBracket]", "2", 
+                 "\[RightDoubleBracket]"}], "\[Equal]", 
+                RowBox[{"Length", "[", 
+                 RowBox[{"TextWords", "[", "txt", "]"}], "]"}]}], ",", 
+               RowBox[{
+                RowBox[{"StringLength", "[", "txt", "]"}], "-", "1"}], ",", 
+               RowBox[{"spaces", "\[LeftDoubleBracket]", 
+                RowBox[{
+                "wordRange", "\[LeftDoubleBracket]", "2", 
+                 "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+              "]"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"blocks", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<noun phrase\>\"", ",", "\"\<prepositional phrase\>\"", ",", 
+             "\"\<verb phrase\>\"", ",", "\"\<adjective phrase\>\"", ",", 
+             "\"\<adverb phrase\>\"", ",", "\"\<relative clause\>\""}], 
+            "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"DeleteCases", "[", 
+                RowBox[{"blocks", ",", "ansStr"}], "]"}], ",", "3"}], "]"}], 
+             ",", "ansStr"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<What is the blue structure in this \
+sentence?\\n`1``2``3`\>\"", ",", "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                "charLims", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "\[Equal]", "1"}], ",", 
+               "\"\<\>\"", ",", 
+               RowBox[{"StringTake", "[", 
+                RowBox[{"txt", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", 
+                   RowBox[{
+                    RowBox[{
+                    "charLims", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "-", "1"}]}], "}"}]}], "]"}]}],
+               "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{"StringTake", "[", 
+                RowBox[{"txt", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{
+                   "charLims", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{
+                   "charLims", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], ",", 
+               "Blue"}], "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"StringTake", "[", 
+              RowBox[{"txt", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                  "charLims", "\[LeftDoubleBracket]", "2", 
+                   "\[RightDoubleBracket]"}], "+", "1"}], ",", 
+                 RowBox[{"-", "1"}]}], "}"}]}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lang1\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683146228972707*^9, 3.6831462310191927`*^9}, 
    3.683146324694669*^9, {3.683147574207765*^9, 3.683147588627123*^9}, {
@@ -160,14 +945,93 @@ it in English?\>\"", ",",
    3.7247854317134333`*^9}, {3.724785517105104*^9, 3.724785552111514*^9}, {
    3.7247856125602427`*^9, 3.7247856412470217`*^9}, {3.72478588911896*^9, 
    3.724785890629855*^9}, {3.724786109981477*^9, 3.724786140373334*^9}, {
-   3.724789597732276*^9, 
-   3.7247896042357063`*^9}},ExpressionUUID->"510d19a0-630b-4d07-90e0-\
-cbb566eda2ec"]
+   3.724789597732276*^9, 3.7247896042357063`*^9}, {3.7430008501245203`*^9, 
+   3.743000955520681*^9}, {3.7430010674907417`*^9, 3.7430011191338053`*^9}, {
+   3.743001339791482*^9, 3.743001445538269*^9}, {3.7430014819868813`*^9, 
+   3.7430014931382093`*^9}, {3.743001534674902*^9, 3.743001565770421*^9}, {
+   3.74300163969037*^9, 3.743001685546092*^9}, {3.743001751057926*^9, 
+   3.743001883320897*^9}, {3.743001947744582*^9, 3.743002219456088*^9}, {
+   3.743002451919345*^9, 3.743002592303537*^9}, {3.7430026253672857`*^9, 
+   3.743002679887177*^9}, {3.7430027335988283`*^9, 3.7430027796386347`*^9}, {
+   3.743003169573666*^9, 3.7430032180214653`*^9}, {3.7430032633812943`*^9, 
+   3.743003308349145*^9}, {3.74300334521294*^9, 3.743003348501164*^9}, {
+   3.743003415381029*^9, 3.743003469956715*^9}, {3.743003514660487*^9, 
+   3.743003515100603*^9}, {3.743003631244402*^9, 3.743003631932088*^9}, {
+   3.7430036668283043`*^9, 3.743003685907555*^9}, {3.74300375174916*^9, 
+   3.743003813667746*^9}, {3.7430038484836893`*^9, 3.743003880307551*^9}, {
+   3.743004069259214*^9, 3.743004075250678*^9}, {3.7430041176124887`*^9, 
+   3.743004208818492*^9}, {3.743004267954468*^9, 3.7430042741543818`*^9}, {
+   3.743004324090871*^9, 3.74300438722608*^9}, {3.7430046766334677`*^9, 
+   3.7430046985958776`*^9}, {3.743004747762018*^9, 3.743004755193174*^9}, {
+   3.743004800209011*^9, 3.743004818000931*^9}, {3.7430066973070507`*^9, 
+   3.743006729866475*^9}, {3.743006772754899*^9, 3.743006826754484*^9}, {
+   3.743006864842202*^9, 3.743006868138384*^9}, {3.7430069292978*^9, 
+   3.7430069359458113`*^9}, {3.743006985306756*^9, 3.743007009641816*^9}, {
+   3.743007044441743*^9, 3.7430070453377132`*^9}, {3.743007088401184*^9, 
+   3.7430071577613363`*^9}, {3.743007347570207*^9, 3.743007409448463*^9}, {
+   3.743007442776129*^9, 3.743007467298066*^9}, {3.743007517481203*^9, 
+   3.743007570936008*^9}, {3.74300761523223*^9, 3.743007679839631*^9}, {
+   3.7430077389276943`*^9, 3.743007741727689*^9}, {3.7430077813595552`*^9, 
+   3.743007855671258*^9}, {3.7430080073909597`*^9, 3.743008069199224*^9}, {
+   3.743008134726609*^9, 3.743008298286014*^9}, {3.7430084453017607`*^9, 
+   3.7430084997979794`*^9}, {3.743008541141387*^9, 3.743008547629395*^9}, {
+   3.743008592853818*^9, 3.7430086074853477`*^9}, {3.7430086909494543`*^9, 
+   3.743008700973323*^9}, {3.743008735461369*^9, 3.743008819260364*^9}, {
+   3.7430089378597193`*^9, 3.743009000163911*^9}, {3.743009100491481*^9, 
+   3.74300913818746*^9}, {3.7430091687315683`*^9, 3.7430091740829678`*^9}, {
+   3.743009220243759*^9, 3.7430092254907084`*^9}, {3.743009259210786*^9, 
+   3.743009261651058*^9}, {3.743009304002861*^9, 3.743009327498432*^9}, {
+   3.743009543185987*^9, 3.743009625986017*^9}, {3.7430096568899593`*^9, 
+   3.7430096764736567`*^9}, {3.7430097240253897`*^9, 3.743009732153496*^9}, {
+   3.74301049713485*^9, 3.743010578678973*^9}, {3.743010625334985*^9, 
+   3.743010657550192*^9}, {3.743010696325953*^9, 3.7430107365983458`*^9}, {
+   3.7430107761983433`*^9, 3.743010841885928*^9}, {3.743011112982554*^9, 
+   3.7430111466787243`*^9}, {3.7430116238302803`*^9, 3.74301162746041*^9}, {
+   3.743011716085162*^9, 3.743011754268532*^9}, {3.743011844404107*^9, 
+   3.743011846772073*^9}, {3.743011885644019*^9, 3.743011921898818*^9}, {
+   3.7430119644598207`*^9, 3.743012163002047*^9}, {3.743012266163411*^9, 
+   3.743012272040819*^9}, 3.743012914097096*^9, {3.743013695669697*^9, 
+   3.743013782133315*^9}, {3.743014325604125*^9, 3.7430144653941927`*^9}, {
+   3.743014576052162*^9, 3.743014577610808*^9}, {3.74301463508292*^9, 
+   3.743014639201733*^9}, {3.743014971426055*^9, 3.743015001017809*^9}, {
+   3.743015061433221*^9, 3.743015113945278*^9}, {3.7430151775534067`*^9, 
+   3.743015242344884*^9}, {3.743015272433073*^9, 3.7430153766884413`*^9}, {
+   3.743015419760984*^9, 3.743015444872365*^9}, {3.743015477073032*^9, 
+   3.743015731879573*^9}, {3.7430158156078663`*^9, 3.743015928430917*^9}, {
+   3.7430160300879793`*^9, 3.743016076078569*^9}, {3.743017390755726*^9, 
+   3.743017396266986*^9}, {3.743017588034316*^9, 3.743017618617614*^9}, {
+   3.743017656763403*^9, 3.74301765698645*^9}, {3.7430177294906273`*^9, 
+   3.743017836657885*^9}, {3.7430189357031116`*^9, 3.743018970660718*^9}, {
+   3.743019028629221*^9, 3.7430190338047667`*^9}, {3.743019106421194*^9, 
+   3.7430191743163633`*^9}, {3.7430192687798243`*^9, 3.7430194299235888`*^9}, 
+   3.743019477557568*^9, {3.743019537612413*^9, 3.743019540923143*^9}, {
+   3.74301957241186*^9, 3.7430195999069*^9}, {3.743019669251788*^9, 
+   3.743019681322339*^9}, {3.743019744452239*^9, 3.743019804666419*^9}, 
+   3.7430198584682217`*^9, {3.7430199437391863`*^9, 3.743019955218347*^9}, {
+   3.743020153803485*^9, 3.7430203189206667`*^9}, {3.743020356257216*^9, 
+   3.743020388704515*^9}, {3.7430205002511168`*^9, 3.743020549760789*^9}, {
+   3.743020937672703*^9, 3.7430209519432383`*^9}, 3.743021004586527*^9, 
+   3.74302109024932*^9, {3.7430211226320457`*^9, 3.743021149704228*^9}, {
+   3.743021199936213*^9, 3.743021200776678*^9}, {3.7430212508963757`*^9, 
+   3.743021429679096*^9}, {3.7430218216236277`*^9, 3.743021873311083*^9}, {
+   3.743021906750338*^9, 3.743021911294178*^9}, {3.743021942006076*^9, 
+   3.743022004021419*^9}, {3.743022561316492*^9, 3.74302257546692*^9}, {
+   3.743022617221377*^9, 3.743022663315771*^9}, {3.743022712628565*^9, 
+   3.743022826187101*^9}, {3.74302356701686*^9, 3.743023611921229*^9}, 
+   3.743023649658888*^9, {3.743024150937742*^9, 3.74302426888778*^9}, {
+   3.743024314495242*^9, 3.743024326263529*^9}, {3.743024365624384*^9, 
+   3.743024369824226*^9}, {3.743024422983473*^9, 3.74302446805471*^9}, {
+   3.7430252209724407`*^9, 3.74302542500434*^9}, {3.743025466236534*^9, 
+   3.743025502683734*^9}, {3.743025540206821*^9, 3.743025580219605*^9}, {
+   3.743025942828017*^9, 3.7430259495473213`*^9}, 3.743025980258906*^9, 
+   3.743026055356511*^9},
+ CellLabel->
+  "In[686]:=",ExpressionUUID->"886328a5-6238-45f3-afd3-c3e5342dee3d"]
 },
-WindowSize->{1171, 1321},
-WindowMargins->{{145, Automatic}, {Automatic, 33}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1744, 1364},
+WindowMargins->{{2, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -181,7 +1045,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7033, 144, 451, "Input",ExpressionUUID->"510d19a0-630b-4d07-90e0-cbb566eda2ec"]
+Cell[558, 20, 47300, 1008, 2593, "Input",ExpressionUUID->"886328a5-6238-45f3-afd3-c3e5342dee3d"]
 }
 ]
 *)
