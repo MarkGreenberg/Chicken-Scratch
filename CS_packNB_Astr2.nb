@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3480,         93]
-NotebookOptionsPosition[      3167,         79]
-NotebookOutlinePosition[      3527,         95]
-CellTagsIndexPosition[      3484,         92]
+NotebookDataLength[      8692,        202]
+NotebookOptionsPosition[      8399,        189]
+NotebookOutlinePosition[      8738,        204]
+CellTagsIndexPosition[      8695,        201]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,61 +26,170 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"ansStr", "=", 
-        RowBox[{"EntityValue", "[", 
-         RowBox[{
-          RowBox[{"MoonPhase", "[", 
-           RowBox[{"Yesterday", ",", "\"\<Name\>\""}], "]"}], ",", 
-          "\"\<Name\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Take", "[", 
-         RowBox[{
-          RowBox[{"DeleteDuplicates", "[", 
-           RowBox[{"Append", "[", 
-            RowBox[{
-             RowBox[{"RandomSample", "[", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<new moon\>\"", ",", "\"\<waxing crescent moon\>\"", ",", 
-                 "\"\<first quarter moon\>\"", ",", 
-                 "\"\<waxing gibbous moon\>\"", ",", "\"\<full moon\>\"", 
-                 ",", "\"\<waning gibbous moon\>\"", ",", 
-                 "\"\<last quarter moon\>\"", ",", 
-                 "\"\<waning crescent moon\>\""}], "}"}], ",", "4"}], "]"}], 
-             ",", "ansStr"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", "\"\<What phase was the moon in last night?\>\""}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr2\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ansStr", "=", 
+           RowBox[{"EntityValue", "[", 
+            RowBox[{
+             RowBox[{"MoonPhase", "[", 
+              RowBox[{"Yesterday", ",", "\"\<Name\>\""}], "]"}], ",", 
+             "\"\<Name\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                   "\"\<new moon\>\"", ",", "\"\<waxing crescent moon\>\"", 
+                    ",", "\"\<first quarter moon\>\"", ",", 
+                    "\"\<waxing gibbous moon\>\"", ",", "\"\<full moon\>\"", 
+                    ",", "\"\<waning gibbous moon\>\"", ",", 
+                    "\"\<last quarter moon\>\"", ",", 
+                    "\"\<waning crescent moon\>\""}], "}"}], ",", "4"}], 
+                 "]"}], ",", "ansStr"}], "]"}], "]"}], ",", "4"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", "\"\<What phase was the moon in last night?\>\""}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"sunPos", "=", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{
+             RowBox[{"ToString", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"QuantityMagnitude", "[", "#", "]"}], "&"}], "/@", 
+               RowBox[{"SunPosition", "[", "]"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"\"\<{\>\"", "\[Rule]", "\"\<(\>\""}], ",", 
+               RowBox[{"\"\<,\>\"", "\[Rule]", "\"\<\[Degree],\>\""}], ",", 
+               RowBox[{"\"\<}\>\"", "\[Rule]", "\"\<\[Degree])\>\""}]}], 
+              "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disAlt", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Round", "[", 
+               RowBox[{
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"RandomReal", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "90"}], ",", "90"}], "}"}], "]"}], ",", 
+                  "6"}], "]"}], ",", ".01"}], "]"}], "]"}], ",", "3"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disAzm", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Round", "[", 
+               RowBox[{
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"RandomReal", "[", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "360"}], "}"}], "]"}], ",", "6"}], 
+                 "]"}], ",", ".01"}], "]"}], "]"}], ",", "3"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"dis", "=", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], "&"}], "/@", 
+              RowBox[{"Partition", "[", 
+               RowBox[{
+                RowBox[{"Riffle", "[", 
+                 RowBox[{"disAzm", ",", "disAlt"}], "]"}], ",", "2"}], 
+               "]"}]}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"\"\<{\>\"", "\[Rule]", "\"\<(\>\""}], ",", 
+               RowBox[{"\"\<,\>\"", "\[Rule]", "\"\<\[Degree],\>\""}], ",", 
+               RowBox[{"\"\<}\>\"", "\[Rule]", "\"\<\[Degree])\>\""}]}], 
+              "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{"dis", ",", "sunPos"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<What is the position of the sun (azimuth, altitude) right now \
+from your location?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Astr2\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683037885965567*^9, 3.683037887772128*^9}, 
    3.6830382666602097`*^9, {3.684261907587042*^9, 3.6842619132454567`*^9}, {
    3.684262170161963*^9, 3.6842621747901897`*^9}, {3.684262212391231*^9, 
    3.684262282082259*^9}, {3.684262315365302*^9, 3.684262349237561*^9}, {
    3.684262398401547*^9, 3.6842624000482607`*^9}, {3.6842625209119577`*^9, 
-   3.684262528430682*^9}},ExpressionUUID->"453dcb74-993b-458e-817d-\
+   3.684262528430682*^9}, {3.7448846164460278`*^9, 3.744884683698823*^9}, {
+   3.744884912180031*^9, 3.744884912746352*^9}, {3.744885246314436*^9, 
+   3.744885305737441*^9}, {3.744885524593025*^9, 3.744885525544773*^9}, {
+   3.744885803760008*^9, 3.744885986223279*^9}, {3.744886063026733*^9, 
+   3.7448860747033*^9}, {3.744886107736107*^9, 3.744886159422557*^9}, {
+   3.744886217990863*^9, 3.744886392461564*^9}, {3.7448864275734243`*^9, 
+   3.744886452837015*^9}, {3.744886573678318*^9, 3.744886584148642*^9}, {
+   3.744886713533927*^9, 3.7448867189645452`*^9}, {3.744886802877162*^9, 
+   3.744886849499495*^9}, {3.7448869226208887`*^9, 3.744886938987445*^9}, {
+   3.744887207684469*^9, 3.744887220978653*^9}, {3.7448873392298927`*^9, 
+   3.7448873691882687`*^9}, {3.744887513917274*^9, 3.744887524780401*^9}, {
+   3.744887695148868*^9, 3.7448876972276077`*^9}, {3.744887797187333*^9, 
+   3.744887809627084*^9}, {3.744887854556766*^9, 3.744887944554903*^9}, {
+   3.74488836494683*^9, 3.744888389377836*^9}, {3.744888431210546*^9, 
+   3.744888439073411*^9}, {3.7448884770987053`*^9, 3.744888587649022*^9}, {
+   3.7448889522735987`*^9, 3.744888988255933*^9}, {3.74488901906413*^9, 
+   3.744889080315671*^9}, {3.7448891995376177`*^9, 3.74488921736751*^9}, 
+   3.744889370985304*^9},ExpressionUUID->"453dcb74-993b-458e-817d-\
 58418933bc0b"]
 },
-WindowSize->{1199, 933},
-WindowMargins->{{-3, Automatic}, {Automatic, 66}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1213, 1367},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (August 20, 2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -94,10 +203,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2605, 57, 304, "Input",ExpressionUUID->"453dcb74-993b-458e-817d-58418933bc0b"]
+Cell[558, 20, 7837, 167, 577, "Input",ExpressionUUID->"453dcb74-993b-458e-817d-58418933bc0b"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
