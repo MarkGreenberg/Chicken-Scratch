@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38165,        793]
-NotebookOptionsPosition[     37740,        777]
-NotebookOutlinePosition[     38118,        794]
-CellTagsIndexPosition[     38075,        791]
+NotebookDataLength[     40835,        840]
+NotebookOptionsPosition[     40410,        824]
+NotebookOutlinePosition[     40788,        841]
+CellTagsIndexPosition[     40745,        838]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -545,21 +545,22 @@ or present. Which could fly fastest?\>\"", ",",
           RowBox[{"hours", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"Table", "[", 
-              RowBox[{
-               RowBox[{"#", "/.", 
-                RowBox[{
-                 RowBox[{"{", 
-                  RowBox[{
-                  "y_", ",", "m_", ",", "d_", ",", "h_", ",", "_", ",", "_"}],
-                   "}"}], "\[Rule]", 
-                 RowBox[{"{", 
-                  RowBox[{
-                  "y", ",", "m", ",", "d", ",", "hh", ",", "0", ",", "0"}], 
-                  "}"}]}]}], ",", 
-               RowBox[{"{", 
-                RowBox[{"hh", ",", "1", ",", "24"}], "}"}]}], "]"}], "&"}], "/@",
-             "mixedDates"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"DateObject", "[", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"#", "/.", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                   "y_", ",", "m_", ",", "d_", ",", "h_", ",", "_", ",", 
+                    "_"}], "}"}], "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                   "y", ",", "m", ",", "d", ",", "hh", ",", "0", ",", "0"}], 
+                   "}"}]}]}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"hh", ",", "1", ",", "24"}], "}"}]}], "]"}], "]"}], 
+             "&"}], "/@", "mixedDates"}]}], ";", "\[IndentingNewLine]", 
           "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
@@ -577,58 +578,79 @@ or present. Which could fly fastest?\>\"", ",",
                 RowBox[{"1", ",", "2", ",", "2"}], 
                 "\[RightDoubleBracket]"}]}]}], ";", "\[IndentingNewLine]", 
              RowBox[{
-             "\"\<The chart shows four days of temperatures in \>\"", "<>", 
-              "cityStr", "<>", "\"\<. Which day is the blue line?\>\""}]}], 
-            "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+             "\"\<The chart shows the past four days of temperatures in \>\"",
+               "<>", "cityStr", "<>", 
+              "\"\<. Which day is the blue line?\>\""}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{
-            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
-             RowBox[{
-              RowBox[{"temps", "=", 
+           RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"temps", "=", 
+              RowBox[{
                RowBox[{
                 RowBox[{
-                 RowBox[{"AirTemperatureData", "[", "#", "]"}], "&"}], "/@", 
-                "h1"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"yRng", "=", 
+                 RowBox[{"AirTemperatureData", "[", 
+                  RowBox[{"#", "-", 
+                   RowBox[{"Quantity", "[", 
+                    RowBox[{"$TimeZone", ",", "\"\<Hours\>\""}], "]"}]}], 
+                  "]"}], "&"}], "/@", "hours"}], "//.", 
                RowBox[{"{", 
                 RowBox[{
                  RowBox[{
-                  RowBox[{"QuantityMagnitude", "[", 
-                   RowBox[{"Min", "[", "temps", "]"}], "]"}], "-", "2"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"a___", ",", "b_", ",", 
+                    RowBox[{"Missing", "[", "_", "]"}], ",", "c___"}], "}"}], 
+                  "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{"a", ",", "b", ",", "b", ",", "c"}], "}"}]}], ",", 
+                 
                  RowBox[{
-                  RowBox[{"QuantityMagnitude", "[", 
-                   RowBox[{"Max", "[", "temps", "]"}], "]"}], "+", "2"}]}], 
-                "}"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
-               RowBox[{"temps", ",", "\[IndentingNewLine]", 
-                RowBox[{"PlotRange", "\[Rule]", 
-                 RowBox[{"{", 
-                  RowBox[{
-                   RowBox[{"{", 
-                    RowBox[{"0", ",", "24"}], "}"}], ",", "yRng"}], "}"}]}], 
-                ",", 
-                RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
-                "\[IndentingNewLine]", 
-                RowBox[{"PlotStyle", "\[Rule]", 
-                 RowBox[{"{", 
-                  RowBox[{"Pink", ",", "Orange", ",", "Green", ",", "Blue"}], 
-                  "}"}]}], ",", "\[IndentingNewLine]", 
-                RowBox[{"AxesLabel", "\[Rule]", 
-                 RowBox[{"{", 
-                  RowBox[{"\"\<Time\>\"", ",", "\"\<\[Degree]F\>\""}], 
-                  "}"}]}], ",", 
-                RowBox[{"LabelStyle", "\[Rule]", 
-                 RowBox[{"Directive", "[", 
-                  RowBox[{
+                  RowBox[{"{", 
                    RowBox[{
-                   "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", 
-                   "Black", ",", "15"}], "]"}]}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"Missing", "[", "_", "]"}], ",", "a_", ",", 
+                    "b___"}], "}"}], "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{"a", ",", "a", ",", "b"}], "}"}]}]}], "}"}]}]}], 
+             ";", "\[IndentingNewLine]", 
+             RowBox[{"yRng", "=", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"QuantityMagnitude", "[", 
+                  RowBox[{"Min", "[", "temps", "]"}], "]"}], "-", "4"}], ",", 
                 
-                RowBox[{"AspectRatio", "\[Rule]", 
-                 FractionBox["9", "8"]}], ",", 
-                RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], "]"}], "/.", 
-            RowBox[{"h1", "\[Rule]", "hours"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"QuantityMagnitude", "[", 
+                  RowBox[{"Max", "[", "temps", "]"}], "]"}], "+", "4"}]}], 
+               "}"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
+              RowBox[{"temps", ",", "\[IndentingNewLine]", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", "24"}], "}"}], ",", "yRng"}], "}"}]}], 
+               ",", 
+               RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"PlotStyle", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"Pink", ",", "Orange", ",", "Green", ",", "Blue"}], 
+                 "}"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"AxesLabel", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"\"\<Time\>\"", ",", "\"\<\[Degree]F\>\""}], "}"}]}],
+                ",", 
+               RowBox[{"LabelStyle", "\[Rule]", 
+                RowBox[{"Directive", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", 
+                  "Black", ",", "15"}], "]"}]}], ",", "\[IndentingNewLine]", 
+               RowBox[{"AspectRatio", "\[Rule]", 
+                FractionBox["9", "8"]}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", "days"}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
@@ -771,12 +793,37 @@ or present. Which could fly fastest?\>\"", ",",
    3.740171168906601*^9}, 3.7401712007301283`*^9, {3.740171232997265*^9, 
    3.740171236915207*^9}, {3.740171286212096*^9, 3.740171295282071*^9}, {
    3.740171402731947*^9, 3.740171475744763*^9}, {3.740171540515378*^9, 
-   3.740171562650847*^9}, {3.740171781627282*^9, 3.7401717932328053`*^9}},
+   3.740171562650847*^9}, {3.740171781627282*^9, 3.7401717932328053`*^9}, {
+   3.747162738925515*^9, 3.747162827119649*^9}, {3.747162915409666*^9, 
+   3.747162917279242*^9}, {3.747163091068891*^9, 3.747163097420616*^9}, {
+   3.74716316143966*^9, 3.747163179747204*^9}, {3.7471634169744062`*^9, 
+   3.747163454989286*^9}, {3.747163491574973*^9, 3.747163565894021*^9}, {
+   3.747163603125799*^9, 3.747163616183255*^9}, {3.74716442275883*^9, 
+   3.74716444242583*^9}, {3.7471645037479486`*^9, 3.747164594681493*^9}, {
+   3.747164811526129*^9, 3.747164831472968*^9}, {3.747164925525098*^9, 
+   3.74716493330405*^9}, {3.747165239178432*^9, 3.747165241999476*^9}, {
+   3.747165322700087*^9, 3.747165358972206*^9}, {3.747165396490081*^9, 
+   3.7471654088973417`*^9}, {3.747165505484511*^9, 3.747165570340045*^9}, {
+   3.7471661711772337`*^9, 3.747166215117763*^9}, {3.747166271166596*^9, 
+   3.747166281165729*^9}, {3.747231094839427*^9, 3.7472311059424963`*^9}, {
+   3.7472315405845957`*^9, 3.747231553118181*^9}, {3.747232071412496*^9, 
+   3.747232077419553*^9}, {3.747232160236085*^9, 3.747232222003838*^9}, {
+   3.747232294850874*^9, 3.747232343515089*^9}, 3.747232532291027*^9, 
+   3.74723321412668*^9, 3.747233254640094*^9, {3.747233319264697*^9, 
+   3.747233323887506*^9}, 3.7472336467760553`*^9, {3.74723382137568*^9, 
+   3.74723391638081*^9}, 3.747234035182603*^9, {3.7472340817425117`*^9, 
+   3.747234085644189*^9}, {3.7472341862368603`*^9, 3.7472341921551437`*^9}, {
+   3.747234257028569*^9, 3.747234265507866*^9}, {3.74723438942839*^9, 
+   3.747234393738638*^9}, {3.747234426275148*^9, 3.747234428068213*^9}, {
+   3.747234515323854*^9, 3.747234631065824*^9}, {3.747234707300033*^9, 
+   3.747234712715253*^9}, {3.747234860859398*^9, 3.747234865531331*^9}, {
+   3.747234953643134*^9, 3.747234974003283*^9}, {3.74723508510997*^9, 
+   3.74723514997746*^9}},
  CellLabel->
-  "In[300]:=",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
+  "In[3174]:=",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 },
 WindowSize->{1608, 1384},
-WindowMargins->{{0, Automatic}, {Automatic, 1}},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 WindowStatusArea->None,
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
 2018)",
@@ -794,7 +841,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 131, 3, 30, "Input",ExpressionUUID->"33e6fa05-de96-4e1a-981e-5ff6c4285853"],
-Cell[692, 25, 37044, 750, 1491, "Input",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
+Cell[692, 25, 39714, 797, 1491, "Input",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 }
 ]
 *)
