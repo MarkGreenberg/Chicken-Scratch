@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40835,        840]
-NotebookOptionsPosition[     40410,        824]
-NotebookOutlinePosition[     40788,        841]
-CellTagsIndexPosition[     40745,        838]
+NotebookDataLength[     59348,       1193]
+NotebookOptionsPosition[     58922,       1177]
+NotebookOutlinePosition[     59300,       1194]
+CellTagsIndexPosition[     59257,       1191]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -489,183 +489,463 @@ or present. Which could fly fastest?\>\"", ",",
            RowBox[{"{", 
             RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "2", ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"dates", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"DateList", "[", "#", "]"}], "&"}], "/@", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"Today", "-", 
-               RowBox[{"Quantity", "[", 
-                RowBox[{"4", ",", "\"\<Days\>\""}], "]"}]}], ",", 
-              RowBox[{"Today", "-", 
-               RowBox[{"Quantity", "[", 
-                RowBox[{"3", ",", "\"\<Days\>\""}], "]"}]}], ",", 
-              RowBox[{"Today", "-", 
-               RowBox[{"Quantity", "[", 
-                RowBox[{"2", ",", "\"\<Days\>\""}], "]"}]}], ",", 
-              RowBox[{"Today", "-", 
-               RowBox[{"Quantity", "[", 
-                RowBox[{"1", ",", "\"\<Days\>\""}], "]"}]}]}], "}"}]}]}], ";",
-           "\[IndentingNewLine]", 
-          RowBox[{"days", "=", 
-           RowBox[{"Append", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"StringJoin", "[", 
-                 RowBox[{"\"\<last \>\"", ",", "#"}], "]"}], ")"}], "&"}], "/@", 
-              RowBox[{"Most", "[", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"DateString", "[", 
-                  RowBox[{"#", ",", "\"\<DayName\>\""}], "]"}], "&"}], "/@", 
-                "dates"}], "]"}]}], ",", "\"\<yesterday\>\""}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"order", "=", 
+          RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
-            RowBox[{"{", 
-             RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], "]"}]}], ";",
-           "\[IndentingNewLine]", 
-          RowBox[{"mixedDates", "=", 
-           RowBox[{
             RowBox[{
-             RowBox[{
-             "dates", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
-             "&"}], "/@", "order"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"mixedDays", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{
-             "days", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
-             "&"}], "/@", "order"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"hours", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"DateObject", "[", 
-              RowBox[{"Table", "[", 
+             RowBox[{"<|", "\[IndentingNewLine]", 
+              RowBox[{
                RowBox[{
-                RowBox[{"#", "/.", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                   "y_", ",", "m_", ",", "d_", ",", "h_", ",", "_", ",", 
-                    "_"}], "}"}], "\[Rule]", 
-                  RowBox[{"{", 
-                   RowBox[{
-                   "y", ",", "m", ",", "d", ",", "hh", ",", "0", ",", "0"}], 
-                   "}"}]}]}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"hh", ",", "1", ",", "24"}], "}"}]}], "]"}], "]"}], 
-             "&"}], "/@", "mixedDates"}]}], ";", "\[IndentingNewLine]", 
+               "\"\<.AI\>\"", "\[Rule]", 
+                "\"\<a vector graphics file made by Illustrator by \
+Adobe\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.AIF or .AIFF\>\"", "\[Rule]", 
+                "\"\<a file for uncompressed audio, originally from \
+Apple\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.APP\>\"", "\[Rule]", 
+                "\"\<an application on a Macintosh computer\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.ASF\>\"", "\[Rule]", 
+                "\"\<video with audio and metadata in a Microsoft \
+format\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.AVI\>\"", "\[Rule]", 
+                "\"\<a Microsoft video/audio container file\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.B\>\"", "\[Rule]", 
+                "\"\<a game saved from Grand Theft Auto III\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.BAT\>\"", "\[Rule]", 
+                "\"\<a file containing lines for Windows Command \
+Prompt\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.BMP\>\"", "\[Rule]", 
+                "\"\<a cross-platform uncompressed raster image\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CBR\>\"", "\[Rule]", 
+                "\"\<a comic book in compressed data format\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CDF\>\"", "\[Rule]", 
+                "\"\<a computable document from Wolfram Research\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CER\>\"", "\[Rule]", 
+                "\"\<an Internet security certificate\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CGI\>\"", "\[Rule]", 
+                "\"\<an executable Perl or C script for web pages\>\""}], ",",
+                "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.COM\>\"", "\[Rule]", 
+                "\"\<an old executable file for the DOS operating \
+system\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CR2\>\"", "\[Rule]", 
+                "\"\<a rigged character made in Poser\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CSS\>\"", "\[Rule]", 
+                "\"\<instructions on how a web page should be styled\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CSV\>\"", "\[Rule]", 
+                "\"\<a data file in which items are separated by \
+commas\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.CUR\>\"", "\[Rule]", 
+                "\"\<an image or animation used as a mouse pointer on Windows\
+\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DAT\>\"", "\[Rule]", 
+                "\"\<a generic data file for an application's internal \
+use\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DB\>\"", "\[Rule]", 
+                "\"\<a database file on a mobile device\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DBF\>\"", "\[Rule]", 
+                "\"\<a database file for the program dBASE\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DDS\>\"", "\[Rule]", 
+                "\"\<textures and environments from Microsoft DirectX\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DEM\>\"", "\[Rule]", 
+                "\"\<a first-person-shooter game session recorded for sharing\
+\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DLL\>\"", "\[Rule]", 
+                "\"\<a compiled program that assists an application on \
+Windows\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DMG\>\"", "\[Rule]", 
+                "\"\<a disc image on a Macintosh computer\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DOC\>\"", "\[Rule]", 
+                "\"\<a document from Microsoft's Word word processor\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DOCX\>\"", "\[Rule]", 
+                "\"\<a Microsoft Word Open XML file\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DRV\>\"", "\[Rule]", 
+                "\"\<instructions for a hardward device attached to a \
+computer\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DWG\>\"", "\[Rule]", 
+                "\"\<2D or 3D drawings made in AutoCAD\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.DXF\>\"", "\[Rule]", 
+                "\"\<ASCII-based file containing vector graphics and CAD \
+files\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.EPS\>\"", "\[Rule]", 
+                "\"\<a PostScript file of vector and/or raster images\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.EXE\>\"", "\[Rule]", 
+                "\"\<a standalone program that runs on Windows\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.FLV\>\"", "\[Rule]", 
+                "\"\<an Adobe file for Flash animated video\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.FNT\>\"", "\[Rule]", 
+                "\"\<a description of a font on a Windows computer\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.GAM\>\"", "\[Rule]", 
+                "\"\<a file that saves a video game to be continued \
+later\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.GED\>\"", "\[Rule]", 
+                "\"\<a file for storing genealogical data by the Mormon \
+church\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.GIF\>\"", "\[Rule]", 
+                "\"\<an image that is compressed by using indexed \
+colors\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.GPX\>\"", "\[Rule]", 
+                "\"\<a file containing global positioning data in XML \
+format\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.HTM or .HTML\>\"", "\[Rule]", 
+                "\"\<instructions for loading the content of a web \
+page\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.ICS\>\"", "\[Rule]", 
+                "\"\<a calendar or event on a calendar\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.IFF\>\"", "\[Rule]", 
+                "\"\<a music/multimedia file, originally by Electronic Arts\>\
+\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.JAR\>\"", "\[Rule]", 
+                "\"\<a standalone program that will run in a Java environment\
+\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.JPG or .JPEG\>\"", "\[Rule]", 
+                "\"\<the most common type of compressed image\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.JS\>\"", "\[Rule]", 
+                "\"\<web page behaviors written in JavaScript\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.KEY\>\"", "\[Rule]", 
+                "\"\<an encrypted file that safeguards licensing \
+information\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.KEYCHAIN\>\"", "\[Rule]", 
+                
+                "\"\<a file on Apple devices that safeguards authentication\>\
+\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.KML\>\"", "\[Rule]", 
+                "\"\<geographic modeling data in an XML format, including \
+overlays\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.KMZ\>\"", "\[Rule]", 
+                "\"\<a file that stores markers for Google Earth\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.LOG\>\"", "\[Rule]", 
+                "\"\<a cross-platform file that time stamps various computer \
+events\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MAX\>\"", "\[Rule]", 
+                "\"\<a computer graphics and animation file from 3D Studio \
+Max\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MDB\>\"", "\[Rule]", 
+                "\"\<a database file for Microsoft Access\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MID\>\"", "\[Rule]", 
+                "\"\<music stored in the Musical Instrument Digital Interface \
+format\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MOV\>\"", "\[Rule]", 
+                "\"\<a cross-platform Apple video/multimedia file\>\""}], ",",
+                "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MPA\>\"", "\[Rule]", 
+                "\"\<audio reduced with MPEG Layer II compression\>\""}], ",",
+                "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MPG\>\"", "\[Rule]", 
+                "\"\<a file with video, audio, and metadata interleaved \
+together\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MP3\>\"", "\[Rule]", 
+                "\"\<compressed audio, developed by the Motion Picture \
+Experts Group\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MP4\>\"", "\[Rule]", 
+                "\"\<a video file with optional subtitles or images\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.MSG\>\"", "\[Rule]", "\"\<an Outlook Mail file\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.M3U\>\"", "\[Rule]", 
+                
+                "\"\<a file that stores media playlists, but not the actual \
+media\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.M4A\>\"", "\[Rule]", 
+                "\"\<a file for compressed audio and video, originally by \
+Apple\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.M4V\>\"", "\[Rule]", 
+                "\"\<an Apple file for video from the iTunes store\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.NB\>\"", "\[Rule]", 
+                "\"\<programming code in a notebook environment from Wolfram \
+Research\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.NES\>\"", "\[Rule]", 
+                "\"\<a Nintendo game for use on a Mac or PC\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.OBJ\>\"", "\[Rule]", 
+                "\"\<a polygon mesh file with texture maps\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.ODT\>\"", "\[Rule]", 
+                "\"\<an OpenDocument text file, originally from Oracle\>\""}],
+                ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.OTF\>\"", "\[Rule]", 
+                "\"\<a description of a scalable font in the Fonts \
+directory\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PAGES\>\"", "\[Rule]", 
+                "\"\<a document from Apple's Pages word processor\>\""}], ",",
+                "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PART\>\"", "\[Rule]", 
+                "\"\<only a portion of an interrupted download\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PDB\>\"", "\[Rule]", 
+                "\"\<a database format shared by Quicken, MS Visual Studio, \
+etc.\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PDF\>\"", "\[Rule]", 
+                "\"\<a cross-platform document read with Adobe Acrobat\>\""}],
+                ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PHP\>\"", "\[Rule]", 
+                "\"\<a web page description that can interact with a database\
+\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PNG\>\"", "\[Rule]", 
+                
+                "\"\<a compressed image with indexed colors and \
+transparency\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PPS\>\"", "\[Rule]", 
+                "\"\<an uneditable version of a slide show from \
+PowerPoint\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PPT\>\"", "\[Rule]", 
+                "\"\<an editable file from Microsoft's PowerPoint\>\""}], ",",
+                "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PPTX\>\"", "\[Rule]", 
+                "\"\<an Open XML version of a PowerPoint presentation\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.PSD\>\"", "\[Rule]", 
+                "\"\<a Photoshop file with image data, layers, masks, \
+etc.\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.RM\>\"", "\[Rule]", 
+                "\"\<a file that coordinates playback of audio and video \
+streaming\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.RSS\>\"", "\[Rule]", 
+                "\"\<a web content container usually used for news \
+feeds\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.RTF\>\"", "\[Rule]", 
+                "\"\<a rich text document, originally from Microsoft\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.SDF\>\"", "\[Rule]", 
+                "\"\<a file for compact relational databases, originally by \
+Microsoft\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.SQL\>\"", "\[Rule]", 
+                "\"\<a file containing database data and query \
+information\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.SRT\>\"", "\[Rule]", 
+                "\"\<a file that contains only subtitle information\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.SVG\>\"", "\[Rule]", 
+                "\"\<an vector image file intended for use on the web\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.SWF\>\"", "\[Rule]", 
+                "\"\<an vector or raster animation made in Flash\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.SYS\>\"", "\[Rule]", 
+                "\"\<core instructions for a Windows computer \
+operation\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.TAR\>\"", "\[Rule]", 
+                "\"\<a file that bundles other files for archiving\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.TEX\>\"", "\[Rule]", 
+                "\"\<a LaTeX source file for typesetting mostly math\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.TGA\>\"", "\[Rule]", 
+                "\"\<a video game texture file in the Truevision \
+format\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.TIF or .TIFF\>\"", "\[Rule]", 
+                "\"\<a high quality image file with layers and pages\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.TMP\>\"", "\[Rule]", 
+                "\"\<a file that disappears when its creator application \
+closes\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.TTF\>\"", "\[Rule]", 
+                "\"\<the most common format for scalable cross-platform fonts\
+\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.TXT\>\"", "\[Rule]", 
+                "\"\<a file containing plain, unformatted text\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.VCF\>\"", "\[Rule]", 
+                "\"\<a contat list file for address book applications\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.VOB\>\"", "\[Rule]", 
+                "\"\<a file that organizes the media on a DVD disc\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.WAV\>\"", "\[Rule]", 
+                "\"\<a file storing audio waveforms\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.WMA\>\"", "\[Rule]", 
+                "\"\<a file containing audio and metadata for Windows Media \
+Player\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.WMV\>\"", "\[Rule]", 
+                "\"\<compressed video for Windows Media Player\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.WPD\>\"", "\[Rule]", 
+                
+                "\"\<a document from Corel's WordPerfect word \
+processor\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.WPS\>\"", "\[Rule]", 
+                "\"\<a document from Microsoft's Works word processor, now \
+defunct\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.XLS\>\"", "\[Rule]", 
+                "\"\<a spreadsheet made in Microsoft Excel\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.XLSX\>\"", "\[Rule]", 
+                "\"\<an Excel spreadsheet in Open XML format\>\""}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.XML\>\"", "\[Rule]", 
+                "\"\<a text-based database file using the Extensible Markup \
+Language\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.YUV\>\"", "\[Rule]", 
+                "\"\<a specialized video format saved as separate \
+images\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.ZIP\>\"", "\[Rule]", 
+                "\"\<a compressed file of any kind in a widely used \
+format\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.3DM\>\"", "\[Rule]", 
+                "\"\<a 3D model file with both polygon mesh and NURBS \
+info\>\""}], ",", "\[IndentingNewLine]", 
+               RowBox[{
+               "\"\<.3DS\>\"", "\[Rule]", 
+                "\"\<a 3D Studio file for computer graphics and \
+animation\>\""}]}], "\[IndentingNewLine]", "|>"}], ",", "4"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
-           RowBox[{"Hold", "[", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"cityEnt", "=", 
-              RowBox[{"GeoNearest", "[", 
-               RowBox[{"\"\<City\>\"", ",", "Here"}], "]"}]}], ";", 
-             "\[IndentingNewLine]", 
-             RowBox[{"cityStr", "=", 
-              RowBox[{
-               RowBox[{"cityEnt", "\[LeftDoubleBracket]", 
-                RowBox[{"1", ",", "2", ",", "1"}], "\[RightDoubleBracket]"}], 
-               "<>", "\"\<, \>\"", "<>", 
-               RowBox[{"cityEnt", "\[LeftDoubleBracket]", 
-                RowBox[{"1", ",", "2", ",", "2"}], 
-                "\[RightDoubleBracket]"}]}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{"\"\<Which file extension denotes `1`?\>\"", ",", 
              RowBox[{
-             "\"\<The chart shows the past four days of temperatures in \>\"",
-               "<>", "cityStr", "<>", 
-              "\"\<. Which day is the blue line?\>\""}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", "\[IndentingNewLine]", 
-          RowBox[{"pic", "=", 
-           RowBox[{"Hold", "[", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"temps", "=", 
-              RowBox[{
-               RowBox[{
-                RowBox[{
-                 RowBox[{"AirTemperatureData", "[", 
-                  RowBox[{"#", "-", 
-                   RowBox[{"Quantity", "[", 
-                    RowBox[{"$TimeZone", ",", "\"\<Hours\>\""}], "]"}]}], 
-                  "]"}], "&"}], "/@", "hours"}], "//.", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{"a___", ",", "b_", ",", 
-                    RowBox[{"Missing", "[", "_", "]"}], ",", "c___"}], "}"}], 
-                  "\[Rule]", 
-                  RowBox[{"{", 
-                   RowBox[{"a", ",", "b", ",", "b", ",", "c"}], "}"}]}], ",", 
-                 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"Missing", "[", "_", "]"}], ",", "a_", ",", 
-                    "b___"}], "}"}], "\[Rule]", 
-                  RowBox[{"{", 
-                   RowBox[{"a", ",", "a", ",", "b"}], "}"}]}]}], "}"}]}]}], 
-             ";", "\[IndentingNewLine]", 
-             RowBox[{"yRng", "=", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{
-                 RowBox[{"QuantityMagnitude", "[", 
-                  RowBox[{"Min", "[", "temps", "]"}], "]"}], "-", "4"}], ",", 
-                
-                RowBox[{
-                 RowBox[{"QuantityMagnitude", "[", 
-                  RowBox[{"Max", "[", "temps", "]"}], "]"}], "+", "4"}]}], 
-               "}"}]}], ";", "\[IndentingNewLine]", 
-             RowBox[{"ListLinePlot", "[", "\[IndentingNewLine]", 
-              RowBox[{"temps", ",", "\[IndentingNewLine]", 
-               RowBox[{"PlotRange", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", "24"}], "}"}], ",", "yRng"}], "}"}]}], 
-               ",", 
-               RowBox[{"InterpolationOrder", "\[Rule]", "2"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"PlotStyle", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{"Pink", ",", "Orange", ",", "Green", ",", "Blue"}], 
-                 "}"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"AxesLabel", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{"\"\<Time\>\"", ",", "\"\<\[Degree]F\>\""}], "}"}]}],
-                ",", 
-               RowBox[{"LabelStyle", "\[Rule]", 
-                RowBox[{"Directive", "[", 
-                 RowBox[{
-                  RowBox[{
-                  "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", 
-                  "Black", ",", "15"}], "]"}]}], ",", "\[IndentingNewLine]", 
-               RowBox[{"AspectRatio", "\[Rule]", 
-                FractionBox["9", "8"]}], ",", 
-               RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
-          RowBox[{"mixed", "=", "days"}], ";", "\[IndentingNewLine]", 
+              RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+              "1", "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
-             RowBox[{"days", ",", 
-              RowBox[{
-              "mixedDays", "\[LeftDoubleBracket]", "4", 
-               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
-            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
-           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
-   "\[IndentingNewLine]", "\"\<CS_pack_Huma4\>\"", ",", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Huma4\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683566127968186*^9, 3.683566148059082*^9}, {
    3.68356686815979*^9, 3.68356688994485*^9}, {3.68356695461592*^9, 
@@ -818,9 +1098,82 @@ or present. Which could fly fastest?\>\"", ",",
    3.747234515323854*^9, 3.747234631065824*^9}, {3.747234707300033*^9, 
    3.747234712715253*^9}, {3.747234860859398*^9, 3.747234865531331*^9}, {
    3.747234953643134*^9, 3.747234974003283*^9}, {3.74723508510997*^9, 
-   3.74723514997746*^9}},
- CellLabel->
-  "In[3174]:=",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
+   3.74723514997746*^9}, {3.751032425740384*^9, 3.7510324960399027`*^9}, 
+   3.751032557253841*^9, {3.751033012494837*^9, 3.7510332528134212`*^9}, {
+   3.7510333825315638`*^9, 3.751033492572048*^9}, {3.751033595531324*^9, 
+   3.751033681682803*^9}, {3.751033747938903*^9, 3.751033786969831*^9}, {
+   3.751033842041863*^9, 3.7510339224971533`*^9}, {3.751033962865737*^9, 
+   3.751034393536314*^9}, {3.751034541896516*^9, 3.7510346003915462`*^9}, {
+   3.751034659848073*^9, 3.751034701887061*^9}, {3.751034758128701*^9, 
+   3.7510347996527977`*^9}, {3.751034848463323*^9, 3.7510349577060413`*^9}, {
+   3.751034998671711*^9, 3.751035112320122*^9}, {3.7510351848873777`*^9, 
+   3.751035306279872*^9}, {3.751035361790764*^9, 3.7510354838359413`*^9}, {
+   3.751035539726116*^9, 3.75103560693227*^9}, {3.751035680005456*^9, 
+   3.751035762038618*^9}, {3.751035881131359*^9, 3.751035928570385*^9}, {
+   3.751035967348156*^9, 3.751036046369947*^9}, {3.751036078563588*^9, 
+   3.7510361544210043`*^9}, {3.751036228139381*^9, 3.7510362906090517`*^9}, {
+   3.7510363211709833`*^9, 3.7510363545462646`*^9}, {3.751036388337804*^9, 
+   3.751036467746401*^9}, {3.7510365031456947`*^9, 3.751036508861006*^9}, {
+   3.7510365860505*^9, 3.751036643696527*^9}, {3.751036682634569*^9, 
+   3.751036726600507*^9}, {3.751036779665308*^9, 3.751036857255608*^9}, {
+   3.751036928241234*^9, 3.751037022919729*^9}, {3.751037058840774*^9, 
+   3.751037070359091*^9}, {3.751037130478455*^9, 3.751037176544579*^9}, {
+   3.751037213143169*^9, 3.751037252230118*^9}, {3.751037295230713*^9, 
+   3.751037309038117*^9}, {3.751037354806382*^9, 3.7510374131013813`*^9}, {
+   3.751042809809712*^9, 3.751042823015318*^9}, {3.751042873599639*^9, 
+   3.751042905118753*^9}, {3.751043044599566*^9, 3.751043083641403*^9}, {
+   3.7510431459191713`*^9, 3.751043304357008*^9}, {3.751043387143113*^9, 
+   3.751043490428846*^9}, {3.751043573949049*^9, 3.751043641875662*^9}, {
+   3.751043689668591*^9, 3.751043740963284*^9}, {3.7510438332368183`*^9, 
+   3.751043897555031*^9}, {3.751043952427409*^9, 3.751043977866508*^9}, {
+   3.7510440321080923`*^9, 3.751044088313964*^9}, {3.751044136395659*^9, 
+   3.751044255817486*^9}, {3.75104433368359*^9, 3.751044400153018*^9}, {
+   3.751044455433814*^9, 3.751044520255865*^9}, {3.751044572394257*^9, 
+   3.7510446109917307`*^9}, {3.751044666960762*^9, 3.751044717999195*^9}, {
+   3.751044752881278*^9, 3.751044753538846*^9}, {3.7510451248636847`*^9, 
+   3.751045225932439*^9}, {3.7510452937500973`*^9, 3.7510453014969187`*^9}, {
+   3.751045336080861*^9, 3.7510453595959377`*^9}, {3.751045433701988*^9, 
+   3.751045468272859*^9}, {3.751045563475656*^9, 3.7510456479466248`*^9}, {
+   3.751045748843363*^9, 3.7510458078180103`*^9}, {3.7510458762347727`*^9, 
+   3.751045943809353*^9}, {3.751046122449616*^9, 3.751046169368389*^9}, {
+   3.751046285881715*^9, 3.751046382219112*^9}, {3.7510464365680304`*^9, 
+   3.751046524464345*^9}, {3.751046951208432*^9, 3.751046961341003*^9}, {
+   3.751047003822214*^9, 3.7510470320786657`*^9}, {3.751047218768757*^9, 
+   3.751047247974921*^9}, {3.7510493491121197`*^9, 3.751049406292856*^9}, {
+   3.7510494997658463`*^9, 3.751049554916543*^9}, {3.751049653757537*^9, 
+   3.751049734310507*^9}, {3.751049770004655*^9, 3.751049814996417*^9}, {
+   3.751049870363929*^9, 3.7510499370909147`*^9}, {3.751049980434642*^9, 
+   3.751050004106806*^9}, {3.751050055285584*^9, 3.7510501010746937`*^9}, {
+   3.751050131205078*^9, 3.7510501607944*^9}, {3.7510502400844173`*^9, 
+   3.751050286665592*^9}, {3.7510503591957827`*^9, 3.751050431977788*^9}, {
+   3.7510504661644773`*^9, 3.7510505047371902`*^9}, {3.751050552787713*^9, 
+   3.751050608289172*^9}, {3.751050694076096*^9, 3.751050736369055*^9}, {
+   3.75105081608364*^9, 3.7510508672243433`*^9}, {3.751050901090045*^9, 
+   3.751050934088252*^9}, {3.751050970856741*^9, 3.751051008920459*^9}, {
+   3.7510510531866283`*^9, 3.751051085439302*^9}, {3.751051139074258*^9, 
+   3.751051210455085*^9}, {3.751051254656934*^9, 3.751051285815111*^9}, {
+   3.7510513407378798`*^9, 3.751051385014742*^9}, {3.7510514483292007`*^9, 
+   3.751051500238908*^9}, {3.751051547560441*^9, 3.751051594981861*^9}, {
+   3.751051651896344*^9, 3.7510516940936747`*^9}, {3.7510517309841127`*^9, 
+   3.751051812029546*^9}, {3.751051854904049*^9, 3.751051989102148*^9}, {
+   3.751052032231587*^9, 3.751052060157419*^9}, {3.751052112959824*^9, 
+   3.751052148708373*^9}, {3.751052197886736*^9, 3.7510522432598543`*^9}, {
+   3.7510522898947477`*^9, 3.751052360131514*^9}, {3.75105242922132*^9, 
+   3.751052477987103*^9}, {3.751052525612524*^9, 3.75105257733069*^9}, {
+   3.7510526294134808`*^9, 3.7510526602189703`*^9}, {3.7510527267878923`*^9, 
+   3.751052735838423*^9}, {3.751052793046083*^9, 3.751052861745914*^9}, {
+   3.751052891883367*^9, 3.7510529429942408`*^9}, {3.7510530053891163`*^9, 
+   3.751053053169188*^9}, {3.7510530992118063`*^9, 3.7510531603206797`*^9}, {
+   3.751053208715314*^9, 3.751053299728286*^9}, {3.75105334662573*^9, 
+   3.75105343323354*^9}, {3.7510535392511797`*^9, 3.75105357414345*^9}, {
+   3.751053623216104*^9, 3.751053675111231*^9}, {3.751053756202488*^9, 
+   3.7510537948147917`*^9}, {3.751053905848707*^9, 3.751053942166286*^9}, {
+   3.751053976968019*^9, 3.751054020693969*^9}, {3.751054055720112*^9, 
+   3.751054091549822*^9}, {3.751054138967352*^9, 3.7510541848294487`*^9}, {
+   3.7510545572707567`*^9, 3.751054583331814*^9}, {3.751055016900021*^9, 
+   3.751055110229972*^9}, {3.751055146787335*^9, 3.7510551981370564`*^9}, {
+   3.751055328212987*^9, 3.7510553760416927`*^9}},
+ CellLabel->"In[72]:=",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 },
 WindowSize->{1608, 1384},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -841,7 +1194,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 131, 3, 30, "Input",ExpressionUUID->"33e6fa05-de96-4e1a-981e-5ff6c4285853"],
-Cell[692, 25, 39714, 797, 1491, "Input",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
+Cell[692, 25, 58226, 1150, 3244, "Input",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 }
 ]
 *)
