@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32976,        624]
-NotebookOptionsPosition[     32633,        609]
-NotebookOutlinePosition[     33020,        626]
-CellTagsIndexPosition[     32977,        623]
+NotebookDataLength[     31161,        603]
+NotebookOptionsPosition[     30797,        587]
+NotebookOutlinePosition[     31205,        605]
+CellTagsIndexPosition[     31162,        602]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -35,50 +35,24 @@ Cell[BoxData[
          RowBox[{
           RowBox[{"sym", "=", 
            RowBox[{"RandomChoice", "[", 
-            RowBox[{"{", 
+            RowBox[{"FinancialData", "[", 
              RowBox[{
-             "\"\<MMM\>\"", ",", "\"\<AXP\>\"", ",", "\"\<AAPL\>\"", ",", 
-              "\"\<BA\>\"", ",", "\"\<CAT\>\"", ",", "\"\<CVX\>\"", ",", 
-              "\"\<KO\>\"", ",", "\"\<DIS\>\"", ",", "\"\<DD\>\"", ",", 
-              "\"\<XOM\>\"", ",", "\"\<GE\>\"", ",", "\"\<GS\>\"", ",", 
-              "\"\<HD\>\"", ",", "\"\<INTC\>\"", ",", "\"\<IBM\>\"", ",", 
-              "\"\<JNJ\>\"", ",", "\"\<JPM\>\"", ",", "\"\<MCD\>\"", ",", 
-              "\"\<MRK\>\"", ",", "\"\<MSFT\>\"", ",", "\"\<NKE\>\"", ",", 
-              "\"\<PFE\>\"", ",", "\"\<PG\>\"", ",", "\"\<TRV\>\"", ",", 
-              "\"\<UNH\>\"", ",", "\"\<UTX\>\"", ",", "\"\<VZ\>\"", ",", 
-              "\"\<V\>\"", ",", "\"\<WMT\>\"", ",", "\"\<SBUX\>\"", ",", 
-              "\"\<PEP\>\"", ",", "\"\<KMB\>\"", ",", "\"\<COST\>\"", ",", 
-              "\"\<KR\>\"", ",", "\"\<SIG\>\"", ",", "\"\<F\>\"", ",", 
-              "\"\<GM\>\"", ",", "\"\<AA\>\"", ",", "\"\<ABT\>\"", ",", 
-              "\"\<ACN\>\"", ",", "\"\<AEO\>\"", ",", "\"\<AFL\>\"", ",", 
-              "\"\<AGN\>\"", ",", "\"\<ALK\>\"", ",", "\"\<ALG\>\"", ",", 
-              "\"\<ALL\>\"", ",", "\"\<ALX\>\"", ",", "\"\<AN\>\"", ",", 
-              "\"\<ANF\>\"", ",", "\"\<APB\>\"", ",", "\"\<ARW\>\"", ",", 
-              "\"\<ATI\>\"", ",", "\"\<AZO\>\"", ",", "\"\<BCS\>\"", ",", 
-              "\"\<BDN\>\"", ",", "\"\<BG\>\"", ",", "\"\<BIG\>\"", ",", 
-              "\"\<BID\>\"", ",", "\"\<BRC\>\"", ",", "\"\<BUD\>\"", ",", 
-              "\"\<CB\>\"", ",", "\"\<CCK\>\"", ",", "\"\<CL\>\"", ",", 
-              "\"\<CLX\>\"", ",", "\"\<CLW\>\"", ",", "\"\<CMI\>\"", ",", 
-              "\"\<CTL\>\"", ",", "\"\<DE\>\"", ",", "\"\<DHX\>\"", ",", 
-              "\"\<DPS\>\"", ",", "\"\<FDX\>\"", ",", "\"\<GES\>\"", ",", 
-              "\"\<GIS\>\"", ",", "\"\<ARAY\>\"", ",", "\"\<GSK\>\"", ",", 
-              "\"\<H\>\"", ",", "\"\<HON\>\"", ",", "\"\<HRL\>\"", ",", 
-              "\"\<HSY\>\"", ",", "\"\<HUM\>\"", ",", "\"\<JWN\>\"", ",", 
-              "\"\<K\>\"", ",", "\"\<ELY\>\"", ",", "\"\<KRC\>\"", ",", 
-              "\"\<LMT\>\"", ",", "\"\<WAIR\>\"", ",", "\"\<LZB\>\"", ",", 
-              "\"\<M\>\"", ",", "\"\<MA\>\"", ",", "\"\<MKC\>\"", ",", 
-              "\"\<MON\>\"", ",", "\"\<MSI\>\"", ",", "\"\<TDS\>\"", ",", 
-              "\"\<MX\>\"", ",", "\"\<PAG\>\"", ",", "\"\<PBI\>\"", ",", 
-              "\"\<PIR\>\"", ",", "\"\<QTM\>\"", ",", "\"\<RCL\>\"", ",", 
-              "\"\<REV\>\"", ",", "\"\<SON\>\"", ",", "\"\<SYK\>\"", ",", 
-              "\"\<THS\>\"", ",", "\"\<TOL\>\"", ",", "\"\<TSN\>\"", ",", 
-              "\"\<TWX\>\"", ",", "\"\<UA\>\"", ",", "\"\<LUV\>\"", ",", 
-              "\"\<WWW\>\"", ",", "\"\<X\>\"", ",", "\"\<YUM\>\""}], "}"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"LetterCharacter", "~~", "_", "~~", "_"}], ",", 
+              "\"\<Lookup\>\""}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          
           RowBox[{"name", "=", 
            RowBox[{"FinancialData", "[", 
             RowBox[{"sym", ",", "\"\<Name\>\""}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringLength", "[", "name", "]"}], ">", "15"}], ",", 
+            RowBox[{"name", "=", 
+             RowBox[{
+              RowBox[{"StringTake", "[", 
+               RowBox[{"name", ",", "15"}], "]"}], "<>", "\"\<...\>\""}]}]}], 
+           "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"dates", "=", 
            RowBox[{"DateRange", "[", 
             RowBox[{
@@ -325,7 +299,7 @@ Cell[BoxData[
           RowBox[{"q", "=", 
            RowBox[{
            "\"\<In this stock chart for \>\"", "<>", "name", "<>", 
-            "\"\<, which day had the \>\"", "<>", 
+            "\"\<, which of these days had the \>\"", "<>", 
             RowBox[{"qType", "[", 
              RowBox[{"[", "1", "]"}], "]"}], "<>", "\"\<?\>\""}]}], ";", 
           "\[IndentingNewLine]", 
@@ -603,15 +577,20 @@ Cell[BoxData[
    3.716552210724078*^9, 3.716552233654559*^9}, {3.7165539931478853`*^9, 
    3.716554019265967*^9}, {3.7165540595135927`*^9, 3.716554071993003*^9}, 
    3.716554551177318*^9, {3.7165546594007874`*^9, 3.716554703889312*^9}, {
-   3.7165547356725197`*^9, 
-   3.716554736855475*^9}},ExpressionUUID->"7bbdae3c-149f-4dc2-9916-\
-c1bdc38e69c5"]
+   3.7165547356725197`*^9, 3.716554736855475*^9}, {3.7533488661111927`*^9, 
+   3.753348896933051*^9}, {3.753353806669097*^9, 3.753353834738208*^9}, 
+   3.753353992078277*^9, 3.7533664171030607`*^9, {3.753366459706921*^9, 
+   3.753366492176641*^9}, {3.753366664695319*^9, 3.75336667045366*^9}, {
+   3.753366913038769*^9, 3.753367011236907*^9}, {3.753367057404346*^9, 
+   3.7533670638084517`*^9}, {3.753367244205236*^9, 3.753367273266395*^9}},
+ CellLabel->"In[77]:=",ExpressionUUID->"74161091-4281-44e5-b60c-c39401665172"]
 },
 WindowToolbars->"EditBar",
-WindowSize->{1888, 1199},
-WindowMargins->{{0, Automatic}, {42, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1631, 1199},
+WindowMargins->{{0, Automatic}, {-149, Automatic}},
+WindowStatusArea->None,
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -625,7 +604,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 32071, 587, 1225, "Input",ExpressionUUID->"7bbdae3c-149f-4dc2-9916-c1bdc38e69c5"]
+Cell[558, 20, 30235, 565, 1204, "Input",ExpressionUUID->"74161091-4281-44e5-b60c-c39401665172"]
 }
 ]
 *)
