@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4913,        133]
-NotebookOptionsPosition[      4600,        119]
-NotebookOutlinePosition[      4960,        135]
-CellTagsIndexPosition[      4917,        132]
+NotebookDataLength[     19987,        390]
+NotebookOptionsPosition[     19677,        376]
+NotebookOutlinePosition[     20031,        392]
+CellTagsIndexPosition[     19988,        389]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,101 +26,358 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"RandomSample", "[", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"<|", "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"<|", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"\"\<Captain Ahab\>\"", "\[Rule]", "\"\<Pequod\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<James T. Kirk\>\"", "\[Rule]", 
+                "\"\<USS Enterprise (NCC-1701)\>\""}], ",", 
+               RowBox[{
+               "\"\<Benjamin Sisko\>\"", "\[Rule]", 
+                "\"\<Deep Space Nine\>\""}], ",", 
+               RowBox[{
+               "\"\<Kathryn Janeway\>\"", "\[Rule]", "\"\<USS Voyager\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Jean-Luc Picard\>\"", "\[Rule]", 
+                "\"\<USS Enterprise (NCC-1701-D)\>\""}], ",", 
+               RowBox[{
+               "\"\<Kate Stevens\>\"", "\[Rule]", "\"\<Wind Song\>\""}], ",", 
+               
+               RowBox[{
+               "\"\<Tom Chandler\>\"", "\[Rule]", 
+                "\"\<USS Nathan James\>\""}], ",", 
+               RowBox[{
+               "\"\<Davy Jones\>\"", "\[Rule]", "\"\<Flying Dutchman\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Kapitein Rob\>\"", "\[Rule]", "\"\<De Vrijheid\>\""}], 
+               ",", 
+               RowBox[{"\"\<Pugwash\>\"", "\[Rule]", "\"\<Black Pig\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Jim Lockhart\>\"", "\[Rule]", "\"\<The Red Torpedo\>\""}],
+                ",", 
+               RowBox[{
+               "\"\<Malcolm Reynolds\>\"", "\[Rule]", "\"\<Serenity\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<\\\"Skipper\\\"Jonas Grumby\>\"", "\[Rule]", 
+                "\"\<SS Minnow\>\""}], ",", 
+               RowBox[{
+               "\"\<Han Solo\>\"", "\[Rule]", "\"\<Millennium Falcon\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Jack Sparrow\>\"", "\[Rule]", "\"\<The Black Pearl\>\""}],
+                ",", 
+               RowBox[{
+               "\"\<Turanga Leela\>\"", "\[Rule]", 
+                "\"\<Planet Express Ship\>\""}], ",", 
+               RowBox[{
+               "\"\<Archibald Haddock\>\"", "\[Rule]", 
+                "\"\<The Karaboudjan\>\""}], ",", 
+               RowBox[{
+               "\"\<Horatio Hornblower\>\"", "\[Rule]", 
+                "\"\<HMS Sutherland\>\""}], ",", 
+               RowBox[{
+               "\"\<Hector Barbossa\>\"", "\[Rule]", "\"\<Cobra\>\""}], ",", 
+               RowBox[{
+               "\"\<Captain Flint\>\"", "\[Rule]", "\"\<The Walrus\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Jack Aubrey\>\"", "\[Rule]", "\"\<HMS Surprise\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Lieutenant Dan\>\"", "\[Rule]", "\"\<Jenny\>\""}]}], 
+              "|>"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Values", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which of these vessels from pop culture was under the \
+command of `1`?\>\"", ",", 
+             RowBox[{
+              RowBox[{"Keys", "[", "data", "]"}], "[", 
+              RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
            RowBox[{
             RowBox[{
-            "\"\<James T. Kirk\>\"", "\[Rule]", 
-             "\"\<USS Enterprise (NCC-1701)\>\""}], ",", 
-            RowBox[{
-            "\"\<Benjamin Sisko\>\"", "\[Rule]", "\"\<Deep Space Nine\>\""}], 
-            ",", 
-            RowBox[{
-            "\"\<Kathryn Janeway\>\"", "\[Rule]", "\"\<USS Voyager\>\""}], 
-            ",", 
-            RowBox[{
-            "\"\<Jean-Luc Picard\>\"", "\[Rule]", 
-             "\"\<USS Enterprise (NCC-1701-D)\>\""}], ",", 
-            RowBox[{"\"\<Kate Stevens\>\"", "\[Rule]", "\"\<Wind Song\>\""}], 
-            ",", 
-            RowBox[{
-            "\"\<Tom Chandler\>\"", "\[Rule]", "\"\<USS Nathan James\>\""}], 
-            ",", 
-            RowBox[{
-            "\"\<Davy Jones\>\"", "\[Rule]", "\"\<Flying Dutchman\>\""}], ",", 
-            RowBox[{
-            "\"\<Kapitein Rob\>\"", "\[Rule]", "\"\<De Vrijheid\>\""}], ",", 
-            RowBox[{"\"\<Pugwash\>\"", "\[Rule]", "\"\<Black Pig\>\""}], ",", 
-            
-            RowBox[{
-            "\"\<Jim Lockhart\>\"", "\[Rule]", "\"\<The Red Torpedo\>\""}], 
-            ",", 
-            RowBox[{
-            "\"\<Malcolm Reynolds\>\"", "\[Rule]", "\"\<Serenity\>\""}], ",", 
-            
-            RowBox[{
-            "\"\<\\\"Skipper\\\"Jonas Grumby\>\"", "\[Rule]", 
-             "\"\<SS Minnow\>\""}], ",", 
-            RowBox[{
-            "\"\<Han Solo\>\"", "\[Rule]", "\"\<Millennium Falcon\>\""}], ",", 
-            RowBox[{
-            "\"\<Jack Sparrow\>\"", "\[Rule]", "\"\<The Black Pearl\>\""}], 
-            ",", 
-            RowBox[{
-            "\"\<Turanga Leela\>\"", "\[Rule]", 
-             "\"\<Planet Express Ship\>\""}]}], "|>"}], ",", "4"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Values", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", "mixed"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-         "\"\<Which of these vessels from pop culture was under the command \
-of `1`?\>\"", ",", 
-          RowBox[{
-           RowBox[{"Keys", "[", "data", "]"}], "[", 
-           RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Style", "[", 
-           RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", "mixed"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Huma11\>\"", ",", 
-   
+          RowBox[{"harm", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<Accordion\>\"", ",", "\"\<Agogo\>\"", ",", "\"\<AltoSax\>\"",
+              ",", "\"\<Applause\>\"", ",", "\"\<Atmosphere\>\"", ",", 
+             "\"\<Bagpipe\>\"", ",", "\"\<Bandoneon\>\"", ",", 
+             "\"\<Banjo\>\"", ",", "\"\<BaritoneSax\>\"", ",", "\"\<Bass\>\"",
+              ",", "\"\<BassAndLead\>\"", ",", "\"\<Bassoon\>\"", ",", 
+             "\"\<Bird\>\"", ",", "\"\<BlownBottle\>\"", ",", "\"\<Bowed\>\"",
+              ",", "\"\<BrassSection\>\"", ",", "\"\<Breath\>\"", ",", 
+             "\"\<Brightness\>\"", ",", "\"\<BrightPiano\>\"", ",", 
+             "\"\<Calliope\>\"", ",", "\"\<Celesta\>\"", ",", "\"\<Cello\>\"",
+              ",", "\"\<Charang\>\"", ",", "\"\<Chiff\>\"", ",", 
+             "\"\<Choir\>\"", ",", "\"\<Clarinet\>\"", ",", "\"\<Clavi\>\"", 
+             ",", "\"\<Crystal\>\"", ",", "\"\<DrawbarOrgan\>\"", ",", 
+             "\"\<Dulcimer\>\"", ",", "\"\<Echoes\>\"", ",", 
+             "\"\<ElectricBass\>\"", ",", "\"\<ElectricGrandPiano\>\"", ",", 
+             "\"\<ElectricGuitar\>\"", ",", "\"\<ElectricPiano\>\"", ",", 
+             "\"\<ElectricPiano2\>\"", ",", "\"\<EnglishHorn\>\"", ",", 
+             "\"\<Fiddle\>\"", ",", "\"\<Fifths\>\"", ",", "\"\<Flute\>\"", 
+             ",", "\"\<FrenchHorn\>\"", ",", "\"\<FretlessBass\>\"", ",", 
+             "\"\<FretNoise\>\"", ",", "\"\<Glockenspiel\>\"", ",", 
+             "\"\<Goblins\>\"", ",", "\"\<Guitar\>\"", ",", 
+             "\"\<GuitarDistorted\>\"", ",", "\"\<GuitarHarmonics\>\"", ",", 
+             "\"\<GuitarMuted\>\"", ",", "\"\<GuitarOverdriven\>\"", ",", 
+             "\"\<Halo\>\"", ",", "\"\<Harmonica\>\"", ",", "\"\<Harp\>\"", 
+             ",", "\"\<Harpsichord\>\"", ",", "\"\<Helicopter\>\"", ",", 
+             "\"\<HonkyTonkPiano\>\"", ",", "\"\<JazzGuitar\>\"", ",", 
+             "\"\<Kalimba\>\"", ",", "\"\<Koto\>\"", ",", "\"\<Marimba\>\"", 
+             ",", "\"\<MelodicTom\>\"", ",", "\"\<Metallic\>\"", ",", 
+             "\"\<MusicBox\>\"", ",", "\"\<MutedTrumpet\>\"", ",", 
+             "\"\<NewAge\>\"", ",", "\"\<Oboe\>\"", ",", "\"\<Ocarina\>\"", 
+             ",", "\"\<OrchestraHit\>\"", ",", "\"\<Organ\>\"", ",", 
+             "\"\<PanFlute\>\"", ",", "\"\<PercussiveOrgan\>\"", ",", 
+             "\"\<Piano\>\"", ",", "\"\<Piccolo\>\"", ",", 
+             "\"\<PickedBass\>\"", ",", "\"\<PizzicatoStrings\>\"", ",", 
+             "\"\<Polysynth\>\"", ",", "\"\<Rain\>\"", ",", 
+             "\"\<Recorder\>\"", ",", "\"\<ReedOrgan\>\"", ",", 
+             "\"\<ReverseCymbal\>\"", ",", "\"\<RockOrgan\>\"", ",", 
+             "\"\<Sawtooth\>\"", ",", "\"\<SciFi\>\"", ",", 
+             "\"\<Seashore\>\"", ",", "\"\<Shakuhachi\>\"", ",", 
+             "\"\<Shamisen\>\"", ",", "\"\<Shanai\>\"", ",", "\"\<Sitar\>\"", 
+             ",", "\"\<SlapBass\>\"", ",", "\"\<SlapBass2\>\"", ",", 
+             "\"\<SopranoSax\>\"", ",", "\"\<Soundtrack\>\"", ",", 
+             "\"\<Square\>\"", ",", "\"\<Steeldrums\>\"", ",", 
+             "\"\<SteelGuitar\>\"", ",", "\"\<Strings\>\"", ",", 
+             "\"\<Sweep\>\"", ",", "\"\<SynthBass\>\"", ",", 
+             "\"\<SynthBass2\>\"", ",", "\"\<SynthBrass\>\"", ",", 
+             "\"\<SynthBrass2\>\"", ",", "\"\<SynthDrum\>\"", ",", 
+             "\"\<SynthStrings\>\"", ",", "\"\<SynthStrings2\>\"", ",", 
+             "\"\<SynthVoice\>\"", ",", "\"\<Taiko\>\"", ",", 
+             "\"\<Telephone\>\"", ",", "\"\<TenorSax\>\"", ",", 
+             "\"\<Timpani\>\"", ",", "\"\<Tinklebell\>\"", ",", 
+             "\"\<TremoloStrings\>\"", ",", "\"\<Trombone\>\"", ",", 
+             "\"\<Trumpet\>\"", ",", "\"\<Tuba\>\"", ",", 
+             "\"\<TubularBells\>\"", ",", "\"\<Vibraphone\>\"", ",", 
+             "\"\<Viola\>\"", ",", "\"\<Violin\>\"", ",", "\"\<Voice\>\"", 
+             ",", "\"\<VoiceAahs\>\"", ",", "\"\<VoiceOohs\>\"", ",", 
+             "\"\<Warm\>\"", ",", "\"\<Whistle\>\"", ",", "\"\<Woodblock\>\"",
+              ",", "\"\<Xylophone\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"perc", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<BassDrum\>\"", ",", "\"\<BassDrum2\>\"", ",", 
+             "\"\<BellTree\>\"", ",", "\"\<Cabasa\>\"", ",", 
+             "\"\<Castanets\>\"", ",", "\"\<ChineseCymbal\>\"", ",", 
+             "\"\<Clap\>\"", ",", "\"\<Claves\>\"", ",", "\"\<Cowbell\>\"", 
+             ",", "\"\<CrashCymbal\>\"", ",", "\"\<CrashCymbal2\>\"", ",", 
+             "\"\<ElectricSnare\>\"", ",", "\"\<GuiroLong\>\"", ",", 
+             "\"\<GuiroShort\>\"", ",", "\"\<HighAgogo\>\"", ",", 
+             "\"\<HighBongo\>\"", ",", "\"\<HighCongaMute\>\"", ",", 
+             "\"\<HighCongaOpen\>\"", ",", "\"\<HighFloorTom\>\"", ",", 
+             "\"\<HighTimbale\>\"", ",", "\"\<HighTom\>\"", ",", 
+             "\"\<HighWoodblock\>\"", ",", "\"\<HiHatClosed\>\"", ",", 
+             "\"\<HiHatOpen\>\"", ",", "\"\<HiHatPedal\>\"", ",", 
+             "\"\<JingleBell\>\"", ",", "\"\<LowAgogo\>\"", ",", 
+             "\"\<LowBongo\>\"", ",", "\"\<LowConga\>\"", ",", 
+             "\"\<LowFloorTom\>\"", ",", "\"\<LowTimbale\>\"", ",", 
+             "\"\<LowTom\>\"", ",", "\"\<LowWoodblock\>\"", ",", 
+             "\"\<Maracas\>\"", ",", "\"\<MetronomeBell\>\"", ",", 
+             "\"\<MetronomeClick\>\"", ",", "\"\<MidTom\>\"", ",", 
+             "\"\<MidTom2\>\"", ",", "\"\<MuteCuica\>\"", ",", 
+             "\"\<MuteSurdo\>\"", ",", "\"\<MuteTriangle\>\"", ",", 
+             "\"\<OpenCuica\>\"", ",", "\"\<OpenSurdo\>\"", ",", 
+             "\"\<OpenTriangle\>\"", ",", "\"\<RideBell\>\"", ",", 
+             "\"\<RideCymbal\>\"", ",", "\"\<RideCymbal2\>\"", ",", 
+             "\"\<ScratchPull\>\"", ",", "\"\<ScratchPush\>\"", ",", 
+             "\"\<Shaker\>\"", ",", "\"\<SideStick\>\"", ",", "\"\<Slap\>\"", 
+             ",", "\"\<Snare\>\"", ",", "\"\<SplashCymbal\>\"", ",", 
+             "\"\<SquareClick\>\"", ",", "\"\<Sticks\>\"", ",", 
+             "\"\<Tambourine\>\"", ",", "\"\<Vibraslap\>\"", ",", 
+             "\"\<WhistleLong\>\"", ",", "\"\<WhistleShort\>\""}], "}"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"voice", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"If", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"RandomReal", "[", "]"}], ">", 
+               FractionBox["1", "3"]}], ",", "harm", ",", "perc"}], "]"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", 
+                 RowBox[{
+                  RowBox[{"Join", "[", 
+                   RowBox[{"harm", ",", "perc"}], "]"}], ",", "4"}], "]"}], 
+                ",", "voice"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"notes", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<C3\>\"", ",", "\"\<D3\>\"", ",", "\"\<E3\>\"", ",", 
+               "\"\<F3\>\"", ",", "\"\<G3\>\"", ",", "\"\<A3\>\"", ",", 
+               "\"\<B3\>\"", ",", "\"\<C4\>\"", ",", "\"\<D4\>\"", ",", 
+               "\"\<E4\>\"", ",", "\"\<F4\>\"", ",", "\"\<G4\>\"", ",", 
+               "\"\<A4\>\"", ",", "\"\<B4\>\"", ",", "\"\<C5\>\""}], "}"}], 
+             ",", "6"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"duras", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"1", ",", ".5", ",", ".25", ",", ".125"}], "}"}], ",", 
+             "6"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"MemberQ", "[", 
+             RowBox[{"harm", ",", "voice"}], "]"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"sound", "=", 
+             RowBox[{"Sound", "[", 
+              RowBox[{"{", 
+               RowBox[{"voice", ",", 
+                RowBox[{"MapThread", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"SoundNote", "[", 
+                    RowBox[{"#1", ",", "#2"}], "]"}], "&"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"notes", ",", "duras"}], "}"}]}], "]"}]}], "}"}], 
+              "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{"sound", "=", 
+             RowBox[{"Sound", "[", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"SoundNote", "[", 
+                  RowBox[{"voice", ",", "#"}], "]"}], "&"}], ")"}], "/@", 
+               "duras"}], "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<This sound is produced by which MIDI voice? `1`\>\"", ",", 
+             "sound"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Huma11\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQA2IQXfZrz5knHa8d+X4fPweiuyXmvAPRNVUif0B0/H0J
-gadAWkV2rRCIbr2bLgWif2j/lwPR00QmhILoNNbvYPr+m+3pILpk1UkwvWp7
-RzGIPlevVQai++bLNoJoyyRTMM1XeU36BZDmmSclC6J3FP3QAtHrzG/ogOgN
-i4RiQPQ/8e+xIFql1j4FRLM0fUwH0Y8/pHeD6LYpj3pBNFNS4iQQfXJN01QQ
-fSVlzxwQ7cYSPA9ELziesRRENy+dvgJEf1q0eg2IFvhzczOILtZ9sgtER+WV
-7wfRvBelmV4CabvNpqwg+tDDhTwg+pusAS+IvrzvnRiIXuC/TgFEr/r8ThVE
-r4jjVgfRACWrzAs=
-  "],ExpressionUUID->"211900cb-7c1d-4704-b30e-7ebfc31c8c27"]
+ CellChangeTimes->{{3.695650405905574*^9, 3.6956504222493963`*^9}, {
+   3.695650676877996*^9, 3.6956507846399517`*^9}, {3.695650944777267*^9, 
+   3.695650965409807*^9}, {3.695651027245791*^9, 3.6956510639741173`*^9}, {
+   3.695651500502513*^9, 3.695651503719409*^9}, {3.695651645747665*^9, 
+   3.6956516463020573`*^9}, {3.69565174027242*^9, 3.695651761328101*^9}, {
+   3.695651848925727*^9, 3.69565184966824*^9}, {3.695657182702277*^9, 
+   3.695657192831793*^9}, {3.6956573037640038`*^9, 3.695657318756797*^9}, {
+   3.6956576965823593`*^9, 3.6956577117216787`*^9}, {3.695657761984026*^9, 
+   3.695657791547121*^9}, {3.695658075248155*^9, 3.6956580950806303`*^9}, {
+   3.695658131043214*^9, 3.695658156083592*^9}, {3.695658213887308*^9, 
+   3.6956582265942717`*^9}, {3.6956582832743683`*^9, 3.695658308738954*^9}, {
+   3.695658341363641*^9, 3.6956583988120193`*^9}, {3.695658455130548*^9, 
+   3.6956584917322206`*^9}, {3.695659024869269*^9, 3.69565904967813*^9}, {
+   3.6956591090588083`*^9, 3.6956591135036573`*^9}, {3.695659191460794*^9, 
+   3.69565926944722*^9}, {3.695659311467244*^9, 3.6956593203553047`*^9}, {
+   3.7533702515707073`*^9, 3.753370437355051*^9}, {3.753370782739336*^9, 
+   3.753370832025002*^9}, {3.753370862873829*^9, 3.75337093094526*^9}, {
+   3.75337105340204*^9, 3.753371057872224*^9}, 3.7533712282567883`*^9, {
+   3.753371309143923*^9, 3.753371507118195*^9}, {3.753372012414093*^9, 
+   3.7533720284526567`*^9}, {3.7533721214132977`*^9, 
+   3.7533722589393806`*^9}, {3.753372311732366*^9, 3.753372375458839*^9}, {
+   3.7533724684521103`*^9, 3.753372473154747*^9}, {3.753372514764245*^9, 
+   3.7533725855138483`*^9}, {3.753372748138701*^9, 3.753372893926581*^9}, 
+   3.753372930286943*^9, {3.753372978358357*^9, 3.75337312319735*^9}, {
+   3.753373164921369*^9, 3.753373180612439*^9}, {3.753373222593046*^9, 
+   3.753373439460041*^9}, {3.753373478079961*^9, 3.7533738817389317`*^9}, {
+   3.753373968234661*^9, 3.7533740006978617`*^9}, {3.7533740460377617`*^9, 
+   3.7533740901686163`*^9}, {3.7533741487539673`*^9, 
+   3.7533744916748457`*^9}, {3.753374527204961*^9, 3.753375352835524*^9}, {
+   3.75337539399711*^9, 3.753375427916603*^9}, {3.753375463343876*^9, 
+   3.7533757365619698`*^9}, {3.753375768051907*^9, 3.753376043616405*^9}, {
+   3.753377328356832*^9, 3.753377371857506*^9}, {3.753437672742383*^9, 
+   3.7534377196123857`*^9}, {3.753438611472897*^9, 3.753439429858871*^9}, {
+   3.753441095132578*^9, 3.753441564106266*^9}, {3.753441853434167*^9, 
+   3.753442078113765*^9}, {3.753442383744564*^9, 3.753442391352407*^9}, {
+   3.7534424226967163`*^9, 3.7534424362889757`*^9}, {3.753442851319806*^9, 
+   3.753442885182732*^9}, {3.75344294243044*^9, 3.753442944549708*^9}, {
+   3.7534429828387938`*^9, 3.753443044845693*^9}, {3.753443105982504*^9, 
+   3.7534432414326887`*^9}, {3.7534510594584837`*^9, 3.753451424624668*^9}, {
+   3.753451485107334*^9, 3.753451692670353*^9}, {3.7534517291700993`*^9, 
+   3.753451865444139*^9}, {3.753451909693006*^9, 3.753452185875711*^9}, {
+   3.753452221292027*^9, 3.753452273419142*^9}, {3.7534523176038303`*^9, 
+   3.7534524726265383`*^9}, {3.753452516421896*^9, 3.753453197557074*^9}, {
+   3.7534536139684467`*^9, 3.7534537043202*^9}, {3.7534537458751917`*^9, 
+   3.753454132350294*^9}, {3.7534542360469313`*^9, 3.7534543518800497`*^9}, {
+   3.75345442099883*^9, 3.7534544357591457`*^9}, {3.753454497062429*^9, 
+   3.753454504682747*^9}, {3.753454879887472*^9, 3.753454892899081*^9}, {
+   3.753454924037999*^9, 3.753454933226598*^9}, {3.753455149075676*^9, 
+   3.753455292000844*^9}, {3.753455377537457*^9, 3.7534555451034327`*^9}, {
+   3.753456104989027*^9, 3.753456130262692*^9}, {3.753456192584527*^9, 
+   3.7534561951372843`*^9}, {3.7534566449662657`*^9, 
+   3.7534566746938047`*^9}, {3.753456851935625*^9, 3.753456855574868*^9}, {
+   3.753456890388626*^9, 3.753456898396751*^9}, {3.753457091581098*^9, 
+   3.75345713780361*^9}, {3.7534572255249157`*^9, 3.75345726234708*^9}, {
+   3.753457339571229*^9, 3.753457363620366*^9}, {3.753457436170866*^9, 
+   3.7534574447537727`*^9}, {3.753457536803582*^9, 3.7534575494353313`*^9}, {
+   3.753457603522253*^9, 3.7534576262343063`*^9}, {3.753457887817425*^9, 
+   3.7534579148097467`*^9}},ExpressionUUID->"5541d562-4eea-4eab-b71b-\
+30caaadfe3f6"]
 },
-WindowSize->{1199, 1047},
-WindowMargins->{{2, Automatic}, {Automatic, 51}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1456, 1244},
+WindowMargins->{{2, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -134,7 +391,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4038, 97, 346, "Input",ExpressionUUID->"211900cb-7c1d-4704-b30e-7ebfc31c8c27"]
+Cell[558, 20, 19115, 354, 1120, "Input",ExpressionUUID->"5541d562-4eea-4eab-b71b-30caaadfe3f6"]
 }
 ]
 *)
