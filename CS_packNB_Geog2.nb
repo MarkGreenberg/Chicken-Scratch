@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     69819,       1395]
-NotebookOptionsPosition[     69158,       1375]
-NotebookOutlinePosition[     69536,       1392]
-CellTagsIndexPosition[     69493,       1389]
+NotebookDataLength[     70712,       1412]
+NotebookOptionsPosition[     70051,       1392]
+NotebookOutlinePosition[     70429,       1409]
+CellTagsIndexPosition[     70386,       1406]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -284,73 +284,87 @@ Columbia\>\"", ",", "\"\<Cold Bay\>\"", ",", "\"\<Cook Strait\>\"", ",",
              ",", "\"\<Akashi Strait\>\"", ",", 
              "\"\<Fury and Hecla Strait\>\"", ",", "\"\<Lombok Strait\>\""}], 
             "}"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"cos", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{"coData", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"cits1", "=", 
-           RowBox[{"CityData", "[", 
-            RowBox[{"{", 
-             RowBox[{"Large", ",", 
-              RowBox[{"cos", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ct1", "=", 
-           RowBox[{"If", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"Length", "[", "cits1", "]"}], "\[Equal]", "0"}], ",", 
-             RowBox[{"RandomChoice", "[", 
-              RowBox[{"CityData", "[", 
-               RowBox[{"{", 
-                RowBox[{"All", ",", 
-                 RowBox[{"cos", "[", 
-                  RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "]"}], "]"}], ",", 
-             
-             RowBox[{"RandomChoice", "[", "cits1", "]"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ctNm1", "=", 
-           RowBox[{"StringReplace", "[", 
-            RowBox[{
-             RowBox[{"EntityValue", "[", 
-              RowBox[{"ct1", ",", "\"\<Name\>\""}], "]"}], ",", 
-             RowBox[{"\"\<\[Hyphen]\>\"", "\[Rule]", "\"\<-\>\""}]}], "]"}]}],
-           ";", "\[IndentingNewLine]", 
-          RowBox[{"cits2", "=", 
-           RowBox[{"CityData", "[", 
-            RowBox[{"{", 
-             RowBox[{"Large", ",", 
-              RowBox[{"cos", "[", 
-               RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ct2", "=", 
-           RowBox[{"If", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"Length", "[", "cits2", "]"}], "\[Equal]", "0"}], ",", 
-             RowBox[{"RandomChoice", "[", 
-              RowBox[{"CityData", "[", 
-               RowBox[{"{", 
-                RowBox[{"All", ",", 
-                 RowBox[{"cos", "[", 
-                  RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}], "]"}], ",", 
-             
-             RowBox[{"RandomChoice", "[", "cits2", "]"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ctNm2", "=", 
-           RowBox[{"StringReplace", "[", 
-            RowBox[{
-             RowBox[{"EntityValue", "[", 
-              RowBox[{"ct2", ",", "\"\<Name\>\""}], "]"}], ",", 
-             RowBox[{"\"\<\[Hyphen]\>\"", "\[Rule]", "\"\<-\>\""}]}], "]"}]}],
-           ";", "\[IndentingNewLine]", 
           RowBox[{"ctLoc1", "=", 
-           RowBox[{"CityData", "[", 
-            RowBox[{"ct1", ",", "\"\<Coordinates\>\""}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ctLoc2", "=", 
-           RowBox[{"CityData", "[", 
-            RowBox[{"ct2", ",", "\"\<Coordinates\>\""}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+           RowBox[{"ctLoc2", "=", 
+            RowBox[{"Missing", "[", "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"While", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ctLoc1", "\[Equal]", 
+              RowBox[{"Missing", "[", "]"}]}], "||", 
+             RowBox[{"ctLoc2", "\[Equal]", 
+              RowBox[{"Missing", "[", "]"}]}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"cos", "=", 
+              RowBox[{"RandomSample", "[", 
+               RowBox[{"coData", ",", "2"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"cits1", "=", 
+              RowBox[{"CityData", "[", 
+               RowBox[{"{", 
+                RowBox[{"Large", ",", 
+                 RowBox[{"cos", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ct1", "=", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", "cits1", "]"}], "\[Equal]", "0"}], 
+                ",", 
+                RowBox[{"RandomChoice", "[", 
+                 RowBox[{"CityData", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"All", ",", 
+                    RowBox[{"cos", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}]}], "}"}], "]"}], "]"}], 
+                ",", 
+                RowBox[{"RandomChoice", "[", "cits1", "]"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ctNm1", "=", 
+              RowBox[{"StringReplace", "[", 
+               RowBox[{
+                RowBox[{"EntityValue", "[", 
+                 RowBox[{"ct1", ",", "\"\<Name\>\""}], "]"}], ",", 
+                RowBox[{"\"\<\[Hyphen]\>\"", "\[Rule]", "\"\<-\>\""}]}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"cits2", "=", 
+              RowBox[{"CityData", "[", 
+               RowBox[{"{", 
+                RowBox[{"Large", ",", 
+                 RowBox[{"cos", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ct2", "=", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", "cits2", "]"}], "\[Equal]", "0"}], 
+                ",", 
+                RowBox[{"RandomChoice", "[", 
+                 RowBox[{"CityData", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"All", ",", 
+                    RowBox[{"cos", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "]"}], "]"}], 
+                ",", 
+                RowBox[{"RandomChoice", "[", "cits2", "]"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ctNm2", "=", 
+              RowBox[{"StringReplace", "[", 
+               RowBox[{
+                RowBox[{"EntityValue", "[", 
+                 RowBox[{"ct2", ",", "\"\<Name\>\""}], "]"}], ",", 
+                RowBox[{"\"\<\[Hyphen]\>\"", "\[Rule]", "\"\<-\>\""}]}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"ctLoc1", "=", 
+              RowBox[{"CityData", "[", 
+               RowBox[{"ct1", ",", "\"\<Coordinates\>\""}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ctLoc2", "=", 
+              RowBox[{"CityData", "[", 
+               RowBox[{"ct2", ",", "\"\<Coordinates\>\""}], "]"}]}]}]}], 
+           "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"Style", "[", 
             RowBox[{
@@ -946,9 +960,9 @@ over?\>\"", ",", "ctNm1", ",",
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
-        "\[IndentingNewLine]", "]"}], "&"}]}], "]"}], "]"}], ",", 
-   "\[IndentingNewLine]", "\"\<CS_pack_Geog2\>\"", ",", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Geog2\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.6828639033250017`*^9, {3.682863960093239*^9, 3.682863994301181*^9}, {
@@ -1077,9 +1091,12 @@ over?\>\"", ",", "ctNm1", ",",
    3.747780298187956*^9}, {3.747780384204571*^9, 3.7477804179308043`*^9}, {
    3.7477804679390373`*^9, 3.7477805501544437`*^9}, {3.7477805952196712`*^9, 
    3.747780604394896*^9}, {3.747780725895197*^9, 3.7477807422673197`*^9}, {
-   3.747780785893697*^9, 3.747780960577033*^9}},
+   3.747780785893697*^9, 3.747780960577033*^9}, {3.758103202841875*^9, 
+   3.75810325668114*^9}, {3.758103288812736*^9, 3.758103337996586*^9}, {
+   3.758113153125578*^9, 3.7581132605301933`*^9}, {3.758113487597363*^9, 
+   3.758113540988714*^9}},
  CellLabel->
-  "In[128]:=",ExpressionUUID->"8facd097-6439-4751-b424-4c28d748e37e"],
+  "In[257]:=",ExpressionUUID->"8facd097-6439-4751-b424-4c28d748e37e"],
 
 Cell[BoxData[
  RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", 
@@ -1374,7 +1391,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{1431, 1391},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{0, Automatic}, {Automatic, 4}},
 WindowStatusArea->None,
 FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
 2018)",
@@ -1391,11 +1408,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 56170, 1061, 2569, "Input",ExpressionUUID->"8facd097-6439-4751-b424-4c28d748e37e"],
-Cell[56731, 1083, 616, 13, 73, "Input",ExpressionUUID->"79b7e67c-0d18-493b-bc72-f47eef07d47d"],
+Cell[558, 20, 57063, 1078, 2590, "Input",ExpressionUUID->"8facd097-6439-4751-b424-4c28d748e37e"],
+Cell[57624, 1100, 616, 13, 73, "Input",ExpressionUUID->"79b7e67c-0d18-493b-bc72-f47eef07d47d"],
 Cell[CellGroupData[{
-Cell[57372, 1100, 664, 16, 30, "Input",ExpressionUUID->"7f0fb239-6ed7-4e47-bd1c-812f49430586"],
-Cell[58039, 1118, 11103, 254, 230, "Output",ExpressionUUID->"8a1fb596-0484-4d5a-9307-46d2dbfc54c3"]
+Cell[58265, 1117, 664, 16, 30, "Input",ExpressionUUID->"7f0fb239-6ed7-4e47-bd1c-812f49430586"],
+Cell[58932, 1135, 11103, 254, 230, "Output",ExpressionUUID->"8a1fb596-0484-4d5a-9307-46d2dbfc54c3"]
 }, Open  ]]
 }
 ]
