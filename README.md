@@ -3,6 +3,8 @@ Wolfram Language version of the 2-player educational game.
 
 Chicken Scratch is a 2-player or 2-team educational game that is designed to be run by a teacher. The full game consists of: The Interface — one Wolfram notebook file that compiles into a .cdf (which can be played on the free CDFplayer); Question Modules — 225 Wolfram notebooks that deploy into cloud objects, each of which returns randomly generated questions for the game; and several hundred images for the interface and the questions.
 
+The file ChickenScratch04.cdf is a playable version of the game. You will need Wolfram Research's CDF Player, which is a free download.
+
 To set up Chicken Scratch:
 
     NOTE: CS_ROOT is the folder in your Wolfram Cloud account where you are storing Chicken Scratch files. You can name the folder CS_ROOT whatever you want.
