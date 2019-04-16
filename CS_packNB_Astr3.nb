@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40271,        872]
-NotebookOptionsPosition[     39937,        857]
-NotebookOutlinePosition[     40316,        874]
-CellTagsIndexPosition[     40273,        871]
+NotebookDataLength[     41246,        891]
+NotebookOptionsPosition[     40912,        876]
+NotebookOutlinePosition[     41291,        893]
+CellTagsIndexPosition[     41248,        890]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -299,6 +299,7 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
@@ -307,15 +308,26 @@ Cell[BoxData[
                RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
             RowBox[{"[", 
              RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Hold", "[", 
+                RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+               RowBox[{"h1", "\[Rule]", "#"}]}], "&"}], ")"}], "/@", 
+            RowBox[{"ToCharacterCode", "[", "mixed", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{
           "q", "=", 
            "\"\<Which of these stars appears brightest in a clear night \
 sky?\>\""}], ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}]}], ",",
+          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]",
+          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
@@ -349,6 +361,7 @@ sky?\>\""}], ";", "\[IndentingNewLine]",
                     PlotRangePadding->None],
                    StyleBox[
                     RowBox[{"RGBColor", "[", 
+                    
                     RowBox[{
                     "0.5982090877440321`", ",", "0.5776664416363775`", ",", 
                     "0.5763067386534164`"}], "]"}], NumberMarks -> False]],
@@ -851,9 +864,15 @@ sky?\>\""}], ";", "\[IndentingNewLine]",
    3.73696761623901*^9}, {3.7369676910718737`*^9, 3.736967763166901*^9}, {
    3.736967864312735*^9, 3.73696788537424*^9}, {3.7369679756672688`*^9, 
    3.736967986982881*^9}, {3.736968024017819*^9, 3.7369680445820723`*^9}, {
-   3.7369681666011887`*^9, 3.736968167270013*^9}, 
-   3.756226498327381*^9},ExpressionUUID->"58d0b1ba-ffa1-4b44-a7fd-\
-08b87799eab9"]
+   3.7369681666011887`*^9, 3.736968167270013*^9}, 3.756226498327381*^9, {
+   3.7644281556700497`*^9, 3.7644281929799633`*^9}, {3.76442825838031*^9, 
+   3.764428267852972*^9}, {3.764428300994851*^9, 3.764428341787315*^9}, {
+   3.764428432587153*^9, 3.764428433930889*^9}, {3.764428465875012*^9, 
+   3.7644284677709*^9}, {3.764428616203367*^9, 3.764428616818644*^9}, {
+   3.764428693987747*^9, 3.764428765055613*^9}, {3.7644288808172417`*^9, 
+   3.764428917790951*^9}, {3.764428969704825*^9, 3.764429061665886*^9}},
+ CellLabel->
+  "In[1137]:=",ExpressionUUID->"58d0b1ba-ffa1-4b44-a7fd-08b87799eab9"]
 },
 WindowSize->{1327, 1339},
 WindowMargins->{{-2, Automatic}, {5, Automatic}},
@@ -873,7 +892,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 39375, 835, 871, "Input",ExpressionUUID->"58d0b1ba-ffa1-4b44-a7fd-08b87799eab9"]
+Cell[558, 20, 40350, 854, 892, "Input",ExpressionUUID->"58d0b1ba-ffa1-4b44-a7fd-08b87799eab9"]
 }
 ]
 *)
