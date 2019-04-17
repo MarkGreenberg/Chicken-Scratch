@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14030,        322]
-NotebookOptionsPosition[     13716,        308]
-NotebookOutlinePosition[     14075,        324]
-CellTagsIndexPosition[     14032,        321]
+NotebookDataLength[     17575,        381]
+NotebookOptionsPosition[     17153,        365]
+NotebookOutlinePosition[     17490,        380]
+CellTagsIndexPosition[     17447,        377]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -61,9 +63,8 @@ Cell[BoxData[
                RowBox[{"{", 
                 RowBox[{
                  RowBox[{
-                 "\"\<\[Degree]\>\"", "\[Rule]", "\"\<\[Degree] \>\""}], ",", 
-                 
-                 RowBox[{"\"\<'\>\"", "\[Rule]", "\"\<' \>\""}]}], "}"}]}], 
+                 "\"\<\[Degree]\>\"", "\[Rule]", "\"\<\[Degree]  \>\""}], ",", 
+                 RowBox[{"\"\<'\>\"", "\[Rule]", "\"\<'  \>\""}]}], "}"}]}], 
               "]"}], "&"}], "/@", "nos"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
@@ -72,25 +73,39 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
-           RowBox[{"StringForm", "[", 
-            RowBox[{
-            "\"\<Angles are often measured in degrees, minutes, and seconds. \
-Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"", 
-             ",", 
-             RowBox[{"nos", "[", 
-              RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{
+              "\"\<Angles are often measured in degrees, minutes, and \
+seconds. Which of these is equivalent to the decimal angle measure \>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                "nos", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+                 "]"}], "<>", "\"\<\[Degree]?\>\""}], "]"}]}]}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "/.", 
+              RowBox[{"h2", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}]}], ",",
+          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]",
+          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"nos", "=", 
            RowBox[{"{", 
@@ -110,34 +125,32 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
           "\[IndentingNewLine]", 
           RowBox[{"Switch", "[", 
            RowBox[{
-            RowBox[{"pat", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], ",", "\[IndentingNewLine]", "1", 
-            ",", "\[IndentingNewLine]", 
+            RowBox[{
+            "pat", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            ",", "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
             RowBox[{
              RowBox[{"exp", "=", 
               RowBox[{"Plus", "[", 
                RowBox[{
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
-             ";", "\[IndentingNewLine]", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "3", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"str", "=", 
               RowBox[{
-               RowBox[{"nam", "[", 
-                RowBox[{"[", 
-                 RowBox[{"pat", "[", 
-                  RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "<>", 
-               "\"\< + \>\"", "<>", 
-               RowBox[{"nam", "[", 
-                RowBox[{"[", 
-                 RowBox[{"pat", "[", 
-                  RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}]}], ";", 
-             "\[IndentingNewLine]", 
+               RowBox[{"nam", "\[LeftDoubleBracket]", 
+                RowBox[{
+                "pat", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+                 "\[RightDoubleBracket]"}], "<>", "\"\< + \>\"", "<>", 
+               RowBox[{"nam", "\[LeftDoubleBracket]", 
+                RowBox[{
+                "pat", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}],
+                 "\[RightDoubleBracket]"}]}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"dis", "=", 
               RowBox[{"RandomReal", "[", 
                RowBox[{"10", ",", "3"}], "]"}]}]}], ",", 
@@ -146,28 +159,26 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
              RowBox[{"exp", "=", 
               RowBox[{"Times", "[", 
                RowBox[{
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
-             ";", "\[IndentingNewLine]", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "3", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"str", "=", 
               RowBox[{
-               RowBox[{"nam", "[", 
-                RowBox[{"[", 
-                 RowBox[{"pat", "[", 
-                  RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "<>", 
-               "\"\< \!\(\*StyleBox[\"\[Times]\", \
-\"OperatorCharacter\"]\)\!\(\*StyleBox[\" \", \"OperatorCharacter\"]\)\>\"", "<>", 
-               RowBox[{"nam", "[", 
-                RowBox[{"[", 
-                 RowBox[{"pat", "[", 
-                  RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}]}], ";", 
-             "\[IndentingNewLine]", 
+               RowBox[{"nam", "\[LeftDoubleBracket]", 
+                RowBox[{
+                "pat", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+                 "\[RightDoubleBracket]"}], "<>", "\"\< \[Times] \>\"", "<>", 
+               
+               RowBox[{"nam", "\[LeftDoubleBracket]", 
+                RowBox[{
+                "pat", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}],
+                 "\[RightDoubleBracket]"}]}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"dis", "=", 
               RowBox[{"RandomReal", "[", 
                RowBox[{"30", ",", "3"}], "]"}]}]}], ",", 
@@ -176,28 +187,29 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
              RowBox[{"exp", "=", 
               RowBox[{"Divide", "[", 
                RowBox[{
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
-             ";", "\[IndentingNewLine]", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "3", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"str", "=", 
               RowBox[{"DisplayForm", "[", 
                RowBox[{"FractionBox", "[", 
                 RowBox[{
-                 RowBox[{"nam", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"pat", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
-                 RowBox[{"nam", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"pat", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}], 
-               "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"nam", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "pat", "\[LeftDoubleBracket]", "2", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                 
+                 RowBox[{"nam", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "pat", "\[LeftDoubleBracket]", "3", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+                "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"dis", "=", 
               RowBox[{"RandomReal", "[", 
                RowBox[{"2", ",", "3"}], "]"}]}]}], ",", "\[IndentingNewLine]",
@@ -206,28 +218,29 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
              RowBox[{"exp", "=", 
               RowBox[{"Power", "[", 
                RowBox[{
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"pat", "[", 
-                   RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}]}], 
-             ";", "\[IndentingNewLine]", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                RowBox[{"nos", "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "pat", "\[LeftDoubleBracket]", "3", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"str", "=", 
               RowBox[{"DisplayForm", "[", 
                RowBox[{"SuperscriptBox", "[", 
                 RowBox[{
-                 RowBox[{"nam", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"pat", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], ",", 
-                 RowBox[{"nam", "[", 
-                  RowBox[{"[", 
-                   RowBox[{"pat", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], "]"}], 
-               "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"nam", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "pat", "\[LeftDoubleBracket]", "2", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                 
+                 RowBox[{"nam", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "pat", "\[LeftDoubleBracket]", "3", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+                "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"dis", "=", 
               RowBox[{"Tan", "[", 
                RowBox[{"RandomReal", "[", 
@@ -243,10 +256,19 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
               RowBox[{"dis", ",", "exp"}], "]"}], ",", ".0001"}], "]"}]}], 
           ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
-           RowBox[{"StringForm", "[", 
-            RowBox[{
-            "\"\<What's the approximate value of `1`?\>\"", ",", "str"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", 
+                RowBox[{"StringForm", "[", 
+                 RowBox[{
+                 "\"\<What's the approximate value of `1`?\>\"", ",", "str"}],
+                  "]"}], "]"}], "]"}], "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -254,10 +276,10 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -303,13 +325,47 @@ Which of these is equivalent to the decimal angle measure `1`\[Degree]?\>\"",
    3.733317420238893*^9, 3.733317432934761*^9}, {3.73331780006203*^9, 
    3.733317869384789*^9}, {3.733317919045899*^9, 3.733318006773789*^9}, {
    3.733318102493106*^9, 3.7333181239876823`*^9}, {3.733318449492014*^9, 
-   3.7333184723153667`*^9}},ExpressionUUID->"8c4e857a-9a07-4272-97c6-\
-1061dce20bbe"]
+   3.7333184723153667`*^9}, {3.7645167236763144`*^9, 
+   3.7645167500636053`*^9}, {3.764516856584455*^9, 3.764516930207799*^9}, {
+   3.7645169671349277`*^9, 3.7645170047272778`*^9}, {3.764517055944623*^9, 
+   3.7645171845826073`*^9}, {3.764517251391151*^9, 3.764517267270341*^9}, {
+   3.764517383646343*^9, 3.764517505149733*^9}, {3.76451753979939*^9, 
+   3.764517543517604*^9}, {3.7645175886313066`*^9, 3.764517607709375*^9}, {
+   3.764517646910878*^9, 3.7645177758772*^9}, {3.764517858654224*^9, 
+   3.764517888293171*^9}, {3.764517945485991*^9, 3.764517976604772*^9}, {
+   3.764518015516865*^9, 3.764518024404858*^9}, {3.764518107510159*^9, 
+   3.764518119948125*^9}, {3.764518170302638*^9, 3.76451825929314*^9}, {
+   3.764518404518928*^9, 3.764518877034971*^9}},
+ CellLabel->
+  "In[2754]:=",ExpressionUUID->"8c4e857a-9a07-4272-97c6-1061dce20bbe"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Numb13\"",
+     "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Numb13"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Numb13"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.764516753679503*^9, {3.764516988966103*^9, 3.764517005573391*^9}, {
+   3.76451716576797*^9, 3.764517186994396*^9}, {3.764517479909*^9, 
+   3.764517506900676*^9}, 3.764517548915728*^9, {3.764517595753784*^9, 
+   3.7645176091733837`*^9}, 3.764517676425956*^9, {3.764517755794572*^9, 
+   3.764517778422907*^9}, 3.764517896785492*^9, 3.764518039518208*^9, 
+   3.764518122411623*^9, 3.7645182726494017`*^9, 3.764518885623699*^9},
+ CellLabel->
+  "Out[2754]=",ExpressionUUID->"5a324559-a057-458e-b674-7d1e5be4632a"]
+}, Open  ]]
 },
-WindowSize->{1253, 1207},
+WindowSize->{1854, 1243},
 WindowMargins->{{0, Automatic}, {Automatic, 1}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -323,7 +379,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 13154, 286, 934, "Input",ExpressionUUID->"8c4e857a-9a07-4272-97c6-1061dce20bbe"]
+Cell[CellGroupData[{
+Cell[580, 22, 15543, 317, 913, "Input",ExpressionUUID->"8c4e857a-9a07-4272-97c6-1061dce20bbe"],
+Cell[16126, 341, 1011, 21, 71, "Output",ExpressionUUID->"5a324559-a057-458e-b674-7d1e5be4632a"]
+}, Open  ]]
 }
 ]
 *)
