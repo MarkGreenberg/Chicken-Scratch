@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8705,        224]
-NotebookOptionsPosition[      8392,        210]
-NotebookOutlinePosition[      8751,        226]
-CellTagsIndexPosition[      8708,        223]
+NotebookDataLength[      9865,        250]
+NotebookOptionsPosition[      9574,        237]
+NotebookOutlinePosition[      9911,        252]
+CellTagsIndexPosition[      9868,        249]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -167,12 +167,27 @@ Cell[BoxData[
             RowBox[{
              RowBox[{"{", "480", "}"}], ",", 
              RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"picTransit", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"ToExpression", "[", 
+           RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
+         
+         RowBox[{"h2", "\[Rule]", 
+          RowBox[{"ToCharacterCode", "[", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-         "\"\<What is the measure of angle \[Alpha] in this triangle?\>\"", 
-          ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{
+          "ToCharacterCode", "[", 
+           "\"\<What is the measure of angle \[Alpha] in this triangle?\>\"", 
+           "]"}]}]}]}], ";", 
        RowBox[{"choices", "=", 
         RowBox[{
          RowBox[{
@@ -195,23 +210,34 @@ Cell[BoxData[
             RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
          RowBox[{"[", 
           RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixTransit", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Hold", "[", 
+           RowBox[{"FromCharacterCode", "[", "#", "]"}], "]"}], "&"}], "/@", 
+         RowBox[{"ToCharacterCode", "[", "mixed", "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "picTransit"}], 
+          "}"}], "]"}], "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Geom1\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.682873957314063*^9, 3.6828739575281963`*^9}, 
    3.682874019675427*^9, {3.682874237505433*^9, 3.682874299295258*^9}, {
    3.682874356509549*^9, 3.682874363853901*^9}, {3.6874433950113*^9, 
-   3.687443423907051*^9}},ExpressionUUID->"350ad836-1337-4cbb-91f4-\
-6b1b44f367cf"]
+   3.687443423907051*^9}, {3.7645239129141693`*^9, 3.7645239279584*^9}, {
+   3.76452399374277*^9, 3.7645241708383293`*^9}, {3.764524213894198*^9, 
+   3.7645242837499323`*^9}, {3.76452433800778*^9, 3.764524488333359*^9}, {
+   3.764524532342841*^9, 3.764524583741242*^9}, {3.7645246156935253`*^9, 
+   3.764524670830123*^9}},
+ CellLabel->
+  "In[3076]:=",ExpressionUUID->"60f19497-52df-40fc-8c28-c48da5f0e551"]
 },
-WindowSize->{1240, 978},
-WindowMargins->{{2, Automatic}, {82, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1240, 1306},
+WindowMargins->{{2, Automatic}, {Automatic, 7}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -225,7 +251,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7830, 188, 514, "Input",ExpressionUUID->"350ad836-1337-4cbb-91f4-6b1b44f367cf"]
+Cell[558, 20, 9012, 215, 556, "Input",ExpressionUUID->"60f19497-52df-40fc-8c28-c48da5f0e551"]
 }
 ]
 *)
