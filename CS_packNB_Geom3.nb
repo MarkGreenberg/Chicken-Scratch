@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6249,        174]
-NotebookOptionsPosition[      5934,        160]
-NotebookOutlinePosition[      6295,        176]
-CellTagsIndexPosition[      6252,        173]
+NotebookDataLength[      6636,        179]
+NotebookOptionsPosition[      6344,        166]
+NotebookOutlinePosition[      6682,        181]
+CellTagsIndexPosition[      6639,        178]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,8 +33,8 @@ Cell[BoxData[
            RowBox[{"Range", "[", 
             RowBox[{
              RowBox[{"-", "180"}], ",", "180", ",", "10"}], "]"}], ",", "1"}],
-           "]"}], "[", 
-         RowBox[{"[", "1", "]"}], "]"}]}], ";", 
+           "]"}], "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+       ";", 
        RowBox[{"pts", "=", 
         RowBox[{"Append", "[", 
          RowBox[{
@@ -57,11 +57,13 @@ Cell[BoxData[
        RowBox[{"q", "=", 
         RowBox[{"StringForm", "[", 
          RowBox[{
-         "\"\<Where is point `1` after the blue figure has been rotated `2`\
-\[Degree] `3`clockwise about the origin?\>\"", ",", 
+         "\"\<Where is point `1` after the blue figure has been rotated \
+`2``3` `4`clockwise about the origin?\>\"", ",", 
           RowBox[{"Style", "[", 
            RowBox[{"\"\<A'\>\"", ",", "Italic"}], "]"}], ",", 
           RowBox[{"Abs", "[", "ang", "]"}], ",", 
+          RowBox[{"Hold", "[", 
+           RowBox[{"FromCharacterCode", "[", "176", "]"}], "]"}], ",", 
           RowBox[{"If", "[", 
            RowBox[{
             RowBox[{"ang", ">", "0"}], ",", "\"\<counter\>\"", ",", 
@@ -70,9 +72,9 @@ Cell[BoxData[
         RowBox[{"Round", "[", 
          RowBox[{
           RowBox[{"rot", "[", 
-           RowBox[{"pts", "[", 
-            RowBox[{"[", "4", "]"}], "]"}], "]"}], ",", ".1"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
+           RowBox[{
+           "pts", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+           "]"}], ",", ".1"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"choices", "=", 
         RowBox[{
          RowBox[{
@@ -95,10 +97,11 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"Position", "[", 
           RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+           "choices", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"fig", "=", 
         RowBox[{"{", 
          RowBox[{"Thick", ",", "Blue", ",", 
@@ -109,9 +112,9 @@ Cell[BoxData[
          RowBox[{
           RowBox[{"PointSize", "[", "Large", "]"}], ",", 
           RowBox[{"Point", "[", 
-           RowBox[{"pts", "[", 
-            RowBox[{"[", "4", "]"}], "]"}], "]"}]}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
+           RowBox[{
+           "pts", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+           "]"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"lbl", "=", 
         RowBox[{"{", 
          RowBox[{"Text", "[", 
@@ -119,8 +122,9 @@ Cell[BoxData[
            RowBox[{"Style", "[", 
             RowBox[{"\"\<A\>\"", ",", "16", ",", "Italic"}], "]"}], ",", 
            RowBox[{
-            RowBox[{"pts", "[", 
-             RowBox[{"[", "4", "]"}], "]"}], "+", 
+            RowBox[{
+            "pts", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+            "+", 
             RowBox[{"{", 
              RowBox[{".31", ",", ".31"}], "}"}]}]}], "]"}], "}"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -154,14 +158,15 @@ Cell[BoxData[
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.6828761338095922`*^9, {3.68287624358109*^9, 3.682876265974619*^9}, {
-   3.6828764101998577`*^9, 
-   3.6828764348788652`*^9}},ExpressionUUID->"72c4272d-5f09-46ee-8fae-\
-2c23696855e9"]
+   3.6828764101998577`*^9, 3.6828764348788652`*^9}, {3.764525279092394*^9, 
+   3.764525308132374*^9}, {3.7645253531313477`*^9, 3.764525387843664*^9}, {
+   3.764525519116804*^9, 3.7645255993629217`*^9}},
+ CellLabel->
+  "In[3109]:=",ExpressionUUID->"05b7c843-4253-4da7-8f58-d7b8adcaea48"]
 },
-WindowSize->{1165, 1013},
-WindowMargins->{{36, Automatic}, {54, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1165, 1341},
+WindowMargins->{{36, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -175,7 +180,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5372, 138, 409, "Input",ExpressionUUID->"72c4272d-5f09-46ee-8fae-2c23696855e9"]
+Cell[558, 20, 5782, 144, 409, "Input",ExpressionUUID->"05b7c843-4253-4da7-8f58-d7b8adcaea48"]
 }
 ]
 *)
