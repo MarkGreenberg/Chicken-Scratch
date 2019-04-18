@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     31161,        603]
-NotebookOptionsPosition[     30797,        587]
-NotebookOutlinePosition[     31205,        605]
-CellTagsIndexPosition[     31162,        602]
+NotebookDataLength[     38944,        756]
+NotebookOptionsPosition[     38271,        735]
+NotebookOutlinePosition[     38636,        751]
+CellTagsIndexPosition[     38593,        748]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -47,22 +49,24 @@ Cell[BoxData[
           RowBox[{"If", "[", 
            RowBox[{
             RowBox[{
-             RowBox[{"StringLength", "[", "name", "]"}], ">", "15"}], ",", 
+             RowBox[{"StringLength", "[", "name", "]"}], ">", "30"}], ",", 
             RowBox[{"name", "=", 
              RowBox[{
               RowBox[{"StringTake", "[", 
-               RowBox[{"name", ",", "15"}], "]"}], "<>", "\"\<...\>\""}]}]}], 
+               RowBox[{"name", ",", "30"}], "]"}], "<>", "\"\<...\>\""}]}]}], 
            "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"dates", "=", 
-           RowBox[{"DateRange", "[", 
+           RowBox[{"Take", "[", 
             RowBox[{
-             RowBox[{"DatePlus", "[", 
-              RowBox[{"Today", ",", 
-               RowBox[{"Quantity", "[", 
-                RowBox[{
-                 RowBox[{"-", "7"}], ",", "\"\<Days\>\""}], "]"}]}], "]"}], 
-             ",", "Yesterday", ",", "\"\<Weekday\>\""}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"DateRange", "[", 
+              RowBox[{
+               RowBox[{"DatePlus", "[", 
+                RowBox[{"Today", ",", 
+                 RowBox[{"Quantity", "[", 
+                  RowBox[{
+                   RowBox[{"-", "10"}], ",", "\"\<Days\>\""}], "]"}]}], "]"}],
+                ",", "Yesterday", ",", "\"\<BusinessDay\>\""}], "]"}], ",", 
+             RowBox[{"-", "4"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"date1", "=", 
            RowBox[{"DateString", "[", 
             RowBox[{
@@ -81,7 +85,7 @@ Cell[BoxData[
               "\"\<MonthShort\>\"", ",", "\"\</\>\"", ",", "\"\<DayShort\>\"",
                 ",", "\"\</\>\"", ",", "\"\<YearShort\>\""}], "}"}]}], 
             "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"dayLst", "=", 
+          RowBox[{"mixed", "=", 
            RowBox[{
             RowBox[{
              RowBox[{"(", 
@@ -94,45 +98,92 @@ Cell[BoxData[
                   RowBox[{"DayName", "[", "#", "]"}], "]"}]}]}], "]"}], ")"}],
               "&"}], "/@", "dates"}]}], ";", 
           RowBox[{"chart", "=", 
-           RowBox[{"TradingChart", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"sym", ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"dates", "[", 
-                  RowBox[{"[", "1", "]"}], "]"}], ",", 
-                 RowBox[{"dates", "[", 
-                  RowBox[{"[", "5", "]"}], "]"}]}], "}"}]}], "}"}], ",", 
-             RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}], ",", 
-             RowBox[{"LabelStyle", "\[Rule]", 
-              RowBox[{"Directive", "[", 
-               RowBox[{"Black", ",", 
-                RowBox[{"FontSize", "\[Rule]", "13.8"}]}], "]"}]}], ",", 
-             RowBox[{"PlotLabel", "\[Rule]", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"Rasterize", "[", 
               RowBox[{
-              "name", "<>", "\"\< stock\\n\>\"", "<>", "date1", "<>", 
-               "\"\< to \>\"", "<>", "date2"}]}]}], "]"}]}], ";", 
+               RowBox[{"TradingChart", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"h1", ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "h2", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{"h2", "\[LeftDoubleBracket]", 
+                    RowBox[{"-", "1"}], "\[RightDoubleBracket]"}]}], "}"}]}], 
+                  "}"}], ",", 
+                 RowBox[{"AspectRatio", "\[Rule]", "1"}], ",", 
+                 RowBox[{"ImageSize", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", "480", "}"}], ",", 
+                    RowBox[{"{", "540", "}"}]}], "}"}]}], ",", 
+                 RowBox[{"LabelStyle", "\[Rule]", 
+                  RowBox[{"Directive", "[", 
+                   RowBox[{"Black", ",", 
+                    RowBox[{"FontSize", "\[Rule]", "13.8"}]}], "]"}]}], ",", 
+                 RowBox[{"PlotLabel", "\[Rule]", 
+                  RowBox[{
+                  "h3", "<>", "\"\<\\n\>\"", "<>", "h4", "<>", "\"\< to \>\"",
+                    "<>", "h5"}]}]}], "]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"UpTo", "[", "480", "]"}], ",", 
+                  RowBox[{"UpTo", "[", "540", "]"}]}], "}"}]}]}], "]"}], 
+             "]"}], "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"h1", "\[Rule]", "sym"}], ",", 
+              RowBox[{"h2", "\[Rule]", "dates"}], ",", 
+              RowBox[{"h3", "\[Rule]", "name"}], ",", 
+              RowBox[{"h4", "\[Rule]", "date1"}], ",", 
+              RowBox[{"h5", "\[Rule]", "date2"}]}], "}"}]}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"pic", "=", "chart"}], ";", "\[IndentingNewLine]", 
-          RowBox[{"stockData", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"#", "[", 
-              RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", 
-            RowBox[{"FinancialData", "[", 
-             RowBox[{"sym", ",", "\"\<OHLCV\>\"", ",", 
-              RowBox[{"{", 
+          RowBox[{"finDat", "=", 
+           RowBox[{"FinancialData", "[", 
+            RowBox[{"sym", ",", "\"\<OHLCV\>\"", ",", 
+             RowBox[{"{", 
+              RowBox[{
                RowBox[{
-                RowBox[{"dates", "[", 
-                 RowBox[{"[", "1", "]"}], "]"}], ",", 
-                RowBox[{"dates", "[", 
-                 RowBox[{"[", "5", "]"}], "]"}]}], "}"}]}], "]"}]}]}], ";", 
+               "dates", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], ",", 
+               RowBox[{"dates", "\[LeftDoubleBracket]", 
+                RowBox[{"-", "1"}], "\[RightDoubleBracket]"}]}], "}"}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+              "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+              "&"}], "/@", 
+             RowBox[{"finDat", "[", "\"\<Path\>\"", "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"Append", "[", 
+            RowBox[{"data", ",", 
+             RowBox[{
+              RowBox[{
+              "data", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+              "-", 
+              RowBox[{
+              "data", "\[LeftDoubleBracket]", "3", 
+               "\[RightDoubleBracket]"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"Append", "[", 
+            RowBox[{"data", ",", 
+             RowBox[{
+              RowBox[{
+              "data", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+              "-", 
+              RowBox[{
+              "data", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"qType", "=", 
            RowBox[{"RandomChoice", "[", 
@@ -140,169 +191,197 @@ Cell[BoxData[
              RowBox[{
               RowBox[{"{", 
                RowBox[{"\"\<highest open\>\"", ",", 
-                RowBox[{"MaximalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<lowest open\>\"", ",", 
-                RowBox[{"MinimalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<highest high\>\"", ",", 
-                RowBox[{"MaximalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<lowest high\>\"", ",", 
-                RowBox[{"MinimalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<highest low\>\"", ",", 
-                RowBox[{"MaximalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<lowest low\>\"", ",", 
-                RowBox[{"MinimalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<highest close\>\"", ",", 
-                RowBox[{"MaximalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "4", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<lowest close\>\"", ",", 
-                RowBox[{"MinimalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "4", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<greatest range\>\"", ",", 
-                RowBox[{"MaximalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"Abs", "[", 
-                    RowBox[{
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "-", 
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "&"}]}], "]"}]}],
-                "}"}], ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<smallest range\>\"", ",", 
-                RowBox[{"MinimalBy", "[", 
-                 RowBox[{"stockData", ",", 
-                  RowBox[{
-                   RowBox[{"Abs", "[", 
-                    RowBox[{
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "-", 
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "&"}]}], "]"}]}],
-                "}"}], ",", "\[IndentingNewLine]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<best performance\>\"", ",", 
-                RowBox[{"MaximalBy", "[", 
-                 RowBox[{"stockData", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
                   RowBox[{
                    RowBox[{
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "4", "]"}], "]"}], "-", 
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}]}], "}"}],
+                   "data", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Max", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<lowest open\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Min", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<highest high\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Max", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<lowest high\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Min", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<highest low\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Max", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<lowest low\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Min", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<highest close\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "4", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Max", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "4", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<lowest close\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "4", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Min", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "4", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<greatest range\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "6", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Max", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "6", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<smallest range\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "6", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Min", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "6", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<best performance\>\"", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "7", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Max", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "7", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
                ",", "\[IndentingNewLine]", 
               RowBox[{"{", 
                RowBox[{"\"\<worst performance\>\"", ",", 
-                RowBox[{"MinimalBy", "[", 
-                 RowBox[{"stockData", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
                   RowBox[{
                    RowBox[{
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "4", "]"}], "]"}], "-", 
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}]}], "&"}]}], "]"}]}], "}"}],
+                   "data", "\[LeftDoubleBracket]", "7", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Min", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "7", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
                ",", "\[IndentingNewLine]", 
               RowBox[{"{", 
                RowBox[{"\"\<highest volume\>\"", ",", 
-                RowBox[{"MaximalBy", "[", 
-                 RowBox[{"stockData", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
                   RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "5", "]"}], "]"}], "&"}]}], "]"}]}], "}"}], 
-              ",", "\[IndentingNewLine]", 
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "5", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Max", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "5", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], "}"}],
+               ",", "\[IndentingNewLine]", 
               RowBox[{"{", 
                RowBox[{"\"\<lowest volume\>\"", ",", 
-                RowBox[{"MinimalBy", "[", 
-                 RowBox[{"stockData", ",", 
+                RowBox[{"First", "[", 
+                 RowBox[{"FirstPosition", "[", 
                   RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "5", "]"}], "]"}], "&"}]}], "]"}]}], "}"}]}],
-              "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"ansDay", "=", 
-           RowBox[{"dayLst", "[", 
-            RowBox[{"[", 
-             RowBox[{
-              RowBox[{"Position", "[", 
-               RowBox[{"stockData", ",", 
-                RowBox[{"qType", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"2", ",", "1"}], "]"}], "]"}]}], "]"}], "[", 
-              RowBox[{"[", 
-               RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"choices", "=", 
-           RowBox[{"Take", "[", 
-            RowBox[{
-             RowBox[{"DeleteDuplicates", "[", 
-              RowBox[{"Prepend", "[", 
-               RowBox[{
-                RowBox[{"RandomSample", "[", "dayLst", "]"}], ",", "ansDay"}],
-                "]"}], "]"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"mixed", "=", 
-           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+                   RowBox[{
+                   "data", "\[LeftDoubleBracket]", "5", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"Min", "[", 
+                    RowBox[{
+                    "data", "\[LeftDoubleBracket]", "5", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "]"}], "]"}]}], 
+               "}"}]}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
-            RowBox[{"Position", "[", 
-             RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+           "qType", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{
            "\"\<In this stock chart for \>\"", "<>", "name", "<>", 
-            "\"\<, which of these days had the \>\"", "<>", 
-            RowBox[{"qType", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "<>", "\"\<?\>\""}]}], ";", 
-          "\[IndentingNewLine]", 
+            "\"\<, which day had the \>\"", "<>", 
+            RowBox[{
+            "qType", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "<>", "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
             RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
@@ -380,10 +459,10 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -582,15 +661,82 @@ Cell[BoxData[
    3.753353992078277*^9, 3.7533664171030607`*^9, {3.753366459706921*^9, 
    3.753366492176641*^9}, {3.753366664695319*^9, 3.75336667045366*^9}, {
    3.753366913038769*^9, 3.753367011236907*^9}, {3.753367057404346*^9, 
-   3.7533670638084517`*^9}, {3.753367244205236*^9, 3.753367273266395*^9}},
- CellLabel->"In[77]:=",ExpressionUUID->"74161091-4281-44e5-b60c-c39401665172"]
+   3.7533670638084517`*^9}, {3.753367244205236*^9, 3.753367273266395*^9}, {
+   3.76454135331783*^9, 3.764541359588353*^9}, {3.7645414586690474`*^9, 
+   3.764541496782032*^9}, {3.764541726917534*^9, 3.764541727226869*^9}, {
+   3.764541794333147*^9, 3.764541847642754*^9}, {3.7645420023250647`*^9, 
+   3.764542039017928*^9}, {3.764542750873684*^9, 3.764543048061903*^9}, {
+   3.7645443043161383`*^9, 3.7645443978749027`*^9}, {3.764544554071555*^9, 
+   3.764544560011703*^9}, {3.764544595555402*^9, 3.764544601610417*^9}, {
+   3.764544648339278*^9, 3.764544648818247*^9}, {3.764544842300621*^9, 
+   3.7645448434501953`*^9}, {3.76454490201224*^9, 3.764545030841775*^9}, {
+   3.764576929938691*^9, 3.7645769305441513`*^9}, {3.764583909186303*^9, 
+   3.764583919103532*^9}, 3.764583999856215*^9, {3.764584046703148*^9, 
+   3.764584071319168*^9}, {3.764584146807263*^9, 3.764584161198902*^9}, {
+   3.76458429219379*^9, 3.7645843012882137`*^9}, {3.764584572273391*^9, 
+   3.76458459348729*^9}, {3.764584626543202*^9, 3.764584709999278*^9}, {
+   3.7645848037994556`*^9, 3.7645848449672203`*^9}, {3.7645848803222723`*^9, 
+   3.764585115410604*^9}, {3.764585306150465*^9, 3.764585407613995*^9}, {
+   3.7645854382061043`*^9, 3.764585463741929*^9}, {3.76458552621603*^9, 
+   3.764585606337309*^9}, {3.76458564079025*^9, 3.764585698005679*^9}, {
+   3.764585998382991*^9, 3.764586057284769*^9}, {3.764586112501408*^9, 
+   3.7645861412182693`*^9}, {3.764586439385992*^9, 3.764586452248519*^9}, {
+   3.764586523522334*^9, 3.7645865263048286`*^9}, {3.764586563506441*^9, 
+   3.764586575544135*^9}, {3.764586769936984*^9, 3.764586814798663*^9}, {
+   3.764586860937669*^9, 3.764586885647132*^9}, {3.764587070585424*^9, 
+   3.764587104782773*^9}, {3.764587297656458*^9, 3.764587306006459*^9}, {
+   3.764587338174346*^9, 3.7645875045733423`*^9}, {3.764587733205456*^9, 
+   3.764587778276353*^9}, {3.764595524453554*^9, 3.7645955722118273`*^9}, 
+   3.7645957775486307`*^9, 3.764595813963209*^9},
+ CellLabel->
+  "In[245]:=",ExpressionUUID->"74161091-4281-44e5-b60c-c39401665172"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap3\"",
+     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap3"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Grap3"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{{3.764541482809258*^9, 3.764541508528997*^9}, 
+   3.764541739042754*^9, 3.7645418610445423`*^9, 3.764542131421686*^9, 
+   3.764544443073299*^9, 3.764544702847707*^9, 3.764544864096199*^9, 
+   3.764545077526556*^9, 3.764576935544257*^9, 3.764577006265121*^9, 
+   3.764584204586535*^9, 3.764584359641552*^9, 3.7645854793956823`*^9, 
+   3.76458574520446*^9, 3.764585781779056*^9, 3.764585871358932*^9, 
+   3.764586152498863*^9, 3.764586255997973*^9, 3.764586467493495*^9, 
+   3.764586533197659*^9, 3.764586584458665*^9, 3.764586644801881*^9, 
+   3.764586707122854*^9, 3.764586773537558*^9, 3.7645868165182333`*^9, 
+   3.7645868981495943`*^9, 3.764587114928833*^9, 3.764587557033852*^9, 
+   3.764587783881916*^9, 3.764588450660055*^9, {3.764588484984585*^9, 
+   3.764588542939587*^9}, 3.764588610693136*^9, 3.764588648781028*^9, 
+   3.764588723445239*^9, 3.7645953619559526`*^9, 3.764595401303388*^9, 
+   3.764595578245163*^9, 3.76459582714544*^9},
+ CellLabel->
+  "Out[245]=",ExpressionUUID->"d4756524-25b3-450d-b4bb-2c563133142a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["dayLst"], "Input",
+ CellChangeTimes->{{3.764585959682824*^9, 3.764585962281842*^9}},
+ CellLabel->"In[40]:=",ExpressionUUID->"d3d7921f-2881-4b8a-b6c2-bdadaa188e81"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"last Friday\"\>", ",", "\<\"last Monday\"\>", 
+   ",", "\<\"last Tuesday\"\>", ",", "\<\"yesterday\"\>"}], "}"}]], "Output",
+ CellChangeTimes->{3.7645859637265787`*^9},
+ CellLabel->"Out[40]=",ExpressionUUID->"27c1b854-2867-4b0e-b141-c09aa5fa90e3"]
+}, Open  ]]
 },
 WindowToolbars->"EditBar",
 WindowSize->{1631, 1199},
-WindowMargins->{{0, Automatic}, {-149, Automatic}},
-WindowStatusArea->None,
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+WindowMargins->{{0, Automatic}, {Automatic, 64}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -604,7 +750,14 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 30235, 565, 1204, "Input",ExpressionUUID->"74161091-4281-44e5-b60c-c39401665172"]
+Cell[CellGroupData[{
+Cell[580, 22, 35732, 669, 1204, "Input",ExpressionUUID->"74161091-4281-44e5-b60c-c39401665172"],
+Cell[36315, 693, 1432, 25, 71, "Output",ExpressionUUID->"d4756524-25b3-450d-b4bb-2c563133142a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37784, 723, 177, 2, 30, "Input",ExpressionUUID->"d3d7921f-2881-4b8a-b6c2-bdadaa188e81"],
+Cell[37964, 727, 291, 5, 34, "Output",ExpressionUUID->"27c1b854-2867-4b0e-b141-c09aa5fa90e3"]
+}, Open  ]]
 }
 ]
 *)
