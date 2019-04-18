@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8037,        197]
-NotebookOptionsPosition[      7722,        183]
-NotebookOutlinePosition[      8083,        199]
-CellTagsIndexPosition[      8040,        196]
+NotebookDataLength[      9412,        224]
+NotebookOptionsPosition[      9121,        211]
+NotebookOutlinePosition[      9458,        226]
+CellTagsIndexPosition[      9415,        223]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,30 +43,29 @@ Cell[BoxData[
            RowBox[{"3", ",", "16"}], "}"}], "]"}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<What is the new power output of a wind turbine at `1` if the \
+wind picks up from `2` to `3`?\>\"", ",", 
+          RowBox[{"P", "==", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{"valP", ",", "\"\<kW\>\""}], "]"}]}], ",", 
+          RowBox[{"Quantity", "[", 
+           RowBox[{"valV1", ",", "\"\<m/s\>\""}], "]"}], ",", 
+          RowBox[{"Quantity", "[", 
+           RowBox[{"valV2", ",", "\"\<m/s\>\""}], "]"}]}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"qTransit", "=", 
         RowBox[{
          RowBox[{"Hold", "[", 
-          RowBox[{"Style", "[", 
-           RowBox[{
-            RowBox[{"StringForm", "[", 
-             RowBox[{
-             "\"\<This formula gives the power of a wind turbine. If `1` and \
-then the wind picks up from `2` to `3`, what is the new power output of the \
-turbine?\>\"", ",", "h1", ",", "h2", ",", "h3"}], "]"}], ",", "24"}], "]"}], 
-          "]"}], "/.", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"h1", "\[Rule]", 
-            RowBox[{"(", 
-             RowBox[{"P", "==", 
-              RowBox[{"Quantity", "[", 
-               RowBox[{"valP", ",", "\"\<kW\>\""}], "]"}]}], ")"}]}], ",", 
-           RowBox[{"h2", "\[Rule]", 
-            RowBox[{"Quantity", "[", 
-             RowBox[{"valV1", ",", "\"\<m/s\>\""}], "]"}]}], ",", 
-           RowBox[{"h3", "\[Rule]", 
-            RowBox[{"Quantity", "[", 
-             RowBox[{"valV2", ",", "\"\<m/s\>\""}], "]"}]}]}], "}"}]}]}], ";",
-        "\[IndentingNewLine]", 
+          RowBox[{"ToExpression", "[", 
+           RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+         
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"ToCharacterCode", "[", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"ansNo", "=", 
         RowBox[{"Round", "[", 
          RowBox[{
@@ -102,59 +101,80 @@ turbine?\>\"", ",", "h1", ",", "h2", ",", "h3"}], "]"}], ",", "24"}], "]"}],
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", 
          RowBox[{"choices", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"mixTransit", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Hold", "[", 
+            RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+           RowBox[{"h3", "\[Rule]", 
+            RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+         "mixed"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"ans", "=", 
         RowBox[{
          RowBox[{"Position", "[", 
           RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+           "choices", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"pic", "=", 
-        RowBox[{"Hold", "[", 
-         RowBox[{"Style", "[", 
-          RowBox[{
-           RowBox[{"Grid", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"HoldForm", "[", 
-                  RowBox[{"P", "\[Equal]", 
-                   RowBox[{
-                    RowBox[{"(", 
-                    RowBox[{"1", "/", "2"}], ")"}], "*", "\[Mu]", "*", 
-                    "\[Rho]", "*", "A", "*", 
-                    RowBox[{"V", "^", "3"}]}]}], "]"}], ",", "SpanFromLeft"}],
-                 "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"P", ",", "\"\<turbine power\>\""}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"\[Rho]", ",", "\"\<air density\>\""}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"A", ",", "\"\<turbine area\>\""}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"\[Mu]", ",", "\"\<turbine efficiency\>\""}], "}"}], 
-               ",", 
-               RowBox[{"{", 
-                RowBox[{"V", ",", "\"\<wind velocity\>\""}], "}"}]}], "}"}], 
-             ",", 
-             RowBox[{"Frame", "\[Rule]", "All"}], ",", 
-             RowBox[{"FrameStyle", "\[Rule]", 
-              RowBox[{"Directive", "[", 
-               RowBox[{"LightGray", ",", 
-                RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
-             RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
-             RowBox[{"Spacings", "\[Rule]", 
+        RowBox[{"Style", "[", 
+         RowBox[{
+          RowBox[{"Grid", "[", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{
               RowBox[{"{", 
-               RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "72"}], 
-          "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"HoldForm", "[", 
+                 RowBox[{"P", "\[Equal]", 
+                  RowBox[{
+                   RowBox[{"(", 
+                    RowBox[{"1", "/", "2"}], ")"}], "*", "\[Mu]", "*", 
+                   "\[Rho]", "*", "A", "*", 
+                   RowBox[{"V", "^", "3"}]}]}], "]"}], ",", "SpanFromLeft"}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"P", ",", "\"\<turbine power\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\[Rho]", ",", "\"\<air density\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"A", ",", "\"\<turbine area\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"\[Mu]", ",", "\"\<turbine efficiency\>\""}], "}"}], 
+              ",", 
+              RowBox[{"{", 
+               RowBox[{"V", ",", "\"\<wind velocity\>\""}], "}"}]}], "}"}], 
+            ",", 
+            RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+            RowBox[{"FrameStyle", "\[Rule]", 
+             RowBox[{"Directive", "[", 
+              RowBox[{"LightGray", ",", 
+               RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
+            RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+            RowBox[{"Spacings", "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "72"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"picTransit", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"ToExpression", "[", 
+           RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
+         
+         RowBox[{"h2", "\[Rule]", 
+          RowBox[{"ToCharacterCode", "[", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "qTransit", ",", "ans", ",", "mixTransit", ",", "picTransit"}], 
+          "}"}], "]"}], "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Phys2\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
@@ -177,14 +197,21 @@ turbine?\>\"", ",", "h1", ",", "h2", ",", "h3"}], "]"}], ",", "24"}], "]"}],
    3.687614681238295*^9}, {3.687614809510502*^9, 3.6876148453668118`*^9}, {
    3.687614927131852*^9, 3.6876149288653307`*^9}, {3.687615044417902*^9, 
    3.687615050416006*^9}, {3.687615857880805*^9, 3.687615884433798*^9}, 
-   3.687616176480833*^9, 
-   3.687616711371866*^9},ExpressionUUID->"fb03149f-55ba-476c-a981-\
-88f57fde955e"]
+   3.687616176480833*^9, 3.687616711371866*^9, {3.76460934116471*^9, 
+   3.764609357240481*^9}, {3.76460944855516*^9, 3.764609456761281*^9}, {
+   3.764609532089279*^9, 3.764609536680682*^9}, {3.764609574634324*^9, 
+   3.764609623300006*^9}, 3.764609656328964*^9, {3.764609751672575*^9, 
+   3.764609871239772*^9}, {3.764609944231534*^9, 3.764609945519129*^9}, {
+   3.764610001154838*^9, 3.764610015407378*^9}, {3.764610049655738*^9, 
+   3.764610083231286*^9}, {3.764610136129301*^9, 3.764610178279852*^9}, {
+   3.7646104880247087`*^9, 3.764610499230788*^9}, {3.764610538854971*^9, 
+   3.764610601150692*^9}, {3.764610727680278*^9, 3.764610821782612*^9}},
+ CellLabel->
+  "In[656]:=",ExpressionUUID->"fb03149f-55ba-476c-a981-88f57fde955e"]
 },
-WindowSize->{1233, 1024},
-WindowMargins->{{-1, Automatic}, {51, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1813, 1337},
+WindowMargins->{{0, Automatic}, {Automatic, 7}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -198,7 +225,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7160, 161, 556, "Input",ExpressionUUID->"fb03149f-55ba-476c-a981-88f57fde955e"]
+Cell[558, 20, 8559, 189, 451, "Input",ExpressionUUID->"fb03149f-55ba-476c-a981-88f57fde955e"]
 }
 ]
 *)
