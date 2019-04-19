@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     32980,        672]
-NotebookOptionsPosition[     32541,        655]
-NotebookOutlinePosition[     32895,        671]
-CellTagsIndexPosition[     32852,        668]
+NotebookDataLength[     32427,        654]
+NotebookOptionsPosition[     32134,        641]
+NotebookOutlinePosition[     32471,        656]
+CellTagsIndexPosition[     32428,        653]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -336,16 +334,15 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"phrase", "=", 
            RowBox[{"RandomChoice", "[", 
-            RowBox[{"data", "[", 
-             RowBox[{"[", 
-              RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+            RowBox[{"data", "\[LeftDoubleBracket]", 
+             RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"#", "[", 
-              RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{
+             "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+             "&"}], "/@", "data"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -353,10 +350,10 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
@@ -371,11 +368,21 @@ Cell[BoxData[
              RowBox[{"Style", "[", 
               RowBox[{"phrase", ",", "Italic"}], "]"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], 
+         ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
@@ -627,36 +634,14 @@ pattern `1` ?\>\"", ",", "stress"}], "]"}]}], ")"}], "]"}], "/.",
    3.7431983080826187`*^9}, {3.743199139900043*^9, 3.743199152369506*^9}, {
    3.743199439501069*^9, 3.743199479675164*^9}, {3.743199586328085*^9, 
    3.743199624326516*^9}, {3.743199661392294*^9, 3.743199789168228*^9}, 
-   3.7431998614421177`*^9},
+   3.7431998614421177`*^9, {3.7646846412776327`*^9, 3.764684679349176*^9}, {
+   3.764684786603136*^9, 3.764684798250404*^9}},
  CellLabel->
-  "In[197]:=",ExpressionUUID->"0defc1bc-a6e1-4ada-95d9-e326f1c0a080"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Lang7\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Lang7"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Lang7"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{
-  3.7431616957904177`*^9, 3.7431706954111977`*^9, 3.7431967231767397`*^9, 
-   3.743196764885271*^9, 3.743196976153219*^9, 3.743197052272346*^9, 
-   3.743197256341124*^9, {3.743197322077189*^9, 3.7431973516094093`*^9}, 
-   3.743197919263981*^9, 3.743197950618425*^9, 3.743197998004204*^9, 
-   3.743198065148353*^9, 3.743198154964302*^9, 3.743198555520097*^9, {
-   3.743199481238575*^9, 3.74319950854576*^9}, 3.743199638608265*^9, 
-   3.743199723675866*^9, 3.7431997585553617`*^9, 3.7431998646570387`*^9},
- CellLabel->
-  "Out[197]=",ExpressionUUID->"e7c65c6d-b640-434b-b3db-03f22c102c5a"]
-}, Open  ]]
+  "In[1075]:=",ExpressionUUID->"0defc1bc-a6e1-4ada-95d9-e326f1c0a080"]
 },
 WindowSize->{1582, 1289},
 WindowMargins->{{0, Automatic}, {Automatic, 2}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -670,10 +655,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 30950, 609, 1123, "Input",ExpressionUUID->"0defc1bc-a6e1-4ada-95d9-e326f1c0a080"],
-Cell[31533, 633, 992, 19, 37, "Output",ExpressionUUID->"e7c65c6d-b640-434b-b3db-03f22c102c5a"]
-}, Open  ]]
+Cell[558, 20, 31572, 619, 1144, "Input",ExpressionUUID->"0defc1bc-a6e1-4ada-95d9-e326f1c0a080"]
 }
 ]
 *)
