@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21255,        458]
-NotebookOptionsPosition[     20814,        441]
-NotebookOutlinePosition[     21170,        457]
-CellTagsIndexPosition[     21127,        454]
+NotebookDataLength[     20031,        430]
+NotebookOptionsPosition[     19737,        417]
+NotebookOutlinePosition[     20076,        432]
+CellTagsIndexPosition[     20033,        429]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -91,9 +89,10 @@ Cell[BoxData[
                  RowBox[{
                   RowBox[{"Range", "[", 
                    RowBox[{"0", ",", 
-                    RowBox[{"exps", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", "3"}], 
-                 "]"}], ",", "Greater"}], "]"}]}], ";", "\[IndentingNewLine]", 
+                    RowBox[{
+                    "exps", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], "]"}], ",", "3"}], "]"}], 
+                ",", "Greater"}], "]"}]}], ";", "\[IndentingNewLine]", 
              RowBox[{"cosD", "=", 
               RowBox[{"RandomChoice", "[", 
                RowBox[{
@@ -137,10 +136,10 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
@@ -332,18 +331,20 @@ Cell[BoxData[
           RowBox[{"mixTransit", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"ToCharacterCode", "[", 
-              RowBox[{"ToString", "[", 
-               RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}], "&"}], "/@",
-             "mixed"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", 
-             RowBox[{"Hold", "[", 
-              RowBox[{"ToExpression", "[", 
-               RowBox[{"FromCharacterCode", "[", "mixTransit", "]"}], "]"}], 
-              "]"}]}], "}"}], "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
-   "\[IndentingNewLine]", "\"\<CS_pack_Alge9\>\"", ",", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}]}]}], 
+        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Alge9\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.690561163185231*^9, 3.6905611737859287`*^9}, {
    3.69056698729056*^9, 3.690567010546187*^9}, {3.690567047885365*^9, 
@@ -408,41 +409,15 @@ Cell[BoxData[
    3.764344353666347*^9, 3.764344414328415*^9}, {3.764344468169174*^9, 
    3.764344580199473*^9}, {3.764344611464843*^9, 3.764344633407405*^9}, {
    3.76434481905761*^9, 3.764344842927499*^9}, {3.764345304376842*^9, 
-   3.764345374824154*^9}, {3.764345427889309*^9, 3.764345458663238*^9}},
+   3.764345374824154*^9}, {3.764345427889309*^9, 3.764345458663238*^9}, {
+   3.764784543888625*^9, 3.764784574544179*^9}, {3.764784697400249*^9, 
+   3.764784720607094*^9}},
  CellLabel->
-  "In[118]:=",ExpressionUUID->"9117d6a0-903b-4a17-867e-228fa0a0cb9d"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Alge9\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Alge9"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Alge9"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{
-  3.764163528540585*^9, {3.764165592295266*^9, 3.764165616275199*^9}, 
-   3.764165754321579*^9, 3.764167773049013*^9, 3.764167815046043*^9, 
-   3.7641678706817303`*^9, 3.7641681534877663`*^9, 3.764169035537168*^9, 
-   3.764169592933366*^9, 3.764169657207693*^9, 3.764169884308638*^9, 
-   3.7641700199471693`*^9, {3.76417017953619*^9, 3.764170223566894*^9}, {
-   3.764171392409803*^9, 3.76417142488367*^9}, 3.7641717920044622`*^9, {
-   3.764172676236367*^9, 3.76417270102667*^9}, 3.764172764929351*^9, 
-   3.764172838138897*^9, 3.764172947731814*^9, 3.764174894775957*^9, 
-   3.764328975119547*^9, 3.764329015766614*^9, 3.76434416818786*^9, 
-   3.7643442255880737`*^9, 3.7643444174994164`*^9, 3.764344591508193*^9, 
-   3.7643446451719007`*^9, 3.764344844325046*^9, 3.764345379112756*^9, 
-   3.764345465782943*^9},
- CellLabel->
-  "Out[118]=",ExpressionUUID->"7bbc6930-eda6-48cc-9911-b34e49985c3f"]
-}, Open  ]]
+  "In[3233]:=",ExpressionUUID->"9117d6a0-903b-4a17-867e-228fa0a0cb9d"]
 },
 WindowSize->{1657, 1302},
 WindowMargins->{{-3, Automatic}, {44, Automatic}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -456,10 +431,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 18914, 390, 976, "Input",ExpressionUUID->"9117d6a0-903b-4a17-867e-228fa0a0cb9d"],
-Cell[19497, 414, 1301, 24, 37, "Output",ExpressionUUID->"7bbc6930-eda6-48cc-9911-b34e49985c3f"]
-}, Open  ]]
+Cell[558, 20, 19175, 395, 976, "Input",ExpressionUUID->"9117d6a0-903b-4a17-867e-228fa0a0cb9d"]
 }
 ]
 *)
