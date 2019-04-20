@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40311,        881]
-NotebookOptionsPosition[     39865,        864]
-NotebookOutlinePosition[     40225,        880]
-CellTagsIndexPosition[     40182,        877]
+NotebookDataLength[     22020,        431]
+NotebookOptionsPosition[     21727,        418]
+NotebookOutlinePosition[     22065,        433]
+CellTagsIndexPosition[     22022,        430]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -107,562 +105,142 @@ Cell[BoxData[
        RowBox[{"filters", "=", 
         RowBox[{"RandomSample", "[", 
          RowBox[{
-          RowBox[{"{", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{"\"\<dilation\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Dilation", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"DiskMatrix", "[", "4", "]"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<erosion\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Erosion", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"DiskMatrix", "[", "3", "]"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<opening\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Opening", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"DiskMatrix", "[", "5", "]"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<closing\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Opening", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"DiskMatrix", "[", "5", "]"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<distance transformation\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
+          InterpretationBox[
+           DynamicModuleBox[{Typeset`open = False}, 
+            TemplateBox[{"List","ListIcon",GridBox[{{
                  RowBox[{
-                  RowBox[{"Image", "[", 
-                   RowBox[{
-                    RowBox[{"ImageAdjust", "[", 
-                    RowBox[{"DistanceTransform", "[", 
-                    RowBox[{"#", ",", ".4"}], "]"}], "]"}], ",", 
-                    RowBox[{"ImageSize", "\[Rule]", 
+                   TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+                   TagBox["List", "IconizedItem"]}]}, {
+                 RowBox[{
+                   TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox[
                     RowBox[{"{", 
-                    RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", ".4", ",", ".5"}], "}"}]}], "]"}], ")"}],
-                "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<thinning\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Thinning", "[", 
-                 RowBox[{"Binarize", "[", 
-                  RowBox[{"#", ",", ".4"}], "]"}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<binarize\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Binarize", "[", 
-                 RowBox[{"#", ",", ".4"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<negative\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ColorNegate", "[", "#", "]"}], ")"}], "&"}]}], "}"}],
-             ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<hit and miss\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"HitMissTransform", "[", 
+                    RowBox[{"61", ",", "2"}], "}"}], "IconizedItem"]}]}, {
                  RowBox[{
-                  RowBox[{"Binarize", "[", 
-                   RowBox[{"#", ",", ".45"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", "0"}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"-", "1"}], ",", "0"}], "}"}]}], "}"}]}], "]"}], 
-                ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<top hat\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"TopHatTransform", "[", 
-                 RowBox[{"#", ",", "13"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<bottom hat\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"BottomHatTransform", "[", 
-                 RowBox[{"#", ",", "15"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<minimum\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"MinFilter", "[", 
-                 RowBox[{"#", ",", "4"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<maximum\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"MaxFilter", "[", 
-                 RowBox[{"#", ",", "4"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<filling\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"FillingTransform", "[", "#", "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<geodesic closing\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"GeodesicClosing", "[", 
-                 RowBox[{"#", ",", "40"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<geodesic opening\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"GeodesicOpening", "[", 
-                 RowBox[{"#", ",", "25"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<skeleton\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"SkeletonTransform", "[", 
-                 RowBox[{"Binarize", "[", 
-                  RowBox[{"#", ",", ".35"}], "]"}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<desaturate\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"ColorSeparate", "[", 
-                  RowBox[{"#", ",", "\"\<HSB\>\""}], "]"}], "[", 
-                 RowBox[{"[", "3", "]"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<morphological components\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Colorize", "[", 
-                 RowBox[{
-                  RowBox[{"MorphologicalComponents", "[", 
-                   RowBox[{"Binarize", "[", 
-                    RowBox[{"#", ",", ".4"}], "]"}], "]"}], ",", 
-                  RowBox[{"ColorFunction", "\[Rule]", "\"\<Pastel\>\""}]}], 
-                 "]"}], ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<intensity color map\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Colorize", "[", "#", "]"}], ")"}], "&"}]}], "}"}], 
-            ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<contrast\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"#", ",", ".8"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<brightness\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", ".5", ",", "1"}], "}"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<gamma\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", "0", ",", "2"}], "}"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<color quantize\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ColorQuantize", "[", 
-                 RowBox[{"#", ",", "8", ",", 
-                  RowBox[{"Dithering", "\[Rule]", "False"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<color replacement\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ColorReplace", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"Black", "\[Rule]", "Blue"}], ",", ".2"}], "]"}], 
-                ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<lighting adjustment\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ColorBalance", "[", "#", "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<blue channel demosaic\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageDemosaic", "[", 
-                 RowBox[{
-                  RowBox[{
-                   RowBox[{"ColorSeparate", "[", "#", "]"}], "[", 
-                   RowBox[{"[", "3", "]"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"\"\<Bayer\>\"", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"0", ",", "10"}], "}"}]}], "}"}]}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<relief\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ReliefImage", "[", 
-                 RowBox[{
-                  RowBox[{"Blur", "[", 
-                   RowBox[{"#", ",", "2"}], "]"}], ",", 
-                  RowBox[{
-                  "ColorFunction", "\[Rule]", "\"\<CoffeeTones\>\""}]}], 
-                 "]"}], ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<distance from orange\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ColorDistance", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{"RGBColor", "[", 
-                   RowBox[{".7", ",", ".6", ",", "0"}], "]"}]}], "]"}], ")"}],
-                "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<blur\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Blur", "[", 
-                 RowBox[{"#", ",", "5"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<sharpen\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"Sharpen", "[", 
-                 RowBox[{"#", ",", "5"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Gaussian blur\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"GaussianFilter", "[", 
-                 RowBox[{"#", ",", "5"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<gradient\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"GradientFilter", "[", 
-                 RowBox[{
-                  RowBox[{"ImageAdjust", "[", 
-                   RowBox[{"#", ",", "4"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"1", ",", "3"}], "}"}]}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<gradient orientation\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"GradientOrientationFilter", "[", 
-                 RowBox[{"#", ",", "12"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Laplacian edge detect\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{
-                  RowBox[{"LaplacianFilter", "[", 
-                   RowBox[{
-                    RowBox[{"Blur", "[", 
-                    RowBox[{"#", ",", "3"}], "]"}], ",", "1"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", ".5", ",", ".5"}], "}"}]}], "]"}], ")"}],
-                "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<edge relief\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"LaplacianGaussianFilter", "[", 
-                  RowBox[{"#", ",", "2.5"}], "]"}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<mean\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"MeanFilter", "[", 
-                 RowBox[{"#", ",", "5"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<denoise (Wiener)\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"WienerFilter", "[", 
-                 RowBox[{"#", ",", "5"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<ridge\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{
-                  RowBox[{"RidgeFilter", "[", 
-                   RowBox[{"#", ",", ".6"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", ".75", ",", ".5"}], "}"}]}], "]"}], 
-                ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Gabor\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"GaborFilter", "[", 
-                  RowBox[{"#", ",", "4", ",", 
-                   RowBox[{"{", 
-                    RowBox[{".9", ",", "1"}], "}"}]}], "]"}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<convolve\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageConvolve", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{
-                   RowBox[{"BoxMatrix", "[", "2", "]"}], "/", "15"}]}], "]"}],
-                 ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<rectangular matrix\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageCorrelate", "[", 
-                 RowBox[{"#", ",", 
-                  RowBox[{
-                   RowBox[{"BoxMatrix", "[", 
-                    RowBox[{"{", 
-                    RowBox[{"20", ",", "1"}], "}"}], "]"}], "/", "125"}]}], 
-                 "]"}], ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<horizontal derivative\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"DerivativeFilter", "[", 
-                  RowBox[{"#", ",", 
-                   RowBox[{"{", 
-                    RowBox[{"0", ",", "1"}], "}"}]}], "]"}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<vertical derivative\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"DerivativeFilter", "[", 
-                  RowBox[{"#", ",", 
-                   RowBox[{"{", 
-                    RowBox[{"1", ",", "0"}], "}"}]}], "]"}], "]"}], ")"}], 
-               "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<median\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"MedianFilter", "[", 
-                 RowBox[{"#", ",", "4"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<minimum detect\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"MinDetect", "[", 
-                 RowBox[{
-                  RowBox[{"ImageAdjust", "[", 
-                   RowBox[{"#", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"0", ",", ".6", ",", "1"}], "}"}]}], "]"}], ",", 
-                  ".45"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<maximum detect\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"MaxDetect", "[", 
-                 RowBox[{
-                  RowBox[{"ImageAdjust", "[", 
-                   RowBox[{"#", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"0", ",", ".6", ",", "1"}], "}"}]}], "]"}], ",", 
-                  ".45"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<commonest\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"CommonestFilter", "[", 
-                 RowBox[{"#", ",", "5"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<reverse range (edge detection)\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ColorNegate", "[", 
-                 RowBox[{"ImageAdjust", "[", 
-                  RowBox[{
-                   RowBox[{"RangeFilter", "[", 
-                    RowBox[{"#", ",", "1"}], "]"}], ",", 
-                   RowBox[{"{", 
-                    RowBox[{"0", ",", ".7", ",", ".8"}], "}"}]}], "]"}], 
-                 "]"}], ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<standard deviation\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{
-                  RowBox[{"StandardDeviationFilter", "[", 
-                   RowBox[{"#", ",", "1"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{".5", ",", ".9", ",", ".5"}], "}"}]}], "]"}], 
-                ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<harmonic mean\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"HarmonicMeanFilter", "[", 
-                 RowBox[{"#", ",", "5"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<geometric mean\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"GeometricMeanFilter", "[", 
-                 RowBox[{"#", ",", "10"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Kuwahara\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"KuwaharaFilter", "[", 
-                 RowBox[{"#", ",", "4"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<bilateral\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"BilateralFilter", "[", 
-                 RowBox[{"#", ",", "5", ",", ".35"}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<mean shift\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"MeanShiftFilter", "[", 
-                 RowBox[{"#", ",", "5", ",", ".2"}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Perona-Malik diffusion\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"PeronaMalikFilter", "[", 
-                 RowBox[{"#", ",", "10", ",", ".07"}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<curvature flow\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"CurvatureFlowFilter", "[", 
-                 RowBox[{"#", ",", "9", ",", "6"}], "]"}], ")"}], "&"}]}], 
-             "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<deconvolve\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{"ImageDeconvolve", "[", 
-                  RowBox[{"#", ",", 
-                   RowBox[{
-                    RowBox[{"DiskMatrix", "[", 
-                    RowBox[{"2", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"5", ",", "5"}], "}"}]}], "]"}], "/", "28"}]}], 
-                  "]"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<total variation\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"TotalVariationFilter", "[", 
-                 RowBox[{"#", ",", ".8"}], "]"}], ")"}], "&"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<differentiator\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{
-                  RowBox[{"DifferentiatorFilter", "[", 
-                   RowBox[{"#", ",", "1"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{".2", ",", ".9", ",", ".2"}], "}"}]}], "]"}], 
-                ")"}], "&"}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Hilbert\>\"", ",", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{"ImageAdjust", "[", 
-                 RowBox[{
-                  RowBox[{"HilbertFilter", "[", 
-                   RowBox[{"#", ",", "1"}], "]"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{".5", ",", ".9", ",", ".3"}], "}"}]}], "]"}], 
-                ")"}], "&"}]}], "}"}]}], "}"}], ",", "4"}], "]"}]}], ";", 
+                   TagBox["\"Byte count: \"", "IconizedLabel"], 
+                   "\[InvisibleSpace]", 
+                   TagBox["22640", "IconizedItem"]}]}}, 
+               GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+               "Column", 
+               GridBoxItemSize -> {
+                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],Dynamic[
+              Typeset`open]},
+             "IconizedObject"]],
+           {{"dilation", Dilation[#, 
+              DiskMatrix[4]]& }, {"erosion", Erosion[#, 
+              DiskMatrix[3]]& }, {"opening", Opening[#, 
+              DiskMatrix[5]]& }, {"closing", Opening[#, 
+              DiskMatrix[5]]& }, {"distance transformation", ImageAdjust[
+              Image[
+               ImageAdjust[
+                DistanceTransform[#, 0.4]], ImageSize -> {480, 540}], {
+              0, 0.4, 0.5}]& }, {"thinning", Thinning[
+              Binarize[#, 0.4]]& }, {"binarize", Binarize[#, 0.4]& }, {
+            "negative", ColorNegate[#]& }, {"hit and miss", HitMissTransform[
+              Binarize[#, 0.45], {{1, 0}, {-1, 0}}]& }, {
+            "top hat", TopHatTransform[#, 13]& }, {
+            "bottom hat", BottomHatTransform[#, 15]& }, {
+            "minimum", MinFilter[#, 4]& }, {"maximum", MaxFilter[#, 4]& }, {
+            "filling", FillingTransform[#]& }, {
+            "geodesic closing", GeodesicClosing[#, 40]& }, {
+            "geodesic opening", GeodesicOpening[#, 25]& }, {
+            "skeleton", SkeletonTransform[
+              Binarize[#, 0.35]]& }, {"desaturate", Part[
+              ColorSeparate[#, "HSB"], 3]& }, {
+            "morphological components", Colorize[
+              MorphologicalComponents[
+               Binarize[#, 0.4]], ColorFunction -> "Pastel"]& }, {
+            "intensity color map", Colorize[#]& }, {
+            "contrast", ImageAdjust[#, 0.8]& }, {
+            "brightness", ImageAdjust[#, {0, 0.5, 1}]& }, {
+            "gamma", ImageAdjust[#, {0, 0, 2}]& }, {
+            "color quantize", ColorQuantize[#, 8, Dithering -> False]& }, {
+            "color replacement", ColorReplace[#, Black -> Blue, 0.2]& }, {
+            "lighting adjustment", ColorBalance[#]& }, {
+            "blue channel demosaic", ImageDemosaic[
+              Part[
+               ColorSeparate[#], 3], {"Bayer", {0, 10}}]& }, {
+            "relief", ReliefImage[
+              Blur[#, 2], ColorFunction -> "CoffeeTones"]& }, {
+            "distance from orange", ColorDistance[#, 
+              RGBColor[0.7, 0.6, 0]]& }, {"blur", Blur[#, 5]& }, {
+            "sharpen", Sharpen[#, 5]& }, {
+            "Gaussian blur", GaussianFilter[#, 5]& }, {
+            "gradient", GradientFilter[
+              ImageAdjust[#, 4], {1, 3}]& }, {
+            "gradient orientation", GradientOrientationFilter[#, 12]& }, {
+            "Laplacian edge detect", ImageAdjust[
+              LaplacianFilter[
+               Blur[#, 3], 1], {0, 0.5, 0.5}]& }, {
+            "edge relief", ImageAdjust[
+              LaplacianGaussianFilter[#, 2.5]]& }, {
+            "mean", MeanFilter[#, 5]& }, {
+            "denoise (Wiener)", WienerFilter[#, 5]& }, {"ridge", ImageAdjust[
+              RidgeFilter[#, 0.6], {0, 0.75, 0.5}]& }, {"Gabor", ImageAdjust[
+              GaborFilter[#, 4, {0.9, 1}]]& }, {
+            "convolve", ImageConvolve[#, BoxMatrix[2]/15]& }, {
+            "rectangular matrix", 
+             ImageCorrelate[#, BoxMatrix[{20, 1}]/125]& }, {
+            "horizontal derivative", ImageAdjust[
+              DerivativeFilter[#, {0, 1}]]& }, {
+            "vertical derivative", ImageAdjust[
+              DerivativeFilter[#, {1, 0}]]& }, {
+            "median", MedianFilter[#, 4]& }, {"minimum detect", MinDetect[
+              ImageAdjust[#, {0, 0.6, 1}], 0.45]& }, {
+            "maximum detect", MaxDetect[
+              ImageAdjust[#, {0, 0.6, 1}], 0.45]& }, {
+            "commonest", CommonestFilter[#, 5]& }, {
+            "reverse range (edge detection)", ColorNegate[
+              ImageAdjust[
+               RangeFilter[#, 1], {0, 0.7, 0.8}]]& }, {
+            "standard deviation", ImageAdjust[
+              StandardDeviationFilter[#, 1], {0.5, 0.9, 0.5}]& }, {
+            "harmonic mean", HarmonicMeanFilter[#, 5]& }, {
+            "geometric mean", GeometricMeanFilter[#, 10]& }, {
+            "Kuwahara", KuwaharaFilter[#, 4]& }, {
+            "bilateral", BilateralFilter[#, 5, 0.35]& }, {
+            "mean shift", MeanShiftFilter[#, 5, 0.2]& }, {
+            "Perona-Malik diffusion", PeronaMalikFilter[#, 10, 0.07]& }, {
+            "curvature flow", CurvatureFlowFilter[#, 9, 6]& }, {
+            "deconvolve", ImageAdjust[
+              ImageDeconvolve[#, DiskMatrix[2, {5, 5}]/28]]& }, {
+            "total variation", TotalVariationFilter[#, 0.8]& }, {
+            "differentiator", ImageAdjust[
+              DifferentiatorFilter[#, 1], {0.2, 0.9, 0.2}]& }, {
+            "Hilbert", ImageAdjust[
+              HilbertFilter[#, 1], {0.5, 0.9, 0.3}]& }},
+           SelectWithContents->True,
+           Selectable->False], ",", "4"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"fun", ":=", 
-        RowBox[{"filters", "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"filters", "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"q", "=", 
         RowBox[{"StringForm", "[", 
          RowBox[{
          "\"\<What filter has altered the `1` half of `2` by `3`?\>\"", ",", 
-          RowBox[{"half", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], ",", 
+          RowBox[{
+          "half", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
           RowBox[{"Style", "[", 
            RowBox[{
-            RowBox[{"art", "[", 
-             RowBox[{"[", "2", "]"}], "]"}], ",", "Italic"}], "]"}], ",", 
-          RowBox[{"art", "[", 
-           RowBox[{"[", "3", "]"}], "]"}]}], "]"}]}], ";", 
+            RowBox[{
+            "art", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+            ",", "Italic"}], "]"}], ",", 
+          RowBox[{
+          "art", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"qTransit", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"ToExpression", "[", 
+           RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+         
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"ToCharacterCode", "[", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"pic", "=", 
         RowBox[{
@@ -676,17 +254,19 @@ Cell[BoxData[
             RowBox[{"ImageTake", "[", 
              RowBox[{
               RowBox[{"h2", "[", "img1", "]"}], ",", 
-              RowBox[{"h3", "[", 
-               RowBox[{"[", "2", "]"}], "]"}], ",", 
-              RowBox[{"h3", "[", 
-               RowBox[{"[", "3", "]"}], "]"}]}], "]"}]}], ";", 
-           "\[IndentingNewLine]", 
+              RowBox[{
+              "h3", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+              ",", 
+              RowBox[{
+              "h3", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}], 
+             "]"}]}], ";", "\[IndentingNewLine]", 
            RowBox[{"Image", "[", 
             RowBox[{
              RowBox[{"ImageCompose", "[", 
               RowBox[{"img1", ",", "img2", ",", 
-               RowBox[{"h3", "[", 
-                RowBox[{"[", "4", "]"}], "]"}]}], "]"}], ",", 
+               RowBox[{
+               "h3", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}]}],
+               "]"}], ",", 
              RowBox[{"ImageSize", "\[Rule]", 
               RowBox[{"{", 
                RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}]}], "]"}], "/.", 
@@ -701,9 +281,8 @@ Cell[BoxData[
        RowBox[{"choices", "=", 
         RowBox[{
          RowBox[{
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "filters"}]}], ";", 
-       "\[IndentingNewLine]", 
+          RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+           "&"}], "/@", "filters"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -711,15 +290,16 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"Position", "[", 
           RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+           "choices", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"qTransit", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+         "]"}], "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Art13\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.70786043755408*^9, 3.70786044806738*^9}, {
@@ -831,41 +411,14 @@ Cell[BoxData[
    3.708025931006645*^9, 3.7080259725244923`*^9}, {3.708026008220984*^9, 
    3.70802617062703*^9}, {3.708026227368249*^9, 3.70802625822234*^9}, {
    3.708026624257367*^9, 3.70802664316431*^9}, {3.725313691660653*^9, 
-   3.725313702633644*^9}},ExpressionUUID->"98a082f5-a3f9-41cb-824d-\
-6aaec3d199a6"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Art13\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Art13"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Art13"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{{3.7080037224494*^9, 3.708003796800802*^9}, 
-   3.708003845029131*^9, {3.708003875455208*^9, 3.7080041332189302`*^9}, {
-   3.708004163368146*^9, 3.708004202592012*^9}, {3.708004232675343*^9, 
-   3.708004326710553*^9}, 3.708008623287856*^9, {3.708008662014627*^9, 
-   3.708008669543261*^9}, {3.7080092275615883`*^9, 3.708009253725134*^9}, 
-   3.708009319774858*^9, 3.708009353473337*^9, 3.7080093853548193`*^9, {
-   3.7080100858657417`*^9, 3.7080101046390047`*^9}, {3.7080101411856813`*^9, 
-   3.708010342117682*^9}, {3.708015787522833*^9, 3.708015792389532*^9}, {
-   3.7080158239649143`*^9, 3.708015907360442*^9}, {3.708015948907199*^9, 
-   3.708015971461524*^9}, {3.708025598558713*^9, 3.7080256137935877`*^9}, {
-   3.708025661124303*^9, 3.7080256781699877`*^9}, {3.708025724079125*^9, 
-   3.708025808384507*^9}, {3.708025847621821*^9, 3.708025887169311*^9}, {
-   3.708026175827116*^9, 3.70802620717072*^9}, 3.70802628179914*^9, 
-   3.708026331279376*^9, 3.725313734701387*^9, 
-   3.7253138003534737`*^9},ExpressionUUID->"27eb3d5b-28c1-4a03-ae7c-\
-cb6d8f4ee4f6"]
-}, Open  ]]
+   3.725313702633644*^9}, 3.764754356013863*^9, {3.764754405448147*^9, 
+   3.764754561425993*^9}},
+ CellLabel->
+  "In[1788]:=",ExpressionUUID->"b446332a-169d-488c-87fc-647d4d0ac2bc"]
 },
 WindowSize->{1902, 1273},
 WindowMargins->{{0, Automatic}, {Automatic, 45}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -879,10 +432,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 37798, 812, 1895, "Input",ExpressionUUID->"98a082f5-a3f9-41cb-824d-6aaec3d199a6"],
-Cell[38381, 836, 1468, 25, 37, "Output",ExpressionUUID->"27eb3d5b-28c1-4a03-ae7c-cb6d8f4ee4f6"]
-}, Open  ]]
+Cell[558, 20, 21165, 396, 638, "Input",ExpressionUUID->"b446332a-169d-488c-87fc-647d4d0ac2bc"]
 }
 ]
 *)
