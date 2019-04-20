@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11203,        257]
-NotebookOptionsPosition[     10888,        243]
-NotebookOutlinePosition[     11248,        259]
-CellTagsIndexPosition[     11205,        256]
+NotebookDataLength[     11842,        268]
+NotebookOptionsPosition[     11549,        255]
+NotebookOutlinePosition[     11887,        270]
+CellTagsIndexPosition[     11844,        267]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -155,15 +155,18 @@ Cell[BoxData[
                 RowBox[{
                  RowBox[{"{", 
                   RowBox[{
-                   RowBox[{"pix", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], ",", "SpanFromLeft"}], 
-                  "}"}], ",", 
+                   RowBox[{
+                   "pix", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "SpanFromLeft"}], "}"}], 
+                 ",", 
                  RowBox[{"{", 
                   RowBox[{
-                   RowBox[{"pix", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], ",", 
-                   RowBox[{"pix", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}]}], "}"}], ",", 
+                   RowBox[{
+                   "pix", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{
+                   "pix", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}]}], "}"}]}], "}"}], ",", 
                RowBox[{"Spacings", "\[Rule]", 
                 RowBox[{"{", 
                  RowBox[{"0", ",", "0"}], "}"}]}]}], "]"}], ",", 
@@ -173,9 +176,8 @@ Cell[BoxData[
          RowBox[{"{", 
           RowBox[{
            RowBox[{"h1", "\[Rule]", 
-            RowBox[{"data", "[", 
-             RowBox[{"[", 
-              RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+            RowBox[{"data", "\[LeftDoubleBracket]", 
+             RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ",", 
            RowBox[{"h2", "\[Rule]", "picNos"}]}], "}"}]}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{
@@ -185,25 +187,34 @@ as...\>\""}], ";", "\[IndentingNewLine]",
        RowBox[{"choices", "=", 
         RowBox[{
          RowBox[{
-          RowBox[{"#", "[", 
-           RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
-       "\[IndentingNewLine]", 
+          RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+           "&"}], "/@", "data"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
        "\[IndentingNewLine]", 
+       RowBox[{"mixTransit", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"Hold", "[", 
+            RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+           RowBox[{"h3", "\[Rule]", 
+            RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+         "mixed"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"ans", "=", 
         RowBox[{
          RowBox[{"Position", "[", 
           RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+           "choices", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+          RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "pic"}], "}"}], 
+         "]"}], "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Art10\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.7075613108476887`*^9, 3.70756165831688*^9}, {
@@ -237,14 +248,14 @@ as...\>\""}], ";", "\[IndentingNewLine]",
    3.7076638378633223`*^9, 3.707663845822287*^9}, {3.707663949831214*^9, 
    3.707663963374889*^9}, {3.707664067599497*^9, 3.70766408565442*^9}, {
    3.707664283606578*^9, 3.707664369413369*^9}, 3.707664512454812*^9, {
-   3.72530990592572*^9, 
-   3.7253099141724358`*^9}},ExpressionUUID->"1f85367a-8186-472d-b961-\
-49c77367e38a"]
+   3.72530990592572*^9, 3.7253099141724358`*^9}, {3.764748935777104*^9, 
+   3.764749023584024*^9}, {3.764749070680181*^9, 3.7647490801762867`*^9}},
+ CellLabel->
+  "In[1694]:=",ExpressionUUID->"3bb04dc0-c07e-41a2-beb2-fc7b8ced3c15"]
 },
 WindowSize->{1746, 1235},
 WindowMargins->{{5, Automatic}, {Automatic, 28}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -258,7 +269,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 10326, 221, 871, "Input",ExpressionUUID->"1f85367a-8186-472d-b961-49c77367e38a"]
+Cell[558, 20, 10987, 233, 892, "Input",ExpressionUUID->"3bb04dc0-c07e-41a2-beb2-fc7b8ced3c15"]
 }
 ]
 *)
