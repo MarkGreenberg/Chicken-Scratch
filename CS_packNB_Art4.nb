@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     31090,        649]
-NotebookOptionsPosition[     30780,        635]
-NotebookOutlinePosition[     31134,        651]
-CellTagsIndexPosition[     31091,        648]
+NotebookDataLength[     32004,        662]
+NotebookOptionsPosition[     31710,        649]
+NotebookOutlinePosition[     32048,        664]
+CellTagsIndexPosition[     32005,        661]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -72,10 +72,10 @@ Cell[BoxData[
            RowBox[{"RandomChoice", "[", 
             RowBox[{"{", 
              RowBox[{
-             ".7", ",", "1", ",", "1.4", ",", "2", ",", "2.8", ",", "4", ",", 
-              "5.6", ",", "8", ",", "11", ",", "16", ",", "22", ",", "32", 
-              ",", "45", ",", "64", ",", "90", ",", "128"}], "}"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
+             ".7", ",", "1.4", ",", "2", ",", "2.8", ",", "4", ",", "5.6", 
+              ",", "8", ",", "11", ",", "16", ",", "22", ",", "32", ",", "45",
+               ",", "64", ",", "90", ",", "128"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{
             RowBox[{"Hold", "[", 
@@ -118,10 +118,10 @@ aperture to what diameter?\>\"", ",", "h1", ",",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -257,7 +257,7 @@ aperture to what diameter?\>\"", ",", "h1", ",",
                RowBox[{"\"\<SeuratSundayAfternoon.jpg\>\"", "\[Rule]", 
                 RowBox[{"{", 
                  RowBox[{
-                 "\"\<A Sunday Afternoon on La Grande Jatte\>\"", ",", 
+                 "\"\<A Sunday Afternoon\\non La Grande Jatte\>\"", ",", 
                   "\"\<Georges Seurat\>\"", ",", "\"\<1884\>\""}], "}"}]}], 
                ",", "\[IndentingNewLine]", 
                RowBox[{"\"\<VanGoghStarryNight.jpg\>\"", "\[Rule]", 
@@ -390,26 +390,19 @@ aperture to what diameter?\>\"", ",", "h1", ",",
                   FractionBox["1", "24"]}], "}"}]}], "]"}]}], ";", 
              "\[IndentingNewLine]", 
              RowBox[{"pic", "=", 
-              RowBox[{
-               RowBox[{"Hold", "[", 
-                RowBox[{"Graphics", "[", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{
+                RowBox[{"Prepend", "[", 
                  RowBox[{
-                  RowBox[{"Prepend", "[", 
-                   RowBox[{
-                    RowBox[{"Riffle", "[", 
-                    RowBox[{"h1", ",", "h2"}], "]"}], ",", 
-                    RowBox[{"EdgeForm", "[", "Black", "]"}]}], "]"}], ",", 
-                  RowBox[{"ImageSize", "\[Rule]", 
-                   RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"UpTo", "[", "480", "]"}], ",", 
-                    RowBox[{"UpTo", "[", "540", "]"}]}], "}"}]}]}], "]"}], 
-                "]"}], "/.", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"h1", "\[Rule]", "plumeHues"}], ",", 
-                 RowBox[{"h2", "\[Rule]", "plumes"}]}], "}"}]}]}]}], ",", 
-            "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+                  RowBox[{"Riffle", "[", 
+                   RowBox[{"plumeHues", ",", "plumes"}], "]"}], ",", 
+                  RowBox[{"EdgeForm", "[", "Black", "]"}]}], "]"}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"UpTo", "[", "480", "]"}], ",", 
+                   RowBox[{"UpTo", "[", "540", "]"}]}], "}"}]}]}], "]"}]}]}], 
+            ",", "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
             RowBox[{
              RowBox[{"type", "=", "\"\<brightness\>\""}], ";", 
              "\[IndentingNewLine]", 
@@ -465,8 +458,9 @@ aperture to what diameter?\>\"", ",", "h1", ",",
                     RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "]"}]}], 
                     "\[IndentingNewLine]", "}"}], "]"}], ",", 
                     FractionBox[
-                    RowBox[{"tally", "[", 
-                    RowBox[{"[", "n", "]"}], "]"}], 
+                    RowBox[{
+                    "tally", "\[LeftDoubleBracket]", "n", 
+                    "\[RightDoubleBracket]"}], 
                     RowBox[{"Max", "[", "tally", "]"}]], ",", 
                     RowBox[{"{", 
                     RowBox[{"0", ",", "0"}], "}"}]}], "]"}], ",", 
@@ -489,25 +483,28 @@ aperture to what diameter?\>\"", ",", "h1", ",",
                   FractionBox["1", "24"]}], "}"}]}], "]"}]}], ";", 
              "\[IndentingNewLine]", 
              RowBox[{"pic", "=", 
-              RowBox[{
-               RowBox[{"Hold", "[", 
-                RowBox[{"Graphics", "[", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{
+                RowBox[{"Prepend", "[", 
                  RowBox[{
-                  RowBox[{"Prepend", "[", 
-                   RowBox[{
-                    RowBox[{"Riffle", "[", 
-                    RowBox[{"h1", ",", "h2"}], "]"}], ",", 
-                    RowBox[{"EdgeForm", "[", "Black", "]"}]}], "]"}], ",", 
-                  RowBox[{"ImageSize", "\[Rule]", 
-                   RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"UpTo", "[", "480", "]"}], ",", 
-                    RowBox[{"UpTo", "[", "540", "]"}]}], "}"}]}]}], "]"}], 
-                "]"}], "/.", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"h1", "\[Rule]", "plumeHues"}], ",", 
-                 RowBox[{"h2", "\[Rule]", "plumes"}]}], "}"}]}]}]}]}], "]"}], 
+                  RowBox[{"Riffle", "[", 
+                   RowBox[{"plumeHues", ",", "plumes"}], "]"}], ",", 
+                  RowBox[{"EdgeForm", "[", "Black", "]"}]}], "]"}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"UpTo", "[", "480", "]"}], ",", 
+                   RowBox[{"UpTo", "[", "540", "]"}]}], "}"}]}]}], 
+               "]"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"picTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h2", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
           ";", "\[IndentingNewLine]", 
           RowBox[{"(*", " ", 
            RowBox[{
@@ -542,19 +539,31 @@ aperture to what diameter?\>\"", ",", "h1", ",",
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
-           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "picTransit"}], 
+            "}"}], "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
    "\[IndentingNewLine]", "\"\<CS_pack_Art4\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6835535336871223`*^9, 3.683553535461897*^9}, {
@@ -629,14 +638,18 @@ aperture to what diameter?\>\"", ",", "h1", ",",
    3.738954175672268*^9}, {3.73895424457267*^9, 3.7389542468816023`*^9}, {
    3.738954499193119*^9, 3.7389545039266787`*^9}, {3.738954826583815*^9, 
    3.7389550141346416`*^9}, {3.738955456110262*^9, 3.7389554567073097`*^9}, {
-   3.738955692133349*^9, 3.738955768794899*^9}},
+   3.738955692133349*^9, 3.738955768794899*^9}, {3.764708451768614*^9, 
+   3.7647084684064083`*^9}, {3.764708507630227*^9, 3.764708540649411*^9}, {
+   3.7647087110854692`*^9, 3.7647087267098417`*^9}, {3.764708857612499*^9, 
+   3.7647089303321447`*^9}, {3.764709187294629*^9, 3.764709266844473*^9}, {
+   3.764709300810976*^9, 3.76470937883174*^9}, 3.7647095717619123`*^9, {
+   3.764709868305129*^9, 3.764709874054985*^9}},
  CellLabel->
-  "In[232]:=",ExpressionUUID->"3678a2a4-fc45-4222-bb56-e7565fc076a1"]
+  "In[1600]:=",ExpressionUUID->"3678a2a4-fc45-4222-bb56-e7565fc076a1"]
 },
-WindowSize->{1533, 1363},
-WindowMargins->{{3, Automatic}, {4, Automatic}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+WindowSize->{1533, 1210},
+WindowMargins->{{3, Automatic}, {Automatic, 28}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -650,7 +663,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 30218, 613, 1812, "Input",ExpressionUUID->"3678a2a4-fc45-4222-bb56-e7565fc076a1"]
+Cell[558, 20, 31148, 627, 1854, "Input",ExpressionUUID->"3678a2a4-fc45-4222-bb56-e7565fc076a1"]
 }
 ]
 *)
