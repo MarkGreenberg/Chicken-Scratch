@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8001,        192]
-NotebookOptionsPosition[      7685,        178]
-NotebookOutlinePosition[      8047,        194]
-CellTagsIndexPosition[      8004,        191]
+NotebookDataLength[      9638,        215]
+NotebookOptionsPosition[      9345,        202]
+NotebookOutlinePosition[      9684,        217]
+CellTagsIndexPosition[      9641,        214]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -63,7 +63,7 @@ Cell[BoxData[
              RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
              RowBox[{"Spacings", "\[Rule]", 
               RowBox[{"{", 
-               RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "120"}], 
+               RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "110"}], 
           "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"rad", "=", 
         RowBox[{"Quantity", "[", 
@@ -108,26 +108,30 @@ and a mass of `2`?\>\"", ",", "rad", ",", "mas"}], "]"}], ",", "3"}], "]"}]}],
            RowBox[{"m", "\[Rule]", "mas"}], ",", 
            RowBox[{"r", "\[Rule]", "rad"}]}], "}"}]}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Prepend", "[", 
+       RowBox[{"dis", "=", 
+        RowBox[{
          RowBox[{
+          RowBox[{"Quantity", "[", 
+           RowBox[{"#", ",", 
+            RowBox[{"\"\<Meters\>\"", "/", "\"\<Seconds\>\""}]}], "]"}], 
+          "&"}], "/@", 
+         RowBox[{"RandomReal", "[", 
           RowBox[{
-           RowBox[{
-            RowBox[{"Quantity", "[", 
-             RowBox[{"#", ",", 
-              RowBox[{"\"\<Meters\>\"", "/", "\"\<Seconds\>\""}]}], "]"}], 
-            "&"}], "/@", 
-           RowBox[{"RandomReal", "[", 
+           RowBox[{"{", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], "/", "2"}], 
-               ",", 
-               RowBox[{
-                RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], "*", 
-                "2"}]}], "}"}], ",", "3"}], "]"}]}], ",", "ansNo"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
+             RowBox[{"QuantityMagnitude", "[", 
+              RowBox[{".01", " ", "ansNo"}], "]"}], ",", 
+             RowBox[{"QuantityMagnitude", "[", 
+              RowBox[{"2", " ", "ansNo"}], "]"}]}], "}"}], ",", "3"}], 
+          "]"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"ToString", "[", 
+           RowBox[{"Round", "[", "#", "]"}], "]"}], "&"}], "/@", 
+         RowBox[{"Prepend", "[", 
+          RowBox[{"dis", ",", "ansNo"}], "]"}]}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -135,10 +139,11 @@ and a mass of `2`?\>\"", ",", "rad", ",", "mas"}], "]"}], ",", "3"}], "]"}]}],
         RowBox[{
          RowBox[{"Position", "[", 
           RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+           "choices", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
@@ -172,14 +177,32 @@ and a mass of `2`?\>\"", ",", "rad", ",", "mas"}], "]"}], ",", "3"}], "]"}]}],
    3.693765696148425*^9}, {3.6937657313833447`*^9, 3.693765813050013*^9}, {
    3.6937659116483173`*^9, 3.6937659465442*^9}, {3.6937661165392933`*^9, 
    3.693766144254985*^9}, {3.7156227760186377`*^9, 3.7156227765130463`*^9}, {
-   3.715622829795089*^9, 
-   3.71562283039322*^9}},ExpressionUUID->"3215b0cf-c5e2-49e9-8ef1-\
-b9a5e1f3973a"]
+   3.715622829795089*^9, 3.71562283039322*^9}, {3.764836972763557*^9, 
+   3.7648369870829287`*^9}, {3.764837024868587*^9, 3.764837048002824*^9}, {
+   3.7648370929568453`*^9, 3.764837117130876*^9}, {3.7648371521485157`*^9, 
+   3.764837152618752*^9}, 3.764837193596291*^9, 3.764837237372164*^9, {
+   3.764837290081943*^9, 3.764837302309373*^9}, {3.764837350901202*^9, 
+   3.7648373813875513`*^9}, {3.7648374495738173`*^9, 3.764837462660535*^9}, {
+   3.764837542902215*^9, 3.7648375502050247`*^9}, {3.764837585076436*^9, 
+   3.764837653286618*^9}, {3.764837739413818*^9, 3.76483774860426*^9}, {
+   3.764837781997879*^9, 3.764837788452052*^9}, {3.764837942980888*^9, 
+   3.764837975204232*^9}, {3.764838049307817*^9, 3.764838159195284*^9}, {
+   3.764838223083456*^9, 3.7648382660110083`*^9}, {3.764838301139279*^9, 
+   3.764838302699379*^9}, {3.764838424760807*^9, 3.7648384641537647`*^9}, {
+   3.764838619859466*^9, 3.76483864386579*^9}, {3.764838704411315*^9, 
+   3.764838761257419*^9}, {3.7648389810054007`*^9, 3.764838994193084*^9}, {
+   3.7648390295544243`*^9, 3.764839033545279*^9}, {3.76483909715326*^9, 
+   3.7648392029767437`*^9}, {3.76483927969039*^9, 3.76483929462508*^9}, {
+   3.764839392770643*^9, 3.764839415193206*^9}, {3.76483945497182*^9, 
+   3.764839469473126*^9}, {3.7648401132494707`*^9, 3.7648401381441097`*^9}, {
+   3.764840191634663*^9, 3.7648402225931673`*^9}, {3.764840357058563*^9, 
+   3.764840396057097*^9}, {3.7648404319947233`*^9, 3.764840434920752*^9}},
+ CellLabel->
+  "In[3530]:=",ExpressionUUID->"3215b0cf-c5e2-49e9-8ef1-b9a5e1f3973a"]
 },
-WindowSize->{1174, 1056},
-WindowMargins->{{13, Automatic}, {111, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1832, 1242},
+WindowMargins->{{13, Automatic}, {Automatic, 42}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -193,7 +216,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7123, 156, 499, "Input",ExpressionUUID->"3215b0cf-c5e2-49e9-8ef1-b9a5e1f3973a"]
+Cell[558, 20, 8783, 180, 422, "Input",ExpressionUUID->"3215b0cf-c5e2-49e9-8ef1-b9a5e1f3973a"]
 }
 ]
 *)
