@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14561,        302]
-NotebookOptionsPosition[     14245,        288]
-NotebookOutlinePosition[     14606,        304]
-CellTagsIndexPosition[     14563,        301]
+NotebookDataLength[     26821,        493]
+NotebookOptionsPosition[     26304,        476]
+NotebookOutlinePosition[     26641,        491]
+CellTagsIndexPosition[     26598,        488]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,223 +26,272 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"RandomSample", "[", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"<|", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["48", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["11120", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "Silent Spring" -> {"Rachel Carson", 1962}, 
+               "Mein Kampf" -> {"Adolf Hitler", 1926}, 
+               "The Double Helix" -> {"James D. Watson", 1968}, 
+               "The General Theory of Employment, Interest and Money" -> {
+                "John Maynard Keynes", 1936}, 
+               "How to Win Frinds and Influence People" -> {
+                "Dale Carnegie", 1936}, 
+               "The Communist Manifesto" -> {
+                "Karl Marx and Frederick Engels", 1848}, 
+               "Black Boy" -> {"Richard Wright", 1945}, 
+               "Three Cups of Tea" -> {"Greg Mortenson", 2007}, 
+               "Bury My Heart at Wounded Knee" -> {"Dee Brown", 1970}, 
+               "Capitalism and Freedom" -> {"Milton Friedman", 1962}, 
+               "The Feminine Mystique" -> {"Betty Friedan", 1963}, 
+               "The God Delusion" -> {"Richard Dawkins", 2006}, 
+               "Eats, Shoots & Leaves" -> {"Lynne Truss", 2003}, 
+               "Confessions" -> {"Jean-Jacques Rousseau", 1789}, 
+               "The Elements of Style" -> {"William Strunk Jr.", 1918}, 
+               "In Cold Blood" -> {"Truman Capote", 1965}, 
+               "I Know Why the Caged Bird Sings" -> {"Maya Angelou", 1969}, 
+               "Fast Food Nation" -> {"Eric Schlosser", 2001}, 
+               "Maus: A Survivor's Tale" -> {"Art Spiegelman", 1986}, 
+               "The Art of War" -> {"Niccol\[OGrave] Machiavelli", 1521}, 
+               "A Room of One's Own" -> {"Virginia Woolf", 1928}, 
+               "A Brief History of Time" -> {"Stephen Hawking", 1987}, 
+               "All the President's Men" -> {"Carl Bernstein", 1974}, 
+               "The Selfish Gene" -> {"Richard Dawkins", 1976}, 
+               "A Moveable Feast" -> {"Ernest Hemingway", 1964}, 
+               "The Electric Kool-Aid Acid Test" -> {"Tom Wolf", 1968}, 
+               "Mastering the Art of French Cooking" -> {"Julia Child", 1961},
+                "The Executioner's Song" -> {"Norman Mailer", 1979}, 
+               "The Naked Ape" -> {"Desmond Morris", 1967}, 
+               "Notes of a Native Son" -> {"James Baldwin", 1955}, 
+               "The Autobiography of Alice B. Toklas" -> {
+                "Gertrude Stein", 1933}, 
+               "Why We Can't Wait" -> {"Martin Luther King Jr.", 1963}, 
+               "The Conscience of a Conservative" -> {
+                "Barry M. Goldwater", 1960}, 
+               "How to Cook a Wolf" -> {"M.F.K. Fisher", 1942}, 
+               "Sexual Behavior in the Human Male" -> {
+                "Alfred C. Kinsey", 1948}, 
+               "Living to Tell the Tale" -> {
+                "Gabriel Garc\[IAcute]a M\[AAcute]rquez", 2002}, 
+               "The Ancestor's Tale" -> {"Richard Dawkins", 2004}, 
+               "Gray's Anatomy" -> {"Peter L. Williams and Henry Gray", 1858},
+                "The Print" -> {"Ansel Adams and Robert Hardy Baker", 1968}, 
+               "The Negative" -> {"Ansel Adams and Robert Hardy Baker", 1948},
+                "Homage to Catalonia" -> {"George Orwell", 1938}, 
+               "The History of the Decline and Fall of the Roman Empire" -> {
+                "Edward Gibbon", 1776}, 
+               "Unbroken" -> {"Laura Hillenbrand", 2010}, 
+               "Don't Bother Me Mom \[LongDash] I'm Learning" -> {
+                "Marc Prensky", 2006}, 
+               "The Connected Family" -> {"Seymour Papert", 1962}, 
+               "Topics in the Theory of Generative Grammar" -> {
+                "Noam Chomsky", 1966}, 
+               "On the Origin of Species" -> {"Charles Darwin", 1859}, 
+               "The Prince" -> {"Niccol\[OGrave] Machiavelli", 1532}],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
            RowBox[{
-            RowBox[{"\"\<Silent Spring\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Rachel Carson\>\"", ",", "1962"}], "}"}]}], ",", 
-            RowBox[{"\"\<Mein Kampf\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Adolf Hitler\>\"", ",", "1926"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Double Helix\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<James D. Watson\>\"", ",", "1968"}], "}"}]}], ",", 
-            
             RowBox[{
-            "\"\<The General Theory of Employment, Interest and Money\>\"", 
-             "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<John Maynard Keynes\>\"", ",", "1936"}], "}"}]}], 
-            ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", 
+            RowBox[{"Keys", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
             RowBox[{
-            "\"\<How to Win Frinds and Influence People\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Dale Carnegie\>\"", ",", "1936"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Communist Manifesto\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Karl Marx and Frederick Engels\>\"", ",", "1848"}],
-               "}"}]}], ",", 
-            RowBox[{"\"\<Black Boy\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Richard Wright\>\"", ",", "1945"}], "}"}]}], ",", 
-            RowBox[{"\"\<Three Cups of Tea\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Greg Mortenson\>\"", ",", "2007"}], "}"}]}], ",", 
-            RowBox[{"\"\<Bury My Heart at Wounded Knee\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Dee Brown\>\"", ",", "1970"}], "}"}]}], ",", 
-            RowBox[{"\"\<Capitalism and Freedom\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Milton Friedman\>\"", ",", "1962"}], "}"}]}], ",", 
-            
-            RowBox[{"\"\<The Feminine Mystique\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Betty Friedan\>\"", ",", "1963"}], "}"}]}], ",", 
-            RowBox[{"\"\<The God Delusion\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Richard Dawkins\>\"", ",", "2006"}], "}"}]}], ",", 
-            
-            RowBox[{"\"\<Eats, Shoots & Leaves\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Lynne Truss\>\"", ",", "2003"}], "}"}]}], ",", 
-            RowBox[{"\"\<Confessions\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Jean-Jacques Rousseau\>\"", ",", "1789"}], "}"}]}],
-             ",", 
-            RowBox[{"\"\<The Elements of Style\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<William Strunk Jr.\>\"", ",", "1918"}], "}"}]}], 
-            ",", 
-            RowBox[{"\"\<In Cold Blood\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Truman Capote\>\"", ",", "1965"}], "}"}]}], ",", 
-            RowBox[{"\"\<I Know Why the Caged Bird Sings\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Maya Angelou\>\"", ",", "1969"}], "}"}]}], ",", 
-            RowBox[{"\"\<Fast Food Nation\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Eric Schlosser\>\"", ",", "2001"}], "}"}]}], ",", 
-            RowBox[{"\"\<Maus: A Survivor's Tale\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Art Spiegelman\>\"", ",", "1986"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Art of War\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Niccol\[OGrave] Machiavelli\>\"", ",", "1521"}], 
-              "}"}]}], ",", 
-            RowBox[{"\"\<A Room of One's Own\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Virginia Woolf\>\"", ",", "1928"}], "}"}]}], ",", 
-            RowBox[{"\"\<A Brief History of Time\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Stephen Hawking\>\"", ",", "1987"}], "}"}]}], ",", 
-            
-            RowBox[{"\"\<All the President's Men\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Carl Bernstein\>\"", ",", "1974"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Selfish Gene\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Richard Dawkins\>\"", ",", "1976"}], "}"}]}], ",", 
-            
-            RowBox[{"\"\<A Moveable Feast\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Ernest Hemingway\>\"", ",", "1964"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Electric Kool-Aid Acid Test\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Tom Wolf\>\"", ",", "1968"}], "}"}]}], ",", 
-            RowBox[{
-            "\"\<Mastering the Art of French Cooking\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Julia Child\>\"", ",", "1961"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Executioner's Song\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Norman Mailer\>\"", ",", "1979"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Naked Ape\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Desmond Morris\>\"", ",", "1967"}], "}"}]}], ",", 
-            RowBox[{"\"\<Notes of a Native Son\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<James Baldwin\>\"", ",", "1955"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Autobiography of Alice B. Toklas\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Gertrude Stein\>\"", ",", "1933"}], "}"}]}], ",", 
-            RowBox[{"\"\<Why We Can't Wait\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Martin Luther King Jr.\>\"", ",", "1963"}], 
-              "}"}]}], ",", 
-            RowBox[{"\"\<The Conscience of a Conservative\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Barry M. Goldwater\>\"", ",", "1960"}], "}"}]}], 
-            ",", 
-            RowBox[{"\"\<How to Cook a Wolf\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<M.F.K. Fisher\>\"", ",", "1942"}], "}"}]}], ",", 
-            RowBox[{"\"\<Sexual Behavior in the Human Male\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Alfred C. Kinsey\>\"", ",", "1948"}], "}"}]}], ",", 
-            RowBox[{"\"\<Living to Tell the Tale\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Gabriel Garc\[IAcute]a M\[AAcute]rquez\>\"", ",", "2002"}],
-               "}"}]}], ",", 
-            RowBox[{"\"\<The Ancestor's Tale\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Richard Dawkins\>\"", ",", "2004"}], "}"}]}], ",", 
-            
-            RowBox[{"\"\<Gray's Anatomy\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Peter L. Williams and Henry Gray\>\"", ",", "1858"}], 
-              "}"}]}], ",", 
-            RowBox[{"\"\<The Print\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Ansel Adams and Robert Hardy Baker\>\"", ",", "1968"}], 
-              "}"}]}], ",", 
-            RowBox[{"\"\<The Negative\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Ansel Adams and Robert Hardy Baker\>\"", ",", "1948"}], 
-              "}"}]}], ",", 
-            RowBox[{"\"\<Homage to Catalonia\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<George Orwell\>\"", ",", "1938"}], "}"}]}], ",", 
-            RowBox[{
-            "\"\<The History of the Decline and Fall of the Roman Empire\>\"",
-              "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Edward Gibbon\>\"", ",", "1776"}], "}"}]}], ",", 
-            RowBox[{"\"\<Unbroken\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Laura Hillenbrand\>\"", ",", "2010"}], "}"}]}], 
-            ",", 
-            RowBox[{
-            "\"\<Don't Bother Me Mom \[LongDash] I'm Learning\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Marc Prensky\>\"", ",", "2006"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Connected Family\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Seymour Papert\>\"", ",", "1962"}], "}"}]}], ",", 
-            RowBox[{
-            "\"\<Topics in the Theory of Generative Grammar\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Noam Chomsky\>\"", ",", "1966"}], "}"}]}], ",", 
-            RowBox[{"\"\<On the Origin of Species\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Charles Darwin\>\"", ",", "1859"}], "}"}]}], ",", 
-            RowBox[{"\"\<The Prince\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Niccol\[OGrave] Machiavelli\>\"", ",", "1532"}], 
-              "}"}]}]}], "|>"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Style", "[", 
-           RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", 
-         RowBox[{"Keys", "[", "data", "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<Which of these nonfiction books was written by `1` and \
+            "\"\<Which of these nonfiction books was written by `1` and \
 published in `2`?\>\"", ",", 
-          RowBox[{
-           RowBox[{"Values", "[", "data", "]"}], "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
-          RowBox[{
-           RowBox[{"Values", "[", "data", "]"}], "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lite9\>\"", ",", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+              RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+              RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"Association","AssociationIcon",GridBox[{{
+                   RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["86", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["12480", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             Association[
+             "The Aeneid" -> "Latin", "The Alchemist" -> "Portuguese", 
+              "All Quiet on the Western Front" -> "German", "The Art of War" -> 
+              "Chinese", "The Beatitudes" -> "Aramaic", "Beowulf" -> 
+              "Anglo-Saxon", "Book of the Dead" -> "Hieroglyphic", "Candide" -> 
+              "French", "Children of the Sun" -> "Russian", 
+              "Code of Hammurabi" -> "Akkadian", 
+              "Commentary on the Civil War" -> "Latin", 
+              "The Count of Monte Cristo" -> "French", "Crime and Punishment" -> 
+              "Russian", "The Communist Manifesto" -> "German", 
+              "The Decameron" -> "Italian", "Deuteronomy" -> "Hebrew", 
+              "Dialogue Concerning the Two Chief World Systems" -> "Italian", 
+              "The Diary of Anne Frank" -> "Dutch", "The Divine Comedy" -> 
+              "Italian", "A Doll's House" -> "Norwegian", "Don Quixote" -> 
+              "Spanish", "The Double Helix" -> "English", "Dracula" -> 
+              "English", "The Elements" -> "Greek", "The Eloquent Peasant" -> 
+              "Hieroglyphics", "An Enemy of the People" -> "Norwegian", 
+              "The Eternal Husband" -> "Russian", "Faust" -> "German", 
+              "General Morphology of Organisms" -> "German", "Gilgamesh" -> 
+              "Sumerian", "The Girl with the Dragon Tattoo" -> "Swedish", 
+              "Gitanjali" -> "Benjali", "The Golden Legend" -> "Latin", 
+              "Grimm's Fairy Tales" -> "German", "The Gulag Archipelago" -> 
+              "Russian", "The Hunchback of Notre-Dame" -> "French", 
+              "I am a Cat" -> "Japanese", "The Iliad" -> "Greek", 
+              "Invisible Cities" -> "Italian", "Life is a Dream" -> "Spanish",
+               "Like Water for Chocolate" -> "Spanish", "The Little Prince" -> 
+              "French", "Love in the Time of Cholera" -> "Spanish", 
+              "Mah\[ABar]bh\[ABar]rata" -> "Sanskrit", "A Man Called Ove" -> 
+              "Swedish", "The Master and Margarita" -> "Russian", 
+              "Mathematical Principles of Natural Philosophy" -> "Latin", 
+              "Metamorphoses" -> "Latin", "The Metamorphosis" -> "German", 
+              "Micrographia" -> "English", "A Modest Proposal" -> "English", 
+              "Le Morte d'Arthur" -> "English", "My Name is Red" -> "Turkish",
+               "The Name of the Rose" -> "Italian", "Night" -> "Yiddish", 
+              "The Ninety-Five Theses" -> "Latin", "Norwegian Wood" -> 
+              "Japanese", "The Odyssey" -> "Greek", "Oedipus Rex" -> "Greek", 
+              "One Hundred Years of Solitude" -> "Spanish", 
+              "One Thousand and One Nights" -> "Arabic", 
+              "On the Fabric of the Human Body" -> "Latin", 
+              "On the Nature of Things" -> "Latin", "On the Soul" -> "Greek", 
+              "The Phantom of the Opera" -> "French", "The Pillow Book" -> 
+              "Japanese", "The Prince" -> "Italian", "Ramayana" -> "Sanskrit",
+               "Relativity: The Special and the General Theory" -> "German", 
+              "The School for Wives" -> "French", "The Shadow of the Wind" -> 
+              "Spanish", "Sh\:014dgun" -> "English", "Siddhartha" -> "German",
+               "Sir Gawain and the Green Knight" -> "English", 
+              "Slaughterhouse-Five" -> "English", "Sophie's World" -> 
+              "Norwegian", "The Stranger" -> "French", 
+              "The Tale of the Unknown Island" -> "Portuguese", 
+              "Tevye the Milkman" -> "Yiddish", "The Three Musketeers" -> 
+              "French", "The Trial" -> "German", "War and Peace" -> "Russian",
+               "The Wild Geese" -> "Japanese", "A Wild Sheep Chase" -> 
+              "Japanese", "The Wind-Up Bird Chronicle" -> "Japanese", 
+              "The World as Will and Representation" -> "German"],
+             SelectWithContents->True,
+             Selectable->False], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dat4", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{"data", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"title", "=", 
+           RowBox[{
+            RowBox[{"Keys", "[", "dat4", "]"}], "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ansStr", "=", 
+           RowBox[{
+            RowBox[{"Values", "[", "dat4", "]"}], "\[LeftDoubleBracket]", "1",
+             "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<`1` was originally written in which of these languages?\>\"",
+              ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"title", ",", "Italic"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"Take", "[", 
+              RowBox[{
+               RowBox[{"DeleteCases", "[", 
+                RowBox[{
+                 RowBox[{"DeleteDuplicates", "[", 
+                  RowBox[{"Values", "[", "data", "]"}], "]"}], ",", 
+                 "ansStr"}], "]"}], ",", "3"}], "]"}], ",", "ansStr"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
+        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lite9\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.694879000790038*^9, 3.6948790196878843`*^9}, {
    3.694879128160941*^9, 3.694879147043285*^9}, {3.694879205847579*^9, 
@@ -282,14 +331,152 @@ published in `2`?\>\"", ",",
    3.7118898565689087`*^9}, {3.711889927057885*^9, 3.711889928328549*^9}, {
    3.711889992265848*^9, 3.711890025056946*^9}, {3.711890174473374*^9, 
    3.711890174936406*^9}, {3.7118902411210814`*^9, 3.711890264560266*^9}, 
-   3.711890296013348*^9, {3.7118903329529953`*^9, 
-   3.711890365144223*^9}},ExpressionUUID->"04a16951-1fb9-4893-80fd-\
-db48a9b8f06f"]
+   3.711890296013348*^9, {3.7118903329529953`*^9, 3.711890365144223*^9}, {
+   3.765223382071672*^9, 3.7652234388698874`*^9}, {3.765223474210437*^9, 
+   3.7652234911253643`*^9}, {3.7652238143240232`*^9, 
+   3.7652238649707413`*^9}, {3.765223895747299*^9, 3.7652240570683002`*^9}, {
+   3.765224141290649*^9, 3.7652241632736464`*^9}, {3.765224226978299*^9, 
+   3.765224303105719*^9}, {3.7652244006971607`*^9, 3.765224419945196*^9}, {
+   3.765224465969049*^9, 3.765224504833519*^9}, {3.765224621137033*^9, 
+   3.765224643912587*^9}, {3.765224948263612*^9, 3.765224980047543*^9}, {
+   3.765225054615532*^9, 3.765225070847273*^9}, {3.765225112031204*^9, 
+   3.765225129231159*^9}, {3.765225162407051*^9, 3.765225181270995*^9}, {
+   3.7652252255910473`*^9, 3.765225252774819*^9}, {3.765225351543042*^9, 
+   3.765225369598537*^9}, {3.7652256000982656`*^9, 3.765225612186352*^9}, {
+   3.76522573806616*^9, 3.7652257527943563`*^9}, {3.765225816442322*^9, 
+   3.7652258339620953`*^9}, {3.765225955138249*^9, 3.765225972530011*^9}, {
+   3.76522607696172*^9, 3.7652260981538897`*^9}, {3.7652261568094473`*^9, 
+   3.76522619049759*^9}, {3.765226264785515*^9, 3.765226319401473*^9}, {
+   3.765226369897531*^9, 3.7652263838815193`*^9}, {3.765226423689227*^9, 
+   3.765226434803067*^9}, {3.7652266456892147`*^9, 3.765226680833037*^9}, {
+   3.765226935040822*^9, 3.765226949128443*^9}, {3.765227100448361*^9, 
+   3.765227134512822*^9}, {3.765227343473895*^9, 3.765227355242474*^9}, {
+   3.765227543657954*^9, 3.765227573498281*^9}, {3.765227668994906*^9, 
+   3.7652276830660667`*^9}, {3.7652277520218363`*^9, 3.765227791897874*^9}, {
+   3.76522790518589*^9, 3.76522790801024*^9}, {3.765227995619544*^9, 
+   3.765228028450582*^9}, 3.765228064266308*^9, {3.765228174633815*^9, 
+   3.7652282762578773`*^9}, {3.765228576113356*^9, 3.765228594553403*^9}, {
+   3.765228640457322*^9, 3.7652286570733757`*^9}, {3.765228691649126*^9, 
+   3.765228704697541*^9}, {3.765228929809104*^9, 3.76522894413727*^9}, {
+   3.765228983913136*^9, 3.7652290017052517`*^9}, {3.765229072881501*^9, 
+   3.76522908898531*^9}, {3.7652291420249863`*^9, 3.7652291569690647`*^9}, {
+   3.765229277926386*^9, 3.765229295629366*^9}, {3.765229362412817*^9, 
+   3.765229375740877*^9}, {3.76522974272197*^9, 3.765229764163883*^9}, {
+   3.7652298348434772`*^9, 3.76522985689959*^9}, {3.7652302824587507`*^9, 
+   3.76523030278651*^9}, {3.765230476562024*^9, 3.765230492786149*^9}, {
+   3.765230567273966*^9, 3.7652305785140667`*^9}, {3.765230613698049*^9, 
+   3.765230627649913*^9}, {3.765230714929789*^9, 3.76523073364977*^9}, {
+   3.765230766233244*^9, 3.765230796793808*^9}, {3.765230855993372*^9, 
+   3.765230871705394*^9}, {3.765231036608859*^9, 3.765231058120899*^9}, {
+   3.765231115840942*^9, 3.765231134976913*^9}, {3.765231289307022*^9, 
+   3.765231315016591*^9}, {3.7652313496562223`*^9, 3.765231458744657*^9}, {
+   3.765231609744255*^9, 3.765231637856042*^9}, {3.765231692527915*^9, 
+   3.7652317209439983`*^9}, {3.765231804535726*^9, 3.765231827871707*^9}, {
+   3.765231882063327*^9, 3.76523189659153*^9}, {3.765231986167171*^9, 
+   3.765232003919262*^9}, {3.765232073055229*^9, 3.765232092814893*^9}, {
+   3.765232201502651*^9, 3.7652322120867023`*^9}, {3.765232289598922*^9, 
+   3.765232308742519*^9}, {3.765232369327289*^9, 3.765232408662632*^9}, {
+   3.765232487510346*^9, 3.7652325045181303`*^9}, {3.76523256178183*^9, 
+   3.765232576182013*^9}, {3.7652326342303877`*^9, 3.7652326603981752`*^9}, {
+   3.765232767477871*^9, 3.765232774982211*^9}, {3.7652329104128857`*^9, 
+   3.7652329183815117`*^9}, {3.7652329595331507`*^9, 
+   3.7652330319892197`*^9}, {3.7652330853187323`*^9, 3.765233086128697*^9}, {
+   3.765233120596735*^9, 3.765233134996726*^9}, {3.765276567528483*^9, 
+   3.7652765823604803`*^9}, {3.765276741256322*^9, 3.7652767661837873`*^9}, {
+   3.765278903534257*^9, 3.765278916958269*^9}, {3.765279194285564*^9, 
+   3.765279209229725*^9}, {3.765279459893304*^9, 3.7652794801255617`*^9}, {
+   3.765279773197339*^9, 3.765279814948862*^9}, {3.76527989458856*^9, 
+   3.7652799190363407`*^9}, {3.765280019975589*^9, 3.7652800232839603`*^9}, {
+   3.765287877405312*^9, 3.765287901301606*^9}, {3.765288366934527*^9, 
+   3.765288397007185*^9}, {3.765288514134618*^9, 3.7652885273670177`*^9}, {
+   3.765288601426551*^9, 3.765288605175355*^9}, {3.765288777118443*^9, 
+   3.765288804390005*^9}, {3.765289147436935*^9, 3.765289160877071*^9}, {
+   3.765289200925043*^9, 3.765289265357004*^9}, {3.765289556548723*^9, 
+   3.7652895739082327`*^9}, {3.765289703348413*^9, 3.765289718771802*^9}, {
+   3.765289775579671*^9, 3.765289794411791*^9}, {3.765290197072283*^9, 
+   3.765290296695825*^9}, {3.7652903527909527`*^9, 3.765290434135366*^9}, {
+   3.7652904873280077`*^9, 3.7652905120150127`*^9}, {3.765290542238428*^9, 
+   3.765290618302882*^9}, 3.7652907196722403`*^9, {3.765290890764781*^9, 
+   3.765290935340232*^9}},
+ CellLabel->
+  "In[1131]:=",ExpressionUUID->"04a16951-1fb9-4893-80fd-db48a9b8f06f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Style", "[", 
+  RowBox[{
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<\>\"", ",", "\"\<Question\\nw/ Media\>\"", ",", 
+         "\"\<Choices\>\"", ",", "\"\<Question\\n& Choices\>\""}], "}"}], ",",
+        "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Question A\>\"", ",", "48", ",", "16215", ",", "194580"}], "}"}],
+        ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Question B\>\"", ",", "86", ",", "98770", ",", "2123555"}], 
+        "}"}]}], "\[IndentingNewLine]", "}"}], ",", 
+     RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", "3"}], ",", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{".95", ",", ".97", ",", "1"}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", "18"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.765047774885695*^9, 3.7650480017398233`*^9}, {
+   3.765048068004753*^9, 3.765048160699986*^9}, {3.76504824157297*^9, 
+   3.765048246635826*^9}, {3.765048281348681*^9, 3.765048411430237*^9}, {
+   3.765048664539953*^9, 3.765048731826683*^9}, {3.765048829291437*^9, 
+   3.765048830298524*^9}, {3.765049942848925*^9, 3.7650499781130877`*^9}, {
+   3.765050011721107*^9, 3.765050084687426*^9}, {3.765050242752836*^9, 
+   3.76505026608743*^9}, {3.765050341327939*^9, 3.765050376887068*^9}, {
+   3.765050619183818*^9, 3.765050620990712*^9}, {3.765050913302515*^9, 
+   3.7650509165257263`*^9}, {3.765051004358719*^9, 3.765051005753439*^9}, {
+   3.765051045895135*^9, 3.7650510871256933`*^9}, {3.765051146053542*^9, 
+   3.765051152509293*^9}, {3.765051192550434*^9, 3.765051205453615*^9}, 
+   3.765051241334826*^9, {3.7652235112928953`*^9, 3.765223517403764*^9}, {
+   3.765223566795802*^9, 3.7652236135946302`*^9}, {3.765223697738771*^9, 
+   3.76522372609807*^9}, {3.76529074433946*^9, 3.76529080291415*^9}},
+ CellLabel->
+  "In[1130]:=",ExpressionUUID->"49953039-7f03-48e6-a1f9-f2c230c56256"],
+
+Cell[BoxData[
+ StyleBox[
+  TagBox[GridBox[{
+     {"\<\"\"\>", "\<\"Question\\nw/ Media\"\>", "\<\"Choices\"\>", \
+"\<\"Question\\n& Choices\"\>"},
+     {"\<\"Question A\"\>", "48", "16215", "194580"},
+     {"\<\"Question B\"\>", "86", "98770", "2123555"}
+    },
+    AutoDelete->False,
+    GridBoxBackground->{"Columns" -> {{
+         RGBColor[0.95, 0.97, 1]}}},
+    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+    GridBoxSpacings->{"Columns" -> {{3}}}],
+   "Grid"],
+  StripOnInput->False,
+  FontFamily->"Times New Roman",
+  FontSize->18]], "Output",
+ CellChangeTimes->{
+  3.765050917004394*^9, 3.765051010401897*^9, {3.765051050178103*^9, 
+   3.7650510641476603`*^9}, 3.765051153851306*^9, 3.765051206847802*^9, 
+   3.765051243008338*^9, 3.7652235239244823`*^9, 3.765223620300165*^9, 
+   3.765223736210309*^9, 3.765290823476274*^9},
+ CellLabel->
+  "Out[1130]=",ExpressionUUID->"01994900-2695-46d7-9abf-62f310460a63"]
+}, {2}]]
 },
-WindowSize->{1192, 1071},
-WindowMargins->{{1, Automatic}, {141, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1192, 1305},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -303,7 +490,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 13683, 266, 724, "Input",ExpressionUUID->"04a16951-1fb9-4893-80fd-db48a9b8f06f"]
+Cell[558, 20, 22584, 381, 553, "Input",ExpressionUUID->"04a16951-1fb9-4893-80fd-db48a9b8f06f"],
+Cell[CellGroupData[{
+Cell[23167, 405, 2114, 42, 115, "Input",ExpressionUUID->"49953039-7f03-48e6-a1f9-f2c230c56256"],
+Cell[25284, 449, 1007, 24, 126, "Output",ExpressionUUID->"01994900-2695-46d7-9abf-62f310460a63"]
+}, {2}]]
 }
 ]
 *)
