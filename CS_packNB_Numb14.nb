@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25104,        507]
-NotebookOptionsPosition[     24680,        491]
-NotebookOutlinePosition[     25018,        506]
-CellTagsIndexPosition[     24975,        503]
+NotebookDataLength[     24303,        489]
+NotebookOptionsPosition[     24009,        476]
+NotebookOutlinePosition[     24347,        491]
+CellTagsIndexPosition[     24304,        488]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -32,7 +30,7 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "1"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
          "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"nos", "=", 
@@ -99,9 +97,20 @@ Cell[BoxData[
              RowBox[{"FromContinuedFraction", "[", "#", "]"}], "&"}], "/@", 
             "nos"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
-           RowBox[{"Hold", "[", 
-            RowBox[{"RandomSample", "[", "choices", "]"}], "]"}]}], ";", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
@@ -117,7 +126,7 @@ Cell[BoxData[
 shown here?\>\""}], ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "pic"}], "}"}], 
            "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
@@ -459,35 +468,11 @@ shown here?\>\""}], ";", "\[IndentingNewLine]",
    3.7645229675902843`*^9, 3.764523033707302*^9}, 3.764523100789949*^9, {
    3.7645231436527033`*^9, 3.76452314943645*^9}, {3.764523231381728*^9, 
    3.764523232556344*^9}, {3.76452329125352*^9, 3.764523298931826*^9}, 
-   3.764523372982059*^9},
+   3.764523372982059*^9, {3.765475913695846*^9, 3.765475981116232*^9}, {
+   3.7654760142544537`*^9, 3.7654760515969467`*^9}, {3.765476088028673*^9, 
+   3.7654762793329763`*^9}},
  CellLabel->
-  "In[2951]:=",ExpressionUUID->"aa74e785-a9c5-47d7-8415-1f843064526a"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb14\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb14"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb14"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{{3.764519546641391*^9, 3.764519593958041*^9}, 
-   3.764519677626936*^9, 3.764519756526558*^9, 3.764519886125029*^9, 
-   3.764520194521392*^9, {3.764520303924513*^9, 3.7645203152845373`*^9}, 
-   3.764520386820443*^9, 3.7645204205075073`*^9, 3.764520455344993*^9, 
-   3.7645207917650623`*^9, 3.764520863556655*^9, 3.764520941726264*^9, 
-   3.764521026286984*^9, {3.764521066158697*^9, 3.764521081685226*^9}, 
-   3.764521122246361*^9, 3.7645211660763083`*^9, 3.764521347378641*^9, 
-   3.7645214117563667`*^9, 3.764521785558282*^9, 3.7645218812944317`*^9, 
-   3.7645220223578997`*^9, 3.7645221653294773`*^9, {3.764522213556202*^9, 
-   3.764522263682828*^9}, 3.764523041786627*^9, 3.764523102263208*^9, {
-   3.764523209053542*^9, 3.764523234294128*^9}, 3.764523308962729*^9, 
-   3.764523376744853*^9},
- CellLabel->
-  "Out[2951]=",ExpressionUUID->"2bc52524-daf7-4380-86f9-a1575b15ff2d"]
-}, Open  ]]
+  "In[1850]:=",ExpressionUUID->"aa74e785-a9c5-47d7-8415-1f843064526a"]
 },
 WindowSize->{1494, 1395},
 WindowMargins->{{10, Automatic}, {Automatic, 0}},
@@ -505,10 +490,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 22793, 441, 1387, "Input",ExpressionUUID->"aa74e785-a9c5-47d7-8415-1f843064526a"],
-Cell[23376, 465, 1288, 23, 37, "Output",ExpressionUUID->"2bc52524-daf7-4380-86f9-a1575b15ff2d"]
-}, Open  ]]
+Cell[558, 20, 23447, 454, 1408, "Input",ExpressionUUID->"aa74e785-a9c5-47d7-8415-1f843064526a"]
 }
 ]
 *)
