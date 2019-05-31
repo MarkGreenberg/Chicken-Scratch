@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     46864,        821]
-NotebookOptionsPosition[     46478,        807]
-NotebookOutlinePosition[     46815,        822]
-CellTagsIndexPosition[     46772,        819]
+NotebookDataLength[     47267,        826]
+NotebookOptionsPosition[     46975,        813]
+NotebookOutlinePosition[     47312,        828]
+CellTagsIndexPosition[     47269,        825]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -43,7 +43,6 @@ Cell[BoxData[
            RowBox[{
             RowBox[{
              RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
-            "\[IndentingNewLine]", 
             RowBox[{"data", "=", 
              RowBox[{"DeleteDuplicatesBy", "[", 
               RowBox[{
@@ -112,8 +111,8 @@ Cell[BoxData[
                    "Kaw-Liga", "Hank Williams", 1953, $CellContext`c}, {
                    "Little Things Mean a Lot", "Francis Kitty Kallen", 
                     1954, $CellContext`p}, {
-                   "Work With Me, Annie", "Midnighters", 
-                    1954, $CellContext`r}, {
+                   "Work With Me, Annie", "Midnighters", 1954, $CellContext`r}
+                   , {
                    "I Don't Hurt Anymore", "Hank Snow", 
                     1954, $CellContext`c}, {
                    "Cherry Pink and Apple Blossom White", "Perez Prado", 
@@ -405,8 +404,7 @@ Knows)", "Rodney Atkins", 2006, $CellContext`c}, {
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
             RowBox[{
-            "\"\<Which of these was the top `1` song (single) of `2`?\>\"", 
-             ",", 
+            "\"\<Which of these was the top `1` song of `2`?\>\"", ",", 
              RowBox[{"data", "\[LeftDoubleBracket]", 
               RowBox[{"1", ",", "4"}], "\[RightDoubleBracket]"}], ",", 
              RowBox[{"data", "\[LeftDoubleBracket]", 
@@ -426,6 +424,15 @@ Knows)", "Rodney Atkins", 2006, $CellContext`c}, {
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
@@ -437,9 +444,9 @@ Knows)", "Rodney Atkins", 2006, $CellContext`c}, {
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}]}], ",",
+          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]",
+          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            InterpretationBox[
@@ -796,16 +803,15 @@ Knows)", "Rodney Atkins", 2006, $CellContext`c}, {
    3.7608709357071733`*^9}, {3.760870980763611*^9, 3.760871032602705*^9}, {
    3.760871083245818*^9, 3.760871089274564*^9}, {3.7608717983810253`*^9, 
    3.760871837927269*^9}, {3.7647590998511066`*^9, 3.764759248806045*^9}, {
-   3.76475932692689*^9, 3.764759345094184*^9}},
+   3.76475932692689*^9, 3.764759345094184*^9}, 3.768328281794278*^9, {
+   3.7683284601604223`*^9, 3.7683284733274403`*^9}, 3.768328761554615*^9, 
+   3.768328879985402*^9, {3.7683289139816723`*^9, 3.768328918946121*^9}, {
+   3.7683289558231573`*^9, 3.768328983021604*^9}, {3.768329150183539*^9, 
+   3.768329157814027*^9}, {3.768329195767168*^9, 3.768329229316409*^9}},
  CellLabel->
-  "In[1946]:=",ExpressionUUID->"5d9a525d-4c1e-4bd6-8867-a2b15735c2c2"],
-
-Cell[BoxData["\[IndentingNewLine]"], "Input",
- CellChangeTimes->{
-  3.7608702830820427`*^9},ExpressionUUID->"f79b22fa-bee3-4677-a26c-\
-14e4608c7a9b"]
+  "In[1025]:=",ExpressionUUID->"5d9a525d-4c1e-4bd6-8867-a2b15735c2c2"]
 },
-WindowSize->{1898, 1288},
+WindowSize->{1816, 1281},
 WindowMargins->{{6, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -821,8 +827,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 45764, 780, 640, "Input",ExpressionUUID->"5d9a525d-4c1e-4bd6-8867-a2b15735c2c2"],
-Cell[46325, 802, 149, 3, 52, "Input",ExpressionUUID->"f79b22fa-bee3-4677-a26c-14e4608c7a9b"]
+Cell[558, 20, 46413, 791, 637, "Input",ExpressionUUID->"5d9a525d-4c1e-4bd6-8867-a2b15735c2c2"]
 }
 ]
 *)
