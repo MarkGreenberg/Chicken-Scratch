@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     55547,       1127]
-NotebookOptionsPosition[     54800,       1106]
-NotebookOutlinePosition[     55139,       1121]
-CellTagsIndexPosition[     55096,       1118]
+NotebookDataLength[     34533,        622]
+NotebookOptionsPosition[     34239,        609]
+NotebookOutlinePosition[     34578,        624]
+CellTagsIndexPosition[     34535,        621]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -33,310 +31,20 @@ Cell[BoxData[
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
            RowBox[{"2", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-         
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{"(*", " ", 
           RowBox[{
-          "I", " ", "have", " ", "disabled", " ", "the", " ", "first", " ", 
-           "choice", " ", "here", " ", "because", " ", "it", " ", "needs", 
-           " ", "a", " ", "source", " ", 
-           RowBox[{"file", "."}]}], " ", "*)"}], "\[IndentingNewLine]", "1", 
-         ",", "\[IndentingNewLine]", 
+          "I", " ", "removed", " ", "the", " ", "first", " ", "question", " ",
+            "here", " ", "because", " ", "it", " ", "relied", " ", "on", " ", 
+           "an", " ", "outside", " ", "source", " ", "to", " ", "create", " ",
+            "a", " ", "spiderweb", " ", 
+           RowBox[{"graph", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Needs", "[", "\"\<RadarChart`\>\"", "]"}], ";", 
+          RowBox[{"q", "=", "\"\<Question goes here.\>\""}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"statCats", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{
-             RowBox[{"{", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<InflationRate\>\"", ",", "\"\<Inflation\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{
-                   RowBox[{"-", ".2"}], ",", ".55"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<GDPPerCapita\>\"", ",", "\"\<GDP (per capita)\>\"", ",", 
-                 
-                 RowBox[{"{", 
-                  RowBox[{"250", ",", "160000"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<GDPRealGrowth\>\"", ",", "\"\<GDP Growth\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{
-                   RowBox[{"-", ".25"}], ",", ".16"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{"\"\<PriceIndex\>\"", ",", "\"\<Price Index\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"70", ",", "420"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<UnemploymentFraction\>\"", ",", "\"\<Unemployment\>\"", 
-                 ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", ".45"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<ExternalDebt\>\"", ",", "\"\<External Debt\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "1.225`*^13"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<EconomicAid\>\"", ",", "\"\<Economic Aid\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{
-                   RowBox[{"-", "2.353`*^10"}], ",", "2.165`*^10"}], "}"}]}], 
-                "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<ElectricityConsumption\>\"", ",", 
-                 "\"\<Electricity Used\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "3.892`*^12"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<ElectricityProduction\>\"", ",", 
-                 "\"\<Electricity Made\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "4.167`*^12"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<NaturalGasConsumption\>\"", ",", 
-                 "\"\<Natural Gas Used\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "6.529`*^11"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<NaturalGasProduction\>\"", ",", 
-                 "\"\<Natural Gas Made\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "6.54`*^11"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<OilConsumption\>\"", ",", "\"\<Oil Used\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "2.068`*^7"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<OilProduction\>\"", ",", "\"\<Oil Produced\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "9.79`*^6"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<InternetHosts\>\"", ",", "\"\<Web Hosts\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "3.83`*^8"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<InternetUsers\>\"", ",", "\"\<Web Users\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "2.98`*^8"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<MilitaryExpenditureFraction\>\"", ",", 
-                 "\"\<Military Cost %\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", ".12"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<InfantMortalityFraction\>\"", ",", 
-                 "\"\<Infant Mortality\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{".002", ",", ".2"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<HIVAIDSFraction\>\"", ",", "\"\<HIV & AIDS\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", ".27"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<TotalFertilityRate\>\"", ",", "\"\<Fertility\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"1", ",", "8"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<PopulationGrowth\>\"", ",", "\"\<Population Growth\>\"", 
-                 ",", 
-                 RowBox[{"{", 
-                  RowBox[{
-                   RowBox[{"-", ".031"}], ",", ".04"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{"\"\<MedianAge\>\"", ",", "\"\<Median Age\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"15", ",", "45"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<LifeExpectancy\>\"", ",", "\"\<Life Expectancy\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"46", ",", "85"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<DeathRateFraction\>\"", ",", "\"\<Death Rate\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{".001", ",", ".025"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<BirthRateFraction\>\"", ",", "\"\<Birth Rate\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{".007", ",", ".09"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<LiteracyFraction\>\"", ",", "\"\<Literacy\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{".2", ",", "1"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<FemaleLiteracyFraction\>\"", ",", 
-                 "\"\<Female Literacy\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{".12", ",", "1"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<IrrigatedLandFraction\>\"", ",", "\"\<Irrigation\>\"", 
-                 ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", ".42"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<ArableLandFraction\>\"", ",", "\"\<Farmland %\>\"", ",", 
-                 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", ".7"}], "}"}]}], "}"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<CoastlineLength\>\"", ",", "\"\<Coastline\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"0", ",", "202080.`"}], "}"}]}], "}"}]}], "}"}], 
-             ",", "5"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"allCons", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{"CountryData", "[", "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"For", "[", 
-           RowBox[{
-            RowBox[{"i", "=", "1"}], ",", 
-            RowBox[{"i", "<", 
-             RowBox[{"Length", "[", "allCons", "]"}]}], ",", 
-            RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"con", "=", 
-              RowBox[{"allCons", "[", 
-               RowBox[{"[", "i", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-             RowBox[{"stats", "=", 
-              RowBox[{
-               RowBox[{
-                RowBox[{
-                 RowBox[{"{", 
-                  RowBox[{
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], ",", 
-                   RowBox[{"CountryData", "[", 
-                    RowBox[{"con", ",", 
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}]}], "]"}], ",", 
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "3", "]"}], "]"}]}], "}"}], "/.", 
-                 RowBox[{"x_Quantity", "\[Rule]", 
-                  RowBox[{"QuantityMagnitude", "[", "x", "]"}]}]}], "&"}], "/@",
-                "statCats"}]}], ";", "\[IndentingNewLine]", 
-             RowBox[{"If", "[", 
-              RowBox[{
-               RowBox[{"FreeQ", "[", 
-                RowBox[{"stats", ",", "_Missing"}], "]"}], ",", 
-               RowBox[{"Break", "[", "]"}]}], "]"}]}]}], "]"}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"adjStats", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"#", "[", 
-                RowBox[{"[", "1", "]"}], "]"}], ",", 
-               RowBox[{"Rescale", "[", 
-                RowBox[{
-                 RowBox[{"#", "[", 
-                  RowBox[{"[", "2", "]"}], "]"}], ",", 
-                 RowBox[{"#", "[", 
-                  RowBox[{"[", "3", "]"}], "]"}]}], "]"}]}], "}"}], "&"}], "/@",
-             "stats"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"labels", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Style", "[", 
-              RowBox[{
-               RowBox[{"#", "[", 
-                RowBox[{"[", "2", "]"}], "]"}], ",", "15", ",", "Black"}], 
-              "]"}], "&"}], "/@", "statCats"}]}], ";", "\[IndentingNewLine]", 
-          
-          RowBox[{"pic", "=", 
-           RowBox[{"RadarChart", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"#", "[", 
-                RowBox[{"[", "2", "]"}], "]"}], "&"}], "/@", "adjStats"}], 
-             ",", 
-             RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
-             RowBox[{"FrameTicks", "\[Rule]", "None"}], ",", 
-             RowBox[{"AxesLabel", "\[Rule]", "labels"}], ",", 
-             RowBox[{"ChartLegends", "\[Rule]", "None"}], ",", 
-             RowBox[{"PlotStyle", "\[Rule]", 
-              RowBox[{"RGBColor", "[", 
-               RowBox[{"{", 
-                RowBox[{".2", ",", ".3", ",", "0"}], "}"}], "]"}]}], ",", 
-             RowBox[{"AxesType", "\[Rule]", "\"\<Radar\>\""}], ",", 
-             RowBox[{"PlotRange", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"0", ",", "1"}], "}"}]}], ",", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-          "q", "=", 
-           "\"\<Which of these countries' stats are shown in this spider \
-graph?\>\""}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"EntityValue", "[", 
-              RowBox[{"#", ",", "\"\<Name\>\""}], "]"}], "&"}], "/@", 
-            RowBox[{"Take", "[", 
-             RowBox[{
-              RowBox[{"Drop", "[", 
-               RowBox[{"allCons", ",", 
-                RowBox[{"i", "-", "1"}]}], "]"}], ",", "4"}], "]"}]}]}], ";", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
@@ -345,16 +53,16 @@ graph?\>\""}], ";", "\[IndentingNewLine]",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
-           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
@@ -617,62 +325,64 @@ graph?\>\""}], ";", "\[IndentingNewLine]",
                  "Washington", "DistrictOfColumbia", "UnitedStates"}]}},
               SelectWithContents->True,
               Selectable->False], ",", "5"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"loc1", "=", 
-           RowBox[{"GeoPosition", "[", 
-            RowBox[{"data", "\[LeftDoubleBracket]", 
-             RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "]"}]}], ";",
-           "\[IndentingNewLine]", 
-          RowBox[{"loc2", "=", 
-           RowBox[{"GeoPosition", "[", 
-            RowBox[{"data", "\[LeftDoubleBracket]", 
-             RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], "]"}]}], ";",
-           "\[IndentingNewLine]", 
-          RowBox[{"ansData", "=", 
-           RowBox[{"GeoDisplacement", "[", 
-            RowBox[{"loc1", ",", "loc2", ",", "\"\<Rhumb\>\""}], "]"}]}], ";",
-           "\[IndentingNewLine]", 
-          RowBox[{"dist", "=", 
-           RowBox[{"DecimalForm", "[", 
-            RowBox[{"Round", "[", 
-             RowBox[{"QuantityMagnitude", "[", 
-              RowBox[{"UnitConvert", "[", 
-               RowBox[{
-                RowBox[{"Quantity", "[", 
-                 RowBox[{
-                  RowBox[{"ansData", "\[LeftDoubleBracket]", 
-                   RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
-                  "\"\<Meters\>\""}], "]"}], ",", "\"\<Miles\>\""}], "]"}], 
-              "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"bear", "=", 
-           RowBox[{"Round", "[", 
-            RowBox[{
-             RowBox[{"Mod", "[", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"ansData", "\[LeftDoubleBracket]", 
-                 RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "+", 
-                "360"}], ",", "360"}], "]"}], ",", ".01"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
-           RowBox[{"StringForm", "[", 
-            RowBox[{
-            "\"\<If you travel from `1` on a rhumb line bearing `2`\[Degree] \
-for `3` miles, you will arrive at which of these cities?\>\"", ",", 
-             RowBox[{"data", "[", 
-              RowBox[{"[", 
-               RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "bear", ",", 
-             "dist"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"ToCharacterCode", "[", 
+            RowBox[{"ToString", "[", 
+             RowBox[{"InputForm", "[", 
+              RowBox[{
+               RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+                RowBox[{
+                 RowBox[{"loc1", "=", 
+                  RowBox[{"GeoPosition", "[", 
+                   RowBox[{"h1", "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], 
+                   "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"loc2", "=", 
+                  RowBox[{"GeoPosition", "[", 
+                   RowBox[{"h1", "\[LeftDoubleBracket]", 
+                    RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], 
+                   "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"ansData", "=", 
+                  RowBox[{"GeoDisplacement", "[", 
+                   RowBox[{"loc1", ",", "loc2", ",", "\"\<Rhumb\>\""}], 
+                   "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"dist", "=", 
+                  RowBox[{"Round", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"ansData", "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], "/", 
+                    "1000"}], ",", ".2"}], "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"bear", "=", 
+                  RowBox[{"Round", "[", 
+                   RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"ansData", "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "+", 
+                    "360"}], ",", "360"}], "]"}], ",", ".1"}], "]"}]}], ";", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"StringForm", "[", 
+                  RowBox[{
+                  "\"\<If you travel from `1` on a rhumb line bearing `2`\
+\[Degree] for `3` kilometers, you will arrive at which of these cities?\>\"", 
+                   ",", 
+                   RowBox[{"h1", "\[LeftDoubleBracket]", 
+                    RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+                   "bear", ",", "dist"}], "]"}]}], "]"}], "/.", 
+               RowBox[{"h1", "\[Rule]", "data"}]}], "]"}], "]"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"qTransit", "=", 
            RowBox[{
             RowBox[{"Hold", "[", 
-             RowBox[{"ToExpression", "[", 
-              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
-            RowBox[{"h1", "\[Rule]", 
-             RowBox[{"ToCharacterCode", "[", 
-              RowBox[{"ToString", "[", 
-               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"ReleaseHold", "[", 
+              RowBox[{"ToExpression", "[", 
+               RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], 
+             "]"}], "/.", 
+            RowBox[{"h2", "\[Rule]", "q"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
@@ -705,8 +415,8 @@ for `3` miles, you will arrive at which of these cities?\>\"", ",",
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
             RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
-           "]"}]}]}], "\[IndentingNewLine]", "]"}], "&"}]}], "]"}], "]"}], 
-   ",", "\[IndentingNewLine]", "\"\<CS_pack_Geog12\>\"", ",", 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Geog12\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.700664006126808*^9, 3.700664035442486*^9}, {
    3.700665248890317*^9, 3.7006653033495502`*^9}, {3.7006653588652887`*^9, 
@@ -877,232 +587,25 @@ for `3` miles, you will arrive at which of these cities?\>\"", ",",
    3.716049479365893*^9, 3.71604948077028*^9}, {3.726014538560526*^9, 
    3.726014548958164*^9}, 3.7646699422634573`*^9, {3.76467010491621*^9, 
    3.764670115978712*^9}, {3.76467022281989*^9, 3.764670361187146*^9}, {
-   3.764671209057156*^9, 3.764671215441811*^9}, 3.764671788916613*^9},
+   3.764671209057156*^9, 3.764671215441811*^9}, 3.764671788916613*^9, {
+   3.768650055609209*^9, 3.768650056510194*^9}, {3.76865010884546*^9, 
+   3.7686502154442987`*^9}, {3.768650279252433*^9, 3.7686502998582487`*^9}, {
+   3.768650339189281*^9, 3.768650341579823*^9}, {3.768650373572061*^9, 
+   3.768650402091868*^9}, {3.768657378194985*^9, 3.7686574112482347`*^9}, {
+   3.768657495618887*^9, 3.7686575112879066`*^9}, {3.7686612901778383`*^9, 
+   3.768661353479059*^9}, {3.768661384173003*^9, 3.768661390823325*^9}, {
+   3.768661495990312*^9, 3.768661535086792*^9}, {3.768661647902882*^9, 
+   3.768661682286395*^9}, {3.768661713927908*^9, 3.768661718414732*^9}, {
+   3.768662081457061*^9, 3.7686621618624067`*^9}, 3.7686621976255836`*^9, {
+   3.768667554946225*^9, 3.768667598079453*^9}, {3.768670157597212*^9, 
+   3.768670169611004*^9}, {3.768670242013463*^9, 3.768670289602813*^9}, {
+   3.768670384781044*^9, 3.768670408178586*^9}, {3.768670680090475*^9, 
+   3.7686707132873077`*^9}, {3.768670751082509*^9, 3.768670831233947*^9}, {
+   3.768670878218658*^9, 3.768670948185934*^9}, {3.7686709925940533`*^9, 
+   3.768670998641705*^9}, {3.7686710522427073`*^9, 3.768671071297347*^9}, {
+   3.768671139673473*^9, 3.768671193881235*^9}, 3.768671805338531*^9},
  CellLabel->
-  "In[940]:=",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Geog12\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Geog12"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Geog12"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{{3.7008260053358297`*^9, 3.70082603319277*^9}, 
-   3.7008260986956463`*^9, {3.7008261478990173`*^9, 3.700826160918333*^9}, {
-   3.700826198518795*^9, 3.700826393560792*^9}, {3.700826484699526*^9, 
-   3.700826519801049*^9}, {3.7008265676464*^9, 3.700826617136785*^9}, 
-   3.700826658845052*^9, {3.700826721143136*^9, 3.7008267382953568`*^9}, {
-   3.700826775108247*^9, 3.700826797339871*^9}, {3.7008268557156677`*^9, 
-   3.700826908106225*^9}, {3.7008278357342243`*^9, 3.7008278500565367`*^9}, 
-   3.700827907577959*^9, {3.700827967692006*^9, 3.700827976959593*^9}, {
-   3.700828012604897*^9, 3.700828052089032*^9}, {3.700902781146166*^9, 
-   3.700902882983274*^9}, {3.700902916942005*^9, 3.700902967845571*^9}, 
-   3.700903007874091*^9, {3.7009030582869453`*^9, 3.7009030973406467`*^9}, {
-   3.700903819029697*^9, 3.700903832899241*^9}, 3.700903901682839*^9, 
-   3.7009079390325823`*^9, 3.7009079888664703`*^9, 3.700908061129191*^9, {
-   3.7009083989314632`*^9, 3.7009084473079453`*^9}, {3.700908486716745*^9, 
-   3.7009085105375423`*^9}, {3.700956358556872*^9, 3.700956434905428*^9}, 
-   3.700956682198333*^9, 3.700956904846684*^9, 3.700956958091696*^9, {
-   3.7009569947211313`*^9, 3.700957041288384*^9}, {3.7009571235838346`*^9, 
-   3.7009571813613653`*^9}, 3.70095726951518*^9, 3.7009573134165697`*^9, 
-   3.700957830213223*^9, 3.70095786763804*^9, 3.700957927988463*^9, 
-   3.700957968937724*^9, 3.716034874248211*^9, 3.716035149928101*^9, 
-   3.716035193889676*^9, 3.7160353302921352`*^9, {3.716035684006899*^9, 
-   3.716035733426044*^9}, 3.7160357640793753`*^9, 3.7160359468875713`*^9, 
-   3.716036002000215*^9, 3.716048376105731*^9, 3.716048808172412*^9, 
-   3.716048905931787*^9, 3.7160491948085938`*^9, 3.7160493017644453`*^9, {
-   3.716049394363649*^9, 3.716049404882904*^9}, 3.716049483476707*^9, 
-   3.7260147718726797`*^9, 3.7646709774205236`*^9, 3.7646718123367434`*^9},
- CellLabel->
-  "Out[940]=",ExpressionUUID->"ae4f064c-6b38-4988-8bf8-30f60d89d70d"]
-}, Open  ]],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{"Mathematica", " ", "source", " ", "file"}], "*)"}], 
-  RowBox[{"(*", " ", 
-   RowBox[{":", "Author", ":", 
-    RowBox[{"Diego", " ", "Zviovich"}]}], "*)"}], 
-  RowBox[{"(*", " ", 
-   RowBox[{":", "Date", ":", 
-    RowBox[{
-     RowBox[{"12", "/", "21"}], "/", "15"}]}], "*)"}], 
-  RowBox[{"(*", " ", 
-   RowBox[{":", "Comments", ":", 
-    RowBox[{"Code", " ", "based", " ", "on", " ", "Patrick", " ", 
-     RowBox[{"Scheibe", "'"}], "s", " ", 
-     RowBox[{"installer", ".", "m"}]}]}], "*)"}], 
-  RowBox[{"With", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{
-      RowBox[{
-      "repositoryURL", "=", 
-       "\"\<https://github.com/catrasca/RadarChart/archive/master.zip\>\""}], 
-      ",", 
-      RowBox[{"repositoryDir", "=", "\"\<RadarChart-master\>\""}], ",", 
-      RowBox[{"(*", 
-       RowBox[{
-       "This", " ", "is", " ", "fixed", " ", "by", " ", "GitHub", " ", 
-        "which", " ", "always", " ", "names", " ", "the", " ", "ZIP", " ", 
-        "content", " ", "like", " ", "this"}], "*)"}], 
-      RowBox[{"zipFileName", "=", 
-       RowBox[{"FileNameJoin", "[", 
-        RowBox[{"{", 
-         RowBox[{"$TemporaryDirectory", ",", "\"\<master.zip\>\""}], "}"}], 
-        "]"}]}]}], "}"}], ",", 
-    RowBox[{"Module", "[", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"extractedDir", "=", 
-         RowBox[{"FileNameJoin", "[", 
-          RowBox[{"{", 
-           RowBox[{"$TemporaryDirectory", ",", "repositoryDir"}], "}"}], 
-          "]"}]}], ",", "existingFiles", ",", "zipFile", ",", "deleteQDialog",
-         ",", "fetchURL"}], "}"}], ",", 
-      RowBox[{
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"$VersionNumber", "<", "9"}], ",", 
-         RowBox[{
-          RowBox[{"Get", "[", "\"\<Utilities`URLTools`\>\"", "]"}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"fetchURL", "=", "FetchURL"}]}], ",", 
-         RowBox[{"fetchURL", "=", "URLSave"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"deleteQDialog", "[", "str_String", "]"}], ":=", 
-        RowBox[{"With", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{"dirQ", "=", 
-            RowBox[{"DirectoryQ", "[", "str", "]"}]}], "}"}], ",", 
-          RowBox[{"ChoiceDialog", "[", 
-           RowBox[{
-            RowBox[{"\"\<The following \>\"", "<>", 
-             RowBox[{"If", "[", 
-              RowBox[{"dirQ", ",", "\"\<directory\>\"", ",", "\"\<file\>\""}],
-               "]"}], "<>", "\"\< already exists:\\n\>\"", "<>", "str", "<>", 
-             "\"\<\\nDelete it?\>\""}], ",", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"\"\<Yes\>\"", "\[RuleDelayed]", 
-               RowBox[{"Quiet", "@", 
-                RowBox[{"Check", "[", 
-                 RowBox[{
-                  RowBox[{"If", "[", 
-                   RowBox[{"dirQ", ",", 
-                    RowBox[{"DeleteDirectory", "[", 
-                    RowBox[{"str", ",", 
-                    RowBox[{"DeleteContents", "\[Rule]", "True"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"DeleteFile", "[", "str", "]"}]}], "]"}], ",", 
-                  RowBox[{
-                   RowBox[{
-                   "MessageDialog", "[", 
-                    "\"\<Error. Could not delete. Aborting\>\"", "]"}], ";", 
-                   "$Aborted"}]}], "]"}]}]}], ",", 
-              RowBox[{"\"\<No\>\"", "\[RuleDelayed]", "$Aborted"}]}], "}"}]}],
-            "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"existingFiles", "=", 
-        RowBox[{"Select", "[", 
-         RowBox[{
-          RowBox[{"Flatten", "[", 
-           RowBox[{"{", 
-            RowBox[{"zipFileName", ",", "extractedDir", ",", 
-             RowBox[{
-              RowBox[{
-               RowBox[{"FileNames", "[", 
-                RowBox[{"#", ",", "$Path"}], "]"}], "&"}], "/@", 
-              RowBox[{"{", 
-               RowBox[{"\"\<RadarChart\>\"", ",", "\"\<RadarChart\>\""}], 
-               "}"}]}]}], "}"}], "]"}], ",", "FileExistsQ"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Do", "[", 
-        RowBox[{
-         RowBox[{"If", "[", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"deleteQDialog", "[", "f", "]"}], "===", "$Aborted"}], 
-           ",", 
-           RowBox[{
-            RowBox[{"Print", "[", 
-             RowBox[{"\"\<Could not delete \>\"", "<>", "f"}], "]"}], ";", 
-            "\[IndentingNewLine]", 
-            RowBox[{"Abort", "[", "]"}]}]}], "]"}], ",", 
-         RowBox[{"{", 
-          RowBox[{"f", ",", "existingFiles"}], "}"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"zipFile", "=", 
-        RowBox[{"fetchURL", "[", 
-         RowBox[{"repositoryURL", ",", "zipFileName"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"Not", "[", 
-          RowBox[{"FileExistsQ", "[", "zipFile", "]"}], "]"}], ",", 
-         RowBox[{
-          RowBox[{"Print", "[", "\"\<Couldn't download resource\>\"", "]"}], 
-          ";", "\[IndentingNewLine]", 
-          RowBox[{"Abort", "[", "]"}], ";"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ExtractArchive", "[", 
-        RowBox[{"zipFile", ",", "$TemporaryDirectory"}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"CopyDirectory", "[", 
-        RowBox[{
-         RowBox[{"FileNameJoin", "[", 
-          RowBox[{"{", 
-           RowBox[{
-           "$TemporaryDirectory", ",", "repositoryDir", ",", 
-            "\"\<RadarChart\>\""}], "}"}], "]"}], ",", 
-         RowBox[{"FileNameJoin", "[", 
-          RowBox[{"{", 
-           RowBox[{
-           "$UserAddOnsDirectory", ",", "\"\<Applications\>\"", ",", 
-            "\"\<RadarChart\>\""}], "}"}], "]"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"DeleteDirectory", "[", 
-        RowBox[{
-         RowBox[{"FileNameJoin", "[", 
-          RowBox[{"{", 
-           RowBox[{"$TemporaryDirectory", ",", "repositoryDir"}], "}"}], 
-          "]"}], ",", 
-         RowBox[{"DeleteContents", "\[Rule]", "True"}]}], "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"DeleteFile", "[", "zipFile", "]"}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"FrontEndExecute", "[", 
-        RowBox[{"FrontEnd`ResetMenusPacket", "[", 
-         RowBox[{"{", 
-          RowBox[{"Automatic", ",", "Automatic"}], "}"}], "]"}], "]"}], 
-       ";"}]}], "]"}]}], "]"}]}]], "Input",
- CellChangeTimes->{{3.700732194308814*^9, 
-  3.700732194311517*^9}},ExpressionUUID->"319542fd-7083-4285-9bb9-\
-d957c4c27617"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"FileNameJoin", "[", 
-  RowBox[{"{", 
-   RowBox[{"$UserBaseDirectory", ",", "\"\<Applications\>\""}], "}"}], 
-  "]"}]], "Input",
- CellChangeTimes->{{3.700732259471551*^9, 
-  3.700732259473715*^9}},ExpressionUUID->"1b237d77-aaf7-4bb0-8989-\
-18317a869eac"],
-
-Cell[BoxData["\<\"/Users/markgreenberg/Library/Mathematica/Applications\"\>"],\
- "Output",
- CellChangeTimes->{3.700732261938895*^9, 
-  3.70095751449214*^9},ExpressionUUID->"f02ae38b-cf5f-4f39-affc-5339f221fbfa"]
-}, Open  ]]
+  "In[3187]:=",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"]
 },
 WindowSize->{1855, 1114},
 WindowMargins->{{12, Automatic}, {Automatic, 24}},
@@ -1120,15 +623,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 44662, 859, 1453, "Input",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"],
-Cell[45245, 883, 2376, 37, 71, "Output",ExpressionUUID->"ae4f064c-6b38-4988-8bf8-30f60d89d70d"]
-}, Open  ]],
-Cell[47636, 923, 6632, 164, 409, "Input",ExpressionUUID->"319542fd-7083-4285-9bb9-d957c4c27617"],
-Cell[CellGroupData[{
-Cell[54293, 1091, 277, 7, 30, "Input",ExpressionUUID->"1b237d77-aaf7-4bb0-8989-18317a869eac"],
-Cell[54573, 1100, 211, 3, 34, "Output",ExpressionUUID->"f02ae38b-cf5f-4f39-affc-5339f221fbfa"]
-}, Open  ]]
+Cell[558, 20, 33677, 587, 655, "Input",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"]
 }
 ]
 *)
