@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4183,        119]
-NotebookOptionsPosition[      3870,        105]
-NotebookOutlinePosition[      4230,        121]
-CellTagsIndexPosition[      4187,        118]
+NotebookDataLength[      6612,        166]
+NotebookOptionsPosition[      6320,        153]
+NotebookOutlinePosition[      6658,        168]
+CellTagsIndexPosition[      6615,        165]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -48,65 +48,112 @@ Cell[BoxData[
                  RowBox[{"#", "+", "1"}]}], ")"}]}], "]"}], "]"}]}], "}"}], 
           "&"}], "/@", "begs"}]}], ";", "\[IndentingNewLine]", 
        RowBox[{
-        RowBox[{"abs", "[", 
-         RowBox[{"[", "1", "]"}], "]"}], "=", 
+        RowBox[{"abs", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+         "=", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"begs", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], ",", 
           RowBox[{
-           RowBox[{"begs", "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "+", "1"}]}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-         "\"\<Which of these pairs of chemical elements has consecutive \
-atomic numbers?\>\"", ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
+          "begs", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
           RowBox[{
-           RowBox[{"ElementData", "[", 
-            RowBox[{
-             RowBox[{"#", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", "\"\<Name\>\""}], "]"}], 
-           "<>", "\"\< and \>\"", "<>", 
-           RowBox[{"ElementData", "[", 
-            RowBox[{
-             RowBox[{"#", "[", 
-              RowBox[{"[", "2", "]"}], "]"}], ",", "\"\<Name\>\""}], "]"}]}], 
-          "&"}], "/@", "abs"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+           RowBox[{
+           "begs", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+           "+", "1"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{
+       "q", "=", 
+        "\"\<Which of these pairs of chemical elements has consecutive atomic \
+numbers?\>\""}], ";", "\[IndentingNewLine]", 
+       RowBox[{"order", "=", 
+        RowBox[{"RandomSample", "[", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"ans", "=", 
         RowBox[{
          RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"order", ",", "1"}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"mixed", "=", 
+        RowBox[{"ToCharacterCode", "[", 
+         RowBox[{"ToString", "[", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{
+            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"choices", "=", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"ElementData", "[", 
+                   RowBox[{
+                    RowBox[{
+                    "#", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "\"\<Name\>\""}], "]"}], 
+                  "<>", "\"\< and \>\"", "<>", 
+                  RowBox[{"ElementData", "[", 
+                   RowBox[{
+                    RowBox[{
+                    "#", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", "\"\<Name\>\""}], "]"}]}],
+                  "&"}], "/@", "h1"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"mixed", "=", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"choices", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "h2", "\[LeftDoubleBracket]", "1", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                 
+                 RowBox[{"choices", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "h2", "\[LeftDoubleBracket]", "2", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                 
+                 RowBox[{"choices", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "h2", "\[LeftDoubleBracket]", "3", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
+                 
+                 RowBox[{"choices", "\[LeftDoubleBracket]", 
+                  RowBox[{
+                  "h2", "\[LeftDoubleBracket]", "4", 
+                   "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
+                "}"}]}]}], "]"}], "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"h1", "\[Rule]", "abs"}], ",", 
+              RowBox[{"h2", "\[Rule]", "order"}]}], "}"}]}], "]"}], "]"}], 
+         "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"mixTransit", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"ReleaseHold", "[", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{"FromCharacterCode", "[", "h5", "]"}], "]"}], "]"}], 
+          "]"}], "/.", 
+         RowBox[{"h5", "\[Rule]", "mixed"}]}]}], ";", "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Chem4\>\"", ",", 
+          RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Chem4\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683111605769154*^9, 3.683111611861059*^9}, {
    3.683111670806921*^9, 3.6831116789653263`*^9}, {3.683114743750276*^9, 
    3.683114764071989*^9}, {3.683114886456416*^9, 3.683114904902335*^9}, 
-   3.683114970618143*^9, {3.683115167396578*^9, 
-   3.683115167729891*^9}},ExpressionUUID->"cf42d252-bdbb-4b60-9a58-\
-17886e904dfb"]
+   3.683114970618143*^9, {3.683115167396578*^9, 3.683115167729891*^9}, {
+   3.76892719505442*^9, 3.768927274702093*^9}, {3.7689276154855537`*^9, 
+   3.768927621773171*^9}, {3.768927845405099*^9, 3.768927849365086*^9}, 
+   3.768928037022005*^9, {3.768928077435967*^9, 3.768928123692459*^9}, {
+   3.7689281881421413`*^9, 3.768928306203906*^9}, {3.768928402193514*^9, 
+   3.768928432395176*^9}, {3.7689284969893227`*^9, 3.7689285144359617`*^9}},
+ CellLabel->
+  "In[4911]:=",ExpressionUUID->"abd3a553-b257-432f-b2db-09dfed42e09b"]
 },
 WindowSize->{1190, 1002},
 WindowMargins->{{4, Automatic}, {31, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -120,10 +167,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3308, 83, 262, "Input",ExpressionUUID->"cf42d252-bdbb-4b60-9a58-17886e904dfb"]
+Cell[558, 20, 5758, 131, 367, "Input",ExpressionUUID->"abd3a553-b257-432f-b2db-09dfed42e09b"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
