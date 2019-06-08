@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10606,        252]
-NotebookOptionsPosition[     10164,        235]
-NotebookOutlinePosition[     10524,        251]
-CellTagsIndexPosition[     10481,        248]
+NotebookDataLength[     10420,        236]
+NotebookOptionsPosition[     10128,        223]
+NotebookOutlinePosition[     10466,        238]
+CellTagsIndexPosition[     10423,        235]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -69,21 +67,24 @@ Cell[BoxData[
             RowBox[{"i", "<", "5"}], ",", 
             RowBox[{"i", "++"}], ",", 
             RowBox[{
-             RowBox[{"choices", "[", 
-              RowBox[{"[", "i", "]"}], "]"}], "=", 
+             RowBox[{
+             "choices", "\[LeftDoubleBracket]", "i", 
+              "\[RightDoubleBracket]"}], "=", 
              RowBox[{"StringJoin", "[", 
               RowBox[{"Riffle", "[", 
                RowBox[{
-                RowBox[{"nos", "[", 
-                 RowBox[{"[", "i", "]"}], "]"}], ",", 
-                RowBox[{"ops", "[", 
-                 RowBox[{"[", "i", "]"}], "]"}]}], "]"}], "]"}]}]}], "]"}], 
-          ";", "\[IndentingNewLine]", 
+                RowBox[{
+                "nos", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}],
+                 ",", 
+                RowBox[{
+                "ops", "\[LeftDoubleBracket]", "i", 
+                 "\[RightDoubleBracket]"}]}], "]"}], "]"}]}]}], "]"}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"qNo", "=", 
            RowBox[{"ToExpression", "[", 
-            RowBox[{"choices", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+            RowBox[{
+            "choices", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+             "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -91,10 +92,10 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
@@ -121,22 +122,23 @@ Cell[BoxData[
          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"sets", "=", 
-           RowBox[{"Partition", "[", 
+          RowBox[{"set1", "=", 
+           RowBox[{"RandomSample", "[", 
             RowBox[{
-             RowBox[{"RandomInteger", "[", 
+             RowBox[{"Range", "[", 
               RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "9"}], ",", "9"}], "}"}], ",", "16"}], "]"}], 
-             ",", "8"}], "]"}]}], ";", "\[IndentingNewLine]", 
+               RowBox[{"-", "10"}], ",", "10"}], "]"}], ",", "8"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"set2", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{
+               RowBox[{"-", "10"}], ",", "10"}], "]"}], ",", "8"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"int", "=", 
            RowBox[{"Intersection", "[", 
-            RowBox[{
-             RowBox[{"sets", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", 
-             RowBox[{"sets", "[", 
-              RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ";", 
+            RowBox[{"set1", ",", "set2"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"ansNo", "=", 
            RowBox[{"Total", "[", "int", "]"}]}], ";", "\[IndentingNewLine]", 
@@ -156,14 +158,10 @@ Cell[BoxData[
            RowBox[{"StringForm", "[", 
             RowBox[{
             "\"\<What is the sum of the numbers in this set? \\n`1` `2` `3`\>\
-\"", ",", 
-             RowBox[{"sets", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", 
+\"", ",", "set1", ",", 
              RowBox[{"Hold", "[", 
               RowBox[{"FromCharacterCode", "[", "8898", "]"}], "]"}], ",", 
-             RowBox[{"sets", "[", 
-              RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+             "set2"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -171,10 +169,10 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -214,29 +212,18 @@ Cell[BoxData[
    3.733242393734672*^9}, {3.73324299747093*^9, 3.7332430334776363`*^9}, {
    3.7332432612140827`*^9, 3.733243394259894*^9}, {3.73324369164292*^9, 
    3.7332437102101517`*^9}, {3.733243812588152*^9, 3.7332438920997467`*^9}, {
-   3.733243960034873*^9, 
-   3.7332439621050587`*^9}},ExpressionUUID->"ceb6ee2f-a248-4b15-a2c2-\
-f00fdefb2fed"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb12\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb12"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb12"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{3.73324389642866*^9, 
-  3.7332439829537354`*^9},ExpressionUUID->"0e67ed78-7c6f-4c67-9b45-\
-d7007c4ae9c7"]
-}, Open  ]]
+   3.733243960034873*^9, 3.7332439621050587`*^9}, {3.768938646557119*^9, 
+   3.768938786060857*^9}, {3.768938883560103*^9, 3.768938955171617*^9}, {
+   3.768940879551894*^9, 3.768940984102251*^9}, {3.7689410764936953`*^9, 
+   3.7689411060935507`*^9}, {3.768941138894847*^9, 3.768941144685316*^9}, {
+   3.768941294422387*^9, 3.768941299797195*^9}, {3.768941425918532*^9, 
+   3.7689414316453876`*^9}, {3.768941555637933*^9, 3.768941593852523*^9}},
+ CellLabel->
+  "In[5140]:=",ExpressionUUID->"2b23f9da-5834-47d8-8b3c-bed34f4ecf6d"]
 },
 WindowSize->{1204, 1336},
 WindowMargins->{{-5, Automatic}, {Automatic, 0}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -250,10 +237,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 9052, 196, 577, "Input",ExpressionUUID->"ceb6ee2f-a248-4b15-a2c2-f00fdefb2fed"],
-Cell[9635, 220, 513, 12, 37, "Output",ExpressionUUID->"0e67ed78-7c6f-4c67-9b45-d7007c4ae9c7"]
-}, Open  ]]
+Cell[558, 20, 9566, 201, 598, "Input",ExpressionUUID->"2b23f9da-5834-47d8-8b3c-bed34f4ecf6d"]
 }
 ]
 *)
