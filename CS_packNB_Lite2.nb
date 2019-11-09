@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     30942,        737]
-NotebookOptionsPosition[     30628,        723]
-NotebookOutlinePosition[     30986,        739]
-CellTagsIndexPosition[     30943,        736]
+NotebookDataLength[     32766,        783]
+NotebookOptionsPosition[     32340,        767]
+NotebookOutlinePosition[     32681,        782]
+CellTagsIndexPosition[     32638,        779]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -245,8 +247,8 @@ night...\>\""}], "}"}], ",", "\[IndentingNewLine]",
              RowBox[{"{", 
               RowBox[{
               "\"\<\[Alpha]\>\"", ",", 
-               "\"\<I, too, sing America.//I am the darker brother....\>\""}],
-               "}"}], ",", "\[IndentingNewLine]", 
+               "\"\<I, too, sing America./I am the darker brother....\>\""}], 
+              "}"}], ",", "\[IndentingNewLine]", 
              RowBox[{"{", 
               RowBox[{
               "\"\<Harlem\>\"", ",", 
@@ -279,7 +281,6 @@ night...\>\""}], "}"}], ",", "\[IndentingNewLine]",
              RowBox[{"{", 
               RowBox[{
               "\"\<The Leaden-Eyed\>\"", ",", 
-               
                "\"\<Let not young souls be smothered out before/They do \
 quaint deeds...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
              RowBox[{"{", 
@@ -333,6 +334,7 @@ bells!...\>\""}], "}"}], ",", "\[IndentingNewLine]",
              RowBox[{"{", 
               RowBox[{
               "\"\<Eldorado\>\"", ",", 
+               
                "\"\<Gaily bedight,/A gallant knight,/In sunshine and in \
 shadow,...\>\""}], "}"}]}], "}"}]}], ",", "\[IndentingNewLine]", 
           RowBox[{"\"\<Gary Soto\>\"", "\[Rule]", "\[IndentingNewLine]", 
@@ -364,21 +366,22 @@ down...\>\""}], "}"}], ",", "\[IndentingNewLine]",
             RowBox[{
              RowBox[{"{", 
               RowBox[{
-              "\[Alpha]", ",", 
+              "\"\<\[Alpha]\>\"", ",", 
                "\"\<who knows if the moon's/a balloon,coming out of a keen \
 city...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
              RowBox[{"{", 
               RowBox[{
-              "\[Alpha]", ",", 
+              "\"\<\[Alpha]\>\"", ",", 
                "\"\<in Just\[LongDash]/spring     when the world is \
 mud-/luscious...\>\""}], "}"}], ",", "\[IndentingNewLine]", 
              RowBox[{"{", 
               RowBox[{
-              "\[Alpha]", ",", "\"\<annie died the other day...\>\""}], "}"}],
-              ",", "\[IndentingNewLine]", 
+              "\"\<\[Alpha]\>\"", ",", 
+               "\"\<annie died the other day...\>\""}], "}"}], ",", 
+             "\[IndentingNewLine]", 
              RowBox[{"{", 
               RowBox[{
-              "\[Alpha]", ",", 
+              "\"\<\[Alpha]\>\"", ",", 
                "\"\<anyone lived in a pretty how town...\>\""}], "}"}]}], 
             "}"}]}], ",", "\[IndentingNewLine]", 
           RowBox[{"\"\<Edward Lear\>\"", "\[Rule]", "\[IndentingNewLine]", 
@@ -676,9 +679,9 @@ fool,...\>\""}], "}"}]}], "}"}]}]}], "|>"}]}], ";", "\[IndentingNewLine]",
        RowBox[{"If", "[", 
         RowBox[{
          RowBox[{
-          RowBox[{"poem", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", "\"\<\[Alpha]\>\""}], 
-         ",", "\[IndentingNewLine]", 
+          RowBox[{
+          "poem", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+          "\[Equal]", "\"\<\[Alpha]\>\""}], ",", "\[IndentingNewLine]", 
          RowBox[{"q", "=", 
           RowBox[{"Style", "[", 
            RowBox[{
@@ -696,10 +699,22 @@ fool,...\>\""}], "}"}]}], "}"}]}]}], "|>"}]}], ";", "\[IndentingNewLine]",
              RowBox[{"poem", "[", 
               RowBox[{"[", "1", "]"}], "]"}], "<>", 
              "\"\<\\\" which begins \\\"\>\"", "<>", 
-             RowBox[{"poem", "[", 
-              RowBox[{"[", "2", "]"}], "]"}], "<>", "\"\<\\\"?\>\""}], ",", 
+             RowBox[{
+             "poem", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+             "<>", "\"\<\\\"?\>\""}], ",", 
             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}]}], 
         "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"qTransit", "=", 
+        RowBox[{
+         RowBox[{"Hold", "[", 
+          RowBox[{"ToExpression", "[", 
+           RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+         
+         RowBox[{"h1", "\[Rule]", 
+          RowBox[{"ToCharacterCode", "[", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -707,24 +722,52 @@ fool,...\>\""}], "}"}]}], "}"}]}]}], "|>"}]}], ";", "\[IndentingNewLine]",
         RowBox[{
          RowBox[{"Position", "[", 
           RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+           "choices", "\[LeftDoubleBracket]", "1", 
+            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{"InputForm", "[", 
          RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lite2\>\"", ",", 
+          RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}], 
+        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Lite2\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
- CellChangeTimes->{3.683382367891472*^9, 3.68338241288892*^9, 
-  3.762711371022401*^9},ExpressionUUID->"d3e10254-56d5-4b56-8395-\
-f0cddbf72b0d"]
+ CellChangeTimes->{
+  3.683382367891472*^9, 3.68338241288892*^9, 3.762711371022401*^9, {
+   3.782329688584049*^9, 3.782329790555448*^9}, {3.782329912933682*^9, 
+   3.7823299168119993`*^9}, {3.782330009044551*^9, 3.782330016795218*^9}, {
+   3.782330082869*^9, 3.782330113832335*^9}, 3.782330399415991*^9, {
+   3.782330652262727*^9, 3.7823306965891237`*^9}, {3.782330792859602*^9, 
+   3.782330816392521*^9}},
+ CellLabel->
+  "In[606]:=",ExpressionUUID->"d3e10254-56d5-4b56-8395-f0cddbf72b0d"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Lite2\"",
+     "https://www.wolframcloud.com/obj/user-4dec8a61-25b0-47e1-8624-\
+e5b3610139af/CS_pack_Lite2"},
+    "HyperlinkURL"], "]"}],
+  CloudObject[
+  "https://www.wolframcloud.com/obj/user-4dec8a61-25b0-47e1-8624-e5b3610139af/\
+CS_pack_Lite2"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.782329793293064*^9, 3.782329918202759*^9, 3.7823300180774317`*^9, {
+   3.7823301191485786`*^9, 3.782330144713709*^9}, 3.782330411641025*^9, 
+   3.7823308326216707`*^9},
+ CellLabel->
+  "Out[606]=",ExpressionUUID->"2b74af36-8ef5-4300-86fc-9c1ea5d54e7c"]
+}, Open  ]]
 },
-WindowSize->{1233, 1008},
-WindowMargins->{{583, Automatic}, {157, Automatic}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+WindowSize->{1388, 1384},
+WindowMargins->{{85, Automatic}, {-198, Automatic}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -738,7 +781,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 30066, 701, 3118, "Input",ExpressionUUID->"d3e10254-56d5-4b56-8395-f0cddbf72b0d"]
+Cell[CellGroupData[{
+Cell[580, 22, 31002, 722, 3139, "Input",ExpressionUUID->"d3e10254-56d5-4b56-8395-f0cddbf72b0d"],
+Cell[31585, 746, 739, 18, 71, "Output",ExpressionUUID->"2b74af36-8ef5-4300-86fc-9c1ea5d54e7c"]
+}, Open  ]]
 }
 ]
 *)
