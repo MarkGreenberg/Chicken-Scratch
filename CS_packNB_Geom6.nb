@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10196,        234]
-NotebookOptionsPosition[      9882,        220]
-NotebookOutlinePosition[     10242,        236]
-CellTagsIndexPosition[     10199,        233]
+NotebookDataLength[     50525,        913]
+NotebookOptionsPosition[     50233,        900]
+NotebookOutlinePosition[     50570,        915]
+CellTagsIndexPosition[     50527,        912]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,158 +26,690 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"r1", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"12", ",", "50"}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"r2", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"4", ",", 
-           RowBox[{"r1", "-", "4"}]}], "}"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansNo", "=", 
-        RowBox[{"6", " ", "r1"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{"Graphics", "[", 
-         RowBox[{
-          RowBox[{"{", "\[IndentingNewLine]", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"EdgeForm", "[", 
-               RowBox[{"Directive", "[", "Gray", "]"}], "]"}], ",", 
-              RowBox[{"FaceForm", "[", "LightGreen", "]"}], ",", 
-              RowBox[{"RegularPolygon", "[", 
-               RowBox[{"r1", ",", "6"}], "]"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"EdgeForm", "[", 
-               RowBox[{"Directive", "[", "Gray", "]"}], "]"}], ",", 
-              RowBox[{"FaceForm", "[", "White", "]"}], ",", 
-              RowBox[{"RegularPolygon", "[", 
-               RowBox[{"r2", ",", "6"}], "]"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
-              RowBox[{"Point", "[", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "r2"}], ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"Text", "[", 
-              RowBox[{
-               RowBox[{"Style", "[", 
-                RowBox[{"\"\<B\>\"", ",", "Large", ",", "Italic", ",", 
-                 RowBox[{
-                 "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
-                "]"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "r2"}], ",", "0"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"1", ",", 
-                 RowBox[{"-", "1"}]}], "}"}]}], "]"}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
-              RowBox[{"Point", "[", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "r1"}], ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"Text", "[", 
-              RowBox[{
-               RowBox[{"Style", "[", 
-                RowBox[{"\"\<A\>\"", ",", "Large", ",", "Italic", ",", 
-                 RowBox[{
-                 "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
-                "]"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "r1"}], ",", "0"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"1.5", ",", "0"}], "}"}]}], "]"}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
-              RowBox[{"Point", "[", 
-               RowBox[{"{", 
-                RowBox[{"r2", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"Text", "[", 
-              RowBox[{
-               RowBox[{"Style", "[", 
-                RowBox[{"\"\<C\>\"", ",", "Large", ",", "Italic", ",", 
-                 RowBox[{
-                 "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
-                "]"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"r2", ",", "0"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"-", "1.7"}], ",", "0"}], "}"}]}], "]"}], "}"}]}], 
-           "}"}], ",", "\[IndentingNewLine]", 
-          RowBox[{"ImageSize", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", "480", "}"}], ",", 
-             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Prepend", "[", 
-         RowBox[{
-          RowBox[{"RandomSample", "[", 
-           RowBox[{
-            RowBox[{"DeleteCases", "[", 
-             RowBox[{
-              RowBox[{"Range", "[", 
-               RowBox[{
-                RowBox[{"r2", "*", "2"}], ",", 
-                RowBox[{"Round", "[", 
-                 RowBox[{"ansNo", " ", "*", " ", "1.4"}], "]"}], ",", "2"}], 
-               "]"}], ",", "ansNo"}], "]"}], ",", "3"}], "]"}], ",", 
-          "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-          RowBox[{"StringForm", "[", 
-           RowBox[{
-           "\"\<This figure's bounds are concentric regular hexagons. `1`=`2` \
-and `3`=`4`. What is the length of the outside perimeter?\>\"", ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{"\"\<AB\>\"", ",", "Italic"}], "]"}], ",", 
-            RowBox[{"r1", "-", "r2"}], ",", 
-            RowBox[{"Style", "[", 
-             RowBox[{"\"\<BC\>\"", ",", "Italic"}], "]"}], ",", 
-            RowBox[{"2", " ", "r2"}]}], "]"}], ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Geom6\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"r1", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"12", ",", "50"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"r2", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"4", ",", 
+              RowBox[{"r1", "-", "4"}]}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{"6", " ", "r1"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"Directive", "[", "Gray", "]"}], "]"}], ",", 
+                 RowBox[{"FaceForm", "[", "LightGreen", "]"}], ",", 
+                 RowBox[{"RegularPolygon", "[", 
+                  RowBox[{"r1", ",", "6"}], "]"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"EdgeForm", "[", 
+                  RowBox[{"Directive", "[", "Gray", "]"}], "]"}], ",", 
+                 RowBox[{"FaceForm", "[", "White", "]"}], ",", 
+                 RowBox[{"RegularPolygon", "[", 
+                  RowBox[{"r2", ",", "6"}], "]"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
+                 
+                 RowBox[{"Point", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "r2"}], ",", "0"}], "}"}], "]"}]}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<B\>\"", ",", "Large", ",", "Italic", ",", 
+                    RowBox[{
+                    "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                   "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "r2"}], ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"1", ",", 
+                    RowBox[{"-", "1"}]}], "}"}]}], "]"}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
+                 
+                 RowBox[{"Point", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "r1"}], ",", "0"}], "}"}], "]"}]}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<A\>\"", ",", "Large", ",", "Italic", ",", 
+                    RowBox[{
+                    "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                   "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "r1"}], ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"1.5", ",", "0"}], "}"}]}], "]"}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"PointSize", "[", "Large", "]"}], ",", "Black", ",", 
+                 
+                 RowBox[{"Point", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"r2", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<C\>\"", ",", "Large", ",", "Italic", ",", 
+                    RowBox[{
+                    "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                   "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"r2", ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "1.7"}], ",", "0"}], "}"}]}], "]"}], "}"}]}],
+               "}"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"DeleteCases", "[", 
+                RowBox[{
+                 RowBox[{"Range", "[", 
+                  RowBox[{
+                   RowBox[{"r2", "*", "2"}], ",", 
+                   RowBox[{"Round", "[", 
+                    RowBox[{"ansNo", " ", "*", " ", "1.4"}], "]"}], ",", 
+                   "2"}], "]"}], ",", "ansNo"}], "]"}], ",", "3"}], "]"}], 
+             ",", "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"StringForm", "[", 
+              RowBox[{
+              "\"\<This figure's bounds are concentric regular hexagons. \
+`1`=`2` and `3`=`4`. What is the length of the outside perimeter?\>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<AB\>\"", ",", "Italic"}], "]"}], ",", 
+               RowBox[{"r1", "-", "r2"}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"\"\<BC\>\"", ",", "Italic"}], "]"}], ",", 
+               RowBox[{"2", " ", "r2"}]}], "]"}], ",", 
+             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["195", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["59096", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "AcuteGoldenRhombohedron" -> {
+                "Acute Golden Rhom.", "Acute Golden Rhombohedron", 1}, {
+                "Antiprism", 4} -> {
+                "Square Antiprism", "Square Antiprism", 1}, {
+                "Antiprism", 5} -> {
+                "Pentagonal Antiprism", "Pentagonal Antiprism", 1}, {
+                "Antiprism", 6} -> {
+                "Hexagonal Antiprism", "Hexagonal Antiprism", 1}, {
+                "Antiprism", 7} -> {
+                "Heptagonal Antiprism", "Heptagonal Antiprism", 1}, {
+                "Antiprism", 8} -> {
+                "Octagonal Antiprism", "Octagonal Antiprism", 1}, {
+                "Antiprism", 9} -> {
+                "Nonagonal Antiprism", "Nonagonal Antiprism", 1}, {
+                "Antiprism", 10} -> {
+                "Decagonal Antiprism", "Decagonal Antiprism", 1}, 
+               "AugmentedCube" -> {"Augmented Cube", "Augmented Cube", 0}, 
+               "AugmentedDodecahedron" -> {
+                "Aug. Dodec.", "Augmented Dodecahedron", 1}, 
+               "AugmentedHexagonalPrism" -> {
+                "Aug. Hex. Prism", "Augmented Hexagonal Prism", 1}, 
+               "AugmentedPentagonalPrism" -> {
+                "Aug. Hex. Prism", "Augmented Pentagonal Prism", 1}, 
+               "AugmentedSphenocorona" -> {
+                "Aug. Sphen.", "Augmented Sphenocorona", 1}, 
+               "AugmentedTetrahedron" -> {
+                "Aug. Tetra.", "Augmented Tetrahedron", 0}, 
+               "AugmentedTriangularPrism" -> {
+                "Aug. Tri. Prism", "Augmented Triangular Prism", 1}, 
+               "AugmentedTridiminishedIcosahedron" -> {
+                "Aug. Tridim. Ico.", "Augmented Tridiminished Icosahedron", 
+                 1}, "AugmentedTruncatedCube" -> {
+                "Aug. Trunc. Cube", "Augmented Truncated Cube", 1}, 
+               "AugmentedTruncatedDodecahedron" -> {
+                "Aug. Trunc. Dodec.", "Augmented Truncated Dodecahedron", 1}, 
+               "AugmentedTruncatedTetrahedron" -> {
+                "Aug. Trunc. Tetra.", "Augmented Truncated Tetrahedron", 1}, 
+               "BiaugmentedPentagonalPrism" -> {
+                "Biaug. Pent. Prism", "Biaugmented Pentagonal Prism", 1}, 
+               "BiaugmentedTriangularPrism" -> {
+                "Biaug. Tri. Prism", "Biaugmented Triangular Prism", 1}, 
+               "BiaugmentedTruncatedCube" -> {
+                "Biaug. Trunc. Cube", "Biaugmented Truncated Cube", 1}, 
+               "BigyrateDiminishedRhombicosidodecahedron" -> {
+                "Bigy. Dim. Rhom.", 
+                 "Bigyrate Diminished Rhombicosidodecahedron", 1}, 
+               "Bilunabirotunda" -> {
+                "Biluna-birotunda", "Biluna-birotunda", 1}, 
+               "CsaszarPolyhedron" -> {
+                "Csaszar Poly.", "Csaszar Polyhedron", 0}, 
+               "Cube" -> {"Cube", "Cube", 1, 1}, 
+               "CubeFiveCompound" -> {
+                "Cube Five-Compound", "Cube Five-Compound", 0}, 
+               "CubeFourCompound" -> {
+                "Cube Four-Compound", "Cube Four-Compound", 0}, 
+               "CubeOctahedronCompound" -> {
+                "Cube-Oct. Comp.", "Cube-Octahedron Compound", 0}, 
+               "CubeOctahedronFiveCompound" -> {
+                "Cube-Oct. 5-Comp.", "Cube-Octahedron Five-Compound", 0}, 
+               "CubeOctahedronThreeCompound" -> {
+                "Cube-Oct. 3-Comp.", "Cube-Octahedron Three-Compound", 0}, 
+               "CubeSixCompound" -> {
+                "Cube Six-Compound", "Cube Six-Compound", 0}, 
+               "CubeTenCompound" -> {
+                "Cube Ten-Compound", "Cube Ten-Compound", 0}, 
+               "CubeThreeCompound" -> {
+                "Cube Three-Compound", "Cube Three-Compound", 0}, 
+               "CubeTwoCompound" -> {
+                "Cube Two-Compound", "Cube Two-Compound", 0}, 
+               "Cuboctahedron" -> {"Cuboctahedron", "Cuboctahedron", 1}, 
+               "DeltoidalHexecontahedron" -> {
+                "Delt. Hexecon.", "Deltoidal Hexecontahedron", 1}, 
+               "DeltoidalIcositetrahedron" -> {
+                "Delt. Ico. Tetra.", "Deltoidal Icositetrahedron", 1}, 
+               "DiminishedRhombicosidodecahedron" -> {
+                "Dim. Rhom. Ico. Dodec.", "Diminished Rhombicosidodecahedron",
+                  1}, {"Dipyramid", 3} -> {
+                "Tri. Dipyramid", "Trianglular Dipyramid", 1}, {
+                "Dipyramid", 4} -> {
+                "Square Dipyramid", "Square Dipyramid", 1}, {
+                "Dipyramid", 5} -> {
+                "Pent. Dipyramid", "Pentagonal Dipyramid", 1}, 
+               "DisdyakisDodecahedron" -> {
+                "Disdyakis Dodec.", "Disdyakis Dodecahedron", 1}, 
+               "DisdyakisTriacontahedron" -> {
+                "Disdyakis Triacon.", "Disdyakis Triacontahedron", 1}, 
+               "Disphenocingulum" -> {"Disphen.", "Disphenocingulum", 1}, 
+               "Dodecahedron" -> {"Dodecahedron", "Dodecahedron", 0}, 
+               "DodecahedronFiveCompound" -> {
+                "Dodec. 5-Comp.", "Dodecahedron Five-Compound", 0}, 
+               "DodecahedronIcosahedronCompound" -> {
+                "Dodec.-Ico. Comp.", "Dodecahedron-Icosahedron Compound", 0}, 
+               "DodecahedronSixCompound" -> {
+                "Dodec. 6-Comp.", "Dodecahedron Six-Compound", 0}, 
+               "DodecahedronSmallTriambicIcosahedronCompound" -> {
+                "Dodec. Sm. Tri. Ico. Comp.", 
+                 "Dodecahedron Small-Triambic Icosahedron Compound", 0}, {
+                "DodecahedronStellation", 1} -> {
+                "Dodec. Stellation", "Dodecahedron Stellation", 1}, 
+               "DodecahedronTwoCompound" -> {
+                "Dodec. 2-Comp.", "Dodecahedron Two-Compound", 0}, 
+               "DuererSolid" -> {"Duerer Solid", "Duerer Solid", 1}, 
+               "Echidnahedron" -> {"Echidnahedron", "Echidnahedron", 0}, 
+               "ElongatedDodecahedron" -> {
+                "Elong. Dodec.", "Elongated Dodecahedron", 1}, 
+               "ElongatedPentagonalCupola" -> {
+                "Elong. Pent. Cup.", "Elongated Pentagonal Cupola", 1}, 
+               "ElongatedPentagonalDipyramid" -> {
+                "Elong. Pent. Dipyramid", "Elongated Pentagonal Dipyramid", 
+                 1}, "ElongatedPentagonalGyrobicupola" -> {
+                "Elong. Pent. Gyr. Bicup.", 
+                 "Elongated Pentagonal Gyrobicupola", 1}, 
+               "ElongatedPentagonalGyrobirotunda" -> {
+                "Elong. Pent. Gyr. Birot.", 
+                 "Elongated Pentagonal Gyrobirotunda", 1}, 
+               "ElongatedPentagonalGyrocupolarotunda" -> {
+                "Elong. Pent. Gyr. CupRot.", 
+                 "Elongated Pentagonal Gyrocupolarotunda", 1}, 
+               "ElongatedPentagonalOrthobicupola" -> {
+                "Elong. Pent. Ort. Bicup.", 
+                 "Elongated Pentagonal Orthobicupola", 1}, 
+               "ElongatedPentagonalOrthobirotunda" -> {
+                "Elong. Pent. Ort. Birot.", 
+                 "Elongated Pentagonal Orthobirotunda", 1}, 
+               "ElongatedPentagonalOrthocupolarotunda" -> {
+                "Elong. Pent. Ort. CupRot.", 
+                 "Elongated Pentagonal Orthocupolarotunda", 1}, 
+               "ElongatedPentagonalPyramid" -> {
+                "Elong. Pent. Pyramid", "Elongated Pentagonal Pyramid", 1}, 
+               "ElongatedPentagonalRotunda" -> {
+                "Elong. Pent. Rotunda", "Elongated Pentagonal Rotunda", 1}, 
+               "ElongatedSquareCupola" -> {
+                "Elong. Square Cup.", "Elongated Square Cupola", 1}, 
+               "ElongatedSquareDipyramid" -> {
+                "Elong. Square Dipyr.", "Elongated Square Dipyramid", 1}, 
+               "ElongatedSquareGyrobicupola" -> {
+                "Elong. Sq. GyrCup.", "Elongated Square Gyrobicupola", 1}, 
+               "ElongatedSquarePyramid" -> {
+                "Elong. Sq. Pyramid", "Elongated Square Pyramid", 1}, 
+               "ElongatedTriangularCupola" -> {
+                "Elong. Tri. Cupola", "Elongated Triangular Cupola", 1}, 
+               "ElongatedTriangularDipyramid" -> {
+                "Elong. Tri. Dipyramid", "Elongated Triangular Dipyramid", 1},
+                "ElongatedTriangularGyrobicupola" -> {
+                "Elong. Tri. GyrBiCup.", "Elongated Triangular Gyrobicupola", 
+                 1}, "ElongatedTriangularOrthobicupola" -> {
+                "Elong. Tri. OrtBiCup.", "Elongated Triangular Orthobicupola",
+                  1}, "ElongatedTriangularPyramid" -> {
+                "Elong. Tri. Pyramid", "Elongated Triangular Pyramid", 1}, 
+               "EscherSolid" -> {"Escher Solid", "Escher Solid", 0}, 
+               "GreatDodecahedron" -> {
+                "Great Dodec.", "Great Dodecahedron", 0}, 
+               "GreatIcosahedron" -> {"Great Ico", "Great Icosahedron", 0}, 
+               "GreatRhombicosidodecahedron" -> {
+                "Great Rhom.", "Great Rhombicosidodecahedron", 1}, 
+               "GreatRhombicTriacontahedron" -> {
+                "Great Rhom. Tri.", "Great Rhombic Triacontahedron", 0}, 
+               "GreatRhombicuboctahedron" -> {
+                "Great RhomCubOct.", "Great Rhombicuboctahedron", 1}, 
+               "GreatStellatedDodecahedron" -> {
+                "Great Stell. Dodec.", "Great Stellated Dodecahedron", 0}, 
+               "GyrateBidiminishedRhombicosidodecahedron" -> {
+                "Gyr. Bidim. RhomIcoDodec.", 
+                 "Gyrate Bidiminished Rhombicosidodecahedron", 1}, 
+               "GyrateRhombicosidodecahedron" -> {
+                "Gyr. RomIcoDodec.", "Gyrate Rhombicosidodecahedron", 1}, 
+               "Gyrobifastigium" -> {"Gyrobifastigium", "Gyrobifastigium", 1},
+                "GyroelongatedPentagonalBicupola" -> {
+                "GyrElong. Pent. Bicup.", 
+                 "Gyro-elongated Pentagonal Bicupola", 1}, 
+               "GyroelongatedPentagonalBirotunda" -> {
+                "GyrElong. Pent. Birot.", 
+                 "Gyro-elongated Pentagonal Birotunda", 1}, 
+               "GyroelongatedPentagonalCupola" -> {
+                "GyrElong. Pent. Cup.", "Gyro-elongated Pentagonal Cupola", 
+                 1}, "GyroelongatedPentagonalCupolarotunda" -> {
+                "GyrElong. Pent. CupRot.", 
+                 "Gyro-elongated Pentagonal Cupolarotunda", 1}, 
+               "GyroelongatedPentagonalPyramid" -> {
+                "GyrElong. Pent. Pyramid", 
+                 "Gyro-elongated Pentagonal Pyramid", 1}, 
+               "GyroelongatedPentagonalRotunda" -> {
+                "GyrElong. Pent. Rot.", "Gyro-elongated Pentagonal Rotunda", 
+                 1}, "GyroelongatedSquareBicupola" -> {
+                "GyrElong. Sq. Bicup.", "Gyro-elongated Square Bicupola", 1}, 
+               "GyroelongatedSquareCupola" -> {
+                "GyrElong Sq. Cup.", "Gyro-elongated Square Cupola", 1}, 
+               "GyroelongatedSquareDipyramid" -> {
+                "GyrElong. Sq. Dipyr.", "Gyro-elongated Square Dipyramid", 1},
+                "GyroelongatedSquarePyramid" -> {
+                "GyrElong Sq. Pyramid", "Gyro-elongated Square Pyramid", 1}, 
+               "GyroelongatedTriangularBicupola" -> {
+                "GyrElong. Tri. Bicup.", "Gyro-elongated Triangular Bicupola",
+                  1}, "GyroelongatedTriangularCupola" -> {
+                "GyrElong. Tri. Cup.", "Gyro-elongated Triangular Cupola", 1},
+                "Hebesphenomegacorona" -> {
+                "HebSphen. MegCorona.", "Hebesphenomegacorona", 1}, 
+               "Icosahedron" -> {"Icosahedron", "Icosahedron", 1}, 
+               "IcosahedronFiveCompound" -> {
+                "Ico 5-Comp.", "Icosahedron Five-Compound", 0}, 
+               "IcosahedronSixCompound" -> {
+                "Ico 6-Comp.", "Icosahedron Six-Compound", 0}, {
+                "IcosahedronStellation", 11} -> {
+                "Ico. Stellation", "Icosahedron Stellation", 0}, 
+               "IcosahedronTwoCompound" -> {
+                "Ico. 2-Comp.", "Icosahedron Two-Compound", 0}, 
+               "Icosidodecahedron" -> {"Ico. Dodec.", "Icosidodecahedron", 1},
+                "JabulaniPolyhedron" -> {
+                "Jabulani Poly.", "Jabulani Polyhedron", 1}, 
+               "JessensOrthogonalIcosahedron" -> {
+                "Jessen's Ort. Ico.", "Jessen's Orthogonal Icosahedron", 1}, 
+               "MathematicaPolyhedron" -> {
+                "Mathematica Poly.", "Mathematica Polyhedron (Spikey)", 1}, 
+               "MetabiaugmentedDodecahedron" -> {
+                "MetBiAug. Dodec.", "Metabiaugmented Dodecahedron", 1}, 
+               "MetabiaugmentedHexagonalPrism" -> {
+                "MetBiAug. Hex. Prism", "Metabiaugmented Hexagonal Prism", 1},
+                "MetabiaugmentedTruncatedDodecahedron" -> {
+                "MetBiAug. Trunc. Dodec.", 
+                 "Metabiaugmented Truncated Dodecahedron", 1}, 
+               "MetabidiminishedIcosahedron" -> {
+                "MetBiDim. Ico.", "Metabidiminished Icosahedron", 1}, 
+               "MetabidiminishedRhombicosidodecahedron" -> {
+                "MetBiDim. RhomIcoDodec.", 
+                 "Metabidiminished Rhombicosidodecahedron", 1}, 
+               "MetabigyrateRhombicosidodecahedron" -> {
+                "MetBiGyr. RhomIcoDodec.", 
+                 "Metabigyrate Rhombicosidodecahedron", 1}, 
+               "MetagyrateDiminishedRhombicosidodecahedron" -> {
+                "MetGyr. Dim. RhomIcoDodec.", 
+                 "Metagyrate Diminished Rhombicosidodecahedron", 1}, 
+               "ObtuseGoldenRhombohedron" -> {
+                "Obt. Golden Rhom.", "Obtuse Golden Rhombohedron", 1}, 
+               "Octahedron" -> {"Octahedron", "Octahedron", 1}, 
+               "OctahedronFiveCompound" -> {
+                "Oct. 5-Comp.", "Octahedron Five-Compound", 0}, {
+                "OctahedronFourCompound", 1} -> {
+                "Oct. 4-Comp.", "Octahedron Four-Compound", 0}, 
+               "OctahedronTenCompound" -> {
+                "Oct. 10-Comp.", "Octahedron Ten-Compound", 0}, 
+               "OctahedronThreeCompound" -> {
+                "Oct. 3-Comp.", "Octahedron Three-Compound", 0}, 
+               "ParabiaugmentedDodecahedron" -> {
+                "ParBiAug. Dodec.", "Parabiaugmented Dodecahedron", 1}, 
+               "ParabiaugmentedHexagonalPrism" -> {
+                "ParBiAug. Hex. Prism", "Parabiaugmented Hexagonal Prism", 1},
+                "ParabiaugmentedTruncatedDodecahedron" -> {
+                "ParBiAug. Trunc. Dodec.", 
+                 "Parabiaugmented Truncated Dodecahedron", 1}, 
+               "ParabidiminishedRhombicosidodecahedron" -> {
+                "ParBiDim. RhomIcoDodec.", 
+                 "Parabidiminished Rhombicosidodecahedron", 1}, 
+               "ParabigyrateRhombicosidodecahedron" -> {
+                "ParBiGyr. RhomIcoDodec.", 
+                 "Parabigyrate Rhombicosidodecahedron", 1}, 
+               "ParagyrateDiminishedRhombicosidodecahedron" -> {
+                "ParGy. Dim. RhomIcoDodec.", 
+                 "Paragyrate Diminished Rhombicosidodecahedron", 1}, 
+               "PentagonalCupola" -> {"Pent. Cupola", "Pentagonal Cupola", 1},
+                "PentagonalGyrobicupola" -> {
+                "Pent. GyrBicup.", "Pentagonal Gyrobicupola", 1}, 
+               "PentagonalGyrocupolarotunda" -> {
+                "Pent. GyrCupRot.", "Pentagonal Gyrocupolarotunda", 1}, 
+               "PentagonalHexecontahedron" -> {
+                "Pent. HexCon.", "Pentagonal Hexecontahedron", 1}, 
+               "PentagonalIcositetrahedron" -> {
+                "Pent. IcoTetra.", "Pentagonal Icositetrahedron", 1}, 
+               "PentagonalOrthobicupola" -> {
+                "Pent. OrtBiCup.", "Pentagonal Orthobicupola", 1}, 
+               "PentagonalOrthobirotunda" -> {
+                "Pent. OrtBiRot.", "Pentagonal Orthobirotunda", 1}, 
+               "PentagonalOrthocupolarotunda" -> {
+                "Pent. OrtCupRot.", "Pentagonal Orthocupolarotunda", 1}, 
+               "PentagonalPrismSixCompound" -> {
+                "Pent. Prism 6-Comp.", "Pentagonal Prism Six-Compound", 0}, 
+               "PentagonalRotunda" -> {
+                "Pentagonal Rotunda" "Pentagonal Rotunda", 1}, 
+               "PentakisDodecahedron" -> {
+                "Pentaki's Dodecahedron", "Pentaki's Dodecahedron", 1}, {
+                "Prism", 3} -> {"Triangular Prism", "Triangular Prism", 1}, {
+                "Prism", 5} -> {"Pentagonal Prism", "Pentagonal Prism", 1}, {
+                "Prism", 6} -> {"Hexagonal Prism", "Hexagonal Prism", 1}, {
+                "Prism", 7} -> {"Heptagonal Prism", "Heptagonal Prism", 1}, {
+                "Prism", 8} -> {"Octagonal Prism", "Octagonal Prism", 1}, {
+                "Prism", 9} -> {"Nonagonal Prism", "Nonagonal Prism", 1}, {
+                "Prism", 10} -> {"Decagonal Prism", "Decagonal Prism", 1}, {
+                "Pyramid", 4} -> {"Square Pyramid", "Square Pyramid", 1}, {
+                "Pyramid", 5} -> {
+                "Pentagonal Pyramid", "Pentagonal Pyramid", 1}, 
+               "RhombicDodecahedron" -> {
+                "Rhombic Dodec.", "Rhombic Dodecahedron", 1}, {
+                "RhombicDodecahedronStellation", 3} -> {
+                "Rhom. Dodec. Stell.", "Rhombic Dodecahedron Stellation", 0}, 
+               "RhombicEnneacontahedron" -> {
+                "Rhom. EnCon.", "Rhombic Enneacontahedron", 0}, 
+               "RhombicHexecontahedron" -> {
+                "Rhom. HexCon.", "Rhombic Hexecontahedron", 1}, 
+               "RhombicIcosahedron" -> {
+                "Rhombic Icosahedron", "Rhombic Icosahedron", 1}, 
+               "RhombicTriacontahedron" -> {
+                "Rhombic TriCon.", "Rhombic Triacontahedron", 1}, 
+               "SmallRhombicosidodecahedron" -> {
+                "Sm. RhomIcoDodec.", "Small Rhombicosidodecahedron", 1}, 
+               "SmallRhombicuboctahedron" -> {
+                "Sm. RhomCubOct.", "Small Rhombicuboctahedron", 1}, 
+               "SmallStellatedDodecahedron" -> {
+                "Sm. Stell. Dodec.", "Small Stellated Dodecahedron", 0}, 
+               "SmallTriakisOctahedron" -> {
+                "Sm. Triakis Oct.", "Small Triakis Octahedron", 1}, 
+               "SmallTriambicIcosahedron" -> {
+                "Sm. Triambic Ico.", "Small Triambic Icosahedron", 0}, 
+               "SnubCube" -> {"Snub Cube", "Snub Cube", 1}, 
+               "SnubDisphenoid" -> {"Snub Disphenoid", "Snub Disphenoid", 1}, 
+               "SnubDodecahedron" -> {
+                "Snub Dodecahedron", "Snub Dodecahedron", 1}, 
+               "SnubSquareAntiprism" -> {
+                "Snub Sq. Antiprism", "Snub Square Antiprism", 1}, 
+               "Sphenocorona" -> {"Sphenocorona", "Sphenocorona", 1}, 
+               "Sphenomegacorona" -> {
+                "Sphenomegacorona", "Sphenomegacorona", 1}, 
+               "SquareCupola" -> {"Square Cupola", "Square Cupola", 1}, 
+               "SquareGyrobicupola" -> {
+                "Sq. Gyrobicupola", "Square Gyrobicupola", 1}, 
+               "SquareOrthobicupola" -> {
+                "Sq. OrtBiCup.", "Square Orthobicupola", 1}, 
+               "SquashedDodecahedron" -> {
+                "Squashed Dodec.", "Squashed Dodecahedron", 0}, 
+               "StellaOctangula" -> {
+                "Stella Octangula", "Stella Octangula", 0}, 
+               "SzilassiPolyhedron" -> {
+                "Szilassi Poly.", "Szilassi Polyhedron", 0}, 
+               "TetragonalAntiwedge" -> {
+                "Tetra. Antiwedge", "Tetragonal Antiwedge", 1}, 
+               "Tetrahedron" -> {"Tetrahedron", "Tetrahedron", 1}, 
+               "TetrahedronFiveCompound" -> {
+                "Tetra. 5-Comp.", "Tetrahedron Five-Compound", 0}, {
+                "TetrahedronFourCompound", 3} -> {
+                "Tetra. 4-Comp.", "Tetrahedron Four-Compound", 0}, 
+               "TetrahedronSixCompound" -> {
+                "Tetra. 6-Comp.", "Tetrahedron Six-Compound", 0}, 
+               "TetrahedronTenCompound" -> {
+                "Tetra. 10-Comp.", "Tetrahedron Ten-Compound", 0}, 
+               "TetrahedronThreeCompound" -> {
+                "Tetra. 3-Comp.", "Tetrahedron Three-Compound", 0}, 
+               "TetrahedronTwoCompound" -> {
+                "Tetra. 2-Comp.", "Tetrahedron Two-Compound", 0}, 
+               "TetrakisHexahedron" -> {
+                "Tetrakis Hex.", "Tetrakis Hexahedron", 1}, 
+               "TriakisIcosahedron" -> {
+                "Triakis Ico.", "Triakis Icosahedron", 1}, 
+               "TriakisTetrahedron" -> {
+                "Triakis Tetra.", "Triakis Tetrahedron", 1}, 
+               "TriakisTruncatedTetrahedron" -> {
+                "Triakis Trunc. Tetra.", "Triakis Truncated Tetrahedron", 1}, 
+               "TriangularCupola" -> {
+                "Triangular Cupola", "Triangular Cupola", 1}, 
+               "TriangularHebesphenorotunda" -> {
+                "Tri. HebSphenRot.", "Triangular Hebesphenorotunda", 1}, 
+               "TriangularOrthobicupola" -> {
+                "Tri. OrtBiCup.", "Triangular Orthobicupola", 1}, 
+               "TriaugmentedDodecahedron" -> {
+                "TriAug. Dodec.", "Triaugmented Dodecahedron", 1}, 
+               "TriaugmentedHexagonalPrism" -> {
+                "TriAug. Hex. Prism", "Triaugmented Hexagonal Prism", 1}, 
+               "TriaugmentedTriangularPrism" -> {
+                "TriAug. Tri. Prism", "Triaugmented Triangular Prism", 1}, 
+               "TriaugmentedTruncatedDodecahedron" -> {
+                "TriAug. Trunc. Dodec.", 
+                 "Triaugmented Truncated Dodecahedron", 1}, 
+               "TridiminishedIcosahedron" -> {
+                "TriDim. Icosahedron", "Tridiminished Icosahedron", 1}, 
+               "TridiminishedRhombicosidodecahedron" -> {
+                "TriDim. RhomIcoDodec.", 
+                 "Tridiminished Rhombicosidodecahedron", 1}, 
+               "TrigyrateRhombicosidodecahedron" -> {
+                "TriGyr. RhomIcoDodec.", "Trigyrate Rhombicosidodecahedron", 
+                 1}, "TruncatedCube" -> {
+                "Truncated Cube", "Truncated Cube", 1}, 
+               "TruncatedDodecahedron" -> {
+                "Trunc. Dodec.", "Truncated Dodecahedron", 1}, 
+               "TruncatedIcosahedron" -> {
+                "Trunc. Ico.", "Truncated Icosahedron", 1}, 
+               "TruncatedOctahedron" -> {
+                "Trunc. Octahedron", "Truncated Octahedron", 1}, 
+               "TruncatedTetrahedron" -> {
+                "Trunc. Tetrahedron", "Truncated Tetrahedron", 1}],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"faceColor", "=", 
+           RowBox[{"RandomColor", "[", 
+            RowBox[{"Hue", "[", 
+             RowBox[{"_", ",", "_", ",", 
+              RowBox[{"NormalDistribution", "[", 
+               RowBox[{"1", ",", ".02"}], "]"}]}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"scen", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"data", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", 
+                 RowBox[{"-", "1"}]}], "\[RightDoubleBracket]"}], "\[Equal]", 
+               "1"}], "&&", 
+              RowBox[{
+               RowBox[{"RandomReal", "[", "]"}], "<", ".5"}]}], ",", "2", ",",
+              "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"scen", "\[Equal]", "2"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"pic", "=", 
+              RowBox[{
+               RowBox[{"PolyhedronData", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Keys", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+                  "1", "\[RightDoubleBracket]"}], ",", "\"\<Net\>\""}], "]"}],
+                "/.", 
+               RowBox[{
+                RowBox[{"Graphics", "[", 
+                 RowBox[{"{", "pr__", "}"}], "]"}], "\[Rule]", 
+                RowBox[{"Graphics", "[", 
+                 RowBox[{
+                  RowBox[{"{", "pr", "}"}], ",", 
+                  RowBox[{"ImageSize", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", "480", "}"}], ",", 
+                    RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}]}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+             "q", "=", "\"\<This net folds to make which polyhedron?\>\""}]}],
+             ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"pic", "=", 
+              RowBox[{"Graphics3D", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"FaceForm", "[", "faceColor", "]"}], ",", 
+                  RowBox[{"Opacity", "[", ".9", "]"}], ",", 
+                  RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"PolyhedronData", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Keys", "[", "data", "]"}], 
+                    "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                    ",", "\"\<Polygons\>\""}], "]"}]}], "}"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", "480", "}"}], ",", 
+                   RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+             "q", "=", "\"\<What kind of polyhedron is this?\>\""}]}]}], 
+           "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Tooltip", "[", 
+              RowBox[{
+               RowBox[{
+               "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+               ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                 RowBox[{
+                 "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+                 ",", "28", ",", 
+                 RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}],
+                  ",", "Blue"}], "]"}]}], "]"}], "&"}], "/@", 
+            RowBox[{"Values", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Geom6\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6858309546519327`*^9, 3.685831016197304*^9}, {
    3.685831544752861*^9, 3.685831629404726*^9}, {3.6858317169127693`*^9, 
@@ -215,13 +747,160 @@ and `3`=`4`. What is the length of the outside perimeter?\>\"", ",",
    3.685888495039469*^9, 3.685888523493321*^9}, {3.685888564311172*^9, 
    3.685888702269312*^9}, {3.6858891528162327`*^9, 3.68588916162953*^9}, {
    3.685889300966509*^9, 3.685889313316577*^9}, {3.6858896901612177`*^9, 
-   3.6858896932635193`*^9}},ExpressionUUID->"661ca9c8-3202-4ce6-a37b-\
-f0c6c05a666e"]
+   3.6858896932635193`*^9}, {3.7888847372737093`*^9, 3.788884869164866*^9}, {
+   3.7888880581239223`*^9, 3.788888064476562*^9}, {3.788888512204108*^9, 
+   3.788888528634904*^9}, {3.788888565627569*^9, 3.788888620332152*^9}, {
+   3.788888668229342*^9, 3.788888676285281*^9}, {3.788888811609222*^9, 
+   3.788888894506117*^9}, {3.788889110904105*^9, 3.7888891556893673`*^9}, 
+   3.788889189919979*^9, {3.788889252047628*^9, 3.788889287808979*^9}, {
+   3.788889341052369*^9, 3.788889346671804*^9}, {3.7888894019034863`*^9, 
+   3.788889404536767*^9}, {3.788889456375235*^9, 3.788889468359518*^9}, {
+   3.788889570927265*^9, 3.788889571136072*^9}, {3.788889612635103*^9, 
+   3.7888896421345*^9}, {3.788889830794924*^9, 3.7888898527835093`*^9}, {
+   3.7888899086742277`*^9, 3.788889922999173*^9}, {3.7889463381547813`*^9, 
+   3.788946406947794*^9}, {3.7889464727864122`*^9, 3.7889465521793747`*^9}, {
+   3.788946897444796*^9, 3.788946905041882*^9}, {3.788946945144415*^9, 
+   3.788946962689192*^9}, {3.7889470250567007`*^9, 3.788947055082204*^9}, {
+   3.788947115113208*^9, 3.788947145602686*^9}, {3.788947192024723*^9, 
+   3.788947213657844*^9}, {3.788947277552271*^9, 3.7889472968893967`*^9}, {
+   3.788949924519906*^9, 3.788949960297389*^9}, {3.788950043192218*^9, 
+   3.788950073145054*^9}, {3.788950145071725*^9, 3.7889501788329573`*^9}, {
+   3.7889502412396107`*^9, 3.788950262496646*^9}, {3.788950307695565*^9, 
+   3.7889503298248034`*^9}, {3.788950383719267*^9, 3.7889504089847393`*^9}, {
+   3.788950478422802*^9, 3.788950552831534*^9}, 3.788950647206252*^9, {
+   3.788950713994542*^9, 3.788950762335182*^9}, {3.7889508402615747`*^9, 
+   3.7889508848308573`*^9}, {3.788950966001586*^9, 3.788951071102231*^9}, {
+   3.788951109180546*^9, 3.788951132710266*^9}, {3.788951175905056*^9, 
+   3.788951196989998*^9}, {3.788951361433795*^9, 3.7889513995728188`*^9}, {
+   3.788951439335338*^9, 3.7889514732762823`*^9}, {3.78895152407929*^9, 
+   3.788951553140004*^9}, {3.7889515904229717`*^9, 3.7889516893156967`*^9}, {
+   3.788951947349927*^9, 3.788951975962879*^9}, {3.7889520240537148`*^9, 
+   3.7889520681469297`*^9}, {3.788952180360723*^9, 3.78895220446601*^9}, {
+   3.788952262885242*^9, 3.7889522780162907`*^9}, {3.788952314056202*^9, 
+   3.7889523934493*^9}, 3.7889524342042513`*^9, {3.788952467816113*^9, 
+   3.7889524945055857`*^9}, {3.7889525539559298`*^9, 3.788952675474132*^9}, {
+   3.7889527230108957`*^9, 3.78895279380011*^9}, {3.788952905558487*^9, 
+   3.788952961463623*^9}, {3.788953003522681*^9, 3.78895304303118*^9}, {
+   3.788953093954458*^9, 3.788953131095091*^9}, {3.788953162489965*^9, 
+   3.788953238405284*^9}, {3.788953329597316*^9, 3.7889533545024023`*^9}, {
+   3.788953406693119*^9, 3.788953471318228*^9}, {3.788953512257279*^9, 
+   3.788953593190013*^9}, {3.788953712176008*^9, 3.788953755477283*^9}, {
+   3.788953845679967*^9, 3.788953872524831*^9}, {3.788953934095469*^9, 
+   3.788953972987545*^9}, {3.788954026171487*^9, 3.788954057508616*^9}, {
+   3.788954144159588*^9, 3.788954164091695*^9}, {3.7889542195194387`*^9, 
+   3.788954369525558*^9}, {3.7889544242257137`*^9, 3.788954448251371*^9}, {
+   3.7889547216883707`*^9, 3.788954775945631*^9}, {3.788954815829351*^9, 
+   3.788954850225317*^9}, {3.788954896093217*^9, 3.7889549340491447`*^9}, {
+   3.7889550071722*^9, 3.788955034513299*^9}, {3.788955087339637*^9, 
+   3.788955125824501*^9}, {3.788955174731607*^9, 3.788955231248138*^9}, {
+   3.788955281843299*^9, 3.788955309392332*^9}, {3.788955363555634*^9, 
+   3.788955386223716*^9}, {3.788955464547593*^9, 3.788955497144437*^9}, {
+   3.7889555434114923`*^9, 3.7889555795621634`*^9}, {3.788955646763392*^9, 
+   3.7889557532240543`*^9}, {3.7889558158669643`*^9, 3.788955845343504*^9}, {
+   3.788955891586754*^9, 3.788955914463265*^9}, {3.788955962946615*^9, 
+   3.788956000079048*^9}, {3.788956045050013*^9, 3.788956143494885*^9}, {
+   3.788956178513693*^9, 3.788956196550555*^9}, {3.788956238481451*^9, 
+   3.788956257118483*^9}, {3.788956289250043*^9, 3.7889563099982224`*^9}, {
+   3.7889563569375887`*^9, 3.788956368860856*^9}, {3.788956413020331*^9, 
+   3.788956428934132*^9}, {3.788956482508328*^9, 3.7889565132378273`*^9}, {
+   3.788956567640854*^9, 3.7889566543014174`*^9}, {3.7889573265184193`*^9, 
+   3.788957360259348*^9}, {3.7889574061347027`*^9, 3.788957429323249*^9}, {
+   3.7889574809979467`*^9, 3.788957648257913*^9}, {3.788957696644953*^9, 
+   3.788957728937752*^9}, {3.788968586549135*^9, 3.788968605929574*^9}, {
+   3.788968638432328*^9, 3.788968641946294*^9}, {3.788968709285574*^9, 
+   3.788968736561461*^9}, {3.7889687672919683`*^9, 3.788968803457514*^9}, {
+   3.788968878076106*^9, 3.788968905449028*^9}, {3.788968952147443*^9, 
+   3.788968974592533*^9}, {3.788969033283358*^9, 3.788969074496406*^9}, {
+   3.78896913410566*^9, 3.788969177271618*^9}, {3.788969313314241*^9, 
+   3.7889693380545883`*^9}, {3.788969394785522*^9, 3.788969417431017*^9}, {
+   3.788969507384797*^9, 3.788969563305217*^9}, {3.788969598355939*^9, 
+   3.788969614549205*^9}, {3.788970577086261*^9, 3.7889706049625*^9}, {
+   3.788970654093788*^9, 3.7889706792662086`*^9}, {3.788970726021563*^9, 
+   3.7889707641778297`*^9}, {3.788970847837035*^9, 3.7889708699455233`*^9}, {
+   3.7889709193085337`*^9, 3.788970979904901*^9}, {3.788971077563929*^9, 
+   3.788971095424412*^9}, {3.788971139395585*^9, 3.7889711742407217`*^9}, {
+   3.788971231430594*^9, 3.78897129718232*^9}, {3.78897133720592*^9, 
+   3.788971338743648*^9}, {3.788971418746262*^9, 3.788971496758966*^9}, {
+   3.788971556281877*^9, 3.7889715617189007`*^9}, {3.7889716059942217`*^9, 
+   3.78897165556958*^9}, {3.788971708796647*^9, 3.78897174716127*^9}, {
+   3.7889717774468813`*^9, 3.7889718168457203`*^9}, {3.788971911889263*^9, 
+   3.788971997149148*^9}, {3.7889720387170143`*^9, 3.7889720411810417`*^9}, {
+   3.788972105976944*^9, 3.788972171086245*^9}, {3.788972219537651*^9, 
+   3.788972256518271*^9}, {3.788972334681357*^9, 3.788972387220594*^9}, {
+   3.788972453592596*^9, 3.788972483813816*^9}, {3.788972622387171*^9, 
+   3.788972646516449*^9}, {3.788972706534975*^9, 3.788972727892118*^9}, {
+   3.788972781398999*^9, 3.78897279976418*^9}, {3.788972860918511*^9, 
+   3.788972886979855*^9}, {3.7889729476864862`*^9, 3.788972981099629*^9}, {
+   3.788973021271022*^9, 3.7889730558672*^9}, {3.788973100430483*^9, 
+   3.7889731261390038`*^9}, {3.788973294565968*^9, 3.788973336880769*^9}, {
+   3.7889733776616793`*^9, 3.788973409601906*^9}, {3.788973470525601*^9, 
+   3.788973476081676*^9}, {3.788973539653311*^9, 3.788973573921309*^9}, {
+   3.7889744697068453`*^9, 3.7889744876719112`*^9}, {3.788974530035449*^9, 
+   3.788974556943928*^9}, {3.788974588826704*^9, 3.7889746269424953`*^9}, {
+   3.7889746680909567`*^9, 3.7889746926953373`*^9}, {3.7889747826827917`*^9, 
+   3.788974817341508*^9}, {3.788974850223671*^9, 3.788974854710992*^9}, {
+   3.7889749370580683`*^9, 3.7889749621089563`*^9}, {3.788975019988706*^9, 
+   3.788975046802075*^9}, {3.788975080940845*^9, 3.7889751021820908`*^9}, {
+   3.788975146465766*^9, 3.788975281541662*^9}, {3.788975320048358*^9, 
+   3.788975344678226*^9}, {3.7889753850040817`*^9, 3.7889754143418427`*^9}, {
+   3.78897544747578*^9, 3.788975530919236*^9}, {3.788975573820694*^9, 
+   3.788975594149189*^9}, {3.788975646024424*^9, 3.78897565639631*^9}, {
+   3.7889756960317583`*^9, 3.788975753437693*^9}, {3.788975798643166*^9, 
+   3.788975823683679*^9}, {3.788975883103462*^9, 3.78897590366086*^9}, {
+   3.7889759654030037`*^9, 3.788975994355866*^9}, 3.788976061240163*^9, {
+   3.788976100890926*^9, 3.788976130187708*^9}, {3.7889762201747503`*^9, 
+   3.788976256507471*^9}, {3.7889762958784733`*^9, 3.7889763247878113`*^9}, {
+   3.788976373902136*^9, 3.788976405115141*^9}, {3.788976452366149*^9, 
+   3.788976489770905*^9}, {3.788976527518271*^9, 3.7889765591867657`*^9}, {
+   3.78897659859797*^9, 3.788976611747079*^9}, {3.7889776213254423`*^9, 
+   3.788977648222763*^9}, {3.7889777162583303`*^9, 3.78897777523862*^9}, 
+   3.78897787854165*^9, {3.7889779455532713`*^9, 3.788977973309923*^9}, {
+   3.788978380335957*^9, 3.788978413106306*^9}, {3.788978461599307*^9, 
+   3.78897847695584*^9}, {3.788978564121909*^9, 3.788978614355345*^9}, {
+   3.788978699665514*^9, 3.788978724674258*^9}, {3.788978769654949*^9, 
+   3.788978906666568*^9}, {3.788978964205865*^9, 3.788979012090802*^9}, {
+   3.788979066653627*^9, 3.7889791084584417`*^9}, {3.788979185549286*^9, 
+   3.788979264049506*^9}, {3.78897932554908*^9, 3.788979345025877*^9}, {
+   3.788979397373356*^9, 3.788979422577179*^9}, {3.788979471892106*^9, 
+   3.788979481737588*^9}, {3.788979522083894*^9, 3.7889795427689753`*^9}, {
+   3.788979669091607*^9, 3.788979699776555*^9}, {3.7889797360197153`*^9, 
+   3.788979777088385*^9}, {3.788979819435051*^9, 3.7889798402087507`*^9}, {
+   3.788979870291608*^9, 3.7889798943688583`*^9}, {3.7889799377244587`*^9, 
+   3.788979959535591*^9}, {3.7889799993305683`*^9, 3.788980062474053*^9}, {
+   3.788980103221633*^9, 3.788980113791212*^9}, {3.7889801927059793`*^9, 
+   3.788980233866975*^9}, {3.788980266301127*^9, 3.788980289366725*^9}, {
+   3.788980328833506*^9, 3.788980351119087*^9}, {3.78898039747351*^9, 
+   3.788980424542656*^9}, {3.788980468730646*^9, 3.788980492574914*^9}, {
+   3.7889805296985703`*^9, 3.788980556470915*^9}, {3.788980716249803*^9, 
+   3.788980739006157*^9}, {3.788980780786314*^9, 3.788980814462071*^9}, {
+   3.788980952632637*^9, 3.788980973629961*^9}, {3.788981024992784*^9, 
+   3.788981112045145*^9}, {3.788982069005636*^9, 3.788982155674189*^9}, {
+   3.788982213005067*^9, 3.788982238329681*^9}, {3.788982335397434*^9, 
+   3.788982358313105*^9}, {3.788982411644924*^9, 3.788982503232423*^9}, {
+   3.7889838131956863`*^9, 3.788983918261343*^9}, {3.788983951857757*^9, 
+   3.7889840381222878`*^9}, {3.788984334506729*^9, 3.78898477128224*^9}, {
+   3.7889848058856907`*^9, 3.788986382024452*^9}, {3.788986673776505*^9, 
+   3.788986765512883*^9}, {3.7889867994569283`*^9, 3.788987393144968*^9}, {
+   3.788987766705887*^9, 3.788987770912273*^9}, {3.78898780916352*^9, 
+   3.788987902881234*^9}, {3.7889887419041967`*^9, 3.7889888940781097`*^9}, {
+   3.788989483630724*^9, 3.78899117007172*^9}, {3.788991229334365*^9, 
+   3.788991420686689*^9}, {3.788991545439845*^9, 3.7889915731744337`*^9}, {
+   3.788995454280717*^9, 3.7889955199550133`*^9}, {3.788995563698318*^9, 
+   3.788995673729357*^9}, {3.788995960654928*^9, 3.7889961695861883`*^9}, {
+   3.788996592613556*^9, 3.7889966499836817`*^9}, {3.7889966988346977`*^9, 
+   3.788996916422016*^9}, {3.788996959333783*^9, 3.788996978846179*^9}, {
+   3.788997393059664*^9, 3.788997437139657*^9}, {3.788997537499551*^9, 
+   3.7889975776110888`*^9}, {3.788997614987265*^9, 3.788997622657022*^9}, {
+   3.788997670963003*^9, 3.788997695499042*^9}, {3.788997732467085*^9, 
+   3.788997735978642*^9}, {3.78899976810408*^9, 3.788999826380533*^9}, {
+   3.788999974892241*^9, 3.789000010097701*^9}, {3.7890000560363827`*^9, 
+   3.789000084547971*^9}},
+ CellLabel->
+  "In[5885]:=",ExpressionUUID->"661ca9c8-3202-4ce6-a37b-f0c6c05a666e"]
 },
-WindowSize->{1231, 1029},
-WindowMargins->{{2, Automatic}, {Automatic, 33}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1553, 1395},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -235,7 +914,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 9320, 198, 514, "Input",ExpressionUUID->"661ca9c8-3202-4ce6-a37b-f0c6c05a666e"]
+Cell[558, 20, 49671, 878, 928, "Input",ExpressionUUID->"661ca9c8-3202-4ce6-a37b-f0c6c05a666e"]
 }
 ]
 *)
