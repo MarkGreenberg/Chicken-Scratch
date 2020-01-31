@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25735,        493]
-NotebookOptionsPosition[     25398,        476]
-NotebookOutlinePosition[     25758,        492]
-CellTagsIndexPosition[     25715,        489]
+NotebookDataLength[     31777,        616]
+NotebookOptionsPosition[     31484,        603]
+NotebookOutlinePosition[     31821,        618]
+CellTagsIndexPosition[     31778,        615]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -28,105 +26,115 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{
-       "q", "=", "\"\<This frieze pattern fits into which category?\>\""}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"groups", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "\"\<hop, or T\>\"", ",", "\"\<spinning hop, or TR\>\"", ",", 
-          "\"\<step, or TG\>\"", ",", "\"\<sidle, or TV\>\"", ",", 
-          "\"\<jump, or THG\>\"", ",", "\"\<spinning sidle, or TRVG\>\"", 
-          ",", "\"\<spinning jump, or TRHVG\>\""}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"pattern", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"1", ",", "7"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"group", "=", 
-        RowBox[{"groups", "[", 
-         RowBox[{"[", "pattern", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Take", "[", 
-         RowBox[{
-          RowBox[{"DeleteDuplicates", "[", 
-           RowBox[{"Prepend", "[", 
-            RowBox[{
-             RowBox[{"RandomSample", "[", 
-              RowBox[{"groups", ",", "4"}], "]"}], ",", "group"}], "]"}], 
-           "]"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]",
-        "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
           RowBox[{
-           RowBox[{"color1", "=", 
-            RowBox[{"RGBColor", "[", 
-             RowBox[{"Table", "[", 
+          "q", "=", "\"\<This frieze pattern fits into which category?\>\""}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"groups", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<hop, or T\>\"", ",", "\"\<spinning hop, or TR\>\"", ",", 
+             "\"\<step, or TG\>\"", ",", "\"\<sidle, or TV\>\"", ",", 
+             "\"\<jump, or THG\>\"", ",", "\"\<spinning sidle, or TRVG\>\"", 
+             ",", "\"\<spinning jump, or TRHVG\>\""}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pattern", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "7"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"group", "=", 
+           RowBox[{
+           "groups", "\[LeftDoubleBracket]", "pattern", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", 
+                 RowBox[{"groups", ",", "4"}], "]"}], ",", "group"}], "]"}], 
+              "]"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
               RowBox[{
-               RowBox[{"RandomReal", "[", ".6", "]"}], ",", "3"}], "]"}], 
-             "]"}]}], ";", "\[IndentingNewLine]", 
-           RowBox[{"symbol", "=", 
-            RowBox[{"RandomChoice", "[", 
-             RowBox[{"{", 
-              RowBox[{
-              "9873", ",", "9730", ",", "38", ",", "9816", ",", "163", ",", 
-               "9758", ",", "8730", ",", "8950", ",", "11001", ",", "10729", 
-               ",", "10771", ",", "9736", ",", "10000", ",", "9799", ",", 
-               "9732", ",", "8623"}], "}"}], "]"}]}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"stamp", "=", 
-            RowBox[{"ImageCrop", "[", 
-             RowBox[{"ImageRotate", "[", 
-              RowBox[{
-               RowBox[{"Rasterize", "[", 
-                RowBox[{"Graphics", "[", 
-                 RowBox[{"{", 
-                  RowBox[{"color1", ",", 
-                   RowBox[{"Style", "[", 
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{
+              RowBox[{"color1", "=", 
+               RowBox[{"RGBColor", "[", 
+                RowBox[{"Table", "[", 
+                 RowBox[{
+                  RowBox[{"RandomReal", "[", ".6", "]"}], ",", "3"}], "]"}], 
+                "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"symbol", "=", 
+               RowBox[{"RandomChoice", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "9873", ",", "9730", ",", "38", ",", "9816", ",", "163", ",",
+                   "9758", ",", "8730", ",", "8950", ",", "11001", ",", 
+                  "10729", ",", "10771", ",", "9736", ",", "10000", ",", 
+                  "9799", ",", "9732", ",", "8623"}], "}"}], "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"stamp", "=", 
+               RowBox[{"ImageCrop", "[", 
+                RowBox[{"ImageRotate", "[", 
+                 RowBox[{
+                  RowBox[{"Rasterize", "[", 
+                   RowBox[{"Graphics", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"color1", ",", 
+                    RowBox[{"Style", "[", 
                     RowBox[{
                     RowBox[{"Text", "[", 
                     RowBox[{"FromCharacterCode", "[", "symbol", "]"}], "]"}], 
                     ",", "200"}], "]"}]}], "}"}], "]"}], "]"}], ",", 
-               FractionBox[
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "7", "]"}], " ", "\[Pi]"}], 
-                "8"], ",", 
-               RowBox[{"Background", "\[Rule]", "White"}]}], "]"}], "]"}]}], 
-           ";", "\[IndentingNewLine]", 
-           RowBox[{"width", "=", 
-            RowBox[{
-             RowBox[{"ImageDimensions", "[", "stamp", "]"}], "[", 
-             RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-           RowBox[{"frieze", "=", 
-            RowBox[{"Switch", "[", 
-             RowBox[{"h1", ",", "\[IndentingNewLine]", "1", ",", 
-              RowBox[{"ImageAssemble", "[", 
-               RowBox[{"Table", "[", 
-                RowBox[{"stamp", ",", "12"}], "]"}], "]"}], ",", 
-              "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"top", "=", 
-                RowBox[{"ImageAssemble", "[", 
-                 RowBox[{"Table", "[", 
-                  RowBox[{"stamp", ",", "12"}], "]"}], "]"}]}], ";", 
-               "\[IndentingNewLine]", 
-               RowBox[{"bot", "=", 
-                RowBox[{"ImageAssemble", "[", 
-                 RowBox[{"Flatten", "[", 
-                  RowBox[{"{", "\[IndentingNewLine]", 
+                  FractionBox[
                    RowBox[{
+                    RowBox[{"RandomInteger", "[", "7", "]"}], " ", "\[Pi]"}], 
+                   "8"], ",", 
+                  RowBox[{"Background", "\[Rule]", "White"}]}], "]"}], 
+                "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"width", "=", 
+               RowBox[{
+                RowBox[{"ImageDimensions", "[", "stamp", "]"}], 
+                "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], ";",
+               "\[IndentingNewLine]", 
+              RowBox[{"frieze", "=", 
+               RowBox[{"Switch", "[", 
+                RowBox[{"h1", ",", "\[IndentingNewLine]", "1", ",", 
+                 RowBox[{"ImageAssemble", "[", 
+                  RowBox[{"Table", "[", 
+                   RowBox[{"stamp", ",", "12"}], "]"}], "]"}], ",", 
+                 "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+                 RowBox[{
+                  RowBox[{"top", "=", 
+                   RowBox[{"ImageAssemble", "[", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{"stamp", ",", "12"}], "]"}], "]"}]}], ";", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"bot", "=", 
+                   RowBox[{"ImageAssemble", "[", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
                     RowBox[{"ImageRotate", "[", 
                     RowBox[{
                     RowBox[{"ImageCrop", "[", 
@@ -149,33 +157,35 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"width", "/", "2"}], ",", "Full"}], "}"}], ",", 
                     "Left"}], "]"}], ",", "\[Pi]"}], "]"}]}], "}"}], "]"}], 
-                 "]"}]}], ";", "\[IndentingNewLine]", 
-               RowBox[{"imgLst", "=", 
-                RowBox[{"ConformImages", "[", 
-                 RowBox[{"{", 
-                  RowBox[{"top", ",", "bot"}], "}"}], "]"}]}], ";", 
-               "\[IndentingNewLine]", 
-               RowBox[{"ImageAssemble", "[", 
-                RowBox[{"{", 
+                    "]"}]}], ";", "\[IndentingNewLine]", 
+                  RowBox[{"imgLst", "=", 
+                   RowBox[{"ConformImages", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"top", ",", "bot"}], "}"}], "]"}]}], ";", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"ImageAssemble", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "imgLst", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "imgLst", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "}"}]}], "}"}], "]"}]}], ",", 
+                 "\[IndentingNewLine]", "3", ",", "\[IndentingNewLine]", 
                  RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{"imgLst", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"imgLst", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "}"}]}], "}"}], "]"}]}], 
-              ",", "\[IndentingNewLine]", "3", ",", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"top", "=", 
-                RowBox[{"ImageAssemble", "[", 
-                 RowBox[{"Table", "[", 
-                  RowBox[{"stamp", ",", "12"}], "]"}], "]"}]}], ";", 
-               "\[IndentingNewLine]", 
-               RowBox[{"bot", "=", 
-                RowBox[{"ImageAssemble", "[", 
-                 RowBox[{"Flatten", "[", 
-                  RowBox[{"{", "\[IndentingNewLine]", 
-                   RowBox[{
+                  RowBox[{"top", "=", 
+                   RowBox[{"ImageAssemble", "[", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{"stamp", ",", "12"}], "]"}], "]"}]}], ";", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"bot", "=", 
+                   RowBox[{"ImageAssemble", "[", 
+                    RowBox[{"Flatten", "[", 
+                    RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
                     RowBox[{"ImageReflect", "[", 
                     RowBox[{"ImageCrop", "[", 
                     RowBox[{"stamp", ",", 
@@ -194,100 +204,232 @@ Cell[BoxData[
                     RowBox[{
                     RowBox[{"width", "/", "2"}], ",", "Full"}], "}"}], ",", 
                     "Right"}], "]"}], "]"}]}], "}"}], "]"}], "]"}]}], ";", 
-               "\[IndentingNewLine]", 
-               RowBox[{"imgLst", "=", 
-                RowBox[{"ConformImages", "[", 
-                 RowBox[{"{", 
-                  RowBox[{"top", ",", "bot"}], "}"}], "]"}]}], ";", 
-               "\[IndentingNewLine]", 
-               RowBox[{"ImageAssemble", "[", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{"imgLst", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "}"}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"imgLst", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "}"}]}], "}"}], "]"}]}], 
-              ",", "\[IndentingNewLine]", "4", ",", 
-              RowBox[{"ImageAssemble", "[", 
-               RowBox[{"Riffle", "[", 
-                RowBox[{
-                 RowBox[{"Table", "[", 
-                  RowBox[{"stamp", ",", "6"}], "]"}], ",", 
-                 RowBox[{"Table", "[", 
-                  RowBox[{
-                   RowBox[{"ImageReflect", "[", 
-                    RowBox[{"stamp", ",", "Left"}], "]"}], ",", "6"}], 
-                  "]"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", "5", ",", 
-              RowBox[{"ImageAssemble", "[", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"Table", "[", 
-                  RowBox[{"stamp", ",", "12"}], "]"}], ",", 
-                 RowBox[{"Table", "[", 
-                  RowBox[{
-                   RowBox[{"ImageReflect", "[", "stamp", "]"}], ",", "12"}], 
-                  "]"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", "6", ",", 
-              RowBox[{"ImageAssemble", "[", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"Riffle", "[", 
-                  RowBox[{
-                   RowBox[{"Table", "[", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"imgLst", "=", 
+                   RowBox[{"ConformImages", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"top", ",", "bot"}], "}"}], "]"}]}], ";", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"ImageAssemble", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    "imgLst", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    "imgLst", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "}"}]}], "}"}], "]"}]}], ",", 
+                 "\[IndentingNewLine]", "4", ",", 
+                 RowBox[{"ImageAssemble", "[", 
+                  RowBox[{"Riffle", "[", 
+                   RowBox[{
+                    RowBox[{"Table", "[", 
                     RowBox[{"stamp", ",", "6"}], "]"}], ",", 
-                   RowBox[{"Table", "[", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"ImageReflect", "[", 
+                    RowBox[{"stamp", ",", "Left"}], "]"}], ",", "6"}], 
+                    "]"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", "5", 
+                 ",", 
+                 RowBox[{"ImageAssemble", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Table", "[", 
+                    RowBox[{"stamp", ",", "12"}], "]"}], ",", 
+                    RowBox[{"Table", "[", 
+                    RowBox[{
+                    RowBox[{"ImageReflect", "[", "stamp", "]"}], ",", "12"}], 
+                    "]"}]}], "}"}], "]"}], ",", "\[IndentingNewLine]", "6", 
+                 ",", 
+                 RowBox[{"ImageAssemble", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Riffle", "[", 
+                    RowBox[{
+                    RowBox[{"Table", "[", 
+                    RowBox[{"stamp", ",", "6"}], "]"}], ",", 
+                    RowBox[{"Table", "[", 
                     RowBox[{
                     RowBox[{"ImageReflect", "[", 
                     RowBox[{"stamp", ",", "Left"}], "]"}], ",", "6"}], 
                     "]"}]}], "]"}], ",", 
-                 RowBox[{"Riffle", "[", 
-                  RowBox[{
-                   RowBox[{"Table", "[", 
+                    RowBox[{"Riffle", "[", 
+                    RowBox[{
+                    RowBox[{"Table", "[", 
                     RowBox[{
                     RowBox[{"ImageReflect", "[", 
                     RowBox[{"stamp", ",", "Left"}], "]"}], ",", "6"}], "]"}], 
-                   ",", 
-                   RowBox[{"Table", "[", 
+                    ",", 
+                    RowBox[{"Table", "[", 
                     RowBox[{"stamp", ",", "6"}], "]"}]}], "]"}]}], "}"}], 
-               "]"}], ",", "\[IndentingNewLine]", "7", ",", 
-              RowBox[{"ImageAssemble", "[", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"Riffle", "[", 
-                  RowBox[{
-                   RowBox[{"Table", "[", 
+                  "]"}], ",", "\[IndentingNewLine]", "7", ",", 
+                 RowBox[{"ImageAssemble", "[", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"Riffle", "[", 
+                    RowBox[{
+                    RowBox[{"Table", "[", 
                     RowBox[{"stamp", ",", "6"}], "]"}], ",", 
-                   RowBox[{"Table", "[", 
+                    RowBox[{"Table", "[", 
                     RowBox[{
                     RowBox[{"ImageReflect", "[", 
                     RowBox[{"stamp", ",", "Left"}], "]"}], ",", "6"}], 
                     "]"}]}], "]"}], ",", 
-                 RowBox[{"Riffle", "[", 
-                  RowBox[{
-                   RowBox[{"Table", "[", 
+                    RowBox[{"Riffle", "[", 
+                    RowBox[{
+                    RowBox[{"Table", "[", 
                     RowBox[{"stamp", ",", "6"}], "]"}], ",", 
-                   RowBox[{"Table", "[", 
+                    RowBox[{"Table", "[", 
                     RowBox[{
                     RowBox[{"ImageReflect", "[", 
                     RowBox[{"stamp", ",", "Left"}], "]"}], ",", "6"}], 
                     "]"}]}], "]"}]}], "}"}], "]"}]}], "]"}]}], ";", 
-           "\[IndentingNewLine]", 
-           RowBox[{"pic", "=", 
-            RowBox[{"Image", "[", 
-             RowBox[{"frieze", ",", 
-              RowBox[{"ImageSize", "\[Rule]", 
+              "\[IndentingNewLine]", 
+              RowBox[{"pic", "=", 
+               RowBox[{"Image", "[", 
+                RowBox[{"frieze", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", "800", "}"}], ",", 
+                    RowBox[{"{", "100", "}"}]}], "}"}]}]}], "]"}]}]}], "]"}], 
+            "/.", 
+            RowBox[{"h1", "\[Rule]", "pattern"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
                RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"{", "800", "}"}], ",", 
-                 RowBox[{"{", "100", "}"}]}], "}"}]}]}], "]"}]}]}], "]"}], "/.", 
-         RowBox[{"h1", "\[Rule]", "pattern"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Geom12\>\"", ",", 
+                RowBox[{"0", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"3", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"4", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"5", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"5", ",", "2"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"6", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"6", ",", "2"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"6", ",", "3"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"7", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"7", ",", "2"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"7", ",", "3"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"7", ",", "4"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"7", ",", "5"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"7", ",", "6"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"7", ",", "7"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "1"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "2"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "3"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "4"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "5"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "6"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "7"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "8"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "9"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "10"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "11"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "12"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "13"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "14"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "15"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "16"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "17"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "18"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "19"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "20"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"8", ",", "21"}], "}"}]}], "}"}], ",", "4"}], "]"}]}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Graphics3D", "[", 
+            RowBox[{
+             RowBox[{"KnotData", "[", 
+              RowBox[{
+               RowBox[{
+               "data", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+                ",", "\"\<ImageData\>\""}], "]"}], ",", 
+             RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+             RowBox[{"ViewPoint", "\[Rule]", "Top"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", "\"\<How many crossings does this knot have?\>\""}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", 
+                 RowBox[{"Range", "[", 
+                  RowBox[{"0", ",", "8"}], "]"}], "]"}], ",", 
+                RowBox[{"data", "\[LeftDoubleBracket]", 
+                 RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "]"}], 
+              "]"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Geom12\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.693585586631431*^9, 3.6935855867968817`*^9}, {
    3.6935856534653997`*^9, 3.69358567756995*^9}, {3.693608001812017*^9, 
@@ -431,53 +573,37 @@ Cell[BoxData[
    3.6986848122978077`*^9, 3.698684843263692*^9}, 3.698684898934844*^9, {
    3.698685051788973*^9, 3.698685079917685*^9}, {3.698686008672058*^9, 
    3.698686020943433*^9}, {3.698686232518025*^9, 3.6986862440440807`*^9}, {
-   3.698690904867219*^9, 3.6986909196819077`*^9}}],
-
-Cell["\<\
-{\"This frieze pattern fits into which category?\", 2, {\"step, or TG\", \
-\"hop, or T\", \"spinning hop, or TR\", \"spinning jump, or TRHVG\"}, 
- Hold[color1 = RGBColor[Table[RandomReal[0.6], 3]]; symbol = \
-RandomChoice[{9873, 9730, 38, 9816, 163, 9758, 8730, 8950, 11001, 10729, \
-10771, 9736, 
-      10000, 9799, 9732, 8623}]; stamp = \
-ImageCrop[ImageRotate[Rasterize[Graphics[{color1, \
-Style[Text[FromCharacterCode[symbol]], 200]}]], 
-      (RandomInteger[7]*Pi)/8, Background -> White]]; width = \
-ImageDimensions[stamp][[1]]; 
-   frieze = Switch[1, 1, ImageAssemble[Table[stamp, 12]], 2, top = \
-ImageAssemble[Table[stamp, 12]]; 
-      bot = ImageAssemble[Flatten[{ImageRotate[ImageCrop[stamp, {width/2, \
-Full}, Right], Pi], Table[ImageRotate[stamp, Pi], 11], 
-          ImageRotate[ImageCrop[stamp, {width/2, Full}, Left], Pi]}]]; imgLst \
-= ConformImages[{top, bot}]; 
-      ImageAssemble[{{imgLst[[1]]}, {imgLst[[2]]}}], 3, top = \
-ImageAssemble[Table[stamp, 12]]; 
-      bot = ImageAssemble[Flatten[{ImageReflect[ImageCrop[stamp, {width/2, \
-Full}, Left]], Table[ImageReflect[stamp], 11], 
-          ImageReflect[ImageCrop[stamp, {width/2, Full}, Right]]}]]; imgLst = \
-ConformImages[{top, bot}]; 
-      ImageAssemble[{{imgLst[[1]]}, {imgLst[[2]]}}], 4, \
-ImageAssemble[Riffle[Table[stamp, 6], Table[ImageReflect[stamp, Left], 6]]], \
-5, 
-     ImageAssemble[{Table[stamp, 12], Table[ImageReflect[stamp], 12]}], 6, 
-     ImageAssemble[{Riffle[Table[stamp, 6], Table[ImageReflect[stamp, Left], \
-6]], Riffle[Table[ImageReflect[stamp, Left], 6], Table[stamp, 6]]}], 7, 
-     ImageAssemble[{Riffle[Table[stamp, 6], Table[ImageReflect[stamp, Left], \
-6]], Riffle[Table[stamp, 6], Table[ImageReflect[stamp, Left], 6]]}]]; 
-   pic = Image[frieze, ImageSize -> {{800}, {100}}]]}\
-\>", "Output",
- CellChangeTimes->{
-  3.6986736319217367`*^9, {3.698673714511395*^9, 3.698673730591379*^9}, {
-   3.698684167987558*^9, 3.69868419966485*^9}, {3.698684233084692*^9, 
-   3.69868431612684*^9}, 3.698684845431897*^9, 3.698684910854607*^9, {
-   3.6986849494514017`*^9, 3.698684955751939*^9}, {3.698685054474122*^9, 
-   3.698685083091902*^9}, {3.698686026939513*^9, 3.6986862461744423`*^9}}]
-}, Open  ]]
+   3.698690904867219*^9, 3.6986909196819077`*^9}, {3.789293741008903*^9, 
+   3.789293894526845*^9}, {3.789293926108486*^9, 3.789293950111699*^9}, {
+   3.789394010839677*^9, 3.789394202102118*^9}, {3.7894052925579443`*^9, 
+   3.789405444340597*^9}, {3.7894054773976603`*^9, 3.789405830251258*^9}, {
+   3.7894058643395348`*^9, 3.789406000730215*^9}, {3.789406031586672*^9, 
+   3.789406036794239*^9}, {3.789406071642603*^9, 3.789406215617373*^9}, {
+   3.7894149844570227`*^9, 3.789415067552223*^9}, {3.7894151988244123`*^9, 
+   3.789415202767972*^9}, 3.789415949022298*^9, {3.789416009645154*^9, 
+   3.7894162205639763`*^9}, {3.789416250885214*^9, 3.789416365811638*^9}, {
+   3.7894164361893997`*^9, 3.7894164487568703`*^9}, {3.789416781978833*^9, 
+   3.7894168935611887`*^9}, 3.789416933219118*^9, {3.789416967001392*^9, 
+   3.789416989552796*^9}, {3.789417021745378*^9, 3.789417099714666*^9}, {
+   3.789417207234066*^9, 3.789417269849023*^9}, {3.789417305985654*^9, 
+   3.789417315895842*^9}, {3.789417351328834*^9, 3.789417356495871*^9}, {
+   3.789417393911762*^9, 3.78941748321537*^9}, {3.789417528127987*^9, 
+   3.789417538671493*^9}, {3.7894176318344507`*^9, 3.789417641818447*^9}, {
+   3.789417688568902*^9, 3.789417741640559*^9}, 3.789417850890748*^9, {
+   3.789417910859146*^9, 3.789417967688315*^9}, {3.789418019417365*^9, 
+   3.789418045535948*^9}, 3.789418260440558*^9, {3.7894184494880857`*^9, 
+   3.789418474269878*^9}, 3.7894188309429913`*^9, {3.7894188784704733`*^9, 
+   3.789418915893463*^9}, {3.7894192077258043`*^9, 3.789419229588688*^9}, 
+   3.7894195682610598`*^9, 3.7894197178550367`*^9, {3.7894198429510098`*^9, 
+   3.789419843244293*^9}, {3.7894201699642572`*^9, 3.789420195955418*^9}, {
+   3.789420940805154*^9, 3.789421006257608*^9}, {3.78942298998208*^9, 
+   3.789423086897057*^9}, {3.789423208819426*^9, 
+   3.789423241251379*^9}},ExpressionUUID->"1d068090-8d1f-4515-8a19-\
+78210ad9633a"]
 },
-WindowSize->{1275, 1055},
-WindowMargins->{{1, Automatic}, {Automatic, 36}},
-FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-21, 2016)",
+WindowSize->{1813, 1363},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -491,10 +617,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 22604, 411, 1010, "Input"],
-Cell[23187, 435, 2195, 38, 284, "Output"]
-}, Open  ]]
+Cell[558, 20, 30922, 581, 1177, "Input",ExpressionUUID->"1d068090-8d1f-4515-8a19-78210ad9633a"]
 }
 ]
 *)
