@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6829,        178]
-NotebookOptionsPosition[      6514,        164]
-NotebookOutlinePosition[      6875,        180]
-CellTagsIndexPosition[      6832,        177]
+NotebookDataLength[     11685,        268]
+NotebookOptionsPosition[     11391,        255]
+NotebookOutlinePosition[     11730,        270]
+CellTagsIndexPosition[     11687,        267]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,123 +26,198 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{
-        RowBox[{"ptPair", "[", "x_List", "]"}], ":=", 
-        RowBox[{"DisplayForm", "[", 
-         RowBox[{"StyleBox", "[", 
-          RowBox[{
-           RowBox[{"RowBox", "[", 
-            RowBox[{"{", 
-             RowBox[{"\"\<(\>\"", ",", 
-              RowBox[{"Row", "[", 
-               RowBox[{"x", ",", "\"\<,\>\""}], "]"}], ",", "\"\<)\>\""}], 
-             "}"}], "]"}], ",", 
-           RowBox[{"SpanMaxSize", "\[Rule]", "Infinity"}]}], "]"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"data", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Table", "[", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"a", "-", 
-              RowBox[{"x", "^", "2"}], "+", "y"}], ",", 
-             RowBox[{"b", "+", "x", "-", 
-              RowBox[{"y", "^", "2"}]}]}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"x", ",", 
-             RowBox[{"-", "3"}], ",", "3", ",", ".2"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"y", ",", 
-             RowBox[{"-", "3"}], ",", "3", ",", ".2"}], "}"}]}], "]"}], "/.", 
-         
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"a", "\[Rule]", 
-            RowBox[{"RandomInteger", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"-", "5"}], ",", "5"}], "}"}], "]"}]}], ",", 
-           RowBox[{"b", "\[Rule]", 
-            RowBox[{"RandomInteger", "[", 
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"-", "5"}], ",", "5"}], "}"}], "]"}]}]}], "}"}]}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{"ListStreamPlot", "[", 
-         RowBox[{"data", ",", 
-          RowBox[{"StreamStyle", "\[Rule]", "Blue"}], ",", 
-          RowBox[{"LabelStyle", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"16", ",", "Black"}], "}"}]}], ",", 
-          RowBox[{"AspectRatio", "\[Rule]", 
-           FractionBox["9", "8"]}], ",", 
-          RowBox[{"ImageSize", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", "480", "}"}], ",", 
-             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"xLoc", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"Range", "[", 
-          RowBox[{"5", ",", "30"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"yLoc", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"Range", "[", 
-          RowBox[{"5", ",", "30"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-         "\"\<What are the `1` and `2` components of the vector field at \
-coordinates `3`?\>\"", ",", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<y\>\"", ",", "Italic"}], "]"}], ",", 
-          RowBox[{"ptPair", "[", 
-           RowBox[{"{", 
-            RowBox[{"xLoc", ",", "yLoc"}], "}"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansLst", "=", 
-        RowBox[{"data", "[", 
-         RowBox[{"[", 
-          RowBox[{"xLoc", ",", "yLoc"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Round", "[", 
-         RowBox[{
-          RowBox[{"Prepend", "[", 
-           RowBox[{
-            RowBox[{"Partition", "[", 
+          RowBox[{
+           RowBox[{"ptPair", "[", "x_List", "]"}], ":=", 
+           RowBox[{"DisplayForm", "[", 
+            RowBox[{"StyleBox", "[", 
              RowBox[{
-              RowBox[{"RandomReal", "[", 
+              RowBox[{"RowBox", "[", 
+               RowBox[{"{", 
+                RowBox[{"\"\<(\>\"", ",", 
+                 RowBox[{"Row", "[", 
+                  RowBox[{"x", ",", "\"\<,\>\""}], "]"}], ",", "\"\<)\>\""}], 
+                "}"}], "]"}], ",", 
+              RowBox[{"SpanMaxSize", "\[Rule]", "Infinity"}]}], "]"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"{", 
                RowBox[{
+                RowBox[{"a", "-", 
+                 RowBox[{"x", "^", "2"}], "+", "y"}], ",", 
+                RowBox[{"b", "+", "x", "-", 
+                 RowBox[{"y", "^", "2"}]}]}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"x", ",", 
+                RowBox[{"-", "3"}], ",", "3", ",", ".2"}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"y", ",", 
+                RowBox[{"-", "3"}], ",", "3", ",", ".2"}], "}"}]}], "]"}], "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"a", "\[Rule]", 
+               RowBox[{"RandomInteger", "[", 
                 RowBox[{"{", 
                  RowBox[{
-                  RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", "6"}], "]"}], 
-              ",", "2"}], "]"}], ",", "ansLst"}], "]"}], ",", ".1"}], "]"}]}],
-        ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Grap11\>\"", ",", 
+                  RowBox[{"-", "5"}], ",", "5"}], "}"}], "]"}]}], ",", 
+              RowBox[{"b", "\[Rule]", 
+               RowBox[{"RandomInteger", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "5"}], ",", "5"}], "}"}], "]"}]}]}], "}"}]}]}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"ListStreamPlot", "[", 
+            RowBox[{"data", ",", 
+             RowBox[{"StreamStyle", "\[Rule]", "Blue"}], ",", 
+             RowBox[{"LabelStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"16", ",", "Black"}], "}"}]}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", 
+              FractionBox["9", "8"]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"xLoc", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"Range", "[", 
+             RowBox[{"5", ",", "30"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"yLoc", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"Range", "[", 
+             RowBox[{"5", ",", "30"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<What are the `1` and `2` components of the vector field at \
+coordinates `3`?\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<y\>\"", ",", "Italic"}], "]"}], ",", 
+             RowBox[{"ptPair", "[", 
+              RowBox[{"{", 
+               RowBox[{"xLoc", ",", "yLoc"}], "}"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansLst", "=", 
+           RowBox[{"data", "[", 
+            RowBox[{"[", 
+             RowBox[{"xLoc", ",", "yLoc"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"Prepend", "[", 
+              RowBox[{
+               RowBox[{"Partition", "[", 
+                RowBox[{
+                 RowBox[{"RandomReal", "[", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", "6"}], 
+                  "]"}], ",", "2"}], "]"}], ",", "ansLst"}], "]"}], ",", 
+             ".1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"choices", " ", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{"2", ",", "520"}], "]"}], ",", 
+               RowBox[{"a_", "/;", 
+                RowBox[{"PrimeQ", "[", "a", "]"}]}]}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"graph", "=", 
+           RowBox[{
+            RowBox[{"ResourceFunction", "[", "\"\<FactorGraph\>\"", "]"}], 
+            "[", 
+            RowBox[{
+            "choices", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+             "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"vCol", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"{", 
+             RowBox[{
+             "Yellow", ",", "Orange", ",", "Pink", ",", "LightBlue", ",", 
+              "LightBrown", ",", "LightGreen", ",", "Green", ",", 
+              "LightPurple"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"eCol", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"{", 
+             RowBox[{"Black", ",", "Blue", ",", "Red", ",", "Brown", ",", 
+              RowBox[{"Darker", "[", "Purple", "]"}], ",", 
+              RowBox[{"Darker", "[", "Blue", "]"}], ",", 
+              RowBox[{"Darker", "[", "Red", "]"}], ",", 
+              RowBox[{"Darker", "[", "Green", "]"}]}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"GraphPlot", "[", 
+            RowBox[{
+             RowBox[{
+             "graph", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", 
+             RowBox[{"VertexStyle", "\[Rule]", "vCol"}], ",", 
+             RowBox[{"EdgeStyle", "\[Rule]", "eCol"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<Which number is represented by this factor graph?\>\""}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Grap11\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.699380936096785*^9, 3.699380945895735*^9}, {
    3.699382062755612*^9, 3.699382112197401*^9}, 3.699382156905052*^9, {
@@ -158,14 +233,29 @@ coordinates `3`?\>\"", ",",
    3.6993875694816427`*^9, 3.69938757142962*^9}, {3.699387613210505*^9, 
    3.699387623259263*^9}, {3.699387735409349*^9, 3.699387743944832*^9}, 
    3.6994397277680264`*^9, {3.699439969154501*^9, 3.69943997045757*^9}, {
-   3.699440012423279*^9, 
-   3.699440024717906*^9}},ExpressionUUID->"ba059a57-40b1-4633-8594-\
-02b6f1bd5dd3"]
+   3.699440012423279*^9, 3.699440024717906*^9}, {3.789994437138392*^9, 
+   3.789994452897477*^9}, {3.789994498715625*^9, 3.789994555090745*^9}, {
+   3.789994598689987*^9, 3.7899946271212053`*^9}, {3.790000496827799*^9, 
+   3.790000499562915*^9}, {3.790000625378701*^9, 3.790000713610529*^9}, {
+   3.79000080812259*^9, 3.7900008786652107`*^9}, {3.790000920554359*^9, 
+   3.790000997225788*^9}, {3.790001028697654*^9, 3.7900010417609253`*^9}, {
+   3.790001100889468*^9, 3.790001147144147*^9}, {3.790001239361225*^9, 
+   3.790001257233014*^9}, {3.790001308784569*^9, 3.790001330808419*^9}, {
+   3.790001443616066*^9, 3.7900014593186817`*^9}, {3.790001496831873*^9, 
+   3.790001557494349*^9}, {3.790001602007539*^9, 3.7900016313741083`*^9}, {
+   3.7900016620153217`*^9, 3.7900017159255533`*^9}, {3.790001760102882*^9, 
+   3.790002022796734*^9}, {3.790002052892233*^9, 3.7900022285971518`*^9}, {
+   3.790002314773012*^9, 3.790002334620257*^9}, {3.790002383212565*^9, 
+   3.7900023961599903`*^9}, {3.790002558924733*^9, 3.790002589114326*^9}, 
+   3.7900027723954*^9, {3.790002816275022*^9, 3.7900028168019667`*^9}, {
+   3.790003084890622*^9, 3.790003086040915*^9}, {3.790003132446286*^9, 
+   3.790003150552952*^9}},
+ CellLabel->
+  "In[2208]:=",ExpressionUUID->"2e359e67-7608-4dd8-9011-37ec97b7f754"]
 },
-WindowSize->{1183, 1048},
+WindowSize->{1391, 1346},
 WindowMargins->{{12, Automatic}, {Automatic, 24}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -179,7 +269,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5952, 142, 399, "Input",ExpressionUUID->"ba059a57-40b1-4633-8594-02b6f1bd5dd3"]
+Cell[558, 20, 10829, 233, 679, "Input",ExpressionUUID->"2e359e67-7608-4dd8-9011-37ec97b7f754"]
 }
 ]
 *)
