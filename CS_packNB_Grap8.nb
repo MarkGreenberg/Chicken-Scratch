@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     21287,        447]
-NotebookOptionsPosition[     20994,        434]
-NotebookOutlinePosition[     21331,        449]
-CellTagsIndexPosition[     21288,        446]
+NotebookDataLength[     21831,        455]
+NotebookOptionsPosition[     21538,        442]
+NotebookOutlinePosition[     21875,        457]
+CellTagsIndexPosition[     21832,        454]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -232,40 +232,43 @@ Cell[BoxData[
              RowBox[{"verts", "\[LeftDoubleBracket]", 
               RowBox[{"-", "1"}], "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"chordDia", "=", 
+           RowBox[{"ResourceFunction", "[", "\"\<ChordDiagram\>\"", "]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"Rasterize", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"ResourceFunction", "[", "\"\<ChordDiagram\>\"", "]"}], 
-              "[", "\[IndentingNewLine]", 
-              RowBox[{"graph", ",", 
-               RowBox[{"\"\<Colors\>\"", "\[Rule]", "colors"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"Labels", "\[Rule]", 
-                RowBox[{"Take", "[", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"chordDia", "[", 
+             RowBox[{"graph", ",", 
+              RowBox[{"\"\<Colors\>\"", "\[Rule]", "colors"}], ",", 
+              RowBox[{"Labels", "\[Rule]", 
+               RowBox[{"Take", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"Style", "[", 
                     RowBox[{"\"\<1\>\"", ",", "20"}], "]"}], ",", 
-                    RowBox[{"Style", "[", 
+                   RowBox[{"Style", "[", 
                     RowBox[{"\"\<2\>\"", ",", "20"}], "]"}], ",", 
-                    RowBox[{"Style", "[", 
+                   RowBox[{"Style", "[", 
                     RowBox[{"\"\<3\>\"", ",", "20"}], "]"}], ",", 
-                    RowBox[{"Style", "[", 
+                   RowBox[{"Style", "[", 
                     RowBox[{"\"\<4\>\"", ",", "20"}], "]"}], ",", 
-                    RowBox[{"Style", "[", 
+                   RowBox[{"Style", "[", 
                     RowBox[{"\"\<5\>\"", ",", "20"}], "]"}], ",", 
-                    RowBox[{"Style", "[", 
+                   RowBox[{"Style", "[", 
                     RowBox[{"\"\<6\>\"", ",", "20"}], "]"}]}], "}"}], ",", 
-                  RowBox[{"Length", "[", "verts", "]"}]}], "]"}]}]}], "]"}], 
-             ",", "\[IndentingNewLine]", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+                 RowBox[{"Length", "[", "verts", "]"}]}], "]"}]}]}], "]"}], "/.", 
+            RowBox[{
+             RowBox[{"Graphics", "[", "a__", "]"}], "\[Rule]", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"a", ",", 
+               RowBox[{"Rule", "[", 
+                RowBox[{"ImageSize", ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", "480", "}"}], ",", 
+                   RowBox[{"{", "540", "}"}]}], "}"}]}], "]"}]}], "]"}]}]}]}],
+           ";", "\[IndentingNewLine]", 
           RowBox[{"edgeWts", "=", 
            RowBox[{"DeleteDuplicatesBy", "[", 
             RowBox[{
@@ -428,11 +431,16 @@ Cell[BoxData[
    3.7896599242193832`*^9, 3.789660151234112*^9}, {3.789660260090947*^9, 
    3.789660309760721*^9}, {3.789660514209673*^9, 3.789660514497045*^9}, {
    3.789660675521386*^9, 3.7896606800713577`*^9}, {3.7896607227505417`*^9, 
-   3.789660744587307*^9}},
+   3.789660744587307*^9}, {3.790430750860415*^9, 3.79043077939427*^9}, {
+   3.790431057744638*^9, 3.790431075048876*^9}, {3.790431253969924*^9, 
+   3.790431422600903*^9}, {3.790431471479866*^9, 3.790431474359173*^9}, {
+   3.790431587768312*^9, 3.7904316387521544`*^9}, {3.790431773558401*^9, 
+   3.7904318446218977`*^9}, 3.79043187544772*^9, {3.790431920633012*^9, 
+   3.790431925966106*^9}, {3.790431963086075*^9, 3.790431968774345*^9}},
  CellLabel->
-  "In[1157]:=",ExpressionUUID->"b7f5bfc8-fcde-4593-adda-17f2792cea75"]
+  "In[541]:=",ExpressionUUID->"b7f5bfc8-fcde-4593-adda-17f2792cea75"]
 },
-WindowSize->{1589, 1271},
+WindowSize->{1753, 1271},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
@@ -448,7 +456,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 20432, 412, 1050, "Input",ExpressionUUID->"b7f5bfc8-fcde-4593-adda-17f2792cea75"]
+Cell[558, 20, 20976, 420, 1029, "Input",ExpressionUUID->"b7f5bfc8-fcde-4593-adda-17f2792cea75"]
 }
 ]
 *)
