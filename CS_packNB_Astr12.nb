@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4979,        124]
-NotebookOptionsPosition[      4666,        110]
-NotebookOutlinePosition[      5026,        126]
-CellTagsIndexPosition[      4983,        123]
+NotebookDataLength[     14310,        293]
+NotebookOptionsPosition[     14013,        280]
+NotebookOutlinePosition[     14355,        295]
+CellTagsIndexPosition[     14312,        292]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,69 +26,212 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
-          RowBox[{"<|", 
-           RowBox[{
-            RowBox[{"\"\<Mercury\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"58.65", ",", "87.97"}], "}"}]}], ",", 
-            RowBox[{"\"\<Venus\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"243.03", ",", "224.7"}], "}"}]}], ",", 
-            RowBox[{"\"\<Earth\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"1", ",", "365.25"}], "}"}]}], ",", 
-            RowBox[{"\"\<Mars\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"1.03", ",", "686.97"}], "}"}]}], ",", 
-            RowBox[{"\"\<Jupiter\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{".41", ",", "4331.87"}], "}"}]}], ",", 
-            RowBox[{"\"\<Saturn\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{".44", ",", "10759.22"}], "}"}]}], ",", 
-            RowBox[{"\"\<Uranus\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{".72", ",", "30688.5"}], "}"}]}], ",", 
-            RowBox[{"\"\<Neptune\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{".67", ",", "60189.5"}], "}"}]}]}], "|>"}], ",", "4"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<Which planet takes `1` earth days to spin on its axis and `2` \
-earth days to orbit the sun?\>\"", ",", 
-          RowBox[{
-           RowBox[{"Values", "[", "data", "]"}], "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
-          RowBox[{
-           RowBox[{"Values", "[", "data", "]"}], "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr12\>\"", ",", 
-   
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{"\"\<Mercury\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"58.65", ",", "87.97"}], "}"}]}], ",", 
+               RowBox[{"\"\<Venus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"243.03", ",", "224.7"}], "}"}]}], ",", 
+               RowBox[{"\"\<Earth\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"1", ",", "365.25"}], "}"}]}], ",", 
+               RowBox[{"\"\<Mars\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"1.03", ",", "686.97"}], "}"}]}], ",", 
+               RowBox[{"\"\<Jupiter\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{".41", ",", "4331.87"}], "}"}]}], ",", 
+               RowBox[{"\"\<Saturn\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{".44", ",", "10759.22"}], "}"}]}], ",", 
+               RowBox[{"\"\<Uranus\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{".72", ",", "30688.5"}], "}"}]}], ",", 
+               RowBox[{"\"\<Neptune\>\"", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{".67", ",", "60189.5"}], "}"}]}]}], "|>"}], ",", 
+             "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which planet takes `1` earth days to spin on its axis and \
+`2` earth days to orbit the sun?\>\"", ",", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "[", 
+              RowBox[{"[", 
+               RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "q", "=", "\"\<Which solar system object is the blue one?\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"plot", "=", 
+           RowBox[{
+           "ResourceFunction", "[", "\"\<SolarSystemPlot3D\>\"", "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"colors", "=", 
+           RowBox[{"{", 
+            RowBox[{"Blue", ",", "Brown", ",", "Brown", ",", "Brown"}], 
+            "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"bodies", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               TemplateBox[{"\"Mercury\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Mercury\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Mercury\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Venus\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Venus\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Venus\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Earth\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Earth\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Earth\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Mars\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Mars\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Mars\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Jupiter\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Jupiter\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Jupiter\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Saturn\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Saturn\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Saturn\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Uranus\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Uranus\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Uranus\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Neptune\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Planet\"", ",", "\"Neptune\""}], "]"}],
+                 "\"Entity[\\\"Planet\\\", \\\"Neptune\\\"]\"","\"planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Pluto\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"MinorPlanet\"", ",", "\"Pluto\""}], "]"}],
+                 "\"Entity[\\\"MinorPlanet\\\", \\\"Pluto\\\"]\"",
+                 "\"minor planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"96 Aegle\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"MinorPlanet\"", ",", "\"Aegle\""}], "]"}],
+                 "\"Entity[\\\"MinorPlanet\\\", \\\"Aegle\\\"]\"",
+                 "\"minor planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"4797 Ako (1989 SJ)\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"MinorPlanet\"", ",", "\"Ako\""}], "]"}],
+                 "\"Entity[\\\"MinorPlanet\\\", \\\"Ako\\\"]\"",
+                 "\"minor planet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"1P/Halley\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Comet\"", ",", "\"Comet1PHalley\""}], "]"}],
+                 "\"Entity[\\\"Comet\\\", \\\"Comet1PHalley\\\"]\"",
+                 "\"comet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"196P/Tichy\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"Comet\"", ",", "\"Comet196PTichy\""}], "]"}],
+                 "\"Entity[\\\"Comet\\\", \\\"Comet196PTichy\\\"]\"",
+                 "\"comet\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"Magellan\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"DeepSpaceProbe\"", ",", "\"Magellan\""}], "]"}],
+                 "\"Entity[\\\"DeepSpaceProbe\\\", \\\"Magellan\\\"]\"",
+                 "\"deep space probe\""},
+                "Entity"], ",", 
+               TemplateBox[{"\"New Horizons\"",RowBox[{"Entity", "[", 
+                   RowBox[{"\"DeepSpaceProbe\"", ",", "\"NEWHorizons\""}], 
+                   "]"}],"\"Entity[\\\"DeepSpaceProbe\\\", \
+\\\"NEWHorizons\\\"]\"","\"deep space probe\""},
+                "Entity"]}], "}"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"plot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"AbsolutePointSize", "[", "15", "]"}], ",", 
+               RowBox[{"MapThread", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{"#1", ",", 
+                    RowBox[{"Point", "[", "#2", "]"}]}], "}"}], "&"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"colors", ",", "bodies"}], "}"}]}], "]"}]}], "}"}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"\"\<IncludeEclipticPlane\>\"", "\[Rule]", "False"}], 
+             ",", 
+             RowBox[{"\"\<OrbitsToInclude\>\"", "\[Rule]", "bodies"}], ",", 
+             RowBox[{"Boxed", "\[Rule]", "False"}], ",", 
+             RowBox[{"\"\<OrbitStyle\>\"", "\[Rule]", 
+              RowBox[{"Directive", "[", 
+               RowBox[{"Thick", ",", "Gray"}], "]"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"EntityValue", "[", 
+              RowBox[{"#", ",", "\"\<Name\>\""}], "]"}], "&"}], "/@", 
+            "bodies"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Astr12\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.70032245508363*^9, 3.700322495978731*^9}, {
    3.7003225329519787`*^9, 3.700322550525435*^9}, {3.7003232949114447`*^9, 
@@ -104,14 +247,40 @@ earth days to orbit the sun?\>\"", ",",
    3.700325348820882*^9, 3.7003253581577168`*^9}, {3.7003254061195803`*^9, 
    3.7003255878244123`*^9}, {3.700325647987996*^9, 3.70032567986061*^9}, 
    3.700325727872772*^9, {3.700325769994535*^9, 3.700325793419073*^9}, {
-   3.700330531404323*^9, 
-   3.700330564384012*^9}},ExpressionUUID->"e388ebd0-3392-4c70-aeb9-\
-848a9600cf2a"]
+   3.700330531404323*^9, 3.700330564384012*^9}, {3.790937756824278*^9, 
+   3.790937771641005*^9}, {3.7909381709828157`*^9, 3.79093818733365*^9}, {
+   3.790938277944148*^9, 3.790938391462007*^9}, {3.7909384261418457`*^9, 
+   3.790938428502763*^9}, {3.790938471640695*^9, 3.790938606006908*^9}, {
+   3.790938637030196*^9, 3.790938638550013*^9}, {3.790938778061802*^9, 
+   3.790938779742063*^9}, {3.7909388600376377`*^9, 3.790938861637645*^9}, {
+   3.7909389333980703`*^9, 3.790938934845971*^9}, {3.790939052964766*^9, 
+   3.790939054181244*^9}, {3.790939111140872*^9, 3.790939119972746*^9}, {
+   3.790939193492697*^9, 3.790939194573078*^9}, {3.79093923046537*^9, 
+   3.7909392317088547`*^9}, {3.790939262708514*^9, 3.790939264068346*^9}, {
+   3.790939304547823*^9, 3.790939443275464*^9}, {3.7909394754509907`*^9, 
+   3.790939590508038*^9}, {3.7909396331720247`*^9, 3.7909396790987453`*^9}, {
+   3.790939722315549*^9, 3.790939735914324*^9}, {3.7909400994029827`*^9, 
+   3.7909401173934526`*^9}, {3.7909401494668217`*^9, 3.790940240617319*^9}, {
+   3.7909403163149633`*^9, 3.79094034045737*^9}, {3.790940467282535*^9, 
+   3.7909404675924683`*^9}, {3.790940604890411*^9, 3.790940610009119*^9}, {
+   3.7909496298728933`*^9, 3.790949641047246*^9}, {3.790949720431753*^9, 
+   3.790949746462317*^9}, {3.790949813848925*^9, 3.7909498269111643`*^9}, {
+   3.79094988909006*^9, 3.79094988995979*^9}, {3.790949959233213*^9, 
+   3.7909499600158043`*^9}, {3.790949995792852*^9, 3.790949996615632*^9}, {
+   3.790950239504242*^9, 3.790950243686446*^9}, {3.790950323576586*^9, 
+   3.790950336350144*^9}, {3.790950478455388*^9, 3.790950514213293*^9}, {
+   3.790950594559723*^9, 3.790950627332605*^9}, {3.7909507491745653`*^9, 
+   3.7909507724296618`*^9}, {3.790950855581604*^9, 3.790950904165751*^9}, {
+   3.7909510688296947`*^9, 3.790951073652795*^9}, {3.790951322706853*^9, 
+   3.790951355409281*^9}, {3.7909515206498833`*^9, 3.7909516040963783`*^9}, {
+   3.79095190814573*^9, 3.790951948000682*^9}, {3.790952382520533*^9, 
+   3.790952391638384*^9}},
+ CellLabel->
+  "In[424]:=",ExpressionUUID->"2031f7f7-e735-459b-9663-018ff33ca304"]
 },
-WindowSize->{1261, 1024},
-WindowMargins->{{0, Automatic}, {Automatic, 54}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1377, 1063},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (September 29, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -125,7 +294,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4104, 88, 262, "Input",ExpressionUUID->"e388ebd0-3392-4c70-aeb9-848a9600cf2a"]
+Cell[558, 20, 13451, 258, 638, "Input",ExpressionUUID->"2031f7f7-e735-459b-9663-018ff33ca304"]
 }
 ]
 *)
