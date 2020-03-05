@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10153,        255]
-NotebookOptionsPosition[      9820,        238]
-NotebookOutlinePosition[     10180,        254]
-CellTagsIndexPosition[     10137,        251]
+NotebookDataLength[     42024,        853]
+NotebookOptionsPosition[     41692,        839]
+NotebookOutlinePosition[     42069,        855]
+CellTagsIndexPosition[     42026,        852]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -28,160 +26,676 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"set", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "\"\<homozygous dominant\>\"", ",", "\"\<homozygous recessive\>\"", 
-          ",", "\"\<heterozygous\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
-       
-       RowBox[{"gens", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"set", ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"pers", "=", 
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"gens", "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
-           RowBox[{"gens", "[", 
-            RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
-           "\"\<homozygous dominant\>\""}], ",", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"100", ",", "0", ",", "0"}], "}"}], ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{"If", "[", 
-           RowBox[{
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"set", "=", 
+           RowBox[{"{", 
             RowBox[{
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"gens", "[", 
-                 RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
-                "\"\<homozygous dominant\>\""}], "&&", 
-               RowBox[{
-                RowBox[{"gens", "[", 
-                 RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
-                "\"\<homozygous recessive\>\""}]}], ")"}], "||", 
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"gens", "[", 
-                 RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
-                "\"\<homozygous recessive\>\""}], "&&", 
-               RowBox[{
-                RowBox[{"gens", "[", 
-                 RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
-                "\"\<homozygous dominant\>\""}]}], ")"}]}], ",", 
-            RowBox[{"{", 
-             RowBox[{"0", ",", "0", ",", "100"}], "}"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"If", "[", 
+            "\"\<homozygous dominant\>\"", ",", 
+             "\"\<homozygous recessive\>\"", ",", "\"\<heterozygous\>\""}], 
+            "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"gens", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"set", ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pers", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
              RowBox[{
               RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"gens", "[", 
-                   RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
-                  "\"\<homozygous dominant\>\""}], "&&", 
-                 RowBox[{
-                  RowBox[{"gens", "[", 
-                   RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
-                  "\"\<heterozygous\>\""}]}], ")"}], "||", 
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"gens", "[", 
-                   RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
-                  "\"\<heterozygous\>\""}], "&&", 
-                 RowBox[{
-                  RowBox[{"gens", "[", 
-                   RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
-                  "\"\<homozygous dominant\>\""}]}], ")"}]}], ",", 
-              RowBox[{"{", 
-               RowBox[{"50", ",", "0", ",", "50"}], "}"}], ",", 
-              "\[IndentingNewLine]", 
-              RowBox[{"If", "[", 
+              "gens", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              "\[Equal]", 
+              RowBox[{
+              "gens", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+              "\[Equal]", "\"\<homozygous dominant\>\""}], ",", 
+             RowBox[{"{", 
+              RowBox[{"100", ",", "0", ",", "0"}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
                RowBox[{
-                RowBox[{
-                 RowBox[{"gens", "[", 
-                  RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
-                 RowBox[{"gens", "[", 
-                  RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
-                 "\"\<homozygous recessive\>\""}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"0", ",", "100", ",", "0"}], "}"}], ",", 
-                "\[IndentingNewLine]", 
-                RowBox[{"If", "[", 
+                RowBox[{"(", 
                  RowBox[{
                   RowBox[{
-                   RowBox[{"(", 
+                   RowBox[{
+                   "gens", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                   "\"\<homozygous dominant\>\""}], "&&", 
+                  RowBox[{
+                   RowBox[{
+                   "gens", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                   "\"\<homozygous recessive\>\""}]}], ")"}], "||", 
+                RowBox[{"(", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                   "gens", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                   "\"\<homozygous recessive\>\""}], "&&", 
+                  RowBox[{
+                   RowBox[{
+                   "gens", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                   "\"\<homozygous dominant\>\""}]}], ")"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0", ",", "100"}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{
                     RowBox[{
-                    RowBox[{"gens", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
-                    "\"\<homozygous recessive\>\""}], "&&", 
+                    "gens", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                    "\"\<homozygous dominant\>\""}], "&&", 
                     RowBox[{
-                    RowBox[{"gens", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
                     "\"\<heterozygous\>\""}]}], ")"}], "||", 
-                   RowBox[{"(", 
+                  RowBox[{"(", 
+                   RowBox[{
                     RowBox[{
                     RowBox[{
-                    RowBox[{"gens", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], "\[Equal]", 
+                    "gens", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
                     "\"\<heterozygous\>\""}], "&&", 
                     RowBox[{
-                    RowBox[{"gens", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}], "\[Equal]", 
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                    "\"\<homozygous dominant\>\""}]}], ")"}]}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"50", ",", "0", ",", "50"}], "}"}], ",", 
+                 "\[IndentingNewLine]", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                    "\"\<homozygous recessive\>\""}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "100", ",", "0"}], "}"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                    "\"\<homozygous recessive\>\""}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                    "\"\<heterozygous\>\""}]}], ")"}], "||", 
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
+                    "\"\<heterozygous\>\""}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    "gens", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Equal]", 
                     "\"\<homozygous recessive\>\""}]}], ")"}]}], ",", 
-                  RowBox[{"{", 
-                   RowBox[{"0", ",", "50", ",", "50"}], "}"}], ",", 
-                  "\[IndentingNewLine]", 
-                  RowBox[{"{", 
-                   RowBox[{"25", ",", "25", ",", "50"}], "}"}]}], "]"}]}], 
-               "]"}]}], "]"}]}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"ansStr", "=", 
-        RowBox[{
-         RowBox[{"ToString", "[", 
-          RowBox[{"pers", "[", 
-           RowBox[{"[", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "50", ",", "50"}], "}"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"{", 
+                    RowBox[{"25", ",", "25", ",", "50"}], "}"}]}], "]"}]}], 
+                  "]"}]}], "]"}]}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansStr", "=", 
+           RowBox[{
+            RowBox[{"ToString", "[", 
+             RowBox[{"pers", "[", 
+              RowBox[{"[", 
+               RowBox[{
+                RowBox[{"Position", "[", 
+                 RowBox[{"set", ",", 
+                  RowBox[{
+                  "gens", "\[LeftDoubleBracket]", "3", 
+                   "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], "]"}], 
+              "]"}], "]"}], "<>", "\"\<%\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<In simple single-trait Mendelian inheritance, a \>\"", "<>", 
             RowBox[{
-             RowBox[{"Position", "[", 
-              RowBox[{"set", ",", 
-               RowBox[{"gens", "[", 
-                RowBox[{"[", "3", "]"}], "]"}]}], "]"}], "[", 
-             RowBox[{"[", 
-              RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "]"}], "]"}], 
-         "<>", "\"\<%\>\""}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"\"\<In simple single-trait Mendelian inheritance, a \>\"", "<>", 
-         RowBox[{"gens", "[", 
-          RowBox[{"[", "1", "]"}], "]"}], "<>", 
-         "\"\< mother crossed with a \>\"", "<>", 
-         RowBox[{"gens", "[", 
-          RowBox[{"[", "2", "]"}], "]"}], "<>", 
-         "\"\< father has what chance of producing a \>\"", "<>", 
-         RowBox[{"gens", "[", 
-          RowBox[{"[", "3", "]"}], "]"}], "<>", "\"\< offspring?\>\""}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"{", 
+            "gens", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "<>", "\"\< mother crossed with a \>\"", "<>", 
+            RowBox[{
+            "gens", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+            "<>", "\"\< father has what chance of producing a \>\"", "<>", 
+            RowBox[{
+            "gens", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}], 
+            "<>", "\"\< offspring?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<100%\>\"", ",", "\"\<50%\>\"", ",", "\"\<25%\>\"", ",", 
+             "\"\<0%\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", "ansStr"}], "]"}], "\[LeftDoubleBracket]", 
+            
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-         "\"\<100%\>\"", ",", "\"\<50%\>\"", ",", "\"\<25%\>\"", ",", 
-          "\"\<0%\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", "ansStr"}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Biol14\>\"", ",", 
-   
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["100", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["53320", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association["acacia" -> {"Acacia ampliceps", 
+                 Quantity[40, "Feet"], 
+                 Quantity[8, "Years"], 
+                 Quantity[30, "Years"]}, 
+               "African mesquite" -> {"Fagus grandifolia", 
+                 Quantity[30, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[100, "Years"]}, 
+               "American beech" -> {"Fagus grandifolia", 
+                 Quantity[120, "Feet"], 
+                 Quantity[75, "Years"], 
+                 Quantity[400, "Years"]}, 
+               "American chestnut" -> {"Castanea dentata", 
+                 Quantity[100, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "American elm" -> {"Ulmus americana", 
+                 Quantity[100, "Feet"], 
+                 Quantity[43, "Years"], 
+                 Quantity[300, "Years"]}, "American holly" -> {"Ilex opaca", 
+                 Quantity[72, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[150, "Years"]}, "arborvitae" -> {"Ilex opaca", 
+                 Quantity[90, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[200, "Years"]}, 
+               "bald cypress" -> {"Taxodium distichum", 
+                 Quantity[100, "Feet"], 
+                 Quantity[150, "Years"], 
+                 Quantity[1800, "Years"]}, 
+               "balsam poplar" -> {"Populus balsamifera", 
+                 Quantity[100, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "basket oak" -> {"Quercus michauxii", 
+                 Quantity[100, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[200, "Years"]}, "basswood" -> {"Tilia americana", 
+                 Quantity[80, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[140, "Years"]}, 
+               "bitternut hickory" -> {"Carya cordiformis", 
+                 Quantity[80, "Feet"], 
+                 Quantity[43, "Years"], 
+                 Quantity[200, "Years"]}, 
+               "black cherry" -> {"Prunus serotina", 
+                 Quantity[80, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[250, "Years"]}, 
+               "blackjack oak" -> {"Quercus marilandica", 
+                 Quantity[60, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[100, "Years"]}, 
+               "black locust" -> {"Robinia pseudoacacia", 
+                 Quantity[116, "Feet"], 
+                 Quantity[15, "Years"], 
+                 Quantity[100, "Years"]}, 
+               "black mangrove" -> {"Avicennia germinans", 
+                 Quantity[50, "Feet"], 
+                 Quantity[0.1, "Years"], 
+                 Quantity[0.3, "Years"]}, 
+               "black tupelo" -> {"Nyssa sylvatica", 
+                 Quantity[50, "Feet"], 
+                 Quantity[63, "Years"], 
+                 Quantity[600, "Years"]}, 
+               "black walnut" -> {"Juglans nigra", 
+                 Quantity[150, "Feet"], 
+                 Quantity[38, "Years"], 
+                 Quantity[250, "Years"]}, "black willow" -> {"Salix nigra", 
+                 Quantity[60, "Feet"], 
+                 Quantity[18, "Years"], 
+                 Quantity[85, "Years"]}, "blue spruce" -> {"Picea pungens", 
+                 Quantity[50, "Feet"], 
+                 Quantity[38, "Years"], 
+                 Quantity[350, "Years"]}, "boxelder" -> {"Acer negundo", 
+                 Quantity[50, "Feet"], 
+                 Quantity[19, "Years"], 
+                 Quantity[100, "Years"]}, 
+               "breadfruit" -> {"Artocarpus altilis", 
+                 Quantity[85, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[50, "Years"]}, "cacoa" -> {"Theobroma cacoa", 
+                 Quantity[30, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[100, "Years"]}, "carob" -> {"Ceratonia siliqua", 
+                 Quantity[49, "Feet"], 
+                 Quantity[22, "Years"], 
+                 Quantity[100, "Years"]}, 
+               "cashew" -> {"Anacardium occidentale", 
+                 Quantity[46, "Feet"], 
+                 Quantity[13, "Years"], 
+                 Quantity[50, "Years"]}, "catalpa" -> {"Catalpa speciosa", 
+                 Quantity[70, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[150, "Years"]}, "chestnut oak" -> {"Quercus prinus", 
+                 Quantity[60, "Feet"], 
+                 Quantity[75, "Years"], 
+                 Quantity[400, "Years"]}, "coconut" -> {"Cocos nucifera", 
+                 Quantity[98, "Feet"], 
+                 Quantity[8, "Years"], 
+                 Quantity[80, "Years"]}, 
+               "common jujube" -> {"Ziziphus zizyphus", 
+                 Quantity[25, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[100, "Years"]}, 
+               "common linden" -> {"Tilia europaea", 
+                 Quantity[80, "Feet"], 
+                 Quantity[8, "Years"], 
+                 Quantity[1000, "Years"]}, "cork" -> {"Quercus suber", 
+                 Quantity[75, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[500, "Years"]}, 
+               "cucumbertree" -> {"Magnolia acuminata", 
+                 Quantity[75, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[250, "Years"]}, 
+               "date palm" -> {"Phoenix dactylifera", 
+                 Quantity[72, "Feet"], 
+                 Quantity[10, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "dragon's blood" -> {"Dracaena cinnabari", 
+                 Quantity[32, "Feet"], 
+                 Quantity[162, "Years"], 
+                 Quantity[650, "Years"]}, "durian" -> {"Durio zibethinus", 
+                 Quantity[164, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "eastern hemlock" -> {"Tsuga canadensis", 
+                 Quantity[102, "Feet"], 
+                 Quantity[112, "Years"], 
+                 Quantity[800, "Years"]}, 
+               "eastern red cedar" -> {"Juniperus virginiana", 
+                 Quantity[45, "Feet"], 
+                 Quantity[38, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "edible banana" -> {"Musa acuminata", 
+                 Quantity[16, "Feet"], 
+                 Quantity[2, "Years"], 
+                 Quantity[6, "Years"]}, 
+               "european beech" -> {"Fagus sylvatica", 
+                 Quantity[60, "Feet"], 
+                 Quantity[2, "Years"], 
+                 Quantity[200, "Years"]}, 
+               "flowering dogwood" -> {"Cornus florida", 
+                 Quantity[33, "Feet"], 
+                 Quantity[31, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "foothill palo verde" -> {"Parkinsonia microphylla", 
+                 Quantity[30, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[400, "Years"]}, 
+               "freemont cottonwood" -> {"Populus fremontii", 
+                 Quantity[70, "Feet"], 
+                 Quantity[40, "Years"], 
+                 Quantity[200, "Years"]}, 
+               "golden bamboo" -> {"Phyllostachys aurea", 
+                 Quantity[30, "Feet"], 
+                 Quantity[0.5, "Years"], 
+                 Quantity[2, "Years"]}, 
+               "golden raintree" -> {"Koelreuteria paniculata", 
+                 Quantity[30, "Feet"], 
+                 Quantity[10, "Years"], 
+                 Quantity[50, "Years"]}, 
+               "Grandidier's boabab" -> {"Adansonia grandidieri", 
+                 Quantity[98, "Feet"], 
+                 Quantity[300, "Years"], 
+                 Quantity[1200, "Years"]}, 
+               "gray birch" -> {"Betula populifolia", 
+                 Quantity[30, "Feet"], 
+                 Quantity[12, "Years"], 
+                 Quantity[50, "Years"]}, 
+               "great basin bristlecone pine" -> {"Pinus longaeva", 
+                 Quantity[60, "Feet"], 
+                 Quantity[19, "Years"], 
+                 Quantity[5000, "Years"]}, 
+               "green ash" -> {"Fraxinus pennsylvanicum", 
+                 Quantity[60, "Feet"], 
+                 Quantity[30, "Years"], 
+                 Quantity[175, "Years"]}, 
+               "hackberry" -> {"Celtis occidentalis", 
+                 Quantity[100, "Feet"], 
+                 Quantity[40, "Years"], 
+                 Quantity[200, "Years"]}, 
+               "honeylocust" -> {"Gleditsia triacanthos", 
+                 Quantity[70, "Feet"], 
+                 Quantity[30, "Years"], 
+                 Quantity[120, "Years"]}, "hop" -> {"Ptelea trifoliata", 
+                 Quantity[26, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "ironwood" -> {"Ostrya virginiana", 
+                 Quantity[45, "Feet"], 
+                 Quantity[30, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "jacaranda" -> {"Jacaranda mimosifolia", 
+                 Quantity[66, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[75, "Years"]}, "kauri" -> {"Agathis australis", 
+                 Quantity[168, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[2000, "Years"]}, 
+               "live oak" -> {"Quercus virginiana", 
+                 Quantity[66, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[300, "Years"]}, "loblolly pine" -> {"Pinus taeda", 
+                 Quantity[100, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "lodgepole pine" -> {"Pinus contorta", 
+                 Quantity[150, "Feet"], 
+                 Quantity[37, "Years"], 
+                 Quantity[150, "Years"]}, "lychee" -> {"Litchi chinensis", 
+                 Quantity[92, "Feet"], 
+                 Quantity[7, "Years"], 
+                 Quantity[30, "Years"]}, "maidenhair" -> {"Ginkgo biloba", 
+                 Quantity[100, "Feet"], 
+                 Quantity[7, "Years"], 
+                 Quantity[3000, "Years"]}, "mango" -> {"Mangifera indica", 
+                 Quantity[65, "Feet"], 
+                 Quantity[7, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "mockernut hickory" -> {"Carya tomentosa", 
+                 Quantity[98, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "osage-orange" -> {"Maclura pomifera", 
+                 Quantity[50, "Feet"], 
+                 Quantity[18, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "overcup oak" -> {"Quercus lyrata", 
+                 Quantity[100, "Feet"], 
+                 Quantity[75, "Years"], 
+                 Quantity[400, "Years"]}, 
+               "paper birch" -> {"Betula papyrifera", 
+                 Quantity[70, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[140, "Years"]}, "peach" -> {"Prunus persica", 
+                 Quantity[25, "Feet"], 
+                 Quantity[3, "Years"], 
+                 Quantity[12, "Years"]}, "pecan" -> {"Carya illinoensis", 
+                 Quantity[144, "Feet"], 
+                 Quantity[75, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "persimmon" -> {"Diospyros virginiana", 
+                 Quantity[60, "Feet"], 
+                 Quantity[15, "Years"], 
+                 Quantity[80, "Years"]}, 
+               "pignut hickory" -> {"Carya glabra", 
+                 Quantity[65, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[300, "Years"]}, "pomegranate" -> {"Punica granatum", 
+                 Quantity[30, "Feet"], 
+                 Quantity[15, "Years"], 
+                 Quantity[200, "Years"]}, 
+               "rainbow eucalyptus" -> {"Eucalyptus degulpta", 
+                 Quantity[30, "Feet"], 
+                 Quantity[12, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "red gum" -> {"Eucalyptus camaldulensis", 
+                 Quantity[150, "Feet"], 
+                 Quantity[15, "Years"], 
+                 Quantity[1000, "Years"]}, "red maple" -> {"Acer rubrum", 
+                 Quantity[70, "Feet"], 
+                 Quantity[32, "Years"], 
+                 Quantity[300, "Years"]}, "red mulberry" -> {"Morus rubra", 
+                 Quantity[50, "Feet"], 
+                 Quantity[31, "Years"], 
+                 Quantity[125, "Years"]}, 
+               "sacred fig" -> {"Ficus religiosa", 
+                 Quantity[98, "Feet"], 
+                 Quantity[225, "Years"], 
+                 Quantity[1500, "Years"]}, "saguaro" -> {"Carnegiea gigantea", 
+                 Quantity[50, "Feet"], 
+                 Quantity[125, "Years"], 
+                 Quantity[200, "Years"]}, "sassafras" -> {"Sassafras albidum", 
+                 Quantity[60, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[500, "Years"]}, "sausage" -> {"Kigelia africana", 
+                 Quantity[40, "Feet"], 
+                 Quantity[8, "Years"], 
+                 Quantity[90, "Years"]}, "scarlet oak" -> {"Quercus coccinea", 
+                 Quantity[100, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[180, "Years"]}, 
+               "sequoia" -> {"Sequoia sempervirens", 
+                 Quantity[275, "Feet"], 
+                 Quantity[900, "Years"], 
+                 Quantity[3500, "Years"]}, 
+               "shagbark hickory" -> {"Carya ovata", 
+                 Quantity[120, "Feet"], 
+                 Quantity[63, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "shortleaf pine" -> {"Pinus echinata", 
+                 Quantity[100, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[300, "Years"]}, "silk floss" -> {"Celba speciosa", 
+                 Quantity[50, "Feet"], 
+                 Quantity[10, "Years"], 
+                 Quantity[50, "Years"]}, "silver maple" -> {"Acer saccarinum", 
+                 Quantity[115, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[125, "Years"]}, "sissoo" -> {"Dalbergia sissoo", 
+                 Quantity[60, "Feet"], 
+                 Quantity[31, "Years"], 
+                 Quantity[124, "Years"]}, "slippery elm" -> {"Ulmus rubra", 
+                 Quantity[80, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "southern magnolia" -> {"Magnolia grandiflora", 
+                 Quantity[80, "Feet"], 
+                 Quantity[20, "Years"], 
+                 Quantity[120, "Years"]}, 
+               "sugar maple" -> {"Acer saccharum", 
+                 Quantity[70, "Feet"], 
+                 Quantity[75, "Years"], 
+                 Quantity[400, "Years"]}, "sweet birch" -> {"Betula lenta", 
+                 Quantity[55, "Feet"], 
+                 Quantity[38, "Years"], 
+                 Quantity[250, "Years"]}, 
+               "sweet gum" -> {"Liquidambar styraciflua", 
+                 Quantity[100, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "sweet orange" -> {"Citrus sinensis", 
+                 Quantity[30, "Feet"], 
+                 Quantity[12, "Years"], 
+                 Quantity[50, "Years"]}, 
+               "tangerine" -> {"Citrus reticulata", 
+                 Quantity[15, "Feet"], 
+                 Quantity[12, "Years"], 
+                 Quantity[50, "Years"]}, "tipu" -> {"Tipuana tipu", 
+                 Quantity[20, "Feet"], 
+                 Quantity[37, "Years"], 
+                 Quantity[150, "Years"]}, 
+               "tulip-poplar" -> {"Liriodendron tulipfera", 
+                 Quantity[90, "Feet"], 
+                 Quantity[63, "Years"], 
+                 Quantity[450, "Years"]}, 
+               "velvet ash" -> {"Fraxinus velutina", 
+                 Quantity[50, "Feet"], 
+                 Quantity[5, "Years"], 
+                 Quantity[30, "Years"]}, "water oak" -> {"Quercus nigra", 
+                 Quantity[80, "Feet"], 
+                 Quantity[44, "Years"], 
+                 Quantity[175, "Years"]}, 
+               "white ash" -> {"Fraxinus americana", 
+                 Quantity[75, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[200, "Years"]}, "white oak" -> {"Quercus alba", 
+                 Quantity[100, "Feet"], 
+                 Quantity[75, "Years"], 
+                 Quantity[600, "Years"]}, "white pine" -> {"Pinus strobus", 
+                 Quantity[150, "Feet"], 
+                 Quantity[50, "Years"], 
+                 Quantity[450, "Years"]}, 
+               "yellow birch" -> {"Betula alleghaniensis", 
+                 Quantity[75, "Feet"], 
+                 Quantity[37, "Years"], 
+                 Quantity[300, "Years"]}, 
+               "yellowwood" -> {"Cladrastis kentukea", 
+                 Quantity[30, "Feet"], 
+                 Quantity[25, "Years"], 
+                 Quantity[100, "Years"]}],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"bPts", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"BezierCurve", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"QuantityMagnitude", "[", 
+                   RowBox[{
+                   "#", "\[LeftDoubleBracket]", "3", 
+                    "\[RightDoubleBracket]"}], "]"}], ",", 
+                  RowBox[{"QuantityMagnitude", "[", 
+                   RowBox[{
+                   "#", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"QuantityMagnitude", "[", 
+                   RowBox[{
+                   "#", "\[LeftDoubleBracket]", "4", 
+                    "\[RightDoubleBracket]"}], "]"}], ",", 
+                  RowBox[{"QuantityMagnitude", "[", 
+                   RowBox[{
+                   "#", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "]"}]}], "}"}]}], "}"}], "]"}],
+              "&"}], "/@", 
+            RowBox[{"Values", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"Thick", ",", "Green", ",", 
+               RowBox[{
+               "bPts", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+                ",", "Orange", ",", 
+               RowBox[{
+               "bPts", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}],
+                ",", 
+               RowBox[{"Darker", "[", "Green", "]"}], ",", 
+               RowBox[{
+               "bPts", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}],
+                ",", "Blue", ",", 
+               RowBox[{
+               "bPts", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}]}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Axes", "\[Rule]", "True"}], ",", 
+             RowBox[{"LabelStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
+             RowBox[{"AxesLabel", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"\"\<age (yr)\>\"", ",", "\"\<height (ft)\>\""}], 
+               "}"}]}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", 
+              FractionBox["9", "8"]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<The graph shows these four trees. Which is the blue \
+curve?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"MapThread", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Tooltip", "[", 
+               RowBox[{"#1", ",", 
+                RowBox[{
+                "#2", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}]}], "]"}], "&"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Keys", "[", "data", "]"}], ",", 
+               RowBox[{"Values", "[", "data", "]"}]}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Biol14\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.703008030678895*^9, {3.7030085225458107`*^9, 3.7030087613684273`*^9}, {
@@ -197,49 +711,136 @@ Cell[BoxData[
    3.703012569875152*^9, 3.703012586722587*^9}, {3.7030126323659897`*^9, 
    3.703012635933909*^9}, {3.703012714305583*^9, 3.703012715672412*^9}, {
    3.703012753757451*^9, 3.7030128575103807`*^9}, {3.703012901174067*^9, 
-   3.703012913844303*^9}}],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TagBox[
-    ButtonBox[
-     PaneSelectorBox[{
-      False->"\<\"https://www.wolframcloud.com/objects/user-4dec8a61-25b0-\
-47e1-8624-e5b3610139af/CS_pack_Biol14\"\>", True->
-      StyleBox["\<\"https://www.wolframcloud.com/objects/user-4dec8a61-25b0-\
-47e1-8624-e5b3610139af/CS_pack_Biol14\"\>", "HyperlinkActive"]}, Dynamic[
-       CurrentValue["MouseOver"]],
-      BaseStyle->{"Hyperlink"},
-      FrameMargins->0,
-      ImageSize->Automatic],
-     BaseStyle->"Hyperlink",
-     ButtonData->{
-       URL[
-       "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
-e5b3610139af/CS_pack_Biol14"], None},
-     ButtonNote->
-      "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
-e5b3610139af/CS_pack_Biol14"],
-    Annotation[#, 
-     "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
-e5b3610139af/CS_pack_Biol14", "Hyperlink"]& ], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/user-4dec8a61-25b0-47e1-8624-\
-e5b3610139af/CS_pack_Biol14"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{
-  3.7030090455792418`*^9, 3.703009108005027*^9, 3.703009236603101*^9, 
-   3.703011091154175*^9, 3.7030113909566307`*^9, 3.703011698123122*^9, {
-   3.70301257266168*^9, 3.70301258790522*^9}, 3.703012639633236*^9, 
-   3.703012719242702*^9, {3.703012840742979*^9, 3.7030128589324093`*^9}, 
-   3.703012944830018*^9}]
-}, Open  ]]
+   3.703012913844303*^9}, {3.7922432178016853`*^9, 3.792243476616541*^9}, {
+   3.7922435612360764`*^9, 3.7922435932560987`*^9}, {3.7922436324084253`*^9, 
+   3.792243699433028*^9}, {3.7922439812951803`*^9, 3.792243995495307*^9}, {
+   3.7922440471908627`*^9, 3.792244106694772*^9}, {3.792244220231135*^9, 
+   3.792244287382119*^9}, {3.792244442103436*^9, 3.792244568397994*^9}, {
+   3.7922446574935513`*^9, 3.79224466597353*^9}, {3.79224470681343*^9, 
+   3.792244761941333*^9}, {3.7922456924178123`*^9, 3.7922457971539392`*^9}, {
+   3.792245869681271*^9, 3.7922458740094957`*^9}, {3.792259254083344*^9, 
+   3.792259282899*^9}, {3.792259315842945*^9, 3.792259339234943*^9}, {
+   3.7922593748112297`*^9, 3.792259592610053*^9}, {3.792259642106224*^9, 
+   3.7922596645294867`*^9}, {3.792259720825314*^9, 3.792259762192968*^9}, {
+   3.792259850288918*^9, 3.792259947528401*^9}, {3.792259990584352*^9, 
+   3.7922600922253733`*^9}, {3.792260134439595*^9, 3.792260226975141*^9}, {
+   3.79226030034319*^9, 3.792260417262453*^9}, {3.792260463518959*^9, 
+   3.79226046398221*^9}, {3.792260713889279*^9, 3.79226075712535*^9}, {
+   3.792260804445229*^9, 3.7922609062529583`*^9}, {3.792260956271901*^9, 
+   3.792261005533209*^9}, {3.7922610493723173`*^9, 3.7922610497239523`*^9}, {
+   3.79226109099965*^9, 3.7922611386127243`*^9}, {3.792261188931999*^9, 
+   3.792261272172887*^9}, {3.7922613331476994`*^9, 3.7922613334028187`*^9}, {
+   3.7922613647272043`*^9, 3.7922614118990793`*^9}, {3.792261508662938*^9, 
+   3.792261561949376*^9}, {3.792261604356757*^9, 3.792261604853629*^9}, {
+   3.792261672760359*^9, 3.79226173257176*^9}, {3.792261767700018*^9, 
+   3.7922618531887703`*^9}, {3.792261939024005*^9, 3.7922619665951*^9}, {
+   3.792262005563493*^9, 3.792262012306679*^9}, {3.792262043419425*^9, 
+   3.7922620436043673`*^9}, {3.792262406902343*^9, 3.7922624515293007`*^9}, {
+   3.792262498713925*^9, 3.792262584601149*^9}, {3.79226261574154*^9, 
+   3.792262669571868*^9}, {3.792262717721139*^9, 3.792262718202127*^9}, {
+   3.792262750661618*^9, 3.792262808857835*^9}, {3.792262870968843*^9, 
+   3.7922628715042067`*^9}, {3.792262927676898*^9, 3.792263001520887*^9}, {
+   3.7922642246494083`*^9, 3.7922642773581753`*^9}, {3.792264336852923*^9, 
+   3.792264418547957*^9}, {3.79226446868402*^9, 3.7922648844667063`*^9}, {
+   3.7922649362641478`*^9, 3.792265019930523*^9}, {3.792265056894639*^9, 
+   3.792265093562223*^9}, {3.7922651277945557`*^9, 3.792265128274046*^9}, {
+   3.792265166199128*^9, 3.792265211257762*^9}, {3.7922652534263163`*^9, 
+   3.79226535121913*^9}, {3.7922654012419443`*^9, 3.792265401881434*^9}, {
+   3.7922654330940933`*^9, 3.7922654798170757`*^9}, {3.7922655147461653`*^9, 
+   3.7922655150810633`*^9}, {3.792273448770382*^9, 3.7922734999091663`*^9}, {
+   3.792273559857361*^9, 3.792273612444874*^9}, {3.792273646349823*^9, 
+   3.792273646781591*^9}, {3.792273694273261*^9, 3.792273767204761*^9}, {
+   3.792273804704514*^9, 3.7922738517248497`*^9}, {3.792273882628689*^9, 
+   3.792273925572176*^9}, {3.7922739683485117`*^9, 3.7922740020035057`*^9}, {
+   3.792274033542345*^9, 3.792274092491103*^9}, {3.7922741430495577`*^9, 
+   3.79227419725077*^9}, {3.792274228801709*^9, 3.79227422916889*^9}, {
+   3.7922742685661077`*^9, 3.792274328456954*^9}, {3.7923200861659927`*^9, 
+   3.792320134722197*^9}, {3.792320208112569*^9, 3.7923203001540194`*^9}, {
+   3.792320332284849*^9, 3.792320385800064*^9}, {3.792320419024507*^9, 
+   3.792320419481942*^9}, {3.792320458605019*^9, 3.7923205278318872`*^9}, {
+   3.7923477072902822`*^9, 3.792347849469367*^9}, {3.792347885014145*^9, 
+   3.7923478852934713`*^9}, {3.792347918411364*^9, 3.792347983382402*^9}, {
+   3.792349366689034*^9, 3.792349638674775*^9}, {3.7923496813841467`*^9, 
+   3.79234972461759*^9}, {3.79234977126611*^9, 3.792349771849248*^9}, {
+   3.792349803317563*^9, 3.792349857209499*^9}, {3.7923499149579983`*^9, 
+   3.792349993185363*^9}, {3.792357043740149*^9, 3.792357131447082*^9}, {
+   3.792357623554597*^9, 3.792357703124547*^9}, {3.792357754475725*^9, 
+   3.792357835045061*^9}, {3.792357877300848*^9, 3.792357956829*^9}, {
+   3.792358016327848*^9, 3.792358058579342*^9}, {3.79235811420392*^9, 
+   3.792358205474506*^9}, {3.792358386904221*^9, 3.7923584157542048`*^9}, {
+   3.7923584485955544`*^9, 3.792358453587262*^9}, {3.792358524702073*^9, 
+   3.792358583065164*^9}, {3.792358621153797*^9, 3.7923586641175203`*^9}, {
+   3.7923587444450693`*^9, 3.7923587520969877`*^9}, {3.792358834138064*^9, 
+   3.792358834801127*^9}, {3.792358877857613*^9, 3.792358907338236*^9}, {
+   3.792359035625146*^9, 3.792359049824654*^9}, {3.792359132540536*^9, 
+   3.792359204079646*^9}, {3.79235930678815*^9, 3.7923593155759087`*^9}, {
+   3.792359379887631*^9, 3.792359445600346*^9}, {3.7923595187994423`*^9, 
+   3.79235953127535*^9}, {3.792359604690721*^9, 3.792359629342182*^9}, {
+   3.792359807430421*^9, 3.7923598077815866`*^9}, {3.792359962493463*^9, 
+   3.792359965820867*^9}, {3.792360133856154*^9, 3.7923601642529297`*^9}, {
+   3.7923602156052217`*^9, 3.792360216164282*^9}, {3.792360253132636*^9, 
+   3.792360257332926*^9}, {3.792360387439548*^9, 3.7923604638353987`*^9}, {
+   3.792360553279182*^9, 3.792360607515813*^9}, {3.7923606408917017`*^9, 
+   3.792360641170827*^9}, {3.792403359259899*^9, 3.7924033947223463`*^9}, {
+   3.792403436296784*^9, 3.792403472859926*^9}, {3.792403658139081*^9, 
+   3.792403700318473*^9}, {3.792403733599176*^9, 3.792403737174821*^9}, {
+   3.792405923646125*^9, 3.792405967040533*^9}, {3.792406026833444*^9, 
+   3.7924060270884647`*^9}, {3.792406079484356*^9, 3.792406122392617*^9}, {
+   3.792406234249918*^9, 3.7924062438094378`*^9}, {3.792406553075562*^9, 
+   3.792406629647039*^9}, {3.792406698067712*^9, 3.7924067463672533`*^9}, {
+   3.7924068644234056`*^9, 3.792406872310039*^9}, {3.792407022465991*^9, 
+   3.7924070492793694`*^9}, {3.792407114622328*^9, 3.792407114957614*^9}, {
+   3.792407187798624*^9, 3.792407193973792*^9}, {3.792407400738659*^9, 
+   3.7924074714305477`*^9}, {3.792407575456791*^9, 3.792407649358222*^9}, {
+   3.792407715675191*^9, 3.792407724877844*^9}, {3.792407778411806*^9, 
+   3.792407835004607*^9}, {3.79240788414883*^9, 3.792407884995509*^9}, {
+   3.792407923717011*^9, 3.792407924075513*^9}, {3.792408100223569*^9, 
+   3.792408133466751*^9}, {3.7924081647898703`*^9, 3.792408165050956*^9}, {
+   3.7924082605680532`*^9, 3.79240833046765*^9}, {3.792408400617103*^9, 
+   3.792408443154826*^9}, {3.792408872030464*^9, 3.792408930586199*^9}, {
+   3.7924090554785557`*^9, 3.792409088786869*^9}, {3.792409136746647*^9, 
+   3.792409137434939*^9}, {3.792409174306951*^9, 3.792409174713647*^9}, {
+   3.792409270965386*^9, 3.792409337274737*^9}, {3.7924094483008823`*^9, 
+   3.7924095056399307`*^9}, {3.7924095356731462`*^9, 
+   3.7924095359839354`*^9}, {3.792419576533102*^9, 3.79241963776785*^9}, {
+   3.7924197194845448`*^9, 3.792419733761832*^9}, {3.792419766840568*^9, 
+   3.792419789807431*^9}, {3.792419823632015*^9, 3.792419832176252*^9}, {
+   3.792419971675853*^9, 3.7924200183426733`*^9}, {3.792420102731352*^9, 
+   3.79242016969388*^9}, {3.7924202772260857`*^9, 3.792420350909031*^9}, {
+   3.79242038098173*^9, 3.792420385596966*^9}, {3.7924204161257772`*^9, 
+   3.792420434306053*^9}, {3.7924205033355637`*^9, 3.7924205579891148`*^9}, {
+   3.792420646657667*^9, 3.7924206957339497`*^9}, {3.7924207301407633`*^9, 
+   3.792420730309987*^9}, {3.792420881693771*^9, 3.792420926485379*^9}, {
+   3.7924209588049107`*^9, 3.7924209858911467`*^9}, {3.792421096904076*^9, 
+   3.792421184058576*^9}, {3.7924213251199303`*^9, 3.792421334963953*^9}, {
+   3.792421413939536*^9, 3.7924214505940027`*^9}, {3.7924214971783247`*^9, 
+   3.792421501657238*^9}, {3.792421565062367*^9, 3.792421596144888*^9}, {
+   3.792421638714759*^9, 3.792421639144771*^9}, {3.792421712922056*^9, 
+   3.7924217452182493`*^9}, {3.792421794997604*^9, 3.792421808538206*^9}, {
+   3.79242185032193*^9, 3.79242190822508*^9}, {3.792422010348645*^9, 
+   3.792422037952733*^9}, {3.792422099985046*^9, 3.7924221002875433`*^9}, {
+   3.792422183512138*^9, 3.7924221933122263`*^9}, {3.79242238557038*^9, 
+   3.792422410175405*^9}, {3.79242247325075*^9, 3.792422473649879*^9}, {
+   3.7924225100828657`*^9, 3.792422510530837*^9}, 3.792423087234914*^9, {
+   3.792425017403185*^9, 3.79242504919499*^9}, {3.792425373610107*^9, 
+   3.792425377057832*^9}, {3.792425552393619*^9, 3.792425583168972*^9}, {
+   3.792425769448862*^9, 3.7924259140500803`*^9}, {3.792425963941876*^9, 
+   3.792426044647695*^9}, {3.7924260846663733`*^9, 3.7924261002711287`*^9}, {
+   3.7924262601920843`*^9, 3.792426344118752*^9}, {3.792426427519606*^9, 
+   3.792426497942618*^9}, {3.792426577887411*^9, 3.792426716646408*^9}, 
+   3.792426769542395*^9, {3.792426828939239*^9, 3.792426832786419*^9}, {
+   3.79242691609426*^9, 3.792426936173633*^9}, {3.792426973087057*^9, 
+   3.792427035004634*^9}, {3.792427070254263*^9, 3.7924272138048677`*^9}, {
+   3.79242739036583*^9, 3.7924273996439867`*^9}, 3.792427536114293*^9, {
+   3.792427710726027*^9, 3.792427711595519*^9}, {3.792427765510124*^9, 
+   3.7924278307869673`*^9}},
+ CellLabel->
+  "In[709]:=",ExpressionUUID->"59fe1fe6-7ff9-4662-9c10-01c88a2d05e9"]
 },
-WindowSize->{1261, 1042},
-WindowMargins->{{3, Automatic}, {Automatic, 43}},
-FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-21, 2016)",
+WindowSize->{1600, 1367},
+WindowMargins->{{2, Automatic}, {Automatic, 0}},
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -253,10 +854,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 7775, 177, 453, "Input"],
-Cell[8358, 201, 1446, 34, 35, "Output"]
-}, Open  ]]
+Cell[558, 20, 41130, 817, 732, "Input",ExpressionUUID->"59fe1fe6-7ff9-4662-9c10-01c88a2d05e9"]
 }
 ]
 *)
