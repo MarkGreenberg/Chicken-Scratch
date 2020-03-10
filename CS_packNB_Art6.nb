@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      9730,        220]
-NotebookOptionsPosition[      9417,        206]
-NotebookOutlinePosition[      9776,        222]
-CellTagsIndexPosition[      9733,        219]
+NotebookDataLength[     46017,        888]
+NotebookOptionsPosition[     45725,        875]
+NotebookOutlinePosition[     46062,        890]
+CellTagsIndexPosition[     46019,        887]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,170 +26,681 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"RandomSample", "[", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List","ListIcon",GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"16", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["6688", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {{"Aztec", 
+                StringJoin["images/Art6/cs_art6_Aztec", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Benin", 
+                StringJoin["images/Art6/cs_art6_Benin", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Cambodia", 
+                StringJoin["images/Art6/cs_art6_Cambodian", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"China", 
+                StringJoin["images/Art6/cs_art6_Chinese", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Egypt", 
+                StringJoin["images/Art6/cs_art6_Egyptian", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Etruscans", 
+                StringJoin["images/Art6/cs_art6_Etruscan", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {
+               "Classical Greek", 
+                StringJoin["images/Art6/cs_art6_GreekAncient", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Archaic Greek", 
+                StringJoin["images/Art6/cs_art6_GreekArchaic", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"India", 
+                StringJoin["images/Art6/cs_art6_Indian", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Japan", 
+                StringJoin["images/Art6/cs_art6_Japanese", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Maya", 
+                StringJoin["images/Art6/cs_art6_Mayan", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Mesopotamia", 
+                StringJoin["images/Art6/cs_art6_Mesopotamian", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Persia", 
+                StringJoin["images/Art6/cs_art6_Persian", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"The Roman Empire", 
+                StringJoin["images/Art6/cs_art6_RomanEmpire", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {
+               "The Roman Republic", 
+                StringJoin["images/Art6/cs_art6_RomanRepublic", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}, {"Thailand", 
+                StringJoin["images/Art6/cs_art6_Thai", 
+                 ToString[RandomInteger[] + 1], ".jpg"]}},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+            "\"\<Which ancient culture produced this piece of art?\>\"", ",", 
+             
+             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
            RowBox[{
-            RowBox[{"{", 
-             RowBox[{"\"\<Aztec\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Aztec\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Benin\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Benin\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Cambodia\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Cambodian\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<China\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Chinese\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Egypt\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Egyptian\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Etruscans\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Etruscan\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Classical Greek\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_GreekAncient\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Archaic Greek\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_GreekArchaic\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<India\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Indian\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Japan\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Japanese\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Maya\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Mayan\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Mesopotamia\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Mesopotamian\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Persia\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Persian\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<The Roman Empire\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_RomanEmpire\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<The Roman Republic\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_RomanRepublic\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}], ",", "\[IndentingNewLine]", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Thailand\>\"", ",", 
-              RowBox[{"\"\<images/Art6/cs_art6_Thai\>\"", "<>", 
-               RowBox[{"ToString", "[", 
-                RowBox[{
-                 RowBox[{"RandomInteger", "[", "]"}], "+", "1"}], "]"}], 
-               "<>", "\"\<.jpg\>\""}]}], "}"}]}], "}"}], ",", "4"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-         "\"\<Which ancient culture produced this piece of art?\>\"", ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"Image", "[", 
+            RowBox[{
+             RowBox[{
+             "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             "&"}], "/@", "data"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
            RowBox[{
-            RowBox[{"Import", "[", 
-             RowBox[{"urlStem", "<>", "h1"}], "]"}], ",", 
-            RowBox[{"ImageSize", "\[Rule]", 
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"Image", "[", 
+              RowBox[{
+               RowBox[{"Import", "[", 
+                RowBox[{"urlStem", "<>", "h1"}], "]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+            
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"data", "\[LeftDoubleBracket]", 
+              RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["97", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["28272", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "Art4/BotticelliBirthOfVenus.jpg" -> {
+                "The Birth of Venus", "Sandro Botticelli", 1485}, 
+               "Art4/CassattChildsBath.jpg" -> {
+                "The Child's Bath", "Mary Cassatt", 1893}, 
+               "Art4/DaliPersistence.jpg" -> {
+                "The Persistence of Memory", "Salvador Dali", 1931}, 
+               "Art4/DavidNapoleon.jpg" -> {
+                "Napoleon Crossing the Alps", "Jacques-Louis David", 1801}, 
+               "Art4/FriedrichSeaOfIce.jpg" -> {
+                "The Sea of Ice", "Caspar David Friedrich", 1824}, 
+               "Art4/GerasimovLenin.jpg" -> {
+                "Lenin on the Podium", "Alexander Gerasimov", 1930}, 
+               "Art4/KlimtWomanGold.jpg" -> {
+                "Portrait of Adele Bloch-Bauer I", "Gustav Klimt", 1907}, 
+               "Art4/GericaultRaft.jpg" -> {
+                "The Raft of the Medusa", 
+                 "Th\[EAcute]odore G\[EAcute]ricault", 1819}, 
+               "Art4/LeutzeWashingtonCrossing.jpg" -> {
+                "Washington Crossing the Delaware", "Emanuel Leutze", 1851}, 
+               "Art4/LichtensteinGirlRibbon.jpg" -> {
+                "Girl with Hair Ribbon", "Roy Lichtenstein", 1965}, 
+               "Art4/MunchScream.jpg" -> {"The Scream", "Edvard Munch", 1893},
+                "Art4/NeimanMuhammadAli.jpg" -> {
+                "Muhammad Ali \[LongDash] Athlete of the Century", 
+                 "Leroy Neiman", 2001}, 
+               "Art4/OkeefeRamsHead.jpg" -> {
+                "Ram's Head, White Hollyhock \[LongDash] Hills", 
+                 "Georgia O'Keeffe", 1935}, 
+               "Art4/RembrandtSelfPortrait.jpg" -> {
+                "Self-Portrait", "Rembrandt", 1650}, 
+               "Art4/RockwellRunaway.jpg" -> {
+                "The Runaway", "Norman Rockwell", 1958}, 
+               "Art4/RousseauDream.jpg" -> {
+                "The Dream", "Henri Rousseau", 1910}, 
+               "Art4/SeuratSundayAfternoon.jpg" -> {
+                "A Sunday Afternoon...", "Georges Seurat", 1886}, 
+               "Art4/VanGoghSkullCigarette.jpg" -> {
+                "Skull with a Burning Cigarette", 1887}, 
+               "Art12/AudubonGreatCinereousOwl.jpg" -> {
+                "Great Cinereous Owl", "John James Audubon", 1831}, 
+               "Art12/BonheurForlornDonkey.jpg" -> {
+                "The Forlorn Donkey", "Rosa Bonheur", 1889}, 
+               "Art12/CalderBosbies.jpg" -> {
+                "Bosbies and Uniforms", "Alexander Calder", 1971}, 
+               "Art12/DaliRuins.jpg" -> {
+                "Atavistic Ruins after the Rain", "Salvador Dali", 1934}, 
+               "Art12/DavisWishThreat.jpg" -> {
+                "A Wish and a Threat", "Mike Davis", 2011}, 
+               "Art12/DuchampSadYoungManOnTrain.jpg" -> {
+                "Sad Young Man on a Train", "Marcel Duchamp", 1912}, 
+               "Art12/ErnstAngelOfHome.jpg" -> {
+                "The Angel of the Home", "Max Ernst", 1937}, 
+               "Art12/EscherDrawingHands.jpg" -> {
+                "Drawing Hands", "M.C. Escher", 1948}, 
+               "Art12/FrazettaSilverWarrior.jpg" -> {
+                "The Silver Warrior", "Frank Frazetta", 1972}, 
+               "Art12/GauguinWhenWillYouMarry.jpg" -> {
+                "When Will You Marry", "Paul Gauguin", 1892}, 
+               "Art12/HildebrandtGiftOfGaladriel.jpg" -> {
+                "The Gift of Galadriel", "Greg and Tim Hildebrandt", 1997}, 
+               "Art12/HogarthDavidGarrickAsRichardIII.jpg" -> {
+                "David Garrick as Richard III", "William Hogarth", 1745}, 
+               "Art12/HokusaiGreatWave.jpg" -> {
+                "The Great Wave off Kanagawa", "Hokusai", 1831}, 
+               "Art12/KeaneTear.jpg" -> {"A Tear", "Margaret Keane", 1963}, 
+               "Art12/KushElephants.jpg" -> {
+                "African Sonata", "Vladimir Kush", 1965}, 
+               "Art12/LichtensteinMelody.jpg" -> {
+                "The Melody Haunts My Reverie", "Roy Lichtenstein", 1965}, 
+               "Art12/MagritteSonOfMan.jpg" -> {
+                "The Son of Man", "Ren\[EAcute] Magritte", 1964}, 
+               "Art12/MatisseWomanHat.jpg" -> {
+                "Woman with a Hat", "Henri Matisse", 1905}, 
+               "Art12/MiroSingingFish.jpg" -> {
+                "The Singing Fish", "Joan Mir\[OAcute]", 1972}, 
+               "Art12/ModiglianiHankaZborowska.jpg" -> {
+                "Portrait of Hanka Zborowska", "Amedeo Modigliani", 1921}, 
+               "Art12/MondrianBroadway.jpg" -> {
+                "Broadway Boogie-Woogie", "Piet Mondrian", 1943}, 
+               "Art12/MorisotTea.jpg" -> {"Tea", "Berthe Morisot", 1882}, 
+               "Art12/MuchaLoveOfMyThoughts.jpg" -> {
+                "Love of My Thoughts", "Alphonse Mucha", 1989}, 
+               "Art12/NeimanRestingTiger.jpg" -> {
+                "Resting Tiger", "Leroy Neiman", 2008}, 
+               "Art12/OkeeffeRedCanna.jpg" -> {
+                "Red Canna", "Georgia O'Keeffe", 1924}, 
+               "Art12/PadenInTheMoment.jpg" -> {
+                "In the Moment", "Theresa Paden", 2015}, 
+               "Art12/ParrishAquamarine.jpg" -> {
+                "Aquamarine", "Maxfield Parrish", 1999}, 
+               "Art12/PicassoWeepingWoman.jpg" -> {
+                "The Weeping Woman", "Pablo Picasso", 1937}, 
+               "Art12/PollockMural.jpg" -> {"Mural", "Jackson Pollock", 1943},
+                "Art12/RothkoYellowRedBlue.jpg" -> {
+                "Yellow, Red, and Blue", "Mark Rothko", 1953}, 
+               "Art12/RousseauTropicalJungle.jpg" -> {
+                "Tropical Forest with Monkeys", "Henri Rousseau", 1910}, 
+               "Art12/SchieleSittingWoman.jpg" -> {
+                "Sitting Woman with Legs Drawn Up", "Egon Schiele", 1918}, 
+               "Art12/TwachtmanOceansBridge.jpg" -> {
+                "Arques-la-Bataille", "John Henry Twachtman", 1885}, 
+               "Art12/VallejoBrokenWings.jpg" -> {
+                "Broken Wing", "Boris Vallejo", 1999}, 
+               "Art12/VanGoghIrisesInJug.jpg" -> {
+                "Irises", "Vincent van Gogh", 1890}, 
+               "Art12/VettrianoInThoughtsOfYou.jpg" -> {
+                "In Thoughts of You", "Jack Vettriano", 2012}, 
+               "Art6b/AnguissolaDoublePortrait.jpg" -> {
+                "Double Portrait", "Sofonisba Anguissola", 1585}, 
+               "Art6b/BierstadtShoreTurquoiseSea.jpg" -> {
+                "Shore of the Turquoise Sea", "Albert Bierstadt", 1878}, 
+               "Art6b/BlakeRedDragon.jpg" -> {
+                "Red Dragon and Woman Clothed", "William Blake", 1808}, 
+               "Art6b/CalderHomageToSun.jpg" -> {
+                "Homage to the Sun", "Alexander Calder", 1973}, 
+               "Art6b/CassattBreakfastInBed.jpg" -> {
+                "Breakfast in Bed", "Mary Cassatt", 1897}, 
+               "Art6b/ChicagoDrivingWorldDestruction.jpg" -> {
+                "Driving the World to Destruction", "Judy Chicago", 1985}, 
+               "Art6b/ChurchCotopaxi.jpg" -> {
+                "Cotopaxi", "Friedrich Edwin Church", 1862}, 
+               "Art6b/DaVinciMonaLisa.jpg" -> {
+                "Mona Lisa", "Leonardo da Vinci", 1503}, 
+               "Art6b/FontanaPortraitLadyRuff.jpg" -> {
+                "Portrait of a Lady Wearing a Ruff", "Sofonisba Anguissola", 
+                 1695}, "Art6b/FrazettaDeathDealer.jpg" -> {
+                "Death Dealer", "Frank Frazetta", 1973}, 
+               "Art6b/GainsboroughPortraitJonathanButtle.jpg" -> {
+                "Portrait of Jonathan Buttle", "Thomas Gainsborough", 1770}, 
+               "Art6b/GentileschiStCeciliaPlayingLute.jpg" -> {
+                "St. Cesilia Playing the Lute", "Artemisia Gentileschi", 
+                 1620}, "Art6b/GoyaSaturnDevouringHisSon.jpg" -> {
+                "Saturn Devouring His Son", "Francisco Goya", 1821}, 
+               "Art6b/HaringUntitled.jpg" -> {
+                "Untitled", "Keith Haring", 1982}, 
+               "Art6b/HildebrandtPerseusAndromeda.jpg" -> {
+                "Perseus and Andromeda", "Tim and Greg Hildebrandt", 1984}, 
+               "Art6b/HildebrandtReturnKing.jpg" -> {
+                "Return of the King", "Tim and Greg Hildebrandt", 1975}, 
+               "Art6b/HockneyTropicalGarden.jpg" -> {
+                "/Tropical Garden", "David Hockney", 2015}, 
+               "Art6b/HopperYonkers.jpg" -> {
+                "Yonkers", "Edward Hopper", 1916}, 
+               "Art6b/KandinskyYellowAccompaniment.jpg" -> {
+                "Yellow Accompaniment", "Vasily Kandinsky", 1924}, 
+               "Art6b/KlimtPortraitLady.jpg" -> {
+                "Portrait of a Lady", "Gustav Klimt", 1917}, 
+               "Art6b/LeBrunDaughtersPortrait.jpg" -> {
+                "Daughter's Portrait", 
+                 "Louise \[CapitalEAcute]lisabeth Vig\[EAcute]e-LeBrun", 
+                 1792}, "Art6b/ManetBarFoliesBergere.jpg" -> {
+                "A Bar at the Folies-Berg\[EGrave]re", "Edouard Manet", 1882},
+                "Art6b/MatisseCatRedFish.jpg" -> {
+                "The Cat with Red Fish", "Henri Matisse", 1914}, 
+               "Art6b/MondrianComposition.jpg" -> {
+                "Composition", "Piet Mondrian", 1916}, 
+               "Art6b/MonetLeGrandCanal1.jpg" -> {
+                "Le Grand Canal", "Claude Monet", 1908}, 
+               "Art6b/MonetLeGrandCanal2.jpg" -> {
+                "Le Grand Canal", "Claude Monet", 1908}, 
+               "Art6b/MonetLeGrandCanal3.jpg" -> {
+                "Le Grand Canal", "Claude Monet", 1908}, 
+               "Art6b/MonetWomanParasol.jpg" -> {
+                "Woman with a Parasol", "Claude Monet", 1875}, 
+               "Art6b/MorisotStudyingViolin.jpg" -> {
+                "Studying the Violin", "Berthe Morisot", 1893}, 
+               "Art6b/NeimanRockyBalboa.jpg" -> {
+                "Rocky Balboa", "Leroy Neiman", 1981}, 
+               "Art6b/OkeeffeMaple.jpg" -> {
+                "Autumn Trees \[LongDash] Maple", "Georgia O'Keeffe", 1924}, 
+               "Art6b/PachecoRebirthOfSuperhero.jpg" -> {
+                "Rebirth of a Superhero", "Carlos Pacheco", 2016}, 
+               "Art6b/ParrishSleepingBeauty.jpg" -> {
+                "Sleeping Beauty in the Wood", "Maxfield Parrish", 1912}, 
+               "Art6b/PeckBigWhitePussy.jpg" -> {
+                "Big White Pussy", "Marion Peck", 2011}, 
+               "Art6b/PicassoGuernica.jpg" -> {
+                "Guernica", "Pablo Picasso", 1937}, 
+               "Art6b/PicassoWeepingWoman.jpg" -> {
+                "Weeping Woman", "Pablo Picasso", 1937}, 
+               "Art6b/RydenInsideSue.jpg" -> {
+                "Inside Sue", "Mark Ryden", 1997}, 
+               "Art6b/TitianLadyInWhite.jpg" -> {
+                "Portrait of a Lady in White", "Titian", 1561}, 
+               "Art6b/VanDykeSelfPortrait.jpg" -> {
+                "Self Portrait with a Sunflower", "Anthony van Dyck", 1633}, 
+               "Art6b/VanGoghNightCafe.jpg" -> {
+                "The Night Caf\[EAcute]", "Vincent van Gogh", 1888}, 
+               "Art6b/VanGoghStarryNight.jpg" -> {
+                "Starry Night", "Vincent van Gogh", 1889}, 
+               "Art6b/VlaminckLaMachine.jpg" -> {
+                "Restaurant La Machine at Bougival", "Maurice Vlaminck", 
+                 1905}, "Art6b/WarholMarilynMonroe1967.jpg" -> {
+                "Marilyn Monroe 1967", "Andy Warhol", 1967}],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"imgs", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Import", "[", 
+              RowBox[{"urlStem", "<>", "\"\<images/\>\"", "<>", "#"}], "]"}], 
+             "&"}], "/@", 
+            RowBox[{"Keys", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"icf", "=", 
+           InterpretationBox[
+            TagBox[
+             StyleBox[
+              StyleBox[
+               FrameBox[GridBox[{
+                  {
+                   StyleBox[
+                    StyleBox[
+                    AdjustmentBox["\<\"[\[FilledSmallSquare]]\"\>",
+                    BoxBaselineShift->-0.25,
+                    BoxMargins->{{0, 0}, {-1, -1}}], "ResourceFunctionIcon",
+                    
+                    FontColor->RGBColor[
+                    0.8745098039215686, 0.2784313725490196, 
+                    0.03137254901960784],
+                    "NodeID" -> 3],
+                    ShowStringCharacters->False,
+                    FontFamily->"Source Sans Pro Black",
+                    FontSize->(10 Inherited)/13,
+                    FontWeight->"Heavy",
+                    PrivateFontOptions->{"OperatorSubstitution"->False},
+                    "NodeID" -> 4], 
+                   StyleBox[
+                    
+                    StyleBox["\<\"ImageColorFunction\"\>", 
+                    "ResourceFunctionLabel",
+                    "NodeID" -> 5],
+                    ShowStringCharacters->False,
+                    FontSize->(12 Inherited)/13,
+                    "NodeID" -> 6]}
+                 }]], "ResourceFunctionFrame",
+               "NodeID" -> 7],
+              FrameBoxOptions->{Background->GrayLevel[0.5, 0.15],
+              
+              BaseStyle->{
+               "StandardForm", LineSpacing -> {0, 0}, LineBreakWithin -> 
+                False},
+              FrameMargins->{{3, 3}, {0, 0}},
+              FrameStyle->Directive[
+                GrayLevel[0.5, 0.35], 
+                AbsoluteThickness[0.5]],
+              RoundingRadius->4},
+              GridBoxOptions->{FrameStyle->GrayLevel[1, 0],
+              
+              GridBoxAlignment->{
+               "Columns" -> {{Left}}, "Rows" -> {{Automatic}}},
+              GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              
+              GridBoxSpacings->{
+               "Columns" -> {{0.25}}, "Rows" -> {-0.1, {}, 0}}},
+              "NodeID" -> 8],
+             {"FunctionResourceBox", 
+              RGBColor[
+              0.8745098039215686, 0.2784313725490196, 0.03137254901960784], 
+              "\"ImageColorFunction\""}],
+            ResourceFunction["ImageColorFunction"],
+            BoxID -> "ImageColorFunction",
+            Selectable->False]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"coFu", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"icf", "[", "#", "]"}], "&"}], "/@", "imgs"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"doms", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Cases", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"RGBColor", "[", "__", "]"}], ",", "Infinity"}], "]"}],
+              "&"}], "/@", "coFu"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ends", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Partition", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{"0", ",", "500", ",", 
+                 FractionBox["500", 
+                  RowBox[{"Length", "[", "#", "]"}]]}], "]"}], ",", "2", ",", 
+               "1"}], "]"}], "&"}], "/@", "doms"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"bricks", "=", 
+           RowBox[{"{", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"Rectangle", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "18"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", "34"}], "}"}]}], "]"}]}], 
+                 "}"}], "&"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                 "doms", "\[LeftDoubleBracket]", "1", 
+                  "\[RightDoubleBracket]"}], ",", 
+                 RowBox[{
+                 "ends", "\[LeftDoubleBracket]", "1", 
+                  "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"Rectangle", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "18"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", "34"}], "}"}]}], "]"}]}], 
+                 "}"}], "&"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                 "doms", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}], ",", 
+                 RowBox[{
+                 "ends", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"Rectangle", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "18"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", "34"}], "}"}]}], "]"}]}], 
+                 "}"}], "&"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                 "doms", "\[LeftDoubleBracket]", "3", 
+                  "\[RightDoubleBracket]"}], ",", 
+                 RowBox[{
+                 "ends", "\[LeftDoubleBracket]", "3", 
+                  "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"MapThread", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"Rectangle", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", "18"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    "#2", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], ",", "34"}], "}"}]}], "]"}]}], 
+                 "}"}], "&"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                 "doms", "\[LeftDoubleBracket]", "4", 
+                  "\[RightDoubleBracket]"}], ",", 
+                 RowBox[{
+                 "ends", "\[LeftDoubleBracket]", "4", 
+                  "\[RightDoubleBracket]"}]}], "}"}]}], "]"}]}], "}"}]}], ";",
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"grad", "=", 
+           RowBox[{"Polygon", "[", 
+            RowBox[{
              RowBox[{"{", 
               RowBox[{
-               RowBox[{"{", "480", "}"}], ",", 
-               RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
-         RowBox[{"h1", "\[Rule]", 
-          RowBox[{"data", "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Art6\>\"", ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "0"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"0", ",", "18"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"500", ",", "18"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"500", ",", "0"}], "}"}]}], "}"}], ",", 
+             RowBox[{"VertexTextureCoordinates", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "0", "}"}], ",", 
+                RowBox[{"{", "0", "}"}], ",", 
+                RowBox[{"{", "1", "}"}], ",", 
+                RowBox[{"{", "1", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"txtr", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"#", "[", 
+                 FractionBox["n", "500"], "]"}], "/.", 
+                RowBox[{"RGBColor", "\[Rule]", "List"}]}], ",", 
+               RowBox[{"{", 
+                RowBox[{"n", ",", "0", ",", "500"}], "}"}]}], "]"}], "&"}], "/@",
+             "coFu"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"MapThread", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Graphics", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"Texture", "[", "#2", "]"}], ",", "grad", ",", 
+                  RowBox[{"Line", "[", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "34"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"500", ",", "34"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"500", ",", "0"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0"}], "}"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "18"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"500", ",", "18"}], "}"}]}], "}"}]}], "}"}], 
+                   "]"}]}], "}"}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", "500"}]}], "]"}], "&"}], ",", 
+             
+             RowBox[{"{", 
+              RowBox[{"bricks", ",", "txtr"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"Tooltip", "[", 
+            RowBox[{
+            "\"\<Which pallet shows the dominant colors that would restore \
+this masterpiece?\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+                 RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], "<>", 
+                "\"\< by \>\"", "<>", 
+                RowBox[{
+                 RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+                 RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "<>", 
+                "\"\< (\>\"", "<>", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{
+                  RowBox[{"Values", "[", "data", "]"}], 
+                  "\[LeftDoubleBracket]", 
+                  RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], "]"}], 
+                "<>", "\"\<)\>\""}], ",", "20"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"Magnify", "[", 
+              RowBox[{
+               RowBox[{"ImageResize", "[", 
+                RowBox[{
+                 RowBox[{"ColorConvert", "[", 
+                  RowBox[{
+                   RowBox[{"Import", "[", 
+                    RowBox[{"urlStem", "<>", "\"\<images/\>\"", "<>", "h1"}], 
+                    "]"}], ",", "\"\<Grayscale\>\""}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", "480", "}"}], ",", 
+                   RowBox[{"{", "540", "}"}]}], "}"}]}], "]"}], ",", "1"}], 
+              "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{
+              RowBox[{"Keys", "[", "data", "]"}], "\[LeftDoubleBracket]", "1",
+               "\[RightDoubleBracket]"}]}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Art6\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.686253423037221*^9, 3.6862534258677883`*^9}, {
    3.686253468438332*^9, 3.686253491071505*^9}, {3.6862535814204617`*^9, 
@@ -201,13 +712,170 @@ Cell[BoxData[
    3.686254969739573*^9}, 3.686255449092567*^9, {3.688740893512891*^9, 
    3.688740945774982*^9}, {3.688740979867691*^9, 3.6887409884487467`*^9}, {
    3.688741036116588*^9, 3.6887410847898893`*^9}, {3.688741119585484*^9, 
-   3.688741120024838*^9}},ExpressionUUID->"bc1d716c-70df-4b37-8bf9-\
-ca499e4fc677"]
+   3.688741120024838*^9}, {3.792516468729653*^9, 3.792516516941565*^9}, {
+   3.792516547443331*^9, 3.792516629781427*^9}, 3.792516669091898*^9, {
+   3.792516763109519*^9, 3.792516778931492*^9}, {3.7925168268300133`*^9, 
+   3.792516839453463*^9}, {3.792516873255541*^9, 3.792516950591337*^9}, {
+   3.7925170095236053`*^9, 3.7925170186534758`*^9}, {3.7925170903492413`*^9, 
+   3.792517151621307*^9}, {3.7925172137734423`*^9, 3.792517246908801*^9}, {
+   3.792517291580578*^9, 3.792517326229245*^9}, {3.792517380733211*^9, 
+   3.79251744097256*^9}, {3.79251752054893*^9, 3.7925176092840843`*^9}, {
+   3.7925176676203814`*^9, 3.7925178870192137`*^9}, {3.792517962875905*^9, 
+   3.79251800822725*^9}, {3.792518045283181*^9, 3.7925180807793713`*^9}, {
+   3.792518230090631*^9, 3.7925183327228613`*^9}, {3.7925184040345793`*^9, 
+   3.792518510042087*^9}, {3.7925185557143383`*^9, 3.792518685418082*^9}, {
+   3.792518717754019*^9, 3.7925188126093273`*^9}, {3.7925188745218887`*^9, 
+   3.792518958377302*^9}, {3.7925189943854847`*^9, 3.792519098056753*^9}, {
+   3.792519149384945*^9, 3.79251921512082*^9}, {3.792519248008916*^9, 
+   3.792519329296476*^9}, {3.792519424216496*^9, 3.792519507471768*^9}, {
+   3.792519569535852*^9, 3.7925196022956667`*^9}, {3.792519668888319*^9, 
+   3.792519727119938*^9}, {3.792519771136303*^9, 3.792519888911525*^9}, {
+   3.792519952287067*^9, 3.792520073734605*^9}, {3.792520118383288*^9, 
+   3.79252020387024*^9}, {3.792520240334311*^9, 3.7925203277099457`*^9}, {
+   3.792520378086461*^9, 3.7925204295257473`*^9}, {3.792520474198049*^9, 
+   3.7925206917892513`*^9}, {3.792520732917613*^9, 3.792520761020858*^9}, {
+   3.7925208028692207`*^9, 3.7925208240367117`*^9}, {3.79252086097297*^9, 
+   3.792520892037446*^9}, {3.7925209655897827`*^9, 3.792521049253366*^9}, {
+   3.792521095869774*^9, 3.792521153229207*^9}, {3.792521307004725*^9, 
+   3.792521455996169*^9}, {3.792521670828146*^9, 3.792521708563566*^9}, {
+   3.7925218815563097`*^9, 3.792521912555359*^9}, {3.792521993563528*^9, 
+   3.792522010619066*^9}, {3.792522164371151*^9, 3.792522219354086*^9}, {
+   3.792522269042788*^9, 3.792522311586235*^9}, {3.7925227093219624`*^9, 
+   3.79252274487354*^9}, {3.792522849442547*^9, 3.792522942570443*^9}, {
+   3.7925229993550367`*^9, 3.792523069578637*^9}, {3.792523112098975*^9, 
+   3.792523206578514*^9}, {3.792523237810624*^9, 3.79252332180241*^9}, {
+   3.7925234817380543`*^9, 3.792523661857185*^9}, {3.7925237100502768`*^9, 
+   3.792523749185542*^9}, {3.792523950073516*^9, 3.7925240074410887`*^9}, {
+   3.792524047832691*^9, 3.792524232000801*^9}, {3.79252445188109*^9, 
+   3.7925245575520353`*^9}, {3.792524629287847*^9, 3.7925247485598297`*^9}, {
+   3.7925248013506804`*^9, 3.7925248857737913`*^9}, {3.792524926030382*^9, 
+   3.792524996814075*^9}, {3.7925250271102047`*^9, 3.792525091669848*^9}, {
+   3.792525192373887*^9, 3.7925252827655888`*^9}, {3.792525411309568*^9, 
+   3.79252552995677*^9}, {3.792525561949073*^9, 3.792525631676547*^9}, {
+   3.792525675980598*^9, 3.792525757844599*^9}, {3.792525910748475*^9, 
+   3.792525932732326*^9}, {3.792526043988265*^9, 3.7925260817556973`*^9}, {
+   3.792526118732229*^9, 3.792526188139543*^9}, {3.792526225956349*^9, 
+   3.792526258955846*^9}, {3.792528490736467*^9, 3.7925284944641848`*^9}, {
+   3.792528578136294*^9, 3.792528625519599*^9}, {3.7925286635600653`*^9, 
+   3.792528679407874*^9}, {3.792528889919116*^9, 3.792528952102363*^9}, {
+   3.792529001206572*^9, 3.792529057790069*^9}, {3.792529100886154*^9, 
+   3.7925291681832542`*^9}, {3.792529226422401*^9, 3.792529290229919*^9}, {
+   3.7925293699509087`*^9, 3.7925293965896673`*^9}, {3.792529427301811*^9, 
+   3.792529483837599*^9}, {3.792529543437974*^9, 3.7925296327329206`*^9}, {
+   3.792529677557682*^9, 3.7925297803176327`*^9}, {3.7925298581014767`*^9, 
+   3.792529933916705*^9}, {3.7925300560848846`*^9, 3.792530071708826*^9}, 
+   3.7925365800667973`*^9, {3.792536627737465*^9, 3.7925366722503023`*^9}, {
+   3.79253670855451*^9, 3.7925367841699142`*^9}, {3.79253766182406*^9, 
+   3.7925377007273703`*^9}, {3.792538210231677*^9, 3.792538235790462*^9}, {
+   3.79253833002424*^9, 3.792538356349819*^9}, {3.79253843248667*^9, 
+   3.79253853202214*^9}, {3.792538727693969*^9, 3.792538822813315*^9}, {
+   3.79253912166061*^9, 3.79253913461209*^9}, {3.792539307373073*^9, 
+   3.792539329736768*^9}, {3.792539434492882*^9, 3.792539447603269*^9}, {
+   3.79253949068577*^9, 3.792539494284113*^9}, {3.7925395281795464`*^9, 
+   3.792539534588081*^9}, 3.7925802467802143`*^9, {3.7925804712646837`*^9, 
+   3.792580507037979*^9}, {3.792580598751727*^9, 3.7925806921653337`*^9}, {
+   3.792580864671014*^9, 3.7925808656769648`*^9}, {3.792581030531085*^9, 
+   3.792581072060301*^9}, 3.7926986581142197`*^9, {3.7926988062765627`*^9, 
+   3.792698836307366*^9}, {3.792698872467115*^9, 3.7926990114356422`*^9}, {
+   3.7927508672187634`*^9, 3.792750884288991*^9}, {3.792750960161603*^9, 
+   3.79275101530411*^9}, {3.7927510615459137`*^9, 3.792751143023383*^9}, {
+   3.792751203168642*^9, 3.79275120377505*^9}, {3.792751828509286*^9, 
+   3.792751856508514*^9}, {3.792751913924364*^9, 3.792752005579698*^9}, {
+   3.792752369377824*^9, 3.792752443574654*^9}, {3.792752482353961*^9, 
+   3.792752517678628*^9}, {3.792752643423623*^9, 3.792752669869972*^9}, {
+   3.792752716621374*^9, 3.792753011437402*^9}, {3.7927530891744757`*^9, 
+   3.792753102957221*^9}, {3.7927532497443666`*^9, 3.792753254052662*^9}, {
+   3.7927533686956882`*^9, 3.792753428444316*^9}, {3.7927534665900173`*^9, 
+   3.7927535531157513`*^9}, 3.792753594893289*^9, {3.792753735875362*^9, 
+   3.792753831796555*^9}, {3.7927538707719107`*^9, 3.792753877795087*^9}, {
+   3.792754002764661*^9, 3.7927540296917763`*^9}, {3.792763788415839*^9, 
+   3.792763792749199*^9}, {3.7927638689989*^9, 3.7927638740971823`*^9}, {
+   3.79276432061231*^9, 3.792764390697057*^9}, {3.792764511372395*^9, 
+   3.79276452848046*^9}, 3.792764567400462*^9, {3.7927646044643784`*^9, 
+   3.792764662240149*^9}, {3.7927647322242517`*^9, 3.7927647818635483`*^9}, {
+   3.79276488819936*^9, 3.792764889439254*^9}, {3.792764994391004*^9, 
+   3.792765166030527*^9}, {3.792765248022052*^9, 3.792765257277809*^9}, {
+   3.7927653119549017`*^9, 3.792765351164879*^9}, {3.7927653919671926`*^9, 
+   3.792765396455022*^9}, {3.792765617493848*^9, 3.792765649716201*^9}, {
+   3.792765703502306*^9, 3.792765713133954*^9}, 3.792766627698826*^9, {
+   3.792766828218045*^9, 3.7927668298805943`*^9}, {3.792767635359399*^9, 
+   3.7927676384152517`*^9}, {3.792767961852914*^9, 3.792768008445005*^9}, {
+   3.792768043444647*^9, 3.792768124179817*^9}, {3.7927682737170343`*^9, 
+   3.792768275227029*^9}, {3.792768310300016*^9, 3.792768311988947*^9}, 
+   3.7927684089472*^9, {3.792768439298567*^9, 3.792768487476152*^9}, {
+   3.792768683743989*^9, 3.792768852140432*^9}, {3.792768905276637*^9, 
+   3.7927689712046747`*^9}, 3.7927690703344917`*^9, {3.7927695177970324`*^9, 
+   3.792769554051107*^9}, {3.792769943507757*^9, 3.792769978882696*^9}, {
+   3.792770220433483*^9, 3.792770254208776*^9}, {3.792770308266171*^9, 
+   3.792770322072727*^9}, {3.792770430113585*^9, 3.792770453392273*^9}, 
+   3.7927705338359747`*^9, {3.792770580260728*^9, 3.7927709580425587`*^9}, {
+   3.792771072484335*^9, 3.792771235491037*^9}, {3.792771267794289*^9, 
+   3.792771292593499*^9}, {3.7927713878662024`*^9, 3.792771396648902*^9}, {
+   3.792771442393812*^9, 3.792771455488983*^9}, {3.79277153098674*^9, 
+   3.792771535986603*^9}, 3.792790183845079*^9, 3.792790301618264*^9, 
+   3.792790415833764*^9, 3.7927904568093643`*^9, 3.792790541984909*^9, {
+   3.792790649856262*^9, 3.792790658311881*^9}, 3.792790809152567*^9, 
+   3.792790901128087*^9, 3.792791055662243*^9, 3.79279140890794*^9, {
+   3.792791548675581*^9, 3.79279170066691*^9}, {3.7927931146616096`*^9, 
+   3.7927931584707813`*^9}, {3.792793197702909*^9, 3.792793211752387*^9}, {
+   3.79279344599251*^9, 3.792793564593652*^9}, {3.792793596657299*^9, 
+   3.7927936317297707`*^9}, {3.792793681634362*^9, 3.792793682785643*^9}, {
+   3.7927938059366913`*^9, 3.7927938304334393`*^9}, {3.792793882314386*^9, 
+   3.79279388349692*^9}, {3.792793913802763*^9, 3.792793939786573*^9}, {
+   3.792793983241572*^9, 3.792794012360437*^9}, {3.79279404555306*^9, 
+   3.792794082240427*^9}, {3.7927941191932297`*^9, 3.7927941316481457`*^9}, {
+   3.7927941678574133`*^9, 3.792794183087968*^9}, {3.792794218823473*^9, 
+   3.7927943148009043`*^9}, {3.7927943928411407`*^9, 
+   3.7927944357037153`*^9}, {3.792794478952956*^9, 3.792794480095469*^9}, {
+   3.792833446668242*^9, 3.7928334700428457`*^9}, {3.792833539627922*^9, 
+   3.79283360845859*^9}, {3.792833647363029*^9, 3.7928336596664*^9}, {
+   3.792833724402834*^9, 3.792833806041798*^9}, {3.7928338398749437`*^9, 
+   3.792833840881048*^9}, {3.7928338779925413`*^9, 3.792833889664963*^9}, {
+   3.792834109881795*^9, 3.7928341818562527`*^9}, {3.792834255176951*^9, 
+   3.7928343124794273`*^9}, {3.79283503376467*^9, 3.792835049876616*^9}, {
+   3.792835163950876*^9, 3.79283523578798*^9}, {3.7928353941167507`*^9, 
+   3.7928353951478157`*^9}, {3.792836041545702*^9, 3.792836095889337*^9}, {
+   3.792836162201227*^9, 3.792836178651786*^9}, {3.7928362429498253`*^9, 
+   3.792836283475576*^9}, {3.792836351588895*^9, 3.7928363792685623`*^9}, 
+   3.792836852033993*^9, {3.7928369800281067`*^9, 3.792837075754574*^9}, {
+   3.792837169354638*^9, 3.792837195074366*^9}, {3.7928373344671164`*^9, 
+   3.792837371242354*^9}, {3.792837437786337*^9, 3.792837438736886*^9}, 
+   3.7928374744654703`*^9, {3.7928376017061157`*^9, 3.792837675145268*^9}, {
+   3.7928377676578827`*^9, 3.792837802560562*^9}, 3.79283821561525*^9, {
+   3.7928386994856377`*^9, 3.792838716101046*^9}, {3.792838752637845*^9, 
+   3.792838778518388*^9}, {3.792839097723103*^9, 3.7928391015495377`*^9}, {
+   3.7928391588280897`*^9, 3.792839188276314*^9}, {3.792839226109352*^9, 
+   3.792839252987791*^9}, {3.792839323381336*^9, 3.792839405788971*^9}, {
+   3.792839987619833*^9, 3.7928400307313957`*^9}, {3.792840069046262*^9, 
+   3.792840136418392*^9}, {3.7928408105566387`*^9, 3.792840842291884*^9}, {
+   3.792840903885042*^9, 3.79284096746006*^9}, {3.7928410115811443`*^9, 
+   3.792841024789116*^9}, {3.792841065619659*^9, 3.792841091123932*^9}, {
+   3.792841129124514*^9, 3.7928412277318087`*^9}, {3.7928412963240423`*^9, 
+   3.7928412988679543`*^9}, {3.792841354592846*^9, 3.792841385882978*^9}, {
+   3.792841423644586*^9, 3.792841496291284*^9}, {3.792841540684205*^9, 
+   3.7928415967307463`*^9}, {3.792841708916235*^9, 3.7928418948895597`*^9}, {
+   3.792841992955868*^9, 3.792842100954006*^9}, {3.792844000239728*^9, 
+   3.7928440021745872`*^9}, 3.792844430298909*^9, {3.792845097129634*^9, 
+   3.792845142741214*^9}, {3.79284525977172*^9, 3.792845323382275*^9}, {
+   3.7928454855274754`*^9, 3.7928454991963577`*^9}, {3.7928456386009274`*^9, 
+   3.7928456434505253`*^9}, 3.79284594145147*^9, {3.792846031773644*^9, 
+   3.792846107043738*^9}, {3.7928478817969503`*^9, 3.792847906713315*^9}, {
+   3.792847952721898*^9, 3.792847961307611*^9}, {3.792848180944249*^9, 
+   3.792848194701817*^9}, {3.792848286568821*^9, 3.7928482990227613`*^9}, {
+   3.79284836981984*^9, 3.792848374921026*^9}, {3.792848412295199*^9, 
+   3.792848422804986*^9}, {3.7928487128699083`*^9, 3.792848763148327*^9}, {
+   3.792848801100751*^9, 3.7928488645165987`*^9}, {3.792848897404578*^9, 
+   3.792848904163658*^9}, {3.792849189853005*^9, 3.792849214219426*^9}, {
+   3.792850097438013*^9, 3.7928501003535337`*^9}, 3.792850161409837*^9, {
+   3.7928505317237864`*^9, 3.7928505362409077`*^9}, {3.792850601473792*^9, 
+   3.792850603383996*^9}, 3.7928506914995604`*^9, {3.7928508275950813`*^9, 
+   3.7928508308718147`*^9}},
+ CellLabel->
+  "In[2297]:=",ExpressionUUID->"f3c00f25-e3d2-4b74-9362-1cbebdc0d517"]
 },
-WindowSize->{1188, 980},
-WindowMargins->{{3, Automatic}, {Automatic, 77}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
+WindowSize->{1947, 1359},
+WindowMargins->{{1, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
 StyleDefinitions->"Default.nb"
 ]
 (* End of Notebook Content *)
@@ -221,7 +889,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 8855, 184, 577, "Input",ExpressionUUID->"bc1d716c-70df-4b37-8bf9-ca499e4fc677"]
+Cell[558, 20, 45163, 853, 856, "Input",ExpressionUUID->"f3c00f25-e3d2-4b74-9362-1cbebdc0d517"]
 }
 ]
 *)
