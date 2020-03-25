@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25574,        567]
-NotebookOptionsPosition[     25057,        550]
-NotebookOutlinePosition[     25394,        565]
-CellTagsIndexPosition[     25351,        562]
+NotebookDataLength[     27947,        616]
+NotebookOptionsPosition[     27373,        598]
+NotebookOutlinePosition[     27767,        614]
+CellTagsIndexPosition[     27724,        611]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -348,13 +348,44 @@ differentiable?\>\"", ",",
                  RowBox[{"-", "5"}], ",", "5"}], "}"}], ",", 
                RowBox[{"ImageSize", "->", "Medium"}]}], "]"}]}], ";"}], 
            "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"choices", "=", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"StringForm", "[", 
+                RowBox[{"\"\<`1` = `2``3`, `4``5`\>\"", ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<X\>\"", ",", "Italic"}], "]"}], ",", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+                   "\"\<(\>\"", ",", "\"\<[\>\""}], "]"}], ",", 
+                 RowBox[{"ToString", "[", 
+                  RowBox[{
+                  "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+                   "]"}], ",", 
+                 RowBox[{"ToString", "[", 
+                  RowBox[{
+                  "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+                   "]"}], ",", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+                   "\"\<)\>\"", ",", "\"\<]\>\""}], "]"}]}], "]"}], "&"}], "/@",
+               "ansExp"}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
              RowBox[{"StringForm", "[", 
-              RowBox[{"\"\<`1` = `2``3`, `4``5`\>\"", ",", 
+              RowBox[{
+              "\"\<{`1` \[Epsilon] \[DoubleStruckCapitalR] | `1` \[Epsilon] \
+`2``3`, `4``5`}\>\"", ",", "\[IndentingNewLine]", 
                RowBox[{"Style", "[", 
-                RowBox[{"\"\<X\>\"", ",", "Italic"}], "]"}], ",", 
+                RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", 
+               "\[IndentingNewLine]", 
                RowBox[{"If", "[", 
                 RowBox[{
                  RowBox[{
@@ -377,6 +408,18 @@ differentiable?\>\"", ",",
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
@@ -388,8 +431,8 @@ differentiable?\>\"", ",",
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
-       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}]}]}], 
+        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Alge7\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.686933534834428*^9, 3.686933551536544*^9}, {
@@ -455,9 +498,14 @@ differentiable?\>\"", ",",
    3.746200614828923*^9}, {3.7651257269200907`*^9, 3.7651257911846046`*^9}, {
    3.7653698614939213`*^9, 3.7653698675303907`*^9}, 3.765369914057007*^9, {
    3.765369950240906*^9, 3.765369972416809*^9}, {3.765370056353891*^9, 
-   3.765370067512993*^9}, {3.7653702166942368`*^9, 
-   3.765370267469589*^9}},ExpressionUUID->"391e8ac0-2a7e-4691-8845-\
-9df7e60488c1"],
+   3.765370067512993*^9}, {3.7653702166942368`*^9, 3.765370267469589*^9}, {
+   3.794158451492869*^9, 3.794158457659511*^9}, {3.7941585130105658`*^9, 
+   3.794158519354994*^9}, {3.7941585678664627`*^9, 3.7941586785060177`*^9}, {
+   3.794158723963209*^9, 3.794158747268641*^9}, {3.794158857998135*^9, 
+   3.794158905675906*^9}, 3.7941589534847507`*^9, {3.794159058468392*^9, 
+   3.794159082331834*^9}, {3.79415913552414*^9, 3.794159146562296*^9}},
+ CellLabel->
+  "In[4437]:=",ExpressionUUID->"391e8ac0-2a7e-4691-8845-9df7e60488c1"],
 
 Cell[CellGroupData[{
 
@@ -550,8 +598,9 @@ Cell[BoxData[
 },
 WindowSize->{1494, 1355},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6f39a844-0128-4e48-b6e6-cdec7e42e337"
 ]
 (* End of Notebook Content *)
 
@@ -564,10 +613,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 20050, 439, 1163, "Input",ExpressionUUID->"391e8ac0-2a7e-4691-8845-9df7e60488c1"],
+Cell[558, 20, 22366, 487, 1247, "Input",ExpressionUUID->"391e8ac0-2a7e-4691-8845-9df7e60488c1"],
 Cell[CellGroupData[{
-Cell[20633, 463, 3460, 60, 115, "Input",ExpressionUUID->"6e403af2-f20c-484c-8989-5b9885a345e5"],
-Cell[24096, 525, 948, 22, 128, "Output",ExpressionUUID->"29d5a6b0-94af-49ef-88ce-1a985e5605d9"]
+Cell[22949, 511, 3460, 60, 115, "Input",ExpressionUUID->"6e403af2-f20c-484c-8989-5b9885a345e5"],
+Cell[26412, 573, 948, 22, 128, "Output",ExpressionUUID->"29d5a6b0-94af-49ef-88ce-1a985e5605d9"]
 }, {2}]]
 }
 ]
