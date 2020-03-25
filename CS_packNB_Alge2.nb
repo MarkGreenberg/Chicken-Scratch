@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17796,        411]
-NotebookOptionsPosition[     17481,        397]
-NotebookOutlinePosition[     17841,        413]
-CellTagsIndexPosition[     17798,        410]
+NotebookDataLength[     22836,        516]
+NotebookOptionsPosition[     22261,        498]
+NotebookOutlinePosition[     22656,        514]
+CellTagsIndexPosition[     22613,        511]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -73,32 +73,39 @@ Cell[BoxData[
             RowBox[{"(", 
              RowBox[{
               RowBox[{"(", 
-               RowBox[{"nF", "[", 
-                RowBox[{"[", "1", "]"}], "]"}], ")"}], 
+               RowBox[{
+               "nF", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+               ")"}], 
               RowBox[{"(", 
-               RowBox[{"nF", "[", 
-                RowBox[{"[", "2", "]"}], "]"}], ")"}], 
+               RowBox[{
+               "nF", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+               ")"}], 
               RowBox[{"(", 
-               RowBox[{"nF", "[", 
-                RowBox[{"[", "3", "]"}], "]"}], ")"}], 
+               RowBox[{
+               "nF", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}], 
+               ")"}], 
               RowBox[{"(", 
-               RowBox[{"nF", "[", 
-                RowBox[{"[", "4", "]"}], "]"}], ")"}]}], ")"}], "/", 
+               RowBox[{
+               "nF", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+               ")"}]}], ")"}], "/", 
             RowBox[{"(", 
              RowBox[{
               RowBox[{"(", 
-               RowBox[{"dF", "[", 
-                RowBox[{"[", "1", "]"}], "]"}], ")"}], 
+               RowBox[{
+               "dF", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+               ")"}], 
               RowBox[{"(", 
-               RowBox[{"dF", "[", 
-                RowBox[{"[", "2", "]"}], "]"}], ")"}], 
+               RowBox[{
+               "dF", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+               ")"}], 
               RowBox[{"(", 
-               RowBox[{"dF", "[", 
-                RowBox[{"[", "3", "]"}], "]"}], ")"}], 
+               RowBox[{
+               "dF", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}], 
+               ")"}], 
               RowBox[{"(", 
-               RowBox[{"dF", "[", 
-                RowBox[{"[", "4", "]"}], "]"}], ")"}]}], ")"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+               RowBox[{
+               "dF", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+               ")"}]}], ")"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"If", "[", 
            RowBox[{
             RowBox[{"IntegerQ", "[", 
@@ -137,18 +144,31 @@ Cell[BoxData[
             "\"\<Which of these is a factor of the denominator of the \
 rational function shown in this graph?\>\"", ",", 
              RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", 
             RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
            RowBox[{
@@ -181,7 +201,7 @@ rational function shown in this graph?\>\"", ",",
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "pic"}], "}"}], 
            "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
@@ -215,10 +235,12 @@ rational function shown in this graph?\>\"", ",",
                  RowBox[{"y", "\[Equal]", 
                   RowBox[{
                    RowBox[{
-                    RowBox[{"#", "[", 
-                    RowBox[{"[", "1", "]"}], "]"}], " ", "x"}], "+", 
-                   RowBox[{"#", "[", 
-                    RowBox[{"[", "2", "]"}], "]"}]}]}], "&&", 
+                    RowBox[{
+                    "#", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], " ", "x"}], "+", 
+                   RowBox[{
+                   "#", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}]}]}], "&&", 
                  RowBox[{"y", ">", "x"}]}], ",", "y"}], "]"}], "/.", 
               RowBox[{"{", "\[IndentingNewLine]", 
                RowBox[{
@@ -295,12 +317,11 @@ rational function shown in this graph?\>\"", ",",
              RowBox[{"y", "\[Equal]", 
               RowBox[{
                RowBox[{
-                RowBox[{"coCon", " ", "[", 
-                 RowBox[{"[", 
-                  RowBox[{"1", ",", "1"}], "]"}], "]"}], "x"}], "+", 
-               RowBox[{"coCon", "[", 
-                RowBox[{"[", 
-                 RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], ",", 
+                RowBox[{"coCon", " ", "\[LeftDoubleBracket]", 
+                 RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], "x"}], 
+               "+", 
+               RowBox[{"coCon", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}]}], ",", 
              RowBox[{"Style", "[", 
               RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", 
              RowBox[{"Style", "[", 
@@ -325,8 +346,9 @@ rational function shown in this graph?\>\"", ",",
                     RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}]}], "]"}], 
                     ",", "\"\<none, {}\>\""}], "}"}]}], "]"}], "]"}], "]"}], 
                 "]"}], ",", "3"}], "]"}], ",", 
-             RowBox[{"ansExp", "[", 
-              RowBox[{"[", "1", "]"}], "]"}]}], "]"}]}], ";", 
+             RowBox[{
+             "ansExp", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
@@ -335,10 +357,10 @@ rational function shown in this graph?\>\"", ",",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -391,15 +413,94 @@ rational function shown in this graph?\>\"", ",",
    3.713096814661766*^9, 3.713096822628055*^9}, 3.713096855300276*^9, {
    3.713097081356378*^9, 3.71309709805894*^9}, {3.7130971818435698`*^9, 
    3.713097213658024*^9}, {3.7130972918189383`*^9, 3.7130973025296383`*^9}, {
-   3.713097375714991*^9, 
-   3.713097411467948*^9}},ExpressionUUID->"4d3832ed-b121-43b0-84cf-\
-ac43b532ce93"]
+   3.713097375714991*^9, 3.713097411467948*^9}, {3.765059891939789*^9, 
+   3.7650599682613497`*^9}, {3.765096897591983*^9, 3.765096977177249*^9}, {
+   3.765097491641555*^9, 3.765097494864129*^9}, {3.765097693809443*^9, 
+   3.765097721279394*^9}, {3.765097757463147*^9, 3.765097876454939*^9}, {
+   3.7650979131834173`*^9, 3.765097915294949*^9}, {3.765098079936092*^9, 
+   3.765098082894554*^9}, {3.765098437998908*^9, 3.765098468637807*^9}, {
+   3.7941551856605186`*^9, 3.794155258879244*^9}, 3.794155416592169*^9, {
+   3.79415544717529*^9, 3.7941555140949907`*^9}, {3.7941556798559713`*^9, 
+   3.794155706960473*^9}},ExpressionUUID->"4d3832ed-b121-43b0-84cf-\
+ac43b532ce93"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Style", "[", 
+  RowBox[{
+   RowBox[{"Grid", "[", 
+    RowBox[{
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<\>\"", ",", "\"\<Question\\nw/ Media\>\"", ",", 
+         "\"\<Choices\>\"", ",", "\"\<Question\\n& Choices\>\""}], "}"}], ",",
+        "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+        "\"\<Question A\>\"", ",", "18923028721", ",", "6859", ",", 
+         "129793053997339"}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{"\"\<Question B\>\"", ",", "9950", ",", "1", ",", "9950"}], 
+        "}"}]}], "\[IndentingNewLine]", "}"}], ",", 
+     RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+     RowBox[{"Spacings", "\[Rule]", "3"}], ",", 
+     RowBox[{"Background", "\[Rule]", 
+      RowBox[{"RGBColor", "[", 
+       RowBox[{".95", ",", ".97", ",", "1"}], "]"}]}]}], "]"}], ",", 
+   RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}], ",", "18"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.765047774885695*^9, 3.7650480017398233`*^9}, {
+   3.765048068004753*^9, 3.765048160699986*^9}, {3.76504824157297*^9, 
+   3.765048246635826*^9}, {3.765048281348681*^9, 3.765048411430237*^9}, {
+   3.765048664539953*^9, 3.765048731826683*^9}, {3.765048829291437*^9, 
+   3.765048830298524*^9}, {3.765049942848925*^9, 3.7650499781130877`*^9}, {
+   3.765050011721107*^9, 3.765050084687426*^9}, {3.765050242752836*^9, 
+   3.76505026608743*^9}, {3.765050341327939*^9, 3.765050376887068*^9}, {
+   3.765050619183818*^9, 3.765050620990712*^9}, {3.765050913302515*^9, 
+   3.7650509165257263`*^9}, {3.765051004358719*^9, 3.765051005753439*^9}, {
+   3.765051045895135*^9, 3.7650510871256933`*^9}, {3.765051146053542*^9, 
+   3.765051152509293*^9}, {3.765051192550434*^9, 3.765051205453615*^9}, 
+   3.765051241334826*^9, {3.765059793209268*^9, 3.765059811432499*^9}, 
+   3.765097363682334*^9, {3.765097559558169*^9, 3.765097560525169*^9}, 
+   3.765097635440508*^9, {3.765098393084321*^9, 3.765098406795185*^9}},
+ CellLabel->
+  "In[916]:=",ExpressionUUID->"a13b3783-f67c-4bbb-9009-5a094dc0122d"],
+
+Cell[BoxData[
+ StyleBox[
+  TagBox[GridBox[{
+     {"\<\"\"\>", "\<\"Question\\nw/ Media\"\>", "\<\"Choices\"\>", \
+"\<\"Question\\n& Choices\"\>"},
+     {"\<\"Question A\"\>", "18923028721", "6859", "129793053997339"},
+     {"\<\"Question B\"\>", "9950", "1", "9950"}
+    },
+    AutoDelete->False,
+    GridBoxBackground->{"Columns" -> {{
+         RGBColor[0.95, 0.97, 1]}}},
+    GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+    GridBoxSpacings->{"Columns" -> {{3}}}],
+   "Grid"],
+  StripOnInput->False,
+  FontFamily->"Times New Roman",
+  FontSize->18]], "Output",
+ CellChangeTimes->{
+  3.765050917004394*^9, 3.765051010401897*^9, {3.765051050178103*^9, 
+   3.7650510641476603`*^9}, 3.765051153851306*^9, 3.765051206847802*^9, 
+   3.765051243008338*^9, 3.765059815777773*^9, 3.765097378199664*^9, 
+   3.765097641915245*^9, 3.7650984126095867`*^9},
+ CellLabel->
+  "Out[916]=",ExpressionUUID->"740da17d-f9fb-4c2f-951c-e949919d2322"]
+}, {2}]]
 },
 WindowSize->{1709, 1264},
 WindowMargins->{{0, Automatic}, {62, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b9ac7c9f-7d8f-4a19-a784-47e80940b3c4"
 ]
 (* End of Notebook Content *)
 
@@ -412,7 +513,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 16919, 375, 766, "Input",ExpressionUUID->"4d3832ed-b121-43b0-84cf-ac43b532ce93"]
+Cell[558, 20, 18529, 404, 808, "Input",ExpressionUUID->"4d3832ed-b121-43b0-84cf-ac43b532ce93"],
+Cell[CellGroupData[{
+Cell[19112, 428, 2115, 41, 115, "Input",ExpressionUUID->"a13b3783-f67c-4bbb-9009-5a094dc0122d"],
+Cell[21230, 471, 1018, 24, 128, "Output",ExpressionUUID->"740da17d-f9fb-4c2f-951c-e949919d2322"]
+}, {2}]]
 }
 ]
 *)
