@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     22678,        488]
-NotebookOptionsPosition[     22161,        471]
-NotebookOutlinePosition[     22498,        486]
-CellTagsIndexPosition[     22455,        483]
+NotebookDataLength[     23958,        515]
+NotebookOptionsPosition[     23384,        497]
+NotebookOutlinePosition[     23778,        513]
+CellTagsIndexPosition[     23735,        510]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -142,20 +142,42 @@ Cell[BoxData[
               RowBox[{"ToString", "[", 
                RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
           ";", "\[IndentingNewLine]", 
+          RowBox[{"(*", 
+           RowBox[{
+            RowBox[{"choices", "=", 
+             RowBox[{"Take", "[", 
+              RowBox[{
+               RowBox[{"DeleteDuplicates", "[", 
+                RowBox[{"Prepend", "[", 
+                 RowBox[{
+                  RowBox[{"RandomSample", "[", 
+                   RowBox[{
+                    RowBox[{"Range", "[", 
+                    RowBox[{
+                    RowBox[{"rem", "-", "40"}], ",", 
+                    RowBox[{"rem", "+", "40"}]}], "]"}], ",", "4"}], "]"}], 
+                  ",", "rem"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";"}], 
+           "*)"}], "\[IndentingNewLine]", 
+          RowBox[{"dis", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Abs", "[", "rem", "]"}], "<", "10"}], ",", "11", ",", 
+             "rem"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{"Take", "[", 
             RowBox[{
              RowBox[{"DeleteDuplicates", "[", 
               RowBox[{"Prepend", "[", 
                RowBox[{
-                RowBox[{"RandomSample", "[", 
-                 RowBox[{
-                  RowBox[{"Range", "[", 
-                   RowBox[{
-                    RowBox[{"rem", "-", "40"}], ",", 
-                    RowBox[{"rem", "+", "40"}]}], "]"}], ",", "4"}], "]"}], 
-                ",", "rem"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+                RowBox[{"Round", "[", 
+                 RowBox[{"RandomVariate", "[", 
+                  RowBox[{
+                   RowBox[{"NormalDistribution", "[", 
+                    RowBox[{"dis", ",", 
+                    RowBox[{"Abs", "[", "dis", "]"}]}], "]"}], ",", "6"}], 
+                  "]"}], "]"}], ",", "rem"}], "]"}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -386,9 +408,13 @@ remainder?\>\"", ",", "ratExp"}], "]"}]}], ";", "\[IndentingNewLine]",
    3.765307430386839*^9, 3.765307484680298*^9}, {3.7653075332270727`*^9, 
    3.765307533728395*^9}, {3.7653075670492153`*^9, 3.765307576272216*^9}, {
    3.765307630193666*^9, 3.765307666433764*^9}, {3.7653077219075623`*^9, 
-   3.765307748176173*^9}, 3.7653078094295473`*^9},
+   3.765307748176173*^9}, 3.7653078094295473`*^9, {3.794166488221253*^9, 
+   3.79416666813762*^9}, {3.794166710705002*^9, 3.7941667186802683`*^9}, {
+   3.7941667847596903`*^9, 3.794166874526424*^9}, {3.7941669060705547`*^9, 
+   3.794166974870571*^9}, {3.7941670566138*^9, 3.794167148613537*^9}, {
+   3.794167278406562*^9, 3.794167309494568*^9}},
  CellLabel->
-  "In[1422]:=",ExpressionUUID->"8c664e8d-21ae-48b0-80ae-79c5e78c9210"],
+  "In[4648]:=",ExpressionUUID->"8c664e8d-21ae-48b0-80ae-79c5e78c9210"],
 
 Cell[CellGroupData[{
 
@@ -471,8 +497,9 @@ Cell[BoxData[
 },
 WindowSize->{1703, 1140},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c2f20da7-1530-4bbc-a164-6b813938d380"
 ]
 (* End of Notebook Content *)
 
@@ -485,10 +512,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 18138, 370, 872, "Input",ExpressionUUID->"8c664e8d-21ae-48b0-80ae-79c5e78c9210"],
+Cell[558, 20, 19361, 396, 914, "Input",ExpressionUUID->"8c664e8d-21ae-48b0-80ae-79c5e78c9210"],
 Cell[CellGroupData[{
-Cell[18721, 394, 2339, 46, 115, "Input",ExpressionUUID->"b7c359b0-0698-4247-a5e3-c8a8a253e7bd"],
-Cell[21063, 442, 1085, 26, 126, "Output",ExpressionUUID->"51ca5e4e-4b0e-4682-b04a-f506d42e9212"]
+Cell[19944, 420, 2339, 46, 115, "Input",ExpressionUUID->"b7c359b0-0698-4247-a5e3-c8a8a253e7bd"],
+Cell[22286, 468, 1085, 26, 128, "Output",ExpressionUUID->"51ca5e4e-4b0e-4682-b04a-f506d42e9212"]
 }, {2}]]
 }
 ]
