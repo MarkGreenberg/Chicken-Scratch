@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     20791,        419]
-NotebookOptionsPosition[     20274,        402]
-NotebookOutlinePosition[     20611,        417]
-CellTagsIndexPosition[     20568,        414]
+NotebookDataLength[     22823,        458]
+NotebookOptionsPosition[     22249,        440]
+NotebookOutlinePosition[     22643,        456]
+CellTagsIndexPosition[     22600,        453]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,7 +38,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"List","ListIcon",GridBox[{{
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -54,7 +55,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               {
@@ -108,6 +109,7 @@ interaction", "insulator" ->
                 "ketone" -> 
                "organic compound with a carbonyl group between two carbon \
 atoms", "lattice" -> 
+               
                "unique arrangement of atoms or molecules in a crystalline \
 liquid or solid", "liquid" -> 
                "matter in which cohesive force is less than or equal to the \
@@ -203,6 +205,31 @@ known", "valence" -> "electrons in the outermost shell of an atom",
                RowBox[{"RandomSample", "[", 
                 RowBox[{"notMems", ",", "2"}], "]"}]}], "]"}], ",", "2"}], 
             "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"memStr", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToLowerCase", "[", 
+              RowBox[{"StringReplace", "[", 
+               RowBox[{
+                RowBox[{"StringDelete", "[", 
+                 RowBox[{
+                  RowBox[{
+                  "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+                   ",", "\"\<Element\>\""}], "]"}], ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"a", ":", 
+                   RowBox[{"(", 
+                    RowBox[{"CharacterRange", "[", 
+                    RowBox[{"\"\<a\>\"", ",", "\"\<z\>\""}], "]"}], ")"}]}], "~~", 
+                  RowBox[{"b", ":", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    "Characters", "[", 
+                    "\"\<123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ\>\"", "]"}], 
+                    ")"}]}]}], "\[Rule]", 
+                 RowBox[{"a", "~~", "\"\< \>\"", "~~", "b"}]}]}], "]"}], 
+              "]"}], "&"}], "/@", "mem2"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"tf1", "=", 
            RowBox[{"MemberQ", "[", 
             RowBox[{
@@ -219,40 +246,41 @@ known", "valence" -> "electrons in the outermost shell of an atom",
               "]"}], ",", "elem"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
-            RowBox[{
-            "\"\<The element `1` is a member of...\>\"", ",", "elem"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"\"\<The element `1` is a member of...\>\"", ",", 
+             RowBox[{"EntityValue", "[", 
+              RowBox[{"elem", ",", "\"\<Name\>\""}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"{", "\[IndentingNewLine]", 
             RowBox[{
              RowBox[{"StringForm", "[", 
-              RowBox[{"\"\<the `1` only\>\"", ",", 
+              RowBox[{"\"\<`1` elements only\>\"", ",", 
                RowBox[{
-               "mem2", "\[LeftDoubleBracket]", "1", 
+               "memStr", "\[LeftDoubleBracket]", "1", 
                 "\[RightDoubleBracket]"}]}], "]"}], ",", 
              "\[IndentingNewLine]", 
              RowBox[{"StringForm", "[", 
-              RowBox[{"\"\<the `1` only\>\"", ",", 
+              RowBox[{"\"\<`1` elements only\>\"", ",", 
                RowBox[{
-               "mem2", "\[LeftDoubleBracket]", "2", 
+               "memStr", "\[LeftDoubleBracket]", "2", 
                 "\[RightDoubleBracket]"}]}], "]"}], ",", 
              "\[IndentingNewLine]", 
              RowBox[{"StringForm", "[", 
               RowBox[{"\"\<both `1` and `2`\>\"", ",", 
                RowBox[{
-               "mem2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
-                ",", 
+               "memStr", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], ",", 
                RowBox[{
-               "mem2", "\[LeftDoubleBracket]", "2", 
+               "memStr", "\[LeftDoubleBracket]", "2", 
                 "\[RightDoubleBracket]"}]}], "]"}], ",", 
              "\[IndentingNewLine]", 
              RowBox[{"StringForm", "[", 
               RowBox[{"\"\<neither `1` nor `2`\>\"", ",", 
                RowBox[{
-               "mem2", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
-                ",", 
+               "memStr", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], ",", 
                RowBox[{
-               "mem2", "\[LeftDoubleBracket]", "2", 
+               "memStr", "\[LeftDoubleBracket]", "2", 
                 "\[RightDoubleBracket]"}]}], "]"}]}], "}"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
@@ -321,9 +349,19 @@ known", "valence" -> "electrons in the outermost shell of an atom",
    3.765411120668766*^9}, {3.76541116877903*^9, 3.765411297729053*^9}, {
    3.76541132808888*^9, 3.765411407184856*^9}, 3.7654114699694557`*^9, {
    3.765411767808805*^9, 3.7654118044793777`*^9}, {3.7654118642813807`*^9, 
-   3.765411877527431*^9}},
+   3.765411877527431*^9}, {3.794325413666854*^9, 3.794325430352787*^9}, {
+   3.79432552092295*^9, 3.794325549705813*^9}, {3.7943256500000277`*^9, 
+   3.794325719063569*^9}, {3.7943257707833776`*^9, 3.794325889688407*^9}, {
+   3.7943259712614822`*^9, 3.794326028738323*^9}, {3.794326456257141*^9, 
+   3.7943264808532133`*^9}, {3.794326598071393*^9, 3.794326645700399*^9}, {
+   3.794326689308093*^9, 3.7943267135157547`*^9}, {3.794326750445278*^9, 
+   3.794326750659869*^9}, {3.7943268030115957`*^9, 3.794326953419579*^9}, {
+   3.794327034052615*^9, 3.7943271374271517`*^9}, {3.794327190578804*^9, 
+   3.7943272075932817`*^9}, {3.7943273367792873`*^9, 3.794327414577035*^9}, {
+   3.794327549610067*^9, 3.7943276046876183`*^9}, {3.794327779459861*^9, 
+   3.794327796550683*^9}},
  CellLabel->
-  "In[1651]:=",ExpressionUUID->"9c48db0f-ad09-4f6e-a6c0-a4743cdd5bcb"],
+  "In[1068]:=",ExpressionUUID->"9c48db0f-ad09-4f6e-a6c0-a4743cdd5bcb"],
 
 Cell[CellGroupData[{
 
@@ -400,10 +438,11 @@ Cell[BoxData[
   "Out[1656]=",ExpressionUUID->"2d4277a5-61a9-4019-91c6-81060ca48a4c"]
 }, {2}]]
 },
-WindowSize->{1481, 1354},
+WindowSize->{1679, 1354},
 WindowMargins->{{2, Automatic}, {Automatic, 2}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f4f689cb-56f7-4472-9c5c-0ea98504d875"
 ]
 (* End of Notebook Content *)
 
@@ -416,10 +455,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 16443, 305, 655, "Input",ExpressionUUID->"9c48db0f-ad09-4f6e-a6c0-a4743cdd5bcb"],
+Cell[558, 20, 18418, 343, 676, "Input",ExpressionUUID->"9c48db0f-ad09-4f6e-a6c0-a4743cdd5bcb"],
 Cell[CellGroupData[{
-Cell[17026, 329, 2228, 44, 115, "Input",ExpressionUUID->"5abc0324-b6ec-4d37-b5e9-ea91b9a6ea48"],
-Cell[19257, 375, 1004, 24, 126, "Output",ExpressionUUID->"2d4277a5-61a9-4019-91c6-81060ca48a4c"]
+Cell[19001, 367, 2228, 44, 115, "Input",ExpressionUUID->"5abc0324-b6ec-4d37-b5e9-ea91b9a6ea48"],
+Cell[21232, 413, 1004, 24, 128, "Output",ExpressionUUID->"2d4277a5-61a9-4019-91c6-81060ca48a4c"]
 }, {2}]]
 }
 ]
