@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    161854,       2657]
-NotebookOptionsPosition[    161560,       2644]
-NotebookOutlinePosition[    161897,       2659]
-CellTagsIndexPosition[    161854,       2656]
+NotebookDataLength[    162462,       2665]
+NotebookOptionsPosition[    162111,       2651]
+NotebookOutlinePosition[    162505,       2667]
+CellTagsIndexPosition[    162462,       2664]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,7 +38,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"List","ListIcon",GridBox[{{
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -56,7 +57,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               {{"Andromeda (the princess)", 
@@ -68,7 +69,6 @@ Cell[BoxData[
                    0.07134194701344766}, {-0.09291641323008921, \
 -0.0711493182020066}, {0.015541819393624196`, -0.15696343396615972`}, {
                    0.1332728144907746, -0.18093278417646116`}, {
-                   
                    0.02393415346245208, -0.10739189129357997`}, \
 {-0.045307231372679745`, -0.023552294574498412`}, {-0.15573881322518385`, 
                    0.16373918026351383`}}}]}, BoxID -> 
@@ -2332,9 +2332,9 @@ hv5R+0ftH7V/4OwHAFiuKn0=
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"#", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{
+             "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             "&"}], "/@", "data"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -2342,10 +2342,10 @@ hv5R+0ftH7V/4OwHAFiuKn0=
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"Style", "[", 
@@ -2355,9 +2355,8 @@ these constellations. Which one?\>\"", ",",
              RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"data", "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -2421,9 +2420,6 @@ these constellations. Which one?\>\"", ",",
             RowBox[{
              RowBox[{"-", "3800"}], ",", " ", "3200", ",", " ", 
              RowBox[{"-", "12500"}]}], "}"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"mw3D", "=", 
-           RowBox[{"ResourceFunction", "[", "\"\<MilkyWayPlot3D\>\"", "]"}]}],
-           ";", "\[IndentingNewLine]", 
           RowBox[{"coor", "=", 
            RowBox[{
             RowBox[{"{", 
@@ -2438,6 +2434,33 @@ these constellations. Which one?\>\"", ",",
                 RowBox[{
                  RowBox[{"-", "350"}], ",", "350"}], "}"}], ",", "3"}], 
               "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"mw3D", "=", 
+               RowBox[{
+               "ResourceFunction", "[", "\"\<MilkyWayPlot3D\>\"", "]"}]}], 
+              ";", "\[IndentingNewLine]", 
+              RowBox[{"Show", "[", 
+               RowBox[{
+                RowBox[{"mw3D", "[", 
+                 RowBox[{
+                  RowBox[{"LabelStyle", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{"18", ",", "Black"}], "}"}]}], ",", 
+                  RowBox[{"ImageSize", "\[Rule]", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", "480", "}"}], ",", 
+                    RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], ",", 
+                RowBox[{"Graphics3D", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"PointSize", "[", ".025", "]"}], ",", "Red", ",", 
+                   RowBox[{"Point", "[", "h1", "]"}]}], "}"}], "]"}]}], 
+               "]"}]}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", "coor"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mwDist", "=", 
            RowBox[{"Round", "[", 
             RowBox[{"EuclideanDistance", "[", 
@@ -2462,25 +2485,6 @@ these constellations. Which one?\>\"", ",",
              "\[IndentingNewLine]", 
              RowBox[{"ansNo", "=", "solDist"}]}]}], "]"}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"pic", "=", 
-           RowBox[{"Show", "[", 
-            RowBox[{
-             RowBox[{"mw3D", "[", 
-              RowBox[{
-               RowBox[{"LabelStyle", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{"18", ",", "Black"}], "}"}]}], ",", 
-               RowBox[{"ImageSize", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"{", "480", "}"}], ",", 
-                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], ",", 
-             RowBox[{"Graphics3D", "[", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"PointSize", "[", ".025", "]"}], ",", "Red", ",", 
-                RowBox[{"Point", "[", "coor", "]"}]}], "}"}], "]"}]}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{
            "\"\<How far is the red object from \>\"", "<>", "txt", "<>", 
@@ -2638,14 +2642,18 @@ these constellations. Which one?\>\"", ",",
    3.7905321345325823`*^9}, {3.7905321714061623`*^9, 3.790532177820623*^9}, {
    3.790532663708866*^9, 3.790532746083292*^9}, {3.790532928036172*^9, 
    3.79053300965732*^9}, {3.790533077595455*^9, 3.790533083898775*^9}, {
-   3.790543250329316*^9, 3.79054326876702*^9}},
+   3.790543250329316*^9, 3.79054326876702*^9}, {3.794305435145925*^9, 
+   3.794305515338578*^9}, {3.794305792255726*^9, 3.7943057984189243`*^9}, {
+   3.794305841034017*^9, 3.79430590422703*^9}, {3.794305935969779*^9, 
+   3.794305991753058*^9}, {3.794306047674314*^9, 3.794306104426721*^9}},
  CellLabel->
-  "In[684]:=",ExpressionUUID->"c5c21a65-71a6-4dfa-9aa5-28811bc4b51f"]
+  "In[651]:=",ExpressionUUID->"c5c21a65-71a6-4dfa-9aa5-28811bc4b51f"]
 },
 WindowSize->{1407, 1219},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"359dd058-9084-430d-8f53-6d22ce4fb1c2"
 ]
 (* End of Notebook Content *)
 
@@ -2658,7 +2666,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 160998, 2622, 823, "Input",ExpressionUUID->"c5c21a65-71a6-4dfa-9aa5-28811bc4b51f"]
+Cell[558, 20, 161549, 2629, 844, "Input",ExpressionUUID->"c5c21a65-71a6-4dfa-9aa5-28811bc4b51f"]
 }
 ]
 *)
