@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     27953,        528]
-NotebookOptionsPosition[     27437,        511]
-NotebookOutlinePosition[     27774,        526]
-CellTagsIndexPosition[     27731,        523]
+NotebookDataLength[     28568,        543]
+NotebookOptionsPosition[     27995,        525]
+NotebookOutlinePosition[     28389,        541]
+CellTagsIndexPosition[     28346,        538]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,7 +38,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -54,7 +55,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association[
@@ -104,12 +105,23 @@ Cell[BoxData[
           RowBox[{"pic", "=", 
            RowBox[{
             RowBox[{"Hold", "[", 
-             RowBox[{"Style", "[", 
+             RowBox[{"Image", "[", 
               RowBox[{
-               RowBox[{"FromCharacterCode", "[", "h1", "]"}], ",", "2000", 
-               ",", 
-               RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}],
-               "]"}], "]"}], "/.", 
+               RowBox[{"ImageCrop", "[", 
+                RowBox[{"Rasterize", "[", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"FromCharacterCode", "[", "h1", "]"}], ",", "1000",
+                    ",", 
+                   RowBox[{
+                   "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                  "]"}], "]"}], "]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+            
             RowBox[{"h1", "\[Rule]", 
              RowBox[{
               RowBox[{"Keys", "[", "data", "]"}], "\[LeftDoubleBracket]", "1",
@@ -137,7 +149,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -153,14 +166,13 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association[
               "aggressive driver" -> 
                "\:0430\:0433\:0440\:0435\:0441\:0441\:0438\:0432\:043d\:044b\
 \:0439 \:0432\:043e\:0434\:0438\:0442\:0435\:043b\:044c", "agile wrestler" -> 
-               
                "\:043f\:0440\:043e\:0432\:043e\:0440\:043d\:044b\:0439 \:0431\
 \:043e\:0440\:0435\:0446", "ambitious student" -> 
                "\:0430\:043c\:0431\:0438\:0446\:0438\:043e\:0437\:043d\:044b\
@@ -187,6 +199,7 @@ Cell[BoxData[
 \:043a\:0435\:0430\:043d", "classic novel" -> 
                "\:043a\:043b\:0430\:0441\:0441\:0438\:0447\:0435\:0441\:043a\
 \:0438\:0439 \:0440\:043e\:043c\:0430\:043d", "clear sky" -> 
+               
                "\:0447\:0438\:0441\:0442\:043e\:0435 \
 \:043d\:0435\:0431\:043e", "closed bar" -> 
                "\:0437\:0430\:043a\:0440\:044b\:0442\:044b\:0439 \:0431\:0430\
@@ -436,9 +449,10 @@ Cell[BoxData[
    3.765213941455039*^9, 3.7652139416297827`*^9}, {3.765214239445059*^9, 
    3.765214265740967*^9}, 3.7652143250553637`*^9, {3.765214555234693*^9, 
    3.765214568611745*^9}, 3.7652146827614317`*^9, {3.765214720939499*^9, 
-   3.7652147373313026`*^9}, {3.765214803012559*^9, 3.765214875901259*^9}},
+   3.7652147373313026`*^9}, {3.765214803012559*^9, 3.765214875901259*^9}, 
+   3.7946589450723867`*^9, {3.7946590134513493`*^9, 3.794659105257463*^9}},
  CellLabel->
-  "In[1008]:=",ExpressionUUID->"53b951ff-6cdd-45d9-a1f4-4477fdec68b0"],
+  "In[189]:=",ExpressionUUID->"53b951ff-6cdd-45d9-a1f4-4477fdec68b0"],
 
 Cell[CellGroupData[{
 
@@ -509,10 +523,11 @@ Cell[BoxData[
   "Out[972]=",ExpressionUUID->"16de40bf-fc70-44c1-8828-3e542cf46708"]
 }, {2}]]
 },
-WindowSize->{1192, 1297},
+WindowSize->{1845, 1297},
 WindowMargins->{{3, Automatic}, {Automatic, 3}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"47234c75-0ad8-4094-b9e2-fa3817ad07c1"
 ]
 (* End of Notebook Content *)
 
@@ -525,10 +540,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 23953, 420, 532, "Input",ExpressionUUID->"53b951ff-6cdd-45d9-a1f4-4477fdec68b0"],
+Cell[558, 20, 24511, 434, 532, "Input",ExpressionUUID->"53b951ff-6cdd-45d9-a1f4-4477fdec68b0"],
 Cell[CellGroupData[{
-Cell[24536, 444, 2118, 42, 115, "Input",ExpressionUUID->"c7ec1c12-97a9-40e4-a931-8ed1e4285124"],
-Cell[26657, 488, 767, 20, 128, "Output",ExpressionUUID->"16de40bf-fc70-44c1-8828-3e542cf46708"]
+Cell[25094, 458, 2118, 42, 115, "Input",ExpressionUUID->"c7ec1c12-97a9-40e4-a931-8ed1e4285124"],
+Cell[27215, 502, 767, 20, 128, "Output",ExpressionUUID->"16de40bf-fc70-44c1-8828-3e542cf46708"]
 }, {2}]]
 }
 ]
