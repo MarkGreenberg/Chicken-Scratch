@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8941,        212]
-NotebookOptionsPosition[      8650,        199]
-NotebookOutlinePosition[      8987,        214]
-CellTagsIndexPosition[      8944,        211]
+NotebookDataLength[     11000,        241]
+NotebookOptionsPosition[     10651,        227]
+NotebookOutlinePosition[     11045,        243]
+CellTagsIndexPosition[     11002,        240]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,7 +38,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -54,7 +55,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association[
@@ -85,30 +86,37 @@ Cell[BoxData[
               SelectWithContents->True,
               Selectable->False], ",", "4"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{
-          "q", "=", 
-           "\"\<What is the name of the Greek letter shown here?\>\""}], ";", 
+          RowBox[{"q", "=", "\"\<Which Greek letter is this?\>\""}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"Style", "[", 
-            RowBox[{
-             RowBox[{"data", "\[LeftDoubleBracket]", 
-              RowBox[{"1", ",", 
-               RowBox[{"RandomInteger", "[", 
-                RowBox[{"{", 
-                 RowBox[{"1", ",", "2"}], "}"}], "]"}]}], 
-              "\[RightDoubleBracket]"}], ",", "1000"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"picTransit", "=", 
            RowBox[{
             RowBox[{"Hold", "[", 
-             RowBox[{"ToExpression", "[", 
-              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
-            RowBox[{"h2", "\[Rule]", 
+             RowBox[{"Image", "[", 
+              RowBox[{
+               RowBox[{"ImageCrop", "[", 
+                RowBox[{"Rasterize", "[", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"FromCharacterCode", "[", "h1", "]"}], ",", "1000",
+                    ",", 
+                   RowBox[{
+                   "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+                  "]"}], "]"}], "]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+            
+            RowBox[{"h1", "\[Rule]", 
              RowBox[{"ToCharacterCode", "[", 
-              RowBox[{"ToString", "[", 
-               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
-          ";", "\[IndentingNewLine]", 
+              RowBox[{"data", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", 
+                RowBox[{"RandomInteger", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"1", ",", "2"}], "}"}], "]"}]}], 
+               "\[RightDoubleBracket]"}], "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
@@ -125,8 +133,8 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "picTransit"}], "}"}],
-            "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"alBhed", "=", 
@@ -184,23 +192,44 @@ video game `2`?\>\"", ",",
        "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Lang10\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
- CellChangeTimes->CompressedData["
-1:eJwdzE0ogwEAxvGlNgeUUD5aspRFLTtgaFu9b4nWZKPNEEa2RhvjsDmIw3o3
-KxnFKJSvoZVFSRJ7tVKSr6acJCefO2jWsrHyPjs8/U7Pn9c71KxLYbFYXGbw
-RW8OKByfhEv0dg650gRbyVg1rcmCEVGoEPYvRYzQXkeNwBVXJwWFEzVO2OZp
-8ECOzeCFjiZ6Dxqo2AFcfB08g8ag/KobP+7zLZQtD8dgb31pHGZuGdlaxmgG
-nQqd/GxiNj1EnOi6SKjI32+AVv+1HNrNgrl1IkSw+opXoVr86IEPUcU2dK+1
-7kI9Tfngx3EHDe1fM+cwbBX+wTvVFGeD0ZJjKYRk4J0HX8rFfHhafV8GD9uv
-K2DZd4EI+icHxPBoQSuBSnpeBnsqnxqhIB5phuqAsyXZU2lM0HdpssEfvioM
-LxI3SUfTuL8wzx0s2mT05u6UQL+UzYfkuISEtdKxOvgPUHPgwQ==
-  "],
+ CellChangeTimes->{{3.694822931512561*^9, 3.694822959256782*^9}, {
+   3.6948234719138317`*^9, 3.6948235707673597`*^9}, {3.69482367138183*^9, 
+   3.694824295643971*^9}, {3.6948243401647367`*^9, 3.694824490923781*^9}, {
+   3.694824521796776*^9, 3.694824746270184*^9}, {3.694824787265994*^9, 
+   3.694824837978458*^9}, {3.694824871797535*^9, 3.6948249634657707`*^9}, {
+   3.6948537304006863`*^9, 3.694853759003441*^9}, {3.6948540915503283`*^9, 
+   3.6948540972899637`*^9}, {3.6948541873952713`*^9, 3.694854205970454*^9}, {
+   3.764685320598576*^9, 3.7646853309499187`*^9}, {3.76468538153434*^9, 
+   3.7646854144295*^9}, {3.792508065419986*^9, 3.792508161105957*^9}, {
+   3.792508206882365*^9, 3.7925082185301313`*^9}, {3.792508266738475*^9, 
+   3.792508276179614*^9}, {3.7925084108665667`*^9, 3.792508460529361*^9}, {
+   3.792508897514642*^9, 3.792508980385475*^9}, {3.7925091716899977`*^9, 
+   3.792509199304963*^9}, {3.792509241880847*^9, 3.792509270600676*^9}, {
+   3.792509350417323*^9, 3.792509368842183*^9}, {3.792509411329192*^9, 
+   3.7925094190185204`*^9}, {3.792509524679604*^9, 3.792509550944016*^9}, {
+   3.792509591655539*^9, 3.7925095963049726`*^9}, {3.7925098027604856`*^9, 
+   3.792509979430991*^9}, {3.792510866661129*^9, 3.792510870468479*^9}, {
+   3.7925109368764*^9, 3.792511238580822*^9}, {3.7925112852528887`*^9, 
+   3.792511288163909*^9}, {3.7925115059216623`*^9, 3.792511531882596*^9}, {
+   3.794656501343609*^9, 3.794656501814534*^9}, {3.7946565511849413`*^9, 
+   3.794656551775694*^9}, {3.794656590832848*^9, 3.794656640662466*^9}, {
+   3.794656721808303*^9, 3.794656724949585*^9}, {3.794656770344059*^9, 
+   3.794656805268879*^9}, 3.794656839246687*^9, {3.794656870589684*^9, 
+   3.7946568786850567`*^9}, {3.794656915012784*^9, 3.794656922228737*^9}, {
+   3.794656968013576*^9, 3.794657035571993*^9}, {3.794657070308427*^9, 
+   3.794657127443849*^9}, {3.7946572075491447`*^9, 3.7946572345000277`*^9}, {
+   3.794657274733354*^9, 3.794657297035293*^9}, {3.794657347253125*^9, 
+   3.794657376363555*^9}, {3.794657407391467*^9, 3.794657417046249*^9}, {
+   3.7946579935652723`*^9, 3.7946580234680557`*^9}, {3.794658077214719*^9, 
+   3.794658103379588*^9}, {3.79465824166049*^9, 3.79465827814742*^9}},
  CellLabel->
-  "In[901]:=",ExpressionUUID->"2f4dde7d-7b85-40c6-83bb-a186a9842c9e"]
+  "In[168]:=",ExpressionUUID->"2f4dde7d-7b85-40c6-83bb-a186a9842c9e"]
 },
 WindowSize->{1789, 1288},
 WindowMargins->{{0, Automatic}, {Automatic, 1}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"03e410d8-f69c-4983-a6fa-df3b8b2c07fb"
 ]
 (* End of Notebook Content *)
 
@@ -213,7 +242,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 8088, 177, 550, "Input",ExpressionUUID->"2f4dde7d-7b85-40c6-83bb-a186a9842c9e"]
+Cell[558, 20, 10089, 205, 529, "Input",ExpressionUUID->"2f4dde7d-7b85-40c6-83bb-a186a9842c9e"]
 }
 ]
 *)
