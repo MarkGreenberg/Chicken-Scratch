@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     43480,        814]
-NotebookOptionsPosition[     43147,        800]
-NotebookOutlinePosition[     43524,        816]
-CellTagsIndexPosition[     43481,        813]
+NotebookDataLength[     43852,        823]
+NotebookOptionsPosition[     43462,        808]
+NotebookOutlinePosition[     43896,        825]
+CellTagsIndexPosition[     43853,        822]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,7 +38,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -54,7 +55,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association[
@@ -457,7 +458,8 @@ these aquatic species is shown in blue in the chart?\>\""}], ";",
            RowBox[{"RandomChoice", "[", 
             InterpretationBox[
              DynamicModuleBox[{Typeset`open = False}, 
-              TemplateBox[{"List","ListIcon",GridBox[{{
+              TemplateBox[{"List", "ListIcon", 
+                GridBox[{{
                    RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -475,7 +477,7 @@ these aquatic species is shown in blue in the chart?\>\""}], ";",
                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                  DefaultBaseStyle -> "Column", 
                  GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                 Dynamic[Typeset`open]},
                "IconizedObject"]],
              {{
@@ -558,10 +560,11 @@ these aquatic species is shown in blue in the chart?\>\""}], ";",
              RowBox[{"PlotLabel", "\[Rule]", 
               RowBox[{"Style", "[", 
                RowBox[{
-                RowBox[{
-                "prop", "\[LeftDoubleBracket]", "1", 
-                 "\[RightDoubleBracket]"}], ",", "25"}], "]"}]}], ",", 
-             "\[IndentingNewLine]", 
+                RowBox[{"CommonName", "[", 
+                 RowBox[{
+                 "prop", "\[LeftDoubleBracket]", "1", 
+                  "\[RightDoubleBracket]"}], "]"}], ",", "25"}], "]"}]}], ",",
+              "\[IndentingNewLine]", 
              RowBox[{"ChartStyle", "\[Rule]", "cols"}], ",", 
              "\[IndentingNewLine]", 
              RowBox[{"LabelStyle", "\[Rule]", 
@@ -581,7 +584,11 @@ these aquatic species is shown in blue in the chart?\>\""}], ";",
            "\"\<These four plants are represented in the graph. Which one is \
 the blue bar?\>\""}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"CommonName", "[", "#", "]"}], "&"}], "/@", 
+            RowBox[{"Keys", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -794,15 +801,17 @@ the blue bar?\>\""}], ";", "\[IndentingNewLine]",
    3.791656752161622*^9, 3.791656804681664*^9}, {3.791656930207893*^9, 
    3.79165694435074*^9}, 3.791657071047814*^9, {3.791657108199477*^9, 
    3.791657151334242*^9}, {3.7916571875588512`*^9, 3.791657221334066*^9}, {
-   3.791657652762226*^9, 3.791657710452347*^9}},
+   3.791657652762226*^9, 3.791657710452347*^9}, {3.7946538046300898`*^9, 
+   3.794653813131817*^9}, {3.7946538558309383`*^9, 3.79465386483617*^9}},
  CellLabel->
-  "In[647]:=",ExpressionUUID->"4602d75b-a490-4b8b-b987-5b165446fe25"]
+  "In[873]:=",ExpressionUUID->"4602d75b-a490-4b8b-b987-5b165446fe25"]
 },
 WindowSize->{1878, 1316},
 WindowMargins->{{1, Automatic}, {Automatic, 0}},
 TaggingRules->{"TryRealOnly" -> False},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"adeb6146-7107-4a0c-aadf-2c2462f84598"
 ]
 (* End of Notebook Content *)
 
@@ -815,7 +824,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 42585, 778, 1070, "Input",ExpressionUUID->"4602d75b-a490-4b8b-b987-5b165446fe25"]
+Cell[558, 20, 42900, 786, 1070, "Input",ExpressionUUID->"4602d75b-a490-4b8b-b987-5b165446fe25"]
 }
 ]
 *)
