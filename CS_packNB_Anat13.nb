@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26715,        577]
-NotebookOptionsPosition[     26400,        563]
-NotebookOutlinePosition[     26759,        579]
-CellTagsIndexPosition[     26716,        576]
+NotebookDataLength[     18671,        379]
+NotebookOptionsPosition[     18322,        365]
+NotebookOutlinePosition[     18716,        381]
+CellTagsIndexPosition[     18673,        378]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -120,8 +120,9 @@ is in what percentile?\>\"", ",", "age", ",", "sexStr", ",", "circ"}],
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"Quantity", "[", 
-              RowBox[{"#", ",", "\"\<Percent\>\""}], "]"}], "&"}], "/@", 
+             RowBox[{
+              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\<%\>\""}], "&"}],
+             "/@", 
             RowBox[{"Take", "[", 
              RowBox[{
               RowBox[{"DeleteDuplicates", "[", 
@@ -140,10 +141,10 @@ is in what percentile?\>\"", ",", "age", ",", "sexStr", ",", "circ"}],
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -152,295 +153,95 @@ is in what percentile?\>\"", ",", "age", ",", "sexStr", ",", "circ"}],
          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
-           RowBox[{"<|", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"\"\<abdomen, abdominis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<belly\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Alpha]\[Delta]\:03ad\[Nu]\[Alpha]\[FinalSigma] (adenas)\>\
-\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<gland\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Alpha]\[Nu]\[Alpha]\[Iota]\[Sigma]\[Theta]\[Eta]\[Sigma]\
-\:03af\[Alpha] (anaisthisia)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<numbness\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<auris, auris\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<ear\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<axilla, axillae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<armpit\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<biceps, bicipitis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<two-headed\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<bracchium, bracchii\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<arm\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<bucca, buccae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<cheek\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<calx, calcis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<heel\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<caput, capitis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<head\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<cerebrum, cerebri\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<brain\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<cor, cordis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<heart\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<corpus corporis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<body\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<cortex, corticis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-               "2", ",", "\"\<outer covering, like bark or rind\>\""}], 
-               "}"}]}], ",", "\[IndentingNewLine]", 
-             RowBox[{"\"\<costa, costae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<rib\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<coxa, coxae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<hip\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<cutis, cutis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<skin\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Delta]\:03ad\[Nu]\[Tau]\[Rho]\[Omicron] (dentro)\>\"", 
-              "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<tree\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<dens, dentis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<tooth\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Delta]\:03ad\[Rho]\[Mu]\[Alpha] (derma)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<skin\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<digitus, digiti\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<finger\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\:03ad\[Mu]\[Beta]\[Rho]\[Upsilon]\[Omicron] (embryo)\>\"", 
-              "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<fetus\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<femur, feminis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<thigh\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[CurlyPhi]\[Lambda]\:03ad\[Beta]\[Alpha] (fleba)\>\"", 
-              "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<vein\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<frons, frontis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<forehead\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<genu, genus\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<knee\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Gamma]\[CurlyEpsilon]\[Rho]\[Alpha]\[Tau]\[CurlyEpsilon]\
-\[Iota]\:03ac (gerateia)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<old age\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\:1f31\[Pi]\[Pi]\:03cc\[Kappa]\[Alpha]\[Mu]\[Pi]\[Omicron]\
-\[FinalSigma] (hippokampoi)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<sea horse\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<intestina, intestinae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<gut\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Kappa]\[Alpha]\[Rho]\[Delta]\[Iota]\:03ac (kardia)\>\"", 
-              "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<heart\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Kappa]\[Alpha]\[Rho]\[Pi]\:03cc\[FinalSigma] \[Tau]\
-\[Omicron]\[Upsilon] \[Chi]\[CurlyEpsilon]\[Rho]\[Iota]\[Omicron]\:03cd \
-(karpos tou cheriou)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<wrist\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Kappa]\[CurlyEpsilon]\[CurlyPhi]\:03ac\[Lambda]\[Iota] \
-(kefali)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<head\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Kappa]\[Rho]\[Alpha]\[Nu]\:03af\[Omicron] (kranio)\>\"", 
-              "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<skull\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Kappa]\:03cd\[Sigma]\[Tau]\[Eta] (kysti)\>\"", "\[Rule]", 
-              
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<bladder\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<labrum, labri\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<lip\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<lac, lactis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<milk\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<lacrima, lacrimae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<tear\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<lamina, laminae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", " ", "\"\<thin sheet or layer\>\""}], 
-               "}"}]}], ",", "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Lambda]\:03ac\[Rho]\[Upsilon]\[Gamma]\[Gamma]\[Alpha]\
-\[FinalSigma] (larygkas)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<throat\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<lingua, linguae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<tongue\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Lambda]\:03af\[Pi]\[Omicron]\[FinalSigma] (lipos)\>\"", 
-              "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<fat\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<mandibula, mandibulae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<lower jaw\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<maxilla, maxillae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<upper jaw\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<\[Mu]\:03ad\[Sigma]\[Eta] (mesi)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<waste\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<nasus, nasi\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<nose\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<oculus, oculi\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<eye\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<os, oris\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<mouth\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<os, ossis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<bone\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<palma, palmae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<hand\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<pes, pedis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<foot\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Pi]\[Nu]\[CurlyEpsilon]\:03cd\[Mu]\[Omicron]\[Nu]\[Alpha]\
-\[FinalSigma] (pneumonas)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<lung\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<pollex, pollicis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<thumb\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<\[Pi]\:03cc\[Delta]\[Iota] (podi)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<foot\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<pons, pontis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<bridge\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<ren, renis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<kidney\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Sigma]\[Tau]\[Omicron]\[Mu]\:03ac\[Chi]\[Iota] (stomachi)\
-\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<belly\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<talus, tali\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<ankle\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<thorax, thracis\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<chest\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Tau]\:03cd\[Mu]\[Pi]\[Alpha]\[Nu]\[Omicron] \
-(tympano)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<drum\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-             "\"\<\[Tau]\[Rho]\:03ac\[Chi]\[Eta]\[Lambda]\[Omicron]\
-\[FinalSigma] (trachilos)\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1", ",", "\"\<neck\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<ungula, ungulae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<toe nail\>\""}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"\"\<vena, venae\>\"", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"2", ",", "\"\<vein\>\""}], "}"}]}]}], 
-            "\[IndentingNewLine]", "|>"}]}], ";", "\[IndentingNewLine]", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"Association", "AssociationIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["62", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["13392", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            Association[
+            "abdomen, abdominis" -> {2, "belly"}, 
+             "\[Alpha]\[Delta]\:03ad\[Nu]\[Alpha]\[FinalSigma] (adenas)" -> {
+              1, "gland"}, 
+             "\[Alpha]\[Nu]\[Alpha]\[Iota]\[Sigma]\[Theta]\[Eta]\[Sigma]\:03af\
+\[Alpha] (anaisthisia)" -> {1, "numbness"}, "auris, auris" -> {2, "ear"}, 
+             "axilla, axillae" -> {2, "armpit"}, 
+             "biceps, bicipitis" -> {2, "two-headed"}, 
+             "bracchium, bracchii" -> {2, "arm"}, 
+             "bucca, buccae" -> {2, "cheek"}, "calx, calcis" -> {2, "heel"}, 
+             "caput, capitis" -> {2, "head"}, 
+             "cerebrum, cerebri" -> {2, "brain"}, 
+             "cor, cordis" -> {2, "heart"}, "corpus corporis" -> {2, "body"}, 
+             "cortex, corticis" -> {2, "outer covering, like bark or rind"}, 
+             "costa, costae" -> {2, "rib"}, "coxa, coxae" -> {2, "hip"}, 
+             "cutis, cutis" -> {2, "skin"}, 
+             "\[Delta]\:03ad\[Nu]\[Tau]\[Rho]\[Omicron] (dentro)" -> {
+              1, "tree"}, "dens, dentis" -> {2, "tooth"}, 
+             "\[Delta]\:03ad\[Rho]\[Mu]\[Alpha] (derma)" -> {1, "skin"}, 
+             "digitus, digiti" -> {2, "finger"}, 
+             "\:03ad\[Mu]\[Beta]\[Rho]\[Upsilon]\[Omicron] (embryo)" -> {
+              1, "fetus"}, "femur, feminis" -> {2, "thigh"}, 
+             "\[CurlyPhi]\[Lambda]\:03ad\[Beta]\[Alpha] (fleba)" -> {
+              1, "vein"}, "frons, frontis" -> {2, "forehead"}, 
+             "genu, genus" -> {2, "knee"}, 
+             "\[Gamma]\[CurlyEpsilon]\[Rho]\[Alpha]\[Tau]\[CurlyEpsilon]\
+\[Iota]\:03ac (gerateia)" -> {1, "old age"}, 
+             "\:1f31\[Pi]\[Pi]\:03cc\[Kappa]\[Alpha]\[Mu]\[Pi]\[Omicron]\
+\[FinalSigma] (hippokampoi)" -> {1, "sea horse"}, 
+             "intestina, intestinae" -> {2, "gut"}, 
+             "\[Kappa]\[Alpha]\[Rho]\[Delta]\[Iota]\:03ac (kardia)" -> {
+              1, "heart"}, 
+             "\[Kappa]\[Alpha]\[Rho]\[Pi]\:03cc\[FinalSigma] \[Tau]\[Omicron]\
+\[Upsilon] \[Chi]\[CurlyEpsilon]\[Rho]\[Iota]\[Omicron]\:03cd (karpos tou \
+cheriou)" -> {1, "wrist"}, 
+             "\[Kappa]\[CurlyEpsilon]\[CurlyPhi]\:03ac\[Lambda]\[Iota] \
+(kefali)" -> {1, "head"}, 
+             "\[Kappa]\[Rho]\[Alpha]\[Nu]\:03af\[Omicron] (kranio)" -> {
+              1, "skull"}, 
+             "\[Kappa]\:03cd\[Sigma]\[Tau]\[Eta] (kysti)" -> {1, "bladder"}, 
+             "labrum, labri" -> {2, "lip"}, "lac, lactis" -> {2, "milk"}, 
+             "lacrima, lacrimae" -> {2, "tear"}, 
+             "lamina, laminae" -> {2, "thin sheet or layer"}, 
+             "\[Lambda]\:03ac\[Rho]\[Upsilon]\[Gamma]\[Gamma]\[Alpha]\
+\[FinalSigma] (larygkas)" -> {1, "throat"}, 
+             "lingua, linguae" -> {2, "tongue"}, 
+             "\[Lambda]\:03af\[Pi]\[Omicron]\[FinalSigma] (lipos)" -> {
+              1, "fat"}, "mandibula, mandibulae" -> {2, "lower jaw"}, 
+             "maxilla, maxillae" -> {2, "upper jaw"}, 
+             "\[Mu]\:03ad\[Sigma]\[Eta] (mesi)" -> {1, "waste"}, 
+             "nasus, nasi" -> {2, "nose"}, "oculus, oculi" -> {2, "eye"}, 
+             "os, oris" -> {2, "mouth"}, "os, ossis" -> {2, "bone"}, 
+             "palma, palmae" -> {2, "hand"}, "pes, pedis" -> {2, "foot"}, 
+             "\[Pi]\[Nu]\[CurlyEpsilon]\:03cd\[Mu]\[Omicron]\[Nu]\[Alpha]\
+\[FinalSigma] (pneumonas)" -> {1, "lung"}, "pollex, pollicis" -> {2, "thumb"},
+              "\[Pi]\:03cc\[Delta]\[Iota] (podi)" -> {1, "foot"}, 
+             "pons, pontis" -> {2, "bridge"}, "ren, renis" -> {2, "kidney"}, 
+             "\[Sigma]\[Tau]\[Omicron]\[Mu]\:03ac\[Chi]\[Iota] (stomachi)" -> \
+{1, "belly"}, "talus, tali" -> {2, "ankle"}, 
+             "thorax, thracis" -> {2, "chest"}, 
+             "\[Tau]\:03cd\[Mu]\[Pi]\[Alpha]\[Nu]\[Omicron] (tympano)" -> {
+              1, "drum"}, 
+             "\[Tau]\[Rho]\:03ac\[Chi]\[Eta]\[Lambda]\[Omicron]\[FinalSigma] \
+(trachilos)" -> {1, "neck"}, "ungula, ungulae" -> {2, "toe nail"}, 
+             "vena, venae" -> {2, "vein"}],
+            SelectWithContents->True,
+            Selectable->False]}], ";", "\[IndentingNewLine]", 
           RowBox[{"data4", "=", 
            RowBox[{"<|", "|>"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"While", "[", 
@@ -458,10 +259,9 @@ is in what percentile?\>\"", ",", "age", ",", "sexStr", ",", "circ"}],
             RowBox[{
             "\"\<Which of these anatomy roots from Greek and Latin originally \
 meant \\\"`1`\\\"?\>\"", ",", 
-             RowBox[{"data4", "[", 
-              RowBox[{"[", 
-               RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"data4", "\[LeftDoubleBracket]", 
+              RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{"(", 
@@ -477,10 +277,10 @@ meant \\\"`1`\\\"?\>\"", ",",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{
@@ -557,15 +357,17 @@ meant \\\"`1`\\\"?\>\"", ",",
    3.731667290052376*^9}, {3.7316674245647497`*^9, 3.731667433451915*^9}, {
    3.731667484046589*^9, 3.731667511915723*^9}, {3.731667588388389*^9, 
    3.731667629971443*^9}, {3.7316676682993717`*^9, 3.731667775363475*^9}, {
-   3.731667829659994*^9, 
-   3.731667844426496*^9}},ExpressionUUID->"896002b9-ffbe-443c-a6bc-\
-32b27e3d622f"]
+   3.731667829659994*^9, 3.731667844426496*^9}, {3.794607879215787*^9, 
+   3.7946079600035353`*^9}, {3.794608052365827*^9, 3.79460807779641*^9}, 
+   3.7946081203102293`*^9},
+ CellLabel->
+  "In[487]:=",ExpressionUUID->"00406ae8-3be6-46d8-9b3d-f9bef0c34d19"]
 },
 WindowSize->{1254, 1343},
 WindowMargins->{{0, Automatic}, {Automatic, 4}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"16b1230d-3aba-4f63-b76e-da7a07a029f5"
 ]
 (* End of Notebook Content *)
 
@@ -578,7 +380,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 25838, 541, 1975, "Input",ExpressionUUID->"896002b9-ffbe-443c-a6bc-32b27e3d622f"]
+Cell[558, 20, 17760, 343, 655, "Input",ExpressionUUID->"00406ae8-3be6-46d8-9b3d-f9bef0c34d19"]
 }
 ]
 *)
