@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     27867,        497]
-NotebookOptionsPosition[     27575,        484]
-NotebookOutlinePosition[     27912,        499]
-CellTagsIndexPosition[     27869,        496]
+NotebookDataLength[     27209,        484]
+NotebookOptionsPosition[     26860,        470]
+NotebookOutlinePosition[     27254,        486]
+CellTagsIndexPosition[     27211,        483]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -47,81 +47,51 @@ Cell[BoxData[
            RowBox[{
            "\"\<What is the current temperature in \>\"", "<>", "name", "<>", 
             "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"order", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{"{", 
-             RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], "]"}]}], ";",
-           "\[IndentingNewLine]", 
+          RowBox[{"temp", "=", 
+           RowBox[{"QuantityMagnitude", "[", 
+            RowBox[{"AirTemperatureData", "[", "city", "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"dis", "=", 
+           RowBox[{"RandomReal", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"temp", "-", "20"}], ",", 
+               RowBox[{"temp", "+", "20"}]}], "}"}], ",", "10"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"ToString", "[", "#", "]"}], "<>", 
+              "\"\<\[Degree]F\>\""}], "&"}], "/@", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Round", "[", 
+                RowBox[{"Prepend", "[", 
+                 RowBox[{"dis", ",", "temp"}], "]"}], "]"}], "]"}], ",", 
+              "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
-             RowBox[{"order", ",", "1"}], "]"}], "\[LeftDoubleBracket]", 
-            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
-          "\[IndentingNewLine]", "\[IndentingNewLine]", 
-          RowBox[{"mixed", "=", 
-           RowBox[{"ToCharacterCode", "[", 
-            RowBox[{"ToString", "[", 
-             RowBox[{"InputForm", "[", 
+             RowBox[{"mixed", ",", 
               RowBox[{
-               RowBox[{"Hold", "[", "\[IndentingNewLine]", 
-                RowBox[{
-                 RowBox[{"temp", "=", 
-                  RowBox[{"AirTemperatureData", "[", "h1", "]"}]}], ";", 
-                 "\[IndentingNewLine]", 
-                 RowBox[{"dis", "=", 
-                  RowBox[{
-                   RowBox[{
-                    RowBox[{"Quantity", "[", 
-                    RowBox[{"#", ",", "\"\<DegreesFahrenheit\>\""}], "]"}], 
-                    "&"}], "/@", 
-                   RowBox[{"Round", "[", 
-                    RowBox[{"RandomVariate", "[", 
-                    RowBox[{
-                    RowBox[{"NormalDistribution", "[", 
-                    RowBox[{
-                    RowBox[{"QuantityMagnitude", "[", "temp", "]"}], ",", 
-                    "16"}], "]"}], ",", "6"}], "]"}], "]"}]}]}], ";", 
-                 "\[IndentingNewLine]", 
-                 RowBox[{"choices", "=", 
-                  RowBox[{"Take", "[", 
-                   RowBox[{
-                    RowBox[{"DeleteDuplicates", "[", 
-                    RowBox[{"Prepend", "[", 
-                    RowBox[{"dis", ",", "temp"}], "]"}], "]"}], ",", "4"}], 
-                   "]"}]}], ";", "\[IndentingNewLine]", 
-                 RowBox[{"mixed", "=", 
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"choices", "\[LeftDoubleBracket]", 
-                    RowBox[{
-                    "h2", "\[LeftDoubleBracket]", "1", 
-                    "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{"choices", "\[LeftDoubleBracket]", 
-                    RowBox[{
-                    "h2", "\[LeftDoubleBracket]", "2", 
-                    "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{"choices", "\[LeftDoubleBracket]", 
-                    RowBox[{
-                    "h2", "\[LeftDoubleBracket]", "3", 
-                    "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{"choices", "\[LeftDoubleBracket]", 
-                    RowBox[{
-                    "h2", "\[LeftDoubleBracket]", "4", 
-                    "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], 
-                   "}"}]}]}], "]"}], "/.", 
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"h1", "\[Rule]", "city"}], ",", 
-                 RowBox[{"h2", "\[Rule]", "order"}]}], "}"}]}], "]"}], "]"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-          RowBox[{"mixTransit", "=", 
-           RowBox[{
-            RowBox[{"Hold", "[", 
-             RowBox[{"ReleaseHold", "[", 
-              RowBox[{"ToExpression", "[", 
-               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], 
-             "]"}], "/.", 
-            RowBox[{"h3", "\[Rule]", "mixed"}]}]}], ";", 
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -133,7 +103,8 @@ Cell[BoxData[
            RowBox[{"RandomSample", "[", 
             InterpretationBox[
              DynamicModuleBox[{Typeset`open = False}, 
-              TemplateBox[{"Association","AssociationIcon",GridBox[{{
+              TemplateBox[{"Association", "AssociationIcon", 
+                GridBox[{{
                    RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -149,7 +120,7 @@ Cell[BoxData[
                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                  DefaultBaseStyle -> "Column", 
                  GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                 Dynamic[Typeset`open]},
                "IconizedObject"]],
              Association[
@@ -263,7 +234,8 @@ Cell[BoxData[
           RowBox[{"dis", "=", 
            InterpretationBox[
             DynamicModuleBox[{Typeset`open = False}, 
-             TemplateBox[{"List","ListIcon",GridBox[{{
+             TemplateBox[{"List", "ListIcon", 
+               GridBox[{{
                   RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -279,7 +251,7 @@ Cell[BoxData[
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
                 GridBoxItemSize -> {
-                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                Dynamic[Typeset`open]},
               "IconizedObject"]],
             {
@@ -324,7 +296,14 @@ Cell[BoxData[
             RowBox[{
              RowBox[{"Keys", "[", "qDat", "]"}], "\[LeftDoubleBracket]", "2", 
              "\[RightDoubleBracket]"}], "<>", 
-            "\"\< (as of June 2018)?\>\""}]}], ";", "\[IndentingNewLine]", 
+            "\"\< (as of April 2020)?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", "q", "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -339,8 +318,8 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
-       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
+        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Huma5\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
@@ -478,14 +457,22 @@ Cell[BoxData[
    3.769257628640724*^9}, {3.769257860144755*^9, 3.769257967991901*^9}, {
    3.7692580032332172`*^9, 3.7692580175358057`*^9}, {3.769258061674675*^9, 
    3.769258092743824*^9}, {3.7692581840249977`*^9, 3.769258259455545*^9}, {
-   3.769258390287911*^9, 3.769258448686558*^9}},
- CellLabel->
-  "In[174]:=",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
+   3.769258390287911*^9, 3.769258448686558*^9}, {3.794738680016571*^9, 
+   3.794738684360074*^9}, {3.794738879119948*^9, 3.794738901630507*^9}, {
+   3.794739062577346*^9, 3.7947390830136337`*^9}, {3.7947391139667892`*^9, 
+   3.794739177781444*^9}, {3.7947392103732433`*^9, 3.794739247397111*^9}, {
+   3.794739307998027*^9, 3.794739496284753*^9}, {3.794739548508597*^9, 
+   3.794739609804611*^9}, {3.794739640381694*^9, 3.794739641821982*^9}, 
+   3.794739684551888*^9, {3.794739750853076*^9, 3.794739799100163*^9}, {
+   3.7947399779736967`*^9, 3.794740015971765*^9}, {3.794740096083624*^9, 
+   3.7947401448326473`*^9}, {3.7947402835073557`*^9, 3.794740314049965*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
 },
 WindowSize->{1433, 1352},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d968ada5-5618-4114-b8b3-d482c564177b"
 ]
 (* End of Notebook Content *)
 
@@ -498,7 +485,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 27013, 462, 700, "Input",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
+Cell[558, 20, 26298, 448, 637, "Input",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
 }
 ]
 *)
