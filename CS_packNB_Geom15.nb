@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14539,        324]
-NotebookOptionsPosition[     14247,        311]
-NotebookOutlinePosition[     14584,        326]
-CellTagsIndexPosition[     14541,        323]
+NotebookDataLength[     17220,        367]
+NotebookOptionsPosition[     16871,        353]
+NotebookOutlinePosition[     17265,        369]
+CellTagsIndexPosition[     17222,        366]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,7 +30,7 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "1"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
          "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"ht1", "=", 
@@ -73,44 +73,80 @@ Cell[BoxData[
               FractionBox[
                RowBox[{"sh1", "*", "ht2"}], "ht1"], ",", "\"\<Feet\>\""}], 
              "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"name", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Ailani\>\"", ",", "\"\<Akela\>\"", ",", "\"\<Alani\>\"", 
+              ",", "\"\<Anuhea\>\"", ",", "\"\<Apikalia\>\"", ",", 
+              "\"\<Elikapeka\>\"", ",", "\"\<Haukea\>\"", ",", 
+              "\"\<Haunani\>\"", ",", "\"\<Healani\>\"", ",", 
+              "\"\<Hokulani\>\"", ",", "\"\<Iekika\>\"", ",", 
+              "\"\<Iolana\>\"", ",", "\"\<Iwalani\>\"", ",", "\"\<Kahula\>\"",
+               ",", "\"\<Kai\>\"", ",", "\"\<Kaimana\>\"", ",", 
+              "\"\<Kainoa\>\"", ",", "\"\<Kaipo\>\"", ",", "\"\<Kakalina\>\"",
+               ",", "\"\<Kala\>\"", ",", "\"\<Kalama\>\"", ",", 
+              "\"\<Kalani\>\"", ",", "\"\<Kalea\>\"", ",", "\"\<Kalena\>\"", 
+              ",", "\"\<Kaliko\>\"", ",", "\"\<Kalua\>\"", ",", 
+              "\"\<Kamaka\>\"", ",", "\"\<Kanoa\>\"", ",", "\"\<Kaulana\>\"", 
+              ",", "\"\<Kawelo\>\"", ",", "\"\<Keaka\>\"", ",", 
+              "\"\<Keala\>\"", ",", "\"\<Kehaulani\>\"", ",", 
+              "\"\<Kekepania\>\"", ",", "\"\<Kekoa\>\"", ",", 
+              "\"\<Keonaona\>\"", ",", "\"\<Keona\>\"", ",", 
+              "\"\<Kilikina\>\"", ",", "\"\<Kini\>\"", ",", "\"\<Konani\>\"", 
+              ",", "\"\<Lahela\>\"", ",", "\"\<Lani\>\"", ",", 
+              "\"\<Leilani\>\"", ",", "\"\<Leimomi\>\"", ",", 
+              "\"\<Leinani\>\"", ",", "\"\<Lilinoe\>\"", ",", 
+              "\"\<Lokelani\>\"", ",", "\"\<Lono\>\"", ",", "\"\<Luana\>\"", 
+              ",", "\"\<Mahealani\>\"", ",", "\"\<Maile\>\"", ",", 
+              "\"\<Makamae\>\"", ",", "\"\<Makana\>\"", ",", "\"\<Makani\>\"",
+               ",", "\"\<Makanui\>\"", ",", "\"\<Malie\>\"", ",", 
+              "\"\<Mele\>\"", ",", "\"\<Mililani\>\"", ",", "\"\<Moana\>\"", 
+              ",", "\"\<Momilani\>\"", ",", "\"\<Nalani\>\"", ",", 
+              "\"\<Nohea\>\"", ",", "\"\<Pauahi\>\"", ",", "\"\<Puanani\>\"", 
+              ",", "\"\<Ululani\>\"", ",", "\"\<Waiola\>\"", ",", 
+              "\"\<Wikolia\>\""}], "}"}], "]"}]}], ";", "\[IndentingNewLine]",
+           
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
             RowBox[{
-            "\"\<Keala, `1` tall, casts a shadow `2` long. A nearby palm \
-tree's shadow is `3` long. How tall is the tree?\>\"", ",", "ht1", ",", "sh1",
-              ",", "sh2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            "\"\<`1`, who stands `2` tall, casts a shadow `3` long. A nearby \
+palm tree's shadow is `4` long. How tall is the tree?\>\"", ",", "name", ",", 
+             "ht1", ",", "sh1", ",", "sh2"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"ansNo", "=", 
            RowBox[{"Round", "[", 
             RowBox[{
-             RowBox[{"UnitConvert", "[", 
-              RowBox[{
-               FractionBox[
-                RowBox[{"ht1", "*", "sh2"}], "sh1"], ",", "\"\<Feet\>\""}], 
-              "]"}], ",", ".1"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"choices", "=", 
-           RowBox[{"Take", "[", 
-            RowBox[{
-             RowBox[{"DeleteDuplicates", "[", 
-              RowBox[{"Prepend", "[", 
+             RowBox[{"QuantityMagnitude", "[", 
+              RowBox[{"UnitConvert", "[", 
                RowBox[{
+                FractionBox[
+                 RowBox[{"ht1", "*", "sh2"}], "sh1"], ",", "\"\<Feet\>\""}], 
+               "]"}], "]"}], ",", ".1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< ft\>\""}], 
+               ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}],
+             "/@", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Prepend", "[", 
                 RowBox[{
-                 RowBox[{
-                  RowBox[{"Quantity", "[", 
-                   RowBox[{"#", ",", "\"\<Feet\>\""}], "]"}], "&"}], "/@", 
                  RowBox[{"Round", "[", 
                   RowBox[{
-                   RowBox[{"RandomReal", "[", 
+                   RowBox[{"RandomSample", "[", 
                     RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{
-                    RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], "*", 
-                    ".4"}], ",", 
-                    RowBox[{
-                    RowBox[{"QuantityMagnitude", "[", "ansNo", "]"}], "*", 
-                    "2"}]}], "}"}], ",", "6"}], "]"}], ",", ".1"}], "]"}]}], 
-                ",", "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+                    FractionBox[
+                    RowBox[{"Range", "[", 
+                    RowBox[{"150", ",", "1200"}], "]"}], "10"], ",", "4"}], 
+                    "]"}], ",", ".1"}], "]"}], ",", "ansNo"}], "]"}], "]"}], 
+              ",", "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -305,14 +341,21 @@ degrees?\>\"", ",", "rad"}], "]"}]}], ";", "\[IndentingNewLine]",
    3.788443840126025*^9, 3.788443841509709*^9}, {3.788443926270424*^9, 
    3.7884439266140833`*^9}, {3.788445195961892*^9, 3.7884452000175657`*^9}, {
    3.78844526967122*^9, 3.788445287625184*^9}, {3.7884454167728357`*^9, 
-   3.788445457273118*^9}, {3.788445779688505*^9, 3.78844579472841*^9}},
+   3.788445457273118*^9}, {3.788445779688505*^9, 3.78844579472841*^9}, {
+   3.794760072923464*^9, 3.7947600919543333`*^9}, {3.794760215737998*^9, 
+   3.7947608492251167`*^9}, {3.7947608809123287`*^9, 
+   3.7947609418400517`*^9}, {3.794760973319109*^9, 3.794760999110818*^9}, {
+   3.794761033846961*^9, 3.794761035167028*^9}, {3.79476125983042*^9, 
+   3.794761276725957*^9}, {3.79476131727741*^9, 3.794761577989778*^9}, {
+   3.794761704453866*^9, 3.7947618257332153`*^9}},
  CellLabel->
-  "In[3334]:=",ExpressionUUID->"0741e4a1-3f8f-49c2-8574-cdf0ba10259b"]
+  "In[265]:=",ExpressionUUID->"0741e4a1-3f8f-49c2-8574-cdf0ba10259b"]
 },
 WindowSize->{1574, 1230},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+WindowMargins->{{2, Automatic}, {Automatic, 1}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c62cf155-e01e-49fb-a1de-246dae9edc0d"
 ]
 (* End of Notebook Content *)
 
@@ -325,7 +368,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 13685, 289, 826, "Input",ExpressionUUID->"0741e4a1-3f8f-49c2-8574-cdf0ba10259b"]
+Cell[558, 20, 16309, 331, 950, "Input",ExpressionUUID->"0741e4a1-3f8f-49c2-8574-cdf0ba10259b"]
 }
 ]
 *)
