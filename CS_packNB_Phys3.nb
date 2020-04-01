@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5351,        143]
-NotebookOptionsPosition[      5058,        130]
-NotebookOutlinePosition[      5397,        145]
-CellTagsIndexPosition[      5354,        142]
+NotebookDataLength[      6388,        151]
+NotebookOptionsPosition[      6040,        137]
+NotebookOutlinePosition[      6434,        153]
+CellTagsIndexPosition[      6391,        150]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,90 +26,76 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"p1", "=", 
-        RowBox[{"Quantity", "[", 
+       RowBox[{"pr", "=", 
+        RowBox[{"RandomSample", "[", 
          RowBox[{
-          RowBox[{"RandomInteger", "[", 
-           RowBox[{"{", 
-            RowBox[{"1", ",", "16"}], "}"}], "]"}], ",", "\"\<Bars\>\""}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"v1", "=", 
-        RowBox[{"Quantity", "[", 
-         RowBox[{
-          RowBox[{"RandomInteger", "[", 
-           RowBox[{"{", 
-            RowBox[{"5", ",", "50"}], "}"}], "]"}], ",", 
-          RowBox[{"\"\<Centimeters\>\"", "^", "3"}]}], "]"}]}], ";", 
+          RowBox[{"Range", "[", 
+           RowBox[{"1", ",", "30"}], "]"}], ",", "2"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"p2", "=", 
-        RowBox[{"Quantity", "[", 
-         RowBox[{
-          RowBox[{"RandomInteger", "[", 
-           RowBox[{"{", 
-            RowBox[{"1", ",", "16"}], "}"}], "]"}], ",", "\"\<Bars\>\""}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"p1", "\[Equal]", "p2"}], ",", 
-         RowBox[{"p2", "=", 
-          RowBox[{"p2", "+", 
-           RowBox[{"Quantity", "[", 
-            RowBox[{"2", ",", "\"\<Bars\>\""}], "]"}]}]}]}], "]"}], ";", 
+       RowBox[{"vo", "=", 
+        RowBox[{"RandomInteger", "[", 
+         RowBox[{"{", 
+          RowBox[{"2", ",", "20"}], "}"}], "]"}]}], ";", 
        "\[IndentingNewLine]", 
-       RowBox[{"v2", "=", 
+       RowBox[{"ansNo", "=", 
         RowBox[{"Round", "[", 
          RowBox[{
-          RowBox[{
-           RowBox[{"(", 
-            RowBox[{"v1", "*", "p1"}], ")"}], "/", "p2"}], ",", ".01"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"StringForm", "[", 
+          FractionBox[
+           RowBox[{"vo", "*", 
+            RowBox[{
+            "pr", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
            RowBox[{
-           "\"\<According to Boyle's Law, if a gas has a volume of `1` at a \
-pressure of `2`, then what is its volume at a pressure of `3`?\>\"", ",", 
-            "h1", ",", "h2", ",", "h3"}], "]"}], "]"}], "/.", 
-         RowBox[{"{", 
+           "pr", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]], ",",
+           ".1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"q", "=", 
+        RowBox[{"StringForm", "[", 
+         RowBox[{
+         "\"\<According to Boyle's Law, if a gas has a volume of `1` at a \
+pressure of `2` bars, then what is its volume at a pressure of `3` bars?\>\"",
+           ",", 
+          RowBox[{"Quantity", "[", 
+           RowBox[{"vo", ",", 
+            RowBox[{"\"\<Centimeters\>\"", "^", "3"}]}], "]"}], ",", 
           RowBox[{
-           RowBox[{"h1", "\[Rule]", "v1"}], ",", 
-           RowBox[{"h2", "\[Rule]", 
-            RowBox[{"ToString", "[", "p1", "]"}]}], ",", 
-           RowBox[{"h3", "\[Rule]", 
-            RowBox[{"ToString", "[", "p2", "]"}]}]}], "}"}]}]}], ";", 
-       RowBox[{"choiceNos", "=", 
-        RowBox[{"{", "v2", "}"}]}], ";", 
-       RowBox[{"While", "[", 
+          "pr", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], ",", 
+          RowBox[{
+          "pr", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+         "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"choices", "=", 
         RowBox[{
          RowBox[{
-          RowBox[{"Length", "[", "choiceNos", "]"}], "<", "4"}], ",", 
-         "\[IndentingNewLine]", 
-         RowBox[{"choiceNos", "=", 
-          RowBox[{"DeleteDuplicates", "[", 
-           RowBox[{"Append", "[", 
-            RowBox[{"choiceNos", ",", 
-             RowBox[{"Quantity", "[", 
+          RowBox[{"StringForm", "[", 
+           RowBox[{"\"\<`1` `2`\>\"", ",", 
+            RowBox[{"StringReplace", "[", 
+             RowBox[{
+              RowBox[{"ToString", "[", "#", "]"}], ",", 
               RowBox[{
+               RowBox[{"\"\<.\>\"", "~~", "EndOfString"}], "\[Rule]", 
+               "\"\<\>\""}]}], "]"}], ",", 
+            RowBox[{"cm", "^", "3"}]}], "]"}], "&"}], "/@", 
+         RowBox[{"Take", "[", 
+          RowBox[{
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"Abs", "[", 
                RowBox[{"Round", "[", 
                 RowBox[{
-                 RowBox[{"RandomReal", "[", 
-                  RowBox[{"{", 
-                   RowBox[{"1", ",", 
-                    RowBox[{
-                    RowBox[{"QuantityMagnitude", "[", "v2", "]"}], "*", 
-                    "1.8"}]}], "}"}], "]"}], ",", ".01"}], "]"}], ",", 
-               RowBox[{"\"\<Centimeters\>\"", "^", "3"}]}], "]"}]}], "]"}], 
-           "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"RandomVariate", "[", 
+                  RowBox[{
+                   RowBox[{"NormalDistribution", "[", 
+                    RowBox[{"vo", ",", "25"}], "]"}], ",", "30"}], "]"}], ",",
+                  ".1"}], "]"}], "]"}], ",", "ansNo"}], "]"}], "]"}], ",", 
+           "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{"choiceNos", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+       "\[IndentingNewLine]", 
        RowBox[{"ans", "=", 
         RowBox[{
          RowBox[{"Position", "[", 
           RowBox[{"mixed", ",", 
            RowBox[{
-           "choiceNos", "\[LeftDoubleBracket]", "1", 
+           "choices", "\[LeftDoubleBracket]", "1", 
             "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
          RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
        "\[IndentingNewLine]", 
@@ -125,13 +111,35 @@ pressure of `2`, then what is its volume at a pressure of `3`?\>\"", ",",
    3.682971399878456*^9, 3.682971403844651*^9}, {3.68761875100508*^9, 
    3.687618799549101*^9}, {3.6876188761701813`*^9, 3.6876189501498623`*^9}, {
    3.764893497283781*^9, 3.764893520507216*^9}, {3.764893633165214*^9, 
-   3.764893649059466*^9}},ExpressionUUID->"fd240a7a-f88f-413b-99f5-\
-44ff07e0ae7c"]
+   3.764893649059466*^9}, {3.794754511677463*^9, 3.794754527993137*^9}, {
+   3.794754758692753*^9, 3.794754910703004*^9}, {3.79475494840847*^9, 
+   3.7947549763272123`*^9}, {3.794755010223816*^9, 3.794755022990879*^9}, {
+   3.794755053335182*^9, 3.794755121454705*^9}, {3.7947551630710583`*^9, 
+   3.7947552282784452`*^9}, {3.794755264910678*^9, 3.794755315814066*^9}, {
+   3.794755361975226*^9, 3.7947553624142523`*^9}, {3.794755393165669*^9, 
+   3.7947557124209003`*^9}, 3.794755760068869*^9, {3.79475582979629*^9, 
+   3.794755834220574*^9}, {3.794755938757579*^9, 3.794755957708293*^9}, 
+   3.794756010860785*^9, {3.7947560480040417`*^9, 3.7947560496436377`*^9}, {
+   3.794756143052258*^9, 3.794756348818912*^9}, {3.7947564073143806`*^9, 
+   3.794756549170218*^9}, {3.794756583395743*^9, 3.794756634788233*^9}, {
+   3.794756692938622*^9, 3.794756709081696*^9}, {3.7947567564107323`*^9, 
+   3.79475675658716*^9}, {3.794756823138605*^9, 3.794756848865664*^9}, {
+   3.794757045010651*^9, 3.794757050818797*^9}, {3.794757086144766*^9, 
+   3.794757128570215*^9}, {3.794757159952756*^9, 3.79475721615413*^9}, {
+   3.794757258858289*^9, 3.794757402591774*^9}, {3.794757467401382*^9, 
+   3.794757471615934*^9}, {3.794757510881341*^9, 3.794757520223976*^9}, {
+   3.794757551391816*^9, 3.794757700663062*^9}, {3.7947586410935926`*^9, 
+   3.794758647675798*^9}, {3.794758678701318*^9, 3.794758729556134*^9}, {
+   3.79475877181601*^9, 3.794758778429802*^9}, {3.794759095981493*^9, 
+   3.794759096275948*^9}},
+ CellLabel->
+  "In[243]:=",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"]
 },
-WindowSize->{1244, 1050},
-WindowMargins->{{-2, Automatic}, {46, Automatic}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1856, 1050},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"0a656bc4-3de8-4bb4-b6e1-47483fa7f5f4"
 ]
 (* End of Notebook Content *)
 
@@ -144,7 +152,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4496, 108, 409, "Input",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"]
+Cell[558, 20, 5478, 115, 318, "Input",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"]
 }
 ]
 *)
