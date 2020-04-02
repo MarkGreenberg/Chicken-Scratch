@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7212,        182]
-NotebookOptionsPosition[      6864,        168]
-NotebookOutlinePosition[      7258,        184]
-CellTagsIndexPosition[      7215,        181]
+NotebookDataLength[      7697,        191]
+NotebookOptionsPosition[      7349,        177]
+NotebookOutlinePosition[      7743,        193]
+CellTagsIndexPosition[      7700,        190]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -75,22 +75,27 @@ would its mass be?\>\"", ",", "val\[Rho]", ",", "valV"}], "]"}]}], ";",
         RowBox[{"QuantityMagnitude", "[", "ansQnt", "]"}]}], ";", 
        "\[IndentingNewLine]", 
        RowBox[{"choices", "=", 
-        RowBox[{"Prepend", "[", 
+        RowBox[{
          RowBox[{
+          RowBox[{"StringReplace", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< kg\>\""}], ",", 
+            
+            RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}], "/@", 
+         RowBox[{"Prepend", "[", 
           RowBox[{
            RowBox[{
-            RowBox[{"Quantity", "[", 
-             RowBox[{
-              RowBox[{"Round", "[", 
-               RowBox[{"#", ",", ".01"}], "]"}], ",", "\"\<Kilograms\>\""}], 
-             "]"}], "&"}], "/@", 
-           RowBox[{"RandomReal", "[", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{".25", "*", "ansMag"}], ",", 
-               RowBox[{"1.75", "*", "ansMag"}]}], "}"}], ",", "3"}], "]"}]}], 
-          ",", "ansQnt"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"Round", "[", 
+              RowBox[{"#", ",", ".01"}], "]"}], "&"}], "/@", 
+            RowBox[{"RandomReal", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{".2", "*", "ansMag"}], ",", 
+                RowBox[{"1.8", "*", "ansMag"}]}], "}"}], ",", "3"}], "]"}]}], 
+           ",", "ansMag"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
        RowBox[{"mixed", "=", 
         RowBox[{"RandomSample", "[", 
          RowBox[{"choices", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
@@ -162,9 +167,13 @@ would its mass be?\>\"", ",", "val\[Rho]", ",", "valV"}], "]"}]}], ";",
    3.764611557497128*^9}, {3.794258540103012*^9, 3.7942585550050707`*^9}, {
    3.794258597061236*^9, 3.794258597301113*^9}, {3.794258635582406*^9, 
    3.794258635804826*^9}, {3.7942586780702667`*^9, 3.794258739780772*^9}, 
-   3.794258776646017*^9, {3.7942588253500547`*^9, 3.794258849820088*^9}},
+   3.794258776646017*^9, {3.7942588253500547`*^9, 3.794258849820088*^9}, {
+   3.79482498363341*^9, 3.794824996416326*^9}, {3.7948250614418583`*^9, 
+   3.794825066233597*^9}, {3.794825237807913*^9, 3.794825253753193*^9}, {
+   3.794825325112507*^9, 3.794825344263175*^9}, {3.794825395895358*^9, 
+   3.794825449302875*^9}, {3.794825557736106*^9, 3.794825562734432*^9}},
  CellLabel->
-  "In[281]:=",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
+  "In[465]:=",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
 },
 WindowSize->{1585, 1377},
 WindowMargins->{{7, Automatic}, {Automatic, 5}},
@@ -183,7 +192,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6302, 146, 367, "Input",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
+Cell[558, 20, 6787, 155, 367, "Input",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
 }
 ]
 *)
