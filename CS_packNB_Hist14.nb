@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29203,        519]
-NotebookOptionsPosition[     28724,        502]
-NotebookOutlinePosition[     29118,        518]
-CellTagsIndexPosition[     29075,        515]
+NotebookDataLength[     27584,        485]
+NotebookOptionsPosition[     27235,        471]
+NotebookOutlinePosition[     27629,        487]
+CellTagsIndexPosition[     27586,        484]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -251,61 +249,57 @@ Cell[BoxData[
               SelectWithContents->True,
               Selectable->False], ",", "4"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"year", "=", 
-           RowBox[{"ToString", "[", 
-            RowBox[{"RandomChoice", "[", 
-             RowBox[{"Range", "[", 
-              RowBox[{"1990", ",", "2020"}], "]"}], "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"myFun", "=", 
-           RowBox[{"ResourceFunction", "[", "\"\<ListGrowthPlot\>\"", "]"}]}],
-           ";", "\[IndentingNewLine]", 
-          RowBox[{"dates", "=", 
-           RowBox[{"{", 
-            RowBox[{"\"\<Jan. 1, 2020\>\"", ",", "\"\<Dec. 31, 2020\>\""}], 
-            "}"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"paths", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"FinancialData", "[", 
-              RowBox[{"#", ",", "dates"}], "]"}], "&"}], "/@", 
-            RowBox[{"data", "\[LeftDoubleBracket]", 
-             RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"myFun", "[", 
-            RowBox[{
-             RowBox[{"TemporalData", "[", 
-              RowBox[{"paths", "\[LeftDoubleBracket]", 
-               RowBox[{"1", ";;", "4"}], "\[RightDoubleBracket]"}], "]"}], 
-             ",", 
-             RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
-             RowBox[{"PlotStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"Orange", ",", 
-                RowBox[{"GrayLevel", "[", ".6", "]"}], ",", "Green", ",", 
-                RowBox[{"{", 
-                 RowBox[{"Thick", ",", "Blue"}], "}"}]}], "}"}]}], ",", 
-             RowBox[{"LabelStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
-             RowBox[{"PlotLabel", "\[Rule]", 
-              RowBox[{"Style", "[", 
+           RowBox[{
+            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"paths", "=", 
                RowBox[{
-               "\"\<Stock Growth in 2020\>\"", ",", "Black", ",", "18"}], 
-               "]"}]}], ",", 
-             RowBox[{"AspectRatio", "\[Rule]", 
-              FractionBox["9", "8"]}], ",", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"FinancialData", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    "\"\<Jan. 1, 2020\>\"", ",", "\"\<Dec. 31, 2020\>\""}], 
+                    "}"}]}], "]"}], "&"}], "/@", "h1"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{
                RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+               "ResourceFunction", "[", "\"\<ListGrowthPlot\>\"", "]"}], "[", 
+               
+               RowBox[{
+                RowBox[{"TemporalData", "[", "paths", "]"}], ",", 
+                RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+                RowBox[{"PlotStyle", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Orange", ",", 
+                   RowBox[{"GrayLevel", "[", ".65", "]"}], ",", "Green", ",", 
+                   
+                   RowBox[{"{", 
+                    RowBox[{"Thick", ",", "Blue"}], "}"}]}], "}"}]}], ",", 
+                RowBox[{"LabelStyle", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
+                RowBox[{"PlotLabel", "\[Rule]", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                  "\"\<Stock Growth in 2020\>\"", ",", "Black", ",", "18"}], 
+                  "]"}]}], ",", 
+                RowBox[{"AspectRatio", "\[Rule]", 
+                 FractionBox["9", "8"]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", "480", "}"}], ",", 
+                   RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"data", "\[LeftDoubleBracket]", 
+              RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}]}]}]}], ";",
+           "\[IndentingNewLine]", 
           RowBox[{
           "q", "=", 
-           "\"\<The growth of these companies' stocks are graphed. Which is \
-the blue line?\>\""}], ";", "\[IndentingNewLine]", 
+           "\"\<The graph shows the growth of these companies' stocks. Which \
+is the blue line?\>\""}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{"Reverse", "[", 
             RowBox[{"data", "\[LeftDoubleBracket]", 
@@ -458,47 +452,22 @@ the blue line?\>\""}], ";", "\[IndentingNewLine]",
    3.79501886339221*^9}, {3.795018909456562*^9, 3.795018934015328*^9}, {
    3.795018999465658*^9, 3.795019023776208*^9}, {3.795022785915946*^9, 
    3.795022812795814*^9}, {3.795022951810328*^9, 3.7950229591938057`*^9}, 
-   3.7950230256456633`*^9, {3.7950230570239058`*^9, 3.7950230751722803`*^9}},
+   3.7950230256456633`*^9, {3.7950230570239058`*^9, 3.7950230751722803`*^9}, {
+   3.795023838200375*^9, 3.7950238552312117`*^9}, {3.795023890838744*^9, 
+   3.795023935920497*^9}, {3.795024221767992*^9, 3.795024258981574*^9}, {
+   3.795024351016515*^9, 3.7950244014863997`*^9}, {3.795024465936687*^9, 
+   3.7950245039937687`*^9}, {3.795024541561275*^9, 3.795024544671432*^9}, {
+   3.795024708704019*^9, 3.795024749101911*^9}, {3.795032689589643*^9, 
+   3.7950327005998077`*^9}, {3.7950327389432583`*^9, 
+   3.7950327594151163`*^9}, {3.7950331478277817`*^9, 3.795033181977438*^9}, {
+   3.795033256130527*^9, 3.795033264512485*^9}, 3.79503329958681*^9, {
+   3.795033563753901*^9, 3.795033591739272*^9}, {3.795034213922319*^9, 
+   3.795034217599152*^9}, {3.795034270515296*^9, 3.795034332824074*^9}, {
+   3.795038760584537*^9, 3.795038807357856*^9}, {3.795038888496553*^9, 
+   3.7950389283820972`*^9}, {3.7950389799432487`*^9, 3.795039125493236*^9}, {
+   3.795039845980028*^9, 3.7950398624815607`*^9}},
  CellLabel->
-  "In[1477]:=",ExpressionUUID->"cc1c54c4-f674-4d2d-8ec9-ca5de0cc4cc8"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Hist14\"", 
-     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Hist14"},
-    "HyperlinkURL"], "]"}],
-  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Hist14"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{{3.794925016089662*^9, 3.79492504206028*^9}, {
-   3.79492507915913*^9, 3.79492526579556*^9}, 3.794925765127419*^9, 
-   3.794925797370577*^9, 3.794925828201766*^9, {3.7950031887537603`*^9, 
-   3.79500323746672*^9}, 3.795003362376092*^9, {3.795003396563015*^9, 
-   3.79500342847085*^9}, 3.7950035815240192`*^9, {3.795003612616825*^9, 
-   3.795003629550758*^9}, 3.795003691184825*^9, 3.795003726531185*^9, {
-   3.795003913583473*^9, 3.795003939996572*^9}, 3.7950039840471773`*^9, 
-   3.795004256851931*^9, 3.795004303554144*^9, 3.795004526535812*^9, 
-   3.795004704312828*^9, 3.7950048687693977`*^9, {3.7950049973521643`*^9, 
-   3.7950050057793207`*^9}, 3.795005264104141*^9, 3.795005378679923*^9, 
-   3.795005493511348*^9, 3.795005677246071*^9, 3.795005716442758*^9, 
-   3.795005747971961*^9, 3.795006044321096*^9, 3.79500630731985*^9, 
-   3.7950064698556547`*^9, 3.795006822739394*^9, 3.795006885972143*^9, 
-   3.795007476764007*^9, 3.7950084345772667`*^9, 3.7950085031330547`*^9, 
-   3.795008652967585*^9, 3.795008773960094*^9, 3.795009252182046*^9, 
-   3.795009394794935*^9, 3.795009572034628*^9, 3.795009842321145*^9, 
-   3.795009946757283*^9, 3.795010252583041*^9, 3.7950105114637117`*^9, 
-   3.795010772275031*^9, 3.795012202484974*^9, 3.7950127015881844`*^9, 
-   3.795013094424322*^9, 3.7950131739649353`*^9, 3.795015618788913*^9, 
-   3.7950161529487*^9, 3.795016374230332*^9, 3.7950164100743933`*^9, 
-   3.795016754984955*^9, 3.795016865742134*^9, 3.795018430801485*^9, 
-   3.7950186312301607`*^9, 3.795018865472711*^9, {3.795018912006514*^9, 
-   3.7950189576660967`*^9}, {3.7950190077256737`*^9, 3.795019045732606*^9}, 
-   3.795022815470942*^9, 3.795022905924828*^9, 3.7950229618754063`*^9, 
-   3.795023078238415*^9},
- CellLabel->
-  "Out[1477]=",ExpressionUUID->"3e798e16-349b-4734-95ba-101e3a692f34"]
-}, Open  ]]
+  "In[1657]:=",ExpressionUUID->"cc1c54c4-f674-4d2d-8ec9-ca5de0cc4cc8"]
 },
 WindowSize->{1530, 1346},
 WindowMargins->{{1, Automatic}, {Automatic, 0}},
@@ -517,10 +486,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 25923, 440, 693, "Input",ExpressionUUID->"cc1c54c4-f674-4d2d-8ec9-ca5de0cc4cc8"],
-Cell[26506, 464, 2202, 35, 37, "Output",ExpressionUUID->"3e798e16-349b-4734-95ba-101e3a692f34"]
-}, Open  ]]
+Cell[558, 20, 26673, 449, 657, "Input",ExpressionUUID->"cc1c54c4-f674-4d2d-8ec9-ca5de0cc4cc8"]
 }
 ]
 *)
