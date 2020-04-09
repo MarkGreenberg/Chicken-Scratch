@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7816,        163]
-NotebookOptionsPosition[      7524,        150]
-NotebookOutlinePosition[      7862,        165]
-CellTagsIndexPosition[      7819,        162]
+NotebookDataLength[     23132,        472]
+NotebookOptionsPosition[     22742,        457]
+NotebookOutlinePosition[     23177,        474]
+CellTagsIndexPosition[     23134,        471]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,104 +26,377 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"Sort", "[", 
-         RowBox[{"RandomSample", "[", 
-          RowBox[{
-           InterpretationBox[
-            DynamicModuleBox[{Typeset`open = False}, 
-             TemplateBox[{"Association","AssociationIcon",GridBox[{{
-                  RowBox[{
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"Sort", "[", 
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              InterpretationBox[
+               DynamicModuleBox[{Typeset`open = False}, 
+                TemplateBox[{"Association", "AssociationIcon", 
+                  GridBox[{{
+                    RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
                     TagBox["Association", "IconizedItem"]}]}, {
-                  RowBox[{
+                    RowBox[{
                     TagBox["\"Length: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
                     TagBox["78", "IconizedItem"]}]}, {
-                  RowBox[{
+                    RowBox[{
                     TagBox["\"Byte count: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
                     TagBox["9520", "IconizedItem"]}]}}, 
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                   DefaultBaseStyle -> "Column", 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                  Dynamic[Typeset`open]},
+                 "IconizedObject"]],
+               Association[
+               "rubber" -> 0.55, "low-density polyethylene" -> 0.485, 
+                "diatom frustules" -> 1.56, "Teflon" -> 0.5, 
+                "high-density polyethylene" -> 0.8, "bacteriophage capsids" -> 
+                2, "polypropylene" -> 1.75, "polyethylene terephthalate" -> 
+                2.35, "nylon" -> 3, "polystyrene foam" -> 0.00475, 
+                "solid polystyrene" -> 1.75, "medium-density fiberboard" -> 4,
+                 "wood (along the grain)" -> 11, "human cortical bone" -> 14, 
+                "glass reinforced polyester matrix" -> 17.2, 
+                "aromatic peptide nanotubes" -> 23, "high-strength concrete" -> 
+                30, "carbon-fiber reinforced plastic (50/50)" -> 40, 
+                "hemp fiber" -> 35, "glass" -> 70, "flax fiber" -> 58, 
+                "mother-of-pearl" -> 70, "aramid synthetic fibers" -> 91.45, 
+                "tooth enamel" -> 83, "stinging nettle fiber" -> 87, "bronze" -> 
+                108, "brass" -> 112.5, "titanium alloy" -> 112.5, 
+                "carbon-fiber reinforced plastic (70/30)" -> 181, 
+                "silicon crystal" -> 162.5, "wrought iron" -> 200, "steel" -> 
+                200, "polycrystalline yttrium-iron garnet" -> 193, 
+                "single-crystal yttrium-iron garnet" -> 200, "cobalt-chrome" -> 
+                239, "aromatic peptide nanospheres" -> 252.5, 
+                "silicon carbide" -> 450, "tungsten carbide" -> 550, 
+                "single-walled carbon nanotube" -> 1000, "graphene" -> 1050, 
+                "diamond" -> 1130, "carbyne" -> 32100, "lithium" -> 4.9, 
+                "beryllium" -> 287, "sodium" -> 10, "magnesium" -> 45, 
+                "aluminum" -> 70, "silicon" -> 47, "calcium" -> 20, 
+                "scandium" -> 74, "titanium" -> 116, "vanadium" -> 128, 
+                "chromium" -> 279, "manganese" -> 198, "iron" -> 211, 
+                "cobalt" -> 209, "nickel" -> 200, "copper" -> 130, "zinc" -> 
+                108, "arsenic" -> 8, "selenium" -> 10, "rubidium" -> 2.4, 
+                "yttrium" -> 64, "zirconium" -> 68, "niobium" -> 105, 
+                "molybdenum" -> 329, "palladium" -> 121, "silver" -> 83, 
+                "cadmium" -> 50, "tin" -> 50, "antimony" -> 55, "barium" -> 
+                13, "tungsten" -> 411, "iridium" -> 528, "platinum" -> 168, 
+                "gold" -> 78, "lead" -> 16, "bismuth" -> 32],
+               SelectWithContents->True,
+               Selectable->False], ",", "4"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"wd", "=", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+             RowBox[{
+              RowBox[{"data", "=", 
+               RowBox[{"Reverse", "[", "data", "]"}]}], ";", 
+              "\"\<highest\>\""}], ",", "\"\<lowest\>\""}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<The `1` is a measure of stiffness. Which of these materials \
+has the `2` Young's modulus?\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"\"\<Young's modulus\>\"", ",", "Italic"}], "]"}], ",", 
+             "wd"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"elem", "=", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"List", "ListIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["118", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["15672", "IconizedItem"]}]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
                 GridBoxItemSize -> {
-                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                Dynamic[Typeset`open]},
               "IconizedObject"]],
-            Association[
-            "rubber" -> 0.55, "low-density polyethylene" -> 0.485, 
-             "diatom frustules" -> 1.56, "Teflon" -> 0.5, 
-             "high-density polyethylene" -> 0.8, "bacteriophage capsids" -> 2,
-              "polypropylene" -> 1.75, "polyethylene terephthalate" -> 2.35, 
-             "nylon" -> 3, "polystyrene foam" -> 0.00475, "solid polystyrene" -> 
-             1.75, "medium-density fiberboard" -> 4, "wood (along the grain)" -> 
-             11, "human cortical bone" -> 14, 
-             "glass reinforced polyester matrix" -> 17.2, 
-             "aromatic peptide nanotubes" -> 23, "high-strength concrete" -> 
-             30, "carbon-fiber reinforced plastic (50/50)" -> 40, 
-             "hemp fiber" -> 35, "glass" -> 70, "flax fiber" -> 58, 
-             "mother-of-pearl" -> 70, "aramid synthetic fibers" -> 91.45, 
-             "tooth enamel" -> 83, "stinging nettle fiber" -> 87, "bronze" -> 
-             108, "brass" -> 112.5, "titanium alloy" -> 112.5, 
-             "carbon-fiber reinforced plastic (70/30)" -> 181, 
-             "silicon crystal" -> 162.5, "wrought iron" -> 200, "steel" -> 
-             200, "polycrystalline yttrium-iron garnet" -> 193, 
-             "single-crystal yttrium-iron garnet" -> 200, "cobalt-chrome" -> 
-             239, "aromatic peptide nanospheres" -> 252.5, "silicon carbide" -> 
-             450, "tungsten carbide" -> 550, "single-walled carbon nanotube" -> 
-             1000, "graphene" -> 1050, "diamond" -> 1130, "carbyne" -> 32100, 
-             "lithium" -> 4.9, "beryllium" -> 287, "sodium" -> 10, 
-             "magnesium" -> 45, "aluminum" -> 70, "silicon" -> 47, "calcium" -> 
-             20, "scandium" -> 74, "titanium" -> 116, "vanadium" -> 128, 
-             "chromium" -> 279, "manganese" -> 198, "iron" -> 211, "cobalt" -> 
-             209, "nickel" -> 200, "copper" -> 130, "zinc" -> 108, "arsenic" -> 
-             8, "selenium" -> 10, "rubidium" -> 2.4, "yttrium" -> 64, 
-             "zirconium" -> 68, "niobium" -> 105, "molybdenum" -> 329, 
-             "palladium" -> 121, "silver" -> 83, "cadmium" -> 50, "tin" -> 50,
-              "antimony" -> 55, "barium" -> 13, "tungsten" -> 411, "iridium" -> 
-             528, "platinum" -> 168, "gold" -> 78, "lead" -> 16, "bismuth" -> 
-             32],
+            {
+             Entity["Element", "Hydrogen"], 
+             Entity["Element", "Helium"], 
+             Entity["Element", "Lithium"], 
+             Entity["Element", "Beryllium"], 
+             Entity["Element", "Boron"], 
+             Entity["Element", "Carbon"], 
+             Entity["Element", "Nitrogen"], 
+             Entity["Element", "Oxygen"], 
+             Entity["Element", "Fluorine"], 
+             Entity["Element", "Neon"], 
+             Entity["Element", "Sodium"], 
+             Entity["Element", "Magnesium"], 
+             Entity["Element", "Aluminum"], 
+             Entity["Element", "Silicon"], 
+             Entity["Element", "Phosphorus"], 
+             Entity["Element", "Sulfur"], 
+             Entity["Element", "Chlorine"], 
+             Entity["Element", "Argon"], 
+             Entity["Element", "Potassium"], 
+             Entity["Element", "Calcium"], 
+             Entity["Element", "Scandium"], 
+             Entity["Element", "Titanium"], 
+             Entity["Element", "Vanadium"], 
+             Entity["Element", "Chromium"], 
+             Entity["Element", "Manganese"], 
+             Entity["Element", "Iron"], 
+             Entity["Element", "Cobalt"], 
+             Entity["Element", "Nickel"], 
+             Entity["Element", "Copper"], 
+             Entity["Element", "Zinc"], 
+             Entity["Element", "Gallium"], 
+             Entity["Element", "Germanium"], 
+             Entity["Element", "Arsenic"], 
+             Entity["Element", "Selenium"], 
+             Entity["Element", "Bromine"], 
+             Entity["Element", "Krypton"], 
+             Entity["Element", "Rubidium"], 
+             Entity["Element", "Strontium"], 
+             Entity["Element", "Yttrium"], 
+             Entity["Element", "Zirconium"], 
+             Entity["Element", "Niobium"], 
+             Entity["Element", "Molybdenum"], 
+             Entity["Element", "Technetium"], 
+             Entity["Element", "Ruthenium"], 
+             Entity["Element", "Rhodium"], 
+             Entity["Element", "Palladium"], 
+             Entity["Element", "Silver"], 
+             Entity["Element", "Cadmium"], 
+             Entity["Element", "Indium"], 
+             Entity["Element", "Tin"], 
+             Entity["Element", "Antimony"], 
+             Entity["Element", "Tellurium"], 
+             Entity["Element", "Iodine"], 
+             Entity["Element", "Xenon"], 
+             Entity["Element", "Cesium"], 
+             Entity["Element", "Barium"], 
+             Entity["Element", "Lanthanum"], 
+             Entity["Element", "Cerium"], 
+             Entity["Element", "Praseodymium"], 
+             Entity["Element", "Neodymium"], 
+             Entity["Element", "Promethium"], 
+             Entity["Element", "Samarium"], 
+             Entity["Element", "Europium"], 
+             Entity["Element", "Gadolinium"], 
+             Entity["Element", "Terbium"], 
+             Entity["Element", "Dysprosium"], 
+             Entity["Element", "Holmium"], 
+             Entity["Element", "Erbium"], 
+             Entity["Element", "Thulium"], 
+             Entity["Element", "Ytterbium"], 
+             Entity["Element", "Lutetium"], 
+             Entity["Element", "Hafnium"], 
+             Entity["Element", "Tantalum"], 
+             Entity["Element", "Tungsten"], 
+             Entity["Element", "Rhenium"], 
+             Entity["Element", "Osmium"], 
+             Entity["Element", "Iridium"], 
+             Entity["Element", "Platinum"], 
+             Entity["Element", "Gold"], 
+             Entity["Element", "Mercury"], 
+             Entity["Element", "Thallium"], 
+             Entity["Element", "Lead"], 
+             Entity["Element", "Bismuth"], 
+             Entity["Element", "Polonium"], 
+             Entity["Element", "Astatine"], 
+             Entity["Element", "Radon"], 
+             Entity["Element", "Francium"], 
+             Entity["Element", "Radium"], 
+             Entity["Element", "Actinium"], 
+             Entity["Element", "Thorium"], 
+             Entity["Element", "Protactinium"], 
+             Entity["Element", "Uranium"], 
+             Entity["Element", "Neptunium"], 
+             Entity["Element", "Plutonium"], 
+             Entity["Element", "Americium"], 
+             Entity["Element", "Curium"], 
+             Entity["Element", "Berkelium"], 
+             Entity["Element", "Californium"], 
+             Entity["Element", "Einsteinium"], 
+             Entity["Element", "Fermium"], 
+             Entity["Element", "Mendelevium"], 
+             Entity["Element", "Nobelium"], 
+             Entity["Element", "Lawrencium"], 
+             Entity["Element", "Rutherfordium"], 
+             Entity["Element", "Dubnium"], 
+             Entity["Element", "Seaborgium"], 
+             Entity["Element", "Bohrium"], 
+             Entity["Element", "Hassium"], 
+             Entity["Element", "Meitnerium"], 
+             Entity["Element", "Darmstadtium"], 
+             Entity["Element", "Roentgenium"], 
+             Entity["Element", "Copernicium"], 
+             Entity["Element", "Nihonium"], 
+             Entity["Element", "Flerovium"], 
+             Entity["Element", "Moscovium"], 
+             Entity["Element", "Livermorium"], 
+             Entity["Element", "Tennessine"], 
+             Entity["Element", "Oganesson"]},
             SelectWithContents->True,
-            Selectable->False], ",", "4"}], "]"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"wd", "=", 
-        RowBox[{"If", "[", 
-         RowBox[{
+            Selectable->False]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"prop", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["46", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2408", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {
+              "AtomicWeight", "BrinellHardness", "BulkModulus", "Density", 
+               "LiquidDensity", "MohsHardness", "MolarVolume", "PoissonRatio",
+                "ShearModulus", "SoundSpeed", "ThermalConductivity", 
+               "ThermalExpansion", "VickersHardness", "YoungModulus", 
+               "AbsoluteBoilingPoint", "AbsoluteMeltingPoint", "BoilingPoint",
+                "CriticalPressure", "CriticalTemperature", "CuriePoint", 
+               "FusionHeat", "MeltingPoint", "NeelPoint", "SpecificHeat", 
+               "SuperconductingPoint", "VaporizationHeat", 
+               "ElectricalConductivity", "MassMagneticSusceptibility", 
+               "RefractiveIndex", "Resistivity", 
+               "VolumeMagneticSusceptibility", "CrustAbundance", 
+               "HumanAbundance", "MeteoriteAbundance", "OceanAbundance", 
+               "SolarAbundance", "UniverseAbundance", "ElectronAffinity", 
+               "Electronegativity", "Valence", "SpaceGroupNumber", 
+               "AtomicRadius", "CovalentRadius", "VanDerWaalsRadius", 
+               "NeutronCrossSection", "NeutronMassAbsorption"},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"xy", "=", 
+           RowBox[{"Transpose", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Range", "[", 
+               RowBox[{"1", ",", "118"}], "]"}], ",", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"ElementData", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{
+                   "prop", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}]}], "]"}], "&"}], ")"}], "/@", 
+               "elem"}]}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"ListPlot", "[", 
+            RowBox[{"xy", ",", 
+             RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+             RowBox[{"ScalingFunctions", "\[Rule]", "\"\<Log\>\""}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", "Blue"}], ",", 
+             RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+             RowBox[{"LabelStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
+             RowBox[{"Axes", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"True", ",", "False"}], "}"}]}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", 
+              FractionBox["9", "8"]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{
-           RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
-          RowBox[{
-           RowBox[{"data", "=", 
-            RowBox[{"Reverse", "[", "data", "]"}]}], ";", "\"\<highest\>\""}],
-           ",", "\"\<lowest\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<The `1` is a measure of stiffness. Which of these materials has \
-the `2` Young's modulus?\>\"", ",", 
-          RowBox[{"Style", "[", 
-           RowBox[{"\"\<Young's modulus\>\"", ",", "Italic"}], "]"}], ",", 
-          "wd"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
+          "q", "=", 
+           "\"\<Which property is plotted against the atomic number of the \
+elements?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
            RowBox[{
-           "choices", "\[LeftDoubleBracket]", "1", 
-            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
-         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Chem13\>\"", ",", 
-   
+            RowBox[{
+             RowBox[{"ToLowerCase", "[", 
+              RowBox[{"StringReplace", "[", 
+               RowBox[{"#", ",", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"a", ":", 
+                   RowBox[{"CharacterRange", "[", 
+                    RowBox[{"\"\<a\>\"", ",", "\"\<z\>\""}], "]"}]}], "~~", 
+                  RowBox[{"b", ":", 
+                   RowBox[{"CharacterRange", "[", 
+                    RowBox[{"\"\<A\>\"", ",", "\"\<Z\>\""}], "]"}]}]}], 
+                 "\[Rule]", 
+                 RowBox[{"a", "<>", "\"\< \>\"", "<>", "b"}]}]}], "]"}], 
+              "]"}], "&"}], "/@", "prop"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Chem13\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.702128622695941*^9, 3.702128643355485*^9}, {
    3.702129199840023*^9, 3.702129343493793*^9}, {3.7021293967291927`*^9, 
@@ -144,14 +417,50 @@ the `2` Young's modulus?\>\"", ",",
    3.764843259572736*^9, 3.764843375316868*^9}, {3.7648434178457527`*^9, 
    3.7648434649792337`*^9}, {3.7648435399003353`*^9, 3.764843592251244*^9}, {
    3.764843656779119*^9, 3.764843766250786*^9}, {3.764843890972246*^9, 
-   3.764843920259656*^9}},
- CellLabel->
-  "In[3568]:=",ExpressionUUID->"b41bc9ca-9ddc-4660-a042-58177e5ef565"]
+   3.764843920259656*^9}, {3.795365311326613*^9, 3.795365434591229*^9}, {
+   3.795365687438655*^9, 3.795365734333932*^9}, 3.7953658362350388`*^9, 
+   3.79536790218018*^9, {3.795368122581458*^9, 3.7953681594196*^9}, {
+   3.795368195286397*^9, 3.795368196744759*^9}, {3.795368241261716*^9, 
+   3.795368242130066*^9}, {3.7953682735102463`*^9, 3.795368396362545*^9}, {
+   3.795368452246166*^9, 3.795368480514884*^9}, {3.7953685108219357`*^9, 
+   3.795368512722753*^9}, {3.79542523564863*^9, 3.795425262086678*^9}, {
+   3.7954252992181807`*^9, 3.795425350606885*^9}, {3.7954254120740747`*^9, 
+   3.795425412845964*^9}, {3.795425467089716*^9, 3.795425488446144*^9}, {
+   3.79542552675369*^9, 3.795425567045533*^9}, {3.7954256013454657`*^9, 
+   3.795425603181723*^9}, {3.795425654577285*^9, 3.795425689965722*^9}, {
+   3.795425727560917*^9, 3.7954257283491592`*^9}, {3.795425806040721*^9, 
+   3.795425879692967*^9}, {3.795425911008751*^9, 3.795425950245317*^9}, {
+   3.795425987416033*^9, 3.795426014316814*^9}, {3.795426076879973*^9, 
+   3.7954261088680553`*^9}, {3.795426156383707*^9, 3.795426158260235*^9}, {
+   3.795426262767726*^9, 3.795426264835485*^9}, {3.795426334504615*^9, 
+   3.795426360963689*^9}, {3.7954264581186*^9, 3.795426459100544*^9}, {
+   3.795426874762031*^9, 3.7954268756753807`*^9}, {3.795426946696557*^9, 
+   3.7954269704509974`*^9}, {3.7954270503363857`*^9, 3.795427051218939*^9}, {
+   3.7954271394869003`*^9, 3.795427347142329*^9}, {3.7954274243829823`*^9, 
+   3.795427427126206*^9}, {3.7954274764556017`*^9, 3.795427677133623*^9}, {
+   3.795427727253648*^9, 3.7954277840450287`*^9}, {3.7954282938045273`*^9, 
+   3.795428315411931*^9}, {3.7954283485408154`*^9, 3.795428378932115*^9}, {
+   3.7954284351080027`*^9, 3.795428447803406*^9}, {3.795428498220394*^9, 
+   3.795428531931355*^9}, {3.795428563612959*^9, 3.795428565267363*^9}, {
+   3.7954286752519608`*^9, 3.795428683211252*^9}, {3.795428723669221*^9, 
+   3.795428767633305*^9}, {3.795428895370125*^9, 3.795428902408787*^9}, {
+   3.795429007408959*^9, 3.795429031168377*^9}, {3.795429300322091*^9, 
+   3.795429303039054*^9}, {3.7954293622776537`*^9, 3.7954295093030357`*^9}, {
+   3.795429734408002*^9, 3.7954297378155746`*^9}, 3.795429789262899*^9, {
+   3.795429918059033*^9, 3.7954299275162354`*^9}, {3.795429957619547*^9, 
+   3.7954299952015257`*^9}, {3.795432016755793*^9, 3.795432053633382*^9}, {
+   3.795432093806265*^9, 3.795432094421859*^9}, {3.795432134323563*^9, 
+   3.795432318123479*^9}, 3.795432579382308*^9, {3.795432640028266*^9, 
+   3.795432649299818*^9}, 
+   3.7954327829034433`*^9},ExpressionUUID->"b41bc9ca-9ddc-4660-a042-\
+58177e5ef565"]
 },
-WindowSize->{1171, 1056},
+WindowSize->{1651, 1187},
 WindowMargins->{{1, Automatic}, {Automatic, 44}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"44ee5612-a982-41cc-a84e-59e7cb2de227"
 ]
 (* End of Notebook Content *)
 
@@ -164,7 +473,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6962, 128, 276, "Input",ExpressionUUID->"b41bc9ca-9ddc-4660-a042-58177e5ef565"]
+Cell[558, 20, 22180, 435, 604, "Input",ExpressionUUID->"b41bc9ca-9ddc-4660-a042-58177e5ef565"]
 }
 ]
 *)
