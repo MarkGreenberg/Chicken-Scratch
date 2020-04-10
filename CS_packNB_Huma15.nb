@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     57357,        971]
-NotebookOptionsPosition[     57007,        957]
-NotebookOutlinePosition[     57402,        973]
-CellTagsIndexPosition[     57359,        970]
+NotebookDataLength[     57156,        959]
+NotebookOptionsPosition[     56806,        945]
+NotebookOutlinePosition[     57201,        961]
+CellTagsIndexPosition[     57158,        958]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -538,26 +538,30 @@ Turismo)" -> {
                     "\[RightDoubleBracket]"}]}], "]"}]}], "&"}], "/@", 
                 "data"}], "]"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
-           RowBox[{
-            RowBox[{"Hold", "[", 
-             RowBox[{"StringForm", "[", 
-              RowBox[{
-              "\"\<Which of these auto manufacturers made vehicles with the \
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which of these auto manufacturers made vehicles with the \
 names `1` and `2`?\>\"", ",", 
-               RowBox[{"Style", "[", 
-                RowBox[{"h1", ",", "Italic"}], "]"}], ",", 
-               RowBox[{"Style", "[", 
-                RowBox[{"h2", ",", "Italic"}], "]"}]}], "]"}], "]"}], "/.", 
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"h1", "\[Rule]", 
+             RowBox[{"Style", "[", 
+              RowBox[{
                RowBox[{
                "models", "\[LeftDoubleBracket]", "1", 
-                "\[RightDoubleBracket]"}]}], ",", 
-              RowBox[{"h2", "\[Rule]", 
+                "\[RightDoubleBracket]"}], ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{
                RowBox[{
                "models", "\[LeftDoubleBracket]", "2", 
-                "\[RightDoubleBracket]"}]}]}], "}"}]}]}], ";", 
+                "\[RightDoubleBracket]"}], ",", "Italic"}], "]"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
@@ -584,48 +588,31 @@ names `1` and `2`?\>\"", ",",
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}]}], ",",
-          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]",
-          "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"scale", "=", 
-           RowBox[{"RandomChoice", "[", 
+           RowBox[{"RandomSample", "[", 
             RowBox[{
-             InterpretationBox[
-              DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"List", "ListIcon", 
-                 GridBox[{{
-                    RowBox[{
-                    TagBox["\"Head: \"", "IconizedLabel"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["List", "IconizedItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Length: \"", "IconizedLabel"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["30", "IconizedItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Byte count: \"", "IconizedLabel"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["1480", "IconizedItem"]}]}}, 
-                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
-                  DefaultBaseStyle -> "Column", 
-                  GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-                 Dynamic[Typeset`open]},
-                "IconizedObject"]],
-              {
-              "MajorPentatonic", "JazzMinor", "Persian", "MinorPentatonic", 
-               "BluesScale", "EastIndianPurvi", "NeopolitanMajor", 
-               "Chromatic", "Oriental", "NeopolitanMinor", "Overtone", 
-               "GagakuRyoSenPou", "HungarianMajor", "WholeTone", "Zokugaku", 
-               "HungarianMinor", "Enigmatic", "InSenPou", "HungarianGypsy", 
-               "Symmetrical", "Okinawa", "HarmonicMajor", "Arabian", 
-               "DiminishedWholeTone", "HarmonicMinor", "Balinese", 
-               "EightToneSpanish", "DoubleHarmonic", "Byzantine", 
-               "Prometheus"},
-              SelectWithContents->True,
-              Selectable->False], ",", "4"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<MajorPentatonic\>\"", ",", "\"\<JazzMinor\>\"", ",", 
+               "\"\<Persian\>\"", ",", "\"\<MinorPentatonic\>\"", ",", 
+               "\"\<BluesScale\>\"", ",", "\"\<EastIndianPurvi\>\"", ",", 
+               "\"\<NeopolitanMajor\>\"", ",", "\"\<Chromatic\>\"", ",", 
+               "\"\<Oriental\>\"", ",", "\"\<NeopolitanMinor\>\"", ",", 
+               "\"\<Overtone\>\"", ",", "\"\<GagakuRyoSenPou\>\"", ",", 
+               "\"\<HungarianMajor\>\"", ",", "\"\<WholeTone\>\"", ",", 
+               "\"\<Zokugaku\>\"", ",", "\"\<HungarianMinor\>\"", ",", 
+               "\"\<Enigmatic\>\"", ",", "\"\<InSenPou\>\"", ",", 
+               "\"\<HungarianGypsy\>\"", ",", "\"\<Symmetrical\>\"", ",", 
+               "\"\<Okinawa\>\"", ",", "\"\<HarmonicMajor\>\"", ",", 
+               "\"\<Arabian\>\"", ",", "\"\<DiminishedWholeTone\>\"", ",", 
+               "\"\<HarmonicMinor\>\"", ",", "\"\<Balinese\>\"", ",", 
+               "\"\<EightToneSpanish\>\"", ",", "\"\<DoubleHarmonic\>\"", 
+               ",", "\"\<Byzantine\>\"", ",", "\"\<Prometheus\>\""}], "}"}], 
+             ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"voice", "=", 
            RowBox[{"Switch", "[", 
             RowBox[{
@@ -951,9 +938,10 @@ names `1` and `2`?\>\"", ",",
    3.79485860250136*^9, 3.794858608116589*^9}, {3.794858706910654*^9, 
    3.794858779963923*^9}, {3.794858841541911*^9, 3.794858845884782*^9}, {
    3.7948589115472527`*^9, 3.7948589750516853`*^9}, {3.794859331108263*^9, 
-   3.7948593493227167`*^9}},
- CellLabel->
-  "In[911]:=",ExpressionUUID->"1a97b73f-68fc-4914-ac45-2c91c5a84a73"]
+   3.7948593493227167`*^9}, {3.795523794998282*^9, 3.795523804284327*^9}, {
+   3.795523933422461*^9, 3.7955239980759907`*^9}, 3.795524058167615*^9, {
+   3.795524108332306*^9, 3.795524109691197*^9}},
+ CellLabel->"In[63]:=",ExpressionUUID->"1a97b73f-68fc-4914-ac45-2c91c5a84a73"]
 },
 WindowSize->{1909, 1285},
 WindowMargins->{{2, Automatic}, {Automatic, 53}},
@@ -972,7 +960,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 56445, 935, 771, "Input",ExpressionUUID->"1a97b73f-68fc-4914-ac45-2c91c5a84a73"]
+Cell[558, 20, 56244, 923, 831, "Input",ExpressionUUID->"1a97b73f-68fc-4914-ac45-2c91c5a84a73"]
 }
 ]
 *)
