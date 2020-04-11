@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     27209,        484]
-NotebookOptionsPosition[     26860,        470]
-NotebookOutlinePosition[     27254,        486]
-CellTagsIndexPosition[     27211,        483]
+NotebookDataLength[     52989,        940]
+NotebookOptionsPosition[     52600,        925]
+NotebookOutlinePosition[     53034,        942]
+CellTagsIndexPosition[     52991,        939]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,45 +33,473 @@ Cell[BoxData[
            RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
          "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"city", "=", 
+          RowBox[{"data", "=", 
            RowBox[{"RandomChoice", "[", 
-            RowBox[{"CityData", "[", 
-             RowBox[{"{", 
-              RowBox[{"Large", ",", "\"\<UnitedStates\>\""}], "}"}], "]"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"name", "=", 
-           RowBox[{"CityData", "[", 
-            RowBox[{"city", ",", "\"\<FullName\>\""}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"List", "ListIcon", 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"193", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["72944", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             {{
+               Entity["City", {"Birmingham", "Alabama", "UnitedStates"}], 
+               "Birmingham, Alabama"}, {
+               Entity["City", {"Montgomery", "Alabama", "UnitedStates"}], 
+               "Montgomery, Alabama"}, {
+               Entity["City", {"Mobile", "Alabama", "UnitedStates"}], 
+               "Mobile, Alabama"}, {
+               Entity["City", {"Huntsville", "Alabama", "UnitedStates"}], 
+               "Huntsville, Alabama"}, {
+               Entity["City", {"Anchorage", "Alaska", "UnitedStates"}], 
+               "Anchorage, Alaska"}, {
+               Entity["City", {"Phoenix", "Arizona", "UnitedStates"}], 
+               "Phoenix, Arizona"}, {
+               Entity["City", {"Tucson", "Arizona", "UnitedStates"}], 
+               "Tucson, Arizona"}, {
+               Entity["City", {"Mesa", "Arizona", "UnitedStates"}], 
+               "Mesa, Arizona"}, {
+               Entity["City", {"Chandler", "Arizona", "UnitedStates"}], 
+               "Chandler, Arizona"}, {
+               Entity["City", {"Gilbert", "Arizona", "UnitedStates"}], 
+               "Gilbert, Arizona"}, {
+               Entity["City", {"Glendale", "Arizona", "UnitedStates"}], 
+               "Glendale, Arizona"}, {
+               Entity["City", {"Scottsdale", "Arizona", "UnitedStates"}], 
+               "Scottsdale, Arizona"}, {
+               Entity["City", {"Tempe", "Arizona", "UnitedStates"}], 
+               "Tempe, Arizona"}, {
+               Entity["City", {"LittleRock", "Arkansas", "UnitedStates"}], 
+               "Little Rock, Arkansas"}, {
+               Entity["City", {"LosAngeles", "California", "UnitedStates"}], 
+               "Los Angeles, California"}, {
+               Entity["City", {"SanDiego", "California", "UnitedStates"}], 
+               "San Diego, California"}, {
+               Entity["City", {"SanJose", "California", "UnitedStates"}], 
+               "San Jose, California"}, {
+               Entity["City", {"SanFrancisco", "California", "UnitedStates"}],
+                "San Francisco, California"}, {
+               Entity["City", {"Fresno", "California", "UnitedStates"}], 
+               "Fresno, California"}, {
+               Entity["City", {"Sacramento", "California", "UnitedStates"}], 
+               "Sacramento, California"}, {
+               Entity["City", {"LongBeach", "California", "UnitedStates"}], 
+               "Long Beach, California"}, {
+               Entity["City", {"Oakland", "California", "UnitedStates"}], 
+               "Oakland, California"}, {
+               Entity["City", {"Denver", "Colorado", "UnitedStates"}], 
+               "Denver, Colorado"}, {
+               Entity[
+               "City", {"ColoradoSprings", "Colorado", "UnitedStates"}], 
+               "Colorado Springs, Colorado"}, {
+               Entity["City", {"Aurora", "Colorado", "UnitedStates"}], 
+               "Aurora, Colorado"}, {
+               Entity["City", {"FortCollins", "Colorado", "UnitedStates"}], 
+               "Fort Collins, Colorado"}, {
+               Entity["City", {"Lakewood", "Colorado", "UnitedStates"}], 
+               "Lakewood, Colorado"}, {
+               Entity["City", {"Thornton", "Colorado", "UnitedStates"}], 
+               "Thornton, Colorado"}, {
+               Entity["City", {"Arvada", "Colorado", "UnitedStates"}], 
+               "Arvada, Colorado"}, {
+               Entity["City", {"Westminster", "Colorado", "UnitedStates"}], 
+               "Westminster, Colorado"}, {
+               Entity["City", {"Bridgeport", "Connecticut", "UnitedStates"}], 
+               "Bridgeport, Connecticut"}, {
+               Entity["City", {"NewHaven", "Connecticut", "UnitedStates"}], 
+               "New Haven, Connecticut"}, {
+               Entity["City", {"Stamford", "Connecticut", "UnitedStates"}], 
+               "Stamford, Connecticut"}, {
+               Entity["City", {"Hartford", "Connecticut", "UnitedStates"}], 
+               "Hartford, Connecticut"}, {
+               Entity["City", {"Waterbury", "Connecticut", "UnitedStates"}], 
+               "Waterbury, Connecticut"}, {
+               Entity["City", {"Jacksonville", "Florida", "UnitedStates"}], 
+               "Jacksonville, Florida"}, {
+               Entity["City", {"Miami", "Florida", "UnitedStates"}], 
+               "Miami, Florida"}, {
+               Entity["City", {"Tampa", "Florida", "UnitedStates"}], 
+               "Tampa, Florida"}, {
+               Entity["City", {"Orlando", "Florida", "UnitedStates"}], 
+               "Orlando, Florida"}, {
+               Entity["City", {"SaintPetersburg", "Florida", "UnitedStates"}],
+                "Saint Petersburg, Florida"}, {
+               Entity["City", {"Hialeah", "Florida", "UnitedStates"}], 
+               "Hialeah, Florida"}, {
+               Entity["City", {"Tallahassee", "Florida", "UnitedStates"}], 
+               "Tallahassee, Florida"}, {
+               Entity["City", {"FortLauderdale", "Florida", "UnitedStates"}], 
+               "Fort Lauderdale, Florida"}, {
+               Entity["City", {"Atlanta", "Georgia", "UnitedStates"}], 
+               "Atlanta, Georgia"}, {
+               Entity["City", {"Augusta", "Georgia", "UnitedStates"}], 
+               "Augusta, Georgia"}, {
+               Entity["City", {"Columbus", "Georgia", "UnitedStates"}], 
+               "Columbus, Georgia"}, {
+               Entity["City", {"Savannah", "Georgia", "UnitedStates"}], 
+               "Savannah, Georgia"}, {
+               Entity["City", {"Athens", "Georgia", "UnitedStates"}], 
+               "Athens, Georgia"}, {
+               Entity["City", {"SandySprings", "Georgia", "UnitedStates"}], 
+               "Sandy Springs, Georgia"}, {
+               Entity["City", {"Honolulu", "Hawaii", "UnitedStates"}], 
+               "Honolulu, Hawaii"}, {
+               Entity["City", {"BoiseCity", "Idaho", "UnitedStates"}], 
+               "Boise, Idaho"}, {
+               Entity["City", {"Chicago", "Illinois", "UnitedStates"}], 
+               "Chicago, Illinois"}, {
+               Entity["City", {"Aurora", "Illinois", "UnitedStates"}], 
+               "Aurora, Illinois"}, {
+               Entity["City", {"Rockford", "Illinois", "UnitedStates"}], 
+               "Rockford, Illinois"}, {
+               Entity["City", {"Joliet", "Illinois", "UnitedStates"}], 
+               "Joliet, Illinois"}, {
+               Entity["City", {"Naperville", "Illinois", "UnitedStates"}], 
+               "Naperville, Illinois"}, {
+               Entity["City", {"Springfield", "Illinois", "UnitedStates"}], 
+               "Springfield, Illinois"}, {
+               Entity["City", {"Peoria", "Illinois", "UnitedStates"}], 
+               "Peoria, Illinois"}, {
+               Entity["City", {"Elgin", "Illinois", "UnitedStates"}], 
+               "Elgin, Illinois"}, {
+               Entity["City", {"Indianapolis", "Indiana", "UnitedStates"}], 
+               "Indianapolis, Indiana"}, {
+               Entity["City", {"FortWayne", "Indiana", "UnitedStates"}], 
+               "Fort Wayne, Indiana"}, {
+               Entity["City", {"Evansville", "Indiana", "UnitedStates"}], 
+               "Evansville, Indiana"}, {
+               Entity["City", {"SouthBend", "Indiana", "UnitedStates"}], 
+               "South Bend, Indiana"}, {
+               Entity["City", {"DesMoines", "Iowa", "UnitedStates"}], 
+               "Des Moines, Iowa"}, {
+               Entity["City", {"CedarRapids", "Iowa", "UnitedStates"}], 
+               "Cedar Rapids, Iowa"}, {
+               Entity["City", {"Davenport", "Iowa", "UnitedStates"}], 
+               "Davenport, Iowa"}, {
+               Entity["City", {"Wichita", "Kansas", "UnitedStates"}], 
+               "Wichita, Kansas"}, {
+               Entity["City", {"OverlandPark", "Kansas", "UnitedStates"}], 
+               "Overland Park, Kansas"}, {
+               Entity["City", {"KansasCity", "Kansas", "UnitedStates"}], 
+               "Kansas City, Kansas"}, {
+               Entity["City", {"Olathe", "Kansas", "UnitedStates"}], 
+               "Olathe, Kansas"}, {
+               Entity["City", {"Topeka", "Kansas", "UnitedStates"}], 
+               "Topeka, Kansas"}, {
+               Entity["City", {"Louisville", "Kentucky", "UnitedStates"}], 
+               "Louisville, Kentucky"}, {
+               Entity["City", {"Lexington", "Kentucky", "UnitedStates"}], 
+               "Lexington, Kentucky"}, {
+               Entity["City", {"NewOrleans", "Louisiana", "UnitedStates"}], 
+               "New Orleans, Louisiana"}, {
+               Entity["City", {"BatonRouge", "Louisiana", "UnitedStates"}], 
+               "Baton Rouge, Louisiana"}, {
+               Entity["City", {"Shreveport", "Louisiana", "UnitedStates"}], 
+               "Shreveport, Louisiana"}, {
+               Entity["City", {"Metairie", "Louisiana", "UnitedStates"}], 
+               "Metairie, Louisiana"}, {
+               Entity["City", {"Lafayette", "Louisiana", "UnitedStates"}], 
+               "Lafayette, Louisiana"}, {
+               Entity["City", {"Baltimore", "Maryland", "UnitedStates"}], 
+               "Baltimore, Maryland"}, {
+               Entity["City", {"Boston", "Massachusetts", "UnitedStates"}], 
+               "Boston, Massachusetts"}, {
+               Entity["City", {"Worcester", "Massachusetts", "UnitedStates"}],
+                "Worcester, Massachusetts"}, {
+               Entity[
+               "City", {"Springfield", "Massachusetts", "UnitedStates"}], 
+               "Springfield, Massachusetts"}, {
+               Entity["City", {"Lowell", "Massachusetts", "UnitedStates"}], 
+               "Lowell, Massachusetts"}, {
+               Entity["City", {"Cambridge", "Massachusetts", "UnitedStates"}],
+                "Cambridge, Massachusetts"}, {
+               Entity["City", {"Detroit", "Michigan", "UnitedStates"}], 
+               "Detroit, Michigan"}, {
+               Entity["City", {"GrandRapids", "Michigan", "UnitedStates"}], 
+               "Grand Rapids, Michigan"}, {
+               Entity["City", {"Warren", "Michigan", "UnitedStates"}], 
+               "Warren, Michigan"}, {
+               Entity[
+               "City", {"SterlingHeights", "Michigan", "UnitedStates"}], 
+               "Sterling Heights, Michigan"}, {
+               Entity["City", {"AnnArbor", "Michigan", "UnitedStates"}], 
+               "Ann Arbor, Michigan"}, {
+               Entity["City", {"Lansing", "Michigan", "UnitedStates"}], 
+               "Lansing, Michigan"}, {
+               Entity["City", {"Minneapolis", "Minnesota", "UnitedStates"}], 
+               "Minneapolis, Minnesota"}, {
+               Entity["City", {"SaintPaul", "Minnesota", "UnitedStates"}], 
+               "Saint Paul, Minnesota"}, {
+               Entity["City", {"Rochester", "Minnesota", "UnitedStates"}], 
+               "Rochester, Minnesota"}, {
+               Entity["City", {"Jackson", "Mississippi", "UnitedStates"}], 
+               "Jackson, Mississippi"}, {
+               Entity["City", {"KansasCity", "Missouri", "UnitedStates"}], 
+               "Kansas City, Missouri"}, {
+               Entity["City", {"SaintLouis", "Missouri", "UnitedStates"}], 
+               "Saint Louis, Missouri"}, {
+               Entity["City", {"Springfield", "Missouri", "UnitedStates"}], 
+               "Springfield, Missouri"}, {
+               Entity["City", {"Independence", "Missouri", "UnitedStates"}], 
+               "Independence, Missouri"}, {
+               Entity["City", {"Columbia", "Missouri", "UnitedStates"}], 
+               "Columbia, Missouri"}, {
+               Entity["City", {"Billings", "Montana", "UnitedStates"}], 
+               "Billings, Montana"}, {
+               Entity["City", {"Omaha", "Nebraska", "UnitedStates"}], 
+               "Omaha, Nebraska"}, {
+               Entity["City", {"Lincoln", "Nebraska", "UnitedStates"}], 
+               "Lincoln, Nebraska"}, {
+               Entity["City", {"LasVegas", "Nevada", "UnitedStates"}], 
+               "Las Vegas, Nevada"}, {
+               Entity["City", {"Henderson", "Nevada", "UnitedStates"}], 
+               "Henderson, Nevada"}, {
+               Entity["City", {"Reno", "Nevada", "UnitedStates"}], 
+               "Reno, Nevada"}, {
+               Entity["City", {"NorthLasVegas", "Nevada", "UnitedStates"}], 
+               "North Las Vegas, Nevada"}, {
+               Entity["City", {"Paradise", "Nevada", "UnitedStates"}], 
+               "Paradise, Nevada"}, {
+               Entity["City", {"SunriseManor", "Nevada", "UnitedStates"}], 
+               "Sunrise Manor, Nevada"}, {
+               Entity["City", {"SpringValley", "Nevada", "UnitedStates"}], 
+               "Spring Valley, Nevada"}, {
+               Entity["City", {"Enterprise", "Nevada", "UnitedStates"}], 
+               "Enterprise, Nevada"}, {
+               Entity["City", {"Manchester", "NewHampshire", "UnitedStates"}],
+                "Manchester, New Hampshire"}, {
+               Entity["City", {"Newark", "NewJersey", "UnitedStates"}], 
+               "Newark, New Jersey"}, {
+               Entity["City", {"JerseyCity", "NewJersey", "UnitedStates"}], 
+               "Jersey City, New Jersey"}, {
+               Entity["City", {"Paterson", "NewJersey", "UnitedStates"}], 
+               "Paterson, New Jersey"}, {
+               Entity["City", {"Elizabeth", "NewJersey", "UnitedStates"}], 
+               "Elizabeth, New Jersey"}, {
+               Entity["City", {"Edison", "NewJersey", "UnitedStates"}], 
+               "Edison, New Jersey"}, {
+               Entity["City", {"Albuquerque", "NewMexico", "UnitedStates"}], 
+               "Albuquerque, New Mexico"}, {
+               Entity["City", {"LasCruces", "NewMexico", "UnitedStates"}], 
+               "Las Cruces, New Mexico"}, {
+               Entity["City", {"NewYork", "NewYork", "UnitedStates"}], 
+               "New York City, New York"}, {
+               Entity["City", {"OysterBay", "NewYork", "UnitedStates"}], 
+               "Oyster Bay, New York"}, {
+               Entity["City", {"Buffalo", "NewYork", "UnitedStates"}], 
+               "Buffalo, New York"}, {
+               Entity["City", {"NorthHempstead", "NewYork", "UnitedStates"}], 
+               "North Hempstead, New York"}, {
+               Entity["City", {"Rochester", "NewYork", "UnitedStates"}], 
+               "Rochester, New York"}, {
+               Entity["City", {"Yonkers", "NewYork", "UnitedStates"}], 
+               "Yonkers, New York"}, {
+               Entity["City", {"Syracuse", "NewYork", "UnitedStates"}], 
+               "Syracuse, New York"}, {
+               Entity["City", {"Ramapo", "NewYork", "UnitedStates"}], 
+               "Ramapo, New York"}, {
+               Entity["City", {"Charlotte", "NorthCarolina", "UnitedStates"}],
+                "Charlotte, North Carolina"}, {
+               Entity["City", {"Raleigh", "NorthCarolina", "UnitedStates"}], 
+               "Raleigh, North Carolina"}, {
+               Entity[
+               "City", {"Greensboro", "NorthCarolina", "UnitedStates"}], 
+               "Greensboro, North Carolina"}, {
+               Entity["City", {"Durham", "NorthCarolina", "UnitedStates"}], 
+               "Durham, North Carolina"}, {
+               Entity[
+               "City", {"WinstonSalem", "NorthCarolina", "UnitedStates"}], 
+               "Winston\[Hyphen]Salem, North Carolina"}, {
+               Entity[
+               "City", {"Fayetteville", "NorthCarolina", "UnitedStates"}], 
+               "Fayetteville, North Carolina"}, {
+               Entity["City", {"Cary", "NorthCarolina", "UnitedStates"}], 
+               "Cary, North Carolina"}, {
+               Entity[
+               "City", {"Wilmington", "NorthCarolina", "UnitedStates"}], 
+               "Wilmington, North Carolina"}, {
+               Entity["City", {"Fargo", "NorthDakota", "UnitedStates"}], 
+               "Fargo, North Dakota"}, {
+               Entity["City", {"Columbus", "Ohio", "UnitedStates"}], 
+               "Columbus, Ohio"}, {
+               Entity["City", {"Cleveland", "Ohio", "UnitedStates"}], 
+               "Cleveland, Ohio"}, {
+               Entity["City", {"Cincinnati", "Ohio", "UnitedStates"}], 
+               "Cincinnati, Ohio"}, {
+               Entity["City", {"Toledo", "Ohio", "UnitedStates"}], 
+               "Toledo, Ohio"}, {
+               Entity["City", {"Akron", "Ohio", "UnitedStates"}], 
+               "Akron, Ohio"}, {
+               Entity["City", {"Dayton", "Ohio", "UnitedStates"}], 
+               "Dayton, Ohio"}, {
+               Entity["City", {"OklahomaCity", "Oklahoma", "UnitedStates"}], 
+               "Oklahoma City, Oklahoma"}, {
+               Entity["City", {"Tulsa", "Oklahoma", "UnitedStates"}], 
+               "Tulsa, Oklahoma"}, {
+               Entity["City", {"Norman", "Oklahoma", "UnitedStates"}], 
+               "Norman, Oklahoma"}, {
+               Entity["City", {"BrokenArrow", "Oklahoma", "UnitedStates"}], 
+               "Broken Arrow, Oklahoma"}, {
+               Entity["City", {"Portland", "Oregon", "UnitedStates"}], 
+               "Portland, Oregon"}, {
+               Entity["City", {"Salem", "Oregon", "UnitedStates"}], 
+               "Salem, Oregon"}, {
+               Entity["City", {"Eugene", "Oregon", "UnitedStates"}], 
+               "Eugene, Oregon"}, {
+               Entity["City", {"Gresham", "Oregon", "UnitedStates"}], 
+               "Gresham, Oregon"}, {
+               Entity[
+               "City", {"Philadelphia", "Pennsylvania", "UnitedStates"}], 
+               "Philadelphia, Pennsylvania"}, {
+               Entity["City", {"Pittsburgh", "Pennsylvania", "UnitedStates"}],
+                "Pittsburgh, Pennsylvania"}, {
+               Entity["City", {"Allentown", "Pennsylvania", "UnitedStates"}], 
+               "Allentown, Pennsylvania"}, {
+               Entity["City", {"Providence", "RhodeIsland", "UnitedStates"}], 
+               "Providence, Rhode Island"}, {
+               Entity["City", {"Columbia", "SouthCarolina", "UnitedStates"}], 
+               "Columbia, South Carolina"}, {
+               Entity[
+               "City", {"Charleston", "SouthCarolina", "UnitedStates"}], 
+               "Charleston, South Carolina"}, {
+               Entity[
+               "City", {"NorthCharleston", "SouthCarolina", "UnitedStates"}], 
+               "North Charleston, South Carolina"}, {
+               Entity["City", {"SiouxFalls", "SouthDakota", "UnitedStates"}], 
+               "Sioux Falls, South Dakota"}, {
+               Entity["City", {"Nashville", "Tennessee", "UnitedStates"}], 
+               "Nashville, Tennessee"}, {
+               Entity["City", {"Memphis", "Tennessee", "UnitedStates"}], 
+               "Memphis, Tennessee"}, {
+               Entity["City", {"Knoxville", "Tennessee", "UnitedStates"}], 
+               "Knoxville, Tennessee"}, {
+               Entity["City", {"Chattanooga", "Tennessee", "UnitedStates"}], 
+               "Chattanooga, Tennessee"}, {
+               Entity["City", {"Clarksville", "Tennessee", "UnitedStates"}], 
+               "Clarksville, Tennessee"}, {
+               Entity["City", {"Murfreesboro", "Tennessee", "UnitedStates"}], 
+               "Murfreesboro, Tennessee"}, {
+               Entity["City", {"Houston", "Texas", "UnitedStates"}], 
+               "Houston, Texas"}, {
+               Entity["City", {"SanAntonio", "Texas", "UnitedStates"}], 
+               "San Antonio, Texas"}, {
+               Entity["City", {"Dallas", "Texas", "UnitedStates"}], 
+               "Dallas, Texas"}, {
+               Entity["City", {"Austin", "Texas", "UnitedStates"}], 
+               "Austin, Texas"}, {
+               Entity["City", {"FortWorth", "Texas", "UnitedStates"}], 
+               "Fort Worth, Texas"}, {
+               Entity["City", {"ElPaso", "Texas", "UnitedStates"}], 
+               "El Paso, Texas"}, {
+               Entity["City", {"Arlington", "Texas", "UnitedStates"}], 
+               "Arlington, Texas"}, {
+               Entity["City", {"CorpusChristi", "Texas", "UnitedStates"}], 
+               "Corpus Christi, Texas"}, {
+               Entity["City", {"SaltLakeCity", "Utah", "UnitedStates"}], 
+               "Salt Lake City, Utah"}, {
+               Entity["City", {"WestValleyCity", "Utah", "UnitedStates"}], 
+               "West Valley City, Utah"}, {
+               Entity["City", {"Provo", "Utah", "UnitedStates"}], 
+               "Provo, Utah"}, {
+               Entity["City", {"WestJordan", "Utah", "UnitedStates"}], 
+               "West Jordan, Utah"}, {
+               Entity["City", {"VirginiaBeach", "Virginia", "UnitedStates"}], 
+               "Virginia Beach, Virginia"}, {
+               Entity["City", {"Norfolk", "Virginia", "UnitedStates"}], 
+               "Norfolk, Virginia"}, {
+               Entity["City", {"Chesapeake", "Virginia", "UnitedStates"}], 
+               "Chesapeake, Virginia"}, {
+               Entity["City", {"Richmond", "Virginia", "UnitedStates"}], 
+               "Richmond, Virginia"}, {
+               Entity["City", {"Arlington", "Virginia", "UnitedStates"}], 
+               "Arlington, Virginia"}, {
+               Entity["City", {"NewportNews", "Virginia", "UnitedStates"}], 
+               "Newport News, Virginia"}, {
+               Entity["City", {"Alexandria", "Virginia", "UnitedStates"}], 
+               "Alexandria, Virginia"}, {
+               Entity["City", {"Hampton", "Virginia", "UnitedStates"}], 
+               "Hampton, Virginia"}, {
+               Entity["City", {"Seattle", "Washington", "UnitedStates"}], 
+               "Seattle, Washington"}, {
+               Entity["City", {"Spokane", "Washington", "UnitedStates"}], 
+               "Spokane, Washington"}, {
+               Entity["City", {"Tacoma", "Washington", "UnitedStates"}], 
+               "Tacoma, Washington"}, {
+               Entity["City", {"Vancouver", "Washington", "UnitedStates"}], 
+               "Vancouver, Washington"}, {
+               Entity["City", {"Bellevue", "Washington", "UnitedStates"}], 
+               "Bellevue, Washington"}, {
+               Entity["City", {"Kent", "Washington", "UnitedStates"}], 
+               "Kent, Washington"}, {
+               Entity["City", {"Everett", "Washington", "UnitedStates"}], 
+               "Everett, Washington"}, {
+               Entity["City", {"Milwaukee", "Wisconsin", "UnitedStates"}], 
+               "Milwaukee, Wisconsin"}, {
+               Entity["City", {"Madison", "Wisconsin", "UnitedStates"}], 
+               "Madison, Wisconsin"}, {
+               Entity["City", {"GreenBay", "Wisconsin", "UnitedStates"}], 
+               "Green Bay, Wisconsin"}},
+             SelectWithContents->True,
+             Selectable->False], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
-           RowBox[{
-           "\"\<What is the current temperature in \>\"", "<>", "name", "<>", 
-            "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"temp", "=", 
-           RowBox[{"QuantityMagnitude", "[", 
-            RowBox[{"AirTemperatureData", "[", "city", "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"dis", "=", 
-           RowBox[{"RandomReal", "[", 
+           RowBox[{"\"\<What is the current temperature in \>\"", "<>", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"temp", "-", "20"}], ",", 
-               RowBox[{"temp", "+", "20"}]}], "}"}], ",", "10"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
+            "data", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+            "<>", "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", "q", "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"temperature", "=", 
+           RowBox[{"QuantityMagnitude", "[", 
+            RowBox[{"AirTemperatureData", "[", 
+             RowBox[{
+             "data", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"raw", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", 
+                 RowBox[{"Range", "[", 
+                  RowBox[{
+                   RowBox[{"temperature", "-", "20"}], ",", 
+                   RowBox[{"temperature", "+", "20"}]}], "]"}], "]"}], ",", 
+                "temperature"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{
-              RowBox[{"ToString", "[", "#", "]"}], "<>", 
-              "\"\<\[Degree]F\>\""}], "&"}], "/@", 
-            RowBox[{"Take", "[", 
-             RowBox[{
-              RowBox[{"DeleteDuplicates", "[", 
-               RowBox[{"Round", "[", 
-                RowBox[{"Prepend", "[", 
-                 RowBox[{"dis", ",", "temp"}], "]"}], "]"}], "]"}], ",", 
-              "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"ToString", "[", "#", "]"}], "<>", 
+                "\"\<\[Degree]F\>\""}], ",", 
+               RowBox[{
+               "\"\<.\[Degree]\>\"", "\[Rule]", "\"\<\[Degree]\>\""}]}], 
+              "]"}], "&"}], "/@", "raw"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -95,9 +523,9 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixTransit"}], "}"}], "]"}]}], ",",
-          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]",
-          "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
@@ -307,6 +735,15 @@ Cell[BoxData[
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
@@ -318,9 +755,9 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
-        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Huma5\>\"", ",", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Huma5\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.6835714297719393`*^9, 3.6835714608472033`*^9, {3.683573526967333*^9, 
@@ -465,11 +902,30 @@ Cell[BoxData[
    3.794739609804611*^9}, {3.794739640381694*^9, 3.794739641821982*^9}, 
    3.794739684551888*^9, {3.794739750853076*^9, 3.794739799100163*^9}, {
    3.7947399779736967`*^9, 3.794740015971765*^9}, {3.794740096083624*^9, 
-   3.7947401448326473`*^9}, {3.7947402835073557`*^9, 3.794740314049965*^9}},
- CellLabel->"In[22]:=",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
+   3.7947401448326473`*^9}, {3.7947402835073557`*^9, 3.794740314049965*^9}, {
+   3.795603859018478*^9, 3.795603911508667*^9}, {3.795604114100183*^9, 
+   3.795604143626178*^9}, {3.7956041777383003`*^9, 3.795604185969223*^9}, {
+   3.795604307795733*^9, 3.7956043713040752`*^9}, {3.7956046292189913`*^9, 
+   3.7956046708092623`*^9}, {3.795604736267342*^9, 3.7956047650430927`*^9}, 
+   3.7956048023895597`*^9, {3.795604837555398*^9, 3.795604839848907*^9}, {
+   3.79560654396729*^9, 3.795606548181004*^9}, {3.7956070309128036`*^9, 
+   3.795607049795293*^9}, {3.79560708069077*^9, 3.795607100763132*^9}, {
+   3.7956071365898952`*^9, 3.7956071706437073`*^9}, {3.7956072107420187`*^9, 
+   3.795607228131836*^9}, {3.7956072681238537`*^9, 3.795607268844512*^9}, {
+   3.795607323283752*^9, 3.795607323804208*^9}, 3.7956074484566727`*^9, {
+   3.795607619797907*^9, 3.795607659724399*^9}, {3.795607694181303*^9, 
+   3.79560776609229*^9}, {3.795607803651122*^9, 3.795607873212594*^9}, {
+   3.795607912411628*^9, 3.795607925644272*^9}, {3.795608080003696*^9, 
+   3.795608196635693*^9}, {3.795608238653097*^9, 3.795608261739273*^9}, 
+   3.7956083697102823`*^9, {3.795608400433056*^9, 3.795608421533711*^9}, {
+   3.795608550132622*^9, 3.795608605527897*^9}, {3.795611317795402*^9, 
+   3.7956113189611597`*^9}, {3.795612413384776*^9, 3.7956124342471437`*^9}},
+ CellLabel->
+  "In[470]:=",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
 },
 WindowSize->{1433, 1352},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules->{"TryRealOnly" -> False},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"d968ada5-5618-4114-b8b3-d482c564177b"
@@ -485,7 +941,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 26298, 448, 637, "Input",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
+Cell[558, 20, 52038, 903, 661, "Input",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
 }
 ]
 *)
