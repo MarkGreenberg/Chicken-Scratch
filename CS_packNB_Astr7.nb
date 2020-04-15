@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     54402,       1032]
-NotebookOptionsPosition[     54052,       1018]
-NotebookOutlinePosition[     54446,       1034]
-CellTagsIndexPosition[     54403,       1031]
+NotebookDataLength[     54110,       1025]
+NotebookOptionsPosition[     53760,       1011]
+NotebookOutlinePosition[     54154,       1027]
+CellTagsIndexPosition[     54111,       1024]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,7 +30,7 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "1"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
          "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
@@ -716,35 +716,28 @@ evolution", "zenith" -> "point directly overhead from an observer"},
             RowBox[{"h1", "\[Rule]", 
              RowBox[{"ToCharacterCode", "[", "q", "]"}]}]}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"hrPlot", "=", 
-           RowBox[{
-           "ResourceFunction", "[", "\"\<HertzsprungRussellDiagram\>\"", 
-            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"hrPlot", "[", 
-            RowBox[{
-             RowBox[{
-             "stars", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-             ",", 
-             RowBox[{"PlotStyle", "\[Rule]", "Blue"}], ",", 
-             RowBox[{"LabelStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-          RowBox[{"picTransit", "=", 
            RowBox[{
             RowBox[{"Hold", "[", 
-             RowBox[{"ToExpression", "[", 
-              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
-            RowBox[{"h2", "\[Rule]", 
-             RowBox[{"ToCharacterCode", "[", 
-              RowBox[{"ToString", "[", 
-               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
-          ";", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{
+              "ResourceFunction", "[", "\"\<HertzsprungRussellDiagram\>\"", 
+               "]"}], "[", 
+              RowBox[{"h1", ",", 
+               RowBox[{"PlotStyle", "\[Rule]", "Blue"}], ",", 
+               RowBox[{"LabelStyle", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+            
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{
+             "stars", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}]}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -771,8 +764,7 @@ evolution", "zenith" -> "point directly overhead from an observer"},
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{
-            "qTransit", ",", "ans", ",", "mixTransit", ",", "picTransit"}], 
+            RowBox[{"qTransit", ",", "ans", ",", "mixTransit", ",", "pic"}], 
             "}"}], "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
    "\[IndentingNewLine]", "\"\<CS_pack_Astr7\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
@@ -1012,15 +1004,16 @@ evolution", "zenith" -> "point directly overhead from an observer"},
    3.7908965974985943`*^9, 3.790896611601707*^9}, {3.794306526524075*^9, 
    3.794306597328538*^9}, {3.7943069478971157`*^9, 3.794306984687353*^9}, {
    3.794307029697957*^9, 3.794307084288274*^9}, {3.794307122604827*^9, 
-   3.794307172024472*^9}},
- CellLabel->
-  "In[694]:=",ExpressionUUID->"0131c68b-11b7-425d-8d70-733e76e9e9e1"]
+   3.794307172024472*^9}, 3.795966874201365*^9, {3.7959673864222717`*^9, 
+   3.7959675396205463`*^9}, 
+   3.79596806348396*^9},ExpressionUUID->"0131c68b-11b7-425d-8d70-\
+733e76e9e9e1"]
 },
 WindowSize->{1604, 1355},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
 StyleDefinitions->"Default.nb",
-ExpressionUUID->"44c393ff-652c-4574-9b45-191a39041efc"
+ExpressionUUID->"8d8bdb21-bb6e-4fb2-a758-37aedd839e2f"
 ]
 (* End of Notebook Content *)
 
@@ -1033,7 +1026,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 53490, 996, 1084, "Input",ExpressionUUID->"0131c68b-11b7-425d-8d70-733e76e9e9e1"]
+Cell[558, 20, 53198, 989, 1042, "Input",ExpressionUUID->"0131c68b-11b7-425d-8d70-733e76e9e9e1"]
 }
 ]
 *)
