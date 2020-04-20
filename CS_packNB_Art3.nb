@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     15100,        322]
-NotebookOptionsPosition[     14802,        309]
-NotebookOutlinePosition[     15145,        324]
-CellTagsIndexPosition[     15102,        321]
+NotebookDataLength[     15912,        330]
+NotebookOptionsPosition[     15562,        316]
+NotebookOutlinePosition[     15957,        332]
+CellTagsIndexPosition[     15914,        329]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -69,18 +69,19 @@ hexidecimal numbers. Which of these represents the color shown here?\>\"",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
            RowBox[{"Graphics", "[", 
             RowBox[{
              RowBox[{"{", 
               RowBox[{
-               RowBox[{"colors", "[", 
-                RowBox[{"[", "1", "]"}], "]"}], ",", 
+               RowBox[{
+               "colors", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], ",", 
                RowBox[{"Rectangle", "[", 
                 RowBox[{"{", 
                  RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], ",", 
@@ -92,9 +93,6 @@ hexidecimal numbers. Which of these represents the color shown here?\>\"",
            "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"man", "=", 
-           RowBox[{"ResourceFunction", "[", "\"\<RandomMandala\>\"", "]"}]}], 
-          ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{"RandomInteger", "[", 
             RowBox[{"{", 
@@ -120,71 +118,67 @@ hexidecimal numbers. Which of these represents the color shown here?\>\"",
                    RowBox[{"4", ",", "16"}], "]"}], ",", "4"}], "]"}]}], ",", 
                "1"}], "]"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
           
-          RowBox[{"cols", "=", 
-           RowBox[{"Table", "[", 
-            RowBox[{
-             RowBox[{"ColorConvert", "[", 
-              RowBox[{
-               RowBox[{"Hue", "[", 
-                RowBox[{
-                 RowBox[{"RandomReal", "[", "]"}], ",", "1", ",", 
-                 RowBox[{"RandomReal", "[", 
-                  RowBox[{"{", 
-                   RowBox[{".4", ",", "1"}], "}"}], "]"}], ",", 
-                 RowBox[{"RandomReal", "[", 
-                  RowBox[{"{", 
-                   RowBox[{".6", ",", "1"}], "}"}], "]"}]}], "]"}], ",", 
-               "\"\<RGB\>\""}], "]"}], ",", "4"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"mans", "=", 
-           RowBox[{"Table", "[", 
-            RowBox[{
-             RowBox[{"man", "[", 
-              RowBox[{
-               RowBox[{"RotationalSymmetryOrder", "\[Rule]", 
-                RowBox[{"syms", "\[LeftDoubleBracket]", 
-                 RowBox[{"n", ",", "1"}], "\[RightDoubleBracket]"}]}], ",", 
-               RowBox[{"SymmetricSeed", "\[Rule]", 
-                RowBox[{"syms", "\[LeftDoubleBracket]", 
-                 RowBox[{"n", ",", "2"}], "\[RightDoubleBracket]"}]}], ",", 
-               RowBox[{"ColorFunction", "\[Rule]", 
-                RowBox[{
-                "cols", "\[LeftDoubleBracket]", "n", 
-                 "\[RightDoubleBracket]"}]}]}], "]"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"GraphicsGrid", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"mans", "\[LeftDoubleBracket]", 
-                RowBox[{"1", ";;", "2"}], "\[RightDoubleBracket]"}], ",", 
-               RowBox[{"mans", "\[LeftDoubleBracket]", 
-                RowBox[{"3", ";;", "4"}], "\[RightDoubleBracket]"}]}], "}"}], 
-             ",", 
-             RowBox[{"Spacings", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"-", "120"}], ",", 
-                RowBox[{"-", "60"}]}], "}"}]}], ",", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"picTransit", "=", 
            RowBox[{
-            RowBox[{"Hold", "[", 
-             RowBox[{"ToExpression", "[", 
-              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
-            RowBox[{"h2", "\[Rule]", 
-             RowBox[{"ToCharacterCode", "[", 
-              RowBox[{"ToString", "[", 
-               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
-          ";", "\[IndentingNewLine]", 
+            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"cols", "=", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"ColorConvert", "[", 
+                  RowBox[{
+                   RowBox[{"Hue", "[", 
+                    RowBox[{
+                    RowBox[{"RandomReal", "[", "]"}], ",", "1", ",", 
+                    RowBox[{"RandomReal", "[", 
+                    RowBox[{"{", 
+                    RowBox[{".4", ",", "1"}], "}"}], "]"}], ",", 
+                    RowBox[{"RandomReal", "[", 
+                    RowBox[{"{", 
+                    RowBox[{".6", ",", "1"}], "}"}], "]"}]}], "]"}], ",", 
+                   "\"\<RGB\>\""}], "]"}], ",", "4"}], "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"mans", "=", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                  "ResourceFunction", "[", "\"\<RandomMandala\>\"", "]"}], 
+                  "[", 
+                  RowBox[{
+                   RowBox[{"RotationalSymmetryOrder", "\[Rule]", 
+                    RowBox[{"h1", "\[LeftDoubleBracket]", 
+                    RowBox[{"n", ",", "1"}], "\[RightDoubleBracket]"}]}], ",", 
+                   RowBox[{"SymmetricSeed", "\[Rule]", 
+                    RowBox[{"h1", "\[LeftDoubleBracket]", 
+                    RowBox[{"n", ",", "2"}], "\[RightDoubleBracket]"}]}], ",", 
+                   RowBox[{"ColorFunction", "\[Rule]", 
+                    RowBox[{
+                    "cols", "\[LeftDoubleBracket]", "n", 
+                    "\[RightDoubleBracket]"}]}]}], "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"GraphicsGrid", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"mans", "\[LeftDoubleBracket]", 
+                   RowBox[{"1", ";;", "2"}], "\[RightDoubleBracket]"}], ",", 
+                  RowBox[{"mans", "\[LeftDoubleBracket]", 
+                   RowBox[{"3", ";;", "4"}], "\[RightDoubleBracket]"}]}], 
+                 "}"}], ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "120"}], ",", 
+                   RowBox[{"-", "60"}]}], "}"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", "480", "}"}], ",", 
+                   RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", "syms"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"qRot", "=", 
            RowBox[{"Round", "[", 
             RowBox[{
@@ -196,25 +190,27 @@ hexidecimal numbers. Which of these represents the color shown here?\>\"",
                "\"\<Degrees\>\""}], "]"}], ",", ".01"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"qRef", "=", 
-           RowBox[{
-            RowBox[{"syms", "\[LeftDoubleBracket]", 
-             RowBox[{"ans", ",", "1"}], "\[RightDoubleBracket]"}], "*", 
-            RowBox[{"If", "[", 
-             RowBox[{
-              RowBox[{"syms", "\[LeftDoubleBracket]", 
-               RowBox[{"ans", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
-              RowBox[{"If", "[", 
-               RowBox[{
-                RowBox[{"EvenQ", "[", 
-                 RowBox[{"syms", "\[LeftDoubleBracket]", 
-                  RowBox[{"ans", ",", "1"}], "\[RightDoubleBracket]"}], "]"}],
-                 ",", "2", ",", "1"}], "]"}], ",", "0"}], "]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"syms", "\[LeftDoubleBracket]", 
+              RowBox[{"ans", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+             RowBox[{"syms", "\[LeftDoubleBracket]", 
+              RowBox[{"ans", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+             "0"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
             RowBox[{
             "\"\<Which mandala has `1` of rotational symmetry and `2` lines \
-of reflectional symmetry?\>\"", ",", "qRot", ",", 
+of reflectional symmetry?\>\"", ",", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{"ToString", "[", "qRot", "]"}], ",", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"\"\<. \>\"", ",", "\"\< \>\""}], "}"}], "~~", 
+                 "\"\<degrees\>\""}], "\[Rule]", "\"\<\[Degree]\>\""}]}], 
+              "]"}], ",", 
              RowBox[{"qRef", "/.", " ", 
               RowBox[{"0", "\[Rule]", "\"\<no\>\""}]}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -236,8 +232,8 @@ of reflectional symmetry?\>\"", ",", "qRot", ",",
            "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"qTransit", ",", "ans", ",", "mixed", ",", "picTransit"}],
-             "}"}], "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed", ",", "pic"}], "}"}],
+            "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
    "\[IndentingNewLine]", "\"\<CS_pack_Art3\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
@@ -303,14 +299,26 @@ of reflectional symmetry?\>\"", ",", "qRot", ",",
    3.791383266404071*^9, 3.79138335833062*^9}, {3.7913847891622343`*^9, 
    3.791384798047381*^9}, {3.7913848431597967`*^9, 3.791384852751329*^9}, 
    3.791384927080645*^9, {3.79138496642318*^9, 3.791384981766927*^9}, {
-   3.791385040399438*^9, 3.79138505797451*^9}},
+   3.791385040399438*^9, 3.79138505797451*^9}, {3.796413157050618*^9, 
+   3.796413211797956*^9}, {3.796413286855117*^9, 3.7964133597035313`*^9}, 
+   3.7964134059979467`*^9, {3.796413454199131*^9, 3.79641346153399*^9}, {
+   3.796413521053879*^9, 3.796413521309588*^9}, {3.796413613629634*^9, 
+   3.796413695845656*^9}, {3.7964137619987707`*^9, 3.79641376244634*^9}, {
+   3.796413809502777*^9, 3.796413856976037*^9}, {3.7964139952863092`*^9, 
+   3.7964140085583477`*^9}, {3.796414078789291*^9, 3.796414157332129*^9}, {
+   3.796414200374002*^9, 3.7964142025000753`*^9}, {3.796414334061965*^9, 
+   3.796414356228033*^9}, {3.796414648802039*^9, 3.7964147621152887`*^9}, 
+   3.796415054556299*^9, {3.7964152244440536`*^9, 3.796415242514694*^9}, {
+   3.796415289595874*^9, 3.796415296387838*^9}, {3.796415380432269*^9, 
+   3.7964154310992327`*^9}},
  CellLabel->
-  "In[2008]:=",ExpressionUUID->"e6eb46b8-df5e-4629-a625-ddaab332536e"]
+  "In[224]:=",ExpressionUUID->"e6eb46b8-df5e-4629-a625-ddaab332536e"]
 },
-WindowSize->{1756, 1275},
+WindowSize->{1456, 1063},
 WindowMargins->{{1, Automatic}, {Automatic, 34}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (September 29, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"80bfb614-8f2e-4868-9fef-b2199fa74153"
 ]
 (* End of Notebook Content *)
 
@@ -323,7 +331,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 14240, 287, 619, "Input",ExpressionUUID->"e6eb46b8-df5e-4629-a625-ddaab332536e"]
+Cell[558, 20, 15000, 294, 619, "Input",ExpressionUUID->"e6eb46b8-df5e-4629-a625-ddaab332536e"]
 }
 ]
 *)
