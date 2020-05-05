@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     18303,        353]
-NotebookOptionsPosition[     17989,        339]
-NotebookOutlinePosition[     18348,        355]
-CellTagsIndexPosition[     18305,        352]
+NotebookDataLength[     25115,        483]
+NotebookOptionsPosition[     24765,        469]
+NotebookOutlinePosition[     25159,        485]
+CellTagsIndexPosition[     25116,        482]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -25,205 +25,317 @@ Cell[BoxData[
     RowBox[{"APIFunction", "[", 
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
-      RowBox[{"(*", 
-       RowBox[{
-        RowBox[{"ipa", "=", 
-         RowBox[{"{", 
-          RowBox[{
-          "\"\<\:02c8\>\"", ",", "\"\<\:028c\>\"", ",", "\"\<p\>\"", ",", 
-           "\"\<\:025d\>\"", ",", "\"\<k\>\"", ",", "\"\<\:026a\>\"", ",", 
-           "\"\<b\>\"", ",", "\"\<\:0259\>\"", ",", "\"\<l\>\"", ",", 
-           "\"\<r\>\"", ",", "\"\<\:025b\>\"", ",", "\"\<t\>\"", ",", 
-           "\"\<n\>\"", ",", "\"\<s\>\"", ",", "\"\<\[AE]\>\"", ",", 
-           "\"\<m\>\"", ",", "\"\<u\>\"", ",", "\"\<f\>\"", ",", 
-           "\"\<\:0252\>\"", ",", "\"\<o\>\"", ",", "\"\<\:028a\>\"", ",", 
-           "\"\<i\>\"", ",", "\"\<\:0283\>\"", ",", "\"\<d\>\"", ",", 
-           "\"\<\:0261\>\"", ",", "\"\<j\>\"", ",", "\"\<\:014b\>\"", ",", 
-           "\"\<e\>\"", ",", "\"\<\:0254\>\"", ",", "\"\<z\>\"", ",", 
-           "\"\<h\>\"", ",", "\"\<v\>\"", ",", "\"\<w\>\"", ",", 
-           "\"\<\:0292\>\"", ",", "\"\<\[Theta]\>\"", ",", "\"\<a\>\"", ",", 
-           "\"\<\[CCedilla]\>\"", ",", "\"\<\[Beta]\>\"", ",", 
-           "\"\<\:027d\>\"", ",", "\"\<\[Eth]\>\"", ",", "\"\<\:0272\>\""}], 
-          "}"}]}], ";"}], "*)"}], "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
-      RowBox[{"(*", " ", 
-       RowBox[{
-        RowBox[{
-        "this", " ", "was", " ", "sent", " ", "in", " ", "chunks", " ", "to", 
-         " ", "be", " ", "processed", " ", "server"}], "-", 
-        RowBox[{
-        "side", " ", "in", " ", "the", " ", "main", " ", "file", " ", 
-         "because", " ", 
-         RowBox[{"WordData", "[", 
-          RowBox[{"\"\<word\>\"", ",", "\"\<PhoneticForm\>\""}], "]"}], 
-         "\[IndentingNewLine]", "returns", " ", "different", " ", "data", " ",
-          "in", " ", "the", " ", "cloud", " ", "than", " ", 
-         RowBox[{"locally", "."}]}]}], " ", "*)"}], "\[IndentingNewLine]", 
-      "\[IndentingNewLine]", 
-      RowBox[{"(*", " ", 
-       RowBox[{"begin", " ", "\"\<q\>\""}], " ", "*)"}], 
-      "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"q", "=", 
-        RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"ipa", "=", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<\:02c8\>\"", ",", "\"\<\:028c\>\"", ",", "\"\<p\>\"", ",", 
+              "\"\<\:025d\>\"", ",", "\"\<k\>\"", ",", "\"\<\:026a\>\"", ",", 
+              "\"\<b\>\"", ",", "\"\<\:0259\>\"", ",", "\"\<l\>\"", ",", 
+              "\"\<r\>\"", ",", "\"\<\:025b\>\"", ",", "\"\<t\>\"", ",", 
+              "\"\<n\>\"", ",", "\"\<s\>\"", ",", "\"\<\[AE]\>\"", ",", 
+              "\"\<m\>\"", ",", "\"\<u\>\"", ",", "\"\<f\>\"", ",", 
+              "\"\<\:0252\>\"", ",", "\"\<o\>\"", ",", "\"\<\:028a\>\"", ",", 
+              "\"\<i\>\"", ",", "\"\<\:0283\>\"", ",", "\"\<d\>\"", ",", 
+              "\"\<\:0261\>\"", ",", "\"\<j\>\"", ",", "\"\<\:014b\>\"", ",", 
+              "\"\<e\>\"", ",", "\"\<\:0254\>\"", ",", "\"\<z\>\"", ",", 
+              "\"\<h\>\"", ",", "\"\<v\>\"", ",", "\"\<w\>\"", ",", 
+              "\"\<\:0292\>\"", ",", "\"\<\[Theta]\>\"", ",", "\"\<a\>\"", 
+              ",", "\"\<\[CCedilla]\>\"", ",", "\"\<\[Beta]\>\"", ",", 
+              "\"\<\:027d\>\"", ",", "\"\<\[Eth]\>\"", ",", 
+              "\"\<\:0272\>\""}], "}"}]}], ";"}], "*)"}], 
+         "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"codeIPA", "=", 
-           RowBox[{"{", 
+          RowBox[{"q", "=", 
+           RowBox[{"Hold", "[", "\[IndentingNewLine]", 
             RowBox[{
-            "712", ",", "652", ",", "112", ",", "605", ",", "107", ",", "618",
-              ",", "98", ",", "601", ",", "108", ",", "114", ",", "603", ",", 
-             "116", ",", "110", ",", "115", ",", "230", ",", "109", ",", 
-             "117", ",", "102", ",", "594", ",", "111", ",", "650", ",", 
-             "105", ",", "643", ",", "100", ",", "609", ",", "106", ",", 
-             "331", ",", "101", ",", "596", ",", "122", ",", "104", ",", 
-             "118", ",", "119", ",", "658", ",", "952", ",", "97", ",", "231",
-              ",", "946", ",", "637", ",", "240", ",", "626"}], "}"}]}], ";", 
+             RowBox[{"codeIPA", "=", 
+              RowBox[{"{", 
+               RowBox[{
+               "712", ",", "652", ",", "112", ",", "605", ",", "107", ",", 
+                "618", ",", "98", ",", "601", ",", "108", ",", "114", ",", 
+                "603", ",", "116", ",", "110", ",", "115", ",", "230", ",", 
+                "109", ",", "117", ",", "102", ",", "594", ",", "111", ",", 
+                "650", ",", "105", ",", "643", ",", "100", ",", "609", ",", 
+                "106", ",", "331", ",", "101", ",", "596", ",", "122", ",", 
+                "104", ",", "118", ",", "119", ",", "658", ",", "952", ",", 
+                "97", ",", "231", ",", "946", ",", "637", ",", "240", ",", 
+                "626"}], "}"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"data", "=", 
+              RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"While", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"try", "=", 
+                 RowBox[{"RandomChoice", "[", 
+                  RowBox[{"WordData", "[", "]"}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{"pho", "=", 
+                 RowBox[{"WordData", "[", 
+                  RowBox[{"try", ",", "\"\<PhoneticForm\>\""}], "]"}]}], ";", 
+                "\[IndentingNewLine]", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"Not", "[", 
+                   RowBox[{"MissingQ", "[", "pho", "]"}], "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"StringLength", "[", 
+                    RowBox[{"ToString", "[", "pho", "]"}], "]"}], ">", "4"}], 
+                    ",", 
+                    RowBox[{"data", "=", 
+                    RowBox[{"Append", "[", 
+                    RowBox[{"data", ",", 
+                    RowBox[{"{", 
+                    RowBox[{"try", ",", "pho"}], "}"}]}], "]"}]}]}], "]"}]}], 
+                 "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+             RowBox[{"(*", 
+              RowBox[{"replace", " ", "one", " ", "ipa", " ", "character"}], 
+              "*)"}], "\[IndentingNewLine]", 
+             RowBox[{"bad1", "=", 
+              RowBox[{"bad2", "=", 
+               RowBox[{"data", "[", 
+                RowBox[{"[", 
+                 RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"While", "[", 
+              RowBox[{
+               RowBox[{"bad1", "\[Equal]", "bad2"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{
+                RowBox[{"repLoc", "=", 
+                 RowBox[{"RandomInteger", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"2", ",", 
+                    RowBox[{"StringLength", "[", 
+                    RowBox[{"ToString", "[", "bad1", "]"}], "]"}]}], "}"}], 
+                  "]"}]}], ";", "\[IndentingNewLine]", 
+                RowBox[{"bad2", "=", 
+                 RowBox[{"StringReplacePart", "[", 
+                  RowBox[{
+                   RowBox[{"ToString", "[", "bad1", "]"}], ",", 
+                   RowBox[{"FromCharacterCode", "[", 
+                    RowBox[{"RandomChoice", "[", "codeIPA", "]"}], "]"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"repLoc", ",", "repLoc"}], "}"}]}], "]"}]}]}]}], 
+              "]"}], ";", "\[IndentingNewLine]", 
+             RowBox[{"(*", 
+              RowBox[{"swap", " ", "two", " ", "characters"}], "*)"}], 
+             "\[IndentingNewLine]", 
+             RowBox[{"swpLoc", "=", 
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{"{", 
+                RowBox[{"3", ",", 
+                 RowBox[{"StringLength", "[", 
+                  RowBox[{"ToString", "[", "bad1", "]"}], "]"}]}], "}"}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"swp1", "=", 
+              RowBox[{"StringPart", "[", 
+               RowBox[{
+                RowBox[{"ToString", "[", "bad2", "]"}], ",", 
+                RowBox[{"swpLoc", "-", "1"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"swp2", "=", 
+              RowBox[{"StringPart", "[", 
+               RowBox[{
+                RowBox[{"ToString", "[", "bad2", "]"}], ",", "swpLoc"}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"bad3", "=", 
+              RowBox[{"StringReplacePart", "[", 
+               RowBox[{
+                RowBox[{"ToString", "[", "bad2", "]"}], ",", 
+                RowBox[{"swp2", "<>", "swp1"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"swpLoc", "-", "1"}], ",", "swpLoc"}], "}"}]}], 
+               "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"data", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "=", 
+              "bad3"}], ";", "\[IndentingNewLine]", 
+             "\"\<Which word is incorrectly represented in the International \
+Phonetic Alphabet?\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"choices", "=", 
+              RowBox[{"RandomSample", "[", "data", "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"Position", "[", 
+               RowBox[{"choices", ",", 
+                RowBox[{
+                "data", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+              RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"Hold", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{
+               "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+               "<>", "\"\< ..... \>\"", "<>", 
+               RowBox[{"ToString", "[", 
+                RowBox[{
+                "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+                "]"}]}], "&"}], "/@", "choices"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"data", "=", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"lang", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<French\>\"", ",", "\"\<German\>\"", ",", 
+              "\"\<Portuguese\>\"", ",", "\"\<Italian\>\""}], "}"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<Which \>\"", "<>", "lang", "<>", 
+            "\"\< term matches the picture?\>\""}]}], ";", 
+          RowBox[{"finPos", "=", 
            RowBox[{"{", "}"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"While", "[", 
            RowBox[{
             RowBox[{
-             RowBox[{"Length", "[", "data", "]"}], "<", "4"}], ",", 
+             RowBox[{"Length", "[", "finPos", "]"}], "<", "1"}], ",", 
             "\[IndentingNewLine]", 
             RowBox[{
-             RowBox[{"try", "=", 
-              RowBox[{"RandomChoice", "[", 
-               RowBox[{"WordData", "[", "]"}], "]"}]}], ";", 
+             RowBox[{"wd", "=", 
+              RowBox[{"RandomWord", "[", 
+               RowBox[{"4", ",", 
+                RowBox[{"Language", "\[Rule]", "lang"}]}], "]"}]}], ";", 
              "\[IndentingNewLine]", 
-             RowBox[{"pho", "=", 
-              RowBox[{"WordData", "[", 
-               RowBox[{"try", ",", "\"\<PhoneticForm\>\""}], "]"}]}], ";", 
-             "\[IndentingNewLine]", 
-             RowBox[{"If", "[", 
-              RowBox[{
-               RowBox[{"Not", "[", 
-                RowBox[{"MissingQ", "[", "pho", "]"}], "]"}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"If", "[", 
-                RowBox[{
-                 RowBox[{
-                  RowBox[{"StringLength", "[", 
-                   RowBox[{"ToString", "[", "pho", "]"}], "]"}], ">", "4"}], 
-                 ",", 
-                 RowBox[{"data", "=", 
-                  RowBox[{"Append", "[", 
-                   RowBox[{"data", ",", 
-                    RowBox[{"{", 
-                    RowBox[{"try", ",", "pho"}], "}"}]}], "]"}]}]}], "]"}]}], 
-              "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{"replace", " ", "one", " ", "ipa", " ", "character"}], 
-           "*)"}], "\[IndentingNewLine]", 
-          RowBox[{"bad1", "=", 
-           RowBox[{"bad2", "=", 
-            RowBox[{"data", "[", 
-             RowBox[{"[", 
-              RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"While", "[", 
-           RowBox[{
-            RowBox[{"bad1", "\[Equal]", "bad2"}], ",", "\[IndentingNewLine]", 
-            
-            RowBox[{
-             RowBox[{"repLoc", "=", 
-              RowBox[{"RandomInteger", "[", 
-               RowBox[{"{", 
-                RowBox[{"2", ",", 
-                 RowBox[{"StringLength", "[", 
-                  RowBox[{"ToString", "[", "bad1", "]"}], "]"}]}], "}"}], 
-               "]"}]}], ";", "\[IndentingNewLine]", 
-             RowBox[{"bad2", "=", 
-              RowBox[{"StringReplacePart", "[", 
+             RowBox[{"it", "=", 
+              RowBox[{"WikidataSearch", "[", 
                RowBox[{
-                RowBox[{"ToString", "[", "bad1", "]"}], ",", 
-                RowBox[{"FromCharacterCode", "[", 
-                 RowBox[{"RandomChoice", "[", "codeIPA", "]"}], "]"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"repLoc", ",", "repLoc"}], "}"}]}], "]"}]}]}]}], 
-           "]"}], ";", "\[IndentingNewLine]", 
-          RowBox[{"(*", 
-           RowBox[{"swap", " ", "two", " ", "characters"}], "*)"}], 
-          "\[IndentingNewLine]", 
-          RowBox[{"swpLoc", "=", 
-           RowBox[{"RandomInteger", "[", 
-            RowBox[{"{", 
-             RowBox[{"3", ",", 
-              RowBox[{"StringLength", "[", 
-               RowBox[{"ToString", "[", "bad1", "]"}], "]"}]}], "}"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"swp1", "=", 
-           RowBox[{"StringPart", "[", 
-            RowBox[{
-             RowBox[{"ToString", "[", "bad2", "]"}], ",", 
-             RowBox[{"swpLoc", "-", "1"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"swp2", "=", 
-           RowBox[{"StringPart", "[", 
-            RowBox[{
-             RowBox[{"ToString", "[", "bad2", "]"}], ",", "swpLoc"}], "]"}]}],
-           ";", "\[IndentingNewLine]", 
-          RowBox[{"bad3", "=", 
-           RowBox[{"StringReplacePart", "[", 
-            RowBox[{
-             RowBox[{"ToString", "[", "bad2", "]"}], ",", 
-             RowBox[{"swp2", "<>", "swp1"}], ",", 
-             RowBox[{"{", 
+                RowBox[{
+                "wd", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                ",", 
+                RowBox[{"Language", "\[Rule]", "lang"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"imLst", "=", 
+              RowBox[{"WikidataData", "[", 
+               RowBox[{"it", ",", 
+                TemplateBox[{
+                  RowBox[{"ExternalIdentifier", "[", 
+                    RowBox[{"\"WikidataID\"", ",", "\"P18\"", ",", 
+                    RowBox[{"\[LeftAssociation]", 
+                    RowBox[{
+                    RowBox[{"\"Label\"", "\[Rule]", "\"image\""}], ",", 
+                    RowBox[{"\"Description\"", "\[Rule]", 
+                    "\"image of relevant illustration of the subject; if \
+available, use more specific properties (sample: coat of arms image, locator \
+map, flag image, signature image, logo image, collage image); only images \
+which exist on Wikimedia Commons are acceptable\""}]}], 
+                    "\[RightAssociation]"}]}], "]"}], "\"Wikidata\"", 
+                  "\"image\"", "http://www.wikidata.org/entity/P18"},
+                 "ExternalIdentifierURL"]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"imPos", "=", 
+              RowBox[{"Position", "[", 
+               RowBox[{"imLst", ",", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"URL", "[", "str_", "]"}], "}"}], "/;", 
+                 RowBox[{"StringContainsQ", "[", 
+                  RowBox[{"str", ",", 
+                   RowBox[{"{", 
+                    RowBox[{"\"\<.jpg\>\"", ",", "\"\<.png\>\""}], "}"}]}], 
+                  "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"laLst", "=", 
               RowBox[{
-               RowBox[{"swpLoc", "-", "1"}], ",", "swpLoc"}], "}"}]}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"data", "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "2"}], "]"}], "]"}], "=", "bad3"}], ";", 
+               RowBox[{
+                RowBox[{"WikidataData", "[", 
+                 RowBox[{"#", ",", "\"\<Label\>\"", ",", 
+                  RowBox[{"Language", "\[Rule]", "lang"}]}], "]"}], "&"}], "/@",
+                "it"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"laPos", "=", 
+              RowBox[{"Position", "[", 
+               RowBox[{"laLst", ",", 
+                RowBox[{"{", "str_String", "}"}]}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"finPos", "=", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{"Intersection", "[", 
+                RowBox[{"imPos", ",", "laPos"}], "]"}], "]"}]}]}]}], "]"}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"pos", "=", 
+           RowBox[{"RandomChoice", "[", "finPos", "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          "\"\<Which word is incorrectly represented in the International \
-Phonetic Alphabet?\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
-        RowBox[{"end", " ", "\"\<q\>\""}], " ", "*)"}], "\[IndentingNewLine]",
-        "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
-        RowBox[{"begin", " ", "\"\<ans\>\""}], " ", "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{"Hold", "[", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"choices", "=", 
-           RowBox[{"RandomSample", "[", "data", "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"Position", "[", 
-            RowBox[{"choices", ",", 
-             RowBox[{"data", "[", 
-              RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-           RowBox[{"[", 
-            RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
-        RowBox[{"end", " ", "\"\<ans\>\""}], " ", "*)"}], 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
-        RowBox[{"begin", " ", "\"\<mixed\>\""}], " ", "*)"}], 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"Hold", "[", 
-         RowBox[{
-          RowBox[{
+          RowBox[{"lan", "=", 
            RowBox[{
-            RowBox[{"#", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], "<>", "\"\< ..... \>\"", "<>", 
-            RowBox[{"ToString", "[", 
-             RowBox[{"#", "[", 
-              RowBox[{"[", "2", "]"}], "]"}], "]"}]}], "&"}], "/@", 
-          "choices"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"(*", " ", 
-        RowBox[{"end", " ", "\"\<mixed\>\""}], " ", "*)"}], 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Lang3\>\"", ",", 
+           "laLst", "\[LeftDoubleBracket]", "pos", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"Image", "[", 
+              RowBox[{
+               RowBox[{"Import", "[", "h1", "]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+            
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"imLst", "\[LeftDoubleBracket]", 
+              RowBox[{"pos", ",", "1"}], "\[RightDoubleBracket]"}]}]}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Style", "[", 
+              RowBox[{"#", ",", "Italic"}], "]"}], "&"}], "/@", "wd"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Lang3\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683321107551312*^9, 3.6833211384352694`*^9}, {
    3.683321188001898*^9, 3.683321235306303*^9}, {3.683324967019004*^9, 
@@ -334,14 +446,32 @@ Phonetic Alphabet?\>\""}], "]"}]}], ";", "\[IndentingNewLine]",
    3.6932439630541267`*^9, 3.6932439708528214`*^9}, {3.6932440252985067`*^9, 
    3.6932440426492*^9}, {3.693244999328825*^9, 3.693245025448256*^9}, {
    3.693245283444874*^9, 3.693245348511718*^9}, {3.693245796342457*^9, 
-   3.6932458046706667`*^9}},ExpressionUUID->"35a389e1-a40e-41a3-a7c7-\
-e5e740fbc9b8"]
+   3.6932458046706667`*^9}, {3.7975216133122587`*^9, 3.797521756023036*^9}, {
+   3.797521793258122*^9, 3.797521903976103*^9}, {3.7976898011254597`*^9, 
+   3.797689926580318*^9}, {3.7976900403957653`*^9, 3.797690060413015*^9}, {
+   3.797690165390339*^9, 3.79769018050071*^9}, {3.79769023205263*^9, 
+   3.797690271236423*^9}, {3.797690320084742*^9, 3.797690358716323*^9}, 
+   3.797690447549899*^9, {3.797690760083692*^9, 3.797690801562852*^9}, {
+   3.7976908915562277`*^9, 3.797690892378446*^9}, {3.797690927698798*^9, 
+   3.797690942610553*^9}, {3.797691293411253*^9, 3.797691294386282*^9}, {
+   3.797691367889667*^9, 3.797691438009474*^9}, 3.797691488953705*^9, {
+   3.797691526065694*^9, 3.797691541105462*^9}, {3.797691585155599*^9, 
+   3.797691588039188*^9}, {3.797691669370699*^9, 3.79769168148878*^9}, {
+   3.797691739457221*^9, 3.797691741058422*^9}, {3.7976918006570463`*^9, 
+   3.797691801392437*^9}, {3.7976919935292253`*^9, 3.797691998144108*^9}, {
+   3.797692600519726*^9, 3.797692623646729*^9}, {3.797693050376343*^9, 
+   3.797693091983594*^9}, {3.797693261222104*^9, 3.797693268464334*^9}, {
+   3.797693307317778*^9, 3.797693317862257*^9}, {3.797693539424959*^9, 
+   3.797693562165462*^9}, {3.7976938637841*^9, 3.7976939215648813`*^9}, {
+   3.797693981010913*^9, 3.797693995036735*^9}},
+ CellLabel->
+  "In[1286]:=",ExpressionUUID->"db51df4b-e3eb-4a51-ba0d-31e905cbb8ba"]
 },
-WindowSize->{1227, 1075},
-WindowMargins->{{4, Automatic}, {Automatic, 4}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1273, 1155},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"38235215-8e57-46e9-9e03-99fb489083e3"
 ]
 (* End of Notebook Content *)
 
@@ -354,7 +484,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 17427, 317, 955, "Input",ExpressionUUID->"35a389e1-a40e-41a3-a7c7-e5e740fbc9b8"]
+Cell[558, 20, 24203, 447, 1229, "Input",ExpressionUUID->"db51df4b-e3eb-4a51-ba0d-31e905cbb8ba"]
 }
 ]
 *)
