@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     44728,        801]
-NotebookOptionsPosition[     44339,        786]
-NotebookOutlinePosition[     44773,        803]
-CellTagsIndexPosition[     44730,        800]
+NotebookDataLength[     46088,        829]
+NotebookOptionsPosition[     45570,        811]
+NotebookOutlinePosition[     46004,        828]
+CellTagsIndexPosition[     45961,        825]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -139,8 +141,9 @@ Cell[BoxData[
                  RowBox[{
                   RowBox[{"\"\<Entity[City, {\>\"", "\[Rule]", "\"\<\>\""}], 
                   ",", "\[IndentingNewLine]", 
-                  RowBox[{
-                  "\"\<, UnitedStates}]\>\"", "\[Rule]", "\"\<\>\""}]}], 
+                  RowBox[{"\"\<, UnitedStates}]\>\"", "\[Rule]", "\"\<\>\""}],
+                   ",", "\[IndentingNewLine]", 
+                  RowBox[{"\"\<}]\>\"", "\[Rule]", "\"\<\>\""}]}], 
                  "\[IndentingNewLine]", "}"}]}], "]"}], "]"}], "&"}], "/@", 
             "cities"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"citStat", "=", 
@@ -474,7 +477,12 @@ Cell[BoxData[
                    ",", 
                    RowBox[{"h1", "\[LeftDoubleBracket]", 
                     RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
-                   "bear", ",", "dist"}], "]"}]}], "]"}], "/.", 
+                   RowBox[{"StringReplace", "[", 
+                    RowBox[{
+                    RowBox[{"ToString", "[", "bear", "]"}], ",", 
+                    RowBox[{
+                    RowBox[{"\"\<.\>\"", "~~", "EndOfString"}], "\[Rule]", 
+                    "\"\<\>\""}]}], "]"}], ",", "dist"}], "]"}]}], "]"}], "/.", 
                RowBox[{"h1", "\[Rule]", "data"}]}], "]"}], "]"}], "]"}]}], 
           ";", "\[IndentingNewLine]", 
           RowBox[{"qTransit", "=", 
@@ -781,10 +789,27 @@ Cell[BoxData[
    3.791632563164826*^9, {3.791632811376265*^9, 3.791632848640086*^9}, {
    3.7916329501065693`*^9, 3.791632957136075*^9}, {3.791632990746591*^9, 
    3.791632995999811*^9}, {3.791633080450549*^9, 3.7916331271435127`*^9}, 
-   3.794597817540495*^9},
- CellLabel->"In[64]:=",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"]
+   3.794597817540495*^9, {3.797777126371176*^9, 3.797777150598227*^9}, {
+   3.797777458655739*^9, 3.7977774905259733`*^9}, {3.797777522724049*^9, 
+   3.7977775381901093`*^9}, {3.797777750952118*^9, 3.79777780486205*^9}, {
+   3.797777954887727*^9, 3.797777959861312*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geog12\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geog12"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geog12"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.797777157791181*^9, 3.79777750232775*^9, 
+  3.797777552415984*^9, 3.7977778094254427`*^9, 3.7977779649192753`*^9},
+ CellLabel->"Out[21]=",ExpressionUUID->"80bea279-87e4-474d-9721-b9aa39c4c4a7"]
+}, Open  ]]
 },
-WindowSize->{1561, 1371},
+WindowSize->{1787, 1371},
 WindowMargins->{{4, Automatic}, {Automatic, 0}},
 TaggingRules->{"TryRealOnly" -> False},
 FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
@@ -802,7 +827,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 43777, 764, 907, "Input",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"]
+Cell[CellGroupData[{
+Cell[580, 22, 44382, 773, 949, "Input",ExpressionUUID->"faa8a40a-d2d8-40a7-bf1f-bd53df1346a6"],
+Cell[44965, 797, 589, 11, 37, "Output",ExpressionUUID->"80bea279-87e4-474d-9721-b9aa39c4c4a7"]
+}, Open  ]]
 }
 ]
 *)
