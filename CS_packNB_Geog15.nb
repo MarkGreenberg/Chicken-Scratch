@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29258,        566]
-NotebookOptionsPosition[     28836,        550]
-NotebookOutlinePosition[     29174,        565]
-CellTagsIndexPosition[     29131,        562]
+NotebookDataLength[     29612,        568]
+NotebookOptionsPosition[     29262,        554]
+NotebookOutlinePosition[     29657,        570]
+CellTagsIndexPosition[     29614,        567]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -40,7 +38,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"List","ListIcon",GridBox[{{
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -56,7 +55,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               {
@@ -97,39 +96,47 @@ Cell[BoxData[
            "\"\<Which region of France is shown in red on this map?\>\""}], 
           ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
+           RowBox[{"GeoGraphics", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"FaceForm", "[", "Gray", "]"}], ",", 
+               RowBox[{"Polygon", "[", 
+                TemplateBox[{"\"France\"", 
+                  RowBox[{"Entity", "[", 
+                    RowBox[{"\"Country\"", ",", "\"France\""}], "]"}], 
+                  "\"Entity[\\\"Country\\\", \\\"France\\\"]\"", 
+                  "\"country\""},
+                 "Entity"], "]"}], ",", 
+               RowBox[{"EdgeForm", "[", 
+                RowBox[{"{", 
+                 RowBox[{"Thick", ",", "Red"}], "}"}], "]"}], ",", 
+               RowBox[{"FaceForm", "[", 
+                RowBox[{"{", 
+                 RowBox[{"Red", ",", 
+                  RowBox[{"Opacity", "[", "1", "]"}]}], "}"}], "]"}], ",", 
+               RowBox[{"Polygon", "[", 
+                RowBox[{
+                "data", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "]"}]}], "}"}], ",", 
+             RowBox[{"GeoBackground", "\[Rule]", "\"\<CountryBorders\>\""}], 
+             ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"picTransit", "=", 
            RowBox[{
             RowBox[{"Hold", "[", 
-             RowBox[{"GeoGraphics", "[", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"FaceForm", "[", "Gray", "]"}], ",", 
-                 RowBox[{"Polygon", "[", 
-                  TemplateBox[{"\"France\"",RowBox[{"Entity", "[", 
-                    RowBox[{"\"Country\"", ",", "\"France\""}], "]"}],
-                    "\"Entity[\\\"Country\\\", \\\"France\\\"]\"",
-                    "\"country\""},
-                   "Entity"], "]"}], ",", 
-                 RowBox[{"EdgeForm", "[", 
-                  RowBox[{"{", 
-                   RowBox[{"Thick", ",", "Red"}], "}"}], "]"}], ",", 
-                 RowBox[{"FaceForm", "[", 
-                  RowBox[{"{", 
-                   RowBox[{"Red", ",", 
-                    RowBox[{"Opacity", "[", "1", "]"}]}], "}"}], "]"}], ",", 
-                 RowBox[{"Polygon", "[", "h1", "]"}]}], "}"}], ",", 
-               RowBox[{"GeoBackground", "\[Rule]", "\"\<CountryBorders\>\""}],
-                ",", 
-               RowBox[{"ImageSize", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"{", "480", "}"}], ",", 
-                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
-            
-            RowBox[{"h1", "\[Rule]", 
-             RowBox[{
-             "data", "\[LeftDoubleBracket]", "1", 
-              "\[RightDoubleBracket]"}]}]}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h2", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
@@ -138,14 +145,20 @@ Cell[BoxData[
                RowBox[{"EntityValue", "[", 
                 RowBox[{"#", ",", "\"\<Name\>\""}], "]"}], ",", 
                RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"\"\<, France\>\"", "\[Rule]", "\"\<\>\""}], ",", 
-                 RowBox[{"\"\<\[Hyphen]\>\"", "\[Rule]", "\"\<-\>\""}]}], 
-                "}"}]}], "]"}], "&"}], "/@", "data"}]}], ";", 
-          "\[IndentingNewLine]", 
+                RowBox[{"\"\<, France\>\"", "\[Rule]", "\"\<\>\""}], "}"}]}], 
+              "]"}], "&"}], "/@", "data"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
@@ -157,14 +170,15 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
-           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "picTransit"}], 
+            "}"}], "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]",
+          "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            InterpretationBox[
             DynamicModuleBox[{Typeset`open = False}, 
-             TemplateBox[{"List","ListIcon",GridBox[{{
+             TemplateBox[{"List", "ListIcon", 
+               GridBox[{{
                   RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -182,7 +196,7 @@ Cell[BoxData[
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
                 GridBoxItemSize -> {
-                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                Dynamic[Typeset`open]},
               "IconizedObject"]],
             {{
@@ -292,7 +306,8 @@ Cell[BoxData[
               RowBox[{"#", ",", "Smaller"}], "]"}], "&"}], "/@", 
             InterpretationBox[
              DynamicModuleBox[{Typeset`open = False}, 
-              TemplateBox[{"List","ListIcon",GridBox[{{
+              TemplateBox[{"List", "ListIcon", 
+                GridBox[{{
                    RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -308,7 +323,7 @@ Cell[BoxData[
                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                  DefaultBaseStyle -> "Column", 
                  GridBoxItemSize -> {
-                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                 Dynamic[Typeset`open]},
                "IconizedObject"]],
              {
@@ -529,29 +544,19 @@ Cell[BoxData[
    3.769004753829527*^9, {3.769005115038965*^9, 3.76900512778819*^9}, 
    3.769005225156131*^9, {3.7690053308215427`*^9, 3.7690053477642*^9}, {
    3.769005506006125*^9, 3.769005522499551*^9}, {3.7690058203122053`*^9, 
-   3.769005837202962*^9}},
+   3.769005837202962*^9}, 3.798057833791741*^9, {3.798057877902199*^9, 
+   3.798057910260165*^9}, {3.7980579552912617`*^9, 3.798058012500167*^9}, {
+   3.798058098491671*^9, 3.7980581291085377`*^9}, {3.7980581689821*^9, 
+   3.7980582253239717`*^9}, {3.7980582701212177`*^9, 3.798058317197451*^9}, {
+   3.798058751909625*^9, 3.798058771714752*^9}},
  CellLabel->
-  "In[5523]:=",ExpressionUUID->"b5d11977-f38d-469c-86b2-87c1fee7d749"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Geog15\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Geog15"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Geog15"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{3.769005849825262*^9},
- CellLabel->
-  "Out[5523]=",ExpressionUUID->"5dfa5605-d1f1-4160-b9f5-076aad67b552"]
-}, Open  ]]
+  "In[129]:=",ExpressionUUID->"b5d11977-f38d-469c-86b2-87c1fee7d749"]
 },
-WindowSize->{1875, 1323},
+WindowSize->{2047, 1323},
 WindowMargins->{{0, Automatic}, {32, Automatic}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"6c8821e9-0fc7-4137-9c9b-016ccd37bf0d"
 ]
 (* End of Notebook Content *)
 
@@ -564,10 +569,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 27723, 511, 700, "Input",ExpressionUUID->"b5d11977-f38d-469c-86b2-87c1fee7d749"],
-Cell[28306, 535, 514, 12, 71, "Output",ExpressionUUID->"5dfa5605-d1f1-4160-b9f5-076aad67b552"]
-}, Open  ]]
+Cell[558, 20, 28700, 532, 742, "Input",ExpressionUUID->"b5d11977-f38d-469c-86b2-87c1fee7d749"]
 }
 ]
 *)
