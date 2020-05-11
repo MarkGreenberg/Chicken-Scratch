@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4684,        115]
-NotebookOptionsPosition[      4370,        101]
-NotebookOutlinePosition[      4731,        117]
-CellTagsIndexPosition[      4688,        114]
+NotebookDataLength[     32302,        597]
+NotebookOptionsPosition[     31913,        582]
+NotebookOutlinePosition[     32347,        599]
+CellTagsIndexPosition[     32304,        596]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,56 +26,504 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"q", "=", "\"\<What font is the blue text in?\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{"System`$FontFamilies", ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"hues", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{"{", 
-          RowBox[{"Blue", ",", "Gray", ",", "Gray", ",", "Gray"}], "}"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"cPos", "=", 
-        RowBox[{"Position", "[", 
-         RowBox[{"hues", ",", "Blue"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{"Column", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{
-            RowBox[{"Style", "[", 
-             RowBox[{"\"\<Peace\>\"", ",", "144", ",", 
-              RowBox[{"hues", "[", 
-               RowBox[{"[", "#", "]"}], "]"}], ",", 
-              RowBox[{"FontFamily", "\[Rule]", 
-               RowBox[{"choices", "[", 
-                RowBox[{"[", "#", "]"}], "]"}]}]}], "]"}], "&"}], "/@", 
-           RowBox[{"{", 
-            RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], ",", 
-          "Center"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", 
-             RowBox[{"cPos", "[", 
-              RowBox[{"[", 
-               RowBox[{"1", ",", "1"}], "]"}], "]"}], "]"}], "]"}]}], "]"}], 
-         "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Huma14\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"q", "=", "\"\<What font is the blue text in?\>\""}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"System`$FontFamilies", ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"hues", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"{", 
+             RowBox[{"Blue", ",", "Gray", ",", "Gray", ",", "Gray"}], "}"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"cPos", "=", 
+           RowBox[{"Position", "[", 
+            RowBox[{"hues", ",", "Blue"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"wd", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"{", 
+             RowBox[{
+             "\"\<Peace\>\"", ",", "\"\<Harmony\>\"", ",", "\"\<Balance\>\"", 
+              ",", "\"\<Center\>\"", ",", "\"\<Symmetry\>\"", ",", 
+              "\"\<Calmness\>\"", ",", "\"\<Wisdom\>\""}], "}"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Column", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"Style", "[", 
+                RowBox[{"wd", ",", "96", ",", 
+                 RowBox[{
+                 "hues", "\[LeftDoubleBracket]", "#", 
+                  "\[RightDoubleBracket]"}], ",", 
+                 RowBox[{"FontFamily", "\[Rule]", 
+                  RowBox[{
+                  "choices", "\[LeftDoubleBracket]", "#", 
+                   "\[RightDoubleBracket]"}]}]}], "]"}], "&"}], "/@", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}]}], ",", 
+             "Center", ",", 
+             RowBox[{"Spacings", "\[Rule]", "6"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "\[LeftDoubleBracket]", 
+               RowBox[{"cPos", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"216", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["54736", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {{"Crane Pose", 
+                Entity["YogaPose", "CranePose"]}, {
+               "Downward Facing Tree Pose", 
+                Entity["YogaPose", "DownwardFacingTreePose"]}, {"Duck Pose", 
+                Entity["YogaPose", "DuckPose"]}, {"Eight Angle Pose", 
+                Entity["YogaPose", "EightAnglePose"]}, {
+               "Elephant's Trunk Pose", 
+                Entity["YogaPose", "ElephantTrunkPose"]}, {
+               "Feathered Peacock Pose", 
+                Entity["YogaPose", "FeatheredPeacockPose"]}, {
+               "Firefly Pose A", 
+                Entity["YogaPose", "FireflyPoseA"]}, {"Half Circle Pose", 
+                Entity["YogaPose", "HalfCirclePose"]}, {
+               "One\[Hyphen]Legged Koundinya's Pose I", 
+                Entity["YogaPose", "OneLeggedKoundinyaPoseI"]}, {
+               "One\[Hyphen]Legged Koundinya's Pose II", 
+                Entity["YogaPose", "OneLeggedKoundinyaPoseII"]}, {
+               "Peacock Pose", 
+                Entity["YogaPose", "PeacockPose"]}, {"Pendant Pose", 
+                Entity["YogaPose", "PendantPose"]}, {"Rooster Pose", 
+                Entity["YogaPose", "RoosterPose"]}, {"Scale Pose", 
+                Entity["YogaPose", "ScalePose"]}, {"Scorpion Pose", 
+                Entity["YogaPose", "ScorpionPose"]}, {
+               "Shoulder Pressing Pose", 
+                Entity["YogaPose", "ShoulderPressingPose"]}, {
+               "Side Crane Pose", 
+                Entity["YogaPose", "SideCranePose"]}, {"Side Plank Pose", 
+                Entity["YogaPose", "SidePlankPose"]}, {
+               "Two Feet Behind Head Pose B", 
+                Entity["YogaPose", "TwoFeetBehindHeadPoseB"]}, {
+               "Two\[Hyphen]Legged Koundinya's Pose", 
+                Entity["YogaPose", "TwoLeggedKoundinyaPose"]}, {
+               "Bound Hand Headstand Pose A", 
+                Entity["YogaPose", "BoundHandHeadstandPoseA"]}, {
+               "Bound Hand Headstand Pose B", 
+                Entity["YogaPose", "BoundHandHeadstandPoseB"]}, {
+               "Bound Hand Headstand Pose C", 
+                Entity["YogaPose", "BoundHandHeadstandPoseC"]}, {
+               "Bound Hand Headstand Pose D", 
+                Entity["YogaPose", "BoundHandHeadstandPoseD"]}, {"Couch Pose", 
+                Entity["YogaPose", "CouchPose"]}, {"Fish Pose", 
+                Entity["YogaPose", "FishPose"]}, {
+               "Free Hand Headstand Pose A", 
+                Entity["YogaPose", "FreeHandHeadstandPoseA"]}, {
+               "Free Hand Headstand Pose B", 
+                Entity["YogaPose", "FreeHandHeadstandPoseB"]}, {
+               "Free Hand Headstand Pose C", 
+                Entity["YogaPose", "FreeHandHeadstandPoseC"]}, {
+               "Full Bridge Pose", 
+                Entity["YogaPose", "FullBridgePose"]}, {"Half Headstand Pose", 
+                Entity["YogaPose", "HalfHeadstandPose"]}, {"Rabbit Pose", 
+                Entity["YogaPose", "RabbitPose"]}, {"Raised Legs Pose", 
+                Entity["YogaPose", "RaisedLegsPose"]}, {
+               "Reclining Thunderbolt Pose", 
+                Entity["YogaPose", "RecliningThunderboltPose"]}, {
+               "Revolving Pose", 
+                Entity["YogaPose", "RevolvingPose"]}, {"Anjaneya's Pose", 
+                Entity["YogaPose", "AnjaneyaPose"]}, {
+               "Basic One\[Hyphen]Legged King Pigeon Pose", 
+                Entity["YogaPose", "BasicOneLeggedKingPigeonPose"]}, {
+               "Bharadvaja's Pose", 
+                Entity["YogaPose", "BharadvajaPose"]}, {"Camel Pose", 
+                Entity["YogaPose", "CamelPose"]}, {"Child's Pose", 
+                Entity["YogaPose", "ChildPose"]}, {"Diamond Pose", 
+                Entity["YogaPose", "DiamondPose"]}, {"Gate Pose", 
+                Entity["YogaPose", "GatePose"]}, {"Half Monkey Pose", 
+                Entity["YogaPose", "HalfMonkeyPose"]}, {"Heron Pose", 
+                Entity["YogaPose", "HeronPose"]}, {"Horse Pose", 
+                Entity["YogaPose", "HorsePose"]}, {"King Arthur's Pose", 
+                Entity["YogaPose", "KingArthurPose"]}, {"Lion Pose", 
+                Entity["YogaPose", "LionPose"]}, {"Little Thunderbolt Pose", 
+                Entity["YogaPose", "LittleThunderboltPose"]}, {
+               "Monkey Pose", 
+                Entity["YogaPose", "MonkeyPose"]}, {
+               "One\[Hyphen]Legged King Pigeon Pose II", 
+                Entity["YogaPose", "OneLeggedKingPigeonPoseII"]}, {
+               "Pigeon Pose A", 
+                Entity["YogaPose", "PigeonPoseA"]}, {"Pigeon Pose B", 
+                Entity["YogaPose", "PigeonPoseB"]}, {
+               "Revolved Anjaneya's Pose", 
+                Entity["YogaPose", "RevolvedAnjaneyaPose"]}, {
+               "Sleeping Upward Leg Thunderbolt Pose", 
+                Entity["YogaPose", "SleepingUpwardLegThunderboltPose"]}, {
+               "Toe Squat Pose", 
+                Entity["YogaPose", "ToeSquatPose"]}, {
+               "Balancing Half Moon Pose", 
+                Entity["YogaPose", "BalancingHalfMoonPose"]}, {
+               "Bird of Paradise Pose", 
+                Entity["YogaPose", "BirdOfParadisePose"]}, {"Eagle Pose", 
+                Entity["YogaPose", "EaglePose"]}, {
+               "Extended Hand to Big Toe Pose A", 
+                Entity["YogaPose", "ExtendedHandToBigToePoseA"]}, {
+               "Extended Hand to Big Toe Pose B", 
+                Entity["YogaPose", "ExtendedHandToBigToePoseB"]}, {
+               "Extended Hand to Big Toe Pose C", 
+                Entity["YogaPose", "ExtendedHandToBigToePoseC"]}, {
+               "Half Bound Lotus Standing Forward Bend Pose", 
+                Entity[
+                "YogaPose", "HalfBoundLotusStandingForwardBendPose"]}, {
+               "Lord of the Dance Pose", 
+                Entity["YogaPose", "LordOfTheDancePose"]}, {
+               "One\[Hyphen]Legged Fierce Pose", 
+                Entity["YogaPose", "OneLeggedFiercePose"]}, {
+               "Revolved Hand to Big Toe Pose", 
+                Entity["YogaPose", "RevolvedHandToBigToePose"]}, {
+               "Standing Split Pose", 
+                Entity["YogaPose", "StandingSplitPose"]}, {"Toe Stand Pose", 
+                Entity["YogaPose", "ToeStandPose"]}, {"Tree Pose", 
+                Entity["YogaPose", "TreePose"]}, {"Warrior III Pose", 
+                Entity["YogaPose", "WarriorIIIPose"]}, {"Bow Pose", 
+                Entity["YogaPose", "BowPose"]}, {"Cobra Pose", 
+                Entity["YogaPose", "CobraPose"]}, {"Crocodile Pose", 
+                Entity["YogaPose", "CrocodilePose"]}, {"Frog Pose", 
+                Entity["YogaPose", "FrogPose"]}, {"Half Frog Pose", 
+                Entity["YogaPose", "HalfFrogPose"]}, {"King Pigeon Pose", 
+                Entity["YogaPose", "KingPigeonPose"]}, {"Locust Pose", 
+                Entity["YogaPose", "LocustPose"]}, {"Locust Pose A", 
+                Entity["YogaPose", "LocustPoseA"]}, {"Locust Pose B", 
+                Entity["YogaPose", "LocustPoseB"]}, {"Seal Pose", 
+                Entity["YogaPose", "SealPose"]}, {"Side Bow Pose", 
+                Entity["YogaPose", "SideBowPose"]}, {"Sphinx Pose", 
+                Entity["YogaPose", "SphinxPose"]}, {"Balancing Table Pose", 
+                Entity["YogaPose", "BalancingTablePose"]}, {"Cat Pose", 
+                Entity["YogaPose", "CatPose"]}, {"Cow Pose", 
+                Entity["YogaPose", "CowPose"]}, {"Dolphin Pose", 
+                Entity["YogaPose", "DolphinPose"]}, {
+               "Downward Facing Dog Pose", 
+                Entity["YogaPose", "DownwardFacingDogPose"]}, {
+               "Downward Facing Frog Pose", 
+                Entity["YogaPose", "DownwardFacingFrogPose"]}, {
+               "Fire Hydrant Pose", 
+                Entity["YogaPose", "FireHydrantPose"]}, {"Forearm Plank Pose", 
+                Entity["YogaPose", "ForearmPlankPose"]}, {
+               "Four\[Hyphen]Limbed Staff Pose", 
+                Entity["YogaPose", "FourLimbedStaffPose"]}, {
+               "One\[Hyphen]Handed Tiger Pose", 
+                Entity["YogaPose", "OneHandedTigerPose"]}, {"Plank Pose", 
+                Entity["YogaPose", "PlankPose"]}, {"Puppy Dog Pose", 
+                Entity["YogaPose", "PuppyDogPose"]}, {"Reverse Table Pose", 
+                Entity["YogaPose", "ReverseTablePose"]}, {"Table Pose", 
+                Entity["YogaPose", "TablePose"]}, {
+               "Threading the Needle Pose", 
+                Entity["YogaPose", "ThreadingTheNeedlePose"]}, {
+               "Three\[Hyphen]Legged Dog Pose", 
+                Entity["YogaPose", "ThreeLeggedDogPose"]}, {
+               "Two\[Hyphen]Legged Inverted Staff Pose", 
+                Entity["YogaPose", "TwoLeggedInvertedStaffPose"]}, {
+               "Upward Bow Pose", 
+                Entity["YogaPose", "UpwardBowPose"]}, {
+               "Upward Facing Dog Pose", 
+                Entity["YogaPose", "UpwardFacingDogPose"]}, {
+               "Upward Plank Pose", 
+                Entity["YogaPose", "UpwardPlankPose"]}, {"Wild Thing Pose", 
+                Entity["YogaPose", "WildThingPose"]}, {"Ananta's Pose", 
+                Entity["YogaPose", "AnantaPose"]}, {"Corpse Pose", 
+                Entity["YogaPose", "CorpsePose"]}, {"Dead Bug Pose", 
+                Entity["YogaPose", "DeadBugPose"]}, {
+               "Figure Four Stretch Pose", 
+                Entity["YogaPose", "FigureFourStretchPose"]}, {
+               "Happy Baby Pose", 
+                Entity["YogaPose", "HappyBabyPose"]}, {
+               "Knees to Chest Pose", 
+                Entity["YogaPose", "KneesToChestPose"]}, {
+               "Legs Up the Wall Pose", 
+                Entity["YogaPose", "LegsUpTheWallPose"]}, {
+               "Reclining Big Toe Pose A", 
+                Entity["YogaPose", "RecliningBigToePoseA"]}, {
+               "Reclining Big Toe Pose B", 
+                Entity["YogaPose", "RecliningBigToePoseB"]}, {
+               "Reclining Bound Angle Pose", 
+                Entity["YogaPose", "RecliningBoundAnglePose"]}, {
+               "Reclining Half Moon Pose", 
+                Entity["YogaPose", "RecliningHalfMoonPose"]}, {
+               "Reclining Hero Pose", 
+                Entity["YogaPose", "RecliningHeroPose"]}, {
+               "Reclining Raised Arm Pose", 
+                Entity["YogaPose", "RecliningRaisedArmPose"]}, {
+               "Reclining Revolved Big Toe Pose", 
+                Entity["YogaPose", "RecliningRevolvedBigToePose"]}, {
+               "Reclining Spinal Twist Pose", 
+                Entity["YogaPose", "RecliningSpinalTwistPose"]}, {
+               "Reclining Trivikrama's Pose", 
+                Entity["YogaPose", "RecliningTrivikramaPose"]}, {
+               "Wind Relieving Pose", 
+                Entity["YogaPose", "WindRelievingPose"]}, {
+               "Yoga Sleep Pose", 
+                Entity["YogaPose", "YogaSleepPose"]}, {"Accomplished Pose", 
+                Entity["YogaPose", "AccomplishedPose"]}, {"Archer Pose", 
+                Entity["YogaPose", "ArcherPose"]}, {"Auspicious Pose", 
+                Entity["YogaPose", "AuspiciousPose"]}, {"Boat Pose", 
+                Entity["YogaPose", "BoatPose"]}, {"Both Big Toes Pose", 
+                Entity["YogaPose", "BothBigToesPose"]}, {"Bound Angle Pose A", 
+                Entity["YogaPose", "BoundAnglePoseA"]}, {"Bound Angle Pose B", 
+                Entity["YogaPose", "BoundAnglePoseB"]}, {"Bound Angle Pose C", 
+                Entity["YogaPose", "BoundAnglePoseC"]}, {"Bound Lotus Pose", 
+                Entity["YogaPose", "BoundLotusPose"]}, {"Compass Pose", 
+                Entity["YogaPose", "CompassPose"]}, {"Cow Face Pose", 
+                Entity["YogaPose", "CowFacePose"]}, {"Cow Face Pose A", 
+                Entity["YogaPose", "CowFacePoseA"]}, {"Cow Face Pose B", 
+                Entity["YogaPose", "CowFacePoseB"]}, {"Deer Pose", 
+                Entity["YogaPose", "DeerPose"]}, {"Diamond Stretch Pose", 
+                Entity["YogaPose", "DiamondStretchPose"]}, {"Easy Pose", 
+                Entity["YogaPose", "EasyPose"]}, {"Embryo in Womb Pose", 
+                Entity["YogaPose", "EmbryoInWombPose"]}, {"Fire Log Pose", 
+                Entity["YogaPose", "FireLogPose"]}, {"Great Seal Pose", 
+                Entity["YogaPose", "GreatSealPose"]}, {
+               "Half Bound Lotus Seated Forward Bend Pose", 
+                Entity["YogaPose", "HalfBoundLotusSeatedForwardBendPose"]}, {
+               "Half Lord of the Fishes Pose", 
+                Entity["YogaPose", "HalfLordOfTheFishesPose"]}, {
+               "Half Lotus Pose", 
+                Entity["YogaPose", "HalfLotusPose"]}, {
+               "Head to Knee Pose A", 
+                Entity["YogaPose", "HeadToKneePoseA"]}, {
+               "Head to Knee Pose B", 
+                Entity["YogaPose", "HeadToKneePoseB"]}, {
+               "Head to Knee Pose C", 
+                Entity["YogaPose", "HeadToKneePoseC"]}, {"Hero Pose", 
+                Entity["YogaPose", "HeroPose"]}, {"Lotus Pose", 
+                Entity["YogaPose", "LotusPose"]}, {"Marichi's Pose A", 
+                Entity["YogaPose", "MarichiPoseA"]}, {"Marichi's Pose B", 
+                Entity["YogaPose", "MarichiPoseB"]}, {"Marichi's Pose C", 
+                Entity["YogaPose", "MarichiPoseC"]}, {"Marichi's Pose D", 
+                Entity["YogaPose", "MarichiPoseD"]}, {"Mermaid Pose", 
+                Entity["YogaPose", "MermaidPose"]}, {
+               "One Foot Behind Head Pose A", 
+                Entity["YogaPose", "OneFootBehindHeadPoseA"]}, {
+               "One Foot Behind Head Pose B", 
+                Entity["YogaPose", "OneFootBehindHeadPoseB"]}, {
+               "One\[Hyphen]Legged King Pigeon Pose I", 
+                Entity["YogaPose", "OneLeggedKingPigeonPoseI"]}, {
+               "Revolved Head to Knee Pose", 
+                Entity["YogaPose", "RevolvedHeadToKneePose"]}, {
+               "Same Angle Pose", 
+                Entity["YogaPose", "SameAnglePose"]}, {
+               "Seated Figure Four Stretch Pose", 
+                Entity["YogaPose", "SeatedFigureFourStretchPose"]}, {
+               "Seated Forward Bend Pose A", 
+                Entity["YogaPose", "SeatedForwardBendPoseA"]}, {
+               "Seated Forward Bend Pose B", 
+                Entity["YogaPose", "SeatedForwardBendPoseB"]}, {
+               "Seated Forward Bend Pose C", 
+                Entity["YogaPose", "SeatedForwardBendPoseC"]}, {
+               "Seated Wide Angle Pose A", 
+                Entity["YogaPose", "SeatedWideAnglePoseA"]}, {
+               "Seated Wide Angle Pose B", 
+                Entity["YogaPose", "SeatedWideAnglePoseB"]}, {
+               "Sleeping Tortoise Pose", 
+                Entity["YogaPose", "SleepingTortoisePose"]}, {"Staff Pose", 
+                Entity["YogaPose", "StaffPose"]}, {"Symbol of Yoga Pose", 
+                Entity["YogaPose", "SymbolOfYogaPose"]}, {
+               "Three\[Hyphen]Limbed Seated Forward Bend Pose", 
+                Entity["YogaPose", "ThreeLimbedSeatedForwardBendPose"]}, {
+               "Tortoise Pose", 
+                Entity["YogaPose", "TortoisePose"]}, {
+               "Two Feet Behind Head Pose A", 
+                Entity["YogaPose", "TwoFeetBehindHeadPoseA"]}, {
+               "Upward Facing Seated Forward Bend Pose", 
+                Entity["YogaPose", "UpwardFacingSeatedForwardBendPose"]}, {
+               "Ear Pressing Pose", 
+                Entity["YogaPose", "EarPressingPose"]}, {"Embryo Pose", 
+                Entity["YogaPose", "EmbryoPose"]}, {"Inverted Seal Pose", 
+                Entity["YogaPose", "InvertedSealPose"]}, {"Plow Pose", 
+                Entity["YogaPose", "PlowPose"]}, {"Reclining Angle Pose", 
+                Entity["YogaPose", "RecliningAnglePose"]}, {
+               "Shoulder Supported Bridge Pose", 
+                Entity["YogaPose", "ShoulderSupportedBridgePose"]}, {
+               "Supported Shoulderstand Pose", 
+                Entity["YogaPose", "SupportedShoulderstandPose"]}, {
+               "Unsupported Shoulderstand Pose", 
+                Entity["YogaPose", "UnsupportedShoulderstandPose"]}, {
+               "Upward Lotus Pose", 
+                Entity["YogaPose", "UpwardLotusPose"]}, {"Big Toe Pose", 
+                Entity["YogaPose", "BigToePose"]}, {"Bikram Triangle Pose", 
+                Entity["YogaPose", "BikramTrianglePose"]}, {
+               "Crescent High Lunge Pose", 
+                Entity["YogaPose", "CrescentHighLungePose"]}, {
+               "Extended Side Angle Pose", 
+                Entity["YogaPose", "ExtendedSideAnglePose"]}, {
+               "Extended Triangle Pose", 
+                Entity["YogaPose", "ExtendedTrianglePose"]}, {
+               "Feet on Hands Pose", 
+                Entity["YogaPose", "FeetOnHandsPose"]}, {"Fierce Pose", 
+                Entity["YogaPose", "FiercePose"]}, {"Firefly Pose B", 
+                Entity["YogaPose", "FireflyPoseB"]}, {"Firefly Pose C", 
+                Entity["YogaPose", "FireflyPoseC"]}, {"Garland Pose", 
+                Entity["YogaPose", "GarlandPose"]}, {"Goddess Pose", 
+                Entity["YogaPose", "GoddessPose"]}, {"Half Moon Pose", 
+                Entity["YogaPose", "HalfMoonPose"]}, {
+               "Half Standing Forward Bend Pose", 
+                Entity["YogaPose", "HalfStandingForwardBendPose"]}, {
+               "High Lunge Pose", 
+                Entity["YogaPose", "HighLungePose"]}, {
+               "Humble Warrior Pose", 
+                Entity["YogaPose", "HumbleWarriorPose"]}, {
+               "Intense Side Stretch Pose", 
+                Entity["YogaPose", "IntenseSideStretchPose"]}, {"Lizard Pose", 
+                Entity["YogaPose", "LizardPose"]}, {"Mountain Pose", 
+                Entity["YogaPose", "MountainPose"]}, {"Noose Pose", 
+                Entity["YogaPose", "NoosePose"]}, {"Rag Doll Pose", 
+                Entity["YogaPose", "RagDollPose"]}, {"Raised Arm Pose", 
+                Entity["YogaPose", "RaisedArmPose"]}, {"Reverse Warrior Pose", 
+                Entity["YogaPose", "ReverseWarriorPose"]}, {
+               "Revolved Bound Side Angle Pose", 
+                Entity["YogaPose", "RevolvedBoundSideAnglePose"]}, {
+               "Revolved Fierce Pose", 
+                Entity["YogaPose", "RevolvedFiercePose"]}, {
+               "Revolved Side Angle Pose", 
+                Entity["YogaPose", "RevolvedSideAnglePose"]}, {
+               "Revolved Standing Wide\[Hyphen]Legged Forward Bend Pose", 
+                Entity[
+                "YogaPose", "RevolvedStandingWideLeggedForwardBendPose"]}, {
+               "Revolved Triangle Pose", 
+                Entity["YogaPose", "RevolvedTrianglePose"]}, {
+               "Side Lunge Pose", 
+                Entity["YogaPose", "SideLungePose"]}, {
+               "Sivananda Triangle Pose", 
+                Entity["YogaPose", "SivanandaTrianglePose"]}, {
+               "Standing Forward Bend Pose", 
+                Entity["YogaPose", "StandingForwardBendPose"]}, {
+               "Standing Wide\[Hyphen]Legged Forward Bend Pose A", 
+                Entity["YogaPose", "StandingWideLeggedForwardBendPoseA"]}, {
+               "Standing Wide\[Hyphen]Legged Forward Bend Pose B", 
+                Entity["YogaPose", "StandingWideLeggedForwardBendPoseB"]}, {
+               "Standing Wide\[Hyphen]Legged Forward Bend Pose C", 
+                Entity["YogaPose", "StandingWideLeggedForwardBendPoseC"]}, {
+               "Standing Wide\[Hyphen]Legged Forward Bend Pose D", 
+                Entity["YogaPose", "StandingWideLeggedForwardBendPoseD"]}, {
+               "Warrior II Pose", 
+                Entity["YogaPose", "WarriorIIPose"]}, {"Warrior I Pose", 
+                Entity["YogaPose", "WarriorIPose"]}, {
+               "Inverted Locust Pose", 
+                Entity["YogaPose", "InvertedLocustPose"]}},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<Which of these yoga poses is shown in the graphic?\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Show", "[", 
+            RowBox[{
+             RowBox[{"EntityValue", "[", 
+              RowBox[{
+               RowBox[{"data", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+               "\"\<SimplifiedSchematic\>\""}], "]"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"StringLength", "[", "#", "]"}], "<", "23"}], ",", 
+               "#", ",", 
+               RowBox[{"Tooltip", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"StringTake", "[", 
+                   RowBox[{"#", ",", "22"}], "]"}], "<>", "\"\<...\>\""}], 
+                 ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"#", ",", "24", ",", "Purple"}], "]"}]}], "]"}]}], 
+              "]"}], "&"}], "/@", 
+            RowBox[{"data", "\[LeftDoubleBracket]", 
+             RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Huma14\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.7086928422697077`*^9, 3.70869285736152*^9}, {
    3.708701593797184*^9, 3.708701656060433*^9}, {3.7087103849743977`*^9, 
@@ -95,15 +543,49 @@ Cell[BoxData[
    3.708713775925118*^9, 3.708713778812401*^9}, {3.708713839085156*^9, 
    3.708713881588275*^9}, {3.708713958556375*^9, 3.708713994675899*^9}, {
    3.70871402906091*^9, 3.708714032243812*^9}, {3.708714092260852*^9, 
-   3.708714197603738*^9}, {3.7087752117978163`*^9, 
-   3.708775235645068*^9}},ExpressionUUID->"89d34556-01bb-4fe0-9d47-\
-bc8d46543ef1"]
+   3.708714197603738*^9}, {3.7087752117978163`*^9, 3.708775235645068*^9}, {
+   3.794143611719214*^9, 3.7941437867264423`*^9}, {3.798158908419469*^9, 
+   3.7981589445622187`*^9}, {3.798195355511114*^9, 3.7981953769001217`*^9}, {
+   3.7981954087035227`*^9, 3.798195463319571*^9}, 3.798195618249951*^9, {
+   3.798195874948474*^9, 3.798195923515366*^9}, {3.798195998787994*^9, 
+   3.7981960473552923`*^9}, {3.7981961148902597`*^9, 3.798196239771147*^9}, 
+   3.798196572937276*^9, {3.798196659530634*^9, 3.798196670810594*^9}, {
+   3.798196728170978*^9, 3.798196730297737*^9}, {3.798196767417591*^9, 
+   3.79819683253087*^9}, {3.798196958578676*^9, 3.7981969947455883`*^9}, {
+   3.798197234955801*^9, 3.7981972470877047`*^9}, {3.7981972923633204`*^9, 
+   3.798197308715639*^9}, {3.798197429156053*^9, 3.7981974295615273`*^9}, {
+   3.798197460300161*^9, 3.798197465378771*^9}, {3.798197546491393*^9, 
+   3.798197550784935*^9}, {3.798197581848679*^9, 3.798197667473591*^9}, {
+   3.798197749650646*^9, 3.798197794952824*^9}, {3.798197835779099*^9, 
+   3.798197845649179*^9}, {3.798197892888995*^9, 3.798197903280724*^9}, {
+   3.7981982501101007`*^9, 3.7981983134593*^9}, {3.798198591805353*^9, 
+   3.7981986209244957`*^9}, {3.798198660852675*^9, 3.798198840066556*^9}, {
+   3.798198903651401*^9, 3.7981989039721327`*^9}, {3.798199155776658*^9, 
+   3.798199187547529*^9}, {3.798199443531686*^9, 3.798199462514091*^9}, {
+   3.7981998056570997`*^9, 3.798199931184887*^9}, {3.798200048144937*^9, 
+   3.7982000532009068`*^9}, 3.79820009134512*^9, {3.7982001689921913`*^9, 
+   3.798200198442511*^9}, {3.798200741882128*^9, 3.7982007549353533`*^9}, {
+   3.798201045898589*^9, 3.7982010468971148`*^9}, {3.798201298905164*^9, 
+   3.798201341903513*^9}, {3.798201400351879*^9, 3.798201424814596*^9}, {
+   3.7982014581355667`*^9, 3.79820146479869*^9}, {3.798201496982361*^9, 
+   3.798201521678969*^9}, {3.7982015929043417`*^9, 3.798201639582658*^9}, {
+   3.798201676158189*^9, 3.798201677302644*^9}, {3.7982017743091507`*^9, 
+   3.798201843526849*^9}, {3.798201875349585*^9, 3.798201958486019*^9}, {
+   3.798202432910224*^9, 3.798202482493182*^9}, {3.7982025280768347`*^9, 
+   3.798202543253154*^9}, {3.7982026572231617`*^9, 3.798202710005046*^9}, {
+   3.7982029061661777`*^9, 3.798202917061372*^9}, {3.798203173779065*^9, 
+   3.798203174059376*^9}, {3.7982032834361773`*^9, 3.798203290004044*^9}, {
+   3.798203327676165*^9, 3.798203336466751*^9}, {3.7982035596738577`*^9, 
+   3.798203577402893*^9}, {3.798203798916749*^9, 3.798203846516836*^9}},
+ CellLabel->
+  "In[462]:=",ExpressionUUID->"666d8285-61e2-495a-8912-d0cd4af3c746"]
 },
-WindowSize->{1879, 1298},
-WindowMargins->{{20, Automatic}, {Automatic, 44}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1370, 1155},
+WindowMargins->{{1, Automatic}, {Automatic, 0}},
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"416d349a-b8f6-4209-819f-ad511bef0670"
 ]
 (* End of Notebook Content *)
 
@@ -116,7 +598,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3808, 79, 262, "Input",ExpressionUUID->"89d34556-01bb-4fe0-9d47-bc8d46543ef1"]
+Cell[558, 20, 31351, 560, 571, "Input",ExpressionUUID->"666d8285-61e2-495a-8912-d0cd4af3c746"]
 }
 ]
 *)
