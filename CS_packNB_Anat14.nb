@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5934,        152]
-NotebookOptionsPosition[      5620,        138]
-NotebookOutlinePosition[      5980,        154]
-CellTagsIndexPosition[      5937,        151]
+NotebookDataLength[     88639,       1812]
+NotebookOptionsPosition[     88249,       1797]
+NotebookOutlinePosition[     88683,       1814]
+CellTagsIndexPosition[     88640,       1811]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,121 +26,1781 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"ordinalizeF", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ordinalizeF", "=", 
+           RowBox[{
+            RowBox[{"Module", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"mod", "=", 
+                RowBox[{
+                 RowBox[{"Boole", "[", 
+                  RowBox[{"!", 
+                   RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "12"}], "}"}], ",", 
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"Abs", "[", "#", "]"}], ",", "100"}], "]"}]}], 
+                    "]"}]}], "]"}], " ", 
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{"Abs", "[", "#", "]"}], ",", "10"}], "]"}]}]}], 
+               "}"}], ",", 
+              RowBox[{"With", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"suffix", "=", 
+                  RowBox[{"Switch", "[", 
+                   RowBox[{
+                   "mod", ",", "1", ",", "\"\<st\>\"", ",", "2", ",", 
+                    "\"\<nd\>\"", ",", "3", ",", "\"\<rd\>\"", ",", "_", ",", 
+                    "\"\<th\>\""}], "]"}]}], "}"}], ",", 
+                RowBox[{"Row", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"ToString", "@", "#"}], ",", "suffix"}], "}"}], 
+                 "]"}]}], "]"}]}], "]"}], "&"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"allWks", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "1", ",", "2", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", 
+             ",", "9", ",", "10", ",", "11", ",", "12", ",", "14", ",", "15", 
+             ",", "16", ",", "17", ",", "18", ",", "19", ",", "20", ",", "21",
+              ",", "22", ",", "24", ",", "25", ",", "26", ",", "27", ",", 
+             "28", ",", "30", ",", "32", ",", "34", ",", "35", ",", "36", ",",
+              "37", ",", "38"}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"week", "=", 
+           RowBox[{"RandomChoice", "[", "allWks", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which of these fetal milestones is supposed to happen in the \
+`1` week of pregnancy?\>\"", ",", 
+             RowBox[{"ordinalizeF", "[", "week", "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"allDis", "=", 
+           RowBox[{"Flatten", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"FetalGrowthData", "[", 
+               RowBox[{
+                RowBox[{"Quantity", "[", 
+                 RowBox[{"#", ",", "\"\<Weeks\>\""}], "]"}], ",", 
+                "\"\<Milestones\>\""}], "]"}], "&"}], "/@", 
+             RowBox[{"DeleteCases", "[", 
+              RowBox[{"allWks", ",", "week"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansStr", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"FetalGrowthData", "[", 
+             RowBox[{
+              RowBox[{"Quantity", "[", 
+               RowBox[{"week", ",", "\"\<Weeks\>\""}], "]"}], ",", 
+              "\"\<Milestones\>\""}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{"allDis", ",", "3"}], "]"}], ",", "ansStr"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "choices"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{"Module", "[", 
           RowBox[{
-           RowBox[{"{", 
-            RowBox[{"mod", "=", 
+           RowBox[{"{", "data", "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"(*", " ", 
+            RowBox[{
              RowBox[{
-              RowBox[{"Boole", "[", 
-               RowBox[{"!", 
-                RowBox[{"MemberQ", "[", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{"11", ",", "12"}], "}"}], ",", 
-                  RowBox[{"Mod", "[", 
-                   RowBox[{
-                    RowBox[{"Abs", "[", "#", "]"}], ",", "100"}], "]"}]}], 
-                 "]"}]}], "]"}], " ", 
-              RowBox[{"Mod", "[", 
-               RowBox[{
-                RowBox[{"Abs", "[", "#", "]"}], ",", "10"}], "]"}]}]}], "}"}],
-            ",", 
-           RowBox[{"With", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"suffix", "=", 
-               RowBox[{"Switch", "[", 
+              RowBox[{
+              "There", " ", "is", " ", "no", " ", "data", " ", "for", " ", 
+               "cats", " ", 
+               RowBox[{"yet", ".", " ", "Dog"}]}], " ", "=", " ", "2"}], ",", 
+             " ", 
+             RowBox[{"Horse", " ", "=", " ", "3"}], ",", " ", 
+             RowBox[{"Human", " ", "=", " ", "4"}]}], " ", "*)"}], 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"data", "=", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"<|", "\[IndentingNewLine]", 
                 RowBox[{
-                "mod", ",", "1", ",", "\"\<st\>\"", ",", "2", ",", 
-                 "\"\<nd\>\"", ",", "3", ",", "\"\<rd\>\"", ",", "_", ",", 
-                 "\"\<th\>\""}], "]"}]}], "}"}], ",", 
-             RowBox[{"Row", "[", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"ToString", "@", "#"}], ",", "suffix"}], "}"}], 
-              "]"}]}], "]"}]}], "]"}], "&"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"allWks", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "1", ",", "2", ",", "4", ",", "5", ",", "6", ",", "7", ",", "8", ",",
-           "9", ",", "10", ",", "11", ",", "12", ",", "14", ",", "15", ",", 
-          "16", ",", "17", ",", "18", ",", "19", ",", "20", ",", "21", ",", 
-          "22", ",", "24", ",", "25", ",", "26", ",", "27", ",", "28", ",", 
-          "30", ",", "32", ",", "34", ",", "35", ",", "36", ",", "37", ",", 
-          "38"}], "}"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"week", "=", 
-        RowBox[{"RandomChoice", "[", "allWks", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<Which of these fetal milestones is supposed to happen in the \
-`1` week of pregnancy?\>\"", ",", 
-          RowBox[{"ordinalizeF", "[", "week", "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"allDis", "=", 
-        RowBox[{"Flatten", "[", 
-         RowBox[{
-          RowBox[{
-           RowBox[{"FetalGrowthData", "[", 
-            RowBox[{
-             RowBox[{"Quantity", "[", 
-              RowBox[{"#", ",", "\"\<Weeks\>\""}], "]"}], ",", 
-             "\"\<Milestones\>\""}], "]"}], "&"}], "/@", 
-          RowBox[{"DeleteCases", "[", 
-           RowBox[{"allWks", ",", "week"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansStr", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"FetalGrowthData", "[", 
-          RowBox[{
-           RowBox[{"Quantity", "[", 
-            RowBox[{"week", ",", "\"\<Weeks\>\""}], "]"}], ",", 
-           "\"\<Milestones\>\""}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Prepend", "[", 
-         RowBox[{
-          RowBox[{"RandomSample", "[", 
-           RowBox[{"allDis", ",", "3"}], "]"}], ",", "ansStr"}], "]"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "choices"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Anat14\>\"", ",", 
-   
+                 RowBox[{"\"\<2\>\"", "\[Rule]", 
+                  InterpretationBox[
+                   DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"List", "ListIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["170", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["34216", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                   {
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Atlas::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Axis::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFifthDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFifthDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFifthDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFifthDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFirstDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFirstDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFourthDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFourthDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFourthDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfFourthDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfSecondDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfSecondDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfSecondDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfSecondDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfThirdDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfThirdDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfThirdDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfThirdDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], Null, 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EighthThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EleventhThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifthCervicalVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifthLumbarVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifthThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FirstLumbarVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FirstThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourthCervicalVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourthLumbarVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourthThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftAccessoryCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftCalcaneus::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftCentralTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftEighthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftEleventhRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFemur::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFibula::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFifthMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFifthMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFifthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFirstCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFirstMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFirstRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFirstTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftHumerus::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftIntermedioradialCarpalBone::CanisLupusFamiliaris::\
+4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftNinthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftPatella::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftRadius::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftScapula::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSeventhRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSixthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTalus::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTenthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirteenthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTibia::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTwelfthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftUlna::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftUlnarCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFifthDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFifthDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFifthDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFifthDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFourthDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFourthDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFourthDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfFourthDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfSecondDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfSecondDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfSecondDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfSecondDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfThirdDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfThirdDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfThirdDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfThirdDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "NinthThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    
+                    "ProximalPhalanxOfFifthDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFifthDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFifthDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFifthDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFirstDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFirstDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFourthDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFourthDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFourthDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfFourthDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfSecondDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfSecondDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfSecondDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfSecondDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    
+                    "ProximalPhalanxOfThirdDigitOfLeftForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfThirdDigitOfLeftHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfThirdDigitOfRightForelimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfThirdDigitOfRightHindlimb::\
+CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightAccessoryCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightCentralTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightEighthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightEleventhRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFemur::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFibula::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFifthMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFifthMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFifthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFirstCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFirstMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFirstRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFirstTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightHumerus::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightIntermedioradialCarpalBone::CanisLupusFamiliaris::\
+4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightNinthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightPatella::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightRadius::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightScapula::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSeventhRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSixthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTalus::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTenthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdMetacarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdMetatarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdTarsalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirteenthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTibia::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTwelfthRib::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightUlna::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightUlnarCarpalBone::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Sacrum::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SecondLumbarVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SecondThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventhCervicalVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventhLumbarVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventhThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixthCervicalVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixthLumbarVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixthThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "TenthThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirdCervicalVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirdLumbarVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirdThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirteenthThoracicVertebra::CanisLupusFamiliaris::4t62p"]\
+, 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "TwelfthThoracicVertebra::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Sternum::CanisLupusFamiliaris::4t62p"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Skull::CanisLupusFamiliaris::4t62p"]},
+                   SelectWithContents->True,
+                   Selectable->False]}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"\"\<3\>\"", "\[Rule]", 
+                  InterpretationBox[
+                   DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"List", "ListIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["206", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["38800", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                   {
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Atlas::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Axis::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfLeftForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfLeftHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfRightForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "DistalPhalanxOfRightHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EighteenthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EighthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EighthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EleventhCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EleventhThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Ethmoid::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifteenthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifteenthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifthCervicalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifthLumbarVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FifthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FirstCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FirstLumbarVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FirstThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourteenthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourteenthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourthCervicalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourthLumbarVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "FourthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "HyoidBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "InterparietalBone::EquusCaballus::9ycwb"], Null, 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftAccessoryCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftCalcaneus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftCentralTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftDorsalNasalConcha::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftEighteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftEighthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftEleventhRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFemur::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFibula::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFifteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFifthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFirstAndSecondTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFirstRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthMetacarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthMetatarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFourthTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftFrontalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftHumerus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftIncisiveBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftIntermediateCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftLacrimalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftMaxilla::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftNasalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftNinthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftPalatineBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftParietalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftPatella::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftPterygoidBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftRadialCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftRadius::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftScapula::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondMetacarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondMetatarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSecondRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSeventeenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSeventhRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSixteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftSixthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTalus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTemporalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdMetacarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdMetatarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirdTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftThirteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTibia::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftTwelfthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftUlna::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftUlnarCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftVentralNasalConcha::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftZygomaticBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Mandible::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfLeftForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfLeftHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfRightForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "MiddlePhalanxOfRightHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "NavicularBoneOfLeftForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "NavicularBoneOfLeftHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "NavicularBoneOfRightForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "NavicularBoneOfRightHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "NinthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "NinthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "OccipitalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfLeftForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfLeftHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfRightForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ProximalPhalanxOfRightHindlimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightAccessoryCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightCalcaneus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightCentralTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightDorsalNasalConcha::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightEighteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightEighthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightEleventhRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFemur::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFibula::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFifteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFifthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFirstAndSecondTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFirstRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthMetacarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthMetatarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFourthTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightFrontalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightHumerus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightIncisiveBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightIntermediateCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightLacrimalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightMaxilla::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightNasalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightNinthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightPalatineBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightParietalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightPatella::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightPterygoidBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightRadialCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightRadius::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightScapula::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondMetacarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondMetatarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSecondRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSeventeenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSeventhRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSixteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightSixthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTalus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTemporalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdMetacarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdMetatarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirdTarsalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightThirteenthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTibia::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightTwelfthRib::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightUlna::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightUlnarCarpalBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightVentralNasalConcha::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightZygomaticBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Sacrum::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SecondCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SecondLumbarVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SecondThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SetOfSesamoidBonesOfLefHindlimb::EquusCaballus::9ycwb"], 
+                    
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SetOfSesamoidBonesOfLeftForelimb::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SetOfSesamoidBonesOfRightForelimb::EquusCaballus::9ycwb"]\
+, 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SetOfSesamoidBonesOfRightHindlimb::EquusCaballus::9ycwb"]\
+, 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventeenthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventhCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventhCervicalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventhThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixteenthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixteenthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixthCervicalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixthLumbarVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SixthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SphenoidBone::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Sternum::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "TenthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "TenthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirdCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirdCervicalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirdLumbarVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirdThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirteenthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "ThirteenthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "TwelfthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "TwelfthThoracicVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "Vomer::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "XiphoidProcess::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "SeventeenthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "EighteenthCaudalVertebra::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftMalleus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightMalleus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftIncus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightIncus::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftStapes::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightStapes::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftIlium::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightIlium::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftIschium::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightIschium::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "LeftPubis::EquusCaballus::9ycwb"], 
+                    Entity[
+                    "AnimalAnatomicalStructure", 
+                    "RightPubis::EquusCaballus::9ycwb"]},
+                   SelectWithContents->True,
+                   Selectable->False]}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"\"\<4\>\"", "\[Rule]", 
+                  InterpretationBox[
+                   DynamicModuleBox[{Typeset`open = False}, 
+                    TemplateBox[{"List", "ListIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["200", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["32032", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                    "IconizedObject"]],
+                   {
+                    Entity["AnatomicalStructure", "Atlas"], 
+                    Entity["AnatomicalStructure", "Axis"], 
+                    Entity["AnatomicalStructure", "Coccyx"], 
+                    Entity["AnatomicalStructure", "Ethmoid"], 
+                    Entity["AnatomicalStructure", "FrontalBone"], 
+                    Entity["AnatomicalStructure", "HyoidBone"], 
+                    Entity["AnatomicalStructure", "Mandible"], 
+                    Entity["AnatomicalStructure", "OccipitalBone"], 
+                    Entity["AnatomicalStructure", "Sacrum"], 
+                    Entity["AnatomicalStructure", "SphenoidBone"], 
+                    Entity["AnatomicalStructure", "Sternum"], 
+                    Entity["AnatomicalStructure", "SeventhCervicalVertebra"], 
+                    
+                    Entity["AnatomicalStructure", "FirstLumbarVertebra"], 
+                    Entity["AnatomicalStructure", "SecondLumbarVertebra"], 
+                    Entity["AnatomicalStructure", "ThirdLumbarVertebra"], 
+                    Entity["AnatomicalStructure", "FourthLumbarVertebra"], 
+                    Entity["AnatomicalStructure", "FifthLumbarVertebra"], 
+                    Entity["AnatomicalStructure", "Vomer"], 
+                    Entity["AnatomicalStructure", "FirstThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "SecondThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "ThirdCervicalVertebra"], 
+                    Entity["AnatomicalStructure", "FourthCervicalVertebra"], 
+                    Entity["AnatomicalStructure", "FifthCervicalVertebra"], 
+                    Entity["AnatomicalStructure", "SixthCervicalVertebra"], 
+                    Entity["AnatomicalStructure", "SeventhThoracicVertebra"], 
+                    
+                    Entity["AnatomicalStructure", "SixthThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "FifthThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "FourthThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "ThirdThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "EighthThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "NinthThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "TenthThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "EleventhThoracicVertebra"], 
+                    Entity["AnatomicalStructure", "TwelfthThoracicVertebra"], 
+                    
+                    Entity["AnatomicalStructure", "RightFirstRib"], 
+                    Entity["AnatomicalStructure", "RightSecondRib"], 
+                    Entity["AnatomicalStructure", "RightThirdRib"], 
+                    Entity["AnatomicalStructure", "RightFourthRib"], 
+                    Entity["AnatomicalStructure", "LeftFirstRib"], 
+                    Entity["AnatomicalStructure", "LeftSecondRib"], 
+                    Entity["AnatomicalStructure", "LeftThirdRib"], 
+                    Entity["AnatomicalStructure", "RightFifthRib"], 
+                    Entity["AnatomicalStructure", "LeftFifthRib"], 
+                    Entity["AnatomicalStructure", "LeftFourthRib"], 
+                    Entity["AnatomicalStructure", "RightSixthRib"], 
+                    Entity["AnatomicalStructure", "LeftSixthRib"], 
+                    Entity["AnatomicalStructure", "RightSeventhRib"], 
+                    Entity["AnatomicalStructure", "LeftSeventhRib"], 
+                    Entity["AnatomicalStructure", "RightEighthRib"], 
+                    Entity["AnatomicalStructure", "LeftEighthRib"], 
+                    Entity["AnatomicalStructure", "RightNinthRib"], 
+                    Entity["AnatomicalStructure", "LeftNinthRib"], 
+                    Entity["AnatomicalStructure", "RightTenthRib"], 
+                    Entity["AnatomicalStructure", "LeftTenthRib"], 
+                    Entity["AnatomicalStructure", "RightEleventhRib"], 
+                    Entity["AnatomicalStructure", "LeftEleventhRib"], 
+                    Entity["AnatomicalStructure", "RightTwelfthRib"], 
+                    Entity["AnatomicalStructure", "LeftTwelfthRib"], 
+                    Entity["AnatomicalStructure", "RightClavicle"], 
+                    Entity["AnatomicalStructure", "LeftClavicle"], 
+                    Entity["AnatomicalStructure", "RightScapula"], 
+                    Entity["AnatomicalStructure", "LeftScapula"], 
+                    Entity["AnatomicalStructure", "RightHipBone"], 
+                    Entity["AnatomicalStructure", "LeftHipBone"], 
+                    Entity["AnatomicalStructure", "RightHumerus"], 
+                    Entity["AnatomicalStructure", "LeftHumerus"], 
+                    Entity["AnatomicalStructure", "RightRadius"], 
+                    Entity["AnatomicalStructure", "LeftRadius"], 
+                    Entity["AnatomicalStructure", "RightUlna"], 
+                    Entity["AnatomicalStructure", "LeftUlna"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftIndexFinger"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftMiddleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftRingFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftLittleFinger"], 
+                    Entity["AnatomicalStructure", "DistalPhalanxOfLeftThumb"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftIndexFinger"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftMiddleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftRingFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftLittleFinger"], 
+                    Entity["AnatomicalStructure", "RightLunate"], 
+                    Entity["AnatomicalStructure", "LeftLunate"], 
+                    Entity["AnatomicalStructure", "RightTrapezium"], 
+                    Entity["AnatomicalStructure", "LeftTrapezium"], 
+                    Entity["AnatomicalStructure", "RightHamate"], 
+                    Entity["AnatomicalStructure", "LeftHamate"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfRightThumb"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "ProximalPhalanxOfRightIndexFinger"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "ProximalPhalanxOfRightMiddleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "ProximalPhalanxOfRightRingFinger"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "ProximalPhalanxOfRightLittleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfRightIndexFinger"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "MiddlePhalanxOfRightMiddleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfRightRingFinger"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", 
+                    "MiddlePhalanxOfRightLittleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightThumb"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightIndexFinger"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "DistalPhalanxOfRightMiddleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightRingFinger"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", 
+                    "DistalPhalanxOfRightLittleFinger"], 
+                    Entity["AnatomicalStructure", "RightFirstMetacarpalBone"], 
+                    Entity["AnatomicalStructure", "LeftFirstMetacarpalBone"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "RightSecondMetacarpalBone"], 
+                    Entity["AnatomicalStructure", "LeftSecondMetacarpalBone"], 
+                    Entity["AnatomicalStructure", "RightThirdMetacarpalBone"], 
+                    Entity["AnatomicalStructure", "LeftThirdMetacarpalBone"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "RightFourthMetacarpalBone"], 
+                    Entity["AnatomicalStructure", "LeftFourthMetacarpalBone"], 
+                    Entity["AnatomicalStructure", "RightFifthMetacarpalBone"], 
+                    Entity["AnatomicalStructure", "LeftFifthMetacarpalBone"], 
+                    
+                    Entity["AnatomicalStructure", "RightFemur"], 
+                    Entity["AnatomicalStructure", "LeftFemur"], 
+                    Entity["AnatomicalStructure", "RightTibia"], 
+                    Entity["AnatomicalStructure", "LeftTibia"], 
+                    Entity["AnatomicalStructure", "RightFibula"], 
+                    Entity["AnatomicalStructure", "LeftFibula"], 
+                    Entity["AnatomicalStructure", "RightTalus"], 
+                    Entity["AnatomicalStructure", "LeftTalus"], 
+                    Entity["AnatomicalStructure", "RightPatella"], 
+                    Entity["AnatomicalStructure", "LeftPatella"], 
+                    Entity["AnatomicalStructure", "RightCalcaneus"], 
+                    Entity["AnatomicalStructure", "LeftCalcaneus"], 
+                    Entity["AnatomicalStructure", "NavicularBoneOfRightFoot"], 
+                    Entity["AnatomicalStructure", "NavicularBoneOfLeftFoot"], 
+                    
+                    Entity["AnatomicalStructure", "RightFirstMetatarsalBone"], 
+                    Entity["AnatomicalStructure", "LeftFirstMetatarsalBone"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "RightSecondMetatarsalBone"], 
+                    Entity["AnatomicalStructure", "LeftSecondMetatarsalBone"], 
+                    Entity["AnatomicalStructure", "RightThirdMetatarsalBone"], 
+                    Entity["AnatomicalStructure", "LeftThirdMetatarsalBone"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "RightFourthMetatarsalBone"], 
+                    Entity["AnatomicalStructure", "LeftFourthMetatarsalBone"], 
+                    Entity["AnatomicalStructure", "RightFifthMetatarsalBone"], 
+                    Entity["AnatomicalStructure", "LeftFifthMetatarsalBone"], 
+                    
+                    Entity["AnatomicalStructure", "RightMedialCuneiformBone"], 
+                    Entity["AnatomicalStructure", "LeftMedialCuneiformBone"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "RightIntermediateCuneiformBone"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "LeftIntermediateCuneiformBone"], 
+                    Entity[
+                    "AnatomicalStructure", "RightLateralCuneiformBone"], 
+                    Entity["AnatomicalStructure", "LeftLateralCuneiformBone"], 
+                    Entity["AnatomicalStructure", "RightCuboidBone"], 
+                    Entity["AnatomicalStructure", "LeftCuboidBone"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfRightSecondToe"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfLeftSecondToe"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfRightThirdToe"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfLeftThirdToe"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfRightFourthToe"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfLeftFourthToe"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfRightLittleToe"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfLeftLittleToe"], 
+                    
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfRightSecondToe"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftSecondToe"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfRightThirdToe"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftThirdToe"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfRightFourthToe"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftFourthToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightBigToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftBigToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightSecondToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftSecondToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightThirdToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftThirdToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightFourthToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftFourthToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfRightLittleToe"], 
+                    Entity[
+                    "AnatomicalStructure", "DistalPhalanxOfLeftLittleToe"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfRightBigToe"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfLeftBigToe"], 
+                    Entity["AnatomicalStructure", "RightTemporalBone"], 
+                    Entity["AnatomicalStructure", "RightParietalBone"], 
+                    Entity["AnatomicalStructure", "RightZygomaticBone"], 
+                    Entity["AnatomicalStructure", "LeftZygomaticBone"], 
+                    Entity["AnatomicalStructure", "RightLacrimalBone"], 
+                    Entity["AnatomicalStructure", "LeftLacrimalBone"], 
+                    Entity["AnatomicalStructure", "RightNasalBone"], 
+                    Entity["AnatomicalStructure", "RightMaxilla"], 
+                    Entity["AnatomicalStructure", "LeftMaxilla"], 
+                    Entity["AnatomicalStructure", "RightPalatineBone"], 
+                    Entity["AnatomicalStructure", "RightInferiorNasalConcha"], 
+                    Entity["AnatomicalStructure", "LeftInferiorNasalConcha"], 
+                    
+                    Entity["AnatomicalStructure", "RightScaphoid"], 
+                    Entity["AnatomicalStructure", "RightTriquetral"], 
+                    Entity["AnatomicalStructure", "LeftPisiform"], 
+                    Entity["AnatomicalStructure", "LeftCapitate"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfLeftThumb"], 
+                    Entity["AnatomicalStructure", "LeftParietalBone"], 
+                    Entity["AnatomicalStructure", "LeftNasalBone"], 
+                    Entity["AnatomicalStructure", "LeftPalatineBone"], 
+                    Entity["AnatomicalStructure", "LeftTriquetral"], 
+                    Entity["AnatomicalStructure", "LeftTrapezoid"], 
+                    Entity["AnatomicalStructure", "LeftTemporalBone"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "ProximalPhalanxOfLeftMiddleFinger"], 
+                    Entity[
+                    "AnatomicalStructure", 
+                    "ProximalPhalanxOfLeftIndexFinger"], 
+                    Entity[
+                    "AnatomicalStructure", "ProximalPhalanxOfLeftRingFinger"], 
+                    Entity["AnatomicalStructure", "RightStapes"], 
+                    Entity["AnatomicalStructure", "LeftStapes"], 
+                    Entity["AnatomicalStructure", "RightIncus"], 
+                    Entity["AnatomicalStructure", "LeftIncus"], 
+                    Entity["AnatomicalStructure", "RightMalleus"], 
+                    Entity["AnatomicalStructure", "LeftMalleus"], 
+                    Entity[
+                    "AnatomicalStructure", "MiddlePhalanxOfLeftLittleToe"]},
+                   SelectWithContents->True,
+                   Selectable->False]}]}], "\[IndentingNewLine]", "|>"}], ",",
+                "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"bone", "=", 
+             RowBox[{"RandomChoice", "[", 
+              RowBox[{
+               RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+               "1", "\[RightDoubleBracket]"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"name", "=", 
+             RowBox[{"EntityValue", "[", 
+              RowBox[{"bone", ",", "\"\<Name\>\""}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"pic", "=", 
+             RowBox[{
+              RowBox[{"EntityValue", "[", 
+               RowBox[{"bone", ",", "\"\<Graphics3D\>\""}], "]"}], "/.", 
+              RowBox[{
+               RowBox[{"Graphics3D", "[", "a__", "]"}], "\[Rule]", 
+               RowBox[{"Graphics3D", "[", 
+                RowBox[{"a", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", "480", "}"}], ",", 
+                    RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}]}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"q", "=", 
+             RowBox[{
+             "\"\<This bone is called the \>\"", "<>", "name", "<>", 
+              "\"\<. Which animal is it from?\>\""}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"mixed", "=", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<a cat\>\"", ",", "\"\<a dog\>\"", ",", "\"\<a horse\>\"", 
+               ",", "\"\<a human\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+            
+            RowBox[{"ans", "=", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{
+               RowBox[{"Keys", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+               "1", "\[RightDoubleBracket]"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"InputForm", "[", 
+             RowBox[{"{", 
+              RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+             "]"}]}]}], "]"}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Anat14\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.7016229511633787`*^9, 3.7016229710899477`*^9}, {
-  3.7016241481173677`*^9, 3.70162416416397*^9}, {3.701624204887041*^9, 
-  3.7016242111019497`*^9}, {3.701624269632695*^9, 3.701624453617856*^9}, {
-  3.701624523582415*^9, 3.701624529932757*^9}, {3.7016245869449*^9, 
-  3.7016246204087963`*^9}, {3.70162466241125*^9, 3.701624808387547*^9}, {
-  3.701624894840016*^9, 3.701624896598308*^9}, {3.701624942632978*^9, 
-  3.701624958129332*^9}, {3.7016250238141336`*^9, 3.701625144579626*^9}, {
-  3.701625211493272*^9, 3.701625399294201*^9}, {3.701625474539707*^9, 
-  3.701625548765806*^9}, {3.701625610450095*^9, 3.701625625106204*^9}, {
-  3.7016266454297028`*^9, 
-  3.701626646883209*^9}},ExpressionUUID->"f55998dc-291d-487a-8d07-\
-22a362a32843"]
+   3.7016241481173677`*^9, 3.70162416416397*^9}, {3.701624204887041*^9, 
+   3.7016242111019497`*^9}, {3.701624269632695*^9, 3.701624453617856*^9}, {
+   3.701624523582415*^9, 3.701624529932757*^9}, {3.7016245869449*^9, 
+   3.7016246204087963`*^9}, {3.70162466241125*^9, 3.701624808387547*^9}, {
+   3.701624894840016*^9, 3.701624896598308*^9}, {3.701624942632978*^9, 
+   3.701624958129332*^9}, {3.7016250238141336`*^9, 3.701625144579626*^9}, {
+   3.701625211493272*^9, 3.701625399294201*^9}, {3.701625474539707*^9, 
+   3.701625548765806*^9}, {3.701625610450095*^9, 3.701625625106204*^9}, {
+   3.7016266454297028`*^9, 3.701626646883209*^9}, {3.798839260022935*^9, 
+   3.798839471540134*^9}, 3.798839584483389*^9, 3.798839871529245*^9, 
+   3.798839982941752*^9, {3.7988405627769213`*^9, 3.798840621386956*^9}, {
+   3.7988407144910707`*^9, 3.798840799818595*^9}, {3.7988408790113487`*^9, 
+   3.798840885490662*^9}, {3.7988409200197353`*^9, 3.798840927890431*^9}, {
+   3.798840960027914*^9, 3.798841047865755*^9}, {3.798841119195279*^9, 
+   3.7988411753781567`*^9}, {3.798841206643613*^9, 3.798841275041638*^9}, {
+   3.798841317722315*^9, 3.79884146398514*^9}, {3.798841501083189*^9, 
+   3.798841501289442*^9}, {3.798842224360876*^9, 3.798842276312169*^9}, {
+   3.798842311481512*^9, 3.798842328560121*^9}, {3.798842377121304*^9, 
+   3.798842385168428*^9}, {3.798842432130118*^9, 3.798842444304185*^9}, {
+   3.798842475653701*^9, 3.798842479945907*^9}, {3.7988426075219584`*^9, 
+   3.798842680487591*^9}, 3.79888008785527*^9, 3.798883181831192*^9, {
+   3.7988833991881227`*^9, 3.7988834000594597`*^9}, {3.7988836512834597`*^9, 
+   3.798883708326366*^9}, {3.798883751006823*^9, 3.798883753320849*^9}, 
+   3.7988904301094913`*^9, 3.7988913349570208`*^9, 3.798891389285627*^9, {
+   3.798891604964203*^9, 3.798891609741227*^9}, {3.798891686612708*^9, 
+   3.798891687900127*^9}, {3.7988917236361837`*^9, 3.798891724324938*^9}, 
+   3.798892059278987*^9, 3.798892356729288*^9, {3.798892443451705*^9, 
+   3.798892447557144*^9}, 3.798903989277047*^9, {3.798904045517412*^9, 
+   3.7989040488305483`*^9}, {3.798904139590119*^9, 3.7989041415745277`*^9}, {
+   3.798904301370122*^9, 3.798904315629849*^9}, {3.7989045870716047`*^9, 
+   3.798904608196312*^9}, {3.7989056300125027`*^9, 3.798905639034189*^9}},
+ CellLabel->
+  "In[703]:=",ExpressionUUID->"f7b7887d-7221-4105-9f82-eeda7a245e51"]
 },
-WindowSize->{1229, 1055},
-WindowMargins->{{1, Automatic}, {43, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1849, 1395},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"cc872eb2-e6ca-4eec-babd-27b155cacc36"
 ]
 (* End of Notebook Content *)
 
@@ -153,7 +1813,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5058, 116, 325, "Input",ExpressionUUID->"f55998dc-291d-487a-8d07-22a362a32843"]
+Cell[558, 20, 87687, 1775, 731, "Input",ExpressionUUID->"f7b7887d-7221-4105-9f82-eeda7a245e51"]
 }
 ]
 *)
