@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14676,        310]
-NotebookOptionsPosition[     14228,        293]
-NotebookOutlinePosition[     14591,        309]
-CellTagsIndexPosition[     14548,        306]
+NotebookDataLength[     17842,        361]
+NotebookOptionsPosition[     17493,        347]
+NotebookOutlinePosition[     17887,        363]
+CellTagsIndexPosition[     17844,        360]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -28,209 +26,256 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"RandomSample", "[", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"<|", "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["38", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["9152", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "Afghanistan" -> {"Hamid Karzai", "Ashraf Ghani"}, 
+               "Argentina" -> {"Eva Peron"}, 
+               "Australia" -> {"Gough Whitlam", "Julia Gillard"}, 
+               "Austria" -> {"Otto von Habsburg"}, 
+               "Canada" -> {"Justin Trudeau", "Pierre Trudeau"}, 
+               "Chile" -> {"Augusto Pinochet"}, 
+               "China" -> {
+                "Mao Zedong", "Xi Jinping", "Deng Xiaoping", 
+                 "Chiang Kai-shek"}, 
+               "Cuba" -> {
+                "Fidel Castro", "Che Guevara", "Ra\[UAcute]l Castro"}, 
+               "Czechoslovakia" -> {"Tom\[AAcute]\[SHacek] Garrigue Masaryk"},
+                "the Dominican Republic" -> {"Rafael Trujillo"}, 
+               "Egypt" -> {
+                "Yasser Arafat", "Anwar el-Sadat", "Hosni Mubarak"}, 
+               "England" -> {"Elizabeth I", "Winston Churchill"}, 
+               "Ethiopia" -> {"Haile Selassie"}, 
+               "France" -> {"Napoleon Bonaparte", "Charles de Gaulle"}, 
+               "Germany" -> {"Adolf Hitler", "Angela Merkel", "Helmut Kohl"}, 
+               "Guatemala" -> {"Rigoberta Menchu"}, 
+               "India" -> {
+                "Jawaharlal Neru", "Indira Gandhi", "Mahatma Gandhi"}, 
+               "Iran" -> {
+                "Sayyid Ruhollah M\:016bsavi Khomeini", 
+                 "Mohammad Reza Pahlavi", "Rez\[ABar] Sh\[ABar]h"}, 
+               "Iraq" -> {"Saddam Hussein", "Haider al-Abadi"}, 
+               "Israel" -> {
+                "Benjamin Netanyahu", "Yitzhak Rabin", "Ariel Sharon", 
+                 "Shimon Peres", "Golda Meir"}, 
+               "Italy" -> {"Benito Mussolini"}, "Japan" -> {"Hirohito"}, 
+               "Jordan" -> {
+                "Hussein bin Talal", "Abdullah II bin Al-Hussein"}, 
+               "Kenya" -> {"Jomo Kenyatta"}, "Libya" -> {"Muammar Gaddafi"}, 
+               "Mexico" -> {
+                "Benito Juarez", "Emiliano Zapata", "Vicente Fox"}, 
+               "North Korea" -> {"Kim Jong-il", "Kim Jong-un"}, 
+               "Pakistan" -> {
+                "Nawaz Sharif", "Benazir Bhutto", "Pervez Musharraf"}, 
+               "the Philippines" -> {"Ferdinand Marcos", "Corazon Aquino"}, 
+               "Poland" -> {"Lech Walesa"}, 
+               "Russia" -> {
+                "Vladimir Putin", "Joseph Stalin", "Vladimir Lenin", 
+                 "Mikhail Gorbachev", "Nikita Khrushcchev", "Boris Yeltsin"}, 
+               "Saudi Arabia" -> {"Abdullah bin Abdulaziz Al Saud"}, 
+               "Spain" -> {"Francisco Franco"}, 
+               "South Africa" -> {"Nelson Mandela", "Pieter Willem Botha"}, 
+               "Thailand" -> {"Bhumibol Adulyadej"}, 
+               "Venezuela" -> {"Hugo Chavez", "Simon Bolivar"}, 
+               "Vietnam" -> {"Ho Chi Minh"}, 
+               "Zambia" -> {"Kenneth David Kaunda"}],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"preQ", "=", 
+           RowBox[{"ToCharacterCode", "[", 
+            RowBox[{
+             RowBox[{"RandomChoice", "[", 
+              RowBox[{
+               RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+               "1", "\[RightDoubleBracket]"}], "]"}], "<>", 
+             "\"\< is best known for being a leader in which of these \
+countries?\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
            RowBox[{
-            RowBox[{"\"\<Afghanistan\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Hamid Karzai\>\"", ",", "\"\<Ashraf Ghani\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Argentina\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Eva Peron\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Australia\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Gough Whitlam\>\"", ",", "\"\<Julia Gillard\>\""}],
-               "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Austria\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Otto von Habsburg\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Canada\>\"", "\[Rule]", 
-             RowBox[{"{", 
+            RowBox[{"Hold", "[", 
+             RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", "preQ"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
               RowBox[{
-              "\"\<Justin Trudeau\>\"", ",", "\"\<Pierre Trudeau\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Chile\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Augusto Pinochet\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<China\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Mao Zedong\>\"", ",", "\"\<Xi Jinping\>\"", ",", 
-               "\"\<Deng Xiaoping\>\"", ",", "\"\<Chiang Kai-shek\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Cuba\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Fidel Castro\>\"", ",", "\"\<Che Guevara\>\"", ",", 
-               "\"\<Ra\[UAcute]l Castro\>\""}], "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Czechoslovakia\>\"", "\[Rule]", 
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
              RowBox[{
-             "{", "\"\<Tom\[AAcute]\[SHacek] Garrigue Masaryk\>\"", "}"}]}], 
-            ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<the Dominican Republic\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Rafael Trujillo\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Egypt\>\"", "\[Rule]", 
-             RowBox[{"{", 
+             "ResourceData", "[", "\"\<World Constitutions\>\"", "]"}], ",", 
+             "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"cos", "=", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
+            RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansWds", "=", 
+           RowBox[{"Cases", "[", 
+            RowBox[{
+             RowBox[{"DeleteStopwords", "[", 
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"TextWords", "[", 
+                RowBox[{"ToLowerCase", "[", 
+                 RowBox[{"StringDelete", "[", 
+                  RowBox[{
+                   RowBox[{"data", "[", 
+                    RowBox[{"1", ",", "\"\<Text\>\""}], "]"}], ",", 
+                   RowBox[{"EntityValue", "[", 
+                    RowBox[{
+                    RowBox[{"cos", "[", "1", "]"}], ",", "\"\<Name\>\""}], 
+                    "]"}], ",", 
+                   RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "]"}], 
+                "]"}], "]"}], "]"}], ",", 
+             RowBox[{"s_String", "/;", 
+              RowBox[{"StringFreeQ", "[", 
+               RowBox[{"s", ",", 
+                RowBox[{"Characters", "[", "\"\<0123456789\>\"", "]"}]}], 
+               "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disWds", "=", 
+           RowBox[{"DeleteStopwords", "[", 
+            RowBox[{"DeleteDuplicates", "[", 
+             RowBox[{"TextWords", "[", 
+              RowBox[{"ToLowerCase", "[", 
+               RowBox[{"StringDelete", "[", 
+                RowBox[{
+                 RowBox[{"StringJoin", "[", 
+                  RowBox[{
+                   RowBox[{"data", "[", 
+                    RowBox[{
+                    RowBox[{"2", ";;", "4"}], ",", "\"\<Text\>\""}], "]"}], "//",
+                    "Normal"}], "]"}], ",", 
+                 RowBox[{"CommonName", "[", 
+                  RowBox[{
+                   RowBox[{"data", "[", 
+                    RowBox[{
+                    RowBox[{"2", ";;", "4"}], ",", "\"\<Country\>\""}], "]"}],
+                    "//", "Normal"}], "]"}], ",", 
+                 RowBox[{"IgnoreCase", "\[Rule]", "True"}]}], "]"}], "]"}], 
+              "]"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"wd", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Complement", "[", 
+              RowBox[{"ansWds", ",", "disWds"}], "]"}], ",", "5"}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which of these countries' constitutions contains the words \
+`1`, `2`, `3`, `4`, and `5`?\>\"", ",", 
+             RowBox[{"Style", "[", 
               RowBox[{
-              "\"\<Yasser Arafat\>\"", ",", "\"\<Anwar el-Sadat\>\"", ",", 
-               "\"\<Hosni Mubarak\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<England\>\"", "\[Rule]", 
-             RowBox[{"{", 
+               RowBox[{
+               "wd", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+               ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
               RowBox[{
-              "\"\<Elizabeth I\>\"", ",", "\"\<Winston Churchill\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Ethiopia\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Haile Selassie\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<France\>\"", "\[Rule]", 
-             RowBox[{"{", 
+               RowBox[{
+               "wd", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+               ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
               RowBox[{
-              "\"\<Napoleon Bonaparte\>\"", ",", 
-               "\"\<Charles de Gaulle\>\""}], "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Germany\>\"", "\[Rule]", 
-             RowBox[{"{", 
+               RowBox[{
+               "wd", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}], 
+               ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
               RowBox[{
-              "\"\<Adolf Hitler\>\"", ",", "\"\<Angela Merkel\>\"", ",", 
-               "\"\<Helmut Kohl\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Guatemala\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Rigoberta Menchu\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<India\>\"", "\[Rule]", 
-             RowBox[{"{", 
+               RowBox[{
+               "wd", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}], 
+               ",", "Italic"}], "]"}], ",", 
+             RowBox[{"Style", "[", 
               RowBox[{
-              "\"\<Jawaharlal Neru\>\"", ",", "\"\<Indira Gandhi\>\"", ",", 
-               "\"\<Mahatma Gandhi\>\""}], "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Iran\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Sayyid Ruhollah M\:016bsavi Khomeini\>\"", ",", 
-               "\"\<Mohammad Reza Pahlavi\>\"", ",", 
-               "\"\<Rez\[ABar] Sh\[ABar]h\>\""}], "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Iraq\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Saddam Hussein\>\"", ",", "\"\<Haider al-Abadi\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Israel\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Benjamin Netanyahu\>\"", ",", "\"\<Yitzhak Rabin\>\"", 
-               ",", "\"\<Ariel Sharon\>\"", ",", "\"\<Shimon Peres\>\"", ",", 
-               "\"\<Golda Meir\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Italy\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Benito Mussolini\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Japan\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Hirohito\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Jordan\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Hussein bin Talal\>\"", ",", 
-               "\"\<Abdullah II bin Al-Hussein\>\""}], "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Kenya\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Jomo Kenyatta\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Libya\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Muammar Gaddafi\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Mexico\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Benito Juarez\>\"", ",", "\"\<Emiliano Zapata\>\"", ",", 
-               "\"\<Vicente Fox\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<North Korea\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Kim Jong-il\>\"", ",", "\"\<Kim Jong-un\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Pakistan\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Nawaz Sharif\>\"", ",", "\"\<Benazir Bhutto\>\"", ",", 
-               "\"\<Pervez Musharraf\>\""}], "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<the Philippines\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Ferdinand Marcos\>\"", ",", "\"\<Corazon Aquino\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Poland\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Lech Walesa\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Russia\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Vladimir Putin\>\"", ",", "\"\<Joseph Stalin\>\"", ",", 
-               "\"\<Vladimir Lenin\>\"", ",", "\"\<Mikhail Gorbachev\>\"", 
-               ",", "\"\<Nikita Khrushcchev\>\"", ",", 
-               "\"\<Boris Yeltsin\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Saudi Arabia\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Abdullah bin Abdulaziz Al Saud\>\"", "}"}]}], 
-            ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Spain\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Francisco Franco\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<South Africa\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Nelson Mandela\>\"", ",", "\"\<Pieter Willem Botha\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Thailand\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Bhumibol Adulyadej\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Venezuela\>\"", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"\"\<Hugo Chavez\>\"", ",", "\"\<Simon Bolivar\>\""}], 
-              "}"}]}], ",", "\[IndentingNewLine]", 
-            RowBox[{"\"\<Vietnam\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Ho Chi Minh\>\"", "}"}]}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{"\"\<Zambia\>\"", "\[Rule]", 
-             RowBox[{"{", "\"\<Kenneth David Kaunda\>\"", "}"}]}]}], 
-           "\[IndentingNewLine]", "|>"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"preQ", "=", 
-        RowBox[{"ToCharacterCode", "[", 
-         RowBox[{
-          RowBox[{"RandomChoice", "[", 
+               RowBox[{
+               "wd", "\[LeftDoubleBracket]", "5", "\[RightDoubleBracket]"}], 
+               ",", "Italic"}], "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          
+          RowBox[{"qTransit", "=", 
            RowBox[{
-            RowBox[{"Values", "[", "data", "]"}], "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "]"}], "<>", 
-          "\"\< is best known for being a leader in which of these countries?\
-\>\""}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
-         RowBox[{"h1", "\[Rule]", "preQ"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Hist13\>\"", ",", 
-   
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"CommonName", "[", 
+            RowBox[{"Normal", "[", "cos", "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+            "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Hist13\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.705167236131954*^9, 3.7051672835707808`*^9}, {
    3.7051674054315233`*^9, 3.705167534110202*^9}, {3.705167665270653*^9, 
@@ -273,29 +318,38 @@ Cell[BoxData[
    3.705239493750514*^9}, {3.705239726529043*^9, 3.70523975255295*^9}, {
    3.705239819568568*^9, 3.705239833319199*^9}, {3.7260559043923073`*^9, 
    3.726055917655085*^9}, {3.726055978766756*^9, 3.726056067916198*^9}, 
-   3.7265102540920267`*^9},ExpressionUUID->"177312c4-d146-4241-b398-\
-d6f5f80614e1"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Hist13\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Hist13"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Hist13"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{
-  3.726056744513318*^9},ExpressionUUID->"c406659a-fb3f-492f-bfca-\
-047cc97aadad"]
-}, Open  ]]
+   3.7265102540920267`*^9, {3.7989932673207493`*^9, 3.798993305295539*^9}, {
+   3.798993489825632*^9, 3.798993612471274*^9}, {3.798993684575774*^9, 
+   3.798993757407048*^9}, {3.798993900446672*^9, 3.7989940500722513`*^9}, {
+   3.798994124097336*^9, 3.7989942177852077`*^9}, {3.7989942581378393`*^9, 
+   3.798994293024034*^9}, {3.798994456179084*^9, 3.798994505183837*^9}, {
+   3.7989946188087893`*^9, 3.798994636919755*^9}, {3.7989947108339663`*^9, 
+   3.798994767665114*^9}, {3.798994814112093*^9, 3.798994841975979*^9}, {
+   3.7989948841768103`*^9, 3.79899495914362*^9}, {3.798995017729598*^9, 
+   3.798995033535409*^9}, {3.798995253721162*^9, 3.798995333191062*^9}, {
+   3.798995400240992*^9, 3.7989954026552973`*^9}, {3.79899565144293*^9, 
+   3.7989956922230253`*^9}, 3.79899599734814*^9, {3.798996069060788*^9, 
+   3.798996111580063*^9}, {3.798996143870721*^9, 3.798996153795817*^9}, {
+   3.798996262484872*^9, 3.798996266635442*^9}, {3.798996326029567*^9, 
+   3.798996366011321*^9}, {3.798996397275751*^9, 3.7989964301555243`*^9}, {
+   3.79899658595765*^9, 3.798996621067018*^9}, {3.7989967252040243`*^9, 
+   3.7989967653386393`*^9}, {3.798996808698531*^9, 3.798996835890633*^9}, {
+   3.798996891891711*^9, 3.7989969202582893`*^9}, {3.798996976083316*^9, 
+   3.7989969931218987`*^9}, {3.7989971028672743`*^9, 3.798997203466104*^9}, {
+   3.7989972360046053`*^9, 3.798997264922668*^9}, {3.79899730024177*^9, 
+   3.7989973038575497`*^9}, {3.798997348642754*^9, 3.7989973770337067`*^9}, {
+   3.7989974325564957`*^9, 3.798997462705104*^9}, {3.798997502386204*^9, 
+   3.798997567361027*^9}, {3.798997724764887*^9, 3.798997752800364*^9}, {
+   3.7989978192673073`*^9, 3.798997862736466*^9}, {3.79899810760702*^9, 
+   3.798998186111755*^9}, {3.798998600185759*^9, 3.798998714326775*^9}},
+ CellLabel->
+  "In[392]:=",ExpressionUUID->"177312c4-d146-4241-b398-d6f5f80614e1"]
 },
-WindowSize->{1899, 1204},
-WindowMargins->{{Automatic, -104}, {89, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1767, 1385},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"d43a8404-728a-4f42-9864-e0c4cce550cd"
 ]
 (* End of Notebook Content *)
 
@@ -308,10 +362,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 13139, 254, 1060, "Input",ExpressionUUID->"177312c4-d146-4241-b398-d6f5f80614e1"],
-Cell[13722, 278, 490, 12, 37, "Output",ExpressionUUID->"c406659a-fb3f-492f-bfca-047cc97aadad"]
-}, Open  ]]
+Cell[558, 20, 16931, 325, 634, "Input",ExpressionUUID->"177312c4-d146-4241-b398-d6f5f80614e1"]
 }
 ]
 *)
