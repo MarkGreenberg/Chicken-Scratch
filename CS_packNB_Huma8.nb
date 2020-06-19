@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4142,        112]
-NotebookOptionsPosition[      3830,         98]
-NotebookOutlinePosition[      4189,        114]
-CellTagsIndexPosition[      4146,        111]
+NotebookDataLength[      8499,        203]
+NotebookOptionsPosition[      8151,        189]
+NotebookOutlinePosition[      8545,        205]
+CellTagsIndexPosition[      8502,        202]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,81 +26,172 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"yrs", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"1", ",", "8"}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"future", "=", 
-        RowBox[{"Today", "+", 
-         RowBox[{"Quantity", "[", 
-          RowBox[{"yrs", ",", "\"\<Years\>\""}], "]"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ftrDow", "=", 
-        RowBox[{"DateString", "[", 
-         RowBox[{"future", ",", 
-          RowBox[{"{", "\"\<DayName\>\"", "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ftrStr", "=", 
-        RowBox[{"DateString", "[", 
-         RowBox[{"future", ",", 
-          RowBox[{"{", 
-           RowBox[{
-           "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", "\"\<DayShort\>\"", 
-            ",", "\"\<, \>\"", ",", "\"\<Year\>\""}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-          RowBox[{
-          "\"\<What day of the week will it be on \>\"", "<>", "ftrStr", 
-           "<>", "\"\<?\>\""}], ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Prepend", "[", 
-         RowBox[{
-          RowBox[{"RandomSample", "[", 
-           RowBox[{
-            RowBox[{"DeleteCases", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-               "\"\<Saturday\>\"", ",", "\"\<Sunday\>\"", ",", 
-                "\"\<Monday\>\"", ",", "\"\<Tuesday\>\"", ",", 
-                "\"\<Wednesday\>\"", ",", "\"\<Thursday\>\"", ",", 
-                "\"\<Friday\>\""}], "}"}], ",", "ftrDow"}], "]"}], ",", "3"}],
-            "]"}], ",", "ftrDow"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Huma8\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"yrs", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "8"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"future", "=", 
+           RowBox[{"Today", "+", 
+            RowBox[{"Quantity", "[", 
+             RowBox[{"yrs", ",", "\"\<Years\>\""}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ftrDow", "=", 
+           RowBox[{"DateString", "[", 
+            RowBox[{"future", ",", 
+             RowBox[{"{", "\"\<DayName\>\"", "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ftrStr", "=", 
+           RowBox[{"DateString", "[", 
+            RowBox[{"future", ",", 
+             RowBox[{"{", 
+              RowBox[{
+              "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", "\"\<DayShort\>\"", 
+               ",", "\"\<, \>\"", ",", "\"\<Year\>\""}], "}"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{
+             "\"\<What day of the week will it be on \>\"", "<>", "ftrStr", 
+              "<>", "\"\<?\>\""}], ",", 
+             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"DeleteCases", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                  "\"\<Saturday\>\"", ",", "\"\<Sunday\>\"", ",", 
+                   "\"\<Monday\>\"", ",", "\"\<Tuesday\>\"", ",", 
+                   "\"\<Wednesday\>\"", ",", "\"\<Thursday\>\"", ",", 
+                   "\"\<Friday\>\""}], "}"}], ",", "ftrDow"}], "]"}], ",", 
+               "3"}], "]"}], ",", "ftrDow"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"<|", 
+              RowBox[{
+               RowBox[{"\"\<Aries\>\"", "\[Rule]", "\"\<\[AriesSign]\>\""}], 
+               ",", 
+               RowBox[{"\"\<Taurus\>\"", "\[Rule]", "\"\<\[TaurusSign]\>\""}],
+                ",", 
+               RowBox[{"\"\<Gemini\>\"", "\[Rule]", "\"\<\[GeminiSign]\>\""}],
+                ",", 
+               RowBox[{"\"\<Cancer\>\"", "\[Rule]", "\"\<\[CancerSign]\>\""}],
+                ",", 
+               RowBox[{"\"\<Leo\>\"", "\[Rule]", "\"\<\[LeoSign]\>\""}], ",", 
+               
+               RowBox[{"\"\<Virgo\>\"", "\[Rule]", "\"\<\[VirgoSign]\>\""}], 
+               ",", 
+               RowBox[{"\"\<Libra\>\"", "\[Rule]", "\"\<\[LibraSign]\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Scorpio\>\"", "\[Rule]", "\"\<\[ScorpioSign]\>\""}], ",", 
+               
+               RowBox[{
+               "\"\<Sagittarius\>\"", "\[Rule]", 
+                "\"\<\[SagittariusSign]\>\""}], ",", 
+               RowBox[{
+               "\"\<Capricorn\>\"", "\[Rule]", "\"\<\[CapricornSign]\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Aquarius\>\"", "\[Rule]", "\"\<\[AquariusSign]\>\""}], 
+               ",", 
+               RowBox[{
+               "\"\<Pisces\>\"", "\[Rule]", "\"\<\[PiscesSign]\>\""}]}], 
+              "|>"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"sym", "=", 
+           RowBox[{
+            RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", "1",
+             "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Which zodiac sign is symbolized by this \
+character?\\n`1`\>\"", ",", 
+             RowBox[{"Style", "[", 
+              RowBox[{"sym", ",", "144", ",", 
+               RowBox[{"Darker", "[", "Blue", "]"}], ",", 
+               RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}],
+               "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
+        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Huma8\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.687206484807311*^9, 3.687206523769788*^9}, {
-  3.687206653087351*^9, 3.687206862248384*^9}, {3.6872069063239183`*^9, 
-  3.6872070206639843`*^9}, {3.6872070753080673`*^9, 3.687207133205985*^9}, {
-  3.687207165104384*^9, 3.6872071711599197`*^9}, {3.6872072086340923`*^9, 
-  3.687207311013357*^9}, {3.68725548684746*^9, 3.687255553704978*^9}, {
-  3.6872556865874023`*^9, 
-  3.687255701593251*^9}},ExpressionUUID->"3ed5ae3c-344d-4830-9f71-\
-a2a0d5cd0568"]
+   3.687206653087351*^9, 3.687206862248384*^9}, {3.6872069063239183`*^9, 
+   3.6872070206639843`*^9}, {3.6872070753080673`*^9, 3.687207133205985*^9}, {
+   3.687207165104384*^9, 3.6872071711599197`*^9}, {3.6872072086340923`*^9, 
+   3.687207311013357*^9}, {3.68725548684746*^9, 3.687255553704978*^9}, {
+   3.6872556865874023`*^9, 3.687255701593251*^9}, {3.80159730152109*^9, 
+   3.8015974364909267`*^9}, {3.801597512596177*^9, 3.801598036306391*^9}, {
+   3.801598083474574*^9, 3.8015984884895678`*^9}, {3.801598590235042*^9, 
+   3.801598633353207*^9}, {3.801598729163291*^9, 3.8015987862821617`*^9}, 
+   3.801598841067424*^9},
+ CellLabel->"In[80]:=",ExpressionUUID->"2a37aac4-9f97-4325-a34c-2c8a4defdb33"]
 },
-WindowSize->{1241, 975},
-WindowMargins->{{6, Automatic}, {77, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1270, 1318},
+WindowMargins->{{6, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"cfe07164-4812-440d-a4df-4f7c1b1404b7"
 ]
 (* End of Notebook Content *)
 
@@ -113,7 +204,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3268, 76, 304, "Input",ExpressionUUID->"3ed5ae3c-344d-4830-9f71-a2a0d5cd0568"]
+Cell[558, 20, 7589, 167, 577, "Input",ExpressionUUID->"2a37aac4-9f97-4325-a34c-2c8a4defdb33"]
 }
 ]
 *)
