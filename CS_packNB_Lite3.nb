@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13124,        297]
-NotebookOptionsPosition[     12809,        283]
-NotebookOutlinePosition[     13169,        299]
-CellTagsIndexPosition[     13126,        296]
+NotebookDataLength[     32639,        662]
+NotebookOptionsPosition[     31872,        642]
+NotebookOutlinePosition[     32267,        658]
+CellTagsIndexPosition[     32224,        655]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -33,75 +33,110 @@ Cell[BoxData[
            RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
          "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"books", "=", 
-           RowBox[{"{", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Moby Dick\>\"", ",", "\"\<OL6984724M\>\"", ",", "28807", 
-               ",", "1273662"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Ulysses\>\"", ",", "\"\<OL6652730M\>\"", ",", "12202", ",",
-                "1558765"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Jane Eyre\>\"", ",", "\"\<OL14015946M\>\"", ",", "54257", 
-               ",", "1113958"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<The Red Badge of Courage\>\"", ",", "\"\<OL7180620M\>\"", 
-               ",", "2294", ",", "288216"}], "}"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Emma\>\"", ",", "\"\<OL24234129M\>\"", ",", "7153", ",", 
-               "505523"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Huckleberry Finn\>\"", ",", "\"\<OL13991894M\>\"", ",", 
-               "5883", ",", "588666"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Great Expectations\>\"", ",", "\"\<OL24627022M\>\"", ",", 
-               "1182", ",", "1029854"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Frankenstein\>\"", ",", "\"\<OL24326648M\>\"", ",", 
-               "17463", ",", "434099"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Robinson Crusoe\>\"", ",", "\"\<OL24172971M\>\"", ",", 
-               "47048", ",", "1299316"}], "}"}], ",", "\[IndentingNewLine]", 
-             RowBox[{"{", 
-              RowBox[{
-              "\"\<Last of the Mohicans\>\"", ",", "\"\<OL7091179M\>\"", ",", 
-               "8776", ",", "884942"}], "}"}]}], "}"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"fourBooks", "=", 
+          RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
-            RowBox[{"books", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          
-          RowBox[{"choices", "=", 
-           RowBox[{
             RowBox[{
-             RowBox[{"First", "[", "#", "]"}], "&"}], "/@", "fourBooks"}]}], 
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Emma\>\"", ",", "\"\<Jane Austen\>\"", ",", 
+                 "\"\<OL24234129M\>\"", ",", "7153", ",", "505523"}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Ethan Frome\>\"", ",", "\"\<Edith Wharton\>\"", ",", 
+                 "\"\<OL7215847M\>\"", ",", "937", ",", "198845"}], "}"}], 
+               ",", " ", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Frankenstein\>\"", ",", "\"\<Mary Shelley\>\"", ",", 
+                 "\"\<OL24326648M\>\"", ",", "17463", ",", "434099"}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Huckleberry Finn\>\"", ",", "\"\<Mark Twain\>\"", ",", 
+                 "\"\<OL13991894M\>\"", ",", "5883", ",", "588666"}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Jane Eyre\>\"", ",", 
+                 "\"\<Charlotte Bront\[EDoubleDot]\>\"", ",", 
+                 "\"\<OL14015946M\>\"", ",", "54257", ",", "1113958"}], "}"}],
+                ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Last of the Mohicans\>\"", ",", 
+                 "\"\<James Fenimore Cooper\>\"", ",", "\"\<OL7091179M\>\"", 
+                 ",", "8776", ",", "884942"}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Moby Dick\>\"", ",", "\"\<Herman Melville\>\"", ",", 
+                 "\"\<OL6984724M\>\"", ",", "28807", ",", "1273662"}], "}"}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<The Red Badge of Courage\>\"", ",", 
+                 "\"\<Stephen Crane\>\"", ",", "\"\<OL7180620M\>\"", ",", 
+                 "2294", ",", "288216"}], "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Robinson Crusoe\>\"", ",", "\"\<Daniel Defoe\>\"", ",", 
+                 "\"\<OL24172971M\>\"", ",", "47048", ",", "1299316"}], "}"}],
+                ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Stories for the Household\>\"", ",", 
+                 "\"\<Hans Christian Andersen\>\"", ",", "\"\<OL7121802M\>\"",
+                  ",", "7029", ",", "790850"}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Tarzan of the Apes\>\"", ",", 
+                 "\"\<Edgar Rice Burroughs\>\"", ",", "\"\<OL7082899M\>\"", 
+                 ",", "1197", ",", "510832"}], "}"}], ",", 
+               "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Through the Looking-Glass\>\"", ",", 
+                 "\"\<Lewis Carroll\>\"", ",", "\"\<OL24733474M\>\"", ",", 
+                 "4615", ",", "178650"}], "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<Ulysses\>\"", ",", "\"\<James Joyce\>\"", ",", 
+                 "\"\<OL6652730M\>\"", ",", "12202", ",", "1558765"}], 
+                "}"}]}], "\[IndentingNewLine]", "}"}], ",", "4"}], "]"}]}], 
           ";", "\[IndentingNewLine]", 
-          RowBox[{"ansBook", "=", 
-           RowBox[{"fourBooks", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"MapThread", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Tooltip", "[", 
+               RowBox[{"#1", ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"#2", ",", "20", ",", 
+                  RowBox[{"Darker", "[", "Blue", "]"}]}], "]"}]}], "]"}], 
+              "&"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"data", "\[LeftDoubleBracket]", 
+                RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
+               RowBox[{"data", "\[LeftDoubleBracket]", 
+                RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}]}], 
+              "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"beg", "=", 
            RowBox[{"RandomInteger", "[", 
             RowBox[{"{", 
              RowBox[{
-              RowBox[{"ansBook", "[", 
-               RowBox[{"[", "3", "]"}], "]"}], ",", 
+              RowBox[{"data", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "4"}], "\[RightDoubleBracket]"}], ",", 
               RowBox[{
-               RowBox[{"ansBook", "[", 
-                RowBox[{"[", "4", "]"}], "]"}], "-", "240"}]}], "}"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
+               RowBox[{"data", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "5"}], "\[RightDoubleBracket]"}], "-", 
+               "180"}]}], "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"end", "=", 
-           RowBox[{"beg", "+", "240"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"beg", "+", "180"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"openLib", "=", 
            RowBox[{"ServiceConnect", "[", "\"\<OpenLibrary\>\"", "]"}]}], ";",
            "\[IndentingNewLine]", 
@@ -113,20 +148,21 @@ Cell[BoxData[
                RowBox[{"{", 
                 RowBox[{"{", 
                  RowBox[{"\"\<OLID\>\"", ",", 
-                  RowBox[{"ansBook", "[", 
-                   RowBox[{"[", "2", "]"}], "]"}]}], "}"}], "}"}]}], "}"}]}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"snip", "=", 
+                  RowBox[{"data", "\[LeftDoubleBracket]", 
+                   RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], 
+                 "}"}], "}"}]}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"raw", "=", 
            RowBox[{"StringTake", "[", 
             RowBox[{
-             RowBox[{"text", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", 
+             RowBox[{
+             "text", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", 
              RowBox[{"{", 
               RowBox[{"beg", ",", "end"}], "}"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"snip", "=", 
            RowBox[{"StringReplace", "[", 
-            RowBox[{"snip", ",", 
+            RowBox[{"raw", ",", 
              RowBox[{"{", 
               RowBox[{
                RowBox[{
@@ -149,34 +185,55 @@ Cell[BoxData[
                 "RegularExpression", "[", "\"\<\\\\s\\\\S*$\>\"", "]"}], 
                 "\[Rule]", "\"\<\>\""}]}], "}"}]}], "]"}]}], ";", 
           RowBox[{"q", "=", 
-           RowBox[{"Style", "[", 
+           RowBox[{"StringForm", "[", 
             RowBox[{
-             RowBox[{"StringForm", "[", 
+            "\"\<This text is scanned from which book?\\n`` \>\"", ",", 
+             RowBox[{"Style", "[", 
               RowBox[{
-              "\"\<Which novel is this passage scanned from?\\n`` \>\"", ",", 
-               
-               RowBox[{"Style", "[", 
-                RowBox[{
-                 RowBox[{
-                 "\"\<\\\"...\>\"", "<>", "snip", "<>", "\"\<...\\\"\>\""}], 
-                 ",", "24"}], "]"}]}], "]"}], ",", 
-             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+               RowBox[{
+               "\"\<\\\"...\>\"", "<>", "snip", "<>", "\"\<...\\\"\>\""}], 
+               ",", 
+               RowBox[{"Darker", "[", "Gray", "]"}]}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+          
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
-         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            RowBox[{"{", 
@@ -217,17 +274,16 @@ Cell[BoxData[
              RowBox[{"2", ",", "65"}], "}"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"pre", "=", 
-           RowBox[{"data", "[", 
-            RowBox[{"[", 
-             RowBox[{"ansPos", "-", "1"}], "]"}], "]"}]}], ";", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
+            RowBox[{"ansPos", "-", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"book", "=", 
-           RowBox[{"data", "[", 
-            RowBox[{"[", "ansPos", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{
+           "data", "\[LeftDoubleBracket]", "ansPos", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"post", "=", 
-           RowBox[{"data", "[", 
-            RowBox[{"[", 
-             RowBox[{"ansPos", "+", "1"}], "]"}], "]"}]}], ";", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
+            RowBox[{"ansPos", "+", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{"Prepend", "[", 
@@ -256,10 +312,10 @@ comes between `1` and `2`?\>\"", ",",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -278,14 +334,317 @@ comes between `1` and `2`?\>\"", ",",
    3.7324668854108887`*^9, 3.732466897138342*^9}, {3.7324670358264217`*^9, 
    3.732467214169434*^9}, {3.732467263394649*^9, 3.732467280737274*^9}, {
    3.732467450913275*^9, 3.732467553416423*^9}, {3.732467653026106*^9, 
-   3.73246768488807*^9}},ExpressionUUID->"971a7e15-79a2-4297-af46-\
-4eccb773594f"]
+   3.73246768488807*^9}, {3.808674184365789*^9, 3.8086743534172688`*^9}, {
+   3.8086744867234907`*^9, 3.8086744888175907`*^9}, {3.808674578323227*^9, 
+   3.8086745856410637`*^9}, {3.8086748650330887`*^9, 3.808674886768324*^9}, {
+   3.808674930040976*^9, 3.8086749862567053`*^9}, {3.808675070593556*^9, 
+   3.8086751475361757`*^9}, {3.808675180904243*^9, 3.808675186623818*^9}, {
+   3.8086752214480247`*^9, 3.808675268929865*^9}, {3.808675349039734*^9, 
+   3.8086753889511347`*^9}, {3.8086755417156897`*^9, 3.808675629786895*^9}, {
+   3.808675690023974*^9, 3.808675708326847*^9}, {3.808676316782063*^9, 
+   3.808676391183069*^9}, {3.8086770546289473`*^9, 3.8086770560797853`*^9}, {
+   3.8086770933660316`*^9, 3.808677102916464*^9}, {3.808677149062092*^9, 
+   3.8086772634602833`*^9}, {3.808677301389831*^9, 3.8086773143642178`*^9}, {
+   3.808677345677958*^9, 3.808677355179955*^9}, {3.8086774183012457`*^9, 
+   3.808677426691787*^9}, {3.8086774600360117`*^9, 3.808677467404274*^9}, {
+   3.8086775130375767`*^9, 3.808677551804295*^9}, {3.8086776114686317`*^9, 
+   3.8086777318462057`*^9}, {3.80867777535017*^9, 3.8086778024600677`*^9}, {
+   3.808677912764873*^9, 3.8086779401807117`*^9}, {3.808677986829103*^9, 
+   3.808677993883881*^9}, {3.808678189141214*^9, 3.808678288051487*^9}, {
+   3.8086786130268297`*^9, 3.8086786358587437`*^9}, {3.808679197985834*^9, 
+   3.8086792089645023`*^9}, {3.808679401129963*^9, 3.808679450017123*^9}, 
+   3.808679563358679*^9, 3.808679602130334*^9, {3.808679990777432*^9, 
+   3.808680051505076*^9}, 3.8086803818198347`*^9, 3.808680674099586*^9, {
+   3.808681205528532*^9, 3.808681244943372*^9}, 3.808681342642663*^9, 
+   3.808681763472726*^9, {3.8086846740780478`*^9, 3.808684681091433*^9}, {
+   3.808684720576145*^9, 3.8086847296405907`*^9}, {3.8086847729598637`*^9, 
+   3.808684782568172*^9}, {3.808685227016983*^9, 3.808685227603704*^9}, {
+   3.808685704591323*^9, 3.808685751783283*^9}, {3.80868578691875*^9, 
+   3.808685801925963*^9}},
+ CellLabel->
+  "In[418]:=",ExpressionUUID->"1813a819-18ec-48c0-958b-d2643275686b"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+  "The", " ", "code", " ", "below", " ", "is", " ", "for", " ", "testing", 
+   " ", "a", " ", "piece", " ", "of", " ", "literature", " ", "from", " ", 
+   "the", " ", "Open", " ", "Library", " ", "before", " ", "using", " ", 
+   RowBox[{"it", "."}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.80868645238666*^9, 
+  3.8086864847618847`*^9}},ExpressionUUID->"2311fcb2-272f-40cf-9f26-\
+1c23915560cb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"openlibrary", "=", 
+   RowBox[{"ServiceConnect", "[", "\"\<OpenLibrary\>\"", "]"}]}], 
+  "*)"}]], "Input",
+ CellChangeTimes->{
+  3.808686429429372*^9},ExpressionUUID->"27c119cd-0ef9-4747-88c2-\
+7b04814cfe16"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{
+   TagBox["ServiceObject",
+    "SummaryHead"], "[", 
+   DynamicModuleBox[{Typeset`open$$ = False, Typeset`embedState$$ = "Ready"}, 
+    
+    TemplateBox[{
+      PaneSelectorBox[{False -> GridBox[{{
+            GraphicsBox[{
+              Thickness[0.038461538461538464`], {
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               FaceForm[{
+                 RGBColor[0.5, 0.5, 0.5], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{20.5426, 
+                19.116799999999998`}, {16.3832, 21.876199999999997`}, {
+                16.3832, 20.021499999999996`}, {6.930469999999999, 
+                20.021499999999996`}, {6.930469999999999, 
+                18.212100000000003`}, {16.3832, 18.212100000000003`}, {
+                16.3832, 16.357399999999995`}, {20.5426, 
+                19.116799999999998`}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{5.30508, 13.8391}, {
+                9.46445, 11.079700000000003`}, {9.46445, 
+                12.933999999999997`}, {18.917199999999998`, 
+                12.933999999999997`}, {18.917199999999998`, 14.7438}, {
+                9.46445, 14.7438}, {9.46445, 16.598}, {5.30508, 13.8391}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{5.30508, 13.8391}, {
+                9.46445, 11.079700000000003`}, {9.46445, 
+                12.933999999999997`}, {18.917199999999998`, 
+                12.933999999999997`}, {18.917199999999998`, 14.7438}, {
+                9.46445, 14.7438}, {9.46445, 16.598}, {5.30508, 13.8391}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0,
+                 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGIRIGYC4sIjUTVcAooO8+XdOPpnKDg8YkwNXuen7JA2
+W/qycJSgw5sbHEde31CB82PFhGf3n1V1aFVgVz0zR8oBrF9czWFHsFXE/9Wy
+Dje0Dj4qiFWDy7cVLYptDVKH65/g6Xbu0HMNOB9sn4I23H6w+SWacD5De8DS
+tDQNB7ldC/alskg4aD2+nx6joeFgnPFi/oMZog5B9vlaQa/UHao9k7f0KUhA
++D/UUPVbqML5jCB+oIpDzJHypGv8Eg4eGad3ikiqwM2T57H5LndPGW6eya7m
+GzMvKcH1o4cXABG3d/Y=
+                "]], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{14.163129999999999`, 
+                4.337966249999999}, {16.96813, 4.337966249999999}, {16.96813, 
+                5.047809999999999}, {14.98813, 5.047809999999999}, {14.98813, 
+                8.29796625}, {14.163129999999999`, 8.29796625}, {
+                14.163129999999999`, 4.337966249999999}}}]}}, Background -> 
+             GrayLevel[0.93], Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+             FrameTicks -> None, FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]]], 
+            GridBox[{{
+               TagBox["\"OpenLibrary\"", "SummaryItem"]}, {
+               TagBox[
+                DynamicBox[
+                 ToBoxes[
+                  If[
+                   TrueQ[
+                    ServiceConnections`Private`authenticatedServiceQ[
+                    "connection-b6cd34b3349a3832bc3c6c5689848316"]], 
+                   "Connected", "Not Connected"], StandardForm]], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}], True -> GridBox[{{
+            GraphicsBox[{
+              Thickness[0.038461538461538464`], {
+               FaceForm[{
+                 GrayLevel[0.93], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{1, 4, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}, {
+                1, 3, 3}, {0, 1, 0}, {1, 3, 3}, {0, 1, 0}}}, {{{
+                25.499999999999996`, 2.5}, {25.499999999999996`, 
+                1.3953100000000003`}, {24.604699999999998`, 
+                0.49999999999999994`}, {23.5, 0.49999999999999994`}, {2.5, 
+                0.49999999999999994`}, {1.3953100000000003`, 
+                0.49999999999999994`}, {0.49999999999999994`, 
+                1.3953100000000003`}, {0.49999999999999994`, 2.5}, {
+                0.49999999999999994`, 23.5}, {0.49999999999999994`, 
+                24.604699999999998`}, {1.3953100000000003`, 
+                25.499999999999996`}, {2.5, 25.499999999999996`}, {23.5, 
+                25.499999999999996`}, {24.604699999999998`, 
+                25.499999999999996`}, {25.499999999999996`, 
+                24.604699999999998`}, {25.499999999999996`, 23.5}, {
+                25.499999999999996`, 2.5}}}]}, {
+               FaceForm[{
+                 RGBColor[0.5, 0.5, 0.5], 
+                 Opacity[1.]}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{20.5426, 
+                19.116799999999998`}, {16.3832, 21.876199999999997`}, {
+                16.3832, 20.021499999999996`}, {6.930469999999999, 
+                20.021499999999996`}, {6.930469999999999, 
+                18.212100000000003`}, {16.3832, 18.212100000000003`}, {
+                16.3832, 16.357399999999995`}, {20.5426, 
+                19.116799999999998`}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{5.30508, 13.8391}, {
+                9.46445, 11.079700000000003`}, {9.46445, 
+                12.933999999999997`}, {18.917199999999998`, 
+                12.933999999999997`}, {18.917199999999998`, 14.7438}, {
+                9.46445, 14.7438}, {9.46445, 16.598}, {5.30508, 13.8391}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, {{{5.30508, 13.8391}, {
+                9.46445, 11.079700000000003`}, {9.46445, 
+                12.933999999999997`}, {18.917199999999998`, 
+                12.933999999999997`}, {18.917199999999998`, 14.7438}, {
+                9.46445, 14.7438}, {9.46445, 16.598}, {5.30508, 13.8391}}}], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 
+                0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {0,
+                 1, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}}}, CompressedData["
+1:eJxTTMoPSmVmYGBgBGIRIGYC4sIjUTVcAooO8+XdOPpnKDg8YkwNXuen7JA2
+W/qycJSgw5sbHEde31CB82PFhGf3n1V1aFVgVz0zR8oBrF9czWFHsFXE/9Wy
+Dje0Dj4qiFWDy7cVLYptDVKH65/g6Xbu0HMNOB9sn4I23H6w+SWacD5De8DS
+tDQNB7ldC/alskg4aD2+nx6joeFgnPFi/oMZog5B9vlaQa/UHao9k7f0KUhA
++D/UUPVbqML5jCB+oIpDzJHypGv8Eg4eGad3ikiqwM2T57H5LndPGW6eya7m
+GzMvKcH1o4cXABG3d/Y=
+                "]], 
+               
+               FilledCurveBox[{{{0, 2, 0}, {0, 1, 0}, {0, 1, 0}, {0, 1, 0}, {
+                0, 1, 0}, {0, 1, 0}}}, {{{14.163129999999999`, 
+                4.337966249999999}, {16.96813, 4.337966249999999}, {16.96813, 
+                5.047809999999999}, {14.98813, 5.047809999999999}, {14.98813, 
+                8.29796625}, {14.163129999999999`, 8.29796625}, {
+                14.163129999999999`, 4.337966249999999}}}]}}, Background -> 
+             GrayLevel[0.93], Axes -> False, AspectRatio -> 1, ImageSize -> 
+             Dynamic[{
+               Automatic, 3.5 CurrentValue["FontCapHeight"]/
+                AbsoluteCurrentValue[Magnification]}], Frame -> True, 
+             FrameTicks -> None, FrameStyle -> Directive[
+               Thickness[Tiny], 
+               GrayLevel[0.7]]], 
+            GridBox[{{
+               TagBox["\"OpenLibrary\"", "SummaryItem"]}, {
+               TagBox[
+                DynamicBox[
+                 ToBoxes[
+                  If[
+                   TrueQ[
+                    ServiceConnections`Private`authenticatedServiceQ[
+                    "connection-b6cd34b3349a3832bc3c6c5689848316"]], 
+                   "Connected", "Not Connected"], StandardForm]], 
+                "SummaryItem"]}}, 
+             GridBoxAlignment -> {
+              "Columns" -> {{Left}}, "Rows" -> {{Automatic}}}, AutoDelete -> 
+             False, GridBoxItemSize -> {
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+             GridBoxSpacings -> {"Columns" -> {{2}}, "Rows" -> {{Automatic}}},
+              BaseStyle -> {
+              ShowStringCharacters -> False, NumberMarks -> False, 
+               PrintPrecision -> 3, ShowSyntaxStyles -> False}]}}, 
+          GridBoxAlignment -> {"Rows" -> {{Top}}}, AutoDelete -> False, 
+          GridBoxItemSize -> {
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+          BaselinePosition -> {1, 1}]}, 
+       Dynamic[Typeset`open$$], ImageSize -> Automatic]},
+     "SummaryPanel"],
+    DynamicModuleValues:>{}], "]"}],
+  ServiceObject[
+  "OpenLibrary", "ID" -> "connection-b6cd34b3349a3832bc3c6c5689848316"],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.808676109569437*^9, 3.8086795869260597`*^9},
+ CellLabel->
+  "Out[280]=",ExpressionUUID->"f48be1d6-f487-4e4d-9f4f-bc606c799d85"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{
+   RowBox[{"text", "=", 
+    RowBox[{"openlibrary", "[", 
+     RowBox[{"\"\<BookText\>\"", ",", 
+      RowBox[{"{", 
+       RowBox[{"\"\<BibKeys\>\"", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{"{", 
+          RowBox[{"\"\<OLID\>\"", ",", "\"\<OL24627022M\>\""}], "}"}], 
+         "}"}]}], "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+   RowBox[{"StringTake", "[", 
+    RowBox[{
+     RowBox[{"text", "[", "1", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"755284", ",", "755464"}], "}"}]}], "]"}]}], "*)"}]], "Input",
+ CellChangeTimes->{{3.808675977060278*^9, 3.808675978183092*^9}, {
+   3.808676050586887*^9, 3.808676068364229*^9}, {3.80867616328511*^9, 
+   3.8086762429955673`*^9}, {3.808676402517763*^9, 3.8086764130049686`*^9}, {
+   3.808676445876672*^9, 3.808676479491302*^9}, {3.808676509955871*^9, 
+   3.80867659432407*^9}, {3.808676699804288*^9, 3.808676753812023*^9}, 
+   3.808676872203587*^9, {3.8086769389473267`*^9, 3.808677034619657*^9}, {
+   3.808678349502812*^9, 3.808678529783778*^9}, {3.808678569017253*^9, 
+   3.808678586135688*^9}, {3.808678652520702*^9, 3.808678975855055*^9}, {
+   3.8086790351280413`*^9, 3.808679063575923*^9}, {3.808679104407796*^9, 
+   3.8086791702237663`*^9}, {3.808679465375255*^9, 3.808679475762109*^9}, 
+   3.808679570859309*^9, 3.808679927404887*^9, {3.808680069815687*^9, 
+   3.8086800967980337`*^9}, {3.808680134863277*^9, 3.808680136454029*^9}, {
+   3.808680190015151*^9, 3.8086802154859533`*^9}, {3.8086802927750883`*^9, 
+   3.8086803640628653`*^9}, {3.808680405463251*^9, 3.8086804324230127`*^9}, {
+   3.808680465294763*^9, 3.808680526701521*^9}, {3.808680584702511*^9, 
+   3.8086806524385366`*^9}, {3.808680863614628*^9, 3.808680875425683*^9}, 
+   3.808680933379426*^9, 3.808681144347331*^9, 3.8086811877794313`*^9, {
+   3.8086812581494427`*^9, 3.808681520101488*^9}, {3.8086815643660173`*^9, 
+   3.808681631740521*^9}, {3.808681682715892*^9, 3.808681749843508*^9}, 
+   3.8086850853271103`*^9, 3.808685115480261*^9, 3.808685167121125*^9, 
+   3.808686435557763*^9},ExpressionUUID->"0573f40b-10ab-4f60-9b0a-\
+37ac5a5c9124"]
 },
-WindowSize->{1618, 1344},
+WindowSize->{1319, 1344},
 WindowMargins->{{-2, Automatic}, {Automatic, 2}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8f9dbacd-cab1-4ec2-b75e-8d3ce4ab4fe6"
 ]
 (* End of Notebook Content *)
 
@@ -298,7 +657,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12247, 261, 997, "Input",ExpressionUUID->"971a7e15-79a2-4297-af46-4eccb773594f"]
+Cell[558, 20, 17159, 344, 1123, "Input",ExpressionUUID->"1813a819-18ec-48c0-958b-d2643275686b"],
+Cell[17720, 366, 447, 9, 30, "Input",ExpressionUUID->"2311fcb2-272f-40cf-9f26-1c23915560cb"],
+Cell[CellGroupData[{
+Cell[18192, 379, 249, 7, 30, "Input",ExpressionUUID->"27c119cd-0ef9-4747-88c2-7b04814cfe16"],
+Cell[18444, 388, 11285, 211, 62, "Output",ExpressionUUID->"f48be1d6-f487-4e4d-9f4f-bc606c799d85"]
+}, Open  ]],
+Cell[29744, 602, 2124, 38, 52, "Input",ExpressionUUID->"0573f40b-10ab-4f60-9b0a-37ac5a5c9124"]
 }
 ]
 *)
