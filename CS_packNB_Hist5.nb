@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5848,        139]
-NotebookOptionsPosition[      5538,        125]
-NotebookOutlinePosition[      5894,        141]
-CellTagsIndexPosition[      5851,        138]
+NotebookDataLength[     27157,        490]
+NotebookOptionsPosition[     26809,        476]
+NotebookOutlinePosition[     27202,        492]
+CellTagsIndexPosition[     27159,        489]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,90 +26,426 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "\"\<George Washington\>\"", ",", "\"\<John Adams\>\"", ",", 
-          "\"\<Thomas Jefferson\>\"", ",", "\"\<James Madison\>\"", ",", 
-          "\"\<James Monroe\>\"", ",", "\"\<John Quincy Adams\>\"", ",", 
-          "\"\<Andrew Jackson\>\"", ",", "\"\<Martin Van Buren\>\"", ",", 
-          "\"\<William Henry Harrison\>\"", ",", "\"\<John Tyler\>\"", ",", 
-          "\"\<James K. Polk\>\"", ",", "\"\<Zachary Taylor\>\"", ",", 
-          "\"\<Millard Fillmore\>\"", ",", "\"\<Franklin Pierce\>\"", ",", 
-          "\"\<James Buchanan\>\"", ",", "\"\<Abraham Lincoln\>\"", ",", 
-          "\"\<Andrew Johnson\>\"", ",", "\"\<Ulysses S. Grant\>\"", ",", 
-          "\"\<Rutherford B. Hayes\>\"", ",", "\"\<James A. Garfield\>\"", 
-          ",", "\"\<Chester A. Arthur\>\"", ",", "\"\<Grover Cleveland\>\"", 
-          ",", "\"\<Benjamin Harrison\>\"", ",", "\"\<Grover Cleveland\>\"", 
-          ",", "\"\<William McKinley\>\"", ",", "\"\<Theodore Roosevelt\>\"", 
-          ",", "\"\<William Howard Taft\>\"", ",", "\"\<Woodrow Wilson\>\"", 
-          ",", "\"\<Warren G. Harding\>\"", ",", "\"\<Calvin Coolidge\>\"", 
-          ",", "\"\<Herbert Hoover\>\"", ",", "\"\<Franklin D. Roosevelt\>\"",
-           ",", "\"\<Harry S. Truman\>\"", ",", 
-          "\"\<Dwight D. Eisenhower\>\"", ",", "\"\<John F. Kennedy\>\"", 
-          ",", "\"\<Lyndon B. Johnson\>\"", ",", "\"\<Richard Nixon\>\"", 
-          ",", "\"\<Gerald Ford\>\"", ",", "\"\<Jimmy Carter\>\"", ",", 
-          "\"\<Ronald Reagan\>\"", ",", "\"\<George H. W. Bush\>\"", ",", 
-          "\"\<Bill Clinton\>\"", ",", "\"\<George W. Bush\>\"", ",", 
-          "\"\<Barack Obama\>\"", ",", "\"\<Donald Trump\>\""}], "}"}]}], ";",
-        "\[IndentingNewLine]", 
-       RowBox[{"beg", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{"{", 
-          RowBox[{"1", ",", 
-           RowBox[{
-            RowBox[{"Length", "[", "data", "]"}], "-", "2"}]}], "}"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"triplet", "=", 
-        RowBox[{"Take", "[", 
-         RowBox[{"data", ",", 
-          RowBox[{"{", 
-           RowBox[{"beg", ",", 
-            RowBox[{"beg", "+", "2"}]}], "}"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{"Prepend", "[", 
-         RowBox[{
-          RowBox[{"RandomSample", "[", 
-           RowBox[{
-            RowBox[{"Drop", "[", 
-             RowBox[{"data", ",", 
-              RowBox[{"{", 
-               RowBox[{"beg", ",", 
-                RowBox[{"beg", "+", "2"}]}], "}"}]}], "]"}], ",", "3"}], 
-           "]"}], ",", 
-          RowBox[{"triplet", "[", 
-           RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"Style", "[", 
-         RowBox[{
-          RowBox[{"StringForm", "[", 
-           RowBox[{
-           "\"\<Which person was president of the United States between `` \
-and ``?\>\"", ",", 
-            RowBox[{"triplet", "[", 
-             RowBox[{"[", "1", "]"}], "]"}], ",", 
-            RowBox[{"triplet", "[", 
-             RowBox[{"[", "3", "]"}], "]"}]}], "]"}], ",", 
-          RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Hist5\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"List", "ListIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["45", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2368", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            {
+            "George Washington", "John Adams", "Thomas Jefferson", 
+             "James Madison", "James Monroe", "John Quincy Adams", 
+             "Andrew Jackson", "Martin Van Buren", "William Henry Harrison", 
+             "John Tyler", "James K. Polk", "Zachary Taylor", 
+             "Millard Fillmore", "Franklin Pierce", "James Buchanan", 
+             "Abraham Lincoln", "Andrew Johnson", "Ulysses S. Grant", 
+             "Rutherford B. Hayes", "James A. Garfield", "Chester A. Arthur", 
+             "Grover Cleveland", "Benjamin Harrison", "Grover Cleveland", 
+             "William McKinley", "Theodore Roosevelt", "William Howard Taft", 
+             "Woodrow Wilson", "Warren G. Harding", "Calvin Coolidge", 
+             "Herbert Hoover", "Franklin D. Roosevelt", "Harry S. Truman", 
+             "Dwight D. Eisenhower", "John F. Kennedy", "Lyndon B. Johnson", 
+             "Richard Nixon", "Gerald Ford", "Jimmy Carter", "Ronald Reagan", 
+             "George H. W. Bush", "Bill Clinton", "George W. Bush", 
+             "Barack Obama", "Donald Trump"},
+            SelectWithContents->True,
+            Selectable->False]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"beg", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", 
+              RowBox[{
+               RowBox[{"Length", "[", "data", "]"}], "-", "2"}]}], "}"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"triplet", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{"data", ",", 
+             RowBox[{"{", 
+              RowBox[{"beg", ",", 
+               RowBox[{"beg", "+", "2"}]}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"Drop", "[", 
+                RowBox[{"data", ",", 
+                 RowBox[{"{", 
+                  RowBox[{"beg", ",", 
+                   RowBox[{"beg", "+", "2"}]}], "}"}]}], "]"}], ",", "3"}], 
+              "]"}], ",", 
+             RowBox[{
+             "triplet", "\[LeftDoubleBracket]", "2", 
+              "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"StringForm", "[", 
+              RowBox[{
+              "\"\<Which person was president of the United States between `` \
+and ``?\>\"", ",", 
+               RowBox[{
+               "triplet", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], ",", 
+               RowBox[{
+               "triplet", "\[LeftDoubleBracket]", "3", 
+                "\[RightDoubleBracket]"}]}], "]"}], ",", 
+             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomChoice", "[", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"List", "ListIcon", 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"195", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["63376", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             {{"Afghanistan", 
+               DateObject[{1919}, "Year", "Gregorian", -7.]}, {"Albania", 
+               DateObject[{1912}, "Year", "Gregorian", -7.]}, {"Algeria", 
+               DateObject[{1962}, "Year", "Gregorian", -7.]}, {"Andorra", 
+               DateObject[{1278}, "Year", "Gregorian", -7.]}, {"Angola", 
+               DateObject[{1975}, "Year", "Gregorian", -7.]}, {
+              "Antigua and Barbuda", 
+               DateObject[{1981}, "Year", "Gregorian", -7.]}, {"Argentina", 
+               DateObject[{1816}, "Year", "Gregorian", -7.]}, {"Armenia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Australia", 
+               DateObject[{1901}, "Year", "Gregorian", -7.]}, {"Austria", 
+               DateObject[{1918}, "Year", "Gregorian", -7.]}, {"Azerbaijan", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Bahamas", 
+               DateObject[{1973}, "Year", "Gregorian", -7.]}, {"Bahrain", 
+               DateObject[{1971}, "Year", "Gregorian", -7.]}, {"Bangladesh", 
+               DateObject[{1971}, "Year", "Gregorian", -7.]}, {"Barbados", 
+               DateObject[{1966}, "Year", "Gregorian", -7.]}, {"Belarus", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Belgium", 
+               DateObject[{1830}, "Year", "Gregorian", -7.]}, {"Belize", 
+               DateObject[{1981}, "Year", "Gregorian", -7.]}, {"Benin", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Bhutan", 
+               DateObject[{1949}, "Year", "Gregorian", -7.]}, {"Bolivia", 
+               DateObject[{1825}, "Year", "Gregorian", -7.]}, {
+              "Bosnia and Herzegovina", 
+               DateObject[{1992}, "Year", "Gregorian", -7.]}, {"Botswana", 
+               DateObject[{1966}, "Year", "Gregorian", -7.]}, {"Brazil", 
+               DateObject[{1822}, "Year", "Gregorian", -7.]}, {"Brunei", 
+               DateObject[{1984}, "Year", "Gregorian", -7.]}, {"Bulgaria", 
+               DateObject[{1878}, "Year", "Gregorian", -7.]}, {"Burkina Faso", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Burundi", 
+               DateObject[{1962}, "Year", "Gregorian", -7.]}, {"Cambodia", 
+               DateObject[{1953}, "Year", "Gregorian", -7.]}, {"Cameroon", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Canada", 
+               DateObject[{1867}, "Year", "Gregorian", -7.]}, {"Cape Verde", 
+               DateObject[{1975}, "Year", "Gregorian", -7.]}, {
+              "Central African Republic", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Chad", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Chile", 
+               DateObject[{1810}, "Year", "Gregorian", -7.]}, {"China", 
+               DateObject[{1949}, "Year", "Gregorian", -7.]}, {"Colombia", 
+               DateObject[{1810}, "Year", "Gregorian", -7.]}, {"Comoros", 
+               DateObject[{1975}, "Year", "Gregorian", -7.]}, {"Costa Rica", 
+               DateObject[{1821}, "Year", "Gregorian", -7.]}, {"Croatia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Cuba", 
+               DateObject[{1902}, "Year", "Gregorian", -7.]}, {"Cyprus", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {
+              "Czech Republic", 
+               DateObject[{1993}, "Year", "Gregorian", -7.]}, {
+              "Democratic Republic of the Congo", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Djibouti", 
+               DateObject[{1977}, "Year", "Gregorian", -7.]}, {"Dominica", 
+               DateObject[{1978}, "Year", "Gregorian", -7.]}, {
+              "Dominican Republic", 
+               DateObject[{1844}, "Year", "Gregorian", -7.]}, {"East Timor", 
+               DateObject[{2002}, "Year", "Gregorian", -7.]}, {"Ecuador", 
+               DateObject[{1822}, "Year", "Gregorian", -7.]}, {"Egypt", 
+               DateObject[{1922}, "Year", "Gregorian", -7.]}, {
+              "El Salvador", 
+               DateObject[{1821}, "Year", "Gregorian", -7.]}, {
+              "Equatorial Guinea", 
+               DateObject[{1968}, "Year", "Gregorian", -7.]}, {"Eritrea", 
+               DateObject[{1993}, "Year", "Gregorian", -7.]}, {"Estonia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Ethiopia", 
+               DateObject[{1942}, "Year", "Gregorian", -7.]}, {"Fiji", 
+               DateObject[{1970}, "Year", "Gregorian", -7.]}, {"Finland", 
+               DateObject[{1917}, "Year", "Gregorian", -7.]}, {"France", 
+               DateObject[{1789}, "Year", "Gregorian", -7.]}, {"Gabon", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Gambia", 
+               DateObject[{1965}, "Year", "Gregorian", -7.]}, {"Georgia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Germany", 
+               DateObject[{1871}, "Year", "Gregorian", -7.]}, {"Ghana", 
+               DateObject[{1957}, "Year", "Gregorian", -7.]}, {"Greece", 
+               DateObject[{1829}, "Year", "Gregorian", -7.]}, {"Grenada", 
+               DateObject[{1974}, "Year", "Gregorian", -7.]}, {"Guatemala", 
+               DateObject[{1821}, "Year", "Gregorian", -7.]}, {"Guinea", 
+               DateObject[{1958}, "Year", "Gregorian", -7.]}, {
+              "Guinea-Bissau", 
+               DateObject[{1973}, "Year", "Gregorian", -7.]}, {"Guyana", 
+               DateObject[{1966}, "Year", "Gregorian", -7.]}, {"Haiti", 
+               DateObject[{1804}, "Year", "Gregorian", -7.]}, {"Honduras", 
+               DateObject[{1821}, "Year", "Gregorian", -7.]}, {"Hungary", 
+               DateObject[{1000}, "Year", "Gregorian", -7.]}, {"Iceland", 
+               DateObject[{1944}, "Year", "Gregorian", -7.]}, {"India", 
+               DateObject[{1947}, "Year", "Gregorian", -7.]}, {"Indonesia", 
+               DateObject[{1945}, "Year", "Gregorian", -7.]}, {"Iran", 
+               DateObject[{1979}, "Year", "Gregorian", -7.]}, {"Iraq", 
+               DateObject[{1932}, "Year", "Gregorian", -7.]}, {"Ireland", 
+               DateObject[{1921}, "Year", "Gregorian", -7.]}, {"Israel", 
+               DateObject[{1948}, "Year", "Gregorian", -7.]}, {"Italy", 
+               DateObject[{1861}, "Year", "Gregorian", -7.]}, {
+              "Ivory Coast", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Jamaica", 
+               DateObject[{1962}, "Year", "Gregorian", -7.]}, {"Japan", 
+               DateObject[{1947}, "Year", "Gregorian", -7.]}, {"Jordan", 
+               DateObject[{1946}, "Year", "Gregorian", -7.]}, {"Kazakhstan", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Kenya", 
+               DateObject[{1963}, "Year", "Gregorian", -7.]}, {"Kiribati", 
+               DateObject[{1979}, "Year", "Gregorian", -7.]}, {"Kosovo", 
+               DateObject[{2008}, "Year", "Gregorian", -7.]}, {"Kuwait", 
+               DateObject[{1961}, "Year", "Gregorian", -7.]}, {"Kyrgyzstan", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Laos", 
+               DateObject[{1949}, "Year", "Gregorian", -7.]}, {"Latvia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Lebanon", 
+               DateObject[{1943}, "Year", "Gregorian", -7.]}, {"Lesotho", 
+               DateObject[{1966}, "Year", "Gregorian", -7.]}, {"Liberia", 
+               DateObject[{1847}, "Year", "Gregorian", -7.]}, {"Libya", 
+               DateObject[{1951}, "Year", "Gregorian", -7.]}, {
+              "Liechtenstein", 
+               DateObject[{1719}, "Year", "Gregorian", -7.]}, {"Lithuania", 
+               DateObject[{1990}, "Year", "Gregorian", -7.]}, {"Luxembourg", 
+               DateObject[{1839}, "Year", "Gregorian", -7.]}, {
+              "North Macedonia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Madagascar", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Malawi", 
+               DateObject[{1964}, "Year", "Gregorian", -7.]}, {"Malaysia", 
+               DateObject[{1957}, "Year", "Gregorian", -7.]}, {"Maldives", 
+               DateObject[{1965}, "Year", "Gregorian", -7.]}, {"Mali", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Malta", 
+               DateObject[{1964}, "Year", "Gregorian", -7.]}, {
+              "Marshall Islands", 
+               DateObject[{1986}, "Year", "Gregorian", -7.]}, {"Mauritania", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Mauritius", 
+               DateObject[{1968}, "Year", "Gregorian", -7.]}, {"Mexico", 
+               DateObject[{1810}, "Year", "Gregorian", -7.]}, {"Micronesia", 
+               DateObject[{1986}, "Year", "Gregorian", -7.]}, {"Moldova", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Monaco", 
+               DateObject[{1861}, "Year", "Gregorian", -7.]}, {"Mongolia", 
+               DateObject[{1921}, "Year", "Gregorian", -7.]}, {"Montenegro", 
+               DateObject[{2006}, "Year", "Gregorian", -7.]}, {"Morocco", 
+               DateObject[{1956}, "Year", "Gregorian", -7.]}, {"Mozambique", 
+               DateObject[{1975}, "Year", "Gregorian", -7.]}, {"Myanmar", 
+               DateObject[{1948}, "Year", "Gregorian", -7.]}, {"Namibia", 
+               DateObject[{1990}, "Year", "Gregorian", -7.]}, {"Nauru", 
+               DateObject[{1968}, "Year", "Gregorian", -7.]}, {"Nepal", 
+               DateObject[{1768}, "Year", "Gregorian", -7.]}, {
+              "Netherlands", 
+               DateObject[{1579}, "Year", "Gregorian", -7.]}, {
+              "New Zealand", 
+               DateObject[{1907}, "Year", "Gregorian", -7.]}, {"Nicaragua", 
+               DateObject[{1821}, "Year", "Gregorian", -7.]}, {"Niger", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Nigeria", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Niue", 
+               DateObject[{1974}, "Year", "Gregorian", -7.]}, {
+              "North Korea", 
+               DateObject[{1945}, "Year", "Gregorian", -7.]}, {"Norway", 
+               DateObject[{1905}, "Year", "Gregorian", -7.]}, {"Oman", 
+               DateObject[{1971}, "Year", "Gregorian", -7.]}, {"Pakistan", 
+               DateObject[{1947}, "Year", "Gregorian", -7.]}, {"Palau", 
+               DateObject[{1994}, "Year", "Gregorian", -7.]}, {"Panama", 
+               DateObject[{1903}, "Year", "Gregorian", -7.]}, {
+              "Papua New Guinea", 
+               DateObject[{1975}, "Year", "Gregorian", -7.]}, {"Paraguay", 
+               DateObject[{1811}, "Year", "Gregorian", -7.]}, {"Peru", 
+               DateObject[{1821}, "Year", "Gregorian", -7.]}, {
+              "Philippines", 
+               DateObject[{1898}, "Year", "Gregorian", -7.]}, {"Poland", 
+               DateObject[{1918}, "Year", "Gregorian", -7.]}, {"Portugal", 
+               DateObject[{1910}, "Year", "Gregorian", -7.]}, {"Qatar", 
+               DateObject[{1971}, "Year", "Gregorian", -7.]}, {
+              "Republic of the Congo", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Romania", 
+               DateObject[{1877}, "Year", "Gregorian", -7.]}, {"Russia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Rwanda", 
+               DateObject[{1962}, "Year", "Gregorian", -7.]}, {
+              "Saint Kitts and Nevis", 
+               DateObject[{1983}, "Year", "Gregorian", -7.]}, {
+              "Saint Lucia", 
+               DateObject[{1979}, "Year", "Gregorian", -7.]}, {
+              "Saint Vincent and the Grenadines", 
+               DateObject[{1979}, "Year", "Gregorian", -7.]}, {"Samoa", 
+               DateObject[{1962}, "Year", "Gregorian", -7.]}, {"San Marino", 
+               DateObject[{1600}, "Year", "Gregorian", -7.]}, {
+              "S\[ATilde]o Tom\[EAcute] and Pr\[IAcute]ncipe", 
+               DateObject[{1975}, "Year", "Gregorian", -7.]}, {"Saudi Arabia", 
+               DateObject[{1932}, "Year", "Gregorian", -7.]}, {"Senegal", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Serbia", 
+               DateObject[{2006}, "Year", "Gregorian", -7.]}, {"Seychelles", 
+               DateObject[{1976}, "Year", "Gregorian", -7.]}, {"Sierra Leone", 
+               DateObject[{1961}, "Year", "Gregorian", -7.]}, {"Singapore", 
+               DateObject[{1965}, "Year", "Gregorian", -7.]}, {"Slovakia", 
+               DateObject[{1993}, "Year", "Gregorian", -7.]}, {"Slovenia", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {
+              "Solomon Islands", 
+               DateObject[{1978}, "Year", "Gregorian", -7.]}, {"Somalia", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"South Africa", 
+               DateObject[{1910}, "Year", "Gregorian", -7.]}, {
+              "South Korea", 
+               DateObject[{1945}, "Year", "Gregorian", -7.]}, {
+              "South Sudan", 
+               DateObject[{2011}, "Year", "Gregorian", -7.]}, {"Spain", 
+               DateObject[{1978}, "Year", "Gregorian", -7.]}, {"Sri Lanka", 
+               DateObject[{1948}, "Year", "Gregorian", -7.]}, {"Sudan", 
+               DateObject[{1956}, "Year", "Gregorian", -7.]}, {"Suriname", 
+               DateObject[{1975}, "Year", "Gregorian", -7.]}, {"Eswatini", 
+               DateObject[{1968}, "Year", "Gregorian", -7.]}, {"Sweden", 
+               DateObject[{1523}, "Year", "Gregorian", -7.]}, {
+              "Switzerland", 
+               DateObject[{1291}, "Year", "Gregorian", -7.]}, {"Syria", 
+               DateObject[{1946}, "Year", "Gregorian", -7.]}, {"Tajikistan", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Tanzania", 
+               DateObject[{1964}, "Year", "Gregorian", -7.]}, {"Thailand", 
+               DateObject[{1932}, "Year", "Gregorian", -7.]}, {"Togo", 
+               DateObject[{1960}, "Year", "Gregorian", -7.]}, {"Tonga", 
+               DateObject[{1970}, "Year", "Gregorian", -7.]}, {
+              "Trinidad and Tobago", 
+               DateObject[{1962}, "Year", "Gregorian", -7.]}, {"Tunisia", 
+               DateObject[{1956}, "Year", "Gregorian", -7.]}, {"Turkey", 
+               DateObject[{1923}, "Year", "Gregorian", -7.]}, {"Turkmenistan", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Tuvalu", 
+               DateObject[{1978}, "Year", "Gregorian", -7.]}, {"Uganda", 
+               DateObject[{1962}, "Year", "Gregorian", -7.]}, {"Ukraine", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {
+              "United Arab Emirates", 
+               DateObject[{1971}, "Year", "Gregorian", -7.]}, {
+              "United Kingdom", 
+               DateObject[{1801}, "Year", "Gregorian", -7.]}, {
+              "United States", 
+               DateObject[{1776}, "Year", "Gregorian", -7.]}, {"Uruguay", 
+               DateObject[{1825}, "Year", "Gregorian", -7.]}, {"Uzbekistan", 
+               DateObject[{1991}, "Year", "Gregorian", -7.]}, {"Vanuatu", 
+               DateObject[{1980}, "Year", "Gregorian", -7.]}, {"Vatican City", 
+               DateObject[{1929}, "Year", "Gregorian", -7.]}, {"Venezuela", 
+               DateObject[{1811}, "Year", "Gregorian", -7.]}, {"Vietnam", 
+               DateObject[{1945}, "Year", "Gregorian", -7.]}, {"Yemen", 
+               DateObject[{1990}, "Year", "Gregorian", -7.]}, {"Zambia", 
+               DateObject[{1964}, "Year", "Gregorian", -7.]}, {"Zimbabwe", 
+               DateObject[{1980}, "Year", "Gregorian", -7.]}},
+             SelectWithContents->True,
+             Selectable->False], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"\"\<How old is \>\"", "<>", 
+            RowBox[{
+            "data", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+            "<>", "\"\< (from the claimed date of independence)?\>\""}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"ansQnt", "=", 
+           RowBox[{
+            RowBox[{"CurrentDate", "[", "\"\<Year\>\"", "]"}], "-", 
+            RowBox[{
+            "data", "\[LeftDoubleBracket]", "2", 
+             "\[RightDoubleBracket]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dist", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<Years\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"Select", "[", 
+             RowBox[{
+              RowBox[{"Round", "[", 
+               RowBox[{"RandomVariate", "[", 
+                RowBox[{
+                 RowBox[{"NormalDistribution", "[", 
+                  RowBox[{"50", ",", "100"}], "]"}], ",", "100"}], "]"}], 
+               "]"}], ",", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Positive", "[", "#", "]"}], "&&", 
+                RowBox[{"#", "\[NotEqual]", 
+                 RowBox[{"QuantityMagnitude", "[", "ansQnt", "]"}]}]}], "&"}],
+               ",", "3"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"ToString", "[", "#", "]"}], "&"}], "/@", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{"dist", ",", "ansQnt"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Hist5\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.683480660834909*^9, {3.6834813572426434`*^9, 3.683481434201993*^9}, {
@@ -119,15 +455,30 @@ and ``?\>\"", ",",
    3.6834826002698383`*^9}, {3.68348266068865*^9, 3.683482701589239*^9}, {
    3.6834827809838543`*^9, 3.683482916015237*^9}, {3.68348298067553*^9, 
    3.683482987441327*^9}, {3.6834830817522078`*^9, 3.683483100544408*^9}, {
-   3.758757947988332*^9, 
-   3.7587579590059566`*^9}},ExpressionUUID->"e95950ea-a39f-4ffa-bb28-\
-08cf0bcd05bb"]
+   3.758757947988332*^9, 3.7587579590059566`*^9}, {3.809633287249476*^9, 
+   3.809633353400339*^9}, {3.809633390367094*^9, 3.809633470696155*^9}, {
+   3.809633549057897*^9, 3.809633580464497*^9}, {3.809633625576847*^9, 
+   3.809633649257681*^9}, {3.809634130579672*^9, 3.809634213723737*^9}, {
+   3.809634323372525*^9, 3.80963442312365*^9}, {3.8096346183647003`*^9, 
+   3.809634658531272*^9}, {3.809634733941392*^9, 3.8096347394457483`*^9}, {
+   3.8096348758528337`*^9, 3.809635043562619*^9}, 3.809635081525709*^9, {
+   3.809635128987793*^9, 3.8096351969626637`*^9}, {3.809635237923829*^9, 
+   3.809635261250432*^9}, {3.809635300580853*^9, 3.80963536452293*^9}, {
+   3.809635403066647*^9, 3.809635441882332*^9}, {3.809635489931664*^9, 
+   3.809635490516068*^9}, {3.80963555884368*^9, 3.809635602457857*^9}, 
+   3.80963563601965*^9, 3.809635673123972*^9, {3.809635711924066*^9, 
+   3.809635712929811*^9}, {3.809635767570204*^9, 3.809635784130207*^9}, {
+   3.8096358214902287`*^9, 3.8096358927715883`*^9}, {3.8096360017567873`*^9, 
+   3.809636006697921*^9}, {3.809636053810285*^9, 3.8096360542813377`*^9}, {
+   3.809636114602462*^9, 3.809636170604575*^9}},
+ CellLabel->
+  "In[277]:=",ExpressionUUID->"e95950ea-a39f-4ffa-bb28-08cf0bcd05bb"]
 },
-WindowSize->{1237, 1068},
-WindowMargins->{{1, Automatic}, {120, Automatic}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1275, 1068},
+WindowMargins->{{1, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"4da64a0e-9f2e-42e4-b46c-7d62cabac756"
 ]
 (* End of Notebook Content *)
 
@@ -140,7 +491,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4976, 103, 430, "Input",ExpressionUUID->"e95950ea-a39f-4ffa-bb28-08cf0bcd05bb"]
+Cell[558, 20, 26247, 454, 553, "Input",ExpressionUUID->"e95950ea-a39f-4ffa-bb28-08cf0bcd05bb"]
 }
 ]
 *)
