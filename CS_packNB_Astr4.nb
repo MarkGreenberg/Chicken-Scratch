@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7427,        173]
-NotebookOptionsPosition[      7113,        159]
-NotebookOutlinePosition[      7473,        175]
-CellTagsIndexPosition[      7430,        172]
+NotebookDataLength[     75343,       1205]
+NotebookOptionsPosition[     74954,       1190]
+NotebookOutlinePosition[     75387,       1207]
+CellTagsIndexPosition[     75344,       1204]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,122 +26,864 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"1P/Halley\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Comet\"", ",", "\"Comet1PHalley\""}], "]"}],
-               "\"Entity[\\\"Comet\\\", \\\"Comet1PHalley\\\"]\"","\"comet\""},
-              "Entity"], ",", "\"\<Halley's Comet\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Mars\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Planet\"", ",", "\"Mars\""}], "]"}],
-               "\"Entity[\\\"Planet\\\", \\\"Mars\\\"]\"","\"planet\""},
-              "Entity"], ",", "\"\<Mars\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Mercury\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Planet\"", ",", "\"Mercury\""}], "]"}],
-               "\"Entity[\\\"Planet\\\", \\\"Mercury\\\"]\"","\"planet\""},
-              "Entity"], ",", "\"\<Mercury\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Venus\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Planet\"", ",", "\"Venus\""}], "]"}],
-               "\"Entity[\\\"Planet\\\", \\\"Venus\\\"]\"","\"planet\""},
-              "Entity"], ",", "\"\<Venus\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Saturn\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Planet\"", ",", "\"Saturn\""}], "]"}],
-               "\"Entity[\\\"Planet\\\", \\\"Saturn\\\"]\"","\"planet\""},
-              "Entity"], ",", "\"\<Saturn\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Uranus\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Planet\"", ",", "\"Uranus\""}], "]"}],
-               "\"Entity[\\\"Planet\\\", \\\"Uranus\\\"]\"","\"planet\""},
-              "Entity"], ",", "\"\<Uranus\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Jupiter\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Planet\"", ",", "\"Jupiter\""}], "]"}],
-               "\"Entity[\\\"Planet\\\", \\\"Jupiter\\\"]\"","\"planet\""},
-              "Entity"], ",", "\"\<Jupiter\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Pluto\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"MinorPlanet\"", ",", "\"Pluto\""}], "]"}],
-               "\"Entity[\\\"MinorPlanet\\\", \\\"Pluto\\\"]\"",
-               "\"minor planet\""},
-              "Entity"], ",", "\"\<Pluto\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Neptune\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Planet\"", ",", "\"Neptune\""}], "]"}],
-               "\"Entity[\\\"Planet\\\", \\\"Neptune\\\"]\"","\"planet\""},
-              "Entity"], ",", "\"\<Neptune\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Io\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"PlanetaryMoon\"", ",", "\"Io\""}], "]"}],
-               "\"Entity[\\\"PlanetaryMoon\\\", \\\"Io\\\"]\"",
-               "\"planetary moon\""},
-              "Entity"], ",", "\"\<Io\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-             TemplateBox[{"\"Sun\"",RowBox[{"Entity", "[", 
-                 RowBox[{"\"Star\"", ",", "\"Sun\""}], "]"}],
-               "\"Entity[\\\"Star\\\", \\\"Sun\\\"]\"","\"star\""},
-              "Entity"], ",", "\"\<the sun\>\""}], "}"}]}], "}"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"\"\<How far is \>\"", "<>", 
-         RowBox[{"data", "[", 
-          RowBox[{"[", "2", "]"}], "]"}], "<>", 
-         "\"\< from Earth right now?\>\""}]}], ";", 
-       RowBox[{"ansNo", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"EntityValue", "[", 
-          RowBox[{
-           RowBox[{"data", "[", 
-            RowBox[{"[", "1", "]"}], "]"}], ",", 
-           "\"\<DistanceFromEarth\>\""}], "]"}], "[", 
-         RowBox[{"[", "1", "]"}], "]"}]}], ";", 
-       RowBox[{"choices", "=", 
-        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{
-           RowBox[{"ToString", "[", 
-            RowBox[{"SetAccuracy", "[", 
-             RowBox[{"#", ",", "5"}], "]"}], "]"}], "<>", 
-           "\"\< Astronomical Units\>\""}], "&"}], " ", "/@", " ", 
-         RowBox[{"Prepend", "[", 
-          RowBox[{
-           RowBox[{"RandomReal", "[", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomChoice", "[", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"List", "ListIcon", 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"11", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2448", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             {{
+               Entity["Comet", "Comet1PHalley"], "Halley's Comet"}, {
+               Entity["Planet", "Mars"], "Mars"}, {
+               Entity["Planet", "Mercury"], "Mercury"}, {
+               Entity["Planet", "Venus"], "Venus"}, {
+               Entity["Planet", "Saturn"], "Saturn"}, {
+               Entity["Planet", "Uranus"], "Uranus"}, {
+               Entity["Planet", "Jupiter"], "Jupiter"}, {
+               Entity["MinorPlanet", "Pluto"], "Pluto"}, {
+               Entity["Planet", "Neptune"], "Neptune"}, {
+               Entity["PlanetaryMoon", "Io"], "Io"}, {
+               Entity["Star", "Sun"], "the sun"}},
+             SelectWithContents->True,
+             Selectable->False], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"\"\<How far is \>\"", "<>", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{".4", ",", "36"}], "}"}], ",", "3"}], "]"}], ",", 
-           "ansNo"}], "]"}]}]}], ";", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr4\>\"", ",", 
+            "data", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+            "<>", "\"\< from Earth right now?\>\""}]}], ";", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{
+            RowBox[{"EntityValue", "[", 
+             RowBox[{
+              RowBox[{
+              "data", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              ",", "\"\<DistanceFromEarth\>\""}], "]"}], 
+            "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], ";", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"ToString", "[", 
+               RowBox[{"SetAccuracy", "[", 
+                RowBox[{"#", ",", "5"}], "]"}], "]"}], "<>", 
+              "\"\< Astronomical Units\>\""}], "&"}], " ", "/@", " ", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"RandomReal", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{".4", ",", "36"}], "}"}], ",", "3"}], "]"}], ",", 
+              "ansNo"}], "]"}]}]}], ";", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["585", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["120968", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "Abastumani Astrophysical Observatory" -> {41.7542, 42.8194}, 
+               "Adolphson Observatory" -> {40.9128, -90.6393}, 
+               "Airdrie Public Observatory" -> {55.865556, -3.982778}, 
+               "Aker Observatory" -> {32.7993, -109.72822}, 
+               "Aldershot Observatory" -> {51.258412, -0.762339}, 
+               "Algonquin Radio Observatory" -> {45.9555, -78.073}, 
+               "Allan I. Carswell Astronomical Observatory" -> {
+                43.7739, -79.5073}, 
+               "Allegheny Observatory" -> {40.482525, -80.020829}, 
+               "Ametlla de Mar Observatory" -> {40.928933, 0.79125}, 
+               "Anderson Mesa Station" -> {35.096944, -111.535833}, 
+               "Angell Hall Observatory" -> {42.2767, -83.7399}, 
+               "Ankara University Observatory" -> {39.843611, 32.77722}, 
+               "Antarctic Muon And Neutrino Detector Array" -> {-90, 0}, 
+               "Antarctic Submillimeter Telescope and Remote Observatory" -> \
+{-89.9944, -45.8833}, "ANTARES" -> {42.8, 6.166667}, 
+               "Apache Point Observatory" -> {32.780278, -105.820278}, 
+               "Apatity Cosmic-Ray Station" -> {67.566667, 33.4}, 
+               "Apollo Observatory" -> {39.788823, -84.20179}, 
+               "Arctic Space Weather Center" -> {62.033333, 129.733333}, 
+               "Arcetri Observatory" -> {43.750595, 11.254426}, 
+               "Arecibo Observatory" -> {18.34417, -66.75278}, 
+               "Argentine Institute of Radio Astronomy" -> {-34.867, -58.14}, 
+               "Armagh Observatory" -> {54.3532, -6.65}, 
+               "Aryabhatta Observational Sciences" -> {29.022, 79.027}, 
+               "Ashton Observatory" -> {41.813359, -93.288211}, 
+               "Asiago Astrophysical Observatory" -> {45.8664, 11.5264}, 
+               "Assheton Observatory" -> {53.8957, -3.0424}, 
+               "Astronomical Observatory of Trieste" -> {45.6448, 13.774}, 
+               "Astronomical Observatory at the University of Illinois at \
+Urbana\[Dash]Champaign" -> {40.10525, -88.226139}, 
+               "Astronomy Centre" -> {53.7113, -2.1545}, 
+               "Astronomy Tower of the Sorbonne" -> {48.849, 2.344}, 
+               "Atacama Pathfinder Experiment" -> {-23.0058, -67.7592}, 
+               "Australia Telescope Compact Array" -> {-30.312778, 
+                149.550278}, 
+               "Australian Astronomical Observatory" -> {-31.2767, 149.0667}, 
+               "Badlands Observatory" -> {43.990833, -102.130833}, 
+               "Baikal Deep Underwater Neutrino Telescope" -> {51.771389, 
+                104.397778}, 
+               "Bangladesh Astronomical Observatory" -> {23.763889, 
+                90.388889}, "Baker Observatory" -> {37.398889, -93.041667}, 
+               "Baksan Neutrino Observatory" -> {43.275556, 42.690278}, 
+               "Ball State University Observatory" -> {40.1999, -85.4113}, 
+               "Barnard Observatory" -> {34.366111, -89.534444}, 
+               "Bareket Observatory" -> {31.888189, 35.031694}, 
+               "Bayfordbury Observatory" -> {51.775, -0.094444}, 
+               "Behlen Observatory" -> {41.170833, -96.446667}, 
+               "Beijing Astronomical Observatory" -> {40.004463, 116.385556}, 
+               "Beijing Ancient Observatory" -> {39.9061, 116.4281}, 
+               "Belgrade Observatory" -> {44.80361, 20.508}, 
+               "Belogradchik Observatory" -> {43.622778, 22.675}, 
+               "Benmore Peak Observatory" -> {-44.4172, 170.094}, 
+               "Bergisch Gladbach Observatory" -> {51.08761, 7.48578}, 
+               "Berlin Observatory" -> {52.503889, 13.394167}, 
+               "Besan\[CCedilla]on Astronomical Observatory" -> {47.2469, 
+                5.9897}, "Bidston Observatory" -> {53.397, -3.075}, 
+               "Big Bear Solar Observatory" -> {34.2583, -116.921}, 
+               "Blackett Observatory" -> {51.416, -1.737}, 
+               "Blue Mesa Observatory" -> {32.4917, -107.1666}, 
+               "Boambee Observatory" -> {-30.3333, 153.0833}, 
+               "Bordeaux Observatory" -> {44.8349, -0.526}, 
+               "Bosscha Observatory" -> {-6.824444, 107.615556}, 
+               "Boswell Observatory" -> {40.719908, -96.9511}, 
+               "Bowman Observatory" -> {41.032389, -73.621111}, 
+               "Boyden Observatory" -> {-29.038831, 26.404722}, 
+               "Bradstreet Observatory" -> {40.050278, -75.368889}, 
+               "Bradley Observatory" -> {33.765233, -84.294161}, 
+               "Braeside Observatory" -> {35.191667, -111.748333}, 
+               "Brera Astronomical Observatory" -> {45.4714, 9.1894}, 
+               "Brooks Observatory" -> {41.6625, -83.611556}, 
+               "Brooks Astronomical Observatory" -> {43.5875, -84.774444}, 
+               "Brorfelde Observatory" -> {55.624661, 11.664739}, 
+               "Bucharest Observatory" -> {44.44857, 26.09295}, 
+               "Bucknell Observatory" -> {40.951317, -76.883217}, 
+               "Burrell Memorial Observatory" -> {41.3754, -81.8513}, 
+               "Byurakan Observatory" -> {40.330833, 44.268333}, 
+               "Cagigal Observatory" -> {10.503611, -66.928889}, 
+               "Cagliari Observatory" -> {39.13653, 8.97278}, 
+               "Calais Observatory" -> {45.184764, -67.280761}, 
+               "Calar Alto Observatory" -> {37.223611, -2.546111}, 
+               "Caltech Submillimeter Observatory" -> {19.8225, -155.476}, 
+               "Cambridge Observatory" -> {52.2135, 0.0944}, 
+               "Camille Flammarion Observatory" -> {48.6898, 2.3986}, 
+               "Campbelltown Rotary Observatory" -> {-34.07, 150.8}, 
+               "Campo Imperatore Near-Earth Object Survey" -> {42.4442, 
+                13.5581}, 
+               "Canopus Hill Observatory" -> {-42.8475, 147.432778}, 
+               "Capilla Peak Observatory" -> {34.706667, -106.408611}, 
+               "Capodimonte Observatory" -> {40.86286, 14.25506}, 
+               "Carter Observatory" -> {-41.28437, 174.76697}, 
+               "Catania Astrophysical Observatory" -> {37.528808, 15.071494}, 
+               "Cawthron Atkinson Observatory" -> {-41.2253, 173.3216}, 
+               "Celestial Observatory" -> {35.295278, -93.136389}, 
+               "Centennial (Herrett) Observatory" -> {42.583889, -114.470278},
+                "Cerro Armazones Observatory" -> {-24.59867, -70.20128}, 
+               "Cerro Tololo Inter-American Observatory" -> {-30.169661, \
+-70.806525}, "Cerro Pach\[OAcute]n Observatory" -> {-30.240722, -70.736583}, 
+               "Chabot Space and Science Center" -> {37.818611, -122.180556}, 
+               "Chamberlin Observatory" -> {39.676111, -104.953056}, 
+               "Chico Community Observatory" -> {39.771171, -121.782745}, 
+               "Chilbolton Observatory" -> {51.14456, -1.43858}, 
+               "Cima Ekar Observing Station" -> {45.85, 11.57}, 
+               "Cincinnati Observatory" -> {39.138611, -84.422778}, 
+               "City Observatory, Edinburgh" -> {55.954722, -3.183333}, 
+               "Clarence T. Jones Observatory" -> {35.0175, -85.2353}, 
+               "Clarke Observatory" -> {40.9039, -81.10637}, 
+               "Class of 1951 Observatory" -> {41.683011, -73.890604}, 
+               "Cloudcroft Observatory" -> {32.9795, -105.7336}, 
+               "Coats Observatory" -> {55.846627, -4.423636}, 
+               "Collins Observatory" -> {42.11803, -77.07768}, 
+               "Collm Observatory" -> {51.333333, 12.383333}, 
+               "Colombia National Astronomical Observatory" -> {
+                4.711111, -74.072222}, 
+               "Colombo University Observatory" -> {6.90143, 79.86139}, 
+               "\[CapitalCCedilla]OM\[CapitalUDoubleDot] Ulup\[DotlessI]nar \
+Observatory" -> {40.099167, 26.474722}, 
+               "Concordia College Observatory" -> {46.865278, -96.77}, 
+               "Consell Observatory" -> {39.653611, 2.8225}, 
+               "Constantinople Observatory of Taqi ad-Din" -> {41.013611, 
+                28.955}, 
+               "Cordell\[Dash]Lorenz Observatory" -> {35.204444, -85.92}, 
+               "C\[OHat]te d'Azur Observatory" -> {43.72333, 7.30167}, 
+               "Crane Observatory" -> {39.035972, -95.698889}, 
+               "Crawford Observatory" -> {51.89253, -8.49229}, 
+               "Creighton University Observatory" -> {41.266098, -95.947439}, 
+               "Crimean Astrophysical Observatory" -> {44.726667, 34.015861}, 
+               "\[CapitalCHacek]rni Vrh Observatory" -> {45.946667, 
+                14.073611}, "Cupillari Observatory" -> {41.5965, -75.678}, 
+               "Custer Observatory" -> {41.0519, -72.4345}, 
+               "Daniel S. Schanck Observatory" -> {40.499361, -74.445278}, 
+               "Daniel Scholl Observatory" -> {40.048068, -76.320563}, 
+               "Dark Sky Observatory" -> {36.2514, -81.4121}, 
+               "Darling's Observatory" -> {46.779722, -92.113056}, 
+               "Dearborn Observatory" -> {42.056667, -87.675}, 
+               "Detroit Observatory" -> {42.281667, -83.731667}, 
+               "The Dam Observatory" -> {46.59688, -101.81075}, 
+               "David Dunlap Observatory" -> {43.8629, -79.4227}, 
+               "Dome C" -> {-75.09978, 123.332196}, 
+               "Dominion Observatory" -> {45.393591, -75.714329}, 
+               "Dominion Astrophysical Observatory" -> {
+                48.520286, -123.418147}, 
+               "Dominion Radio Astrophysical Observatory" -> {
+                49.320751, -119.620811}, 
+               "Dunsink Observatory" -> {53.387056, -6.337547}, 
+               "Durham University Observatory" -> {54.768, -1.586}, 
+               "Dyer Observatory" -> {36.052222, -86.805}, 
+               "Effelsberg 100-m Radio Telescope" -> {50.5247, 6.8828}, 
+               "Ege University Observatory" -> {38.398333, 27.268333}, 
+               "Elginfield Observatory" -> {43.1924, -81.3158}, 
+               "Ellis Observatory" -> {41.083056, -74.606667}, 
+               "Embry-Riddle Observatory" -> {29.188183, -81.048313}, 
+               "Eskdalemuir Observatory" -> {55.312222, -3.206111}, 
+               "European Gravitational Observatory" -> {43.631494, 10.501847},
+                "European Southern Observatory" -> {48.26, 11.671111}, 
+               "Fabra Observatory" -> {41.4183, 2.1242}, 
+               "Fan Mountain Observatory" -> {37.878153, -78.693033}, 
+               "Five-hundred-meter Aperture Spherical Telescope" -> {25.65292,
+                 106.85658}, 
+               "F\[EAcute]lix Aguilar Observatory" -> {-31.8023, -69.3265}, 
+               "Fernbank Observatory" -> {33.778889, -84.318056}, 
+               "Fick Observatory" -> {42.005611, -93.943944}, 
+               "Five College Radio Astronomy Observatory" -> {
+                42.391925, -72.344097}, 
+               "Flarestar Observatory" -> {35.9111, 14.4708}, 
+               "Foggy Bottom Observatory" -> {42.81651, -75.532568}, 
+               "Foothill Observatory" -> {37.363125, -122.131514}, 
+               "Ford Observatory" -> {42.417533, -76.494075}, 
+               "Fox Observatory" -> {26.129306, -80.359917}, 
+               "Fox Park Public Observatory" -> {42.640136, -84.747447}, 
+               "Francis Marion University Observatory" -> {
+                34.185111, -79.651778}, 
+               "Fred Lawrence Whipple Observatory" -> {31.6811, -110.878}, 
+               "Fremont Peak Observatory" -> {36.760222, -121.498722}, 
+               "Frosty Drew Observatory" -> {41.367222, -71.663611}, 
+               "Fuertes Observatory" -> {42.452778, -76.474489}, 
+               "Gaocheng Astronomical Observatory" -> {34.402778, 113.140833},
+                "Gauribidanur Radio Observatory" -> {13.6, 77.43}, 
+               "Gemini Observatory North" -> {19.82396, -155.46984}, 
+               "Gemini Observatory South" -> {-30.24073, -70.73659}, 
+               "Giant Metrewave Radio Telescope" -> {19.096517, 74.049742}, 
+               "Gifford Observatory" -> {-41.3051, 174.7831}, 
+               "Girawali Observatory" -> {19.083333, 73.666667}, 
+               "Glen D. Riley Observatory" -> {41.7007, -88.1588}, 
+               "Godlee Observatory" -> {53.476144, -2.232644}, 
+               "Goodsell Observatory" -> {44.461944, -93.1525}, 
+               "Goethe Link Observatory" -> {39.55, -86.395}, 
+               "Goldendale Observatory" -> {45.838889, -120.815278}, 
+               "Gornergrat Infrared Telescope" -> {45.9834, 7.7836}, 
+               "Gran Telescopio Canarias" -> {28.75661, -17.89203}, 
+               "Grant O. Gale Observatory" -> {41.755598, -92.719851}, 
+               "Green Bank Telescope" -> {38.433121, -79.839835}, 
+               "Greenhill Observatory" -> {-42.4311, 147.2878}, 
+               "Green Point Observatory" -> {-34.00181, 151.07326}, 
+               "Grenfell Campus" -> {48.94009, -57.9322}, 
+               "Griffith Observatory" -> {34.11856, -118.30037}, 
+               "Guillermo Haro Observatory" -> {31.052778, -110.384722}, 
+               "Haleakal\[ABar] Observatory" -> {20.7083, -156.2571}, 
+               "Halley Observatory" -> {51.733333, 5.533333}, 
+               "Hamburg Observatory" -> {53.48, 10.241}, 
+               "Hat Creek Radio Observatory" -> {40.8178, -121.473}, 
+               "Hard Labor Creek Observatory" -> {33.671111, -83.593889}, 
+               "Hartung\[Dash]Boothroyd Observatory" -> {
+                42.458225, -76.384608}, 
+               "Hartebeesthoek Radio Astronomy Observatory" -> {-25.89037, 
+                27.68558}, "Hartwell House" -> {51.8051, -0.8468}, 
+               "Harvard College Observatory" -> {42.3815, -71.1284}, 
+               "Harvard\[Dash]Smithsonian Center for Astrophysics" -> {
+                42.38146, -71.12837}, 
+               "Haute-Provence Observatory" -> {43.9308, 5.7133}, 
+               "Haystack Observatory" -> {42.6233, -71.4882}, 
+               "Hector J. Robinson Observatory" -> {42.245833, -83.186944}, 
+               "The Heights Observatory" -> {-34.812439, 138.682356}, 
+               "Helium and Lead Observatory" -> {46.4719, -81.1866}, 
+               "Helmos Observatory" -> {37.9857, 22.1983}, 
+               "Helsinki University Observatory" -> {60.161667, 24.955}, 
+               "Herrett Observatory" -> {42.583889, -114.470278}, 
+               "Hida Observatory" -> {36.146028, 137.252167}, 
+               "Hidden Valley Observatory" -> {44.108333, -103.2975}, 
+               "High Energy Stereoscopic System" -> {-23.27133, 16.5}, 
+               "Highland Road Park Observatory" -> {30.346069, -91.070789}, 
+               "Hirsch Observatory" -> {42.72838, -73.68039}, 
+               "Hobbs Observatory" -> {44.815833, -91.271667}, 
+               "Hoher List Observatory" -> {50.166667, 6.85}, 
+               "Holcomb Observatory" -> {39.841389, -86.171389}, 
+               "Hong Kong Observatory" -> {22.3025, 114.174167}, 
+               "Hoober Observatory" -> {53.481389, -1.381667}, 
+               "Hopkins Observatory" -> {42.71167, -73.20167}, 
+               "Howell Observatory" -> {33.464, -88.819}, 
+               "Hradec Kr\[AAcute]lov\[EAcute] Observatory" -> {50.17722, 
+                15.83917}, 
+               "Huairou Solar Observing Station" -> {40.315833, 116.594444}, 
+               "Hume Cronyn Memorial Observatory" -> {43.005583, -81.275236}, 
+               "Hyde Memorial Observatory" -> {40.777817, -96.636225}, 
+               "IceCube Neutrino Observatory" -> {-89.99, -63.453056}, 
+               "Indian Astronomical Observatory" -> {32.7794, 78.9642}, 
+               "Instituto de Astrof\[IAcute]sica de Canarias" -> {
+                28.166667, -17.333333}, 
+               "Innsbruck Observatory" -> {47.2642, 11.3425}, 
+               "IRAM 30m telescope" -> {37.066161, -3.392719}, 
+               "Plateau de Bure Interferometer" -> {44.63389, 5.90792}, 
+               "Iranian National Observatory" -> {33.67417, 51.31861}, 
+               "Isaac Newton Group of Telescopes" -> {28.762056, -17.877639}, 
+               "Isaac Roberts' Observatory" -> {51.051944, 0.010278}, 
+               "Iso-Heikkil\[ADoubleDot] Observatory" -> {60.45205, 22.2298}, 
+               "Istanbul University Observatory" -> {41.0125, 28.965556}, 
+               "Istituto Ricerche Solari Locarno" -> {46.166667, 8.8}, 
+               "Jack C. Davis Observatory" -> {39.1857, -119.7964}, 
+               "James Clerk Maxwell Telescope" -> {19.8228, -155.477}, 
+               "James Gregory Telescope" -> {56.33715, -2.8165}, 
+               "James Wylie Shepherd Observatory" -> {33.104927, -86.862817}, 
+               "Jakarta Planetarium and Observatory" -> {-6.190001, 
+                106.839445}, "Jantar Mantar" -> {26.92472, 75.82444}, 
+               "Jena Observatory" -> {50.9253, 11.5831}, 
+               "Jewett Observatory" -> {46.7286, -117.153}, 
+               "Jodrell Bank Observatory" -> {53.23625, -2.307139}, 
+               "Judson B. Coit Observatory" -> {42.35025, -71.105372}, 
+               "Kilpisj\[ADoubleDot]rvi Atmospheric Imaging Receiver Array" -> \
+{69.070745, 20.762076}, 
+               "Khajeh Nasiredin Observatory" -> {38.063611, 46.328611}, 
+               "Kanzelhoehe Solar Observatory" -> {46.678333, 13.906667}, 
+               "Karl Schwarzschild Observatory" -> {50.980111, 11.711167}, 
+               "Keck Observatory" -> {19.8263, -155.47441}, 
+               "Keeble Observatory" -> {37.762389, -77.475389}, 
+               "Keele Observatory" -> {53.003, -2.273}, 
+               "Kennon Observatory" -> {34.36425, -89.536444}, 
+               "Kevola Observatory" -> {60.42, 22.765}, 
+               "Kielder Observatory" -> {55.231944, -2.61625}, 
+               "King's Observatory" -> {51.4689, -0.3147}, 
+               "Kirkwood Observatory" -> {39.165833, -86.526111}, 
+               "Kitami Observatory" -> {43.8182, 143.9037}, 
+               "Kitt Peak National Observatory" -> {31.9583, -111.5967}, 
+               "Kle\[THacek] Observatory" -> {48.8636, 14.2844}, 
+               "Kodaikanal Solar Observatory" -> {10.232222, 77.464722}, 
+               "Konkoly Observatory" -> {47.4997, 18.96389}, 
+               "Kopernik Observatory" -> {42.0021, -76.0335}, 
+               "K\[ODoubleDot]lner Observatorium f\[UDoubleDot]r \
+SubMillimeter Astronomie" -> {45.9844, 7.7858}, 
+               "Kuffner Observatory" -> {48.2125, 16.291111}, 
+               "Kwasan Observatory" -> {35.026212, 135.780842}, 
+               "Kvistaberg Observatory" -> {59.501667, 17.606667}, 
+               "Kyung Hee Astronomical Observatory" -> {37.238611, 
+                127.082222}, 
+               "Laboratoire d'Astrophysique de Grenoble" -> {45.171546, 
+                5.722387}, 
+               "La Ca\[NTilde]ada Observatory" -> {40.603917, -4.49315}, 
+               "Ladd Observatory" -> {41.838889, -71.399167}, 
+               "Lake Afton Public Observatory" -> {37.6222, -97.6269}, 
+               "Lamont\[Dash]Hussey Observatory" -> {-29.0966, 26.2362}, 
+               "Landessternwarte Heidelberg-K\[ODoubleDot]nigstuhl" -> {
+                49.3986, 8.7208}, 
+               "La Plata Astronomical Observatory" -> {-34.90833, -57.93167}, 
+               "La Silla Observatory" -> {-29.25, -70.73}, 
+               "Large High Altitude Air Shower Observatory" -> {29.358611, 
+                100.1375}, 
+               "Large Millimeter Telescope" -> {18.985833, -97.314722}, 
+               "Las Brisas Observatory" -> {38.8767, -105.2775}, 
+               "Las Campanas Observatory" -> {-29.01597, -70.69208}, 
+               "Laws Observatory" -> {38.9438, -92.3228}, 
+               "Leander McCormick Observatory" -> {38.032833, -78.522333}, 
+               "Lee Observatory" -> {33.900544, 35.479803}, 
+               "Leibniz Institute for Astrophysics Potsdam" -> {52.405, 
+                13.104167}, "Leiden Observatory" -> {52.154945, 4.483945}, 
+               "Leipzig Observatory" -> {51.333333, 12.383333}, 
+               "Leoncito Astronomical Complex" -> {-31.7986, -69.2956}, 
+               "Levenhagen Observatory" -> {47.435556, -122.277222}, 
+               "Lick Observatory" -> {37.341389, -121.642778}, 
+               "LightBuckets" -> {31.860833, -109.015556}, 
+               "LIGO Hanford Observatory" -> {46.455144, -119.407656}, 
+               "LIGO Livingston Observatory" -> {30.562894, -90.774242}, 
+               "Lindheimer Astrophysical Research Center" -> {
+                42.059514, -87.670425}, 
+               "Lisbon Astronomical Observatory" -> {38.710539, -9.187506}, 
+               "Llano de Chajnantor Observatory" -> {-23.0228, -67.755}, 
+               "Llano del Hato National Astronomical Observatory" -> {
+                8.78639, -70.87189}, 
+               "Long Wavelength Array" -> {34.07, -107.63}, 
+               "Longa Vista Observatory" -> {-23.005833, -46.838889}, 
+               "Lowell Observatory" -> {35.202778, -111.664444}, 
+               "Lulin Observatory" -> {23.469294, 120.872685}, 
+               "Lund Observatory" -> {55.69958, 13.18785}, 
+               "Luoxue Mountain Cosmic Rays Research Center" -> {25.05, 
+                101.866667}, "Lyon Observatory" -> {45.694722, 4.7825}, 
+               "Macalester College Observatory" -> {44.936444, -93.169583}, 
+               "Macfarlane Observatory" -> {55.871944, -4.2875}, 
+               "Magdalena Ridge Observatory" -> {33.9767, -107.185}, 
+               "Malakoff Tower" -> {-8.0608, -34.8708}, 
+               "Majorca Observatory" -> {39.616667, 2.983333}, 
+               "Manastash Ridge Observatory" -> {46.9511, -120.7245}, 
+               "Maragheh observatory" -> {37.396078, 46.209158}, 
+               "Margaret M. Jacoby Observatory" -> {41.714444, -71.4825}, 
+               "Maria Mitchell Observatory" -> {41.28, -70.105}, 
+               "Marina Towers Observatory" -> {51.614, -3.936667}, 
+               "Markree Observatory" -> {54.174286, -8.46147}, 
+               "Marseille Observatory" -> {43.30547, 5.39477}, 
+               "Martz Observatory" -> {42.008611, -79.066667}, 
+               "Mauna Kea Observatories" -> {19.8222, -155.4749}, 
+               "Mauna Loa Solar Observatory" -> {19.536, -155.576}, 
+               "Maynard F. Jordan Observatory" -> {44.898889, -68.6675}, 
+               "McDonald Observatory" -> {30.6714, -104.022}, 
+               "McKim Observatory" -> {39.645556, -86.8525}, 
+               "McMath\[Dash]Hulbert Observatory" -> {42.697648, -83.319175}, 
+               "MDM Observatory" -> {31.9517, -111.616}, 
+               "Mead Observatory" -> {32.459722, -84.995556}, 
+               "Medicina Radio Observatory" -> {44.5208, 11.6469}, 
+               "Mees Observatory" -> {42.700278, -77.408767}, 
+               "Mehalso Observatory" -> {42.118417, -79.9875}, 
+               "Melbourne Observatory" -> {-37.8297, 144.975}, 
+               "Melton Memorial Observatory" -> {33.9975, -81.026389}, 
+               "Mendenhall Observatory" -> {36.070472, -97.193833}, 
+               "Menke Observatory" -> {41.771944, -90.794306}, 
+               "Mets\[ADoubleDot]hovi Radio Observatory" -> {60.2181, 
+                24.3939}, "Meudon Observatory" -> {48.812309, 2.23815}, 
+               "Meyer\[Dash]Womble Observatory" -> {39.587, -105.6409}, 
+               "Michigan State University Observatory" -> {
+                42.706389, -84.482222}, 
+               "Miller Observatory" -> {35.57577, -81.20614}, 
+               "Mills Observatory" -> {56.464981, -3.012575}, 
+               "Modra Observatory" -> {48.373273, 17.274021}, 
+               "Mohr Observatory" -> {-6.2, 106.816667}, 
+               "Mol\:0117tai Astronomical Observatory" -> {55.315972, 
+                25.563333}, 
+               "Molonglo Observatory Synthesis Telescope" -> {-35.3707, 
+                149.424}, 
+               "Mont M\[EAcute]gantic Observatory" -> {45.4558, -71.1525}, 
+               "Monterey Institute for Research in Astronomy" -> {
+                36.6609, -121.8087}, 
+               "Moore Observatory" -> {38.344444, -85.528889}, 
+               "Morgan\[Dash]Monroe Observatory" -> {39.313611, -86.434444}, 
+               "Morris Observatory" -> {41.013167, -85.757806}, 
+               "Morrison Observatory" -> {39.15167, -92.69667}, 
+               "Moscow Cosmic-Ray Station" -> {55.491389, 37.309167}, 
+               "Mount Stony Brook Observatory" -> {40.91476, -73.12568}, 
+               "Mounds Observatory" -> {35.831233, -96.146}, 
+               "Mount Abu InfraRed Observatory" -> {24.654817, 72.779217}, 
+               "Mount Burnett Observatory" -> {-37.9727, 145.4954}, 
+               "Mount Cuba Astronomical Observatory" -> {39.785, -75.63333}, 
+               "Mount Graham International Observatory" -> {
+                32.7013, -109.892}, 
+               "Mount John University Observatory" -> {-43.986667, 170.465}, 
+               "Mount Laguna Observatory" -> {32.8424, -116.428}, 
+               "Mount Lemmon Observatory" -> {32.442, -110.7893}, 
+               "Mount Pleasant Radio Observatory" -> {-42.805, 147.439}, 
+               "Mount Stromlo Observatory" -> {-35.320278, 149.006944}, 
+               "Mount Suhora Observatory" -> {49.569167, 20.0675}, 
+               "Mount Wilson Observatory" -> {34.22503, -118.05719}, 
+               "Mountain Skies Observatory" -> {41.328, -110.292}, 
+               "Mullard Radio Astronomy Observatory" -> {52.1674, 0.0326}, 
+               "Multiple Mirror Telescope (MMT) Observatory" -> {
+                31.6883, -110.885}, 
+               "Murchison Radio-astronomy Observatory" -> {-26.70312, 
+                116.670575}, 
+               "Nachi-Katsuura Observatory" -> {33.61, 135.924722}, 
+               "Nan\[CCedilla]ay Radio Observatory" -> {47.38042, 2.19503}, 
+               "Nanjing Astronomical Instruments Research Centre" -> {32.0614,
+                 118.7636}, 
+               "National Astronomical Observatory of Japan, Mitaka Campus" -> \
+{35.675217, 139.538083}, 
+               "National Observatory of Athens" -> {37.973389, 23.718222}, 
+               "National Research Institute of Astronomy and Geophysics" -> {
+                29.85, 31.333333}, 
+               "Naylor Observatory" -> {40.1469, -76.8989}, 
+               "Nice Observatory" -> {43.72744, 7.29907}, 
+               "Nizamia Observatory" -> {17.431667, 78.4525}, 
+               "Nordic Optical Telescope" -> {28.75728, -17.88508}, 
+               "Norilsk Cosmic-Ray Station" -> {69.333333, 88.216667}, 
+               "Norman Lockyer Observatory" -> {50.68803, -3.219835}, 
+               "Northern Arizona University Observatory" -> {
+                35.199167, -111.631111}, 
+               "Northolt Branch Observatories" -> {51.55466, -0.37192}, 
+               "North Georgia Astronomical Observatory" -> {
+                34.520833, -84.053889}, 
+               "North Otago Astronomical Society Observatory" -> {-45.091482, 
+                170.95801}, 
+               "Nyr\[ODoubleDot]l\[ADoubleDot] Observatory" -> {62.342222, 
+                25.513056}, "O'Brien Observatory" -> {45.1815, -92.7757}, 
+               "Observatoire Cantonal de Neuch\[AHat]tel" -> {47, 6.9529}, 
+               "Observatoire du Pic de Ch\[AHat]teau-Renard" -> {44.7008, 
+                6.8692}, 
+               "Observatoire Midi-Pyr\[EAcute]n\[EAcute]es" -> {42.666667, 1},
+                "Observatorio Astron\[OAcute]mico de C\[OAcute]rdoba" -> \
+{-31.416667, -64.183333}, 
+               "Observatorio Astron\[OAcute]mico Nacional Tonantzintla" -> {
+                19.05, -98.3}, 
+               "Observatorio de Aras de los Olmos" -> {39.925556, -1.133611}, 
+               "Observatorio Solar Carl Sagan" -> {29.098889, -110.954167}, 
+               "Observatory House" -> {51.5082, -0.5954}, 
+               "Observatory of Strasbourg" -> {48.583333, 7.768056}, 
+               "Observatory of the rue Serpente" -> {48.85268, 2.341642}, 
+               "Observatory Vset\[IAcute]n" -> {49.34425, 17.996281}, 
+               "Oil Region Astronomical Observatory" -> {
+                41.470278, -79.783611}, 
+               "Onan Observatory" -> {44.766667, -93.916667}, 
+               "Ondokuz May\[DotlessI]s University Observatory" -> {41.368333,
+                 36.200833}, 
+               "Ond\[RHacek]ejov Observatory" -> {49.915175, 14.780994}, 
+               "Onsala Space Observatory" -> {57.393056, 11.917778}, 
+               "Ooty Radio Telescope" -> {11.383404, 76.66616}, 
+               "Orchard Hill Observatory" -> {42.394061, -72.521564}, 
+               "Orioloromano Observatory" -> {42.169528, 12.138}, 
+               "Orion Ranch Observatory" -> {30.744167, -98.055833}, 
+               "Orwell Park School Observatory" -> {52.017, 1.233}, 
+               "Otter Creek Observatory" -> {38.07307, -86.016362}, 
+               "Oulu Cosmic-Ray Station" -> {65.014167, 25.471944}, 
+               "Owens Valley Radio Observatory" -> {37.2339, -118.282}, 
+               "\[CapitalOSlash]stervold Observatory" -> {55.686883, 
+                12.575919}, 
+               "Pachmarhi Array of Cerenkov Telescopes" -> {22.466667, 
+                76.433333}, 
+               "Palisades-Dows Observatory" -> {41.983056, -91.668611}, 
+               "Palomar Observatory" -> {33.3564, -116.865}, 
+               "Panzano Observatory" -> {44.6211, 11.0417}, 
+               "Paranal Observatory" -> {-24.627222, -70.404167}, 
+               "Parkes Observatory" -> {-32.99778, 148.26292}, 
+               "Paul Robinson Observatory" -> {40.6818, -74.8981}, 
+               "Peach Mountain Observatory" -> {42.3988, -83.9355}, 
+               "Perkins Observatory" -> {40.251, -83.056}, 
+               "Perth Observatory" -> {-32.00781, 116.13579}, 
+               "Peterberg Observatory" -> {49.5714, 6.9992}, 
+               "Pic du Midi Observatory" -> {42.936389, 0.142778}, 
+               "Pico dos Dias Observatory" -> {-22.5344, -45.5825}, 
+               "Piera Observatory" -> {41.5215, 1.7553}, 
+               "Pierre Auger Observatory" -> {-35.20675, -69.31597}, 
+               "Pine Bluff Observatory" -> {43.0777, -89.6717}, 
+               "Pine Mountain Observatory" -> {43.7915, -120.9408}, 
+               "Pistoia Mountains Astronomical Observatory" -> {44.063056, 
+                10.804167}, 
+               "Planetarium i Obserwatorium Astronomiczne w Grudzi\:0105dzu" -> \
+{53.483333, 18.766667}, 
+               "Pollock Astronomical Observatory" -> {41.476111, -81.401111}, 
+               "Portage Lake Observatory" -> {42.4035, -83.9245}, 
+               "Pozna\:0144 Observatory" -> {52.3944, 16.8745}, 
+               "Puckett Observatory" -> {34.732386, -84.5353}, 
+               "Pula Observatory" -> {44.866667, 13.85}, 
+               "Pulkovo Observatory" -> {59.771667, 30.326111}, 
+               "Purple Mountain Observatory" -> {32.064946, 118.829677}, 
+               "Quito Astronomical Observatory" -> {-0.21494, -78.50258}, 
+               "Radcliffe Observatory" -> {51.7608, -1.2639}, 
+               "Rainwater Observatory" -> {33.28725, -89.385139}, 
+               "Ralph A. Worley Observatory" -> {32.319753, -93.621508}, 
+               "Rankin Science Observatory" -> {36.213843, -81.678621}, 
+               "Rattlesnake Mountain Observatory" -> {46.583333, -119.516667},
+                "Real Instituto y Observatorio de la Armada" -> {
+                36.466667, -6.2}, 
+               "Red Barn Observatory" -> {31.387983, -83.651986}, 
+               "Red Buttes Observatory" -> {41.176389, -105.573889}, 
+               "Riley Observatory" -> {41.7007, -88.1588}, 
+               "Rochester Institute of Technology Observatory" -> {
+                43.0758, -77.6647}, 
+               "Ritter Observatory" -> {41.6624, -83.6123}, 
+               "Robert A. Schommer Observatory" -> {40.501667, -74.448056}, 
+               "Robert Brownlee Observatory" -> {34.23083, -117.20972}, 
+               "Robinson Observatory" -> {28.59175, -81.19062}, 
+               "Robotic Lunar Observatory" -> {35.2148, -111.6344}, 
+               "Rogers Observatory" -> {44.706667, -85.775556}, 
+               "Rolnick Observatory" -> {41.171111, -73.3305}, 
+               "Rome Observatory" -> {41.92247, 12.452477}, 
+               "Roseland Observatory" -> {50.336, -4.877}, 
+               "Rothney Astrophysical Observatory" -> {50.8684, -114.291}, 
+               "Royal Observatory, Greenwich" -> {51.4778, -0.0014}, 
+               "Royal Observatory, Edinburgh" -> {55.923056, -3.187778}, 
+               "Roque de los Muchachos Observatory" -> {28.7636, -17.8947}, 
+               "Rosemary Hill Observatory" -> {29.4001, -82.5862}, 
+               "Rozhen Observatory" -> {41.6925, 24.738056}, 
+               "Rutherfurd Observatory" -> {40.81, -73.9614}, 
+               "San Fernando Observatory" -> {34.30778, -118.44833}, 
+               "Sankt Andreasberg Observatory" -> {51.73186, 10.52604}, 
+               "Sayan Spectrographic Cosmic Ray Complex" -> {52.283333, 
+                104.283333}, "SFA Observatory" -> {31.7599, -94.661}, 
+               "Sagamore Hill Radio Observatory" -> {42.6323, -70.8201}, 
+               "Shattuck Observatory" -> {43.705, -72.285278}, 
+               "Sherwood Observatory" -> {53.114217, -1.221972}, 
+               "Seven Hills Observatory" -> {40.700833, -99.081111}, 
+               "Shamakhy Astrophysical Observatory" -> {40.781944, 48.596667},
+                "Shanghai Astronomical Observatory" -> {31.190278, 
+                121.429444}, "Sherzer Observatory" -> {42.155, -83.372856}, 
+               "Siding Spring Observatory" -> {-31.273333, 149.064444}, 
+               "Sierra Nevada Observatory" -> {37.064219, -3.3847}, 
+               "Silesian Planetarium and Astronomical Observatory" -> {
+                50.290469, 18.991469}, 
+               "Simeiz Observatory" -> {44.418039, 33.9974}, 
+               "Skalnat\[EAcute] Pleso Observatory" -> {49.189381, 20.233819},
+                "Skinakas Observatory" -> {35.212, 24.8982}, 
+               "Smith Observatory" -> {42.505, -89.03167}, 
+               "Smithsonian Astrophysical Observatory" -> {
+                42.38146, -71.12837}, 
+               "Sobaeksan Optical Astronomy Observatory" -> {36.96, 
+                128.484722}, 
+               "Sola Fide Observatory" -> {43.616675, -92.975932}, 
+               "Sommers\[Dash]Bausch Observatory" -> {40.003722, -105.2625}, 
+               "Sonnenborgh Observatory" -> {52.08667, 5.13}, 
+               "Sonoma State Observatory" -> {38.336667, -122.6675}, 
+               "South African Astronomical Observatory" -> {-33.9347, 
+                18.4776}, 
+               "Southern Astrophysical Research Telescope" -> {-30.238, \
+-70.73372}, "South Pole Telescope" -> {-90, 0}, 
+               "Spanish National Observatory" -> {40.408386, -3.687539}, 
+               "Special Astrophysical Observatory of the Russian Academy of \
+Science" -> {43.646825, 41.440447}, 
+               "Sperry Observatory" -> {40.666389, -74.323333}, 
+               "Springfield Observatory" -> {42.101389, -72.590278}, 
+               "Sproul Observatory" -> {39.903611, -75.355278}, 
+               "Stardome Observatory" -> {-36.905978, 174.776736}, 
+               "Starkenburg Observatory" -> {49.648056, 8.653056}, 
+               "\[CapitalSHacek]tef\[AAcute]nik's Observatory" -> {50.08119, 
+                14.39822}, 
+               "Stephens Memorial Observatory" -> {41.310278, -81.146111}, 
+               "Steward Observatory" -> {32.2333, -110.949}, 
+               "Stjerneborg" -> {55.9068, 12.6967}, 
+               "Stockholm Observatory" -> {59.3417, 18.0547}, 
+               "Stokesville Observatory" -> {38.352361, -79.151944}, 
+               "Stone Observatory" -> {51.8044, -0.8649}, 
+               "Stonyhurst Observatory" -> {53.8, -2.5}, 
+               "Stull Observatory" -> {42.25, -77.783333}, 
+               "Stuttgart Observatory" -> {48.7825, 9.1964}, 
+               "St. Thomas Observatory" -> {44.939278, -93.193556}, 
+               "Submillimeter Array" -> {19.8243, -155.478}, 
+               "Sudbury Neutrino Observatory" -> {46.475, -81.201111}, 
+               "Sunriver Observatory" -> {43.8851, -121.4476}, 
+               "Swiss Observatory Polychron and Astronomy" -> {46.2, 6.15}, 
+               "Sydney Observatory" -> {-33.8596, 151.2047}, 
+               "Table Mountain Observatory" -> {34.382, -117.6818}, 
+               "Tacubaya Observatory" -> {19.40095, -99.187231}, 
+               "Taeduk Radio Astronomy Observatory" -> {36.397586, 
+                127.375208}, 
+               "Tamke-Allan Observatory" -> {35.8325, -84.617833}, 
+               "Tartu Observatory" -> {58.265833, 26.466111}, 
+               "Teide Observatory" -> {28.3, -16.5097}, 
+               "Ten Acre Observatory" -> {35.0886, -97.1207}, 
+               "Terskol Peak Observatory" -> {43.583333, 43.4}, 
+               "Thai National Observatory" -> {18.59056, 98.48656}, 
+               "Texas A&M Astronomical Observatory" -> {30.572717, -96.36665},
+                "Theodor Jacobsen Observatory" -> {47.660432, -122.3092}, 
+               "Thompson Observatory" -> {42.505, -89.03167}, 
+               "Tien Shan Astronomical Observatory" -> {43.0576, 76.9715}, 
+               "Tuorla Observatory" -> {60.415833, 22.443333}, 
+               "Turin Astrophysical Observatory" -> {45.041292, 7.765135}, 
+               "UCL Observatory" -> {51.6134, -0.242}, 
+               "Udaipur Solar Observatory" -> {24.604589, 73.674189}, 
+               "Ukrainian T-Shaped Radio Telescope" -> {49.6381, 36.9361}, 
+               "United States Naval Observatory, Main Campus" -> {
+                38.921473, -77.066946}, 
+               "United States Naval Observatory Flagstaff Station" -> {
+                35.184167, -111.740278}, 
+               "University of Alabama Observatory" -> {33.209682, -87.543886},
+                "University of Maryland Observatory" -> {39.00167, -76.95667},
+                "University of Michigan-Dearborn Observatory" -> {
+                42.314444, -83.213333}, 
+               "University of Oklahoma Observatory" -> {35.2025, -97.444056}, 
+               "University of Puerto Rico at Humacao Observatory" -> {
+                18.149722, -65.8275}, 
+               "Uppsala Astronomical Observatory" -> {59.837417, 17.647833}, 
+               "Urania, Antwerp Campus" -> {51.15, 4.466667}, 
+               "Urania, Berlin Campus" -> {52.52, 13.405}, 
+               "Urania, Vienna Campus" -> {48.211667, 16.383611}, 
+               "Urania, Z\[UDoubleDot]rich Observatory" -> {47.3744, 8.5395}, 
+               "Uraniborg" -> {55.907778, 12.696667}, 
+               "Valongo Observatory" -> {-22.9, -43.19}, 
+               "Vainu Bappu Observatory" -> {12.574802, 78.820488}, 
+               "Van Vleck Observatory" -> {41.555, -72.659167}, 
+               "Vanderbilt University Observatory" -> {36.0524, -86.8053}, 
+               "Vartiovuori Observatory" -> {60.448611, 22.276667}, 
+               "Vassar College Observatory" -> {41.688285, -73.89331}, 
+               "Vatican Advanced Technology Telescope" -> {32.7013, -109.892},
+                "Vatican Observatory" -> {41.747222, 12.650556}, 
+               "Veen Observatory" -> {42.904444, -85.403611}, 
+               "Vega\[Dash]Bray Observatory" -> {31.940833, -110.2575}, 
+               "Ventspils International Radio Astronomy Centre" -> {57.553493,
+                 21.854916}, 
+               "Vernonia Peak Observatory" -> {45.79977, -123.21036}, 
+               "Very Large Array" -> {34.078749, -107.617728}, 
+               "Very Long Baseline Array Operations Center" -> {
+                34.07883, -107.61831}, 
+               "Vienna Observatory" -> {48.2319, 16.3337}, 
+               "Vilnius University Astronomical Observatory" -> {54.683111, 
+                25.2865}, 
+               "Vi\[SHacek]njan Observatory" -> {45.2775, 13.726111}, 
+               "Warkworth Radio Astronomical Observatory" -> {-36.4328, 
+                174.6682}, "Warner Observatory" -> {43.15361, -77.59}, 
+               "Warner and Swasey Observatory" -> {41.536111, -81.568472}, 
+               "Warren Rupp Observatory" -> {40.6378, -82.4364}, 
+               "Washburn Observatory" -> {43.0765, -89.4089}, 
+               "Wast Hills Observatory" -> {52.387444, -1.944194}, 
+               "Weaver Student Observatory" -> {36.661667, -121.808333}, 
+               "Weitkamp Observatory" -> {40.125746, -82.937266}, 
+               "West Mountain Observatory" -> {40.08741, -111.82604}, 
+               "Whakatane Astronomical Society" -> {-37.956642, 176.999544}, 
+               "Whitin Observatory" -> {42.295, -71.303}, 
+               "Widener University Observatory" -> {39.862222, -75.358333}, 
+               "Wilder Observatory" -> {42.36575, -72.524167}, 
+               "Willard L. Eccles Observatory" -> {38.5217, -113.2863}, 
+               "William Brydone Jack Observatory" -> {45.948056, -66.640556}, 
+               "Williams Observatory" -> {35.24415, -81.67095}, 
+               "Winer Observatory" -> {31.665578, -110.601783}, 
+               "Winfree Observatory" -> {37.439556, -79.173111}, 
+               "Wise Observatory" -> {30.595833, 34.763333}, 
+               "Wyoming Infrared Observatory" -> {41.097, -105.977}, 
+               "Xiangfen Astronomical Observatory" -> {35.876389, 111.441944},
+                "Xinglong Station" -> {40.3942, 117.575}, 
+               "Xinjiang Astronomical Observatory" -> {43.47, 87.18}, 
+               "Xujiahui Astronomical Observatory" -> {31.228611, 121.474722},
+                "Yale University Observatory" -> {41.321, -72.922}, 
+               "Yangbajing International Cosmic-Ray Observatory" -> {
+                30.083333, 90.55}, 
+               "Yerkes Observatory" -> {42.570278, -88.556111}, 
+               "Yuba City Astronomical Observatory" -> {
+                39.11465, -121.634125}, 
+               "Yunnan Astronomical Observatory" -> {25.03, 102.78}, 
+               "Zimmerwald Observatory" -> {46.87667, 7.465}, 
+               "Zadko Observatory" -> {-31.358722, 115.713111}],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ReleaseHold", "[", 
+              RowBox[{"ToExpression", "[", 
+               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], 
+             "]"}], "/.", 
+            RowBox[{"h3", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", 
+                RowBox[{
+                 RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+                  RowBox[{"GeoListPlot", "[", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"GeoPosition", "[", "#", "]"}], "}"}], "&"}], "/@",
+                     "h1"}], ",", "\[IndentingNewLine]", 
+                    RowBox[{"PlotMarkers", "\[Rule]", "GeoMarker"}], ",", 
+                    RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+                    RowBox[{"PlotStyle", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"Blue", ",", "Red", ",", "Red", ",", "Red"}], 
+                    "}"}]}], ",", 
+                    RowBox[{"PlotLegends", "\[Rule]", "None"}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}], "]"}], 
+                 "\[IndentingNewLine]", "/.", 
+                 RowBox[{"h1", "\[Rule]", 
+                  RowBox[{"Values", "[", "data", "]"}]}]}], "]"}], "]"}], 
+              "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<The pins locate these four observatories. Which is the blue \
+pin?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"StringLength", "[", "#", "]"}], ">", " ", "24"}], 
+               ",", 
+               RowBox[{"Tooltip", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"StringTake", "[", 
+                   RowBox[{"#", ",", "24"}], "]"}], "<>", "\"\<...\>\""}], 
+                 ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{"Darker", "[", "Blue", "]"}], ",", "20"}], "]"}]}],
+                 "]"}], ",", "#"}], "]"}], "&"}], "/@", 
+            RowBox[{"Keys", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Astr4\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683040203137773*^9, 3.6830402045835943`*^9}, 
    3.683040255452271*^9, {3.689639875565065*^9, 3.689640245188048*^9}, {
@@ -154,14 +896,304 @@ Cell[BoxData[
    3.689641783812251*^9}, {3.689641862800555*^9, 3.689641873367013*^9}, 
    3.689641915648672*^9, {3.689641998123969*^9, 3.68964202378858*^9}, {
    3.689642067702826*^9, 3.689642094288239*^9}, {3.6896421257799883`*^9, 
-   3.689642138211323*^9}},ExpressionUUID->"b57013ae-66fb-43a3-a258-\
-3bd613bcbd99"]
+   3.689642138211323*^9}, {3.810166456693407*^9, 3.810166616849393*^9}, {
+   3.810166746514098*^9, 3.810166763090996*^9}, {3.810201616734397*^9, 
+   3.81020165390232*^9}, 3.8102016907310266`*^9, {3.810201784374216*^9, 
+   3.810201824881948*^9}, {3.810201930967944*^9, 3.8102019415173483`*^9}, {
+   3.81020199474117*^9, 3.810202034146833*^9}, {3.8102020688768587`*^9, 
+   3.81020208262066*^9}, {3.810202144309299*^9, 3.810202144998118*^9}, {
+   3.810220070409091*^9, 3.810220103614451*^9}, {3.810220146545106*^9, 
+   3.810220175413447*^9}, {3.810220220344886*^9, 3.810220248844883*^9}, {
+   3.8102203258326063`*^9, 3.81022033438404*^9}, {3.810220370325509*^9, 
+   3.810220434197378*^9}, {3.810220499952458*^9, 3.810220528380456*^9}, {
+   3.810220560743545*^9, 3.8102206288471813`*^9}, 3.810220660499906*^9, {
+   3.810220690527603*^9, 3.8102207027669973`*^9}, {3.810220773811832*^9, 
+   3.8102208211348333`*^9}, 3.810220851747733*^9, {3.8102209021110363`*^9, 
+   3.810220941178767*^9}, {3.8102209876560307`*^9, 3.810221013498992*^9}, {
+   3.810221056870576*^9, 3.810221216845438*^9}, {3.810221251661806*^9, 
+   3.810221280474742*^9}, {3.810221314045602*^9, 3.8102213279810143`*^9}, {
+   3.810221365226372*^9, 3.810221427090043*^9}, {3.8102214936530848`*^9, 
+   3.810221531525106*^9}, {3.810221629860971*^9, 3.8102217248119087`*^9}, {
+   3.810221780225224*^9, 3.81022179540381*^9}, {3.810221838345121*^9, 
+   3.810221916571493*^9}, {3.810221949968575*^9, 3.810221981067481*^9}, {
+   3.8102220381359997`*^9, 3.810222097155408*^9}, {3.810222134611436*^9, 
+   3.810222263586659*^9}, 3.810222294015523*^9, {3.810222357794858*^9, 
+   3.810222408088036*^9}, {3.8102224963067913`*^9, 3.8102225251943827`*^9}, {
+   3.8102225743984213`*^9, 3.810222706409842*^9}, {3.8102227419537983`*^9, 
+   3.810222890521152*^9}, {3.810222930114575*^9, 3.810223067386146*^9}, {
+   3.810223109983144*^9, 3.8102231630659943`*^9}, {3.8102231941187057`*^9, 
+   3.81022320014637*^9}, {3.810223232758519*^9, 3.810223257393647*^9}, {
+   3.810223313794005*^9, 3.8102233537055683`*^9}, {3.810223395815137*^9, 
+   3.810223475929348*^9}, {3.810223507009636*^9, 3.810223532622396*^9}, {
+   3.810223653425404*^9, 3.810223749400786*^9}, {3.8102237826385603`*^9, 
+   3.810223807832964*^9}, {3.810223872328896*^9, 3.810223880480501*^9}, {
+   3.810223914670143*^9, 3.810223975117379*^9}, {3.810224009104817*^9, 
+   3.810224022360083*^9}, {3.810224099736289*^9, 3.8102241201373034`*^9}, {
+   3.8102241777843103`*^9, 3.8102242029324913`*^9}, {3.810252543077713*^9, 
+   3.8102525835884438`*^9}, {3.81025261924197*^9, 3.8102529222117157`*^9}, {
+   3.810252962224105*^9, 3.810253284306573*^9}, {3.810253322570773*^9, 
+   3.810253357162539*^9}, {3.810253461599278*^9, 3.8102534949940434`*^9}, {
+   3.810253534568192*^9, 3.8102535598340816`*^9}, {3.810253590233968*^9, 
+   3.810253744121881*^9}, {3.810253776921702*^9, 3.810253904414955*^9}, {
+   3.810253935701725*^9, 3.810253940073539*^9}, {3.8102539703816433`*^9, 
+   3.810254000944831*^9}, {3.810254035085559*^9, 3.810254187416453*^9}, {
+   3.810254225581627*^9, 3.810254264608283*^9}, {3.810254302629786*^9, 
+   3.8102543413523912`*^9}, {3.810254376317173*^9, 3.8102544033281527`*^9}, {
+   3.810254457829587*^9, 3.810254497367584*^9}, {3.810254528484137*^9, 
+   3.81025455572782*^9}, {3.8102545980923986`*^9, 3.810254646111652*^9}, {
+   3.8102546791487503`*^9, 3.810254758459469*^9}, {3.8102548082154617`*^9, 
+   3.810254842236227*^9}, {3.810288600798245*^9, 3.8102886453009853`*^9}, {
+   3.810288767484386*^9, 3.8102888102441587`*^9}, {3.810288859945848*^9, 
+   3.810289121945228*^9}, {3.810289167011558*^9, 3.810289200355401*^9}, {
+   3.810289231416889*^9, 3.810289269459168*^9}, {3.810289305585135*^9, 
+   3.810289312059125*^9}, {3.810289342352373*^9, 3.8102893833549*^9}, {
+   3.810289415368568*^9, 3.810289507237207*^9}, {3.8102895394000587`*^9, 
+   3.8102895676506243`*^9}, {3.810289598551879*^9, 3.810289632338601*^9}, {
+   3.8102896762239437`*^9, 3.810289710594775*^9}, {3.810289809398918*^9, 
+   3.810289816434246*^9}, {3.810289850255692*^9, 3.810289855370078*^9}, {
+   3.810289888671268*^9, 3.8102900809694*^9}, {3.810290190921633*^9, 
+   3.8102903776809683`*^9}, {3.8102904133026037`*^9, 
+   3.8102904536090517`*^9}, {3.810291321197846*^9, 3.81029141468813*^9}, {
+   3.810291445622677*^9, 3.8102915847354307`*^9}, {3.810291622005796*^9, 
+   3.810291710543643*^9}, {3.8102917431883307`*^9, 3.8102920000306873`*^9}, {
+   3.810292034972434*^9, 3.810292042094762*^9}, {3.8102920750279818`*^9, 
+   3.810292084574539*^9}, {3.810292114627894*^9, 3.810292203238516*^9}, {
+   3.8102922435157537`*^9, 3.8102923473580427`*^9}, {3.810292384307444*^9, 
+   3.810292470594789*^9}, {3.810292512454361*^9, 3.8102926127256393`*^9}, {
+   3.81029265459348*^9, 3.810292688475665*^9}, {3.810292738345965*^9, 
+   3.8102928867776327`*^9}, {3.810292920259673*^9, 3.810292999048553*^9}, {
+   3.810293043515368*^9, 3.8102932987764587`*^9}, {3.810301763958551*^9, 
+   3.810301899453689*^9}, {3.8103019325388803`*^9, 3.810302007198099*^9}, {
+   3.810302037619179*^9, 3.810302114733823*^9}, {3.810302160626189*^9, 
+   3.810302297204966*^9}, {3.810302329473445*^9, 3.8103025158687*^9}, {
+   3.810302559985383*^9, 3.8103025897801037`*^9}, {3.810302647680489*^9, 
+   3.810302682044058*^9}, {3.810302713296722*^9, 3.8103027184675627`*^9}, {
+   3.8103027489957733`*^9, 3.8103028303156557`*^9}, {3.810302876368599*^9, 
+   3.810302972799747*^9}, {3.8103030108831244`*^9, 3.810303063747019*^9}, {
+   3.8103030945444813`*^9, 3.8103031010186253`*^9}, {3.81030313488793*^9, 
+   3.810303432610382*^9}, {3.8103034709911547`*^9, 3.810303478817708*^9}, {
+   3.810303513446731*^9, 3.810303590897379*^9}, {3.81030362678345*^9, 
+   3.8103037280249443`*^9}, {3.81030377997407*^9, 3.810303818912734*^9}, {
+   3.810303854998988*^9, 3.8103038875509577`*^9}, {3.810303925784437*^9, 
+   3.8103039469282713`*^9}, {3.810303983302869*^9, 3.81030402452804*^9}, {
+   3.81030405837386*^9, 3.810304319151189*^9}, {3.8103043509172077`*^9, 
+   3.8103045002286987`*^9}, {3.810304534078915*^9, 3.810304675806415*^9}, {
+   3.810306379217194*^9, 3.810306470163015*^9}, {3.8103065120555*^9, 
+   3.810306672898759*^9}, {3.810306713983477*^9, 3.810306719674844*^9}, {
+   3.810306767609683*^9, 3.810306772627592*^9}, {3.810306809753355*^9, 
+   3.810306909219932*^9}, {3.8103069394399853`*^9, 3.810306973851411*^9}, {
+   3.810307023687948*^9, 3.810307170363274*^9}, {3.81030720555967*^9, 
+   3.810307290579112*^9}, {3.810307333640416*^9, 3.8103073706908712`*^9}, {
+   3.8103074072560587`*^9, 3.810307611802806*^9}, {3.810307656576264*^9, 
+   3.810307757461472*^9}, {3.8103077976499987`*^9, 3.810307902977693*^9}, {
+   3.810307985432331*^9, 3.810307999481091*^9}, {3.810308130358083*^9, 
+   3.810308137578528*^9}, {3.810308185919107*^9, 3.810308217913059*^9}, {
+   3.810308259457325*^9, 3.810308299406755*^9}, {3.8103139084421053`*^9, 
+   3.810314080082238*^9}, {3.810314118230792*^9, 3.810314223377294*^9}, {
+   3.810314280481612*^9, 3.810314298120977*^9}, {3.810314358366273*^9, 
+   3.810314386441922*^9}, {3.810314418102757*^9, 3.810314443280813*^9}, {
+   3.81031448092562*^9, 3.8103144921931*^9}, {3.810314524869853*^9, 
+   3.8103145987607613`*^9}, {3.8103146335100937`*^9, 3.810314671272917*^9}, {
+   3.810314702114801*^9, 3.810314732656588*^9}, {3.810314798021523*^9, 
+   3.810314871496105*^9}, {3.8103149061255007`*^9, 3.810314909479987*^9}, {
+   3.810314953137694*^9, 3.810315108718704*^9}, {3.810315167909039*^9, 
+   3.810315197244152*^9}, {3.810315258175147*^9, 3.81031530510878*^9}, {
+   3.8103153721434917`*^9, 3.8103153767041883`*^9}, {3.8103154118303957`*^9, 
+   3.810315435076323*^9}, {3.81031548716645*^9, 3.8103155217465982`*^9}, {
+   3.8103155553262787`*^9, 3.810315593100301*^9}, {3.810318559575004*^9, 
+   3.810318569150626*^9}, {3.810318601796129*^9, 3.810318618598592*^9}, {
+   3.810318652596109*^9, 3.810318780966115*^9}, 3.810318814611967*^9, {
+   3.8103188661502657`*^9, 3.810318918277906*^9}, {3.8103189532914658`*^9, 
+   3.810319047013974*^9}, {3.810319080955621*^9, 3.810319122949504*^9}, {
+   3.810319170226059*^9, 3.810319528661419*^9}, {3.8103195786575527`*^9, 
+   3.810319604266734*^9}, {3.810319641509227*^9, 3.810319643205366*^9}, {
+   3.810319684561282*^9, 3.810319780228491*^9}, {3.8103198293226013`*^9, 
+   3.8103198395489283`*^9}, 3.8103199160507174`*^9, {3.810319948012936*^9, 
+   3.810320047642519*^9}, {3.81032009853218*^9, 3.810320137760749*^9}, 
+   3.8103202756210012`*^9, {3.810321701586289*^9, 3.81032170815025*^9}, {
+   3.810321867984808*^9, 3.810321872584734*^9}, {3.81032190910942*^9, 
+   3.8103219134573317`*^9}, {3.810321950935218*^9, 3.8103219571767197`*^9}, {
+   3.81032199172641*^9, 3.810322052169279*^9}, {3.810322089494055*^9, 
+   3.810322129240799*^9}, {3.810322178038589*^9, 3.810322210440155*^9}, {
+   3.8103222473347473`*^9, 3.810322276816288*^9}, {3.8103223112698803`*^9, 
+   3.810322413542501*^9}, {3.810322563863628*^9, 3.8103225650477667`*^9}, {
+   3.810322635678931*^9, 3.810322691768003*^9}, {3.810322722772209*^9, 
+   3.810322759447836*^9}, {3.810322812164472*^9, 3.810322851135203*^9}, {
+   3.810322924222294*^9, 3.810322955413624*^9}, {3.8103236577259502`*^9, 
+   3.810323794022172*^9}, {3.810323825811695*^9, 3.810323896101748*^9}, {
+   3.810323929955276*^9, 3.810323989261396*^9}, {3.8103240238591843`*^9, 
+   3.810324068053442*^9}, {3.810324143900375*^9, 3.810324177885235*^9}, {
+   3.810324212866905*^9, 3.810324246709186*^9}, {3.8103243387810917`*^9, 
+   3.810324379996973*^9}, {3.81032441765277*^9, 3.810324492340715*^9}, {
+   3.810324527475643*^9, 3.8103245358205338`*^9}, {3.810324567571248*^9, 
+   3.810324578964512*^9}, {3.810324636317593*^9, 3.810324641525839*^9}, {
+   3.8103246891883802`*^9, 3.810324729420588*^9}, {3.810324759970735*^9, 
+   3.810324843124407*^9}, {3.810324875452169*^9, 3.810324881868059*^9}, {
+   3.8103249436588573`*^9, 3.810324947436077*^9}, {3.810324984618812*^9, 
+   3.8103250786045237`*^9}, {3.81032511464926*^9, 3.8103251499799337`*^9}, {
+   3.810325182714572*^9, 3.810325279345744*^9}, {3.810325322235159*^9, 
+   3.810325353248377*^9}, {3.8103302747869883`*^9, 3.8103303142254677`*^9}, {
+   3.8103303477625523`*^9, 3.8103304194900503`*^9}, {3.8103304589381733`*^9, 
+   3.810330478985424*^9}, {3.8103305756819344`*^9, 3.8103305814811172`*^9}, {
+   3.810330619037858*^9, 3.81033075609697*^9}, {3.8103308413543653`*^9, 
+   3.810330893096637*^9}, {3.810330959955194*^9, 3.810330962200424*^9}, {
+   3.810330993696992*^9, 3.810331021859201*^9}, {3.8103310831930532`*^9, 
+   3.810331104400196*^9}, {3.8103312056644373`*^9, 3.8103312176560926`*^9}, {
+   3.810331256792251*^9, 3.81033129670205*^9}, {3.81033195073353*^9, 
+   3.810331959203664*^9}, {3.810332042268858*^9, 3.810332050475648*^9}, 
+   3.810332125004402*^9, {3.810332243644514*^9, 3.810332254725231*^9}, {
+   3.8103324059794493`*^9, 3.810332443067151*^9}, {3.810332481848671*^9, 
+   3.810332524978952*^9}, {3.8103325805119867`*^9, 3.8103326452584763`*^9}, 
+   3.810332679448394*^9, {3.8103795077990913`*^9, 3.810379550230124*^9}, {
+   3.8103795819873447`*^9, 3.8103797501894627`*^9}, {3.810379786253314*^9, 
+   3.810379820421186*^9}, {3.810379855563531*^9, 3.810380027532248*^9}, {
+   3.810380058617858*^9, 3.810380096804295*^9}, {3.810380141673656*^9, 
+   3.810380149356019*^9}, {3.810380193842277*^9, 3.810380378691759*^9}, {
+   3.8103806152249823`*^9, 3.810380742579152*^9}, {3.810380776770443*^9, 
+   3.8103810839042463`*^9}, {3.810381123738782*^9, 3.810381179778555*^9}, {
+   3.8103812248554363`*^9, 3.810381313474516*^9}, {3.810381351159869*^9, 
+   3.810381383473653*^9}, {3.810381425454479*^9, 3.810381433297895*^9}, {
+   3.810381471215*^9, 3.8103816051060257`*^9}, {3.810381661095051*^9, 
+   3.810381775633049*^9}, {3.8103818089052467`*^9, 3.810381821952958*^9}, {
+   3.810381889902261*^9, 3.8103818950173683`*^9}, {3.8103819359837627`*^9, 
+   3.810381965440824*^9}, {3.810382002447133*^9, 3.810382152264782*^9}, {
+   3.810382183839588*^9, 3.81038238925589*^9}, {3.810382427189398*^9, 
+   3.810382462383943*^9}, {3.8103824994069977`*^9, 3.810382583503677*^9}, {
+   3.810382616164702*^9, 3.8103827101977577`*^9}, {3.810382740592244*^9, 
+   3.810382741552238*^9}, {3.810382774623563*^9, 3.810382807880129*^9}, {
+   3.810382849941432*^9, 3.810382880680079*^9}, {3.81038291093279*^9, 
+   3.81038308434383*^9}, {3.810383127343945*^9, 3.810383340510158*^9}, {
+   3.810383435126812*^9, 3.810383469263035*^9}, {3.810383500429728*^9, 
+   3.810383599030589*^9}, {3.810383634149617*^9, 3.810383642855281*^9}, {
+   3.810383678811833*^9, 3.810383703083156*^9}, {3.8103918352721786`*^9, 
+   3.8103918837274714`*^9}, {3.810391917748355*^9, 3.810391952839251*^9}, {
+   3.8103920052716427`*^9, 3.810392005512083*^9}, {3.810392087422762*^9, 
+   3.810392118174498*^9}, {3.810392211884877*^9, 3.810392244310316*^9}, {
+   3.810392274862569*^9, 3.810392335502602*^9}, 3.810392371551509*^9, {
+   3.8103924287904797`*^9, 3.8103924765306053`*^9}, {3.810392572324815*^9, 
+   3.8103925973655987`*^9}, {3.81039264404696*^9, 3.810392663797888*^9}, {
+   3.810392753101055*^9, 3.810392793213579*^9}, {3.8103929129649267`*^9, 
+   3.810392951933281*^9}, {3.810393014277102*^9, 3.810393084861117*^9}, {
+   3.8103931150197563`*^9, 3.8103931211811047`*^9}, {3.810393168369492*^9, 
+   3.810393226154291*^9}, {3.810393262173066*^9, 3.8103932629491253`*^9}, {
+   3.8103937573382397`*^9, 3.810393764668021*^9}, {3.810393825626555*^9, 
+   3.810393862307538*^9}, {3.8103938964275503`*^9, 3.810393900483736*^9}, {
+   3.810393931170055*^9, 3.810394046526392*^9}, {3.810394123954599*^9, 
+   3.810394333905774*^9}, {3.810394403860281*^9, 3.8103944802408743`*^9}, {
+   3.81039454889076*^9, 3.81039458912961*^9}, {3.810394631730629*^9, 
+   3.810394645666243*^9}, 3.810394677464794*^9, {3.810394726034451*^9, 
+   3.810394762720599*^9}, {3.8103948740179777`*^9, 3.810394880954111*^9}, 
+   3.8103949213296213`*^9, {3.810394978200625*^9, 3.8103950165589523`*^9}, {
+   3.810395079905908*^9, 3.810395151622478*^9}, {3.8103952023683243`*^9, 
+   3.810395239463109*^9}, {3.810398840154133*^9, 3.810399014232347*^9}, {
+   3.810399071712888*^9, 3.810399258009911*^9}, {3.810399288672434*^9, 
+   3.810399313049457*^9}, {3.810399355858268*^9, 3.8103993704651747`*^9}, {
+   3.810399400534836*^9, 3.810399409601839*^9}, {3.810399442191657*^9, 
+   3.810399600576975*^9}, {3.8103996474712763`*^9, 3.8103997909379272`*^9}, {
+   3.8103998437777348`*^9, 3.810399881249455*^9}, {3.810399927935124*^9, 
+   3.810399965472619*^9}, {3.810400012438291*^9, 3.810400241047553*^9}, {
+   3.810400274126589*^9, 3.810400471168193*^9}, {3.810400510389104*^9, 
+   3.81040051749638*^9}, 3.8104005478631763`*^9, {3.810403973619071*^9, 
+   3.810403989049993*^9}, {3.8104040717045097`*^9, 3.810404266385871*^9}, {
+   3.810404302535613*^9, 3.810404331177342*^9}, {3.810404415056411*^9, 
+   3.810404449257588*^9}, {3.8104044965349283`*^9, 3.8104045197437277`*^9}, {
+   3.810404551466851*^9, 3.810404563488823*^9}, {3.810404600121209*^9, 
+   3.810404613305241*^9}, {3.8104046999504642`*^9, 3.810404748448452*^9}, {
+   3.810404783184939*^9, 3.810404786810534*^9}, {3.810404859416986*^9, 
+   3.8104049501446466`*^9}, {3.810404981679253*^9, 3.810405043807961*^9}, {
+   3.810405089710492*^9, 3.8104052106307573`*^9}, {3.810405283216619*^9, 
+   3.810405353424328*^9}, {3.810405400645589*^9, 3.810405409928752*^9}, {
+   3.810405447718915*^9, 3.810405554391982*^9}, {3.810405591868895*^9, 
+   3.8104056193356447`*^9}, {3.810405670823825*^9, 3.81040571360791*^9}, {
+   3.810405747582726*^9, 3.810405757247497*^9}, {3.810405787312828*^9, 
+   3.8104058516571217`*^9}, {3.810408163322956*^9, 3.810408205458578*^9}, {
+   3.810408238106546*^9, 3.810408414266218*^9}, {3.8104084530559072`*^9, 
+   3.810408458082163*^9}, {3.810408495609974*^9, 3.8104084998822308`*^9}, {
+   3.810408530001567*^9, 3.810408611609962*^9}, {3.810408659209318*^9, 
+   3.8104087113967953`*^9}, {3.810408779882284*^9, 3.810408807569476*^9}, {
+   3.810408867441183*^9, 3.810408876557082*^9}, {3.810408908481287*^9, 
+   3.810409050537203*^9}, {3.810409085866682*^9, 3.810409194772197*^9}, {
+   3.81040923646496*^9, 3.81040928784177*^9}, {3.810409342189169*^9, 
+   3.8104094711447887`*^9}, {3.810409514958928*^9, 3.8104096077742777`*^9}, {
+   3.810409705584491*^9, 3.810409749944553*^9}, {3.81040978920646*^9, 
+   3.81040988820026*^9}, {3.810409936118888*^9, 3.810410021008213*^9}, {
+   3.810410053238391*^9, 3.810410085520384*^9}, {3.81041011893475*^9, 
+   3.810410275855942*^9}, {3.810410314357584*^9, 3.810410322519196*^9}, {
+   3.810410378343276*^9, 3.810410448095572*^9}, {3.81041049414021*^9, 
+   3.810410527911043*^9}, {3.810410583326004*^9, 3.8104106132067213`*^9}, {
+   3.8104106557724524`*^9, 3.81041071391131*^9}, {3.810410753860922*^9, 
+   3.810410971318265*^9}, 3.810411010628264*^9, {3.810411308203516*^9, 
+   3.810411366836043*^9}, {3.810411399026306*^9, 3.8104114044775343`*^9}, {
+   3.810411435243985*^9, 3.810411499271948*^9}, {3.810463477574525*^9, 
+   3.810463641116951*^9}, {3.810463671387196*^9, 3.810463829492937*^9}, {
+   3.8104638663238363`*^9, 3.810463895371831*^9}, {3.810464026844763*^9, 
+   3.81046403312427*^9}, {3.810464082803164*^9, 3.81046411818816*^9}, {
+   3.810464181265852*^9, 3.810464237139435*^9}, {3.8104642711131353`*^9, 
+   3.810464315139502*^9}, {3.810464396641975*^9, 3.810464434667894*^9}, {
+   3.810464468066437*^9, 3.810464473171516*^9}, 3.810464529299152*^9, {
+   3.810464562010935*^9, 3.810464563338579*^9}, {3.810464598387018*^9, 
+   3.8104646311418867`*^9}, {3.8104646831622477`*^9, 3.810464686146681*^9}, {
+   3.810464719883369*^9, 3.8104647561638317`*^9}, {3.810464809498233*^9, 
+   3.810464912714656*^9}, {3.810464953680756*^9, 3.810465045995634*^9}, {
+   3.810465878824778*^9, 3.810466049577231*^9}, {3.810466095112791*^9, 
+   3.8104661302872868`*^9}, {3.810466167664125*^9, 3.8104662118882093`*^9}, {
+   3.8104662434559298`*^9, 3.810466352480122*^9}, {3.810466384047964*^9, 
+   3.8104664370632143`*^9}, 3.810466468578291*^9, {3.810466512390177*^9, 
+   3.81046654759978*^9}, {3.81046657902349*^9, 3.8104666701362133`*^9}, {
+   3.810466721782858*^9, 3.810466927105732*^9}, {3.8104669664552803`*^9, 
+   3.810466993098737*^9}, {3.8104670473448467`*^9, 3.810467079383749*^9}, {
+   3.810467117983852*^9, 3.810467402968011*^9}, {3.8104674470321703`*^9, 
+   3.810467488622048*^9}, {3.810467549367374*^9, 3.810467584397851*^9}, {
+   3.810467631325955*^9, 3.810467661566998*^9}, {3.8104677176228848`*^9, 
+   3.8104677456707897`*^9}, 3.810467782285956*^9, {3.810470116947353*^9, 
+   3.8104701304118977`*^9}, {3.810470161873519*^9, 3.8104702405706472`*^9}, {
+   3.8104702709784613`*^9, 3.810470387707242*^9}, {3.810470422905848*^9, 
+   3.810470449641149*^9}, {3.810470642770729*^9, 3.810470679866383*^9}, {
+   3.810470721278535*^9, 3.810470752900094*^9}, {3.810480763273306*^9, 
+   3.810480810793099*^9}, {3.810480870560265*^9, 3.810480924572282*^9}, {
+   3.8104810092238283`*^9, 3.810481056654562*^9}, {3.810481089622759*^9, 
+   3.810481152710401*^9}, {3.810481185718849*^9, 3.8104812850865173`*^9}, {
+   3.810481317635302*^9, 3.810481371717576*^9}, {3.810481417147797*^9, 
+   3.810481448198111*^9}, {3.810481517452879*^9, 3.810481572389187*^9}, {
+   3.810481605660112*^9, 3.8104816242052383`*^9}, {3.810481701724988*^9, 
+   3.810481775564959*^9}, {3.810481811293792*^9, 3.810481840260538*^9}, {
+   3.810481881555625*^9, 3.810481887124709*^9}, {3.810481918884281*^9, 
+   3.810481950595851*^9}, {3.8104874305953608`*^9, 3.8104874677720327`*^9}, {
+   3.8104875135872307`*^9, 3.810487545129912*^9}, {3.8104876686425877`*^9, 
+   3.810487673954504*^9}, {3.8104877505463552`*^9, 3.81048791920228*^9}, {
+   3.810487956008017*^9, 3.8104880381860523`*^9}, {3.8104881082712193`*^9, 
+   3.810488130537549*^9}, {3.8104881944970427`*^9, 3.810488277985704*^9}, {
+   3.8104883408257647`*^9, 3.810488348073536*^9}, {3.8104883804752903`*^9, 
+   3.810488529561343*^9}, {3.810488574487721*^9, 3.810488777232903*^9}, {
+   3.8104888397693377`*^9, 3.8104888614326344`*^9}, {3.8104889401055727`*^9, 
+   3.810488948776081*^9}, {3.810488978966861*^9, 3.8104889892407503`*^9}, {
+   3.810489021247912*^9, 3.810489106064735*^9}, {3.810489146832052*^9, 
+   3.81048917191894*^9}, {3.8104892027685328`*^9, 3.810489218239541*^9}, {
+   3.810489256037634*^9, 3.810489320943901*^9}, {3.810489352629827*^9, 
+   3.810489631015772*^9}, {3.810489669550584*^9, 3.810490214918056*^9}, {
+   3.810490253765431*^9, 3.810490293558248*^9}, {3.8104903508219843`*^9, 
+   3.8104903721962643`*^9}, {3.810490426989975*^9, 3.810490441156782*^9}, {
+   3.810490480540476*^9, 3.810490537756318*^9}, {3.8104905712205467`*^9, 
+   3.8104906175727673`*^9}, {3.810490667446494*^9, 3.8104906998435173`*^9}, {
+   3.810490739835351*^9, 3.810490797580407*^9}, {3.810490837641183*^9, 
+   3.810490844388681*^9}, {3.810490916148369*^9, 3.810490948219475*^9}, {
+   3.810491000879148*^9, 3.81049103404143*^9}, {3.8104910646109123`*^9, 
+   3.810491127939733*^9}, {3.810491160449129*^9, 3.810491164267151*^9}, {
+   3.81049120427566*^9, 3.810491289835844*^9}, 3.8104917237202597`*^9, 
+   3.8104918589795723`*^9, {3.810491919618642*^9, 3.810492105225206*^9}, 
+   3.810492136005877*^9, {3.810492185377417*^9, 3.810492215314262*^9}, {
+   3.810492651657721*^9, 3.810492678520255*^9}, {3.810492715800506*^9, 
+   3.810492737031925*^9}, 3.810492855740118*^9, {3.810492892664012*^9, 
+   3.810492942218902*^9}, {3.810493146929391*^9, 3.810493167359626*^9}},
+ CellLabel->
+  "In[897]:=",ExpressionUUID->"b57013ae-66fb-43a3-a258-3bd613bcbd99"]
 },
-WindowSize->{1199, 901},
-WindowMargins->{{-1, Automatic}, {Automatic, 45}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1496, 1306},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+TaggingRules->{"TryRealOnly" -> False},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"48cd5870-6e59-46e0-8d03-7cfb543f4f9d"
 ]
 (* End of Notebook Content *)
 
@@ -174,10 +1206,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6551, 137, 347, "Input",ExpressionUUID->"b57013ae-66fb-43a3-a258-3bd613bcbd99"]
+Cell[558, 20, 74392, 1168, 595, "Input",ExpressionUUID->"b57013ae-66fb-43a3-a258-3bd613bcbd99"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
