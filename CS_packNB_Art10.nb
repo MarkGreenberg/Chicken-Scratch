@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     39042,        756]
-NotebookOptionsPosition[     38693,        742]
-NotebookOutlinePosition[     39086,        758]
-CellTagsIndexPosition[     39043,        755]
+NotebookDataLength[     39662,        768]
+NotebookOptionsPosition[     39313,        754]
+NotebookOutlinePosition[     39706,        770]
+CellTagsIndexPosition[     39663,        767]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -297,7 +297,7 @@ as...\>\""}], ";", "\[IndentingNewLine]",
                "Surrealism5.jpg"}, 
              "Art12" -> {
               "AudubonGreatCinereousOwl.jpg", "BonheurForlornDonkey.jpg", 
-               "BraquePedistalTable.jpg", "CalderBosbies.jpg", 
+               "BraquePedestalTable.jpg", "CalderBosbies.jpg", 
                "DaliRuins.jpg", "DavisWishThreat.jpg", 
                "DuchampSadYoungManOnTrain.jpg", "ErnstAngelOfHome.jpg", 
                "EscherDrawingHands.jpg", "FrazettaSilverWarrior.jpg", 
@@ -309,7 +309,7 @@ as...\>\""}], ";", "\[IndentingNewLine]",
                "MiroSingingFish.jpg", "ModiglianiHankaZborowska.jpg", 
                "MondrianBroadway.jpg", "MorisotTea.jpg", 
                "MuchaLoveOfMyThoughts.jpg", "NeimanRestingTiger.jpg", 
-               "OkeeffeRedCanna.jpg", "PadeninTheMoment.jpg", 
+               "OkeeffeRedCanna.jpg", "PadenInTheMoment.jpg", 
                "ParrishAquamarine.jpg", "PicassoWeepingWoman.jpg", 
                "PollockMural.jpg", "RothkoYelloRedBlue.jpg", 
                "RousseauTropicalJungle.jpg", "RussellCreeIndian.jpg", 
@@ -343,7 +343,12 @@ as...\>\""}], ";", "\[IndentingNewLine]",
                  RowBox[{"#", ",", 
                   RowBox[{"data", "[", "#", "]"}]}], "]"}], "&"}], "/@", 
                RowBox[{"Keys", "[", "data", "]"}]}], "]"}], ",", "4"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"order", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "}"}], "]"}]}], ";",
+           "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
            RowBox[{
             RowBox[{"Hold", "[", "\[IndentingNewLine]", 
@@ -369,7 +374,11 @@ as...\>\""}], ";", "\[IndentingNewLine]",
                  "\[RightDoubleBracket]"}], "]"}]}], ";", 
               "\[IndentingNewLine]", 
               RowBox[{"mixImg", "=", 
-               RowBox[{"RandomSample", "[", "imgs", "]"}]}], ";", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{
+                 "imgs", "\[LeftDoubleBracket]", "#", 
+                  "\[RightDoubleBracket]"}], "&"}], "/@", "h2"}]}], ";", 
               "\[IndentingNewLine]", 
               RowBox[{"thresh", "=", ".2"}], ";", "\[IndentingNewLine]", 
               RowBox[{"whiteRat", "=", "0"}], ";", "\[IndentingNewLine]", 
@@ -607,7 +616,10 @@ as...\>\""}], ";", "\[IndentingNewLine]",
                  RowBox[{"imgGrid", ",", "flower"}], "}"}], ",", 
                 RowBox[{"Alignment", "\[Rule]", "Center"}]}], "]"}]}], "]"}], 
             "/.", 
-            RowBox[{"h1", "\[Rule]", "titles"}]}]}], ";", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"h1", "\[Rule]", "titles"}], ",", 
+              RowBox[{"h2", "\[Rule]", "order"}]}], "}"}]}]}], ";", 
           "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{
           "q", "=", 
@@ -621,13 +633,8 @@ art?\>\""}], ";", "\[IndentingNewLine]",
            "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
-            RowBox[{"Position", "[", 
-             RowBox[{"mixImg", ",", 
-              RowBox[{
-              "imgs", "\[LeftDoubleBracket]", "1", 
-               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
-            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
-          "\[IndentingNewLine]", 
+           "order", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
             RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
@@ -736,9 +743,14 @@ art?\>\""}], ";", "\[IndentingNewLine]",
    3.809876255590639*^9, 3.809876294045372*^9}, {3.80987632464583*^9, 
    3.8098763521891003`*^9}, 3.809876509634378*^9, {3.809876681606431*^9, 
    3.8098767081099586`*^9}, 3.809876883303616*^9, 3.809877101439497*^9, 
-   3.8098772234661617`*^9, {3.809877267694502*^9, 3.809877267861974*^9}},
+   3.8098772234661617`*^9, {3.809877267694502*^9, 3.809877267861974*^9}, {
+   3.810412084422759*^9, 3.810412132068987*^9}, {3.8104126984434643`*^9, 
+   3.810412723475021*^9}, {3.810413724036942*^9, 3.810413750939867*^9}, {
+   3.810413794611397*^9, 3.810413925034717*^9}, {3.8104620816007853`*^9, 
+   3.810462108977631*^9}, {3.810462140473812*^9, 3.8104621465631943`*^9}, 
+   3.810462313342599*^9, {3.810462429204154*^9, 3.81046245788547*^9}},
  CellLabel->
-  "In[1390]:=",ExpressionUUID->"3bb04dc0-c07e-41a2-beb2-fc7b8ced3c15"]
+  "In[774]:=",ExpressionUUID->"3bb04dc0-c07e-41a2-beb2-fc7b8ced3c15"]
 },
 WindowSize->{1614, 1315},
 WindowMargins->{{1, Automatic}, {Automatic, 0}},
@@ -757,7 +769,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 38131, 720, 1162, "Input",ExpressionUUID->"3bb04dc0-c07e-41a2-beb2-fc7b8ced3c15"]
+Cell[558, 20, 38751, 732, 1183, "Input",ExpressionUUID->"3bb04dc0-c07e-41a2-beb2-fc7b8ced3c15"]
 }
 ]
 *)
