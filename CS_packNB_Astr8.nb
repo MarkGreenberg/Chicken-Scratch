@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8718,        208]
-NotebookOptionsPosition[      8368,        194]
-NotebookOutlinePosition[      8764,        210]
-CellTagsIndexPosition[      8721,        207]
+NotebookDataLength[     27919,        569]
+NotebookOptionsPosition[     27570,        555]
+NotebookOutlinePosition[     27964,        571]
+CellTagsIndexPosition[     27921,        568]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,139 +26,432 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"pic", "=", 
-        RowBox[{"Hold", "[", 
-         RowBox[{"Style", "[", 
-          RowBox[{
-           RowBox[{"Grid", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                 RowBox[{"HoldForm", "[", 
-                  RowBox[{
-                   FractionBox[
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"pic", "=", 
+           RowBox[{"Hold", "[", 
+            RowBox[{"Style", "[", 
+             RowBox[{
+              RowBox[{"Grid", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"HoldForm", "[", 
+                    RowBox[{
+                    FractionBox[
                     SubscriptBox["L", "1"], 
                     SubscriptBox["L", "2"]], "\[Equal]", 
-                   FractionBox[
+                    FractionBox[
                     SubsuperscriptBox["D", "1", "2"], 
                     SubsuperscriptBox["D", "2", "2"]]}], "]"}], ",", 
-                 "SpanFromLeft"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 SubscriptBox["L", "1"], ",", 
-                 "\"\<light gathering power\\nof telescope 1\>\""}], "}"}], 
-               ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 SubscriptBox["L", "2"], ",", 
-                 "\"\<light gathering power\\nof telescope 2\>\""}], "}"}], 
-               ",", 
-               RowBox[{"{", 
-                RowBox[{
-                 SubscriptBox["D", "1"], ",", 
-                 "\"\<objective diameter of\\ntelescope 1\>\""}], "}"}], ",", 
-               
-               RowBox[{"{", 
-                RowBox[{
-                 SubscriptBox["D", "2"], ",", 
-                 "\"\<objective diameter of\\ntelescope 2\>\""}], "}"}]}], 
-              "}"}], ",", 
-             RowBox[{"Frame", "\[Rule]", "All"}], ",", 
-             RowBox[{"FrameStyle", "\[Rule]", 
-              RowBox[{"Directive", "[", 
-               RowBox[{"LightGray", ",", 
-                RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
-             RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
-             RowBox[{"Spacings", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "28"}], 
-          "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"diams", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Quantity", "[", 
-           RowBox[{"#", ",", "\"\<Inches\>\""}], "]"}], "&"}], "/@", 
-         RowBox[{"Sort", "[", 
-          RowBox[{"RandomSample", "[", 
+                    "SpanFromLeft"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    SubscriptBox["L", "1"], ",", 
+                    "\"\<light gathering power\\nof telescope 1\>\""}], "}"}],
+                   ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    SubscriptBox["L", "2"], ",", 
+                    "\"\<light gathering power\\nof telescope 2\>\""}], "}"}],
+                   ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    SubscriptBox["D", "1"], ",", 
+                    "\"\<objective diameter of\\ntelescope 1\>\""}], "}"}], 
+                  ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    SubscriptBox["D", "2"], ",", 
+                    "\"\<objective diameter of\\ntelescope 2\>\""}], "}"}]}], 
+                 "}"}], ",", 
+                RowBox[{"Frame", "\[Rule]", "All"}], ",", 
+                RowBox[{"FrameStyle", "\[Rule]", 
+                 RowBox[{"Directive", "[", 
+                  RowBox[{"LightGray", ",", 
+                   RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
+                RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+                RowBox[{"Spacings", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "28"}],
+              "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"diams", "=", 
            RowBox[{
-            RowBox[{"Range", "[", 
-             RowBox[{"4", ",", "80"}], "]"}], ",", "2"}], "]"}], "]"}]}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"rat", "=", 
-        RowBox[{
-         RowBox[{
-         "diams", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "/", 
-         RowBox[{
-         "diams", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<Telescope 1's lens is `1` across. Telescope 2's is `2`. How \
-much more light can telescope 2 collect?\>\"", ",", 
-          RowBox[{
-          "diams", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-          ",", 
-          RowBox[{
-          "diams", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"ansNo", "=", 
-        RowBox[{"Round", "[", 
-         RowBox[{
-          RowBox[{
-           SuperscriptBox[
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<Inches\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"Sort", "[", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{"4", ",", "80"}], "]"}], ",", "2"}], "]"}], "]"}]}]}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"rat", "=", 
+           RowBox[{
             RowBox[{
             "diams", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
-            "2"], "/", 
-           SuperscriptBox[
+            "/", 
             RowBox[{
-            "diams", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-            "2"]}], ",", ".1"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choiceNos", "=", 
-        RowBox[{"Take", "[", 
-         RowBox[{
-          RowBox[{"DeleteDuplicates", "[", 
-           RowBox[{"N", "[", 
-            RowBox[{"Prepend", "[", 
+            "diams", "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<Telescope 1's lens is `1` across. Telescope 2's is `2`. How \
+much more light can telescope 2 collect?\>\"", ",", 
              RowBox[{
-              RowBox[{"RandomSample", "[", 
+             "diams", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", 
+             RowBox[{
+             "diams", "\[LeftDoubleBracket]", "2", 
+              "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{
+              SuperscriptBox[
                RowBox[{
-                RowBox[{"Round", "[", 
-                 RowBox[{
-                  RowBox[{"Divide", "[", 
-                   RowBox[{
+               "diams", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "2"], "/", 
+              SuperscriptBox[
+               RowBox[{
+               "diams", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], "2"]}], ",", ".1"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choiceNos", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"N", "[", 
+               RowBox[{"Prepend", "[", 
+                RowBox[{
+                 RowBox[{"RandomSample", "[", 
+                  RowBox[{
+                   RowBox[{"Round", "[", 
+                    RowBox[{
+                    RowBox[{"Divide", "[", 
+                    RowBox[{
                     RowBox[{"rat", "*", 
                     RowBox[{"Range", "[", 
                     RowBox[{"1", ",", "100"}], "]"}]}], ",", "10"}], "]"}], 
-                  ",", ".1"}], "]"}], ",", "4"}], "]"}], ",", "ansNo"}], 
-             "]"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{
-           RowBox[{"ToString", "[", "#", "]"}], "<>", 
-           "\"\< times as much light\>\""}], "&"}], "/@", "choiceNos"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
+                    ",", ".1"}], "]"}], ",", "4"}], "]"}], ",", "ansNo"}], 
+                "]"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
            RowBox[{
-           "choices", "\[LeftDoubleBracket]", "1", 
-            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
-         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"ToString", "[", "#", "]"}], "<>", 
+                "\"\< times as much light\>\""}], ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}],
+             "/@", "choiceNos"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"body", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["37", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["7840", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "Achernar" -> Quantity[6700000, "Kilometers"], "Alpha Centauri" -> 
+               Quantity[1400000, "Kilometers"], "Arcturus" -> 
+               Quantity[35340000, "Kilometers"], "Betelgeuse" -> 
+               Quantity[132900000, "Kilometers"], "Callisto" -> 
+               Quantity[4820.6, "Kilometers"], "Canopus" -> 
+               Quantity[98790000, "Kilometers"], "Capella" -> 
+               Quantity[16000000, "Kilometers"], "Ceres" -> 
+               Quantity[950, "Kilometers"], "Charon" -> 
+               Quantity[1212, "Kilometers"], "Earth" -> 
+               Quantity[12756, "Kilometers"], "Enceladus" -> 
+               Quantity[504.2, "Kilometers"], "Eris" -> 
+               Quantity[2326, "Kilometers"], "Europa" -> 
+               Quantity[3121.6, "Kilometers"], "Ganymede" -> 
+               Quantity[5262.4, "Kilometers"], "Haumea" -> 
+               Quantity[1518, "Kilometers"], "Io" -> 
+               Quantity[3642.98, "Kilometers"], "Jupiter" -> 
+               Quantity[142984, "Kilometers"], "Makemake" -> 
+               Quantity[1600, "Kilometers"], "Mars" -> 
+               Quantity[6794, "Kilometers"], "Mercury" -> 
+               Quantity[4878, "Kilometers"], "the Moon" -> 
+               Quantity[3474.8, "Kilometers"], "Neptune" -> 
+               Quantity[49532, "Kilometers"], "Phobos" -> 
+               Quantity[22.16, "Kilometers"], "Pluto" -> 
+               Quantity[2370, "Kilometers"], "Polaris" -> 
+               Quantity[64000000, "Kilometers"], "Procyon" -> 
+               Quantity[2849600, "Kilometers"], "Proxima Centauri" -> 
+               Quantity[380000, "Kilometers"], "Rigel" -> 
+               Quantity[100000000, "Kilometers"], "Rigel Kentaurus A" -> 
+               Quantity[1400000, "Kilometers"], "Saturn" -> 
+               Quantity[120536, "Kilometers"], "Sirius" -> 
+               Quantity[3100000, "Kilometers"], "the Sun" -> 
+               Quantity[1392700, "Kilometers"], "Titan" -> 
+               Quantity[5150, "Kilometers"], "Triton" -> 
+               Quantity[2705.2, "Kilometers"], "Uranus" -> 
+               Quantity[51118, "Kilometers"], "Vega" -> 
+               Quantity[3300000, "Kilometers"], "Venus" -> 
+               Quantity[12104, "Kilometers"]],
+              SelectWithContents->True,
+              Selectable->False], ",", "2"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"thing", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["26", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["5992", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "an ant egg" -> Quantity[0.5, "Millimeters"], "an avocado pit" -> 
+               Quantity[6, "Centimeters"], "a baseball" -> 
+               Quantity[7.35, "Centimeters"], "a basketball" -> 
+               Quantity[23.85, "Centimeters"], "a beach ball" -> 
+               Quantity[38, "Centimeters"], "a bocce ball" -> 
+               Quantity[27, "Millimeters"], "a chicken egg" -> 
+               Quantity[55, "Millimeters"], "a cricket ball" -> 
+               Quantity[7.2, "Centimeters"], "a coconut (hard inner shell)" -> 
+               Quantity[17.78, "Centimeters"], 
+               "a golf ball" -> Quantity[4.267, "Centimeters"]; 
+               "a grain of sand" -> Quantity[1, "Millimeters"], 
+               "a horse eyeball" -> Quantity[5.1, "Centimeters"], 
+               "a human eye ball" -> Quantity[2.4, "Centimeters"], 
+               "a hummingbird egg" -> Quantity[13, "Millimeters"], 
+               "a jai alai ball" -> Quantity[55, "Millimeters"], "a marble" -> 
+               Quantity[16, "Millimeters"], "an M&M candy" -> 
+               Quantity[1.04, "Centimeters"], 
+               "the New Year's Eve Ball in Times Square" -> 
+               Quantity[365.8, "Centimeters"], "an ostrich egg" -> 
+               Quantity[15, "Centimeters"], "a Pachinko ball" -> 
+               Quantity[11, "Millimeters"], "a ping-pong ball" -> 
+               Quantity[4, "Centimeters"], "a poppy seed" -> 
+               Quantity[1, "Millimeters"], "a soccer ball" -> 
+               Quantity[22, "Centimeters"], "a swan egg" -> 
+               Quantity[9, "Centimeters"], "a tamarind seed" -> 
+               Quantity[11, "Millimeters"], "a Toyota Corolla" -> 
+               Quantity[462.3, "Centimeters"], "a volleyball" -> 
+               Quantity[21.2, "Centimeters"]],
+              SelectWithContents->True,
+              Selectable->False], ",", "1"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"\"\<If \>\"", "<>", 
+            RowBox[{
+             RowBox[{"Keys", "[", "body", "]"}], "\[LeftDoubleBracket]", "1", 
+             "\[RightDoubleBracket]"}], "<>", "\"\< were the size of \>\"", "<>", 
+            RowBox[{
+             RowBox[{"Keys", "[", "thing", "]"}], "\[LeftDoubleBracket]", "1",
+              "\[RightDoubleBracket]"}], "<>", 
+            "\"\<, then what would be the diameter of \>\"", "<>", 
+            RowBox[{
+             RowBox[{"Keys", "[", "body", "]"}], "\[LeftDoubleBracket]", "2", 
+             "\[RightDoubleBracket]"}], "<>", "\"\<?\>\""}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"quan", "=", 
+           FractionBox[
+            RowBox[{
+             RowBox[{
+             "body", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+             "*", 
+             RowBox[{
+             "thing", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}]}], 
+            RowBox[{
+            "body", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]]}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"metrics", "=", 
+           RowBox[{
+            RowBox[{"Table", "[", 
+             RowBox[{
+              RowBox[{"UnitConvert", "[", 
+               RowBox[{"quan", ",", "u"}], "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", 
+                RowBox[{"{", 
+                 RowBox[{
+                 "\"\<Micrometers\>\"", ",", "\"\<Millimeters\>\"", ",", 
+                  "\"\<Centimeters\>\"", ",", "\"\<Meters\>\"", ",", 
+                  "\"\<Kilometers\>\""}], "}"}]}], "}"}]}], "]"}], "//", 
+            "N"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ansMetr", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"metrics", "\[LeftDoubleBracket]", 
+              RowBox[{
+               RowBox[{"Ordering", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"Abs", "[", 
+                   RowBox[{"2", "-", 
+                    RowBox[{
+                    RowBox[{"MantissaExponent", "[", 
+                    RowBox[{"QuantityMagnitude", "[", "#", "]"}], "]"}], 
+                    "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+                   "]"}], "&"}], "/@", "metrics"}], "]"}], 
+               "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              "\[RightDoubleBracket]"}], ",", ".1"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"disMicr", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<Micrometers\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"N", "[", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "999"}], "]"}], "/", "10"}], ",", "3"}], 
+              "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disMill", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<Millimeters\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"N", "[", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "99"}], "]"}], "/", "10"}], ",", "3"}], 
+              "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disCent", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<Centimeters\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"N", "[", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "999"}], "]"}], "/", "10"}], ",", "3"}], 
+              "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disMetr", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<Meters\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"N", "[", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "999"}], "]"}], "/", "10"}], ",", "3"}], 
+              "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disKilo", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<Kilometers\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"N", "[", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{"1", ",", "200"}], "]"}], "/", "10"}], ",", "3"}], 
+              "]"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dis", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Flatten", "[", 
+              RowBox[{"{", 
+               RowBox[{
+               "disMicr", ",", "disMill", ",", "disCent", ",", "disMetr", ",",
+                 "disKilo"}], "}"}], "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{"ToString", "[", "#", "]"}], ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}],
+             "/@", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Prepend", "[", 
+                RowBox[{"dis", ",", "ansMetr"}], "]"}], "]"}], ",", "4"}], 
+             "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Astr8\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6939157014508343`*^9, 3.693915703241551*^9}, {
@@ -188,13 +481,81 @@ much more light can telescope 2 collect?\>\"", ",",
    3.693922332203657*^9, 3.6939223689877872`*^9}, {3.693922544524908*^9, 
    3.693922554466425*^9}, {3.6939931677438087`*^9, 3.693993180416772*^9}, {
    3.794307595227689*^9, 3.794307700530572*^9}, {3.7943077444362288`*^9, 
-   3.794307772202546*^9}, {3.794307803316547*^9, 3.794307803634351*^9}},
+   3.794307772202546*^9}, {3.794307803316547*^9, 3.794307803634351*^9}, {
+   3.810495618589735*^9, 3.810495686137824*^9}, {3.8104957176829243`*^9, 
+   3.810495846681678*^9}, {3.810497413423518*^9, 3.810497454591762*^9}, {
+   3.810497501024321*^9, 3.810497508960031*^9}, {3.810497738568212*^9, 
+   3.810497808344068*^9}, {3.810497855192569*^9, 3.810498250503393*^9}, {
+   3.810498281439082*^9, 3.81049832604751*^9}, {3.810498368167446*^9, 
+   3.810498516239419*^9}, {3.8104985778872957`*^9, 3.810498616711018*^9}, {
+   3.810499002326964*^9, 3.810499064774612*^9}, {3.810499121526009*^9, 
+   3.810499171446501*^9}, {3.810499230686356*^9, 3.8104993138860607`*^9}, {
+   3.810499398158106*^9, 3.8104994093739843`*^9}, {3.810499467819747*^9, 
+   3.810499530771593*^9}, {3.810499573755577*^9, 3.810499587147304*^9}, {
+   3.810499626499259*^9, 3.81049968984307*^9}, {3.810499722914935*^9, 
+   3.810499737963382*^9}, {3.810499772900592*^9, 3.8104998249466476`*^9}, {
+   3.810499883659046*^9, 3.810499927218485*^9}, {3.810499976682459*^9, 
+   3.810500026562861*^9}, {3.810500083394841*^9, 3.810500162114349*^9}, {
+   3.810500195394012*^9, 3.810500203642158*^9}, {3.8105002726659*^9, 
+   3.8105003079457006`*^9}, {3.810500369778112*^9, 3.810500411897889*^9}, {
+   3.810500451353623*^9, 3.8105004833374233`*^9}, {3.810500540769669*^9, 
+   3.810500592033465*^9}, {3.810500636441326*^9, 3.810500793281139*^9}, {
+   3.81050083780904*^9, 3.8105010241767807`*^9}, {3.810501120088559*^9, 
+   3.810501236112363*^9}, {3.8105012809040422`*^9, 3.8105012873920116`*^9}, {
+   3.810501474608396*^9, 3.8105015110806313`*^9}, {3.810501660864305*^9, 
+   3.8105017057762117`*^9}, {3.810501744152071*^9, 3.8105017654880323`*^9}, {
+   3.8105615227817574`*^9, 3.8105615360776043`*^9}, {3.810561575045302*^9, 
+   3.810561626053041*^9}, {3.810561702861154*^9, 3.810561744093172*^9}, {
+   3.810561793844886*^9, 3.810561835412805*^9}, {3.8105619207268143`*^9, 
+   3.810561962756608*^9}, {3.81056228209958*^9, 3.810562320251026*^9}, {
+   3.810562474259012*^9, 3.810562512739564*^9}, {3.810562571594516*^9, 
+   3.810562607882617*^9}, {3.8105627016741953`*^9, 3.810562731698461*^9}, {
+   3.810562779426209*^9, 3.810562802394175*^9}, {3.8105630057856607`*^9, 
+   3.810563044897435*^9}, {3.8105630875773087`*^9, 3.810563129753234*^9}, {
+   3.81056318460247*^9, 3.810563222792944*^9}, {3.810563380336708*^9, 
+   3.810563432080552*^9}, {3.810563549784068*^9, 3.81056364763969*^9}, {
+   3.810563748632103*^9, 3.810563748889122*^9}, {3.8105639027512493`*^9, 
+   3.810563951119543*^9}, {3.81056406119872*^9, 3.8105640904146643`*^9}, {
+   3.810564211638459*^9, 3.810564237430479*^9}, {3.8105643553180304`*^9, 
+   3.8105643986068077`*^9}, {3.810564490093547*^9, 3.810564521717779*^9}, {
+   3.810564572941532*^9, 3.8105646303737373`*^9}, {3.810564678462584*^9, 
+   3.810564721703331*^9}, {3.81056483739847*^9, 3.8105648837905607`*^9}, {
+   3.810564913862322*^9, 3.810564925814888*^9}, {3.810565024150414*^9, 
+   3.8105650623344803`*^9}, {3.810565116078484*^9, 3.810565120781638*^9}, {
+   3.8105651929653177`*^9, 3.81056532870128*^9}, {3.810565391038731*^9, 
+   3.8105654079655533`*^9}, {3.810565488018833*^9, 3.8105655010687943`*^9}, {
+   3.810567253172059*^9, 3.810567262490858*^9}, {3.8105674476928787`*^9, 
+   3.8105675210820017`*^9}, {3.810567788659219*^9, 3.810567841705817*^9}, {
+   3.810567885778242*^9, 3.810567907377323*^9}, {3.8105680730813*^9, 
+   3.810568106192844*^9}, {3.810568174465775*^9, 3.8105682153686047`*^9}, {
+   3.8105682468490963`*^9, 3.810568264104578*^9}, {3.810568357809705*^9, 
+   3.8105684082834787`*^9}, {3.81056845804214*^9, 3.8105685429365597`*^9}, {
+   3.8105686344004707`*^9, 3.8105686526081457`*^9}, {3.810568735864853*^9, 
+   3.8105687408087378`*^9}, {3.810569100616877*^9, 3.810569233728586*^9}, {
+   3.8105716057235203`*^9, 3.810571609107749*^9}, {3.81057164255464*^9, 
+   3.8105716440099916`*^9}, {3.81057239783442*^9, 3.810572452176548*^9}, {
+   3.810573163850382*^9, 3.810573197956778*^9}, {3.81057373991181*^9, 
+   3.8105737546714*^9}, {3.810573941031602*^9, 3.810573962782955*^9}, {
+   3.81057401651924*^9, 3.810574087742811*^9}, {3.810574303475659*^9, 
+   3.810574435936517*^9}, {3.810574515254644*^9, 3.8105745413820677`*^9}, {
+   3.8105745752621202`*^9, 3.810574589079483*^9}, {3.810574632541811*^9, 
+   3.810574787414089*^9}, 3.8105748227344437`*^9, {3.8105748990702257`*^9, 
+   3.810574969445706*^9}, 3.810575024526582*^9, {3.810575258854528*^9, 
+   3.810575329077235*^9}, {3.810575364556651*^9, 3.810575389108678*^9}, {
+   3.810575449367631*^9, 3.810575482685108*^9}, {3.810575956773156*^9, 
+   3.8105760959636803`*^9}, 3.8105762351807623`*^9, 3.810576267676498*^9, {
+   3.810576301844182*^9, 3.8105763030912237`*^9}, {3.8105764608259783`*^9, 
+   3.810576467177289*^9}, {3.810577521808222*^9, 3.810577535135186*^9}, {
+   3.810577701688013*^9, 3.81057774166229*^9}, {3.810577982519353*^9, 
+   3.8105780125175877`*^9}, {3.810578096479506*^9, 3.810578101237468*^9}, {
+   3.810578228282072*^9, 3.810578233432168*^9}, {3.810578380866623*^9, 
+   3.810578449489134*^9}},
  CellLabel->
-  "In[718]:=",ExpressionUUID->"3a9d82a2-aa8d-4d45-b33e-805e7ce352eb"]
+  "In[1027]:=",ExpressionUUID->"3a9d82a2-aa8d-4d45-b33e-805e7ce352eb"]
 },
-WindowSize->{1202, 1077},
-WindowMargins->{{-1, Automatic}, {23, Automatic}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+WindowSize->{1412, 1077},
+WindowMargins->{{0, Automatic}, {Automatic, 51}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"f43de6de-0c84-4dec-b811-e731a63c3ed1"
 ]
@@ -209,7 +570,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7806, 172, 488, "Input",ExpressionUUID->"3a9d82a2-aa8d-4d45-b33e-805e7ce352eb"]
+Cell[558, 20, 27008, 533, 923, "Input",ExpressionUUID->"3a9d82a2-aa8d-4d45-b33e-805e7ce352eb"]
 }
 ]
 *)
