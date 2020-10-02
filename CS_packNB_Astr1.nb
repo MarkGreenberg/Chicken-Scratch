@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3419,         89]
-NotebookOptionsPosition[      3105,         75]
-NotebookOutlinePosition[      3466,         91]
-CellTagsIndexPosition[      3423,         88]
+NotebookDataLength[     26418,        500]
+NotebookOptionsPosition[     26070,        486]
+NotebookOutlinePosition[     26463,        502]
+CellTagsIndexPosition[     26420,        499]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,58 +26,469 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"<|", 
-         RowBox[{
-          RowBox[{"\"\<Mercury\>\"", "\[Rule]", "5.427"}], ",", 
-          RowBox[{"\"\<Venus\>\"", "\[Rule]", "5.243"}], ",", 
-          RowBox[{"\"\<Earth\>\"", "\[Rule]", "5.515"}], ",", 
-          RowBox[{"\"\<Mars\>\"", "\[Rule]", "3.934"}], ",", 
-          RowBox[{"\"\<Jupiter\>\"", "\[Rule]", "1.3262"}], ",", 
-          RowBox[{"\"\<Saturn\>\"", "\[Rule]", "0.6871"}], ",", 
-          RowBox[{"\"\<Uranus\>\"", "\[Rule]", "1.27"}], ",", 
-          RowBox[{"\"\<Neptune\>\"", "\[Rule]", "1.638"}], ",", 
-          RowBox[{"\"\<Europa\>\"", "\[Rule]", "3.013"}], ",", 
-          RowBox[{"\"\<Ganymede\>\"", "\[Rule]", "1.942"}], ",", 
-          RowBox[{"\"\<Callisto\>\"", "\[Rule]", "1.834"}], ",", 
-          RowBox[{"\"\<the moon\>\"", "\[Rule]", "3.344"}], ",", 
-          RowBox[{"\"\<Halley's Comet\>\"", "\[Rule]", "0.6"}], ",", 
-          RowBox[{"\"\<Pluto\>\"", "\[Rule]", "2.095"}], ",", 
-          RowBox[{"\"\<the sun\>\"", "\[Rule]", "1.408"}]}], "|>"}]}], ";", 
-       RowBox[{
-       "q", "=", "\"\<Which of these has the greatest mean density?\>\""}], 
-       ";", 
-       RowBox[{"choices", " ", "=", 
-        RowBox[{"Keys", "[", 
-         RowBox[{"Sort", "[", 
-          RowBox[{"RandomSample", "[", 
-           RowBox[{"data", ",", "4"}], "]"}], "]"}], "]"}]}], ";", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       RowBox[{"ans", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "4", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr1\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"Association", "AssociationIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["15", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["1752", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            Association[
+            "Mercury" -> 5.427, "Venus" -> 5.243, "Earth" -> 5.515, "Mars" -> 
+             3.934, "Jupiter" -> 1.3262, "Saturn" -> 0.6871, "Uranus" -> 1.27,
+              "Neptune" -> 1.638, "Europa" -> 3.013, "Ganymede" -> 1.942, 
+             "Callisto" -> 1.834, "the moon" -> 3.344, "Halley's Comet" -> 
+             0.6, "Pluto" -> 2.095, "the sun" -> 1.408],
+            SelectWithContents->True,
+            Selectable->False]}], ";", 
+          RowBox[{
+          "q", "=", "\"\<Which of these has the greatest mean density?\>\""}],
+           ";", 
+          RowBox[{"choices", " ", "=", 
+           RowBox[{"Keys", "[", 
+            RowBox[{"Sort", "[", 
+             RowBox[{"RandomSample", "[", 
+              RowBox[{"data", ",", "4"}], "]"}], "]"}], "]"}]}], ";", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "4", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"RandomChoice", "[", "#", "]"}], "&"}], "/@", 
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              InterpretationBox[
+               DynamicModuleBox[{Typeset`open = False}, 
+                TemplateBox[{"Association", "AssociationIcon", 
+                  GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["98", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["32064", "IconizedItem"]}]}}, 
+                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                   DefaultBaseStyle -> "Column", 
+                   GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                  Dynamic[Typeset`open]},
+                 "IconizedObject"]],
+               Association[
+               DateObject[{-3114}] -> {
+                 "Mayans discover 18.7-year cycle of the moon."}, 
+                DateObject[{-585}] -> {
+                 "Thales of Miletus predicts a solar eclipse."}, 
+                DateObject[{-467}] -> {
+                 "Anaxagoras explains eclipses correctly."}, 
+                DateObject[{-400}] -> {
+                 "Babylonians divide the heavens in to 12 sectors."}, 
+                DateObject[{-387}] -> {
+                 "Plato says that heavenly bodies orbit the Earth."}, 
+                DateObject[{-270}] -> {
+                 "Aristarchus proposes a heliocentric heavenly system."}, 
+                DateObject[{-240}] -> {
+                 "Chinese are first to record seeing Halley's Comet."}, 
+                DateObject[{-6}] -> {
+                 "The Magi observe a planetary conjunction."}, 
+                DateObject[{-4}] -> {
+                 "Shi Shen catelogues 809 stars.", 
+                  "Shi Shen is first to observe sun spots."}, 
+                DateObject[{140}] -> {
+                 "Ptolemy publishes his geocentric model of the universe."}, 
+                DateObject[{400}] -> {
+                 "Hindus are first to accurately calculate a year's length."},
+                 DateObject[{499}] -> {
+                 "Aryabhata identifies gravity.", 
+                  "Aryabhata proposes a geocentric model of the universe.", 
+                  "Aryabhata says the planets reflect the sun's light."}, 
+                DateObject[{628}] -> {
+                 "Brahmagupta first describes gravity as attraction.", 
+                  "Brahmagupta uses math to determine planet positions."}, 
+                DateObject[{773}] -> {
+                 "Sanskrit astronomy is first translated to Arabic."}, 
+                DateObject[{777}] -> {
+                 "Astronomy text Zij al-Sindhind is published."}, 
+                DateObject[{850}] -> {
+                 "Kitab Fi Jawani is published, refining Ptolemy."}, 
+                DateObject[{928}] -> {
+                 "The earliest surviving astrolabe is made."}, 
+                DateObject[{1030}] -> {
+                 "Ab\:016b Ray\:1e25\[ABar]n al-B\:012br\:016bn\:012b \
+publishes a heliocentric model."}, 
+                DateObject[{1031}] -> {
+                 "Abu Sa'id al-Sijzi writes that Earth spins on its axis."}, 
+                DateObject[{1054}] -> {
+                 "Chinese observe explosion of the Crab supernova."}, 
+                DateObject[{1070}] -> {
+                 "Abu Ubayd al-Juzjani shows inconsitencies in Ptolemy."}, 
+                DateObject[{1126}] -> {
+                 "Islamic/Indian astronomy are first translated into Latin."},
+                 DateObject[{1150}] -> {
+                 "Bh\[ABar]skara II adds to the math of planetary motion."}, 
+                DateObject[{1190}] -> {
+                 "Al-Bitruji proposes a goecentric alternative to Ptolemy."}, 
+                DateObject[{1250}] -> {
+                 "Mo'ayyeduddin Urdi develops the Urdi lemma.", 
+                  "Al-Qazwini al-Katibi argues for a heliocentric model."}, 
+                DateObject[{1350}] -> {
+                 "Ibn al-Shatir proves Earth is not the universe's center."}, 
+                DateObject[{1543}] -> {
+                 "Copernicus theorizes a heliocentric model."}, 
+                DateObject[{1572}] -> {
+                 "Tycho Brahe views a powerful supernova.", 
+                  "Tycho Brahe proves the heavens do change."}, 
+                DateObject[{1608}] -> {
+                 "Hans Lippershey invents the refracting telescope."}, 
+                DateObject[{1609}] -> {
+                 "Johannes Kepler announces his laws of planetary motion.", 
+                  "Johannes Kepler discovers planets' elliptical orbits."}, 
+                DateObject[{1610}] -> {
+                 "Galileo publishes findings from his self-built telescope.", 
+                  "Galileo first describes sun spots and moon craters.", 
+                  "Galileo discovers four moons of Jupiter."}, 
+                DateObject[{1655}] -> {
+                 "Huygens discovers Titan, Saturn's largest moon.", 
+                  "Huygens discovers the ring of Saturn."}, 
+                DateObject[{1663}] -> {
+                 "James Gregory first designs a reflecting telescope."}, 
+                DateObject[{1668}] -> {
+                 "Isaac Newton builds the first reflecting telescope."}, 
+                DateObject[{1687}] -> {
+                 "Isaac Newton publishes his theory of gravitation.", 
+                  "Isaac Newton connects gravity to the motion of heavenly \
+bodies."}, DateObject[{1705}] -> {
+                 "Edmond Halley predicts a comet's return after 76 years."}, 
+                DateObject[{1750}] -> {
+                 "De Lacaille catalogs 10,000 stars in the southern sky."}, 
+                DateObject[{1781}] -> {"William Herschel discovers Uranus."}, 
+                DateObject[{1784}] -> {
+                 "Charles Messier first catalogs star clusters and nebulae."},
+                 DateObject[{1800}] -> {
+                 "William Herschel discovers infrared radiation."}, 
+                DateObject[{1801}] -> {"Giusepe Piazzi discovers Ceres."}, 
+                DateObject[{1814}] -> {
+                 "Joseph von Fraunhofer invents the spectrometer.", 
+                  "Von Fraunhofer discovers chemical fingerprints in the \
+spectrum."}, DateObject[{1838}] -> {
+                 "Heinrich Schwabe discovers a regular cycle in sun spots."}, 
+                DateObject[{1845}] -> {
+                 "William Parsons builds the first of the great telescopes.", 
+                  "William Parsons discovers the Whirlpool Galaxy."}, 
+                DateObject[{1846}] -> {
+                 "Johann Gottfried Galle first identifies Neptune."}, 
+                DateObject[{1868}] -> {
+                 "Norman Lockyer discovers helium... on the sun."}, 
+                DateObject[{1872}] -> {
+                 "Henry Draper first records absorption lines in a star."}, 
+                DateObject[{1895}] -> {
+                 "Konstantin Tsiolkovsky designs the first space rocket."}, 
+                DateObject[{1901}] -> {
+                 "Henry Draper publishes a comprehensive survey of stars.", 
+                  "Annie Jump Cannon invents star classfication."}, 
+                DateObject[{1906}] -> {
+                 "Hertzsprung discovers true star brightness formula."}, 
+                DateObject[{1910}] -> {
+                 "Williamina Fleming discovers white dwarf stars."}, 
+                DateObject[{1912}] -> {
+                 "Henrietta Leavitt discovers the period-luminosity \
+relation."}, DateObject[{1916}] -> {
+                 "Karl Schwarzschild theorizes black holes."}, 
+                DateObject[{1923}] -> {
+                 "Edwin Hubble discovers galaxies beyond our own."}, 
+                DateObject[{1925}] -> {
+                 "Edwin Hubble invents a system for classifying galaxies.", 
+                  "Cecilia Payne-Gaposchkin discovers the abundance of \
+hydrogen."}, DateObject[{1926}] -> {
+                 "Robert Goddard the first liquid fueled rocket.", 
+                  "Robert Goddard demonstrates that rockets work in vacuum."},
+                 DateObject[{1929}] -> {
+                 "Edwin Hubble discovers that the universe is expanding."}, 
+                DateObject[{1930}] -> {
+                 "Chandrasekhar predicts that a white dwarf will collapse.", 
+                  "Baade and Zwicky describe formation of a neutron star."}, 
+                DateObject[{1931}] -> {
+                 "Georges Lema\[IHat]tre proposes the Big Bang."}, 
+                DateObject[{1932}] -> {
+                 "Karl Jansky detects radio waves coming from space."}, 
+                DateObject[{1938}] -> {
+                 "Hans Bethe outlines nuclear fusion sequence in stars."}, 
+                DateObject[{1944}] -> {
+                 "Wernher von Braun the V-2 rocket-powered missile."}, 
+                DateObject[{1948}] -> {
+                 "Mt. Palomar telescope becomes the world's most powerful."}, 
+                DateObject[{1957}] -> {
+                 "Russia launches Sputnik 1.", 
+                  "United States launches Explorer 1."}, 
+                DateObject[{1959}] -> {
+                 "Russia's Luna 2 and Luna 3 probes both reach the moon."}, 
+                DateObject[{1960}] -> {
+                 "Frank Drake performs the first modern SETI experiment."}, 
+                DateObject[{1961}] -> {
+                 "Yuri Gagarin is the first person to orbit Earth.", 
+                  "Alan Shepard completes the first human spaceflight."}, 
+                DateObject[{1962}] -> {
+                 "John Glenn is the first American to orbit Earth.", 
+                  "Mariner 2 first reaches another planet, Venus."}, 
+                DateObject[{1963}] -> {
+                 "Maarten Schmidt defines radio sources as quasars."}, 
+                DateObject[{1965}] -> {
+                 "Penzias and Wilson identify the cosmic microwave \
+background."}, DateObject[{1966}] -> {
+                 "Russia lands Luna 9 on the moon.", 
+                  "The US lands Survivor on the moon."}, 
+                DateObject[{1967}] -> {
+                 "Burnell and Hewish detect the first pulsar."}, 
+                DateObject[{1968}] -> {
+                 "Apollo 8 is first manned mission to orbit the moon."}, 
+                DateObject[{1969}] -> {
+                 "Armstrong and Aldrin walk on the moon."}, 
+                DateObject[{1970}] -> {
+                 "Uhuru satellite is launched to map x-ray radiation.", 
+                  "Russia's Venera 7 probe lands on Venus and then dies."}, 
+                DateObject[{1971}] -> {
+                 "Russia launches the first space station, Salyut 1."}, 
+                DateObject[{1972}] -> {
+                 "Charles Thomas Bolton proves that black holes exist."}, 
+                DateObject[{1975}] -> {
+                 "Russia's Venera 9 probe lands on Venus and sends \
+pictures."}, DateObject[{1976}] -> {
+                 "NASA's Viking 1 and Viking 2 both land on Mars."}, 
+                DateObject[{1977}] -> {
+                 "NASA launches Voyager 1 & 2 to explore the solar system."}, 
+                DateObject[{1981}] -> {
+                 "Columbia Space Shuttle starts a long-running program."}, 
+                DateObject[{1983}] -> {
+                 "IRAS is launched as the first infrared astronomy \
+satellite."}, DateObject[{1986}] -> {
+                 "Space Shuttle Challenger explodes after launch.", 
+                  "Europe's Giotto spacecraft visits Halley's Comet."}, 
+                DateObject[{1990}] -> {
+                 "Magellan probe arrives on Venus to begin 3-year mapping.", 
+                  "Hubble Space Telescope is launched with a bad mirror."}, 
+                DateObject[{1992}] -> {
+                 "Cosmic Background Explorer satellite maps the sky.", 
+                  "Keck telescope is first to use a composite mirror."}, 
+                DateObject[{1995}] -> {
+                 "Mayor and Queloz discover the first exoplanet."}, 
+                DateObject[{1998}] -> {
+                 "Construction begins for the International Space Station."}, 
+                DateObject[{2003}] -> {
+                 "Space Shuttle Columbia disintegrates on reentry."}, 
+                DateObject[{2005}] -> {"Mike Brown and team discover Eris."}, 
+                DateObject[{2006}] -> {
+                 "Pluto is reclassified as a dwarf planet."}, 
+                DateObject[{2008}] -> {
+                 "TC3 is the first Earth-impacting meteriod to be tracked."}, 
+                DateObject[{2012}] -> {
+                 "Suvi Gezari proves visually the existence of black holes."},
+                 DateObject[{2013}] -> {
+                 "The first extrasolar asteroid is detected."}, 
+                DateObject[{2015}] -> {
+                 "NASA's New Horizons visits Pluto.", 
+                  "LIGO directly detects a gravitational wave."}, 
+                DateObject[{2016}] -> {
+                 "Exoplanet Proxima Centauri b is discovered."}, 
+                DateObject[{2017}] -> {
+                 "Gravitational wave from a neutron star collision."}, 
+                DateObject[{2019}] -> {
+                 "China's Chang'e spacecraft soft lands on the dark side of \
+the moon.", "Black hole is photographed at the center of galaxy M87.", 
+                  "India launches lunar probe Chandrayaan 2."}, 
+                DateObject[{2020}] -> {
+                 "NASA sends rover Perseverance to Mars.", 
+                  "SpaceX Demo-2 sends two private citizens to the ISS."}],
+               SelectWithContents->True,
+               Selectable->False], ",", "4"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<The timeline shows the dates of these four events. Which is \
+the blue one?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Tooltip", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"StringTake", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"UpTo", "[", "24", "]"}]}], "]"}], "<>", 
+                "\"\<\[Ellipsis]\>\""}], ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{"#", ",", 
+                 RowBox[{"Darker", "[", "Blue", "]"}], ",", "20"}], "]"}]}], 
+              "]"}], "&"}], "/@", 
+            RowBox[{"Values", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"ToExpression", "[", 
+                RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "#", "]"}], "]"}], "]"}]}]}], 
+             "&"}], "/@", "mixed"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"TimelinePlot", "[", 
+            RowBox[{
+             RowBox[{"Partition", "[", 
+              RowBox[{
+               RowBox[{"Keys", "[", "data", "]"}], ",", "1"}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Spacings", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "0", ",", "0", ",", "0"}], "}"}]}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", ".05"}], ",", 
+             RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Blue", ",", "Gray", ",", "Gray", ",", "Gray"}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"LabelStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "960"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixTransit", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Astr1\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6830342221786327`*^9, 3.683034226689557*^9}, 
    3.683034314697754*^9, {3.683036954826844*^9, 3.683037198683708*^9}, 
-   3.683037289665388*^9},ExpressionUUID->"5eea3a7c-c829-4a39-bbae-\
-28e7d528517a"]
+   3.683037289665388*^9, {3.810579223438911*^9, 3.8105794263073072`*^9}, {
+   3.810579633372025*^9, 3.810579641804666*^9}, {3.8105796718112593`*^9, 
+   3.810579706418874*^9}, {3.810579764515114*^9, 3.810579934579707*^9}, {
+   3.8105799676520348`*^9, 3.810580282132062*^9}, {3.810580322572405*^9, 
+   3.8105806729964457`*^9}, {3.810580718114399*^9, 3.810580810237019*^9}, {
+   3.810580880994996*^9, 3.81058098797057*^9}, {3.810581025163167*^9, 
+   3.810581049018515*^9}, {3.810581081354752*^9, 3.810581148395028*^9}, {
+   3.8105811840822077`*^9, 3.810581315338469*^9}, {3.81058134537792*^9, 
+   3.810581442554644*^9}, {3.810581493634633*^9, 3.810581517570562*^9}, {
+   3.810581627698452*^9, 3.810581639505988*^9}, {3.810581673106045*^9, 
+   3.81058175897051*^9}, {3.81058182577822*^9, 3.8105818966415253`*^9}, {
+   3.810581961239299*^9, 3.810582049170001*^9}, {3.8105820871603317`*^9, 
+   3.810582128073842*^9}, {3.810582158889629*^9, 3.810582162257893*^9}, {
+   3.8105822080335608`*^9, 3.8105822586101217`*^9}, {3.810582322865155*^9, 
+   3.810582405369336*^9}, {3.8105824387370787`*^9, 3.8105824978654957`*^9}, {
+   3.81058257510541*^9, 3.810582597505885*^9}, {3.810584616997202*^9, 
+   3.81058474001265*^9}, {3.8105848389886637`*^9, 3.810584858653531*^9}, {
+   3.810584892196891*^9, 3.810584914100318*^9}, {3.810584971147572*^9, 
+   3.8105851195397663`*^9}, {3.810585169284993*^9, 3.810585485980237*^9}, {
+   3.8105855198112717`*^9, 3.810585638788312*^9}, {3.810585671083845*^9, 
+   3.810585914875429*^9}, {3.810585953683082*^9, 3.810586028763379*^9}, {
+   3.8105860680984783`*^9, 3.8105863523953133`*^9}, {3.810633669651987*^9, 
+   3.810633715107109*^9}, {3.810633788858212*^9, 3.810634117322094*^9}, {
+   3.810634160257593*^9, 3.810634243417651*^9}, {3.810634281824815*^9, 
+   3.810634353563244*^9}, {3.810634418344596*^9, 3.810634592440752*^9}, {
+   3.810634632904088*^9, 3.810634678040381*^9}, {3.81063471464765*^9, 
+   3.810634833048066*^9}, {3.8106348893675127`*^9, 3.8106349684481688`*^9}, {
+   3.810635043015781*^9, 3.810635094751471*^9}, {3.810635162943055*^9, 
+   3.81063550823862*^9}, {3.810635540270151*^9, 3.810635618998333*^9}, {
+   3.8106357413738947`*^9, 3.810635742333858*^9}, {3.810635774285478*^9, 
+   3.810635836405819*^9}, {3.81063587393392*^9, 3.8106359059816713`*^9}, {
+   3.810636276453321*^9, 3.8106364328537617`*^9}, {3.81064889111379*^9, 
+   3.810648967545891*^9}, {3.8106490043597527`*^9, 3.81064910759979*^9}, {
+   3.810649172351726*^9, 3.810649245455432*^9}, {3.8106492761271067`*^9, 
+   3.810649431967044*^9}, {3.810649484671483*^9, 3.810649502062643*^9}, {
+   3.810649533943399*^9, 3.810649679038312*^9}, {3.810649709886022*^9, 
+   3.810649825973982*^9}, {3.810649858749441*^9, 3.810649890045822*^9}, {
+   3.8106499791255913`*^9, 3.810650340764566*^9}, {3.810650380060082*^9, 
+   3.810650381148*^9}, {3.81065041501221*^9, 3.8106504914680767`*^9}, {
+   3.8106505479552593`*^9, 3.810650745332384*^9}, {3.810650780786399*^9, 
+   3.8106508052427263`*^9}, {3.810650862954678*^9, 3.810650992674396*^9}, {
+   3.810651022865926*^9, 3.810651024298093*^9}, {3.8106510804900084`*^9, 
+   3.810651179225746*^9}, {3.810651209344961*^9, 3.8106512371613903`*^9}, {
+   3.810651293233281*^9, 3.810651384392983*^9}, {3.8106514148409863`*^9, 
+   3.810651849111743*^9}, {3.8106518842636423`*^9, 3.810651931807241*^9}, {
+   3.81065228891117*^9, 3.8106523342624493`*^9}, {3.8106523734775887`*^9, 
+   3.8106524539272423`*^9}, {3.810652521415062*^9, 3.810652572231145*^9}, {
+   3.810652667046357*^9, 3.810652772766821*^9}, {3.810652841558792*^9, 
+   3.8106528731822147`*^9}, {3.810652920534327*^9, 3.810652959822102*^9}, {
+   3.810652999525463*^9, 3.8106530943426857`*^9}, {3.810653129077395*^9, 
+   3.810653189125659*^9}, {3.810653527188273*^9, 3.8106535328843317`*^9}, {
+   3.810653566334262*^9, 3.810653566630088*^9}, {3.810653754020173*^9, 
+   3.8106537897320623`*^9}, {3.810653868923822*^9, 3.810653872963838*^9}, {
+   3.810653915643564*^9, 3.810654038507331*^9}, {3.810654077563312*^9, 
+   3.810654150995215*^9}, {3.81065420929985*^9, 3.810654351802202*^9}, {
+   3.810654382386787*^9, 3.8106543897384233`*^9}, {3.810654444748088*^9, 
+   3.810654506316317*^9}, {3.810654563780567*^9, 3.8106545733158407`*^9}, {
+   3.810654607604362*^9, 3.810654653067646*^9}, {3.810654696724237*^9, 
+   3.810654727435341*^9}, {3.810654827491118*^9, 3.8106548858111343`*^9}, {
+   3.8106549445719624`*^9, 3.8106550172589397`*^9}, {3.810655056277783*^9, 
+   3.810655069827944*^9}, {3.810655173362739*^9, 3.810655188906827*^9}, 
+   3.8106552819084806`*^9, {3.810655320272667*^9, 3.8106553748872833`*^9}, 
+   3.810655465312805*^9},
+ CellLabel->
+  "In[1112]:=",ExpressionUUID->"5eea3a7c-c829-4a39-bbae-28e7d528517a"]
 },
-WindowSize->{1175, 1012},
-WindowMargins->{{-4, Automatic}, {Automatic, 54}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1512, 1012},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e731f724-c54d-4651-80b8-2095fa913d22"
 ]
 (* End of Notebook Content *)
 
@@ -90,10 +501,8 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2543, 53, 262, "Input",ExpressionUUID->"5eea3a7c-c829-4a39-bbae-28e7d528517a"]
+Cell[558, 20, 25508, 464, 574, "Input",ExpressionUUID->"5eea3a7c-c829-4a39-bbae-28e7d528517a"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
