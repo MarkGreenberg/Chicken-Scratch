@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4639,        118]
-NotebookOptionsPosition[      4325,        104]
-NotebookOutlinePosition[      4686,        120]
-CellTagsIndexPosition[      4643,        117]
+NotebookDataLength[     12122,        264]
+NotebookOptionsPosition[     11774,        250]
+NotebookOutlinePosition[     12167,        266]
+CellTagsIndexPosition[     12124,        263]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,87 +26,233 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"hbs", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{
-           "\"\<the moon\>\"", ",", "\"\<the sun\>\"", ",", "\"\<Earth\>\"", 
-            ",", "\"\<Mercury\>\"", ",", "\"\<Venus\>\"", ",", "\"\<Mars\>\"",
-             ",", "\"\<Jupiter\>\"", ",", "\"\<Saturn\>\"", ",", 
-            "\"\<Uranus\>\"", ",", "\"\<Neptune\>\"", ",", "\"\<Ganymede\>\"",
-             ",", "\"\<Callisto\>\"", ",", "\"\<Titan\>\"", ",", 
-            "\"\<Pandora\>\"", ",", "\"\<Oberon\>\""}], "}"}], ",", "2"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Quantity", "[", 
+          RowBox[{"hbs", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["15", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["664", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {
+              "the moon", "the sun", "Earth", "Mercury", "Venus", "Mars", 
+               "Jupiter", "Saturn", "Uranus", "Neptune", "Ganymede", 
+               "Callisto", "Titan", "Pandora", "Oberon"},
+              SelectWithContents->True,
+              Selectable->False], ",", "2"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
            RowBox[{
-            RowBox[{"ScientificForm", "[", 
-             RowBox[{"#", ",", "4"}], "]"}], ",", 
             RowBox[{
-             RowBox[{"\"\<Meters\>\"", "^", "3"}], "*", 
-             RowBox[{"\"\<Kilograms\>\"", "^", 
-              RowBox[{"-", "1"}]}], "*", 
-             RowBox[{"\"\<Seconds\>\"", "^", 
-              RowBox[{"-", "2"}]}]}]}], "]"}], "&"}], "/@", 
-         RowBox[{"Prepend", "[", 
-          RowBox[{
-           RowBox[{"RandomReal", "[", 
+             RowBox[{"Quantity", "[", 
+              RowBox[{
+               RowBox[{"ScientificForm", "[", 
+                RowBox[{"#", ",", "4"}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"\"\<Meters\>\"", "^", "3"}], "*", 
+                RowBox[{"\"\<Kilograms\>\"", "^", 
+                 RowBox[{"-", "1"}]}], "*", 
+                RowBox[{"\"\<Seconds\>\"", "^", 
+                 RowBox[{"-", "2"}]}]}]}], "]"}], "&"}], "/@", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"RandomReal", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{".000000000001", ",", ".000000009"}], "}"}], ",", 
+                "3"}], "]"}], ",", "0.0000000000667408"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{".000000000001", ",", ".000000009"}], "}"}], ",", "3"}],
-             "]"}], ",", "0.0000000000667408"}], "]"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
+            "\"\<On the surface of `1` the universal\\ngravitational constant \
+(G) is `2`.\\nWhat is it on the surface of `3`?\>\"", ",", 
+             RowBox[{
+             "hbs", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", 
+             RowBox[{
+             "choices", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}], ",", 
+             RowBox[{
+             "hbs", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-         "\"\<On the surface of `1` the gravitational constant is `2`. What \
-is it on the surface of `3`?\>\"", ",", 
-          RowBox[{"hbs", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], ",", 
-          RowBox[{"choices", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], ",", 
-          RowBox[{"hbs", "[", 
-           RowBox[{"[", "2", "]"}], "]"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr9\>\"", ",", 
+          RowBox[{"data", "=", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"List", "ListIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["32", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2120", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            {
+            "Planck Epoch", "Emgence of Gravitation", 
+             "Emergence of Electromagnetic Interactions", 
+             "Emergence of the Weak Force", "Emergence of the Strong Force", 
+             "Cosmic Inflation", "Subatomic Particles First Form", 
+             "Matter and Antimatter Mostly Annihilate", "Neutrinos Decouple", 
+             "Primordial Black Holes Form", "Protons and Neutrons First Form",
+              "Nucleosynthesis Occurs", "Deuterium First Forms", 
+             "Helium-4 First Forms", "Universe Consists of an Opaque Plasma", 
+             "Helium Hydride Becomes the First Molecule", 
+             "Neutral Atoms Form by Recombination", 
+             "The Universe Becomes Transparent", 
+             "Hydrogen, Helium, and Lithium Reach Ground State", 
+             "Photon Decoupling Creates the Cosmic Microwave Background", 
+             "The Universe Glows Orange", "Cosmic Dark Ages", 
+             "Liquid Water First Appears", "Stars Begin to Form", 
+             "Galaxies Begin to Form", "Dark Matter Filaments Draw Together", 
+             "Early Supernovae Spread Common Elements", 
+             "Galaxy Clusters and Superclusters Form", "Reionization Occurs", 
+             "The Milky Way is Formed", "Our Solar System Forms", 
+             "Life Begins on Earth"},
+            SelectWithContents->True,
+            Selectable->False]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ind", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{"Length", "[", "data", "]"}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"qTxt", "=", "\"\<first\>\""}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ans", "=", 
+              RowBox[{
+               RowBox[{"Position", "[", 
+                RowBox[{"ind", ",", 
+                 RowBox[{"Min", "[", "ind", "]"}]}], "]"}], 
+               "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}]}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"qTxt", "=", "\"\<last\>\""}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ans", "=", 
+              RowBox[{
+               RowBox[{"Position", "[", 
+                RowBox[{"ind", ",", 
+                 RowBox[{"Max", "[", "ind", "]"}]}], "]"}], 
+               "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}]}]}], 
+           "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<Which of these events came \>\"", "<>", "qTxt", "<>", 
+            "\"\< in the history of the universe?\>\""}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+             "data", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
+             "&"}], "/@", "ind"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+   "\"\<CS_pack_Astr9\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.693927407734169*^9, 3.693927512985393*^9}, {
-  3.693927567301176*^9, 3.6939276799224873`*^9}, {3.6939277649044237`*^9, 
-  3.693927789631958*^9}, {3.693927853434259*^9, 3.693927983024028*^9}, {
-  3.693928043860861*^9, 3.693928067716742*^9}, {3.6939281178470163`*^9, 
-  3.693928247252787*^9}, {3.693928321227736*^9, 3.6939283648591413`*^9}, {
-  3.693928452688202*^9, 3.6939284979693527`*^9}, {3.6939286070493727`*^9, 
-  3.6939286146067257`*^9}, {3.6939287329262238`*^9, 3.69392873313274*^9}, {
-  3.693928766744223*^9, 3.693928807440371*^9}, {3.693928838747733*^9, 
-  3.693928897084799*^9}, {3.693929075567189*^9, 3.693929217070156*^9}, {
-  3.6939292682255077`*^9, 3.693929478618017*^9}, {3.693929618912795*^9, 
-  3.693929634536984*^9}, {3.693930707271502*^9, 
-  3.6939307094054403`*^9}},ExpressionUUID->"97681f44-f2f2-44b4-b2a0-\
-2d24eef964bf"]
+   3.693927567301176*^9, 3.6939276799224873`*^9}, {3.6939277649044237`*^9, 
+   3.693927789631958*^9}, {3.693927853434259*^9, 3.693927983024028*^9}, {
+   3.693928043860861*^9, 3.693928067716742*^9}, {3.6939281178470163`*^9, 
+   3.693928247252787*^9}, {3.693928321227736*^9, 3.6939283648591413`*^9}, {
+   3.693928452688202*^9, 3.6939284979693527`*^9}, {3.6939286070493727`*^9, 
+   3.6939286146067257`*^9}, {3.6939287329262238`*^9, 3.69392873313274*^9}, {
+   3.693928766744223*^9, 3.693928807440371*^9}, {3.693928838747733*^9, 
+   3.693928897084799*^9}, {3.693929075567189*^9, 3.693929217070156*^9}, {
+   3.6939292682255077`*^9, 3.693929478618017*^9}, {3.693929618912795*^9, 
+   3.693929634536984*^9}, {3.693930707271502*^9, 3.6939307094054403`*^9}, {
+   3.8107167223548727`*^9, 3.810716814645913*^9}, {3.8107168477363777`*^9, 
+   3.8107169407855997`*^9}, {3.810810017820487*^9, 3.810810040028768*^9}, {
+   3.810832389396145*^9, 3.810832535019534*^9}, {3.81083258285116*^9, 
+   3.810832622834861*^9}, {3.81083269339461*^9, 3.810832816994254*^9}, {
+   3.8108328505545*^9, 3.810832902385853*^9}, {3.8108329400018473`*^9, 
+   3.810833024361939*^9}, {3.810833095025635*^9, 3.810833170849144*^9}, {
+   3.810833261769431*^9, 3.810833369560306*^9}, {3.810833401424258*^9, 
+   3.810833438768229*^9}, {3.810833520056123*^9, 3.810833533863867*^9}, {
+   3.810833568455985*^9, 3.810833576663804*^9}, {3.810833616135866*^9, 
+   3.8108336284316387`*^9}, {3.810833697487494*^9, 3.810833715519402*^9}, {
+   3.8108337562231083`*^9, 3.8108337766233263`*^9}, {3.8108338591508493`*^9, 
+   3.810833889854927*^9}, {3.810833922070759*^9, 3.810833977814487*^9}, {
+   3.810834093654746*^9, 3.8108341663182583`*^9}, {3.810834238246557*^9, 
+   3.8108343017979317`*^9}, {3.81083433742338*^9, 3.8108343503335114`*^9}, {
+   3.810834389606346*^9, 3.810834439205503*^9}, {3.810834472542224*^9, 
+   3.810834824789771*^9}, {3.810834855708766*^9, 3.810834869828513*^9}, {
+   3.810836732277198*^9, 3.810836747593562*^9}, {3.8108368086517763`*^9, 
+   3.810836858923051*^9}, {3.810837096279542*^9, 3.8108371228824*^9}, {
+   3.8108376137798357`*^9, 3.8108376260735598`*^9}, {3.810837687219647*^9, 
+   3.810837697242175*^9}, 
+   3.810837772863389*^9},ExpressionUUID->"bd195ae1-cc66-4270-b80d-\
+166be7b0bdb0"]
 },
-WindowSize->{1203, 1071},
-WindowMargins->{{-2, Automatic}, {37, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1637, 1217},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"8ae58e88-674d-42b4-b3e7-0b4a2fd4a578"
 ]
 (* End of Notebook Content *)
 
@@ -119,7 +265,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 3763, 82, 283, "Input",ExpressionUUID->"97681f44-f2f2-44b4-b2a0-2d24eef964bf"]
+Cell[558, 20, 11212, 228, 553, "Input",ExpressionUUID->"bd195ae1-cc66-4270-b80d-166be7b0bdb0"]
 }
 ]
 *)
