@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     23378,        492]
-NotebookOptionsPosition[     23028,        478]
-NotebookOutlinePosition[     23422,        494]
-CellTagsIndexPosition[     23379,        491]
+NotebookDataLength[     18496,        372]
+NotebookOptionsPosition[     18148,        358]
+NotebookOutlinePosition[     18541,        374]
+CellTagsIndexPosition[     18498,        371]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,7 +30,7 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "1"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
          "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"yr1", "=", 
@@ -136,248 +136,96 @@ Cell[BoxData[
             RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
            "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
-         RowBox[{"(*", " ", 
-          RowBox[{
-          "I", " ", "disabled", " ", "this", " ", "question", " ", "because", 
-           " ", "it", " ", "returns", " ", "the", " ", "text", " ", "instead",
-            " ", "of", " ", "an", " ", 
-           RowBox[{"image", ".", " ", "\[IndentingNewLine]", "This"}], " ", 
-           "is", " ", "probably", " ", "happening", " ", "because", " ", "it",
-            " ", "uses", " ", "up", " ", "service", " ", 
-           RowBox[{"credits", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"data", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{
-             InterpretationBox[
-              DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"List", "ListIcon", 
-                 GridBox[{{
-                    RowBox[{
-                    TagBox["\"Head: \"", "IconizedLabel"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["List", "IconizedItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Length: \"", "IconizedLabel"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["76", "IconizedItem"]}]}, {
-                    RowBox[{
-                    TagBox["\"Byte count: \"", "IconizedLabel"], 
-                    "\[InvisibleSpace]", 
-                    TagBox["3552", "IconizedItem"]}]}}, 
-                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
-                  DefaultBaseStyle -> "Column", 
-                  GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-                 Dynamic[Typeset`open]},
-                "IconizedObject"]],
-              {
-              "apricot", "avocado", "banana", "bing cherries", "blackberry", 
-               "blackcurrant", "blueberry", "breadfruit", "cantaloupe", 
-               "cherimoya", "coconut", "cranberry", "custard-apple", 
-               "date fruit", "dragonfruit", "durian", "elderberries", 
-               "feijoa", "figs", "golden delicious apple", "gooseberries", 
-               "grapefruit", "grapes", "guava", "honeydew melon", "jackfruit",
-                "Japanese persimmon", "java-plum", "jujube fruit", 
-               "kaffir lime", "kiwi fruit", "kumquat", "lemon", "lime fruit", 
-               "longan", "loquat", "lychee", "mamey sapote", 
-               "Mandarin orange", "mango", "mangosteen", "McIntosh apple", 
-               "mint plant", "mulberries", "nectarine", "navel orange", 
-               "olives", "papaya", "passion fruit", "peaches", "pear", 
-               "pineapple", "Pippin apple", "pitanga", "plantain", "plums", 
-               "pomegranate", "prickly pear", "prunes", "pomelo", "quince", 
-               "raspberries", "rhubarb", "rose-apple", "sapodilla", "soursop",
-                "star fruit", "strawberries", "sugar-apple", "tamarind", 
-               "tangelo", "tangerine", "toddy palm fruit", "tomato", 
-               "watermelon", "West Indian cherry"},
-              SelectWithContents->True,
-              Selectable->False], ",", "4"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"choices", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"\"\<\\\"\>\"", "<>", "#", "<>", "\"\<\\\"\>\""}], "&"}],
-             "/@", "data"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{
           "q", "=", 
-           "\"\<This spiderweb graph is for the first image from which web \
-search?\>\""}], ";", "\[IndentingNewLine]", 
-          RowBox[{"img", "=", 
-           RowBox[{
-            RowBox[{"ResourceFunction", "[", "\"\<FirstWebImage\>\"", "]"}], 
-            "[", 
+           "\"\<What two rules are plotted in this multiway system states \
+graph?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mwGraph", "=", 
+           RowBox[{"ResourceFunction", "[", "\"\<MultiwaySystem\>\"", "]"}]}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"chars", "=", 
+           RowBox[{"RandomSample", "[", 
             RowBox[{
-            "choices", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
-             "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"rgbDat", "=", 
-           RowBox[{"Flatten", "[", 
-            RowBox[{
-             RowBox[{"ImageData", "[", 
-              RowBox[{"ColorConvert", "[", 
-               RowBox[{"img", ",", "\"\<RGB\>\""}], "]"}], "]"}], ",", "1"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"rgbDatNoWt", "=", 
-           RowBox[{"Cases", "[", 
-            RowBox[{"rgbDat", ",", 
+             RowBox[{"ToUpperCase", "[", 
+              RowBox[{"Alphabet", "[", "]"}], "]"}], ",", "3"}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"ic", "=", 
+           RowBox[{"StringJoin", "[", 
+            RowBox[{"RandomChoice", "[", 
+             RowBox[{"chars", ",", "5"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"tups", "=", 
+           RowBox[{"Join", "[", 
+            RowBox[{"chars", ",", 
              RowBox[{
-              RowBox[{"{", 
-               RowBox[{"r_", ",", "g_", ",", "b_"}], "}"}], "/;", 
-              RowBox[{".12", "<", 
-               RowBox[{"(", 
-                RowBox[{"r", "+", "b", "+", "g"}], ")"}], "<", "2.88"}]}]}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"rgb", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Mean", "[", "#", "]"}], "&"}], "/@", 
-            RowBox[{"Transpose", "[", "rgbDat", "]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"rgbNoWt", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Mean", "[", "#", "]"}], "&"}], "/@", 
-            RowBox[{"Transpose", "[", "rgbDatNoWt", "]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"hsbDat", "=", 
-           RowBox[{"Flatten", "[", 
-            RowBox[{
-             RowBox[{"ImageData", "[", 
-              RowBox[{"ColorConvert", "[", 
-               RowBox[{"img", ",", "\"\<HSB\>\""}], "]"}], "]"}], ",", "1"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"hsbDatNoWt", "=", 
-           RowBox[{"Cases", "[", 
-            RowBox[{"rgbDat", ",", 
+              RowBox[{
+               RowBox[{"StringJoin", "[", "#", "]"}], "&"}], "/@", 
+              RowBox[{"Tuples", "[", 
+               RowBox[{"chars", ",", "2"}], "]"}]}], ",", 
              RowBox[{
-              RowBox[{"{", 
-               RowBox[{"_", ",", "s_", ",", "b_"}], "}"}], "/;", 
               RowBox[{
-               RowBox[{"s", ">", ".1"}], "||", 
-               RowBox[{".03", "<", "b", "<", ".97"}]}]}]}], "]"}]}], ";", 
+               RowBox[{"StringJoin", "[", "#", "]"}], "&"}], "/@", 
+              RowBox[{"Tuples", "[", 
+               RowBox[{"chars", ",", "3"}], "]"}]}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"hsb", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Mean", "[", "#", "]"}], "&"}], "/@", 
-            RowBox[{"Transpose", "[", "hsbDat", "]"}]}]}], ";", 
+          RowBox[{"goodTups", "=", 
+           RowBox[{"Cases", "[", 
+            RowBox[{"tups", ",", 
+             RowBox[{"s_", "/;", 
+              RowBox[{"StringContainsQ", "[", 
+               RowBox[{"ic", ",", "s"}], "]"}]}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"hsbNoWt", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"Mean", "[", "#", "]"}], "&"}], "/@", 
-            RowBox[{"Transpose", "[", "hsbDatNoWt", "]"}]}]}], ";", 
+          RowBox[{"allRules", "=", 
+           RowBox[{"Rule", "@@@", 
+            RowBox[{"Permutations", "[", 
+             RowBox[{"tups", ",", 
+              RowBox[{"{", "2", "}"}]}], "]"}]}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"ass1", "=", 
-           RowBox[{"<|", 
-            RowBox[{
-             RowBox[{"\"\<green\>\"", "\[Rule]", 
-              RowBox[{
-              "rgb", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}],
-              ",", 
-             RowBox[{"\"\<blue\>\"", "\[Rule]", 
-              RowBox[{
-              "rgb", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}],
-              ",", 
-             RowBox[{"\"\<brightness\>\"", "\[Rule]", 
-              RowBox[{
-              "hsb", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}],
-              ",", 
-             RowBox[{"\"\<saturation\>\"", "\[Rule]", 
-              RowBox[{
-              "hsb", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}],
-              ",", 
-             RowBox[{"\"\<hue\>\"", "\[Rule]", 
-              RowBox[{
-              "hsb", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}],
-              ",", 
-             RowBox[{"\"\<red\>\"", "\[Rule]", 
-              RowBox[{
-              "rgb", "\[LeftDoubleBracket]", "1", 
-               "\[RightDoubleBracket]"}]}]}], "|>"}]}], ";", 
+          RowBox[{"goodRules", "=", 
+           RowBox[{"Cases", "[", 
+            RowBox[{"allRules", ",", 
+             RowBox[{
+              RowBox[{"Rule", "[", 
+               RowBox[{"a_", ",", "_"}], "]"}], "/;", 
+              RowBox[{"MemberQ", "[", 
+               RowBox[{"goodTups", ",", "a"}], "]"}]}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"ass2", "=", 
-           RowBox[{"<|", 
-            RowBox[{
-             RowBox[{"\"\<green\>\"", "\[Rule]", 
-              RowBox[{
-              "rgbNoWt", "\[LeftDoubleBracket]", "2", 
-               "\[RightDoubleBracket]"}]}], ",", 
-             RowBox[{"\"\<blue\>\"", "\[Rule]", 
-              RowBox[{
-              "rgbNoWt", "\[LeftDoubleBracket]", "3", 
-               "\[RightDoubleBracket]"}]}], ",", 
-             RowBox[{"\"\<brightness\>\"", "\[Rule]", 
-              RowBox[{
-              "hsbNoWt", "\[LeftDoubleBracket]", "3", 
-               "\[RightDoubleBracket]"}]}], ",", 
-             RowBox[{"\"\<saturation\>\"", "\[Rule]", 
-              RowBox[{
-              "hsbNoWt", "\[LeftDoubleBracket]", "2", 
-               "\[RightDoubleBracket]"}]}], ",", 
-             RowBox[{"\"\<hue\>\"", "\[Rule]", 
-              RowBox[{
-              "hsbNoWt", "\[LeftDoubleBracket]", "1", 
-               "\[RightDoubleBracket]"}]}], ",", 
-             RowBox[{"\"\<red\>\"", "\[Rule]", 
-              RowBox[{
-              "rgbNoWt", "\[LeftDoubleBracket]", "1", 
-               "\[RightDoubleBracket]"}]}]}], "|>"}]}], ";", 
-          "\[IndentingNewLine]", 
+          RowBox[{"ansRules", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Prepend", "[", 
+                RowBox[{
+                 RowBox[{"RandomSample", "[", 
+                  RowBox[{"allRules", ",", "2"}], "]"}], ",", 
+                 RowBox[{"RandomChoice", "[", "goodRules", "]"}]}], "]"}], 
+               "]"}], ",", "2"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          
+          RowBox[{"mwGraph", "=", 
+           RowBox[{"ResourceFunction", "[", "\"\<MultiwaySystem\>\"", "]"}]}],
+           ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"Show", "[", "\[IndentingNewLine]", 
+           RowBox[{"mwGraph", "[", 
             RowBox[{
-             RowBox[{
-              RowBox[{"ResourceFunction", "[", "\"\<RadarChart\>\"", "]"}], 
-              "[", 
-              RowBox[{"ass1", ",", "\[IndentingNewLine]", 
-               RowBox[{"PlotLabel", "\[Rule]", 
-                RowBox[{"Column", "[", 
-                 RowBox[{
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"Framed", "[", 
-                    RowBox[{
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "\"\<Image With Background\>\"", ",", "24", ",", 
-                    "Black"}], "]"}], ",", 
-                    RowBox[{"FrameStyle", "\[Rule]", "Thick"}]}], "]"}], ",", 
-                    
-                    RowBox[{"Framed", "[", 
-                    RowBox[{
-                    RowBox[{"Style", "[", 
-                    RowBox[{
-                    "\"\<Without Background\>\"", ",", "24", ",", "Black"}], 
-                    "]"}], ",", 
-                    RowBox[{"FrameStyle", "\[Rule]", 
-                    RowBox[{"Directive", "[", 
-                    RowBox[{"Thick", ",", "Dashed"}], "]"}]}]}], "]"}]}], 
-                   "}"}], ",", "Center"}], "]"}]}], ",", 
-               "\[IndentingNewLine]", 
-               RowBox[{"ChartStyle", "\[Rule]", "Black"}], ",", 
-               RowBox[{"PlotRange", "\[Rule]", ".8"}], ",", 
-               RowBox[{"GridLinesStyle", "\[Rule]", "Gray"}], ",", 
-               RowBox[{"ImageSize", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"{", "480", "}"}], ",", 
-                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{
-              RowBox[{"ResourceFunction", "[", "\"\<RadarChart\>\"", "]"}], 
-              "[", 
-              RowBox[{"ass2", ",", 
-               RowBox[{"ChartStyle", "\[Rule]", 
-                RowBox[{"Directive", "[", 
-                 RowBox[{"Black", ",", "Dashed"}], "]"}]}], ",", 
-               RowBox[{"PlotRange", "\[Rule]", ".8"}], ",", 
-               RowBox[{"GridLinesStyle", "\[Rule]", "Gray"}], ",", 
-               RowBox[{"ImageSize", "\[Rule]", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"{", "480", "}"}], ",", 
-                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], 
-            "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+            "ansRules", ",", "ic", ",", "3", ",", "\"\<StatesGraph\>\"", ",", 
+             
+             RowBox[{"AspectRatio", "\[Rule]", 
+              FractionBox["9", "8"]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Partition", "[", 
+               RowBox[{
+                RowBox[{"Join", "[", 
+                 RowBox[{"ansRules", ",", 
+                  RowBox[{"RandomSample", "[", 
+                   RowBox[{"allRules", ",", "8"}], "]"}]}], "]"}], ",", "2"}],
+                "]"}], "]"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -472,13 +320,45 @@ search?\>\""}], ";", "\[IndentingNewLine]",
    3.789753457444167*^9, 3.789753465914585*^9}, {3.789753530821348*^9, 
    3.789753571565531*^9}, {3.789753876540785*^9, 3.789753933289908*^9}, {
    3.796416212783369*^9, 3.796416242584033*^9}, {3.7964163578118134`*^9, 
-   3.796416515263851*^9}},
+   3.796416515263851*^9}, {3.811503538475278*^9, 3.811503625573542*^9}, {
+   3.811503655949615*^9, 3.8115036889803267`*^9}, {3.81150371912605*^9, 
+   3.811503747787986*^9}, {3.811518865134137*^9, 3.811518869566471*^9}, {
+   3.81151890014217*^9, 3.811518902205638*^9}, {3.811518936845891*^9, 
+   3.811518985741713*^9}, {3.811519019637739*^9, 3.811519044661474*^9}, {
+   3.8115190800232553`*^9, 3.811519108214376*^9}, {3.8115191557817783`*^9, 
+   3.8115192085654993`*^9}, 3.81151929879865*^9, {3.811519331797518*^9, 
+   3.8115193406375093`*^9}, 3.8115193813175087`*^9, {3.8115194575419617`*^9, 
+   3.811519542629423*^9}, {3.8115195852539797`*^9, 3.8115196397172537`*^9}, {
+   3.811519672173606*^9, 3.811519746140768*^9}, {3.811519787206399*^9, 
+   3.811519826308955*^9}, {3.8115198689642563`*^9, 3.811520098196224*^9}, {
+   3.811520150452683*^9, 3.811520192441931*^9}, {3.811520296732602*^9, 
+   3.811520297948263*^9}, 3.811520759581194*^9, {3.8115208129644747`*^9, 
+   3.811520837524701*^9}, {3.811521024127594*^9, 3.811521042482636*^9}, {
+   3.811521085523685*^9, 3.81152111397887*^9}, 3.811521196360635*^9, 
+   3.811521236907673*^9, {3.811521338522951*^9, 3.8115214362585917`*^9}, {
+   3.8115214821790953`*^9, 3.811521575179064*^9}, {3.81152169044281*^9, 
+   3.8115216911300583`*^9}, {3.811521747241983*^9, 3.811521762248826*^9}, {
+   3.811521833478544*^9, 3.81152191563246*^9}, {3.811521955384502*^9, 
+   3.811522101417354*^9}, 3.811522142816231*^9, {3.8115221997530413`*^9, 
+   3.811522245751944*^9}, {3.8115222896969137`*^9, 3.8115223692883253`*^9}, {
+   3.811522467712524*^9, 3.811522479569021*^9}, {3.8115226197844954`*^9, 
+   3.8115226207988033`*^9}, {3.8115226765765142`*^9, 3.811522704510952*^9}, {
+   3.81152277937573*^9, 3.8115227823193398`*^9}, {3.811523197958803*^9, 
+   3.8115232555105467`*^9}, {3.811523309254373*^9, 3.81152334587871*^9}, {
+   3.811524492429146*^9, 3.811524571396577*^9}, {3.811524673516552*^9, 
+   3.811524705852466*^9}, {3.811524808827821*^9, 3.811524872651724*^9}, {
+   3.81152492159575*^9, 3.811524926091422*^9}, {3.811525012283757*^9, 
+   3.8115250377636127`*^9}, {3.811525120451469*^9, 3.8115252512037287`*^9}, {
+   3.811525339179316*^9, 3.811525390707715*^9}, {3.811525431634266*^9, 
+   3.811525576097975*^9}, {3.8115257406186953`*^9, 3.811525741186041*^9}, {
+   3.811525812475006*^9, 3.811526000609517*^9}, {3.81152643955377*^9, 
+   3.8115266047522287`*^9}, {3.811529541920361*^9, 3.811529560132408*^9}},
  CellLabel->
-  "In[228]:=",ExpressionUUID->"46b8d8bd-57b1-4c07-8c62-ffd67e983fc4"]
+  "In[538]:=",ExpressionUUID->"46b8d8bd-57b1-4c07-8c62-ffd67e983fc4"]
 },
 WindowSize->{1706, 1362},
 WindowMargins->{{4, Automatic}, {3, Automatic}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"1ce2c114-e49f-42d3-abbf-03fccb973799"
 ]
@@ -493,7 +373,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 22466, 456, 1060, "Input",ExpressionUUID->"46b8d8bd-57b1-4c07-8c62-ffd67e983fc4"]
+Cell[558, 20, 17586, 336, 866, "Input",ExpressionUUID->"46b8d8bd-57b1-4c07-8c62-ffd67e983fc4"]
 }
 ]
 *)
