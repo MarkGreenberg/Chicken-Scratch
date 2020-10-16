@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5350,        130]
-NotebookOptionsPosition[      5038,        116]
-NotebookOutlinePosition[      5397,        132]
-CellTagsIndexPosition[      5354,        129]
+NotebookDataLength[     11925,        267]
+NotebookOptionsPosition[     11483,        252]
+NotebookOutlinePosition[     11876,        268]
+CellTagsIndexPosition[     11833,        265]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,83 +26,200 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{
-       "q", "=", 
-        "\"\<Which of these is highest in the sky right now (closest to \
-zenith)?\>\""}], ";", "\[IndentingNewLine]", 
-       RowBox[{"bods", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{
+          "q", "=", 
+           "\"\<Which of these is highest in the sky right now (closest to \
+zenith)?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"bods", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["9", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["1200", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {
+               Entity["Planet", "Mercury"], 
+               Entity["Planet", "Venus"], 
+               Entity["Planet", "Mars"], 
+               Entity["Planet", "Jupiter"], 
+               Entity["Planet", "Saturn"], 
+               Entity["Planet", "Uranus"], 
+               Entity["Planet", "Neptune"], 
+               Entity["Star", "Sun"], 
+               Entity["PlanetaryMoon", "Moon"]},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           RowBox[{"SortBy", "[", 
+            RowBox[{
+             RowBox[{"EntityValue", "[", 
+              RowBox[{"bods", ",", 
+               RowBox[{"{", 
+                RowBox[{"\"\<Name\>\"", ",", "\"\<Altitude\>\""}], "}"}]}], 
+              "]"}], ",", "Last"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
            RowBox[{
-            TemplateBox[{"\"Mercury\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Planet\"", ",", "\"Mercury\""}], "]"}],
-              "\"Entity[\\\"Planet\\\", \\\"Mercury\\\"]\"","\"planet\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Venus\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Planet\"", ",", "\"Venus\""}], "]"}],
-              "\"Entity[\\\"Planet\\\", \\\"Venus\\\"]\"","\"planet\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Mars\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Planet\"", ",", "\"Mars\""}], "]"}],
-              "\"Entity[\\\"Planet\\\", \\\"Mars\\\"]\"","\"planet\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Jupiter\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Planet\"", ",", "\"Jupiter\""}], "]"}],
-              "\"Entity[\\\"Planet\\\", \\\"Jupiter\\\"]\"","\"planet\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Saturn\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Planet\"", ",", "\"Saturn\""}], "]"}],
-              "\"Entity[\\\"Planet\\\", \\\"Saturn\\\"]\"","\"planet\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Uranus\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Planet\"", ",", "\"Uranus\""}], "]"}],
-              "\"Entity[\\\"Planet\\\", \\\"Uranus\\\"]\"","\"planet\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Neptune\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Planet\"", ",", "\"Neptune\""}], "]"}],
-              "\"Entity[\\\"Planet\\\", \\\"Neptune\\\"]\"","\"planet\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Sun\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"Star\"", ",", "\"Sun\""}], "]"}],
-              "\"Entity[\\\"Star\\\", \\\"Sun\\\"]\"","\"star\""},
-             "Entity"], ",", 
-            TemplateBox[{"\"Moon\"",RowBox[{"Entity", "[", 
-                RowBox[{"\"PlanetaryMoon\"", ",", "\"Moon\""}], "]"}],
-              "\"Entity[\\\"PlanetaryMoon\\\", \\\"Moon\\\"]\"",
-              "\"planetary moon\""},
-             "Entity"]}], "}"}], ",", "4"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"data", "=", 
-        RowBox[{"SortBy", "[", 
+            RowBox[{
+             RowBox[{"#", "[", 
+              RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "4", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"EntityValue", "[", 
-           RowBox[{"bods", ",", 
-            RowBox[{"{", 
-             RowBox[{"\"\<Name\>\"", ",", "\"\<Altitude\>\""}], "}"}]}], 
-           "]"}], ",", "Last"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"#", "[", 
-           RowBox[{"[", "1", "]"}], "]"}], "&"}], "/@", "data"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "4", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Astr5\>\"", ",", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"RandomInteger", "[", "3", "]"}], "+", "1"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<The solid surface of which solar system body is shown in the \
+relief map?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"Switch", "[", 
+           RowBox[{
+           "ans", ",", "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
+            RowBox[{"pic", "=", 
+             RowBox[{"Hold", "[", 
+              RowBox[{"GeoGraphics", "[", 
+               RowBox[{
+                RowBox[{"RandomGeoPosition", "[", "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"GeoBackground", "\[Rule]", 
+                 RowBox[{"GeoStyling", "[", 
+                  RowBox[{"\"\<ReliefMap\>\"", ",", 
+                   RowBox[{
+                   "ColorFunction", "\[Rule]", "\"\<GrayTones\>\""}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"GeoRange", "\[Rule]", 
+                 RowBox[{"RandomInteger", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"240000", ",", "1000000"}], "}"}], "]"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}], "]"}]}], ",",
+             "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"pic", "=", 
+             RowBox[{"Hold", "[", 
+              RowBox[{"GeoGraphics", "[", 
+               RowBox[{
+                RowBox[{"RandomGeoPosition", "[", "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"GeoModel", "\[Rule]", 
+                 RowBox[{"Entity", "[", 
+                  RowBox[{"\"\<PlanetaryMoon\>\"", ",", "\"\<Moon\>\""}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"GeoBackground", "\[Rule]", 
+                 RowBox[{"GeoStyling", "[", 
+                  RowBox[{"\"\<ReliefMap\>\"", ",", 
+                   RowBox[{
+                   "ColorFunction", "\[Rule]", "\"\<GrayTones\>\""}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"GeoRange", "\[Rule]", 
+                 RowBox[{"RandomInteger", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"50000", ",", "500000"}], "}"}], "]"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}], "]"}]}], ",",
+             "\[IndentingNewLine]", "3", ",", "\[IndentingNewLine]", 
+            RowBox[{"pic", "=", 
+             RowBox[{"Hold", "[", 
+              RowBox[{"GeoGraphics", "[", 
+               RowBox[{
+                RowBox[{"RandomGeoPosition", "[", "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"GeoModel", "\[Rule]", 
+                 RowBox[{"Entity", "[", 
+                  RowBox[{"\"\<Planet\>\"", ",", "\"\<Mercury\>\""}], "]"}]}],
+                 ",", "\[IndentingNewLine]", 
+                RowBox[{"GeoBackground", "\[Rule]", 
+                 RowBox[{"GeoStyling", "[", 
+                  RowBox[{"\"\<ReliefMap\>\"", ",", 
+                   RowBox[{
+                   "ColorFunction", "\[Rule]", "\"\<GrayTones\>\""}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"GeoRange", "\[Rule]", 
+                 RowBox[{"RandomInteger", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"300000", ",", "1000000"}], "}"}], "]"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}], "]"}]}], ",",
+             "\[IndentingNewLine]", "4", ",", "\[IndentingNewLine]", 
+            RowBox[{"pic", "=", 
+             RowBox[{"Hold", "[", 
+              RowBox[{"GeoGraphics", "[", 
+               RowBox[{
+                RowBox[{"RandomGeoPosition", "[", "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"GeoModel", "\[Rule]", 
+                 RowBox[{"Entity", "[", 
+                  RowBox[{"\"\<Planet\>\"", ",", "\"\<Mars\>\""}], "]"}]}], 
+                ",", "\[IndentingNewLine]", 
+                RowBox[{"GeoBackground", "\[Rule]", 
+                 RowBox[{"GeoStyling", "[", 
+                  RowBox[{"\"\<ReliefMap\>\"", ",", 
+                   RowBox[{
+                   "ColorFunction", "\[Rule]", "\"\<GrayTones\>\""}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", 
+                RowBox[{"GeoRange", "\[Rule]", 
+                 RowBox[{"RandomInteger", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"100000", ",", "1000000"}], "}"}], "]"}]}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", 
+                 RowBox[{"{", 
+                  RowBox[{"480", ",", "540"}], "}"}]}]}], "]"}], "]"}]}]}], 
+           "\[IndentingNewLine]", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<Earth\>\"", ",", "\"\<The Moon\>\"", ",", "\"\<Mercury\>\"", 
+             ",", "\"\<Mars\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Astr5\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.683041318662754*^9, 3.683041389668427*^9, {3.684267412386087*^9, 
@@ -110,15 +227,34 @@ zenith)?\>\""}], ";", "\[IndentingNewLine]",
    3.684268066008012*^9, 3.684268203110756*^9}, {3.6842682334414673`*^9, 
    3.684268262192009*^9}, {3.6842683789120007`*^9, 3.684268451313716*^9}, {
    3.68426851560632*^9, 3.68426855134261*^9}, {3.684268631812887*^9, 
-   3.684268636187624*^9}, {3.684268719761059*^9, 
-   3.6842687300806427`*^9}},ExpressionUUID->"b2cb81c7-0dea-4f39-bfa4-\
-e56ff9ccbdcf"]
+   3.684268636187624*^9}, {3.684268719761059*^9, 3.6842687300806427`*^9}, 
+   3.811867944627755*^9, {3.811867996566503*^9, 3.811868022851367*^9}, {
+   3.811868909668592*^9, 3.811868919386682*^9}, {3.811868956371245*^9, 
+   3.8118691610346622`*^9}, {3.811869241002548*^9, 3.811869310002651*^9}, 
+   3.811869605718672*^9, {3.811869650490533*^9, 3.811869876385648*^9}, {
+   3.8118699234192743`*^9, 3.811869932842349*^9}, 3.811870026570682*^9, {
+   3.811870076243313*^9, 3.811870077362564*^9}, {3.811870109747085*^9, 
+   3.811870124130938*^9}, {3.811870246236862*^9, 3.811870246729801*^9}, {
+   3.811870318122106*^9, 3.8118703225469627`*^9}, {3.811870517256053*^9, 
+   3.811870646056985*^9}, {3.81187145837357*^9, 3.811871463076417*^9}, {
+   3.811872154829815*^9, 3.8118721917870827`*^9}, {3.811872257024106*^9, 
+   3.811872269028283*^9}, 3.8118723206710377`*^9, {3.8118723516032352`*^9, 
+   3.81187238300274*^9}, {3.8118724381631536`*^9, 3.811872622348078*^9}, {
+   3.8118726669953623`*^9, 3.811872669538623*^9}, {3.811872796546884*^9, 
+   3.8118728904262133`*^9}},
+ CellLabel->
+  "In[687]:=",ExpressionUUID->"b2cb81c7-0dea-4f39-bfa4-e56ff9ccbdcf"],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.811870236642*^9, 
+  3.811870240144603*^9}},ExpressionUUID->"e7ad10c1-48bd-416f-92d8-\
+d5b8f80e20e2"]
 },
-WindowSize->{1203, 997},
-WindowMargins->{{2, Automatic}, {Automatic, 64}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1379, 1331},
+WindowMargins->{{1, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c14019e4-0f33-473f-a524-534606bb9793"
 ]
 (* End of Notebook Content *)
 
@@ -131,10 +267,9 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 4476, 94, 316, "Input",ExpressionUUID->"b2cb81c7-0dea-4f39-bfa4-e56ff9ccbdcf"]
+Cell[558, 20, 10769, 225, 886, "Input",ExpressionUUID->"b2cb81c7-0dea-4f39-bfa4-e56ff9ccbdcf"],
+Cell[11330, 247, 149, 3, 30, "Input",ExpressionUUID->"e7ad10c1-48bd-416f-92d8-d5b8f80e20e2"]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
