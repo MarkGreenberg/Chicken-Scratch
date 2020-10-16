@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11210,        241]
-NotebookOptionsPosition[     10894,        227]
-NotebookOutlinePosition[     11255,        243]
-CellTagsIndexPosition[     11212,        240]
+NotebookDataLength[     33080,        630]
+NotebookOptionsPosition[     32732,        616]
+NotebookOutlinePosition[     33125,        632]
+CellTagsIndexPosition[     33082,        629]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,160 +26,439 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"data", "=", 
-        RowBox[{"<|", 
-         RowBox[{
-          RowBox[{"\"\<Jupiter\>\"", "\[Rule]", "69911"}], ",", 
-          RowBox[{"\"\<Saturn\>\"", "\[Rule]", "58232"}], ",", 
-          RowBox[{"\"\<Uranus\>\"", "\[Rule]", "25362"}], ",", 
-          RowBox[{"\"\<Neptune\>\"", "\[Rule]", "24622"}], ",", 
-          RowBox[{"\"\<Earth\>\"", "\[Rule]", "6371"}], ",", 
-          RowBox[{"\"\<Venus\>\"", "\[Rule]", "6051"}], ",", 
-          RowBox[{"\"\<Mars\>\"", "\[Rule]", "3389"}], ",", 
-          RowBox[{"\"\<Ganymede\>\"", "\[Rule]", "2634"}], ",", 
-          RowBox[{"\"\<Titan\>\"", "\[Rule]", "2576"}], ",", 
-          RowBox[{"\"\<Mercury\>\"", "\[Rule]", "2440"}], ",", 
-          RowBox[{"\"\<Callisto\>\"", "\[Rule]", "2410"}], ",", 
-          RowBox[{"\"\<Io\>\"", "\[Rule]", "1821"}], ",", 
-          RowBox[{"\"\<The Moon\>\"", "\[Rule]", "1737"}], ",", 
-          RowBox[{"\"\<Europa\>\"", "\[Rule]", "1561"}], ",", 
-          RowBox[{"\"\<Triton\>\"", "\[Rule]", "1353"}], ",", 
-          RowBox[{"\"\<Pluto\>\"", "\[Rule]", "1186"}], ",", 
-          RowBox[{"\"\<Eris\>\"", "\[Rule]", "1163"}], ",", 
-          RowBox[{"\"\<Titania\>\"", "\[Rule]", "788.4"}], ",", 
-          RowBox[{
-          "\"\<2007 \!\(\*SubscriptBox[\(OR\), \(10\)]\)\>\"", "\[Rule]", 
-           "767"}], ",", 
-          RowBox[{"\"\<Rhea\>\"", "\[Rule]", "763.8"}], ",", 
-          RowBox[{"\"\<Oberon\>\"", "\[Rule]", "761.4"}], ",", 
-          RowBox[{"\"\<Iapetus\>\"", "\[Rule]", "734.5"}], ",", 
-          RowBox[{"\"\<Makemake\>\"", "\[Rule]", "715"}], ",", 
-          RowBox[{"\"\<Haumea\>\"", "\[Rule]", "620"}], ",", 
-          RowBox[{"\"\<Charon\>\"", "\[Rule]", "606"}], ",", 
-          RowBox[{"\"\<Umbriel\>\"", "\[Rule]", "584.7"}], ",", 
-          RowBox[{"\"\<Ariel\>\"", "\[Rule]", "578.9"}], ",", 
-          RowBox[{"\"\<Dione\>\"", "\[Rule]", "561.4"}], ",", 
-          RowBox[{"\"\<Quaoar\>\"", "\[Rule]", "555"}], ",", 
-          RowBox[{"\"\<Tethys\>\"", "\[Rule]", "531.1"}], ",", 
-          RowBox[{"\"\<Sedna\>\"", "\[Rule]", "500"}], ",", 
-          RowBox[{"\"\<Ceres\>\"", "\[Rule]", "473"}], ",", 
-          RowBox[{
-          "\"\<2002 \!\(\*SubscriptBox[\(MS\), \(4\)]\)\>\"", "\[Rule]", 
-           "467"}], ",", 
-          RowBox[{"\"\<Orcus\>\"", "\[Rule]", "458"}], ",", 
-          RowBox[{"\"\<Salacia\>\"", "\[Rule]", "425"}]}], "|>"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"dataPts", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{
-          RowBox[{"Range", "[", 
-           RowBox[{"1", ",", 
-            RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", "4"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"wrong", "=", 
-        RowBox[{"ReplacePart", "[", 
-         RowBox[{
-          RowBox[{"Table", "[", 
-           RowBox[{"0", ",", 
-            RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", 
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"dataPts", "[", 
-              RowBox[{"[", "2", "]"}], "]"}], "\[Rule]", 
-             RowBox[{
-              RowBox[{"Values", "[", "data", "]"}], "[", 
-              RowBox[{"[", 
-               RowBox[{"dataPts", "[", 
-                RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}]}], ",", 
-            RowBox[{
-             RowBox[{"dataPts", "[", 
-              RowBox[{"[", "3", "]"}], "]"}], "\[Rule]", 
-             RowBox[{
-              RowBox[{"Values", "[", "data", "]"}], "[", 
-              RowBox[{"[", 
-               RowBox[{"dataPts", "[", 
-                RowBox[{"[", "3", "]"}], "]"}], "]"}], "]"}]}], ",", 
-            RowBox[{
-             RowBox[{"dataPts", "[", 
-              RowBox[{"[", "4", "]"}], "]"}], "\[Rule]", 
-             RowBox[{
-              RowBox[{"Values", "[", "data", "]"}], "[", 
-              RowBox[{"[", 
-               RowBox[{"dataPts", "[", 
-                RowBox[{"[", "4", "]"}], "]"}], "]"}], "]"}]}]}], "}"}]}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"right", "=", 
-        RowBox[{"ReplacePart", "[", 
-         RowBox[{
-          RowBox[{"Table", "[", 
-           RowBox[{"0", ",", 
-            RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", 
-          RowBox[{
-           RowBox[{"dataPts", "[", 
-            RowBox[{"[", "1", "]"}], "]"}], "\[Rule]", 
-           RowBox[{
-            RowBox[{"Values", "[", "data", "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"dataPts", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], "]"}], "]"}]}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{"ListPlot", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Values", "[", "data", "]"}], ",", "wrong", ",", 
-            "right"}], "}"}], ",", 
-          RowBox[{"PlotStyle", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"LightGray", ",", "Gray", ",", "Blue"}], "}"}]}], ",", 
-          RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
-          RowBox[{"FillingStyle", "\[Rule]", "Thick"}], ",", 
-          RowBox[{"AxesStyle", "\[Rule]", "15"}], ",", 
-          RowBox[{"Ticks", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"None", ",", "Automatic"}], "}"}]}], ",", 
-          RowBox[{"TicksStyle", "\[Rule]", "Black"}], ",", 
-          RowBox[{"PlotLabel", "\[Rule]", 
-           RowBox[{"Style", "[", 
-            RowBox[{
-            "\"\<Solar System Objects by Radius\>\"", ",", "Black", ",", 
-             "20"}], "]"}]}], ",", 
-          RowBox[{"ScalingFunctions", "\[Rule]", "\"\<Log\>\""}], ",", 
-          RowBox[{"AspectRatio", "\[Rule]", 
-           FractionBox["9", "8"]}], ",", 
-          RowBox[{"ImageSize", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"{", "480", "}"}], ",", 
-             RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-       "q", "=", 
-        "\"\<Which solar system object is represented in blue?\>\""}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Keys", "[", "data", "]"}], "[", 
-         RowBox[{"[", "dataPts", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Astr11\>\"", ",", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"Association", "AssociationIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["35", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["4088", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            Association[
+            "Jupiter" -> 69911, "Saturn" -> 58232, "Uranus" -> 25362, 
+             "Neptune" -> 24622, "Earth" -> 6371, "Venus" -> 6051, "Mars" -> 
+             3389, "Ganymede" -> 2634, "Titan" -> 2576, "Mercury" -> 2440, 
+             "Callisto" -> 2410, "Io" -> 1821, "The Moon" -> 1737, "Europa" -> 
+             1561, "Triton" -> 1353, "Pluto" -> 1186, "Eris" -> 1163, 
+             "Titania" -> 788.4, "2007 \!\(\*SubscriptBox[\(OR\), \(10\)]\)" -> 
+             767, "Rhea" -> 763.8, "Oberon" -> 761.4, "Iapetus" -> 734.5, 
+             "Makemake" -> 715, "Haumea" -> 620, "Charon" -> 606, "Umbriel" -> 
+             584.7, "Ariel" -> 578.9, "Dione" -> 561.4, "Quaoar" -> 555, 
+             "Tethys" -> 531.1, "Sedna" -> 500, "Ceres" -> 473, 
+             "2002 \!\(\*SubscriptBox[\(MS\), \(4\)]\)" -> 467, "Orcus" -> 
+             458, "Salacia" -> 425],
+            SelectWithContents->True,
+            Selectable->False]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dataPts", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", 
+              RowBox[{"1", ",", 
+               RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"wrong", "=", 
+           RowBox[{"ReplacePart", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{"0", ",", 
+               RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                "dataPts", "\[LeftDoubleBracket]", "2", 
+                 "\[RightDoubleBracket]"}], "\[Rule]", 
+                RowBox[{
+                 RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "dataPts", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], ",", 
+               RowBox[{
+                RowBox[{
+                "dataPts", "\[LeftDoubleBracket]", "3", 
+                 "\[RightDoubleBracket]"}], "\[Rule]", 
+                RowBox[{
+                 RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "dataPts", "\[LeftDoubleBracket]", "3", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}], ",", 
+               RowBox[{
+                RowBox[{
+                "dataPts", "\[LeftDoubleBracket]", "4", 
+                 "\[RightDoubleBracket]"}], "\[Rule]", 
+                RowBox[{
+                 RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+                 RowBox[{
+                 "dataPts", "\[LeftDoubleBracket]", "4", 
+                  "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}]}], 
+              "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"right", "=", 
+           RowBox[{"ReplacePart", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{"0", ",", 
+               RowBox[{"Length", "[", "data", "]"}]}], "]"}], ",", 
+             RowBox[{
+              RowBox[{
+              "dataPts", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}], "\[Rule]", 
+              RowBox[{
+               RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+               RowBox[{
+               "dataPts", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], "\[RightDoubleBracket]"}]}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"ListPlot", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Values", "[", "data", "]"}], ",", "wrong", ",", 
+               "right"}], "}"}], ",", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"LightGray", ",", "Gray", ",", "Blue"}], "}"}]}], ",", 
+             
+             RowBox[{"Filling", "\[Rule]", "Axis"}], ",", 
+             RowBox[{"FillingStyle", "\[Rule]", "Thick"}], ",", 
+             RowBox[{"AxesStyle", "\[Rule]", "15"}], ",", 
+             RowBox[{"Ticks", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"None", ",", "Automatic"}], "}"}]}], ",", 
+             RowBox[{"TicksStyle", "\[Rule]", "Black"}], ",", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+               "\"\<Solar System Objects by Radius\>\"", ",", "Black", ",", 
+                "20"}], "]"}]}], ",", 
+             RowBox[{"ScalingFunctions", "\[Rule]", "\"\<Log\>\""}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", 
+              FractionBox["9", "8"]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<Which solar system object is represented in blue?\>\""}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{"Keys", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+            "dataPts", "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["66", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["20056", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "AG Carinae" -> {
+                "luminous blue variable star", 2, "Carina the ship's hull"}, 
+               "Antennae Galaxies" -> {
+                "two interacting gallaxies in starburst phase", 3, 
+                 "Corvus the crow"}, 
+               "Arp 273" -> {
+                "two galaxies beginning to pull at each other", 4, 
+                 "Andromeda the chained maiden"}, 
+               "Barnard's Loop" -> {
+                "emission nebula ionizing its arc with its own stars", 7, 
+                 "Orion the hunter"}, 
+               "Bode's Galaxy" -> {
+                "Messier 81, a grand design spiral", 6, 
+                 "Ursa Major the great bear"}, 
+               "Bubble Nebula" -> {
+                "emission nebula of expanding hot gas", 9, 
+                 "Cassiopeia the vain queen"}, 
+               "Bug Nebula" -> {
+                "bipolar planetary nebula", 6, "Scorpius the scorpion"}, 
+               "Cartwheel Galaxy" -> {
+                "ESO 350-40, two coinciding galaxies", 3, "Sculptor"}, 
+               "Cave Nebula" -> {
+                "diffuse nebula inside a nebula complex", 1, 
+                 "Cepheus the king"}, 
+               "Centaurus A" -> {
+                "lenticular radio galaxy surrounding a supermassive black \
+hole", 8, "Centaurus the half man/half horse"}, 
+               "Crab Nebula" -> {
+                "remnant of a supernova", 7, "Taurus the bull"}, 
+               "Fireworks Galaxy" -> {
+                "NGC 6946, intermediate spiral galaxy", 4, "Cygnus the swan"},
+                "Flame Nebula" -> {
+                "emission nebula of unusual color", 3, "Orion the hunter"}, 
+               "Flaming Star Nebula" -> {
+                "IC 405, an emission and reflection nebula", 2, 
+                 "Auriga the charioteer"}, 
+               "Horsehead Nebula" -> {
+                "dark nebula inside Orion Molecular Cloud Complex", 1, 
+                 "Orion the hunter"}, 
+               "IC 335" -> {
+                "lenticular galaxy viewed end-on", 6, "Fornax the furnace"}, 
+               "Jellyfish Nebula" -> {
+                "galactic supernova remnant", 4, "Gemini the twins"}, 
+               "Large Magellanic Cloud" -> {
+                "satellite galaxy of the Milky Way", 15, "Mensa the table"}, 
+               "Luhman 16" -> {
+                "binary brown dwarf star system", 33, "Vela the sail"}, 
+               "Mayall's Object" -> {
+                "Arp 148, two collided galaxies", 2, 
+                 "Ursa Major the great bear"}, 
+               "Meathook Galaxy" -> {
+                "NGC 2442 and NGC 2443, intermediat spiral", 8, 
+                 "Volans the flying fish"}, 
+               "Messier 66" -> {
+                "intermediate spiral galaxy disturbed by a collision", 5, 
+                 "Leo the lion"}, 
+               "Messsier 90" -> {
+                "intermediate spiral galaxy that is getting closer to us", 7, 
+                 "Virgo the young woman"}, 
+               "Needle Galaxy" -> {
+                "NGC 4565 , a spiral galaxy", 5, 
+                 "Coma Berenices the hair of Bernice, bearer of victory"}, 
+               "NGC 1316" -> {
+                "giant lenticular galaxy", 4, "Fornax the furnace"}, 
+               "NGC 1555" -> {
+                "Hind's Variable Nebula illuminated by a star", 2, 
+                 "Taurus the bull"}, 
+               "NGC 1569" -> {
+                "dwarf irregular galaxy", 6, "Camelopardalis the giraffe"}, 
+               "NGC 262" -> {
+                "Markarian 348, a huge spiral galaxy", 4 
+                 "Andromeda the chained maiden"}, 
+               "NGC 2835" -> {
+                "intermediate spiral galaxy", 3, "Hydra the water snake"}, 
+               "NGC 2936" -> {
+                "spiral galaxy torn apart by an elliptical galaxy", 2, 
+                 "Hydra the water snake"}, 
+               "NGC 3274" -> {"spiral galaxy", 3, "Leo the lion"}, 
+               "NGC 3314" -> {
+                "pair of overlapping spiral galaxies", 2, 
+                 "Hydra the water snake"}, 
+               "NGC 3921" -> {
+                "aftermath of a collision between two disk galaxies", 2, 
+                 "Ursa Major the great bear"}, 
+               "NGC 4242" -> {
+                "intermediate spiral galaxy", 2, 
+                 "Canes Venatici the hunting dogs"}, 
+               "NGC 4380" -> {"spiral galaxy", 5, "Virgo the young woman"}, 
+               "NGC 4388" -> {
+                "active spiral galaxy pulled apart by gravity", 5, 
+                 "Virgo the young woman"}, 
+               "NGC 4485" -> {
+                "irregular galaxy creating stars after a collision", 6, 
+                 "Canes Venatici the hunting dogs"}, 
+               "NGC 4618" -> {
+                "a rare dwarf galaxy with only one arm", 4, 
+                 "Canes Venatici the hunting dogs"}, 
+               "NGC 4945" -> {
+                "barred spiral galaxy around a supermassive black hole", 6, 
+                 "Centaurus the half man/half horse"}, 
+               "NGC 5468" -> {
+                "intermediate spiral galaxy with a large number of \
+supernovae", 1, "Virgo the young woman"}, 
+               "NGC 5585" -> {
+                "the Great Barred Spiral Galaxy", 2, 
+                 "Urasa Major the great bear"}, 
+               "NGC 5643" -> {
+                "intermediate spiral galaxy", 3, "Lupus the wolf"}, 
+               "NGC 604" -> {
+                "cloud of ionized hydrogen inside the Triangulum Galaxy", 3, 
+                 "Triangulum the triangle"}, 
+               "NGC 6052" -> {
+                "Two galaxies collide and destroy their spirals", 4, 
+                 "Hercules the hero"}, 
+               "NGC 6744" -> {
+                "intermediate spiral galaxy, doppelganger to the Milky Way", 
+                 10, "Pavo the peacock"}, 
+               "NGC 7714" -> {
+                "Two spiral galaxies crashing into each other", 4, 
+                 "Pisces the fish"}, 
+               "NGC 7773" -> {
+                "classic full-facing barred spiral galaxy", 3, 
+                 "Pegasus the flying horse"}, 
+               "Orion Nebula" -> {
+                "diffuse nebula in the Milky Way", 24, "Orion the hunter"}, 
+               "Pinwheel Galaxy" -> {
+                "NGC 5457, spiral galaxy", 5, "Ursa Major the great bear"}, 
+               "Rosette Nebula" -> {
+                "in the Milky Way, this nebula surrounds a cluster of new \
+stars", 4, "Monoceros the unicorn"}, 
+               "Running Man Nebula" -> {
+                "bright reflection nebula", 2, "Orion the hunter"}, 
+               "Sh2-106" -> {
+                "emission nebula in the process of star formation", 1, 
+                 "Cygnus the swan"}, 
+               "Small Magellanic Cloud" -> {
+                "a dwarf irregular galaxy", 8, "Tucana the toucan"}, 
+               "Sombrero Galaxy" -> {
+                "NGC 4594, lenticular galaxy around a supermassive black \
+hole", 5, "Virgo the young woman"}, 
+               "Soul Nebula" -> {
+                "emission nebula with several open clusters", 1, 
+                 "Cassiopeia the vain queen"}, 
+               "Splinter Galaxy" -> {
+                "NGC 5907, a spiral galaxy seen edge-on", 7, 
+                 "Draco the dragon"}, 
+               "Supernova 1987A" -> {
+                "shock waves from the explosion form a ring", 2, 
+                 "Dorado the mahi-mahi fish"}, 
+               "Tadpole Galaxy" -> {
+                "barred spiral galaxy with a runaway streak of blue stars", 5,
+                  "Draco the dragon"}, 
+               "Tarantula Nebula" -> {
+                "region of ionized hydrogen in the Large Magellanic Cloud", 
+                 22, "Dorado, the mahi-mahi fish"}, 
+               "Thor's Helmet" -> {
+                "emission nebula surrounding a pre-supernova star", 3, 
+                 "Canis Major the great dog"}, 
+               "Train Wreck Cluster" -> {
+                "Abell 520 distorted by gravitational lensing", 2, 
+                 "Orion the hunter"}, 
+               "Triangulum Galaxy" -> {
+                "NGC 598, spiral galaxy", 9, "Triangulum the triangle"}, 
+               "Trifid Nebula" -> {
+                "combination of several nebula types", 11, 
+                 "Sagittarius the archer"}, 
+               "War and Peace Nebula" -> {
+                "NGC 6357, diffuse nebula of proto-stars", 3, 
+                 "Scorpius the scorpion"}, 
+               "Whirlpool Galaxy" -> {
+                "NGC 5194, interacting grand-design spiral galaxy", 12, 
+                 "Canes Venatici the hunting dogs"}, 
+               "WR 124" -> {
+                "Wolf-Rayet star surrounded by a ring nebula of expelled \
+material", 1, "Sagitta the arrow"}],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"zod", "=", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<In the constellation \>\"", "<>", "zod", "<>", 
+            "\"\<, what is this?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"MapThread", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Tooltip", "[", 
+               RowBox[{"#1", ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"#2", ",", 
+                  RowBox[{"Darker", "[", "Blue", "]"}], ",", "18"}], "]"}]}], 
+               "]"}], "&"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Keys", "[", "data", "]"}], ",", 
+               RowBox[{
+                RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+                
+                RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}], 
+              "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"Image", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"WikipediaData", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Keys", "[", "h1", "]"}], "\[LeftDoubleBracket]", 
+                   "1", "\[RightDoubleBracket]"}], ",", "\"\<ImageList\>\""}],
+                  "]"}], "\[LeftDoubleBracket]", 
+                RowBox[{
+                 RowBox[{"Values", "[", "h1", "]"}], "\[LeftDoubleBracket]", 
+                 RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], 
+                "\[RightDoubleBracket]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+            
+            RowBox[{"h1", "\[Rule]", "data"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Astr11\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.7002485642507753`*^9, 3.700248595727481*^9}, {
    3.700250218467588*^9, 3.7002503370224457`*^9}, {3.700250373791782*^9, 
@@ -221,15 +500,125 @@ Cell[BoxData[
    3.700312464363599*^9, 3.700312544077961*^9}, {3.700312574129374*^9, 
    3.700312575863325*^9}, {3.7003126172900963`*^9, 3.700312619801733*^9}, {
    3.70031266162696*^9, 3.7003126690268106`*^9}, {3.70031318707759*^9, 
-   3.7003131889400463`*^9}, {3.700313219700693*^9, 
-   3.700313233945331*^9}},ExpressionUUID->"55707da5-63b2-4023-8214-\
-bb44cde21b6e"]
+   3.7003131889400463`*^9}, {3.700313219700693*^9, 3.700313233945331*^9}, {
+   3.811697347276349*^9, 3.811697626198213*^9}, {3.811697792151091*^9, 
+   3.811697865141883*^9}, {3.811698212007073*^9, 3.811698228933929*^9}, {
+   3.811698326267983*^9, 3.811698330222002*^9}, {3.811698739983767*^9, 
+   3.8116988526850758`*^9}, {3.811698971273067*^9, 3.811699051508677*^9}, {
+   3.811699351149181*^9, 3.811699431972373*^9}, {3.811699462084656*^9, 
+   3.811699486596219*^9}, {3.8116995266606073`*^9, 3.811699545636098*^9}, {
+   3.811699575892411*^9, 3.8116995816444483`*^9}, {3.8116996141722393`*^9, 
+   3.811699634852955*^9}, {3.811699670547871*^9, 3.811699686788066*^9}, {
+   3.811699727301107*^9, 3.811699759002845*^9}, {3.811699791354673*^9, 
+   3.8116998156523046`*^9}, {3.8116998769391193`*^9, 
+   3.8116998898424387`*^9}, {3.811700287650858*^9, 3.811700339890171*^9}, {
+   3.811700382298028*^9, 3.811700392857697*^9}, {3.811700484041943*^9, 
+   3.811700523306067*^9}, {3.8117006295619926`*^9, 3.811700630513321*^9}, {
+   3.811700722834528*^9, 3.811700726425394*^9}, {3.8117007736418543`*^9, 
+   3.811700824880971*^9}, {3.8117008925696077`*^9, 3.811701026688664*^9}, {
+   3.8117011501775084`*^9, 3.811701198008957*^9}, {3.811701253744485*^9, 
+   3.8117012715525417`*^9}, {3.811701334176486*^9, 3.811701369840217*^9}, {
+   3.811701403944434*^9, 3.811701427288756*^9}, {3.811701462155745*^9, 
+   3.811701488457199*^9}, {3.8117015438806334`*^9, 3.811701568760722*^9}, {
+   3.8117018108022823`*^9, 3.8117018140268707`*^9}, {3.8117020398400927`*^9, 
+   3.8117022015666018`*^9}, {3.811702328127174*^9, 3.811702351942542*^9}, {
+   3.811702403127531*^9, 3.811702458158844*^9}, {3.811709724534895*^9, 
+   3.811709795093989*^9}, {3.811709836646154*^9, 3.811709877548842*^9}, {
+   3.81170992600555*^9, 3.81170998714141*^9}, {3.811710023164874*^9, 
+   3.8117100913641367`*^9}, {3.8117101247882547`*^9, 
+   3.8117102105801897`*^9}, {3.811710264637501*^9, 3.811710279036086*^9}, {
+   3.811710352291976*^9, 3.811710420667769*^9}, {3.811710562187525*^9, 
+   3.811710669267647*^9}, 3.81171079095569*^9, 3.811710853186729*^9, 
+   3.811710933451693*^9, {3.8117110150508432`*^9, 3.811711033834124*^9}, {
+   3.811711148250554*^9, 3.811711183769541*^9}, {3.81171142837711*^9, 
+   3.81171143138475*^9}, {3.81171152252871*^9, 3.8117115406805887`*^9}, {
+   3.81171168616844*^9, 3.811711750488002*^9}, {3.811711799856451*^9, 
+   3.8117118139757977`*^9}, {3.81171194508904*^9, 3.811711949680669*^9}, {
+   3.811712040209012*^9, 3.811712101944168*^9}, {3.811712173817584*^9, 
+   3.811712176176366*^9}, {3.811712245960231*^9, 3.811712290623851*^9}, {
+   3.8117123595293293`*^9, 3.81171240697679*^9}, {3.811712703048028*^9, 
+   3.811712768711472*^9}, {3.81171281426305*^9, 3.8117128311427317`*^9}, {
+   3.81171306704669*^9, 3.8117130873186293`*^9}, {3.8117131227662907`*^9, 
+   3.811713189045735*^9}, {3.811713224022738*^9, 3.811713224535334*^9}, {
+   3.811713295053835*^9, 3.811713371149809*^9}, {3.811713578773075*^9, 
+   3.81171368772476*^9}, {3.8117138187496223`*^9, 3.811713839132321*^9}, {
+   3.811713907093001*^9, 3.8117139858852243`*^9}, {3.811714063053484*^9, 
+   3.811714106981022*^9}, {3.811714423717781*^9, 3.811714468909225*^9}, {
+   3.811714510997097*^9, 3.81171461560431*^9}, {3.81171484174792*^9, 
+   3.81171491090749*^9}, {3.8117149657958727`*^9, 3.811714991739848*^9}, {
+   3.8117150415642853`*^9, 3.811715048931095*^9}, {3.811750869288127*^9, 
+   3.811750869693869*^9}, 3.811753798378745*^9, {3.811753856313929*^9, 
+   3.811753940448812*^9}, {3.811753970937834*^9, 3.811753973376934*^9}, {
+   3.811758727888444*^9, 3.811758735831514*^9}, {3.8117588322225733`*^9, 
+   3.811758882054006*^9}, {3.811758943862135*^9, 3.8117589607179203`*^9}, {
+   3.811758993366373*^9, 3.811758994181911*^9}, {3.8117594658532*^9, 
+   3.811759515492941*^9}, {3.811759611029993*^9, 3.811759639629916*^9}, {
+   3.811759770668665*^9, 3.811759813708145*^9}, 3.811759869212523*^9, {
+   3.811759900116534*^9, 3.8117599135159388`*^9}, {3.811760071612965*^9, 
+   3.8117601261234827`*^9}, {3.811760156955799*^9, 3.811760170147499*^9}, {
+   3.811760275075858*^9, 3.811760391899053*^9}, {3.811760457132114*^9, 
+   3.8117605117389317`*^9}, {3.811760745066175*^9, 3.8117608198345623`*^9}, {
+   3.811760926050206*^9, 3.8117609697482843`*^9}, {3.8117610176582727`*^9, 
+   3.811761059282052*^9}, {3.811761179714593*^9, 3.811761227257532*^9}, {
+   3.811761398177257*^9, 3.811761420121293*^9}, {3.811761582640904*^9, 
+   3.811761623929267*^9}, {3.811761687185108*^9, 3.811761700360673*^9}, {
+   3.8117622877999983`*^9, 3.811762337398901*^9}, {3.81176237089579*^9, 
+   3.811762388375203*^9}, {3.8117629320743313`*^9, 3.8117630024471827`*^9}, {
+   3.811771617584517*^9, 3.811771645430952*^9}, {3.811771691471341*^9, 
+   3.811771729318199*^9}, {3.811771769910659*^9, 3.8117717986465483`*^9}, {
+   3.811772185738531*^9, 3.811772197834702*^9}, {3.8117722337554483`*^9, 
+   3.811772284219051*^9}, {3.8117725079465227`*^9, 3.811772557834507*^9}, {
+   3.8117726046184397`*^9, 3.811772617178732*^9}, {3.811772652377713*^9, 
+   3.811772681513867*^9}, {3.811772858025456*^9, 3.811772875225089*^9}, {
+   3.811772940298048*^9, 3.811773024351259*^9}, {3.811773147767713*^9, 
+   3.811773246398859*^9}, {3.811773429799415*^9, 3.811773445766851*^9}, {
+   3.811773486015012*^9, 3.811773523293805*^9}, {3.8117735784054413`*^9, 
+   3.811773628519107*^9}, {3.8117737070543013`*^9, 3.811773760582189*^9}, {
+   3.8117738505492897`*^9, 3.811773875309753*^9}, {3.8117739334530697`*^9, 
+   3.8117739509093323`*^9}, {3.811774454860158*^9, 3.811774507219213*^9}, {
+   3.811774566723303*^9, 3.811774584243414*^9}, {3.811779255139448*^9, 
+   3.8117793606183777`*^9}, {3.8117796179861937`*^9, 3.811779670042719*^9}, {
+   3.811779700683003*^9, 3.811779717250201*^9}, {3.811779943345969*^9, 
+   3.811780018130073*^9}, {3.811780203569906*^9, 3.811780288257223*^9}, {
+   3.811780529608171*^9, 3.811780627433279*^9}, {3.811780779720715*^9, 
+   3.8117808279999733`*^9}, {3.811780928424816*^9, 3.811780951192914*^9}, {
+   3.811781187575345*^9, 3.8117812893749943`*^9}, {3.811781753917613*^9, 
+   3.81178185426925*^9}, {3.81178196941336*^9, 3.811782003612666*^9}, {
+   3.81178213823594*^9, 3.8117822928837852`*^9}, {3.81178251737987*^9, 
+   3.811782607915408*^9}, {3.811782662707447*^9, 3.8117827145397253`*^9}, {
+   3.811782821187499*^9, 3.811782847964006*^9}, {3.811782936819558*^9, 
+   3.811782949131008*^9}, {3.8117830118912992`*^9, 3.8117830500427437`*^9}, {
+   3.811783116955353*^9, 3.8117831537391453`*^9}, {3.811783202234469*^9, 
+   3.811783226531013*^9}, {3.811783328907559*^9, 3.811783365842561*^9}, {
+   3.811783462555254*^9, 3.811783509858945*^9}, {3.811783656490593*^9, 
+   3.811783756969936*^9}, {3.8117838618027887`*^9, 3.811783886092044*^9}, {
+   3.811783962772649*^9, 3.81178401945971*^9}, {3.811784075476226*^9, 
+   3.811784079842502*^9}, {3.8117908159600687`*^9, 3.811790952407157*^9}, {
+   3.811791132255063*^9, 3.811791203134392*^9}, {3.811791355949848*^9, 
+   3.81179136798973*^9}, {3.811791423005773*^9, 3.811791476150305*^9}, {
+   3.811791525113593*^9, 3.8117915273568563`*^9}, {3.811791612884157*^9, 
+   3.811791717172986*^9}, {3.8117918963795033`*^9, 3.811792009836871*^9}, {
+   3.811792123795353*^9, 3.811792197548253*^9}, {3.8117923419710903`*^9, 
+   3.811792352314431*^9}, {3.8117924929953623`*^9, 3.811792601154941*^9}, {
+   3.811792644627646*^9, 3.811792660682912*^9}, {3.811792714810891*^9, 
+   3.811792723218642*^9}, {3.811792796058824*^9, 3.811792850692161*^9}, {
+   3.811792956066102*^9, 3.8117929843250504`*^9}, {3.81179301552477*^9, 
+   3.811793096403183*^9}, {3.81179318242544*^9, 3.811793332345025*^9}, {
+   3.8117934298662233`*^9, 3.811793459737359*^9}, {3.8117935706733313`*^9, 
+   3.811793651497669*^9}, {3.811793752016655*^9, 3.8117938636401787`*^9}, {
+   3.8117940347050962`*^9, 3.811794137657123*^9}, {3.811794241903735*^9, 
+   3.8117943165600758`*^9}, {3.811794635919384*^9, 3.8117947011920156`*^9}, 
+   3.811795070271669*^9, {3.811795293655587*^9, 3.811795333222178*^9}, {
+   3.8117953742698193`*^9, 3.811795432715829*^9}, {3.811795481251583*^9, 
+   3.811795556588278*^9}, {3.811795593654724*^9, 3.811795667381577*^9}},
+ CellLabel->
+  "In[442]:=",ExpressionUUID->"3aaa08a8-0166-4aca-8310-b0b9b3b3b264"]
 },
-WindowSize->{1258, 1047},
-WindowMargins->{{-2, Automatic}, {Automatic, 38}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1805, 1395},
+WindowMargins->{{3, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"74568351-e35d-46f7-838e-98609e642c18"
 ]
 (* End of Notebook Content *)
 
@@ -242,7 +631,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 10332, 205, 511, "Input",ExpressionUUID->"55707da5-63b2-4023-8214-bb44cde21b6e"]
+Cell[558, 20, 32170, 594, 672, "Input",ExpressionUUID->"3aaa08a8-0166-4aca-8310-b0b9b3b3b264"]
 }
 ]
 *)
