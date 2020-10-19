@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12679,        270]
-NotebookOptionsPosition[     12328,        256]
-NotebookOutlinePosition[     12724,        272]
-CellTagsIndexPosition[     12681,        269]
+NotebookDataLength[     40711,        723]
+NotebookOptionsPosition[     40363,        709]
+NotebookOutlinePosition[     40756,        725]
+CellTagsIndexPosition[     40713,        722]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,158 +26,521 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"ansV", "=", 
-        RowBox[{"RandomInteger", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"-", "16000"}], ",", "16000"}], "}"}], ",", "4"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"rands", "=", 
-        RowBox[{"Table", "[", 
-         RowBox[{
-          RowBox[{"RandomReal", "[", 
-           RowBox[{"{", 
-            RowBox[{"390", ",", "730"}], "}"}], "]"}], ",", "27"}], "]"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"known", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{
+         RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{
-            RowBox[{"Thickness", "[", 
-             FractionBox[
-              RowBox[{"FractionalPart", "[", "#", "]"}], "600"], "]"}], ",", 
-            RowBox[{"Line", "[", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"ansV", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{
              RowBox[{"{", 
               RowBox[{
-               RowBox[{"{", 
-                RowBox[{"#", ",", "0"}], "}"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"#", ",", "25"}], "}"}]}], "}"}], "]"}]}], "}"}], 
-          "&"}], "/@", "rands"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"obser", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"(", 
-           RowBox[{"{", 
+               RowBox[{"-", "16000"}], ",", "16000"}], "}"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"rands", "=", 
+           RowBox[{"Table", "[", 
             RowBox[{
-             RowBox[{"Thickness", "[", 
-              FractionBox[
-               RowBox[{"FractionalPart", "[", "#", "]"}], "600"], "]"}], ",", 
-             
-             RowBox[{"Line", "[", 
+             RowBox[{"RandomReal", "[", 
               RowBox[{"{", 
-               RowBox[{
+               RowBox[{"390", ",", "730"}], "}"}], "]"}], ",", "27"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"known", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"Thickness", "[", 
+                FractionBox[
+                 RowBox[{"FractionalPart", "[", "#", "]"}], "600"], "]"}], 
+               ",", 
+               RowBox[{"Line", "[", 
                 RowBox[{"{", 
                  RowBox[{
-                  RowBox[{"#", "+", 
-                   FractionBox[
+                  RowBox[{"{", 
+                   RowBox[{"#", ",", "0"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"#", ",", "25"}], "}"}]}], "}"}], "]"}]}], "}"}], 
+             "&"}], "/@", "rands"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"obser", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"Thickness", "[", 
+                 FractionBox[
+                  RowBox[{"FractionalPart", "[", "#", "]"}], "600"], "]"}], 
+                ",", 
+                RowBox[{"Line", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"#", "+", 
+                    FractionBox[
                     RowBox[{"#", "*", 
                     RowBox[{
                     "ansV", "\[LeftDoubleBracket]", "1", 
                     "\[RightDoubleBracket]"}]}], "300000"]}], ",", "25"}], 
-                 "}"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"#", "+", 
-                   FractionBox[
+                    "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"#", "+", 
+                    FractionBox[
                     RowBox[{"#", "*", 
                     RowBox[{
                     "ansV", "\[LeftDoubleBracket]", "1", 
                     "\[RightDoubleBracket]"}]}], "300000"]}], ",", "50"}], 
-                 "}"}]}], "}"}], "]"}]}], "}"}], ")"}], "&"}], "/@", 
-         "rands"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{"DensityPlot", "[", 
-         RowBox[{"x", ",", 
-          RowBox[{"{", 
-           RowBox[{"x", ",", "360", ",", "760"}], "}"}], ",", 
-          RowBox[{"{", 
-           RowBox[{"y", ",", "0", ",", "50"}], "}"}], ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ColorFunction", "\[Rule]", "\"\<VisibleSpectrum\>\""}], 
-          ",", 
-          RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
-          RowBox[{"Frame", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"True", ",", "False", ",", "False", ",", "False"}], 
-            "}"}]}], ",", "\[IndentingNewLine]", 
-          RowBox[{"Epilog", "\[Rule]", 
-           RowBox[{"{", "\[IndentingNewLine]", 
-            RowBox[{
-            "Black", ",", "known", ",", "obser", ",", "\[IndentingNewLine]", 
-             "White", ",", "Thick", ",", 
-             RowBox[{"Line", "[", 
+                    "}"}]}], "}"}], "]"}]}], "}"}], ")"}], "&"}], "/@", 
+            "rands"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"DensityPlot", "[", 
+            RowBox[{"x", ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", "360", ",", "760"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"y", ",", "0", ",", "50"}], "}"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"ColorFunction", "\[Rule]", "\"\<VisibleSpectrum\>\""}], 
+             ",", 
+             RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",", 
+             RowBox[{"Frame", "\[Rule]", 
               RowBox[{"{", 
+               RowBox[{"True", ",", "False", ",", "False", ",", "False"}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"Epilog", "\[Rule]", 
+              RowBox[{"{", "\[IndentingNewLine]", 
                RowBox[{
-                RowBox[{"{", 
-                 RowBox[{"360", ",", "25"}], "}"}], ",", 
-                RowBox[{"{", 
-                 RowBox[{"760", ",", "25"}], "}"}]}], "}"}], "]"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"Text", "[", 
-              RowBox[{
-               RowBox[{"Style", "[", 
-                RowBox[{"\"\<observed\>\"", ",", "16", ",", "Bold"}], "]"}], 
-               ",", 
-               RowBox[{"{", 
-                RowBox[{"740", ",", "37.5"}], "}"}]}], "]"}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"Text", "[", 
-              RowBox[{
-               RowBox[{"Style", "[", 
-                RowBox[{"\"\<at rest\>\"", ",", "16", ",", "Bold"}], "]"}], 
-               ",", 
-               RowBox[{"{", 
-                RowBox[{"745", ",", "12.5"}], "}"}]}], "]"}]}], "}"}]}], ",", 
-          "\[IndentingNewLine]", 
-          RowBox[{"FrameLabel", "\[Rule]", "\"\<Wavelength (nm)\>\""}], ",", 
-          RowBox[{"LabelStyle", "\[Rule]", 
-           RowBox[{"{", 
-            RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
-          RowBox[{"AspectRatio", "\[Rule]", 
-           RowBox[{"1", "/", "12"}]}], ",", 
-          RowBox[{"ImageSize", "\[Rule]", "940"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", "\[IndentingNewLine]", 
-       RowBox[{"ansNo", "=", 
-        RowBox[{
-         FractionBox["offset", "560"], "*", "299792"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-       "q", "=", 
-        "\"\<The Doppler shift of the observed object indicates that it is \
-moving...\>\""}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"StringForm", "[", 
-           RowBox[{"\"\<`1` us at `2` km/s\>\"", ",", 
-            RowBox[{"If", "[", 
-             RowBox[{
-              RowBox[{"#", "<", "0"}], ",", "\"\<towards\>\"", ",", 
-              "\"\<away from\>\""}], "]"}], ",", 
-            RowBox[{"Abs", "[", "#", "]"}]}], "]"}], "&"}], "/@", "ansV"}]}], 
-       ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
+               "Black", ",", "known", ",", "obser", ",", 
+                "\[IndentingNewLine]", "White", ",", "Thick", ",", 
+                RowBox[{"Line", "[", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"360", ",", "25"}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"760", ",", "25"}], "}"}]}], "}"}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<observed\>\"", ",", "16", ",", "Bold"}], 
+                   "]"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"740", ",", "37.5"}], "}"}]}], "]"}], ",", 
+                "\[IndentingNewLine]", 
+                RowBox[{"Text", "[", 
+                 RowBox[{
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<at rest\>\"", ",", "16", ",", "Bold"}], "]"}],
+                   ",", 
+                  RowBox[{"{", 
+                   RowBox[{"745", ",", "12.5"}], "}"}]}], "]"}]}], "}"}]}], 
+             ",", "\[IndentingNewLine]", 
+             RowBox[{"FrameLabel", "\[Rule]", "\"\<Wavelength (nm)\>\""}], 
+             ",", 
+             RowBox[{"LabelStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", 
+              RowBox[{"1", "/", "12"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "940"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
            RowBox[{
-           "choices", "\[LeftDoubleBracket]", "1", 
-            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
-         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Astr14\>\"", ",", 
+            FractionBox["offset", "560"], "*", "299792"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<The Doppler shift of the observed object indicates that it is \
+moving...\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringForm", "[", 
+              RowBox[{"\"\<`1` us at `2` km/s\>\"", ",", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"#", "<", "0"}], ",", "\"\<towards\>\"", ",", 
+                 "\"\<away from\>\""}], "]"}], ",", 
+               RowBox[{"Abs", "[", "#", "]"}]}], "]"}], "&"}], "/@", 
+            "ansV"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["116", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["27280", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "Advanced Composition Explorer" -> 
+               
+               "https://upload.wikimedia.org/wikipedia/commons/1/1f/Advanced_\
+Composition_Explorer.jpg", "Akatsuki" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/\
+Akatsuki_spacecraft_model.png/800px-Akatsuki_spacecraft_model.png", 
+               "Apollo 11 (Lunar Module \"Eagle\")" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/\
+Apollo_11_Lunar_Lander_-_5927_NASA.jpg/260px-Apollo_11_Lunar_Lander_-_5927_\
+NASA.jpg", "Apollo 13 (Command and Service Module \"Aquarius\"" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/\
+Apollo_CSM_lunar_orbit.jpg/260px-Apollo_CSM_lunar_orbit.jpg", "Aryabhata" -> 
+               "http://3.bp.blogspot.com/-74fJkQ_5Es0/T37KYT2VvoI/AAAAAAAAACc/\
+HgwF0CJoYSU/w1200-h630-p-k-no-nu/Indian+satellite+Aryabhata.jpg", "Beagle 2" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/\
+Beagle_2_replica.jpg/1280px-Beagle_2_replica.jpg", "BepiColombo" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/\
+BepiColombo_spacecraft_model.png/1024px-BepiColombo_spacecraft_model.png", 
+               "Calipso" -> 
+               "https://directory.eoportal.org/documents/163813/5714693/\
+Calipso_Auto1F.jpeg", "CanX-2" -> 
+               "https://directory.eoportal.org/documents/163813/2480112/CanX2_\
+AutoB.jpeg", "CartoSat-1" -> 
+               "https://directory.eoportal.org/image/image_gallery?uuid=\
+53bb68b3-6f9b-4678-b180-73d0a1c6d01c&groupId=163813&t=1338998208643", 
+               "Cassini" -> 
+               "https://spacenews.com/wp-content/uploads/2017/09/cassini-\
+plunge.jpg", "Chang'e 1" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/\
+Chang_e_1.jpg/800px-Chang_e_1.jpg", "Chang'e 2" -> 
+               "https://directory.eoportal.org/documents/163813/2012834/\
+Change2_AutoF.jpeg", "Chang'e 3" -> 
+               "https://directory.eoportal.org/documents/163813/1608848/\
+Change3_Auto14.jpeg", "Chang'e 4" -> 
+               "https://www.numerama.com/content/uploads/2020/01/change-4-\
+atterrisseur-lune-espace.jpg", "Chang'e 5" -> 
+               "https://www.spaceflightinsider.com/wp-content/uploads/2015/01/\
+chinas-unmanned-orbiter-cctv.jpg", "CIRCE" -> 
+               "https://directory.eoportal.org/documents/163813/5788012/CIRCE_\
+Auto8.jpeg", "Clementine" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/b/b4/\
+Clementine_Deployed.png", "CONTOUR" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/\
+CONTOUR_pre-launch.jpg/1280px-CONTOUR_pre-launch.jpg", "Dawn" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/\
+Dawn_Flight_Configuration_2.jpg/1280px-Dawn_Flight_Configuration_2.jpg", 
+               "Deep Impact" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/3/3d/Deep_\
+Impact.jpg", "Deep Space 1" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/\
+Deep_Space_1_using_its_ion_engine.jpg/1280px-Deep_Space_1_using_its_ion_\
+engine.jpg", "Deep Space 2" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/1/10/DS-2_\
+probes_with_mounting.jpg", "Deep Space Climate Observatory" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/3/3f/DSCOVR_\
+spacecraft_model.png", "Deimos-2" -> 
+               "https://directory.eoportal.org/documents/163813/3490174/\
+Deimos2_Auto25.jpeg", "EO-1" -> 
+               "https://directory.eoportal.org/documents/163813/2593013/EO1_\
+Auto3F.jpeg", "EURECA" -> 
+               "https://directory.eoportal.org/image/image_gallery?img_id=\
+178083&t=1338290244501", "ExoMars Trace Gas Orbiter" -> 
+               "https://www.skymania.com/wp/wp-content/uploads/2016/10/\
+ExoMars_Trace_Gas_Orbiter-in_orbit.jpg", "Flyeye" -> 
+               "https://directory.eoportal.org/documents/163813/4669441/\
+Flyeye_Auto7.jpeg", "Fobos Grunt" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/\
+Model_of_Phobos-Grunt_spacecraft_without_labels.jpg/1024px-Model_of_Phobos-\
+Grunt_spacecraft_without_labels.jpg", "Gaia" -> 
+               "https://upload.wikimedia.org/wikipedia/en/0/01/Gaia_\
+spacecraft.jpg", "Galileo" -> 
+               "https://www.lakepowelllife.com/wp-content/uploads/2015/05/The-\
+Galileo-spacecraft.jpg", "Genesis" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/a/a9/Genesis_\
+in_collection_mode.jpg", "Giotto" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/8/88/Giotto_\
+spacecraft.jpg", "Hayabusa 1" -> 
+               "https://solarsystem.nasa.gov/system/content_pages/main_images/\
+1194_hayabusa2_835.jpg", "Hayabuse 2" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/\
+Hayabusa2_Ion_thruster.jpg/1280px-Hayabusa2_Ion_thruster.jpg", 
+               "\"Hope\" orbiter for the Emirates Mars Mission" -> 
+               "https://upload.wikimedia.org/wikipedia/en/1/1d/Mars_Hope_\
+Probe.png", "Hubble Telescope" -> 
+               "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/\
+gettyimages-463911555-1587744121.jpg", "Huygens" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/\
+Huygens_probe_dsc03686.jpg/1280px-Huygens_probe_dsc03686.jpg", "Ikaros" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/\
+IKAROS_solar_sail.jpg/1280px-IKAROS_solar_sail.jpg", "Ingenuity" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/e/e5/PIA23882-\
+MarsHelicopterIngenuity-20200429_%28trsp%29.png", "InSight" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/\
+Artist%27s_Concept_of_the_InSight_Lander.jpg/800px-Artist%27s_Concept_of_the_\
+InSight_Lander.jpg", "International Cometry Explorer" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/9/9e/ISEE-3.\
+gif", "International Space Station" -> 
+               "http://www.arrl.org/images/view/News/ISS-2_4.jpg", "Juno" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/\
+Juno_spacecraft_model_1.png/1024px-Juno_spacecraft_model_1.png", 
+               "Kepler Space Telescope" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/\
+Kepler_Space_Telescope_spacecraft_model_2.png/800px-Kepler_Space_Telescope_\
+spacecraft_model_2.png", "Magellan" -> 
+               "https://1.bp.blogspot.com/-Id_5I5Oyf5g/VsprNVB9xqI/\
+AAAAAAAAuoo/Exyb1_H43Xk/s1600/Scan%2B3223.jpg", "LISA Pathfinder" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/\
+LISA_Pathfinder_%2814257775333%29.jpg/1280px-LISA_Pathfinder_%2814257775333%\
+29.jpg", "Mariner 2" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/\
+Mariner_2.jpg/1280px-Mariner_2.jpg", "Mariner 4" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/b/bc/Mariner_3_\
+and_4.jpg", "Mariner 7" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/4/47/Mariner_\
+6and7.gif", "Mariner 9" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/\
+Mariner09.jpg/1280px-Mariner09.jpg", "Mariner 10" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/\
+Mariner_10.jpg/1280px-Mariner_10.jpg", "Mars 1M" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/f/f5/Mars_1M.\
+jpg", "Mars 2" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/1/13/Mars3_iki.\
+jpg", "Mars 4" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/d/d6/Mars4.\
+jpg", "Mars Climate Orbiter" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/\
+Mars_Climate_Orbiter_2.jpg/1024px-Mars_Climate_Orbiter_2.jpg", 
+               "Mars Cube One" -> 
+               "https://solarsystem.nasa.gov/system/content_pages/main_images/\
+1037_PIA22314.jpg", "Mars Exploration Rover" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/\
+NASA_Mars_Rover.jpg/1280px-NASA_Mars_Rover.jpg", "Mars Express" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/9/9d/Mars-\
+express-volcanoes-sm.jpg", "Mars Global Surveyor" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/\
+Mars_global_surveyor.jpg/800px-Mars_global_surveyor.jpg", "Mars Observer" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/b/b1/Mars_\
+Observer.jpg", "Mangalyaan (Mars Orbiter Mission)" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/\
+Mars_Orbiter_Mission_-_India_-_ArtistsConcept.jpg/1920px-Mars_Orbiter_Mission_\
+-_India_-_ArtistsConcept.jpg", "Mars Pathfinder" -> 
+               "https://solarsystem.nasa.gov/system/resources/detail_files/\
+2249_pathfinder-concept_1280.jpg", "Mars Polar Lander" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/\
+Mars_Polar_Lander_-_artist_depiction.png/1280px-Mars_Polar_Lander_-_artist_\
+depiction.png", "Mars Reconnaissance Orbiter" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/\
+Mars_Reconnaissance_Orbiter.jpg/1280px-Mars_Reconnaissance_Orbiter.jpg", 
+               "Mars Science Laboratory \"Curiosity\"" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/MSL_\
+concept_February_2007_-_PIA09201.jpg/1280px-MSL_concept_February_2007_-_\
+PIA09201.jpg", "MAVEN" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/\
+MAVEN_spacecraft_model.png/1280px-MAVEN_spacecraft_model.png", "Messenger" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/\
+Messenger.jpg/1280px-Messenger.jpg", "Minerva 2" -> 
+               "https://ichef.bbci.co.uk/news/660/cpsprodpb/9761/production/_\
+103235783_minerva2.jpg", "Mir Space Station" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mir_\
+Space_Station_viewed_from_Endeavour_during_STS-89.jpg/1024px-Mir_Space_\
+Station_viewed_from_Endeavour_during_STS-89.jpg", "NEAR Shoemaker" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/c/cb/NEAR_\
+Shoemaker_spacecraft_model.png", "New Horizons" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/e/ee/New_\
+Horizons_spacecraft_model_1.png", "Nozomi" -> 
+               "https://upload.wikimedia.org/wikipedia/en/6/65/Planet_B.gif", 
+               "OSIRIS-REx" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/\
+OSIRIS-REx_spacecraft_model.png/1024px-OSIRIS-REx_spacecraft_model.png", 
+               "Parker Solar Probe" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/\
+Parker_Solar_Probe.jpg/1280px-Parker_Solar_Probe.jpg", "Perseverance" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/\
+PIA23764-MarsPerseveranceRover-ArtistConcept-20200305.jpg/1280px-PIA23764-\
+MarsPerseveranceRover-ArtistConcept-20200305.jpg", "Phobos 2" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/0/01/Phobos_\
+Marte.jpg", "Phoenix" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/\
+Phoenix_landing.jpg/1024px-Phoenix_landing.jpg", "Pioneer 5" -> 
+               "https://alchetron.com/cdn/pioneer-5-7de36f84-b7b8-4396-ad04-\
+e3364832dd1-resize-750.jpeg", "Pioneer 8" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/b/b1/Pioneer-6-\
+9.jpg", "Pioneer 10" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/An_\
+artist%27s_impression_of_a_Pioneer_spacecraft_on_its_way_to_interstellar_\
+space.jpg/1280px-An_artist%27s_impression_of_a_Pioneer_spacecraft_on_its_way_\
+to_interstellar_space.jpg", "Pioneer Venus (multiprobe)" -> 
+               "https://astrobiology.nasa.gov/uploads/filer_public_thumbnails/\
+filer_public/a9/5a/a95a2a45-2ae5-4a8e-9707-d4725e115f0e/probes_slideshow.jpg__\
+1240x510_q85_crop_subsampling-2.jpg", "Pioneer Venus (orbiter)" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/9/98/Pioneer_\
+Venus_orbiter.jpg", "Planck" -> 
+               "https://spaceflightnow.com/news/n1310/23planck/23planck_\
+400271.jpg", "Rosetta" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/d/d9/Rosetta.\
+jpg", "Skylab" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/\
+Skylab_%28SL-4%29.jpg/1280px-Skylab_%28SL-4%29.jpg", 
+               "Solar and Heliospheric Observatory" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/\
+NASA_SOHO_spacecraft.png/1024px-NASA_SOHO_spacecraft.png", "Solar Orbiter" -> 
+               "http://cdn.phys.org/newman/gfx/news/hires/2014/1-solarorbiter.\
+jpg", "Solar Terrestrial Relations Observatory (STEREO)" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/\
+Deployment_of_STEREO_spacecraft_panels_%28crop%29.jpg/250px-Deployment_of_\
+STEREO_spacecraft_panels_%28crop%29.jpg", "Space Shuttle \"Discovery\"" -> 
+               "http://static.soposted.com/uploads/2015/11/space-shuttle-\
+884659_1280.jpg", "Space Shuttle \"Endeavour\"" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/STS-\
+123_Dextre%26Kibo_ELM-PS_in_orbit_%28cropped%29.jpg/1200px-STS-123_Dextre%\
+26Kibo_ELM-PS_in_orbit_%28cropped%29.jpg", "Spektr-RG telescope" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/\
+SPEKTR_RG.png/1280px-SPEKTR_RG.png", "Spitzer Space Telescope" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/\
+Spitzer_space_telescope.jpg/1280px-Spitzer_space_telescope.jpg", "Sputnik 1" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/\
+Sputnik_asm.jpg/1024px-Sputnik_asm.jpg", "Sputnik 2" -> 
+               "https://www.nasa.gov/sites/default/files/styles/side_image/\
+public/thumbnails/image/lg_sputnik-2-mockup.jpg", "Sputnik 3" -> 
+               "https://media.sciencephoto.com/image/c0166374/800wm/C0166374-\
+Sputnik_3_in_orbit,_1958.jpg", "Stardust" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/\
+Stardust_-_Concepcao_artistica.jpg/1280px-Stardust_-_Concepcao_artistica.jpg",
+                "Suisei" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/2/2c/Suisei.\
+gif", "Tianwen 1" -> 
+               "https://upload.wikimedia.org/wikipedia/en/9/99/Mars_Global_\
+Remote_Sensing_Orbiter_and_Small_Rover_%282020%29.png", "2001 Mars Odyssey" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/\
+2001_mars_odyssey_wizja.jpg/1280px-2001_mars_odyssey_wizja.jpg", "Ulysses" -> 
+               "https://media1.britannica.com/eb-media/75/75375-004-C252F835.\
+jpg", "Vega 1" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/\
+Vega_model_-_Udvar-Hazy_Center.JPG/1200px-Vega_model_-_Udvar-Hazy_Center.JPG",
+                "Venera 10" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/%22\
+\:0412\:0435\:043d\:0435\:0440\:0430-10%22.jpg/1280px-%22\:0412\:0435\:043d\
+\:0435\:0440\:0430-10%22.jpg", "Venera 12" -> 
+               "http://www.spaceopedia.com/wp-content/uploads/2017/06/Venera-\
+9-spacecraft.jpg", "Venera 14" -> 
+               "https://iaaa.org/CygnusX1/wp-content/uploads/2018/05/2018-05-\
+09_5af2a851d3eaa_venusveneratoday-1200x962.jpg", "Venera 15" -> 
+               "http://preview.turbosquid.com/Preview/2014/10/22__04_49_22/\
+venera15_1.jpg83b1e135-d6e8-4ba0-857d-6ccee338cdfeOriginal.jpg", "Venera 16" -> 
+               "https://i.ytimg.com/vi/NH1CXSGgues/hqdefault.jpg", 
+               "Venus Express" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/2/2b/Venus_\
+Express_in_orbit.jpg", "Viking 1" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/\
+Viking_spacecraft.jpg/1280px-Viking_spacecraft.jpg", "Vostok 3" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/\
+Vostok_spacecraft.jpg/260px-Vostok_spacecraft.jpg", "Voyager 1" -> 
+               "http://images.huffingtonpost.com/2016-05-11-1462992524-\
+7562937-artistsimpressionofvoyager1.jpeg", "Voyager 2" -> 
+               "https://voyager.jpl.nasa.gov/assets/images/galleries/\
+Spacecraft_Profile.jpg", "Wilkinson Microwave Anisotropy Probe" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/\
+WMAP2.jpg/1280px-WMAP2.jpg", "Wind" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/1/18/Wind_\
+probe.jpg", "Zond 2" -> 
+               "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/\
+Zond_2.jpg/260px-Zond_2.jpg"],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"Image", "[", 
+              RowBox[{
+               RowBox[{"Import", "[", 
+                RowBox[{"h1", ",", 
+                 RowBox[{"ImageSize", "\[Rule]", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"{", "480", "}"}], ",", 
+                    RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "]"}], "/.", 
+            
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{
+              RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", 
+              "1", "\[RightDoubleBracket]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", "\"\<What is the name of this spacecraft?\>\""}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"StringLength", "[", "#", "]"}], "<", "25"}], ",", 
+               "#", ",", 
+               RowBox[{"Tooltip", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"StringTake", "[", 
+                   RowBox[{"#", ",", "22"}], "]"}], "<>", 
+                  "\"\<\[Ellipsis]\>\""}], ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{"#", ",", 
+                   RowBox[{"Darker", "[", "Blue", "]"}], ",", "18"}], "]"}]}],
+                 "]"}]}], "]"}], "&"}], "/@", 
+            RowBox[{"Keys", "[", "data", "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Astr14\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
+ PageWidth:>Infinity,
  CellChangeTimes->{
   3.700394148632395*^9, {3.7003941789674883`*^9, 3.700394183449849*^9}, {
    3.700394276125804*^9, 3.7003943127893953`*^9}, {3.700394356761454*^9, 
@@ -250,13 +613,103 @@ moving...\>\""}], ";", "\[IndentingNewLine]",
    3.7947515388343887`*^9}, {3.79475159146658*^9, 3.794751604850375*^9}, {
    3.794751693186036*^9, 3.794751770632825*^9}, {3.7947518250979347`*^9, 
    3.7947518422498083`*^9}, {3.794751898256625*^9, 3.794751899952105*^9}, {
-   3.794751965525689*^9, 3.794751993392077*^9}},
+   3.794751965525689*^9, 3.794751993392077*^9}, {3.811935765712281*^9, 
+   3.811935957839101*^9}, {3.81193676094531*^9, 3.811936794497608*^9}, {
+   3.811938774437121*^9, 3.811938856780624*^9}, {3.8119389493091097`*^9, 
+   3.8119389613006067`*^9}, {3.811938993000239*^9, 3.811939009300514*^9}, {
+   3.811939118916932*^9, 3.811939163452344*^9}, {3.811939403684971*^9, 
+   3.811939495827692*^9}, {3.811950313783884*^9, 3.811950322581122*^9}, {
+   3.8119504576220827`*^9, 3.811950476867697*^9}, {3.8119505525103083`*^9, 
+   3.811950572484262*^9}, {3.8119506759254704`*^9, 3.81195069205925*^9}, 
+   3.811950734517885*^9, 3.811951156419297*^9, {3.811951298541399*^9, 
+   3.811951323603918*^9}, {3.811951588500353*^9, 3.8119516060888643`*^9}, {
+   3.8119516474121237`*^9, 3.811951659891317*^9}, {3.811981125864427*^9, 
+   3.81198114845022*^9}, {3.811981439569447*^9, 3.811981489211779*^9}, {
+   3.811981656256693*^9, 3.811981669628984*^9}, {3.8120170891531687`*^9, 
+   3.8120171106939497`*^9}, {3.812017455927696*^9, 3.812017518181562*^9}, {
+   3.812017922305152*^9, 3.8120179462094297`*^9}, {3.8120179823299713`*^9, 
+   3.8120180088721*^9}, {3.812018251872898*^9, 3.812018269901433*^9}, {
+   3.812018321312827*^9, 3.812018360935486*^9}, {3.812018612992296*^9, 
+   3.812018639620461*^9}, {3.812018911343422*^9, 3.812018926821218*^9}, {
+   3.812019129431456*^9, 3.812019142924699*^9}, {3.812019236632319*^9, 
+   3.81201926846275*^9}, 3.812019319340168*^9, {3.812036182721451*^9, 
+   3.812036214093626*^9}, {3.812036294240831*^9, 3.8120363056769257`*^9}, {
+   3.8120364044165993`*^9, 3.812036435213025*^9}, {3.81203652675206*^9, 
+   3.812036565132762*^9}, {3.812036785471037*^9, 3.812036801115888*^9}, {
+   3.812036977710568*^9, 3.812037023202958*^9}, {3.8120371305183907`*^9, 
+   3.812037153667203*^9}, {3.812037243541773*^9, 3.812037261762465*^9}, {
+   3.8120374262527847`*^9, 3.8120374534021177`*^9}, {3.8120375676137037`*^9, 
+   3.812037580946301*^9}, {3.812037649613056*^9, 3.812037666066114*^9}, {
+   3.812037923083843*^9, 3.8120379554332037`*^9}, {3.812038283244895*^9, 
+   3.81203829913089*^9}, {3.812038469484202*^9, 3.8120384877377043`*^9}, {
+   3.81203854512481*^9, 3.812038586928811*^9}, {3.812038623668229*^9, 
+   3.812038632403309*^9}, {3.812038748891444*^9, 3.812038783200779*^9}, {
+   3.812038919036119*^9, 3.812038936608819*^9}, {3.812039060075131*^9, 
+   3.8120390749359293`*^9}, {3.812039159619597*^9, 3.812039171311885*^9}, {
+   3.812040114433486*^9, 3.812040128750098*^9}, {3.8120402431526203`*^9, 
+   3.812040257269799*^9}, {3.8120404042018538`*^9, 3.8120404436940107`*^9}, {
+   3.812040633433485*^9, 3.812040650854368*^9}, {3.812040709361349*^9, 
+   3.812040723838573*^9}, {3.812040822792944*^9, 3.812040851197953*^9}, {
+   3.8120409100806828`*^9, 3.81204093445502*^9}, {3.812041117472275*^9, 
+   3.812041152192371*^9}, {3.812041216865287*^9, 3.812041231908802*^9}, {
+   3.812041298816792*^9, 3.812041314517229*^9}, {3.812041367592675*^9, 
+   3.812041379325652*^9}, {3.812041469400299*^9, 3.812041483854082*^9}, {
+   3.812041530855802*^9, 3.812041540230988*^9}, 3.812041600461527*^9, {
+   3.812041660248516*^9, 3.812041667343307*^9}, 3.812041707159706*^9, {
+   3.812041739824155*^9, 3.8120417514150553`*^9}, 3.812041798724537*^9, {
+   3.812041953351151*^9, 3.8120419649237843`*^9}, {3.812042066207034*^9, 
+   3.812042098444378*^9}, {3.8120421536703787`*^9, 3.812042173875339*^9}, {
+   3.812042532607665*^9, 3.812042548195805*^9}, {3.812042653726997*^9, 
+   3.8120426718202972`*^9}, {3.812042765278379*^9, 3.812042787476076*^9}, {
+   3.812042869174219*^9, 3.8120428841873217`*^9}, {3.8120429977189083`*^9, 
+   3.812043014859185*^9}, {3.812043097166162*^9, 3.812043134884213*^9}, {
+   3.812043197318622*^9, 3.812043220067328*^9}, {3.812043355694059*^9, 
+   3.812043368098382*^9}, {3.812043504038392*^9, 3.812043529618284*^9}, {
+   3.812043697621715*^9, 3.812043719211602*^9}, {3.812043785181108*^9, 
+   3.812043815722314*^9}, {3.812043889293097*^9, 3.812043905962681*^9}, {
+   3.81204400394125*^9, 3.8120440157940073`*^9}, {3.8120440978378363`*^9, 
+   3.81204411185987*^9}, {3.8120448058292723`*^9, 3.812044825873193*^9}, {
+   3.812044928228939*^9, 3.8120449473137903`*^9}, {3.81204498007563*^9, 
+   3.812044991420782*^9}, {3.812045120852219*^9, 3.812045194361305*^9}, {
+   3.812045257412562*^9, 3.812045295018221*^9}, {3.812045414244575*^9, 
+   3.812045454648715*^9}, {3.812045645075234*^9, 3.812045664680629*^9}, {
+   3.812045797939989*^9, 3.812045815629836*^9}, {3.81204589408294*^9, 
+   3.812045974768216*^9}, 3.8120460576038923`*^9, {3.81204608919585*^9, 
+   3.81204612204792*^9}, {3.812046306219343*^9, 3.812046325152083*^9}, {
+   3.812046421699183*^9, 3.81204644405655*^9}, {3.812046563619155*^9, 
+   3.812046583015239*^9}, {3.812046681106268*^9, 3.812046716295022*^9}, {
+   3.812046842081439*^9, 3.8120468625593233`*^9}, {3.812046966929906*^9, 
+   3.8120469814306107`*^9}, {3.812047167569306*^9, 3.8120471810864487`*^9}, {
+   3.81204723814642*^9, 3.812047280439732*^9}, {3.812047416929504*^9, 
+   3.812047442814237*^9}, {3.812047574017293*^9, 3.8120475933522787`*^9}, {
+   3.812047707705044*^9, 3.8120477449181547`*^9}, {3.812047879192863*^9, 
+   3.8120479018135433`*^9}, {3.8120480278722773`*^9, 3.812048047726081*^9}, {
+   3.8120481807680902`*^9, 3.8120481957896767`*^9}, {3.812048313368073*^9, 
+   3.812048331021926*^9}, {3.8120484381042423`*^9, 3.812048457517049*^9}, {
+   3.812048563647414*^9, 3.8120485787158117`*^9}, {3.812048703105191*^9, 
+   3.812048720356175*^9}, {3.812048896670747*^9, 3.812048958643963*^9}, {
+   3.812049018582704*^9, 3.8120490411323833`*^9}, {3.812049134625113*^9, 
+   3.812049161771348*^9}, {3.812102430040633*^9, 3.812102451589512*^9}, {
+   3.8121025630736227`*^9, 3.812102574797146*^9}, {3.8121026792318907`*^9, 
+   3.812102702077759*^9}, {3.812102798360362*^9, 3.812102835756946*^9}, {
+   3.8121030222956867`*^9, 3.812103044724847*^9}, {3.812103145559774*^9, 
+   3.812103168589293*^9}, {3.812103246471436*^9, 3.812103269540875*^9}, {
+   3.8121033803036747`*^9, 3.812103406731813*^9}, {3.812103663887271*^9, 
+   3.812103685811304*^9}, {3.8121038486862383`*^9, 3.812103898498705*^9}, {
+   3.812103962189646*^9, 3.8121040014827623`*^9}, {3.8121041638775806`*^9, 
+   3.81210417893274*^9}, 3.812104258258904*^9, {3.812104443108427*^9, 
+   3.812104490913431*^9}, {3.8121046092361813`*^9, 3.8121046241135197`*^9}, {
+   3.812104677572378*^9, 3.812104701194673*^9}, {3.812107618847806*^9, 
+   3.8121076447074947`*^9}, 3.812107939110916*^9, {3.8121080324779787`*^9, 
+   3.812108060062023*^9}, {3.8121080987409697`*^9, 3.812108136381572*^9}, {
+   3.812117769647173*^9, 3.8121177747099133`*^9}, {3.812118121996804*^9, 
+   3.812118345075296*^9}},
  CellLabel->
-  "In[387]:=",ExpressionUUID->"0a71ba1a-2820-4fb3-b55b-f1e8c6f14363"]
+  "In[189]:=",ExpressionUUID->"0a71ba1a-2820-4fb3-b55b-f1e8c6f14363"]
 },
-WindowSize->{1239, 1060},
-WindowMargins->{{86, Automatic}, {Automatic, 88}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+WindowSize->{1971, 1376},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"8d1c4ae1-9308-4a89-b0da-a6b44c80bb5b"
 ]
@@ -271,7 +724,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 11766, 234, 587, "Input",ExpressionUUID->"0a71ba1a-2820-4fb3-b55b-f1e8c6f14363"]
+Cell[558, 20, 39801, 687, 849, "Input",ExpressionUUID->"0a71ba1a-2820-4fb3-b55b-f1e8c6f14363"]
 }
 ]
 *)
