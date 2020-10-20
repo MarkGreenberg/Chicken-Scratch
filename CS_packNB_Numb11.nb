@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     26867,        588]
-NotebookOptionsPosition[     26574,        575]
-NotebookOutlinePosition[     26911,        590]
-CellTagsIndexPosition[     26868,        587]
+NotebookDataLength[     27448,        594]
+NotebookOptionsPosition[     27099,        580]
+NotebookOutlinePosition[     27492,        596]
+CellTagsIndexPosition[     27449,        593]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -395,80 +395,70 @@ of numbers {`1`, `2`}?\>\"", ",",
          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"qNo", "=", 
-           RowBox[{"Rationalize", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"RandomReal", "[", 
-               RowBox[{"{", 
-                RowBox[{"2", ",", "20"}], "}"}], "]"}], "/.", 
-              RowBox[{"z_Integer", "\[Rule]", 
-               RowBox[{"(", 
-                RowBox[{"z", "+", ".25"}], ")"}]}]}], ",", ".005"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
           RowBox[{"den", "=", 
-           RowBox[{"Denominator", "[", "qNo", "]"}]}], ";", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"7", ",", "30"}], "}"}], ",", "10"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"num", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"RandomInteger", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"2", "*", "#"}], ",", 
+                RowBox[{"10", "*", "#"}]}], "}"}], "]"}], "&"}], "/@", 
+            "den"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qNo", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"Select", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               FractionBox["num", "den"], "]"}], ",", 
+              RowBox[{
+               RowBox[{"Not", "[", 
+                RowBox[{"IntegerQ", "[", "#", "]"}], "]"}], "&"}]}], "]"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"qNum", "=", 
            RowBox[{"Numerator", "[", "qNo", "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"ansInt", "=", 
-           RowBox[{"Floor", "[", 
-            RowBox[{"qNum", "/", "den"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"ansNum", "=", 
-           RowBox[{"Mod", "[", 
-            RowBox[{"qNum", ",", "den"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"ansNo", "=", 
-           RowBox[{"Row", "[", 
-            RowBox[{"{", 
+          RowBox[{"qDen", "=", 
+           RowBox[{"Denominator", "[", "qNo", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"disNo", "=", 
+           RowBox[{
+            RowBox[{
+             FractionBox["#", "qDen"], "&"}], "/@", 
+            RowBox[{"RandomSample", "[", 
              RowBox[{
-              RowBox[{"Style", "[", 
-               RowBox[{"ansInt", ",", "Larger"}], "]"}], ",", 
-              RowBox[{"DisplayForm", "[", 
-               RowBox[{"FractionBox", "[", 
-                RowBox[{"ansNum", ",", "den"}], "]"}], "]"}]}], "}"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"disRawNum", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{
-             RowBox[{"DeleteCases", "[", 
-              RowBox[{
-               RowBox[{"Range", "[", 
+              RowBox[{"Select", "[", 
+               RowBox[{
+                RowBox[{"Range", "[", 
+                 RowBox[{
+                  RowBox[{"qNum", "-", "15"}], ",", 
+                  RowBox[{"qNum", "+", "15"}]}], "]"}], ",", 
                 RowBox[{
-                 RowBox[{"den", "+", "1"}], ",", 
-                 RowBox[{"2", "*", "qNum"}]}], "]"}], ",", 
-               RowBox[{"a_", "/;", 
-                RowBox[{
-                 RowBox[{"Denominator", "[", 
-                  FractionBox["a", "den"], "]"}], "\[NotEqual]", "den"}]}]}], 
-              "]"}], ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"disInt", "=", 
-           RowBox[{"Floor", "[", 
-            RowBox[{"disRawNum", "/", "den"}], "]"}]}], ";", 
+                 RowBox[{
+                  RowBox[{"#", ">", "qDen"}], "&&", 
+                  RowBox[{"#", "\[NotEqual]", "qNum"}], "&&", 
+                  RowBox[{"!", 
+                   RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"Divisors", "[", "#", "]"}], ",", "qDen"}], 
+                    "]"}]}]}], "&"}]}], "]"}], ",", "3"}], "]"}]}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"disNum", "=", 
-           RowBox[{"Mod", "[", 
-            RowBox[{"disRawNum", ",", "den"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+          RowBox[{"mixFn", "=", 
+           RowBox[{
+           "ResourceFunction", "[", "\"\<MixedNumberForm\>\"", "]"}]}], ";", 
+          "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{"Prepend", "[", 
+           RowBox[{
             RowBox[{
-             RowBox[{"MapThread", "[", 
-              RowBox[{
-               RowBox[{"(", 
-                RowBox[{
-                 RowBox[{"Row", "[", 
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"Style", "[", 
-                    RowBox[{"#1", ",", "Larger"}], "]"}], ",", 
-                    RowBox[{"DisplayForm", "[", 
-                    RowBox[{"FractionBox", "[", 
-                    RowBox[{"#2", ",", "den"}], "]"}], "]"}]}], "}"}], "]"}], 
-                 "&"}], ")"}], ",", 
-               RowBox[{"{", 
-                RowBox[{"disInt", ",", "disNum"}], "}"}]}], "]"}], ",", 
-             "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"mixFn", "[", "#", "]"}], "&"}], "/@", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{"disNo", ",", "qNo"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
             RowBox[{
@@ -569,14 +559,30 @@ of numbers {`1`, `2`}?\>\"", ",",
    3.766323552890555*^9, 3.76632363908076*^9}, {3.766323720361061*^9, 
    3.766323852016572*^9}, {3.7663238860968018`*^9, 3.766323994696199*^9}, {
    3.766324068017437*^9, 3.766324112335683*^9}, {3.7663241963695087`*^9, 
-   3.766324232840302*^9}, {3.766324378025268*^9, 3.766324401680097*^9}},
+   3.766324232840302*^9}, {3.766324378025268*^9, 3.766324401680097*^9}, {
+   3.812132209851574*^9, 3.812132262456705*^9}, {3.8121322987658987`*^9, 
+   3.8121323225449533`*^9}, {3.812132370752714*^9, 3.812132378023575*^9}, 
+   3.812132423800889*^9, 3.812132455343524*^9, {3.81213250907893*^9, 
+   3.8121326364075117`*^9}, {3.8121326822148314`*^9, 3.812132718038969*^9}, {
+   3.812193109273542*^9, 3.812193155504018*^9}, {3.812193219336812*^9, 
+   3.812193317536433*^9}, 3.81219335564962*^9, {3.812193540176591*^9, 
+   3.8121936763991413`*^9}, {3.812193825375917*^9, 3.812193829168405*^9}, 
+   3.8121939673754587`*^9, {3.8121942145748053`*^9, 3.8121942181820307`*^9}, {
+   3.812194548604396*^9, 3.81219456866416*^9}, {3.812194671700601*^9, 
+   3.812194722156308*^9}, 3.812194855564567*^9, {3.812195022752342*^9, 
+   3.8121950309954042`*^9}, {3.81219515537267*^9, 3.812195170946197*^9}, {
+   3.812195270099094*^9, 3.8121952799555597`*^9}, {3.812195384172016*^9, 
+   3.812195389619432*^9}, 3.812195437004979*^9, {3.8121954857901087`*^9, 
+   3.8121954946929283`*^9}, {3.812195554491338*^9, 3.81219561462814*^9}, 
+   3.812195657418401*^9},
  CellLabel->
-  "In[133]:=",ExpressionUUID->"77d9c240-3c8d-4101-8bd8-815db3a7389c"]
+  "In[415]:=",ExpressionUUID->"77d9c240-3c8d-4101-8bd8-815db3a7389c"]
 },
 WindowSize->{1683, 1257},
-WindowMargins->{{1, Automatic}, {Automatic, 3}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"06310c6d-9430-4844-86df-6aa3a8cca822"
 ]
 (* End of Notebook Content *)
 
@@ -589,7 +595,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 26012, 553, 1238, "Input",ExpressionUUID->"77d9c240-3c8d-4101-8bd8-815db3a7389c"]
+Cell[558, 20, 26537, 558, 1237, "Input",ExpressionUUID->"77d9c240-3c8d-4101-8bd8-815db3a7389c"]
 }
 ]
 *)
