@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      5868,        156]
-NotebookOptionsPosition[      5576,        143]
-NotebookOutlinePosition[      5914,        158]
-CellTagsIndexPosition[      5871,        155]
+NotebookDataLength[     25809,        528]
+NotebookOptionsPosition[     25460,        514]
+NotebookOutlinePosition[     25853,        530]
+CellTagsIndexPosition[     25810,        527]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,106 +26,440 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"scales", "=", 
-        RowBox[{"RandomChoice", "[", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<\[Degree]C\>\"", ",", "\"\<Celsius\>\"", ",", 
-             "\"\<DegreesCelsius\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<K\>\"", ",", "\"\<Kelvin\>\"", ",", "\"\<Kelvins\>\""}], 
-            "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<\[Degree]R\>\"", ",", "\"\<Rankine\>\"", ",", 
-             "\"\<DegreesRankine\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<\[Degree]R\[EAcute]\>\"", ",", "\"\<R\[EAcute]aumur\>\"", 
-             ",", "\"\<DegreesReaumur\>\""}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{
-            "\"\<\[Degree]R\[OSlash]\>\"", ",", "\"\<R\[OSlash]mer\>\"", ",", 
-             "\"\<DegreesRoemer\>\""}], "}"}]}], "}"}], "]"}]}], ";", 
-       RowBox[{"degF", "=", 
-        RowBox[{"Quantity", "[", 
-         RowBox[{
-          RowBox[{"RandomInteger", "[", 
-           RowBox[{"{", 
-            RowBox[{
-             RowBox[{"-", "459"}], ",", "900"}], "}"}], "]"}], ",", 
-          "\"\<DegreesFahrenheit\>\""}], "]"}]}], ";", 
-       RowBox[{"deg1", "=", 
-        RowBox[{"Round", "[", 
-         RowBox[{
-          RowBox[{"UnitConvert", "[", 
-           RowBox[{"degF", ",", 
-            RowBox[{"scales", "[", 
-             RowBox[{"[", "3", "]"}], "]"}]}], "]"}], ",", ".01"}], "]"}]}], 
-       ";", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringReplace", "[", 
-         RowBox[{
-          RowBox[{"\"\<The temperature \>\"", "<>", 
-           RowBox[{"ToString", "[", "deg1", "]"}], "<>", 
-           "\"\< is what in the Fahrenheit scale?\>\""}], ",", 
+       RowBox[{"Switch", "[", 
+        RowBox[{
+         RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{
-            RowBox[{"\"\< degrees\>\"", "\[Rule]", "\"\<\[Degree]\>\""}], ",", 
-            RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "}"}]}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"qTransit", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
-         RowBox[{"h1", "\[Rule]", 
-          RowBox[{"ToCharacterCode", "[", "q", "]"}]}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{
-           RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\<\[Degree]F\>\""}], 
-          "&"}], "/@", 
-         RowBox[{"Prepend", "[", 
-          RowBox[{
-           RowBox[{"RandomInteger", "[", 
+          RowBox[{"scales", "=", 
+           RowBox[{"RandomChoice", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<\[Degree]C\>\"", ",", "\"\<Celsius\>\"", ",", 
+                "\"\<DegreesCelsius\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<K\>\"", ",", "\"\<Kelvin\>\"", ",", "\"\<Kelvins\>\""}], 
+               "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<\[Degree]R\>\"", ",", "\"\<Rankine\>\"", ",", 
+                "\"\<DegreesRankine\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<\[Degree]R\[EAcute]\>\"", ",", "\"\<R\[EAcute]aumur\>\"", 
+                ",", "\"\<DegreesReaumur\>\""}], "}"}], ",", 
+              RowBox[{"{", 
+               RowBox[{
+               "\"\<\[Degree]R\[OSlash]\>\"", ",", "\"\<R\[OSlash]mer\>\"", 
+                ",", "\"\<DegreesRoemer\>\""}], "}"}]}], "}"}], "]"}]}], ";", 
+          
+          RowBox[{"degF", "=", 
+           RowBox[{"Quantity", "[", 
             RowBox[{
+             RowBox[{"RandomInteger", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "459"}], ",", "900"}], "}"}], "]"}], ",", 
+             "\"\<DegreesFahrenheit\>\""}], "]"}]}], ";", 
+          RowBox[{"deg1", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"UnitConvert", "[", 
+              RowBox[{"degF", ",", 
+               RowBox[{"scales", "[", 
+                RowBox[{"[", "3", "]"}], "]"}]}], "]"}], ",", ".01"}], 
+            "]"}]}], ";", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringReplace", "[", 
+            RowBox[{
+             RowBox[{"\"\<The temperature \>\"", "<>", 
+              RowBox[{"ToString", "[", "deg1", "]"}], "<>", 
+              "\"\< is what in the Fahrenheit scale?\>\""}], ",", 
              RowBox[{"{", 
               RowBox[{
-               RowBox[{"-", "450"}], ",", "900"}], "}"}], ",", "3"}], "]"}], 
-           ",", 
+               RowBox[{"\"\< degrees\>\"", "\[Rule]", "\"\<\[Degree]\>\""}], 
+               ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "}"}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
            RowBox[{
-           "degF", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
-          "]"}]}]}], ";", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       RowBox[{"mixTransit", "=", 
-        RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", "q", "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"ToString", "[", "#", "]"}], "<>", 
+              "\"\<\[Degree]F\>\""}], "&"}], "/@", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"-", "450"}], ",", "900"}], "}"}], ",", "3"}], 
+               "]"}], ",", 
+              RowBox[{
+              "degF", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}]}]}], ";", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          RowBox[{"mixTransit", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
+              RowBox[{"h3", "\[Rule]", 
+               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
+            "mixed"}]}], ";", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{
-           RowBox[{"Hold", "[", 
-            RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
-           RowBox[{"h3", "\[Rule]", 
-            RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
-         "mixed"}]}], ";", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
+          RowBox[{"genDat", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["11", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["512", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {
+              "Sin", "Triangle", "Sawtooth", "Square", "Pulse", "Impulse", 
+               "White", "Pink", "Brown", "Blue", "PeriodicRandomNoise"},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"midDat", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["128", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["5832", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {
+              "Accordion", "Agogo", "AltoSax", "Applause", "Atmosphere", 
+               "Bagpipe", "Bandoneon", "Banjo", "BaritoneSax", "Bass", 
+               "BassAndLead", "Bassoon", "Bird", "BlownBottle", "Bowed", 
+               "BrassSection", "Breath", "Brightness", "BrightPiano", 
+               "Calliope", "Celesta", "Cello", "Charang", "Chiff", "Choir", 
+               "Clarinet", "Clavi", "Contrabass", "Crystal", "DrawbarOrgan", 
+               "Dulcimer", "Echoes", "ElectricBass", "ElectricGrandPiano", 
+               "ElectricGuitar", "ElectricPiano", "ElectricPiano2", 
+               "EnglishHorn", "Fiddle", "Fifths", "Flute", "FrenchHorn", 
+               "FretlessBass", "FretNoise", "Glockenspiel", "Goblins", 
+               "Guitar", "GuitarDistorted", "GuitarHarmonics", "GuitarMuted", 
+               "GuitarOverdriven", "Gunshot", "Halo", "Harmonica", "Harp", 
+               "Harpsichord", "Helicopter", "HonkyTonkPiano", "JazzGuitar", 
+               "Kalimba", "Koto", "Marimba", "MelodicTom", "Metallic", 
+               "MusicBox", "MutedTrumpet", "NewAge", "Oboe", "Ocarina", 
+               "OrchestraHit", "Organ", "PanFlute", "PercussiveOrgan", 
+               "Piano", "Piccolo", "PickedBass", "PizzicatoStrings", 
+               "Polysynth", "Rain", "Recorder", "ReedOrgan", "ReverseCymbal", 
+               "RockOrgan", "Sawtooth", "SciFi", "Seashore", "Shakuhachi", 
+               "Shamisen", "Shanai", "Sitar", "SlapBass", "SlapBass2", 
+               "SopranoSax", "Soundtrack", "Square", "Steeldrums", 
+               "SteelGuitar", "Strings", "Strings2", "Sweep", "SynthBass", 
+               "SynthBass2", "SynthBrass", "SynthBrass2", "SynthDrum", 
+               "SynthStrings", "SynthStrings2", "SynthVoice", "Taiko", 
+               "Telephone", "TenorSax", "Timpani", "Tinklebell", 
+               "TremoloStrings", "Trombone", "Trumpet", "Tuba", 
+               "TubularBells", "Vibraphone", "Viola", "Violin", "Voice", 
+               "VoiceAahs", "VoiceOohs", "Warm", "Whistle", "Woodblock", 
+               "Xylophone"},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"perDat", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["60", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["2840", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {
+              "BassDrum", "BassDrum2", "BellTree", "Cabasa", "Castanets", 
+               "ChineseCymbal", "Clap", "Claves", "Cowbell", "CrashCymbal", 
+               "CrashCymbal2", "ElectricSnare", "GuiroLong", "GuiroShort", 
+               "HighAgogo", "HighBongo", "HighCongaMute", "HighCongaOpen", 
+               "HighFloorTom", "HighTimbale", "HighTom", "HighWoodblock", 
+               "HiHatClosed", "HiHatOpen", "HiHatPedal", "JingleBell", 
+               "LowAgogo", "LowBongo", "LowConga", "LowFloorTom", 
+               "LowTimbale", "LowTom", "LowWoodblock", "Maracas", 
+               "MetronomeBell", "MetronomeClick", "MidTom", "MidTom2", 
+               "MuteCuica", "MuteSurdo", "MuteTriangle", "OpenCuica", 
+               "OpenSurdo", "OpenTriangle", "RideBell", "RideCymbal", 
+               "RideCymbal2", "ScratchPull", "ScratchPush", "Shaker", 
+               "SideStick", "Slap", "Snare", "SplashCymbal", "SquareClick", 
+               "Sticks", "Tambourine", "Vibraslap", "WhistleLong", 
+               "WhistleShort"},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"exaDat", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"60", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["8280", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {{"Sound", "AltoFlute"}, {"Sound", "AltoFluteScale"}, {
+               "Sound", "AltoSaxophone"}, {"Sound", "AltoSaxophoneScale"}, {
+               "Sound", "Apollo11PhoneCall"}, {
+               "Sound", "Apollo11ReturnSafely"}, {
+               "Sound", "Apollo11SmallStep"}, {
+               "Sound", "Apollo13Countdown"}, {"Sound", "Apollo13Problem"}, {
+               "Sound", "BalloonPop"}, {"Sound", "BassClarinet"}, {
+               "Sound", "BassClarinetScale"}, {"Sound", "BassFlute"}, {
+               "Sound", "BassFluteScale"}, {"Sound", "Bassoon"}, {
+               "Sound", "BassoonScale"}, {"Sound", "BassTrombone"}, {
+               "Sound", "BassTromboneScale"}, {"Sound", "BlackcapWarbler"}, {
+               "Sound", "Burst100"}, {"Sound", "Burst1000"}, {
+               "Sound", "Burst7350"}, {"Sound", "Cello"}, {
+               "Sound", "CelloPizzicato"}, {"Sound", "CelloPizzicatoScale"}, {
+               "Sound", "CelloScale"}, {"Sound", "Clarinet"}, {
+               "Sound", "ClarinetScale"}, {"Sound", "CrashCymbal"}, {
+               "Sound", "DoubleBass"}, {"Sound", "DoubleBassPizzicato"}, {
+               "Sound", "DoubleBassPizzicatoScale"}, {
+               "Sound", "DoubleBassScale"}, {"Sound", "Flute"}, {
+               "Sound", "FluteScale"}, {"Sound", "FrenchHorn"}, {
+               "Sound", "FrenchHornScale"}, {"Sound", "JetSound"}, {
+               "Sound", "LinearSweep"}, {"Sound", "Oboe"}, {
+               "Sound", "OboeScale"}, {"Sound", "OrganChord"}, {
+               "Sound", "Piano"}, {"Sound", "PianoScale"}, {
+               "Sound", "RollingCoin"}, {"Sound", "SopranoSaxophone"}, {
+               "Sound", "SopranoSaxophoneScale"}, {"Sound", "Square100"}, {
+               "Sound", "SubwayTrain"}, {"Sound", "TenorTrombone"}, {
+               "Sound", "TenorTromboneScale"}, {
+               "Sound", "TestIntermodulationDistortion"}, {
+               "Sound", "Trumpet"}, {"Sound", "TrumpetScale"}, {
+               "Sound", "Tuba"}, {"Sound", "TubaScale"}, {"Sound", "Viola"}, {
+               "Sound", "ViolaScale"}, {"Sound", "Violin"}, {
+               "Sound", "ViolinScale"}},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"which4", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Range", "[", "16", "]"}], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"final4", "=", 
            RowBox[{
-           "choices", "\[LeftDoubleBracket]", "1", 
-            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
-         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], "]"}], 
-        "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"Join", "[", 
+             RowBox[{"genDat", ",", "midDat", ",", "perDat", ",", "exaDat"}], 
+             "]"}], "\[LeftDoubleBracket]", "which4", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"snds", "=", 
+           RowBox[{"MapThread", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"#1", "<", "5"}], ",", 
+                RowBox[{"AudioGenerator", "[", 
+                 RowBox[{"#2", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+                
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"#1", "<", "9"}], ",", 
+                  RowBox[{"Sound", "[", 
+                   RowBox[{"SoundNote", "[", 
+                    RowBox[{"\"\<A\>\"", ",", "2", ",", "#2"}], "]"}], "]"}], 
+                  ",", "\[IndentingNewLine]", 
+                  RowBox[{"If", "[", 
+                   RowBox[{
+                    RowBox[{"#1", "<", "13"}], ",", 
+                    RowBox[{"Sound", "[", 
+                    RowBox[{"SoundNote", "[", 
+                    RowBox[{"#2", ",", "2"}], "]"}], "]"}], ",", 
+                    RowBox[{"ExampleData", "[", "#2", "]"}]}], "]"}]}], 
+                 "]"}]}], "]"}], "&"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"{", 
+              RowBox[{"which4", ",", "final4"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"ansSnd", "=", 
+               RowBox[{"If", "[", 
+                RowBox[{
+                 RowBox[{"h1", "<", "5"}], ",", 
+                 RowBox[{"AudioGenerator", "[", 
+                  RowBox[{"h2", ",", "2"}], "]"}], ",", "\[IndentingNewLine]", 
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{"h1", "<", "9"}], ",", 
+                   RowBox[{"Sound", "[", 
+                    RowBox[{"SoundNote", "[", 
+                    RowBox[{"\"\<A\>\"", ",", "2", ",", "h2"}], "]"}], "]"}], 
+                   ",", "\[IndentingNewLine]", 
+                   RowBox[{"If", "[", 
+                    RowBox[{
+                    RowBox[{"h1", "<", "13"}], ",", 
+                    RowBox[{"Sound", "[", 
+                    RowBox[{"SoundNote", "[", 
+                    RowBox[{"h2", ",", "2"}], "]"}], "]"}], ",", 
+                    RowBox[{"ExampleData", "[", "h2", "]"}]}], "]"}]}], 
+                  "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+              RowBox[{"butt", "=", 
+               RowBox[{"Button", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"\"\<Play the Sound\>\"", ",", "24"}], "]"}], ",", 
+                 RowBox[{"EmitSound", "[", "ansSnd", "]"}]}], "]"}]}], ";", 
+              "\[IndentingNewLine]", 
+              RowBox[{"StringForm", "[", 
+               RowBox[{
+               "\"\<Which wave plot matches this sound?\\n`1`\>\"", ",", 
+                "butt"}], "]"}]}], "]"}], "\[IndentingNewLine]", "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"h1", "\[Rule]", 
+               RowBox[{
+               "which4", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}]}], ",", 
+              RowBox[{"h2", "\[Rule]", 
+               RowBox[{
+               "final4", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}]}]}], "}"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"plots", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"AudioPlot", "[", 
+              RowBox[{"#", ",", "\[IndentingNewLine]", 
+               RowBox[{"PlotRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{".1", ",", ".11"}], "}"}], ",", "All"}], "}"}]}], 
+               ",", 
+               RowBox[{"PlotStyle", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"Blue", ",", "Thick"}], "}"}]}], ",", 
+               RowBox[{"FillingStyle", "\[Rule]", "LightBlue"}], ",", 
+               RowBox[{"PlotLayout", "\[Rule]", " ", "\"\<Averaged\>\""}], 
+               ",", "\[IndentingNewLine]", 
+               RowBox[{"LabelStyle", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"Black", ",", "15"}], "}"}]}], ",", 
+               RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+               RowBox[{"AspectRatio", "\[Rule]", 
+                FractionBox["2", "21"]}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", "900"}]}], "]"}], "&"}], "/@", 
+            "snds"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", "plots"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Phys1\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6829595792044764`*^9, 3.682959583843019*^9}, 
@@ -137,14 +471,52 @@ Cell[BoxData[
    3.682960552363247*^9, 3.6829605540161543`*^9}, {3.682960622564064*^9, 
    3.682960668382736*^9}, {3.7646065776227007`*^9, 3.764606605894031*^9}, {
    3.764606684389884*^9, 3.7646067871975927`*^9}, {3.76460690128802*^9, 
-   3.764606927900712*^9}},
+   3.764606927900712*^9}, {3.812294132596408*^9, 3.812294227624647*^9}, {
+   3.812297710111711*^9, 3.812297834542676*^9}, {3.8122978756230307`*^9, 
+   3.812297882308928*^9}, {3.812297951646969*^9, 3.812297954454508*^9}, {
+   3.812298485896257*^9, 3.812298573719624*^9}, {3.812298642483507*^9, 
+   3.8122986515191936`*^9}, {3.812298715347199*^9, 3.8122987254793653`*^9}, {
+   3.8122988169788837`*^9, 3.8122988215990877`*^9}, {3.812298851914315*^9, 
+   3.81229885692703*^9}, {3.812298919607328*^9, 3.812298950231063*^9}, {
+   3.812298986135289*^9, 3.812299031359169*^9}, {3.8122990988795357`*^9, 
+   3.81229915426299*^9}, 3.812301191938562*^9, {3.8123012436899433`*^9, 
+   3.812301314521306*^9}, {3.8123013598496103`*^9, 3.812301394553404*^9}, {
+   3.812301516113133*^9, 3.81230154025694*^9}, {3.81230168052879*^9, 
+   3.812301681840481*^9}, {3.812302274231708*^9, 3.8123023364638577`*^9}, {
+   3.812302430188642*^9, 3.812302467583701*^9}, {3.81230251100802*^9, 
+   3.812302521743828*^9}, {3.812302900439466*^9, 3.812302931281146*^9}, {
+   3.8123030299926434`*^9, 3.812303058528997*^9}, {3.812303118160652*^9, 
+   3.812303279086759*^9}, {3.812303514798724*^9, 3.812303540254261*^9}, {
+   3.8123036389581537`*^9, 3.812303873645578*^9}, {3.812303911110158*^9, 
+   3.812304093701305*^9}, {3.81230413485398*^9, 3.812304199485156*^9}, {
+   3.8123042400786743`*^9, 3.812304261765175*^9}, {3.812304627444762*^9, 
+   3.8123046457240543`*^9}, {3.812305088699792*^9, 3.81230525763477*^9}, {
+   3.812305337187735*^9, 3.812305338530573*^9}, {3.8123055376109753`*^9, 
+   3.812305546866386*^9}, 3.812305594475429*^9, {3.812305903459827*^9, 
+   3.812305981761612*^9}, {3.812306487519558*^9, 3.812306492455346*^9}, 
+   3.812306553194541*^9, {3.812306623122096*^9, 3.8123066251601267`*^9}, {
+   3.8123068930867567`*^9, 3.8123068972860928`*^9}, {3.812307456975245*^9, 
+   3.812307474864708*^9}, {3.812307616072151*^9, 3.8123076746943607`*^9}, {
+   3.812307706774612*^9, 3.8123077771422358`*^9}, {3.812307862950704*^9, 
+   3.812307937909972*^9}, {3.8123080683340397`*^9, 3.812308085189824*^9}, {
+   3.812308187462702*^9, 3.812308214525691*^9}, {3.8123082555175734`*^9, 
+   3.812308693958312*^9}, {3.812308770876926*^9, 3.812308789124689*^9}, {
+   3.812308910004558*^9, 3.8123089907763243`*^9}, {3.812309095620879*^9, 
+   3.8123092472119827`*^9}, 3.812309288636385*^9, {3.812309320755454*^9, 
+   3.812309696027151*^9}, 3.812309745540428*^9, {3.812309799778781*^9, 
+   3.812309805402542*^9}, {3.8123098712196302`*^9, 3.812309876482533*^9}, {
+   3.8123101761703453`*^9, 3.812310263673122*^9}, 3.812310307169325*^9, {
+   3.812310587807028*^9, 3.812310615432911*^9}, {3.8123110398897448`*^9, 
+   3.8123110423036833`*^9}, 3.8123111581294117`*^9, {3.812311423655849*^9, 
+   3.812311431144329*^9}},
  CellLabel->
-  "In[534]:=",ExpressionUUID->"8e0e035c-aff0-4eab-b826-69364cdabfcb"]
+  "In[748]:=",ExpressionUUID->"8e0e035c-aff0-4eab-b826-69364cdabfcb"]
 },
-WindowSize->{1185, 1296},
-WindowMargins->{{5, Automatic}, {Automatic, 35}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1512, 1352},
+WindowMargins->{{0, Automatic}, {Automatic, 1}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b50cd7b4-90f7-48c6-bc59-6688a247ed0c"
 ]
 (* End of Notebook Content *)
 
@@ -157,7 +529,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5014, 121, 325, "Input",ExpressionUUID->"8e0e035c-aff0-4eab-b826-69364cdabfcb"]
+Cell[558, 20, 24898, 492, 1032, "Input",ExpressionUUID->"8e0e035c-aff0-4eab-b826-69364cdabfcb"]
 }
 ]
 *)
