@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7697,        191]
-NotebookOptionsPosition[      7349,        177]
-NotebookOutlinePosition[      7743,        193]
-CellTagsIndexPosition[      7700,        190]
+NotebookDataLength[     56385,       1115]
+NotebookOptionsPosition[     56036,       1101]
+NotebookOutlinePosition[     56429,       1117]
+CellTagsIndexPosition[     56386,       1114]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,132 +26,1049 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"val\[Rho]", "=", 
-        RowBox[{"Quantity", "[", 
-         RowBox[{
-          RowBox[{"Round", "[", 
-           RowBox[{"2000", "*", 
-            RowBox[{"10", "^", 
-             RowBox[{"RandomVariate", "[", 
-              RowBox[{"NormalDistribution", "[", 
-               RowBox[{"0", ",", ".45"}], "]"}], "]"}]}]}], "]"}], ",", 
-          RowBox[{"\"\<Kilograms\>\"", "/", 
-           RowBox[{"\"\<Meters\>\"", "^", "3"}]}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"valV", "=", 
-        RowBox[{"Quantity", "[", 
-         RowBox[{
-          RowBox[{"Round", "[", 
-           RowBox[{
-            RowBox[{"RandomReal", "[", 
-             RowBox[{"{", 
-              RowBox[{".01", ",", "2.5"}], "}"}], "]"}], ",", ".01"}], "]"}], 
-          ",", 
-          RowBox[{"\"\<Meters\>\"", "^", "3"}]}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
-        RowBox[{"StringForm", "[", 
-         RowBox[{
-         "\"\<The density of an object is `1` and its volume is `2`. What \
-would its mass be?\>\"", ",", "val\[Rho]", ",", "valV"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"qTransit", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"ToExpression", "[", 
-           RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
-         
-         RowBox[{"h1", "\[Rule]", 
-          RowBox[{"ToCharacterCode", "[", 
-           RowBox[{"ToString", "[", 
-            RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansQnt", "=", 
-        RowBox[{"Round", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"val\[Rho]", "*", "valV"}], ",", ".01"}], "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansMag", "=", 
-        RowBox[{"QuantityMagnitude", "[", "ansQnt", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"StringReplace", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< kg\>\""}], ",", 
-            
-            RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}], "/@", 
-         RowBox[{"Prepend", "[", 
-          RowBox[{
-           RowBox[{
+          RowBox[{"val\[Rho]", "=", 
+           RowBox[{"Quantity", "[", 
             RowBox[{
              RowBox[{"Round", "[", 
-              RowBox[{"#", ",", ".01"}], "]"}], "&"}], "/@", 
-            RowBox[{"RandomReal", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{".2", "*", "ansMag"}], ",", 
-                RowBox[{"1.8", "*", "ansMag"}]}], "}"}], ",", "3"}], "]"}]}], 
-           ",", "ansMag"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", 
-         RowBox[{"choices", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
+              RowBox[{"2000", "*", 
+               RowBox[{"10", "^", 
+                RowBox[{"RandomVariate", "[", 
+                 RowBox[{"NormalDistribution", "[", 
+                  RowBox[{"0", ",", ".45"}], "]"}], "]"}]}]}], "]"}], ",", 
+             RowBox[{"\"\<Kilograms\>\"", "/", 
+              RowBox[{"\"\<Meters\>\"", "^", "3"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"valV", "=", 
+           RowBox[{"Quantity", "[", 
+            RowBox[{
+             RowBox[{"Round", "[", 
+              RowBox[{
+               RowBox[{"RandomReal", "[", 
+                RowBox[{"{", 
+                 RowBox[{".01", ",", "2.5"}], "}"}], "]"}], ",", ".01"}], 
+              "]"}], ",", 
+             RowBox[{"\"\<Meters\>\"", "^", "3"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<The density of an object is `1` and its volume is `2`. What \
+would its mass be?\>\"", ",", "val\[Rho]", ",", "valV"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"qTransit", "=", 
            RowBox[{
-           "choices", "\[LeftDoubleBracket]", "1", 
-            "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
-         RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"pic", "=", 
-        RowBox[{"Style", "[", 
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h1", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansQnt", "=", 
+           RowBox[{"Round", "[", 
+            RowBox[{
+             RowBox[{"val\[Rho]", "*", "valV"}], ",", ".01"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansMag", "=", 
+           RowBox[{"QuantityMagnitude", "[", "ansQnt", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< kg\>\""}], 
+               ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}],
+             "/@", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"Round", "[", 
+                 RowBox[{"#", ",", ".01"}], "]"}], "&"}], "/@", 
+               RowBox[{"RandomReal", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{".2", "*", "ansMag"}], ",", 
+                   RowBox[{"1.8", "*", "ansMag"}]}], "}"}], ",", "3"}], 
+                "]"}]}], ",", "ansMag"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"choices", ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Style", "[", 
+            RowBox[{
+             RowBox[{"Grid", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"\[Rho]", "\[Equal]", 
+                    RowBox[{"M", "/", "V"}]}], ",", "SpanFromLeft"}], "}"}], 
+                 ",", 
+                 RowBox[{"{", 
+                  RowBox[{"\[Rho]", ",", "\"\<mass\\ndensity\>\""}], "}"}], 
+                 ",", 
+                 RowBox[{"{", 
+                  RowBox[{"M", ",", "\"\<mass\>\""}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"V", ",", "\"\<volume\>\""}], "}"}]}], "}"}], ",", 
+               RowBox[{"Frame", "->", "All"}], ",", 
+               RowBox[{"FrameStyle", "\[Rule]", 
+                RowBox[{"Directive", "[", 
+                 RowBox[{"LightGray", ",", 
+                  RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
+               RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
+               RowBox[{"Spacings", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "48"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"picTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h2", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed", ",", "picTransit"}],
+             "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "2", ",", 
+         "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Grid", "[", 
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"315", ",", "2"}], "}"}], "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["117776", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {{"acceleration associated with cosmological expansion rate", 
+                Quantity[
+                6.5735830048959204194465764194`1.9060527073900801*^-10, 
+                 "Meters"/"Seconds"^2]}, {"alpha particle mass", 
+                Quantity[
+                6.6446573356999999139715972401528`9.220412598006197*^-27, 
+                 "Kilograms"]}, {"Angstrom star", 
+                Quantity[
+                1.0000149499999999423766646993`5.744733987550666*^-10, 
+                 "Meters"]}, {"astronomical unit", 
+                Quantity[149597870700, "Meters"]}, {"atomic mass constant", 
+                Quantity[
+                1.6605390665999999711685831308728`9.220249097464801*^-27, 
+                 "Kilograms"]}, {"atomic mass constant energy equivalent", 
+                Quantity[
+                1.4924180856000001115296726102`9.21964799388088*^-10, 
+                 "Joules"]}, {
+               "atomic polarizability equilibrium internuclear distance \
+proportionality constant", 
+                Quantity[
+                2.0083581737736942082995519488`8.952647239246065*^28, 
+                 "Farads" "Meters"^2/"Meters"^7]}, {
+               "atomic specific heat constant", 
+                Quantity[
+                132521403/2761298000000000000, "Kelvins" "Seconds"]}, {
+               "atomic unit of charge density", 
+                Quantity[
+                1.08120238457`9.04268091916295*^12, "Coulombs"/"Meters"^3]}, {
+               "atomic unit of electric conductance", 
+                Quantity[
+                213914163877964163 Pi/2760862562500000000000, "Siemens"]}, {
+               "atomic unit of electric current", 
+                Quantity[
+                0.00662361823750999990229049174672582012`11.406121945292615, 
+                 "Amperes"]}, {"atomic unit of electric dipole moment", 
+                Quantity[
+                8.4783536254999993953200470833`9.513338178722396*^-30, 
+                 "Coulombs" "Meters"]}, {
+               "atomic unit of electric field strength", 
+                Quantity[
+                5.14220674763`9.518024935552885*^11, "Volts"/"Meters"]}, {
+               "atomic unit of electric field gradient", 
+                Quantity[
+                9.717362429199999041536`9.22412040738305*^21, "Volts"/
+                 "Meters"^2]}, {
+               "atomic unit of electric first hyperpolarizability", 
+                Quantity[
+                3.206361306099999819084243`9.02889120416071*^-53, 
+                 "Coulombs"^3 "Meters"^3/"Joules"^2]}, {
+               "atomic unit of electric permittivity", 
+                Quantity[
+                1.1126500554500000474652659453`9.514879676866283*^-10, 
+                 "Farads"/"Meters"]}, {
+               "atomic unit of electric polarizability", 
+                Quantity[
+                1.648777274359999893192010579622275657`9.217161992788583*^-41,
+                  "Coulombs"^2 "Meters"^2/"Joules"]}, {
+               "atomic unit of electric potential", 
+                Quantity[
+                27.21138624598799893306022568140178918839`11.409444801603112, 
+                 "Volts"]}, {"atomic unit of electric quadrupole moment", 
+                Quantity[
+                4.4865515245999998292968636241596152466`9.204754628312143*^-\
+40, "Coulombs" "Meters"^2]}, {
+               "atomic unit of electric second hyperpolarizability", 
+                Quantity[
+                6.2353799905000003851992662176293`8.914049332694756*^-65, 
+                 "Coulombs"^4 "Meters"^4/"Joules"^3]}, {
+               "atomic unit of force", 
+                Quantity[
+                8.238723498299999642581454379828`9.535648685933367*^-8, 
+                 "Newtons"]}, {"atomic unit of frequency", 
+                Quantity[4.134137333518244`11.42021640338319*^16, "Hertz"]}, {
+               "atomic unit of magnetic flux", 
+                Quantity[44173801/(21362355120000000000000 Pi), "Webers"]}, {
+               "atomic unit of magnetic flux density", 
+                Quantity[
+                235051.7567580000031739473`9.21887515703551, "Teslas"]}, {
+               "atomic unit of magnetic induction", 
+                Quantity[
+                235051.7567577199079096317`9.21638223480925, "Teslas"]}, {
+               "atomic unit of magnetic moment", 
+                Quantity[
+                1.85480201566000008848330810084414807`9.219079536512577*^-23, 
+                 "Joules"/"Teslas"]}, {"atomic unit of magnetizability", 
+                Quantity[
+                7.89103660079999956999240400981`8.914862824724556*^-29, 
+                 "Joules"/"Teslas"^2]}, {"atomic unit of momentum", 
+                Quantity[
+                1.9928519141000000285606953021821348`9.521323777730464*^-24, 
+                 "Kilograms" "Meters"/"Seconds"]}, {
+               "atomic unit of presssure", 
+                Quantity[
+                2.942101569644540234375`9.03848398855105*^13, "Pascals"]}, {
+               "atomic unit of temperature", 
+                Quantity[
+                315775.024804071756079793`11.42021640338319, "Kelvins"]}, {
+               "atomic unit of time", 
+                Quantity[
+                2.418884326585700048956`11.41048724687186*^-17, "Seconds"]}, {
+               "atomic unit of velocity", 
+                Quantity[
+                2.1876912636400000192224979`9.520442096946667*^6, "Meters"/
+                 "Seconds"]}, {
+               "structural constant of the atom", 8.278692517}, {
+               "Avogadro constant", 
+                Quantity[602214076000000000000000, 1/"Moles"]}, {
+               "Avogadro number", 602214076000000000000000}, {
+               "conjectured black hole final mass", 
+                Quantity[
+                2.1411528818777170531186648609`4.657574358089148*^-10, 
+                 "Kilograms"]}, {"black hole critical temperature", 
+                Quantity[
+                4.2562548989559366336898924544`4.657577319177793*^31, 
+                 "Kelvins"]}, {"Bohr magneton", 
+                Quantity[
+                9.2740100783000004424165405042207403`9.219079536512577*^-24, 
+                 "Joules"/"Teslas"]}, {"Bohr quadrupole magneton", 
+                Quantity[
+                4.907594787148742559753486`9.042105512787101*^-34, "Amperes" 
+                 "Meters"^3]}, {"Bohr radius", 
+                Quantity[
+                5.291772109029999813118170167`9.519481150304392*^-11, 
+                 "Meters"]}, {"Boltzmann constant", 
+                Quantity[
+                1380649/100000000000000000000000000000, "Joules"/
+                 "Kelvins"]}, {"carbon\[Hyphen]12 atomic mass", 
+                Quantity[
+                1.99264687991118964098260522204954`9.221848749464353*^-26, 
+                 "Kilograms"]}, {"carbon\[Hyphen]12 molar mass", 
+                Quantity[
+                0.01199999999580000052679107369613120682`9.221848749464353, 
+                 "Kilograms"/"Moles"]}, {
+               "carbon\[Hyphen]12 relative atomic mass", 
+                11.9999999957999996525`9.221848749464353}, {
+               "Ceres\[Hyphen]Sun mass ratio", 
+                4.7200000000000002443382749275`1.8957907482504441*^-10}, {
+               "Cs\[Hyphen]133 hyperfine splitting frequency", 
+                Quantity[9192631770, "Hertz"]}, {
+               "classical electron radius", 
+                Quantity[
+                2.81794032619999995732101`9.034958444111087*^-15, 
+                 "Meters"]}, {"classical proton radius", 
+                Quantity[
+                1.53469826718387640487`9.036212172654444*^-18, "Meters"]}, {
+               "conductance quantum", 
+                Quantity[
+                213914163877964163/2760862562500000000000, "Siemens"]}, {
+               "cosmic microwave background radiation temperature", 
+                Quantity[
+                2.7254800000000001248`3.378538148117866, "Kelvins"]}, {
+               "cosmological constant", 
+                Quantity[
+                1.1056019999999999384915904`1.5384488373362826*^-52, 1/
+                 "Meters"^2]}, {"cosmological natural length", 
+                Quantity[
+                4.76783167820008979611779072`1.8285660990569916*^26, 
+                 "Meters"]}, {"cosmological natural mass", 
+                Quantity[
+                2.5545637042443`1.8272803386505034*^52, "Kilograms"]}, {
+               "cosmological natural time", 
+                Quantity[
+                1.590377459795899648`1.8285660990569916*^18, "Seconds"]}, {
+               "cosmological\[Hyphen]quantum point energy", 
+                Quantity[
+                3.6014837751563089`2.1289527386945006*^-22, "Joules"]}, {
+               "cosmological\[Hyphen]quantum point length", 
+                Quantity[
+                0.0000877840071168855`2.1289527386945006, "Meters"]}, {
+               "cosmological\[Hyphen]quantum point mass", 
+                Quantity[
+                4.0071911243038644355`2.1289527386945006*^-39, 
+                 "Kilograms"]}, {"cosmological radius", 
+                Quantity[
+                1.64725795048223018997252096`1.8285660990569916*^26, 
+                 "Meters"]}, {"Coulomb constant", 
+                Quantity[
+                8.9875517922882289886474609375`9.522878745280337*^9, "Meters"/
+                 "Farads"]}, {"Curie constant square root multiplier", 
+                Quantity[
+                Sqrt[4141947/150553519]/20000000000000000000000, 
+                 Sqrt["Joules"] Sqrt["Moles"]/Sqrt["Kelvins"]]}, {
+               "deuteron g factor", 0.8574382337999999493`8.27423800245157}, {
+               "deuteron magnetic moment", 
+                Quantity[
+                4.3307350939999996918158024319881`8.294138938434626*^-27, 
+                 "Joules"/"Teslas"]}, {"deuteron mass", 
+                Quantity[
+                3.343583772400000006255453023058`9.223182213114733*^-27, 
+                 "Kilograms"]}, {
+               "dimensionless Hubble parameter", 
+                0.6765999999999999792`1.9060527073900801}, {
+               "Dirac monopole magnetic charge", 
+                Quantity[
+                44173801/(42724710240000000000000 Pi), "Seconds" "Volts"]}, {
+               "Earth authalic radius", 
+                Quantity[6.371007181*^6, "Meters"]}, {
+               "Earth equatorial radius", 
+                Quantity[6378137, "Meters"]}, {
+               "Earth first eccentricity", 0.08181919104281098}, {
+               "Earth first flattening", 0.00335281068118}, {
+               "Earth geomagnetic reference radius", 
+                Quantity[6371200, "Meters"]}, {
+               "Earth inverse flattening", 298.257222101}, {
+               "Earth linear eccentricity", 
+                Quantity[521854.0097, "Meters"]}, {"Earth mass", 
+                Quantity[
+                5.972200000000000224395264`3.6969530971182194*^24, 
+                 "Kilograms"]}, {"earth mean radius", 
+                Quantity[6.3710087714*^6, "Meters"]}, {
+               "Earth meridional radius of curvature", 
+                Quantity[6.335439327003433*^6, "Meters"]}, {
+               "Earth\[Hyphen]Moon mass ratio", 
+                Quantity[
+                81.300567999999998392`7.131942329385136, "Grams"/"Grams"]}, {
+               "Earth polar radius", 
+                Quantity[6.3567523141*^6, "Meters"]}, {
+               "Earth polar radius of curvature", 
+                Quantity[6.3995936259*^6, "Meters"]}, {
+               "Earth rectifying radius", 
+                Quantity[
+                6.3674491500000003725290298`7.918970004336019*^6, 
+                 "Meters"]}, {
+               "Earth second eccentricity", 0.08209443815192355}, {
+               "Earth second flattening", 0.0033640898438918655`}, {
+               "Earth third eccentricity", 0.05795197430256082}, {
+               "Earth third flattening", 0.00167922039780298}, {
+               "earth volumetric radius", 
+                Quantity[6.37100079*^6, "Meters"]}, {
+               "fourth Eddington constant", 
+                1.055331538342289571376`1.828566081149661*^40}, {
+               "Einstein constant (speed of light squared)", 
+                Quantity[
+                1.86639764366748812978219542308472`4.356547323513813*^-26, 
+                 "Meters"/"Kilograms"]}, {
+               "Einstein constant (speed of light to the fourth)", 
+                Quantity[
+                2.076647442844971`4.356547323513813*^-43, "Meters"^2 
+                 "Newtons" "Seconds"^4/("Kilograms"^2 "Meters"^4)]}, {
+               "electric Bohr dipole moment", 
+                Quantity[
+                8.4783536223300002262044821281`9.517412230473232*^-30, 
+                 "Coulombs" "Meters"]}, {"electric Bohr quadrupole moment", 
+                Quantity[
+                4.4865515246208449144198849107601912811`9.21638223480925*^-40,
+                  "Coulombs" "Meters"^2]}, {"electric constant", 
+                Quantity[
+                8.85418781280000060485535388`9.532175381914792*^-12, "Farads"/
+                 "Meters"]}, {
+               "electromagnetic coupling contant at Z boson mass", 
+                0.3134290000000000131`3.8526865005771525}, {
+               "electromagnetic interaction strength at Z boson mass", 
+                0.0078175080911208738`3.5506291598227206}, {
+               "electron absolute mass", 
+                Quantity[
+                7.763440706308407296`9.21910689131292*^20, 1/"Seconds"]}, {
+               "electron charge\[Hyphen]to\[Hyphen]mass ratio", 
+                
+                Quantity[-1.75882001076`9.219915532843467*^11, "Coulombs"/
+                 "Kilograms"]}, {"electron Compton frequency", 
+                Quantity[
+                1.23558996380981837824`9.21910689131292*^20, "Hertz"]}, {
+               "electron Compton wavelength", 
+                Quantity[
+                2.42631023866999984568541428`9.220593475094091*^-12, 
+                 "Meters"]}, {
+               "electron g factor", \
+-2.00231930436256000405137456255033612251`12.456435294400416}, {
+               "electron magnetic moment", 
+                
+                Quantity[-9.2847647043000005460258960533159109`9.\
+219582875262496*^-24, "Joules"/"Teslas"]}, {
+               "electron magnetic moment anomaly", 
+                0.00115965218128000007412337080126008004`9.508025248458006}, {
+               "electron mass", 
+                Quantity[
+                9.10938370150000079003439766`9.211300968617545*^-31, 
+                 "Kilograms"]}, {"electron molar mass", 
+                Quantity[
+                5.4857990887999998893620814954808`9.207760980972283*^-7, 
+                 "Kilograms"/"Moles"]}, {
+               "electron\[Hyphen]proton electric to gravitational attraction \
+ratio", 
+                Quantity[
+                2.26866143917884911599`4.35653228336671*^39, "Newtons"/
+                 "Newtons"]}, {
+               "electron\[Hyphen]proton mass ratio", 
+                0.00054461702148699995748581947907496215`9.916547275135152}, {
+               "electron relative atomic mass", 
+                0.00054857990906500002804141447043662083`10.234089919841091}, \
+{"electron Schr\[ODoubleDot]dinger constant", 
+                Quantity[
+                1.63819904770892042609792191090388893696`9.21910689131292*^38,
+                  "Kilograms"/("Joules"^2 "Seconds"^2)]}, {
+               "electron wave mass", 
+                Quantity[
+                8637.9927370429959410103`9.21910689131292, "Seconds"/
+                 "Meters"^2]}, {"elementary charge", 
+                Quantity[
+                801088317/5000000000000000000000000000, "Coulombs"]}, {
+               "Faraday constant", 
+                Quantity[
+                120606665154137523/1250000000000, "Coulombs"/"Moles"]}, {
+               "Fermi coupling constant", 
+                Quantity[
+                1.4358510319712249158712450341788742`5.991399828238082*^-62, 
+                 "Kilograms" "Meters"^5/"Seconds"^2]}, {
+               "fine structure constant", 
+                0.00729735256930000037584038707905165211`9.52074264873901}, {
+               "first Fowler\[Hyphen]Nordheim constant", 
+                Quantity[
+                171364137523460504723983671/(
+                 220869005000000000000000000000000000000000000000000 Pi), 
+                 "Amperes" "Joules"/"Volts"^2]}, {
+               "first radiation constant", 
+                Quantity[
+                2977607430992971035198723 Pi/
+                 25000000000000000000000000000000000000000, "Meters"^2 
+                 "Watts"]}, {"first radiation constant for spectral radiance", 
+                Quantity[
+                2977607430992971035198723/
+                 25000000000000000000000000000000000000000, "Meters"^2 
+                 "Watts"/"Steradians"]}, {
+               "fixed\[Hyphen]nucleus atom Schr\[ODoubleDot]dinger constant", 
+                
+                Quantity[
+                3.0079835610717449518378`9.207608310501746*^41, "Kilograms"/(
+                 "Joules"^2 "Seconds"^2)]}, {"galactic unit", 
+                Quantity[2.6*^20, "Meters"]}, {
+               "Gaussian gravitational constant", 
+                Quantity[
+                0.01720209895`10., "AstronomicalUnit"^(3/2)/("Days" 
+                 Sqrt["SolarMass"])]}, {"general relativity maximal force", 
+                Quantity[
+                3.025638910845516216879903`4.356547323513813*^43, 
+                 "Newtons"]}, {"general relativity maximal power", 
+                Quantity[
+                9.0706372610282020738260066748716`4.356547323513813*^51, 
+                 "Watts"]}, {"quantum of action for geometry", 
+                Quantity[
+                3.5749101770507377967`1.8279227430305194*^-96, "Joules" 
+                 "Seconds"]}, {"gravitational constant", 
+                Quantity[
+                6.674299999999999379001243669`4.347284468938097*^-11, 
+                 "Meters"^3/("Kilograms" "Seconds"^2)]}, {
+               "gravitational constant per speed of light squared", 
+                Quantity[
+                7.42616026911866550749567999503`4.356547323513813*^-28, 
+                 "Meters"/"Kilograms"]}, {
+               "gravitational coupling constant electron\[Hyphen]electron", 
+                1.7518093940283455647301864114837`4.356535404267914*^-45}, {
+               "gravitational coupling constant electron\[Hyphen]proton", 
+                3.2165895021961945`4.356535244373*^-42}, {
+               "gravitational coupling constant proton\[Hyphen]proton", 
+                5.9061494138050940277`4.3565350844781445*^-39}, {
+               "gravitational permeability", 
+                Quantity[
+                7.42616026911866550749567999503`4.356547323513813*^-28, 
+                 "Meters"/"Kilograms"]}, {"Hartree energy", 
+                Quantity[
+                4.3597447222071693169`11.42021640338319*^-18, "Joules"]}, {
+               "hbar c product", 
+                Quantity[
+                19864458571489287/(200000000000000000000000000000000000000000 
+                 Pi), "Joules" "Meters"]}, {"h c product", 
+                Quantity[
+                19864458571489287/100000000000000000000000000000000000000000, 
+                 "Joules" "Meters"]}, {
+               "helion g factor", -4.2552506149999995699`7.628925143153017}, {
+               "hertz\[Hyphen]kelvin relationship", 
+                Quantity[132521403/2761298000000000000, "Kelvins"]}, {
+               "Higgs boson mass", 
+                Quantity[
+                125.0900000000000034106`2.415981355144314, 
+                 "Gigaelectronvolts"/"SpeedOfLight"^2]}, {
+               "Higgs vacuum expectation value", 
+                Quantity[
+                246.6999999999999886313`2.7901091581617736, 
+                 "Gigaelectronvolts"]}, {"Hubble length", 
+                Quantity[
+                1.36722268216197509785059328`1.9060527073900801*^26, 
+                 "Meters"]}, {"Hubble parameter", 
+                Quantity[
+                67.6599999999999965894`1.9060527073900801, "Kilometers"/(
+                 "Megaparsecs" "Seconds")]}, {"Hubble time", 
+                Quantity[
+                4.56056396909749824`1.9060527073900801*^17, "Seconds"]}, {
+               "Hubble volume", 
+                Quantity[
+                2.55574643748848232657`1.4289314526704175*^78, "Meters"^3]}, {
+               "hydrogen atom ground state linear charge density", 
+                Quantity[
+                3.02767504153213439471145672702`9.517412230473232*^-9, 
+                 "Coulombs"/"Meters"]}, {
+               "hydrogen atom Schr\[ODoubleDot]dinger constant", 
+                Quantity[
+                1.6373073422609193828`7.085014171029956*^38, "Kilograms"/(
+                 "Joules"^2 "Seconds"^2)]}, {"ideal gas molar volume", 
+                Quantity[
+                378515910691426251/16887500000000000000, "Meters"^3/
+                 "Moles"]}, {"International Annealed Copper Standard", 
+                Quantity[58000000, "Siemens"/"Meters"]}, {
+               "invariant slowness", 
+                Quantity[1/299792458, "Seconds"/"Meters"]}, {
+               "inverse conductance quantum", 
+                Quantity[
+                2760862562500000000000/213914163877964163, "Ohms"]}, {
+               "inverse fine structure constant", 
+                137.0359990839999966283`9.513585380041848}, {
+               "Jordan's first number", 
+                1.6931505282656579905`4.3565350844781445*^38}, {
+               "Jordan's second number", 
+                3.5405667961414957608`1.9060526862683194*^38}, {
+               "Jordan's third number", 
+                1.313888607564502487961`1.280179852681329*^79}, {
+               "Josephson constant", 
+                Quantity[
+                21362355120000000000000/44173801, "Hertz"/"Volts"]}, {
+               "Jovian mass parameter", 
+                Quantity[126686530000000000, "Meters"^3/"Seconds"^2]}, {
+               "Jupiter equatorial radius", 
+                Quantity[71492000, "Meters"]}, {"Jupiter polar radius", 
+                Quantity[66854000, "Meters"]}, {
+               "Kovtun\[Hyphen]Son\[Hyphen]Starinet bound", 
+                Quantity[
+                1380649000000000000/132521403, 1/("Kelvins" "Seconds")]}, {
+               "Lorentz unit", 
+                Quantity[
+                46.6864477829501751671`9.21910689131292, 1/("Meters" 
+                 "Teslas")]}, {"Lorenz number", 
+                Quantity[
+                1906191661201 Pi^2/770090989960670986800, "Ohms" "Watts"/
+                 "Kelvins"^2]}, {"Loschmidt constant (1 atm)", 
+                Quantity[
+                67550000000000000000000000000000000/2514161829, 1/
+                 "Meters"^3]}, {"magnetic constant", 
+                Quantity[
+                1.25663706211999994319253662333757`9.519426267641705*^-6, 
+                 "Henries"/"Meters"]}, {"magnetic Coulomb constant", 
+                Quantity[
+                63325.7397417947286157869`9.522878745280337, "Meters"/
+                 "Henries"]}, {
+               "magnetic coupling constant", 
+                34.2589997709239497681`9.522878745280337}, {
+               "magnetic fine structure constant", 
+                0.02918941027720000150336154831620660843`9.522878745280337}, {
+               "magnetic flux quantum", 
+                Quantity[44173801/21362355120000000000000, "Webers"]}, {
+               "mean solar irradiance", 
+                Quantity[
+                34.0199999999999988631`3.133794300604512, "Milliwatts"/
+                 "Centimeters"^2]}, {"millimagnetic flux quantum", 
+                Quantity[44173801/21362355120000000000000000, "Webers"]}, {
+               "molar gas constant", 
+                Quantity[
+                207861565453831/25000000000000, "Joules"/("Kelvins" 
+                 "Moles")]}, {"molar mass constant", 
+                Quantity[
+                0.00099999999965000004389925614134426723`9.221848749464353, 
+                 "Kilograms"/"Moles"]}, {"molar Planck constant", 
+                Quantity[
+                19951563564467157/50000000000000000000000000, "Joules" 
+                 "Seconds"/"Moles"]}, {"MOND constant", 
+                Quantity[
+                1.200000000000000000000000000006`2.*^-8, "Centimeters"/
+                 "Seconds"^2]}, {"MOND length", 
+                Quantity[7.48962648947348033333333333`2.*^26, "Meters"]}, {
+               "monochromatic radiation at 540 THz luminous efficacy", 
+                Quantity[683, "Lumens"/"Watts"]}, {
+               "Moon\[Hyphen]Earth mass ratio", 
+                0.0123000037100000001`7.186815255441949}, {
+               "muon Compton wavelength", 
+                Quantity[
+                1.173444109999999962990487`7.353459065769239*^-14, 
+                 "Meters"]}, {
+               "muon g\[Hyphen]factor", \
+-2.0023318417999997898`8.886562705751828}, {"muon magnetic moment", 
+                
+                Quantity[-4.49044829999999982135799992149208`7.\
+351259704915589*^-26, "Joules"/"Teslas"]}, {"muon mass", 
+                Quantity[
+                1.883531627000000106942586718602`7.350693630920335*^-28, 
+                 "Kilograms"]}, {"natural unit of energy", 
+                Quantity[
+                8.187105776900000164515294`9.21416039714762*^-14, 
+                 "Joules"]}, {"natural unit of length", 
+                Quantity[
+                3.8615926795999997900926656`9.206555220810149*^-13, 
+                 "Meters"]}, {"natural unit of momentum", 
+                Quantity[
+                2.730924530750000012685516794324136649`9.221465850505911*^-22,
+                  "Kilograms" "Meters"/"Seconds"]}, {"natural unit of time", 
+                Quantity[
+                1.2880886681900000222536268793191847722`9.217851156901803*^-\
+21, "Seconds"]}, {"neutron Compton wavelength", 
+                Quantity[
+                1.31959090581000005628246`8.94434805481206*^-15, "Meters"]}, {
+               "neutron g factor", -3.8260854499999998879`6.327482160025784}, \
+{"neutron magnetic moment", 
+                
+                Quantity[-9.6623651000000007029349367388766`6.322325611934631*\
+^-27, "Joules"/"Teslas"]}, {"neutron mass", 
+                Quantity[
+                1.6749274980400000133280503384202`8.945242411684134*^-27, 
+                 "Kilograms"]}, {
+               "nonlinear QED effects onset electromagnetic energy density", 
+                Quantity[
+                3.00367456683991871853929955328`8.52068387555845*^29, 
+                 "Seconds" "Watts"/"Meters"^3]}, {"nuclear magneton", 
+                Quantity[
+                5.0507837461000003153987372053988`9.226237519477499*^-27, 
+                 "Joules"/"Teslas"]}, {
+               "Pallas\[Hyphen]Sun mass ratio", 
+                1.0300000000000000620820876701`1.2346859743215286*^-10}, {
+               "parsec", 
+                Quantity[648000/Pi, "AstronomicalUnit"]}, {
+               "photon\[Hyphen]photon cross section upper limit", 
+                Quantity[
+                1.29348732974730812929095`8.618415665347248*^-35, 
+                 "Meters"^2]}, {"pi^\[PlusMinus] mass", 
+                Quantity[
+                139.5706099999999878492`5.463552739230998, 
+                 "Megaelectronvolts"/"SpeedOfLight"^2]}, {"pi^0 mass", 
+                Quantity[
+                134.9770000000000038654`5.130259771279629, 
+                 "Megaelectronvolts"/"SpeedOfLight"^2]}, {"Planck area", 
+                Quantity[
+                2.6122803039748721209267928`4.356547323513813*^-70, 
+                 "Meters"^2]}, {"Planck constant", 
+                Quantity[
+                132521403/200000000000000000000000000000000000000000, 
+                 "Joules" "Seconds"]}, {"Planck length", 
+                Quantity[
+                1.61625500000000006684132`4.652207380644164*^-35, 
+                 "Meters"]}, {"Planck mass", 
+                Quantity[
+                2.176434000000000137955146492594`4.656504264409395*^-8, 
+                 "Kilograms"]}, {"Planck mass density", 
+                Quantity[
+                5.1548485032449335885`4.055517327849832*^96, "Kilograms"/
+                 "Meters"^3]}, {"Planck temperature", 
+                Quantity[
+                1.41678400000000001444074305355776`4.646153665323047*^32, 
+                 "Kelvins"]}, {"Planck time", 
+                Quantity[
+                5.39124699999999`4.652507983440015*^-44, "Seconds"]}, {
+               "Planck volume", 
+                Quantity[
+                4.222111166502471327892444377702`4.180456064458132*^-105, 
+                 "Meters"^3]}, {"proton Compton wavelength", 
+                Quantity[
+                1.32140985538999994917566`9.217947554564306*^-15, 
+                 "Meters"]}, {
+               "proton\[Hyphen]electron mass ratio", 
+                1836.1526734300000498479`9.92148610850027}, {
+               "proton elementary viscosity", 
+                Quantity[
+                3.5960083517503171585712`3.6946985255187954*^-34, "Joules" 
+                 "Seconds"]}, {
+               "proton g factor", 5.5856946893000003485`9.24192721541959}, {
+               "proton magnetic moment", 
+                Quantity[
+                1.41060679735999994226350778495669`9.070224726222072*^-26, 
+                 "Joules"/"Teslas"]}, {"proton mass", 
+                Quantity[
+                1.6726219236900000968411627744284`9.214797613186668*^-27, 
+                 "Kilograms"]}, {
+               "proton\[Hyphen]proton electric repulsion to gravitational \
+attraction ratio", 
+                Quantity[
+                1.23555163576510537`4.356532123472945*^36, "Newtons"/
+                 "Newtons"]}, {"proton RMS charge radius", 
+                Quantity[
+                8.4140000000000002491276`2.3452189110641672*^-16, 
+                 "Meters"]}, {"QCD scale", 
+                Quantity[217.`3., "Megaelectronvolts"]}, {
+               "QED Euler\[Hyphen]Heisenberg Lagrangian prefactor", 
+                Quantity[
+                1.23748067571435303032`8.617046899984958*^-18, "Amperes"^4 
+                 "Seconds"^11/("Kilograms"^4 "Meters"^7)]}, {
+               "quadratic Higgs coefficient", 
+                Quantity[-8.93829*^-33, "Joules"^2]}, {
+               "quantized Hall conductance", 
+                Quantity[
+                213914163877964163/5521725125000000000000, "Siemens"]}, {
+               "quantum channel thermal conductance constant", 
+                Quantity[
+                1906191661201 Pi^2/19878210450000000000000000, "Watts"/
+                 "Kelvins"^2]}, {"quantum jump characteristic decay time", 
+                Quantity[
+                5.2954355266348563184`9.517412230473232*^-19, "Seconds"]}, {
+               "quartic Higgs coefficient", 
+                1.0149999999999999023`1.0064660422492315}, {
+               "radiation constant", 
+                Quantity[
+                149446081759192136848000000 Pi^5/
+                 60448130167225764062684171310051374516243277, "Joules"/(
+                 "Kelvins"^4 "Meters"^3)]}, {
+               "reduced electromagnetic Planck constant", 
+                Quantity[
+                5521725125000000000000/213914163877964163, "Joules" "Seconds"/
+                 "Coulombs"^2]}, {"reduced Fermi constant", 
+                Quantity[
+                0.00001166378699999999946253226301706718`5.987658334064711, 1/
+                 "Gigaelectronvolts"^2]}, {"reduced Planck constant", 
+                Quantity[
+                132521403/(400000000000000000000000000000000000000000 Pi), 
+                 "Joules" "Seconds"]}, {"reduced Planck mass", 
+                Quantity[
+                4.34135839913935816936444374889`4.657577319177793*^-9, 
+                 "Kilograms"]}, {"relativistic reduced Planck mass", 
+                Quantity[
+                3.06980396359261471224093631763`4.657577319177793*^-9, 
+                 "Kilograms"]}, {"Richardson\[Hyphen]Dushman constant", 
+                Quantity[
+                1.2017322894913721829652786`9.21910689131292*^6, "Amperes"/(
+                 "Kelvins"^2 "Meters"^2)]}, {"Rydberg constant", 
+                Quantity[
+                1.09737315681599993258714676`11.42021640338319*^7, 1/
+                 "Meters"]}, {"Rydberg constant hydrogen", 
+                Quantity[
+                1.09677583402803409844636917`11.438057881467444*^7, 1/
+                 "Meters"]}, {"Rydberg energy", 
+                Quantity[
+                2.17987236110358504363692447861223418253`11.42021640338319*^-\
+18, "Joules"]}, {"Rydberg frequency", 
+                Quantity[
+                3.2898419602508805`11.42021640338319*^15, "Hertz"]}, {
+               "Rydberg wavelength", 
+                Quantity[
+                9.112670505823875077347620337828`11.42021640338319*^-8, 
+                 "Meters"]}, {
+               "Sackur\[Hyphen]Tetrode constant (1 atm)", \
+-1.1648705235800000946`9.11203514637792}, {
+               "Schottky\[Hyphen]Nordheim barrier constant", 
+                Quantity[
+                2.307077552348681440748606463922`9.522878745280337*^-28, 
+                 "Joules" "Meters"]}, {"Schottky\[Hyphen]Nordheim constant", 
+                Quantity[
+                6.079758010972944449156186726393526`9.823908740944319*^-24, 
+                 "Joules" Sqrt["Meters"]/Sqrt["Volts"]]}, {
+               "second Fowler\[Hyphen]Nordheim constant", 
+                Quantity[
+                1.06515222141581105337403401593472155648`9.520136886976902*^\
+38, "Volts"/("Joules"^(3/2) "Meters")]}, {"second radiation constant", 
+                Quantity[
+                272115870842319/18913000000000000, "Kelvins" "Meters"]}, {
+               "signed elementary charge", 
+                
+                Quantity[-(801088317/5000000000000000000000000000), 
+                 "Coulombs"]}, {"{220} lattice spacing of silicon", 
+                Quantity[
+                1.920155715999999894921239661`7.477156475478707*^-10, 
+                 "Meters"]}, {"silicon molar volume", 
+                Quantity[
+                0.00001205883198999999985116197281920236`7.002123998334994, 
+                 "Meters"^3/"Moles"]}, {"solar constant", 
+                Quantity[1366.1, "Watts"/"Meters"^2]}, {
+               "solar effective temperature", 
+                Quantity[5772, "Kelvins"]}, {"solar luminosity", 
+                Quantity[382800000000000000000000000, "Watts"]}, {
+               "solar mass", 
+                Quantity[
+                1.988399999999999986508702416896`3.696443763138999*^30, 
+                 "Kilograms"]}, {"solar mass parameter", 
+                Quantity[132712440000000000000, "Meters"^3/"Seconds"^2]}, {
+               "solar radius", 
+                Quantity[695700000, "Meters"]}, {"solar Schwarzschild radius", 
+                Quantity[
+                2953.2501228092987730633`9.82188164522332, "Meters"]}, {
+               "Sommerfeld\[Hyphen]Nordheim constant", 
+                Quantity[
+                6.30436232594899864994111657104889`9.21910689131292*^51, 
+                 "Amperes"/("Joules"^2 "Meters"^2)]}, {
+               "spacetime atom Avogadro number", 
+                3.462439503267306429762701`1.5268927473665381*^121}, {
+               "speed of light", 
+                Quantity[299792458, "Meters"/"Seconds"]}, {"speed of sound", 
+                Quantity[340.29205, "Meters"/"Seconds"]}, {
+               "condensed phase speed of sound upper bound", 
+                Quantity[
+                36100.7845339178820722736`9.443697499232712, "Meters"/
+                 "Seconds"]}, {"standard acceleration of gravity", 
+                Quantity[196133/20000, "Meters"/"Seconds"^2]}, {
+               "standard atmosphere", 
+                Quantity[1, "Atmospheres"]}, {"standard concentration", 
+                Quantity[1, "Moles"/"Decimeters"^3]}, {"standard molality", 
+                Quantity[1, "Moles"/"Kilograms"]}, {"standard pressure", 
+                Quantity[100000, "Pascals"]}, {"standard state pressure", 
+                Quantity[100000, "Pascals"]}, {
+               "Stefan\[Hyphen]Boltzmann constant", 
+                Quantity[
+                5454781984210512994952000000 Pi^5/
+                 29438455734650141042413712126365436049, "Watts"/("Kelvins"^4 
+                 "Meters"^2)]}, {
+               "strong coupling constant at Z boson mass", 
+                1.2210000000000000853`1.443262987458695}, {
+               "strong interaction strength at Z boson mass", 
+                0.1180999999999999966`1.7298272167913085}, {
+               "Sun\[Hyphen]Earth mass ratio", 
+                332946.048699999984819442`8.376245829509271}, {
+               "Sun\[Hyphen]Eris mass ratio", 1.191`1.6287537301405581*^8}, {
+               "Sun\[Hyphen]Jupiter mass ratio", 
+                1047.3486439999999220163`7.4886123577225385}, {
+               "Sun\[Hyphen]Mars mass ratio", 
+                3.0987035899999998509883881`7.889120043967773*^6}, {
+               "Sun\[Hyphen]Mercury mass ratio", 
+                6.0236`4.001704874236534*^6}, {
+               "Sun\[Hyphen]Neptune mass ratio", 
+                19412.2599999999983992893`5.509924849064112}, {
+               "Sun\[Hyphen]Pluto mass ratio", 
+                1.36566`6.045680468134515*^8}, {
+               "Sun\[Hyphen]Saturn mass ratio", 
+                3497.9018000000000938599`7.242777617278344}, {
+               "Sun\[Hyphen]Uranus mass ratio", 
+                22902.9799999999995634425`5.581740743456496}, {
+               "Sun\[Hyphen]Venus mass ratio", 
+                408523.7189999999827705324`7.4070972942021545}, {
+               "tau Compton wavelength", 
+                Quantity[
+                6.9777100000000001363802`3.8705850622121756*^-16, 
+                 "Meters"]}, {"tau mass", 
+                Quantity[
+                3.1675399999999999091626745643092`3.8774728175047257*^-27, 
+                 "Kilograms"]}, {"geocentric gravitational constant", 
+                Quantity[398600400000000, "Meters"^3/"Seconds"^2]}, {
+               "Thompson\[Hyphen]Lampard calculable capacitor capacitance", 
+                Quantity[
+                1.95354904193554090012231568`9.522878745280337*^-12, "Farads"/
+                 "Meters"]}, {"Thomson cross section", 
+                Quantity[
+                6.65245873210000035841117889189`8.743800943079322*^-29, 
+                 "Meters"^2]}, {"total solar irradiance", 
+                Quantity[1361, "Watts"/"Meters"^2]}, {
+               "two\[Hyphen]species approximate single\[Hyphen]density non\
+\[Hyphen]neutral failed white dwarf radius", 
+                Quantity[
+                8.7105308033816386014223099`4.657553161232119*^6, 
+                 "Meters"]}, {"universe age", 
+                Quantity[
+                13.78700000000000081`2.537409784261468, "Gigayears"]}, {
+               "universe atom count", 
+                Quantity[5.650742857142857142857`1.*^79, "Atoms"]}, {
+               "universe baryon count", 
+                Quantity[9.8888`1.*^79, "Baryons"]}, {
+               "universe baryon fraction", 
+                0.0489746816186966694`1.4280713781603795}, {
+               "universe critical density", 
+                Quantity[
+                8.59881425662`1.6042538022945108*^-27, "Kilograms"/
+                 "Meters"^3]}, {
+               "universe dark energy mass\[Hyphen]energy fraction", 
+                Quantity[68, "Percent"]}, {
+               "universe dark matter mass\[Hyphen]energy fraction", 
+                Quantity[27, "Percent"]}, {"universe density", 
+                Quantity[
+                8.59881425662`1.1879291058495296*^-27, "Kilograms"/
+                 "Meters"^3]}, {
+               "universe density parameter", 1.`1.3979400086720375}, {
+               "universe diameter", 
+                Quantity[9.3*^10, "LightYears"]}, {
+               "universe electron count", 
+                Quantity[7.063428571428571428571`1.*^79, "Electrons"]}, {
+               "universe mass", 
+                Quantity[1.5*^53, "Kilograms"]}, {
+               "universe energy density fraction of matter", 
+                Quantity[31.5, "Percent"]}, {"universe neutron count", 
+                Quantity[2.825371428571428571429`1.*^79, "Neutrons"]}, {
+               "universe nucleon count", 
+                Quantity[9.8888`1.*^79, "Nucleons"]}, {
+               "universe dark energy mass\[Hyphen]energy fraction", 
+                Quantity[5, "Percent"]}, {"universe (massive) particle count", 
+                Quantity[3.6729828571428571428571`1.*^80, "Particles"]}, {
+               "universe proton count", 
+                Quantity[7.063428571428571428571`1.*^79, "Protons"]}, {
+               "universe energy density fraction of radiation", 
+                0.00009027940933336814}, {"universe radius", 
+                Quantity[4.65*^10, "LightYears"]}, {
+               "universe vacuum energy density", 
+                Quantity[
+                5.323965817160310630800471279`1.5268927473665381*^-10, 
+                 "Joules"/"Meters"^3]}, {
+               "universe energy density fraction of the vacuum", 
+                0.6888999999999999568`1.7889381620819662}, {
+               "universe vacuum mass density", 
+                Quantity[
+                5.92371086489`1.5268927473665381*^-27, "Kilograms"/
+                 "Meters"^3]}, {"universe volume", 
+                Quantity[3.57`1.*^80, "Meters"^3]}, {"vacuum impedance", 
+                Quantity[
+                376.7303136680039301609`9.522878745280337, "Ohms"]}, {
+               "Vesta\[Hyphen]Sun mass ratio", 
+                1.3499999999999999910223295558`1.3521825181113625*^-10}, {
+               "von Klitzing constant", 
+                Quantity[
+                5521725125000000000000/213914163877964163, "Ohms"]}, {
+               "water freezing temperature", 
+                Quantity[273.15`6.13537120918662, "Kelvins"]}, {
+               "water triple point temperature", 
+                Quantity[6829/25, "Kelvins"]}, {"W^\[PlusMinus] boson mass", 
+                Quantity[
+                80.3790000000000048885`3.524931357094106, "Gigaelectronvolts"/
+                 "SpeedOfLight"^2]}, {
+               "weak hypercharge coupling constant at Z boson mass", 0.36}, {
+               "weak interaction strength at Z boson mass", 
+                0.033829999999999999`3.2282720021239992}, {
+               "weak isospin coupling constant at Z boson mass", 
+                0.652000000000000024`3.513217600067939}, {
+               "weak mixing angle constant", 
+                0.222899999999999987`2.5699588180965938}, {"Weinberg angle", 
+                Quantity[
+                0.4916969999999999952`3.4875775758733654, "Radians"]}, {
+               "Wien frequency displacement law constant", 
+                Quantity[
+                2761298000000000000 (3 + ProductLog[-(3/E^3)])/132521403, 
+                 "Hertz"/"Kelvins"]}, {
+               "Wien wavelength displacement law constant", 
+                Quantity[
+                272115870842319/(
+                 18913000000000000 (5 + ProductLog[-(5/E^5)])), "Kelvins" 
+                 "Meters"]}, {
+               "bottom quark Yukawa coupling constant", 
+                0.0259999999999999988`0.6368220975871745}, {
+               "charm quark Yukawa coupling constant", 
+                0.0071999999999999998`0.7781512503836436}, {
+               "down quark Yukawa coupling constant", 0``4.522878745280338}, {
+               "electron Yukawa coupling constant", 2.94*^-6}, {
+               "muon Yukawa coupling constant", 0.000607}, {
+               "strange quark Yukawa coupling constant", 
+                0.0005999999999999999`0.17609125905568118}, {
+               "tauon Yukawa coupling constant", 0.0102156}, {
+               "top quark Yukawa coupling constant", 
+                1.0020000000000000018`1.2374397279682896}, {
+               "up quark Yukawa coupling constant", 
+                0.000016`0.057991946977686754}, {"Z^0 boson mass", 
+                Quantity[
+                91.1876000000000033197`4.336686495104733, "Gigaelectronvolts"/
+                 "SpeedOfLight"^2]}},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"data", "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
            RowBox[{
-            RowBox[{"{", 
-             RowBox[{
-              RowBox[{"{", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
                RowBox[{
-                RowBox[{"\[Rho]", "\[Equal]", 
-                 RowBox[{"M", "/", "V"}]}], ",", "SpanFromLeft"}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{"\[Rho]", ",", "\"\<mass\\ndensity\>\""}], "}"}], ",", 
-              
-              RowBox[{"{", 
-               RowBox[{"M", ",", "\"\<mass\>\""}], "}"}], ",", 
-              RowBox[{"{", 
-               RowBox[{"V", ",", "\"\<volume\>\""}], "}"}]}], "}"}], ",", 
-            RowBox[{"Frame", "->", "All"}], ",", 
-            RowBox[{"FrameStyle", "\[Rule]", 
-             RowBox[{"Directive", "[", 
-              RowBox[{"LightGray", ",", 
-               RowBox[{"Thickness", "\[Rule]", "3"}]}], "]"}]}], ",", 
-            RowBox[{"Alignment", "\[Rule]", "Left"}], ",", 
-            RowBox[{"Spacings", "\[Rule]", 
-             RowBox[{"{", 
-              RowBox[{"1.8", ",", "1.15"}], "}"}]}]}], "]"}], ",", "48"}], 
-         "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"picTransit", "=", 
-        RowBox[{
-         RowBox[{"Hold", "[", 
-          RowBox[{"ToExpression", "[", 
-           RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
-         
-         RowBox[{"h2", "\[Rule]", 
-          RowBox[{"ToCharacterCode", "[", 
-           RowBox[{"ToString", "[", 
-            RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"qTransit", ",", "ans", ",", "mixed", ",", "picTransit"}], 
-          "}"}], "]"}], "&"}]}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+                RowBox[{"StringLength", "[", "#", "]"}], "<", "56"}], ",", 
+               "#", ",", 
+               RowBox[{"Tooltip", "[", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{"StringTake", "[", 
+                   RowBox[{"#", ",", "55"}], "]"}], "<>", 
+                  "\"\<\[Ellipsis]\>\""}], ",", "#"}], "]"}]}], "]"}], "&"}], 
+            "/@", 
+            RowBox[{"data", "\[LeftDoubleBracket]", 
+             RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Phys5\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
@@ -171,13 +1088,20 @@ would its mass be?\>\"", ",", "val\[Rho]", ",", "valV"}], "]"}]}], ";",
    3.79482498363341*^9, 3.794824996416326*^9}, {3.7948250614418583`*^9, 
    3.794825066233597*^9}, {3.794825237807913*^9, 3.794825253753193*^9}, {
    3.794825325112507*^9, 3.794825344263175*^9}, {3.794825395895358*^9, 
-   3.794825449302875*^9}, {3.794825557736106*^9, 3.794825562734432*^9}},
+   3.794825449302875*^9}, {3.794825557736106*^9, 3.794825562734432*^9}, {
+   3.814177083340208*^9, 3.81417712657021*^9}, {3.8141771662021217`*^9, 
+   3.8141773139173*^9}, {3.8141775019974203`*^9, 3.814177527108223*^9}, {
+   3.814177731190135*^9, 3.814177742546829*^9}, {3.814177776986566*^9, 
+   3.814178045738007*^9}, 3.814178152445489*^9, {3.8141793501726418`*^9, 
+   3.8141793682161417`*^9}, 3.8141794474139643`*^9, {3.814179498558967*^9, 
+   3.814179536597241*^9}, {3.8141796933353558`*^9, 3.8141797019566107`*^9}, {
+   3.8141800447988253`*^9, 3.8141800500295343`*^9}},
  CellLabel->
-  "In[465]:=",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
+  "In[1373]:=",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
 },
 WindowSize->{1585, 1377},
 WindowMargins->{{7, Automatic}, {Automatic, 5}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"8598a519-1281-4831-9376-e2e6cf4db09c"
 ]
@@ -192,7 +1116,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6787, 155, 367, "Input",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
+Cell[558, 20, 55474, 1079, 613, "Input",ExpressionUUID->"18ac6a2a-9ee8-42fe-9ee0-6ef47ba9cfde"]
 }
 ]
 *)
