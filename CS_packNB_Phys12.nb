@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      7176,        163]
-NotebookOptionsPosition[      6861,        149]
-NotebookOutlinePosition[      7222,        165]
-CellTagsIndexPosition[      7179,        162]
+NotebookDataLength[     21710,        453]
+NotebookOptionsPosition[     21361,        439]
+NotebookOutlinePosition[     21754,        455]
+CellTagsIndexPosition[     21711,        452]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,93 +26,324 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", "}"}], ",", "\[IndentingNewLine]", 
       RowBox[{
-       RowBox[{"watts", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "12", ",", "15", ",", "20", ",", "25", ",", "30", ",", "50", ",", 
-          "60", ",", "75", ",", "100", ",", "120", ",", "150", ",", "200", 
-          ",", "250", ",", "300"}], "}"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"volts", "=", 
-        RowBox[{"{", 
-         RowBox[{
-         "9", ",", "12", ",", "24", ",", "75", ",", "100", ",", "120", ",", 
-          "230", ",", "240", ",", "400", ",", "600"}], "}"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"watt", "=", 
-        RowBox[{"RandomChoice", "[", "watts", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"volt", "=", 
-        RowBox[{"RandomChoice", "[", "volts", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ansNo", "=", 
-        FractionBox["watt", "volt"]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"disPool", "=", 
-        RowBox[{"DeleteCases", "[", 
-         RowBox[{
-          RowBox[{"DeleteDuplicates", "[", 
-           RowBox[{"Flatten", "[", 
-            RowBox[{"Outer", "[", 
-             RowBox[{"Divide", ",", "watts", ",", "volts"}], "]"}], "]"}], 
-           "]"}], ",", "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"q", "=", 
+       RowBox[{"Switch", "[", 
         RowBox[{
-         RowBox[{"Hold", "[", "\[IndentingNewLine]", 
-          RowBox[{
-           RowBox[{"II", "/:", 
-            RowBox[{"MakeBoxes", "[", 
-             RowBox[{"II", ",", "_"}], "]"}], ":=", 
-            RowBox[{"RowBox", "[", 
-             RowBox[{"{", "\"\<I\>\"", "}"}], "]"}]}], ";", 
-           RowBox[{"StringForm", "[", 
+         RowBox[{"RandomChoice", "[", 
+          RowBox[{"{", 
+           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
+         "1", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"watts", "=", 
+           RowBox[{"{", 
             RowBox[{
-            "\"\<`1`, where `2` is electric power (watts), `3` is voltage \
+            "12", ",", "15", ",", "20", ",", "25", ",", "30", ",", "50", ",", 
+             "60", ",", "75", ",", "100", ",", "120", ",", "150", ",", "200", 
+             ",", "250", ",", "300"}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"volts", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "9", ",", "12", ",", "24", ",", "75", ",", "100", ",", "120", ",",
+              "230", ",", "240", ",", "400", ",", "600"}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"watt", "=", 
+           RowBox[{"RandomChoice", "[", "watts", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"volt", "=", 
+           RowBox[{"RandomChoice", "[", "volts", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           FractionBox["watt", "volt"]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"disPool", "=", 
+           RowBox[{"DeleteCases", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Flatten", "[", 
+               RowBox[{"Outer", "[", 
+                RowBox[{"Divide", ",", "watts", ",", "volts"}], "]"}], "]"}], 
+              "]"}], ",", "ansNo"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"II", "/:", 
+               RowBox[{"MakeBoxes", "[", 
+                RowBox[{"II", ",", "_"}], "]"}], ":=", 
+               RowBox[{"RowBox", "[", 
+                RowBox[{"{", "\"\<I\>\"", "}"}], "]"}]}], ";", 
+              RowBox[{"StringForm", "[", 
+               RowBox[{
+               "\"\<`1`, where `2` is electric power (watts), `3` is voltage \
 (volts), and `4` is current (amperes). A `5`-Watt light bulb on a `6`-volt \
 source would draw how much current?\>\"", ",", 
-             RowBox[{"P", "\[Equal]", 
-              RowBox[{"V", " ", "II"}]}], ",", " ", 
-             RowBox[{"Style", "[", 
-              RowBox[{"\"\<P\>\"", ",", "Italic"}], "]"}], ",", 
-             RowBox[{"Style", "[", 
-              RowBox[{"\"\<V\>\"", ",", "Italic"}], "]"}], ",", 
-             RowBox[{"Style", "[", 
-              RowBox[{"\"\<I\>\"", ",", "Italic"}], "]"}], ",", "holder1", 
-             ",", "holder2"}], "]"}]}], "]"}], "/.", 
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"holder1", "\[Rule]", "watt"}], ",", 
-           RowBox[{"holder2", "\[Rule]", "volt"}]}], "}"}]}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"Clear", "[", "II", "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"choices", "=", 
-        RowBox[{
-         RowBox[{
-          RowBox[{
-           RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< amps\>\""}], 
-          "&"}], "/@", 
-         RowBox[{"Round", "[", 
-          RowBox[{
-           RowBox[{"Prepend", "[", 
+                RowBox[{"P", "\[Equal]", 
+                 RowBox[{"V", " ", "II"}]}], ",", " ", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<P\>\"", ",", "Italic"}], "]"}], ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<V\>\"", ",", "Italic"}], "]"}], ",", 
+                RowBox[{"Style", "[", 
+                 RowBox[{"\"\<I\>\"", ",", "Italic"}], "]"}], ",", "holder1", 
+                ",", "holder2"}], "]"}]}], "]"}], "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"holder1", "\[Rule]", "watt"}], ",", 
+              RowBox[{"holder2", "\[Rule]", "volt"}]}], "}"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Clear", "[", "II", "]"}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
             RowBox[{
-             RowBox[{"RandomSample", "[", 
-              RowBox[{"disPool", ",", "3"}], "]"}], ",", "ansNo"}], "]"}], 
-           ",", ".01"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{"mixed", "=", 
-        RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
-       "\[IndentingNewLine]", 
-       RowBox[{"ans", "=", 
-        RowBox[{
-         RowBox[{"Position", "[", 
-          RowBox[{"mixed", ",", 
-           RowBox[{"choices", "[", 
-            RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-         RowBox[{"[", 
-          RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"InputForm", "[", 
-         RowBox[{"{", 
-          RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}], "&"}]}]}], 
-     "]"}], "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Phys12\>\"", ",", 
-   
+             RowBox[{
+              RowBox[{"ToString", "[", "#", "]"}], "<>", "\"\< amps\>\""}], 
+             "&"}], "/@", 
+            RowBox[{"Round", "[", 
+             RowBox[{
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", 
+                 RowBox[{"disPool", ",", "3"}], "]"}], ",", "ansNo"}], "]"}], 
+              ",", ".01"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"temps", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<DegreesCelsius\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              RowBox[{"Range", "[", 
+               RowBox[{"3800", ",", "7200", ",", "160"}], "]"}], ",", "4"}], 
+             "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"tempF", "=", 
+           RowBox[{"UnitConvert", "[", 
+            RowBox[{
+             RowBox[{
+             "temps", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", "\"\<DegreesFahrenheit\>\""}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"tempsK", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Round", "[", 
+              RowBox[{"N", "[", 
+               RowBox[{"UnitConvert", "[", 
+                RowBox[{"#", ",", "\"\<Kelvins\>\""}], "]"}], "]"}], "]"}], 
+             "&"}], "/@", "temps"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"peakWL", "=", 
+           RowBox[{"PlanckRadiationLaw", "[", 
+            RowBox[{
+             RowBox[{
+             "temps", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", "\"\<MaxWavelength\>\""}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<What color does a blackbody glow at `1`? (peak/overall)\>\"",
+              ",", 
+             RowBox[{
+             "temps", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"colSpec", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", "\"\<VisibleSpectrum\>\"", "]"}], "[",
+               "#", "]"}], "&"}], "/@", 
+            RowBox[{"Range", "[", 
+             RowBox[{"210", ",", "890"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"rgbList", "=", 
+           RowBox[{"{", 
+            RowBox[{"List", "@@@", "colSpec"}], "}"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"grad", "=", 
+           RowBox[{"Graphics", "[", 
+            RowBox[{
+             RowBox[{"Raster", "[", "rgbList", "]"}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", ".1"}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"400", ",", "50"}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Show", "[", 
+            RowBox[{
+             RowBox[{"PlanckRadiationLaw", "[", 
+              RowBox[{
+               RowBox[{
+               "temps", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}], ",", "\"\<SpectralPlot\>\""}], 
+              "]"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"StringForm", "[", 
+                 RowBox[{"\"\<Planck Radiation at `1` (`2`)\\n`3`\>\"", ",", 
+                  RowBox[{
+                  "temps", "\[LeftDoubleBracket]", "1", 
+                   "\[RightDoubleBracket]"}], ",", "tempF", ",", "grad"}], 
+                 "]"}], ",", "22"}], "]"}]}], ",", 
+             RowBox[{"LabelStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Black", ",", "12"}], "}"}]}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"GridLines", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"UnitConvert", "[", 
+                    RowBox[{"peakWL", ",", "\"\<Meters\>\""}], "]"}], "//", 
+                   "QuantityMagnitude"}], "//", "N"}], "}"}], ",", "None"}], 
+               "}"}]}], ",", 
+             RowBox[{"Ticks", "\[Rule]", "None"}], ",", "\[IndentingNewLine]", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{".00000022", ",", ".00000089"}], "}"}], ",", "All"}],
+                "}"}]}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", 
+              RowBox[{"12", "/", "11"}]}], ",", 
+             RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"colPeak", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"PlanckRadiationLaw", "[", 
+              RowBox[{"#", ",", "\"\<Color\>\""}], "]"}], "&"}], "/@", 
+            "temps"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"colMean", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"ColorData", "[", "\"\<BlackBodySpectrum\>\"", "]"}], 
+              "[", 
+              RowBox[{"QuantityMagnitude", "[", "#", "]"}], "]"}], "&"}], "/@",
+             "tempsK"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"MapThread", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Graphics", "[", 
+               RowBox[{
+                RowBox[{"{", "\[IndentingNewLine]", 
+                 RowBox[{"#1", ",", 
+                  RowBox[{"EdgeForm", "[", "Black", "]"}], ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"FilledCurve", "[", 
+                   RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"BSplineCurve", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "8"}], ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "9"}], ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "14"}], ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "2"}]}], "}"}]}], "}"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "8"}], ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "7"}], ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"6", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "8"}], ",", "2"}], "}"}]}], "}"}], "]"}]}], 
+                    "}"}], "]"}], ",", "\[IndentingNewLine]", "#2", ",", 
+                  "\[IndentingNewLine]", 
+                  RowBox[{"FilledCurve", "[", 
+                   RowBox[{"{", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"BSplineCurve", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"14", ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"9", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "2"}], "}"}]}], "}"}], "]"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"Line", "[", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"7", ",", "2"}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"-", "6"}], ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"8", ",", 
+                    RowBox[{"-", "2"}]}], "}"}]}], "}"}], "]"}]}], 
+                    "\[IndentingNewLine]", "}"}], "]"}]}], "}"}], ",", 
+                RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}], "&"}], ",", 
+             
+             RowBox[{"{", 
+              RowBox[{"colPeak", ",", "colMean"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Phys12\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.699983409943836*^9, 3.699983424949113*^9}, {
    3.700046296573551*^9, 3.700046550848778*^9}, {3.700046592812502*^9, 
@@ -143,15 +374,74 @@ source would draw how much current?\>\"", ",",
    3.709038066036413*^9, 3.70903807102743*^9}, {3.709039337591321*^9, 
    3.70903937407812*^9}, {3.709039461943262*^9, 3.70903947411862*^9}, {
    3.7090395827818003`*^9, 3.709039597549562*^9}, {3.7090397523214207`*^9, 
-   3.709039755045985*^9}, {3.7090399619410553`*^9, 
-   3.709039972604827*^9}},ExpressionUUID->"a1ee4b8e-287f-49a6-b0f7-\
-86f3a0484e5c"]
+   3.709039755045985*^9}, {3.7090399619410553`*^9, 3.709039972604827*^9}, {
+   3.8142014607898817`*^9, 3.814201635172916*^9}, {3.814201666317157*^9, 
+   3.814201847684259*^9}, {3.814201884060589*^9, 3.814201895315835*^9}, 
+   3.81420331244174*^9, {3.814203373808885*^9, 3.8142034158482857`*^9}, {
+   3.814203458336825*^9, 3.8142035001844187`*^9}, {3.8142038849432287`*^9, 
+   3.8142039498471003`*^9}, {3.814204103366411*^9, 3.8142041888142653`*^9}, {
+   3.814204221886999*^9, 3.814204294030819*^9}, {3.814204340166533*^9, 
+   3.81420436338216*^9}, 3.814204468246399*^9, {3.8142045320779743`*^9, 
+   3.814204552022479*^9}, {3.814204632637439*^9, 3.814204677198978*^9}, {
+   3.814204741292783*^9, 3.814204809196992*^9}, {3.814204845388831*^9, 
+   3.814204881084442*^9}, 3.81420497856525*^9, {3.814205035917027*^9, 
+   3.814205045814383*^9}, {3.814205084052383*^9, 3.81420514359622*^9}, {
+   3.814205175772447*^9, 3.814205176579534*^9}, {3.814205239844965*^9, 
+   3.814205267532531*^9}, {3.8142053243160887`*^9, 3.814205424412685*^9}, {
+   3.814205472099681*^9, 3.814205499243143*^9}, {3.8142057845304537`*^9, 
+   3.814205816594308*^9}, {3.8142059483625727`*^9, 3.8142059758418217`*^9}, {
+   3.814206308905068*^9, 3.8142063471212387`*^9}, {3.814206388880506*^9, 
+   3.814206435242331*^9}, {3.814206516361466*^9, 3.814206529544663*^9}, {
+   3.814206561833106*^9, 3.8142066551675386`*^9}, {3.814206690664708*^9, 
+   3.8142067228154984`*^9}, {3.814207679217746*^9, 3.814207716501603*^9}, {
+   3.814207862574398*^9, 3.8142078985099173`*^9}, {3.8142079881654177`*^9, 
+   3.814208042237118*^9}, {3.814208686979436*^9, 3.814208705244862*^9}, {
+   3.814208770772859*^9, 3.814208776244206*^9}, {3.814208808275775*^9, 
+   3.814208862571035*^9}, {3.8142091174427843`*^9, 3.814209131306466*^9}, {
+   3.814209203618112*^9, 3.814209206922196*^9}, {3.814209337650103*^9, 
+   3.8142094199953012`*^9}, {3.8142095122902317`*^9, 3.8142097105291643`*^9}, 
+   3.814209751506187*^9, {3.814209797802459*^9, 3.8142098537290707`*^9}, {
+   3.814209895232499*^9, 3.8142099389291067`*^9}, {3.8142100093685637`*^9, 
+   3.8142101200954742`*^9}, {3.8142101558561573`*^9, 3.814210231535862*^9}, {
+   3.8142103205282507`*^9, 3.8142104193774223`*^9}, {3.814210467383361*^9, 
+   3.8142105638625803`*^9}, 3.814210714608004*^9, {3.814210772309969*^9, 
+   3.8142108088466797`*^9}, {3.814210852126852*^9, 3.814210880693694*^9}, {
+   3.814220738382207*^9, 3.8142207870375147`*^9}, {3.814220844542395*^9, 
+   3.8142208490956287`*^9}, {3.81422094191669*^9, 3.81422096964535*^9}, {
+   3.8142210359978743`*^9, 3.814221221460403*^9}, {3.814221267853703*^9, 
+   3.81422128417367*^9}, {3.81422132582961*^9, 3.814221326413871*^9}, {
+   3.814221382796732*^9, 3.8142214644839373`*^9}, {3.814221598956221*^9, 
+   3.814221650123514*^9}, {3.814221709372513*^9, 3.8142217275405827`*^9}, {
+   3.814221824156341*^9, 3.814221829085388*^9}, {3.814221876411828*^9, 
+   3.814221876932795*^9}, {3.814259248310767*^9, 3.814259286270146*^9}, {
+   3.8142593432232323`*^9, 3.814259378678239*^9}, {3.814259931980358*^9, 
+   3.814259937931623*^9}, {3.8142600454112043`*^9, 3.814260080508984*^9}, {
+   3.814260133532015*^9, 3.814260136434869*^9}, {3.8142602796267014`*^9, 
+   3.8142602841301527`*^9}, {3.814260457442601*^9, 3.814260504897229*^9}, {
+   3.814260539497841*^9, 3.8142605417614098`*^9}, {3.814260587841302*^9, 
+   3.81426061355268*^9}, {3.814260657953703*^9, 3.814260659848844*^9}, {
+   3.814260690018001*^9, 3.814260738977028*^9}, {3.814260798785379*^9, 
+   3.814260839193513*^9}, {3.814260870601288*^9, 3.814260920521179*^9}, {
+   3.814260985473325*^9, 3.814261006207909*^9}, {3.8142610703118973`*^9, 
+   3.814261122896003*^9}, {3.814261159376141*^9, 3.814261202960538*^9}, {
+   3.814261245504425*^9, 3.814261290432639*^9}, {3.814261579023755*^9, 
+   3.814261589110765*^9}, {3.814261746479001*^9, 3.814261906182097*^9}, {
+   3.814262101193478*^9, 3.8142621171436996`*^9}, {3.814262215181365*^9, 
+   3.8142622249245777`*^9}, 3.81426236211766*^9, {3.814262395812676*^9, 
+   3.8142624295816813`*^9}, {3.814262663093108*^9, 3.814262664476725*^9}, {
+   3.8142629883273373`*^9, 3.814263010210154*^9}, {3.814263137203844*^9, 
+   3.814263185778359*^9}, {3.8142632930529613`*^9, 3.814263330619485*^9}, 
+   3.814263451308329*^9, 3.814263496004067*^9, 3.814263712355672*^9, {
+   3.814263751882967*^9, 3.81426376028292*^9}, {3.814263799331697*^9, 
+   3.814263844481987*^9}},
+ CellLabel->
+  "In[1865]:=",ExpressionUUID->"0da8d5d9-6437-4064-8ee3-7d4899870986"]
 },
-WindowSize->{1706, 1284},
-WindowMargins->{{24, Automatic}, {Automatic, 43}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1496, 1395},
+WindowMargins->{{1, Automatic}, {Automatic, 1}},
+FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"307d2550-9013-47c7-bfad-a6cc6a770559"
 ]
 (* End of Notebook Content *)
 
@@ -164,7 +454,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 6299, 127, 460, "Input",ExpressionUUID->"a1ee4b8e-287f-49a6-b0f7-86f3a0484e5c"]
+Cell[558, 20, 20799, 417, 1181, "Input",ExpressionUUID->"0da8d5d9-6437-4064-8ee3-7d4899870986"]
 }
 ]
 *)
