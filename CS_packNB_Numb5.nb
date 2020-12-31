@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6562,        166]
-NotebookOptionsPosition[      6248,        152]
-NotebookOutlinePosition[      6608,        168]
-CellTagsIndexPosition[      6565,        165]
+NotebookDataLength[     10006,        231]
+NotebookOptionsPosition[      9654,        217]
+NotebookOutlinePosition[     10052,        233]
+CellTagsIndexPosition[     10009,        230]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -72,38 +72,88 @@ Cell[BoxData[
          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"no", "=", 
-           RowBox[{"RandomInteger", "[", 
-            RowBox[{"{", 
-             RowBox[{"2", ",", "300"}], "}"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"sqrt", "=", 
-           RowBox[{"Sqrt", "[", "no", "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"pos", "=", 
            RowBox[{"RandomInteger", "[", 
             RowBox[{"{", 
              RowBox[{"1", ",", "6"}], "}"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"scen", "=", 
+           RowBox[{"RandomInteger", "[", 
+            RowBox[{"{", 
+             RowBox[{"1", ",", "3"}], "}"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"Switch", "[", 
+           RowBox[{
+           "scen", ",", "\[IndentingNewLine]", "1", ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"int", "=", 
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{"{", 
+                RowBox[{"2", ",", "99"}], "}"}], "]"}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"qNo", "=", 
+              RowBox[{"Sqrt", "[", "int", "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"qStr", "=", 
+              RowBox[{"Sqrt", "[", "int", "]"}]}], ";", "\[IndentingNewLine]",
+              "2"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"qNo", "=", "\[Pi]"}], ";", "\[IndentingNewLine]", 
+             RowBox[{"qStr", "=", "\"\<\[Pi]\>\""}], ";", 
+             "\[IndentingNewLine]", "3"}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"qNo", "=", 
+              RowBox[{"Divide", "@@", 
+               RowBox[{"RandomChoice", "[", 
+                RowBox[{"Permutations", "[", 
+                 RowBox[{
+                  RowBox[{"Range", "[", 
+                   RowBox[{"1", ",", "16"}], "]"}], ",", 
+                  RowBox[{"{", "2", "}"}]}], "]"}], "]"}]}]}], ";", 
+             "\[IndentingNewLine]", 
+             RowBox[{"qStr", "=", "qNo"}], ";"}]}], "\[IndentingNewLine]", 
+           "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"ord", "=", 
            RowBox[{
             RowBox[{"{", 
              RowBox[{
              "\"\<first\>\"", ",", "\"\<second\>\"", ",", "\"\<third\>\"", 
               ",", "\"\<fourth\>\"", ",", "\"\<fifth\>\"", ",", 
-              "\"\<sixth\>\""}], "}"}], "[", 
-            RowBox[{"[", "pos", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+              "\"\<sixth\>\""}], "}"}], "\[LeftDoubleBracket]", "pos", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
             RowBox[{
-            "\"\<What is the `1` digit in the square root of the number \
-`2`?\>\"", ",", "ord", ",", "no"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            "\"\<What is the `1` digit of the decimal form of `2`?\\n(Don't \
+count leading zeros.)\>\"", ",", "ord", ",", "qStr"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"rd", "=", 
+           RowBox[{"RealDigits", "[", 
+            RowBox[{"qNo", ",", "10", ",", "6"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"digLst", "=", 
+           RowBox[{"Join", "[", 
+            RowBox[{
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                "rd", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+                "<", "1"}], ",", 
+               RowBox[{"Table", "[", 
+                RowBox[{"0", ",", 
+                 RowBox[{"Abs", "[", 
+                  RowBox[{
+                  "rd", "\[LeftDoubleBracket]", "2", 
+                   "\[RightDoubleBracket]"}], "]"}]}], "]"}], ",", 
+               RowBox[{"{", "}"}]}], "]"}], ",", 
+             RowBox[{
+             "rd", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ansNo", "=", 
            RowBox[{
-            RowBox[{"RealDigits", "[", 
-             RowBox[{"sqrt", ",", "10", ",", "8"}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "pos"}], "]"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+           "digLst", "\[LeftDoubleBracket]", "pos", 
+            "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{"Prepend", "[", 
             RowBox[{
@@ -122,10 +172,10 @@ Cell[BoxData[
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -146,15 +196,30 @@ Cell[BoxData[
    3.732728657702118*^9, 3.73272866712532*^9}, {3.732728699078257*^9, 
    3.7327289275962687`*^9}, {3.732729096717001*^9, 3.732729118421084*^9}, {
    3.7327291698762703`*^9, 3.73272917392345*^9}, {3.732729211916239*^9, 
-   3.732729265307026*^9}, 
-   3.732729388420288*^9},ExpressionUUID->"3bfc0d13-993f-4d23-be91-\
-72c26fb63929"]
+   3.732729265307026*^9}, 3.732729388420288*^9, {3.818436168442358*^9, 
+   3.818436212560906*^9}, {3.8184362457612133`*^9, 3.818436294280933*^9}, {
+   3.818436330560837*^9, 3.818436441416894*^9}, {3.8184364815206203`*^9, 
+   3.818436848631013*^9}, {3.818436897399173*^9, 3.818436940495236*^9}, {
+   3.818436988751112*^9, 3.8184370082627993`*^9}, {3.818437301169943*^9, 
+   3.8184374157734547`*^9}, {3.818437478981495*^9, 3.8184374915414133`*^9}, {
+   3.818437560669362*^9, 3.818437561156707*^9}, {3.818437595685041*^9, 
+   3.818437664948859*^9}, {3.8184377474000463`*^9, 3.818437749368012*^9}, {
+   3.818437779368353*^9, 3.8184378070315313`*^9}, {3.8184383766958323`*^9, 
+   3.8184384032881327`*^9}, {3.8184384341321917`*^9, 3.818438527879637*^9}, {
+   3.818438745016389*^9, 3.8184388428477793`*^9}, {3.818438987903685*^9, 
+   3.818439155304119*^9}, {3.8184392256599894`*^9, 3.81843947944221*^9}, {
+   3.818439601650419*^9, 3.818439601873612*^9}, {3.8184396608502607`*^9, 
+   3.8184396653211946`*^9}, {3.81843979861873*^9, 3.8184398249933567`*^9}, {
+   3.8184401641212997`*^9, 3.818440178255917*^9}, {3.8184403439921618`*^9, 
+   3.818440349503768*^9}, {3.818440386943981*^9, 3.818440403447219*^9}},
+ CellLabel->
+  "In[546]:=",ExpressionUUID->"8f2ee22c-d9b8-4917-8c8c-73d229ecc286"]
 },
 WindowSize->{1236, 1304},
 WindowMargins->{{0, Automatic}, {30, Automatic}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"9da5df96-afd8-486a-922c-1cdeeaba9d87"
 ]
 (* End of Notebook Content *)
 
@@ -167,7 +232,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 5686, 130, 535, "Input",ExpressionUUID->"3bfc0d13-993f-4d23-be91-72c26fb63929"]
+Cell[558, 20, 9092, 195, 808, "Input",ExpressionUUID->"8f2ee22c-d9b8-4917-8c8c-73d229ecc286"]
 }
 ]
 *)
