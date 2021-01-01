@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     64271,       1066]
-NotebookOptionsPosition[     63978,       1053]
-NotebookOutlinePosition[     64315,       1068]
-CellTagsIndexPosition[     64272,       1065]
+NotebookDataLength[     64584,       1067]
+NotebookOptionsPosition[     64231,       1053]
+NotebookOutlinePosition[     64628,       1069]
+CellTagsIndexPosition[     64585,       1066]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,7 +38,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -54,7 +55,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association["Achille Lauro" -> {
@@ -366,45 +367,30 @@ Cell[BoxData[
                 RowBox[{"Column", "[", 
                  RowBox[{"{", "\[IndentingNewLine]", 
                   RowBox[{
-                   RowBox[{"GeoGraphics", "[", 
+                   RowBox[{"GeoListPlot", "[", 
                     RowBox[{
-                    RowBox[{"{", 
+                    RowBox[{"Partition", "[", 
                     RowBox[{
-                    RowBox[{"GeoMarker", "[", 
-                    RowBox[{
+                    RowBox[{"Values", "[", 
                     RowBox[{"h1", "\[LeftDoubleBracket]", 
-                    RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{"\"\<Color\>\"", "\[Rule]", "Blue"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"GeoMarker", "[", 
-                    RowBox[{
-                    RowBox[{"h1", "\[LeftDoubleBracket]", 
-                    RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{"\"\<Color\>\"", "\[Rule]", "Red"}]}], "]"}], ",", 
-                    RowBox[{"GeoMarker", "[", 
-                    RowBox[{
-                    RowBox[{"h1", "\[LeftDoubleBracket]", 
-                    RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{"\"\<Color\>\"", "\[Rule]", "Gray"}]}], "]"}], 
-                    ",", 
-                    RowBox[{"GeoMarker", "[", 
-                    RowBox[{
-                    RowBox[{"h1", "\[LeftDoubleBracket]", 
-                    RowBox[{"4", ",", "3"}], "\[RightDoubleBracket]"}], ",", 
-                    RowBox[{"\"\<Color\>\"", "\[Rule]", "Orange"}]}], "]"}]}],
-                     "}"}], ",", 
+                    RowBox[{"All", ",", "3"}], "\[RightDoubleBracket]"}], 
+                    "]"}], ",", "1"}], "]"}], ",", 
                     RowBox[{
                     "GeoBackground", "\[Rule]", "\"\<CountryBorders\>\""}], 
                     ",", 
                     RowBox[{"GeoRangePadding", "\[Rule]", 
                     RowBox[{"Scaled", "[", "0.15", "]"}]}], ",", 
-                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"PlotMarkers", "\[Rule]", "GeoMarker"}], ",", 
+                    RowBox[{"PlotLegends", "\[Rule]", "None"}], ",", 
+                    RowBox[{"PlotStyle", "\[Rule]", 
                     RowBox[{"{", 
+                    RowBox[{"Blue", ",", "Red", ",", "Gray", ",", "Orange"}], 
+                    "}"}]}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}], ",", 
+                   "\[IndentingNewLine]", 
+                   RowBox[{"Pane", "[", 
                     RowBox[{
-                    RowBox[{"UpTo", "[", "480", "]"}], ",", 
-                    RowBox[{"UpTo", "[", "500", "]"}]}], "}"}]}]}], "]"}], 
-                   ",", "\[IndentingNewLine]", 
-                   RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+                    RowBox[{"Grid", "[", "\[IndentingNewLine]", 
                     RowBox[{
                     RowBox[{"{", 
                     RowBox[{"{", 
@@ -457,8 +443,10 @@ Cell[BoxData[
                     RowBox[{"{", 
                     RowBox[{"Orange", ",", "24"}], "}"}]}], "]"}]}], "}"}], 
                     "}"}], ",", "\[IndentingNewLine]", 
-                    RowBox[{"ItemSize", "\[Rule]", "9.5"}]}], "]"}]}], "}"}], 
-                 "]"}], "]"}], "/.", 
+                    RowBox[{"ItemSize", "\[Rule]", "11"}]}], "]"}], ",", 
+                    RowBox[{"Alignment", "\[Rule]", "Center"}], ",", 
+                    RowBox[{"ImageSize", "\[Rule]", "480"}]}], "]"}]}], "}"}],
+                  "]"}], "]"}], "/.", 
                RowBox[{"h1", "\[Rule]", "data"}]}], "]"}], "]"}], "]"}]}], 
           ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
           RowBox[{"picTransit", "=", 
@@ -473,7 +461,7 @@ Cell[BoxData[
           RowBox[{
           "q", "=", 
            "\"\<The map shows the locations and years sunk of four \
-shipwrecks. Which is marked blue?\>\""}], ";", "\[IndentingNewLine]", 
+shipwrecks. Which is blue?\>\""}], ";", "\[IndentingNewLine]", 
           RowBox[{"shipNames", "=", 
            RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"shipTypes", "=", 
@@ -539,7 +527,8 @@ shipwrecks. Which is marked blue?\>\""}], ";", "\[IndentingNewLine]",
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"List","ListIcon",GridBox[{{
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -557,7 +546,7 @@ shipwrecks. Which is marked blue?\>\""}], ";", "\[IndentingNewLine]",
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               {{"1927", "Charles Lindbergh"}, {"1928", "Walter Chrysler"}, {
@@ -1047,14 +1036,26 @@ Magazine. Which was for \>\"", "<>",
    3.764703110207427*^9}, {3.7647031427602377`*^9, 3.7647031559993687`*^9}, {
    3.7647032044765167`*^9, 3.764703278214859*^9}, 3.768921974399444*^9, {
    3.76892213207421*^9, 3.7689221610631533`*^9}, {3.768922198079298*^9, 
-   3.768922392872633*^9}},
- CellLabel->
-  "In[4849]:=",ExpressionUUID->"ac18e84c-a0b9-436d-9d19-0b00e65a5d3c"]
+   3.768922392872633*^9}, 3.818495333268023*^9, {3.8185079062728043`*^9, 
+   3.8185079705752373`*^9}, {3.818509267700436*^9, 3.818509388171829*^9}, {
+   3.818509622573977*^9, 3.818509659828286*^9}, {3.818509788038414*^9, 
+   3.818509796460664*^9}, {3.8185098293834352`*^9, 3.818509879009103*^9}, {
+   3.8185099231639557`*^9, 3.8185100167163677`*^9}, {3.818510048963903*^9, 
+   3.818510069820319*^9}, {3.8185101994052467`*^9, 3.818510201918809*^9}, {
+   3.818510335797715*^9, 3.8185103491908827`*^9}, {3.8185104999314117`*^9, 
+   3.818510541599977*^9}, {3.818510747274179*^9, 3.818510747520171*^9}, 
+   3.818510880202971*^9, {3.818510959970311*^9, 3.8185109631768713`*^9}, {
+   3.818511006809074*^9, 3.818511024665354*^9}, {3.81851109134499*^9, 
+   3.818511117713153*^9}, {3.818511176034895*^9, 3.818511182328999*^9}, 
+   3.8185113353474207`*^9, {3.818511373511676*^9, 
+   3.8185113772177477`*^9}},ExpressionUUID->"ac18e84c-a0b9-436d-9d19-\
+0b00e65a5d3c"]
 },
 WindowSize->{1471, 1310},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"51c13fe0-1a57-4fe4-b4e3-86b7e39121eb"
 ]
 (* End of Notebook Content *)
 
@@ -1067,7 +1068,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 63416, 1031, 805, "Input",ExpressionUUID->"ac18e84c-a0b9-436d-9d19-0b00e65a5d3c"]
+Cell[558, 20, 63669, 1031, 805, "Input",ExpressionUUID->"ac18e84c-a0b9-436d-9d19-0b00e65a5d3c"]
 }
 ]
 *)
