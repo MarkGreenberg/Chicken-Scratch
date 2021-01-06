@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13613,        276]
-NotebookOptionsPosition[     13263,        262]
-NotebookOutlinePosition[     13658,        278]
-CellTagsIndexPosition[     13615,        275]
+NotebookDataLength[     14746,        298]
+NotebookOptionsPosition[     14393,        284]
+NotebookOutlinePosition[     14791,        300]
+CellTagsIndexPosition[     14748,        297]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -115,45 +115,60 @@ Cell[BoxData[
          "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
          "2", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{
-          "q", "=", 
-           "\"\<Which of these sets contains only coterminal angles?\>\""}], 
-          ";", "\[IndentingNewLine]", 
-          RowBox[{"ansBase", "=", 
-           RowBox[{"RandomInteger", "[", "360", "]"}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"ansMult", "=", 
-           RowBox[{"RandomSample", "[", 
+          RowBox[{"mat", "=", 
+           RowBox[{"Partition", "[", 
             RowBox[{
-             RowBox[{"DeleteCases", "[", 
+             RowBox[{"Partition", "[", 
               RowBox[{
-               RowBox[{"Range", "[", 
+               RowBox[{"RandomInteger", "[", 
                 RowBox[{
-                 RowBox[{"-", "16"}], ",", "16"}], "]"}], ",", "0"}], "]"}], 
-             ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"ansTrio", "=", 
-           RowBox[{"ansBase", "+", 
-            RowBox[{"360", "*", "ansMult"}]}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"badCirc", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{
-             RowBox[{"Range", "[", 
-              RowBox[{"200", ",", "500"}], "]"}], ",", "3"}], "]"}]}], ";", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"-", "10"}], ",", "10"}], "}"}], ",", "16"}], 
+                "]"}], ",", "2"}], "]"}], ",", "2"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"dis", "=", 
+          RowBox[{"eig", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"ansBase", "+", 
-              RowBox[{"badCirc", "*", "#"}]}], "&"}], "/@", "ansMult"}]}], 
+             RowBox[{"Eigenvalues", "[", "#", "]"}], "&"}], "/@", "mat"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<What are the eigenvalues of this matrix?\\n`1`\>\"", ",", 
+             RowBox[{"MatrixForm", "[", 
+              RowBox[{
+              "mat", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dis", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Subsets", "[", 
+               RowBox[{
+                RowBox[{"Flatten", "[", "eig", "]"}], ",", 
+                RowBox[{"{", "2", "}"}]}], "]"}], "]"}], ",", "4"}], "]"}]}], 
           ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"Quantity", "[", 
-              RowBox[{"#", ",", "\"\<Degrees\>\""}], "]"}], "&"}], "/@", 
-            RowBox[{"Prepend", "[", 
-             RowBox[{"dis", ",", "ansTrio"}], "]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"StringForm", "[", 
+              RowBox[{"\"\<`1` and `2`\>\"", ",", 
+               RowBox[{
+               "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+               ",", 
+               RowBox[{
+               "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+              "]"}], "&"}], "/@", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Prepend", "[", 
+                RowBox[{"dis", ",", 
+                 RowBox[{
+                 "eig", "\[LeftDoubleBracket]", "1", 
+                  "\[RightDoubleBracket]"}]}], "]"}], "]"}], ",", "4"}], 
+             "]"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -257,12 +272,19 @@ Cell[BoxData[
    3.795983108590477*^9, 3.795983172894569*^9}, {3.7959832424555387`*^9, 
    3.795983245494437*^9}, {3.795983282215074*^9, 3.795983282823597*^9}, {
    3.795983455213216*^9, 3.795983482445882*^9}, {3.795983703073738*^9, 
-   3.795983704039446*^9}},ExpressionUUID->"18d7be30-d100-4e13-b092-\
-f9687991fee9"]
+   3.795983704039446*^9}, {3.818936150015006*^9, 3.818936296970817*^9}, {
+   3.8189363336516523`*^9, 3.8189363463630543`*^9}, {3.81893644356243*^9, 
+   3.8189365025453577`*^9}, {3.818936879095272*^9, 3.818937019910478*^9}, {
+   3.818937075934641*^9, 3.8189372387204857`*^9}, {3.818937336484948*^9, 
+   3.818937443763426*^9}, {3.8189398061266327`*^9, 3.8189399364716787`*^9}, {
+   3.818939985495822*^9, 3.818940075407757*^9}, {3.818940390312841*^9, 
+   3.818940395484251*^9}, {3.818940487609296*^9, 3.818940497536919*^9}},
+ CellLabel->
+  "In[696]:=",ExpressionUUID->"18d7be30-d100-4e13-b092-f9687991fee9"]
 },
 WindowSize->{1207, 1354},
 WindowMargins->{{-5, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"dbb1e473-7188-4ed1-8e3f-d9f0232f64c8"
 ]
@@ -277,7 +299,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12701, 240, 723, "Input",ExpressionUUID->"18d7be30-d100-4e13-b092-f9687991fee9"]
+Cell[558, 20, 13831, 262, 681, "Input",ExpressionUUID->"18d7be30-d100-4e13-b092-f9687991fee9"]
 }
 ]
 *)
