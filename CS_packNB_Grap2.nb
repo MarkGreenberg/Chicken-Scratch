@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29208,        642]
-NotebookOptionsPosition[     28910,        629]
-NotebookOutlinePosition[     29252,        644]
-CellTagsIndexPosition[     29209,        641]
+NotebookDataLength[     30487,        666]
+NotebookOptionsPosition[     30134,        652]
+NotebookOutlinePosition[     30531,        668]
+CellTagsIndexPosition[     30488,        665]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -91,9 +91,9 @@ Cell[BoxData[
                     RowBox[{"triFun", ",", 
                     RowBox[{"cut", "<", "x", "<", "max"}]}], "}"}], ",", 
                    RowBox[{"{", 
-                    RowBox[{"x", ",", "cut"}], "}"}]}], "]"}]}], "]"}], "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}]}]}], "]"}], ";", 
-          "\[IndentingNewLine]", 
+                    RowBox[{"x", ",", "cut"}], "}"}]}], "]"}]}], "]"}], 
+               "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}]}]}], 
+           "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"aboveQ", "=", 
            RowBox[{"If", "[", 
             RowBox[{
@@ -201,11 +201,13 @@ probability that `1` will be `2` than `3`?\>\"", ",",
                  RowBox[{"{", 
                   RowBox[{"1", ",", "100"}], "}"}], "]"}], ">", "97"}], ",", 
                RowBox[{
-                RowBox[{"dists", "[", 
-                 RowBox[{"[", "1", "]"}], "]"}], "=", 
                 RowBox[{
-                 RowBox[{"dists", "[", 
-                  RowBox[{"[", "1", "]"}], "]"}], "+", "1"}]}]}], "]"}], ";", 
+                "dists", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "=", 
+                RowBox[{
+                 RowBox[{
+                 "dists", "\[LeftDoubleBracket]", "1", 
+                  "\[RightDoubleBracket]"}], "+", "1"}]}]}], "]"}], ";", 
              "\[IndentingNewLine]", 
              RowBox[{"If", "[", 
               RowBox[{
@@ -214,11 +216,13 @@ probability that `1` will be `2` than `3`?\>\"", ",",
                  RowBox[{"{", 
                   RowBox[{"1", ",", "100"}], "}"}], "]"}], ">", "97"}], ",", 
                RowBox[{
-                RowBox[{"dists", "[", 
-                 RowBox[{"[", "2", "]"}], "]"}], "=", 
                 RowBox[{
-                 RowBox[{"dists", "[", 
-                  RowBox[{"[", "2", "]"}], "]"}], "-", "1"}]}]}], "]"}], ";", 
+                "dists", "\[LeftDoubleBracket]", "2", 
+                 "\[RightDoubleBracket]"}], "=", 
+                RowBox[{
+                 RowBox[{
+                 "dists", "\[LeftDoubleBracket]", "2", 
+                  "\[RightDoubleBracket]"}], "-", "1"}]}]}], "]"}], ";", 
              "\[IndentingNewLine]", 
              RowBox[{"choices", "=", 
               RowBox[{"DeleteDuplicates", "[", 
@@ -241,10 +245,10 @@ probability that `1` will be `2` than `3`?\>\"", ",",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
            RowBox[{"Plot", "[", 
@@ -348,41 +352,54 @@ probability that `1` will be `2` than `3`?\>\"", ",",
                   "\[RightDoubleBracket]"}]}], "]"}], ",", "datCt"}], "]"}]}],
              "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"DateHistogram", "[", 
+           RowBox[{
+            RowBox[{"DateHistogram", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"data1", ",", "data2"}], "}"}], ",", "\"\<Month\>\"", 
+              ",", "\[IndentingNewLine]", 
+              RowBox[{"ChartStyle", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"RGBColor", "[", 
+                    RowBox[{".1", ",", "0", ",", ".8", ",", ".5"}], "]"}], 
+                   ",", 
+                   RowBox[{"RGBColor", "[", 
+                    RowBox[{"0", ",", ".8", ",", ".1", ",", ".5"}], "]"}]}], 
+                  "}"}], ",", "None"}], "}"}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"DateTicksFormat", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<MonthNameShort\>\"", ",", "\"\< '\>\"", ",", 
+                 "\"\<YearShort\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
+              RowBox[{"AxesLabel", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"\"\<Months\>\"", ",", "\"\<sales\>\""}], "}"}]}], 
+              ",", 
+              RowBox[{"LabelStyle", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{"Black", ",", "12"}], "}"}]}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"AspectRatio", "\[Rule]", 
+               FractionBox["9", "8"]}], ",", 
+              RowBox[{"ImageSize", "\[Rule]", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", "480", "}"}], ",", 
+                 RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], "/.", 
             RowBox[{
              RowBox[{"{", 
-              RowBox[{"data1", ",", "data2"}], "}"}], ",", "\"\<Month\>\"", 
-             ",", "\[IndentingNewLine]", 
-             RowBox[{"ChartStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"RGBColor", "[", 
-                   RowBox[{".1", ",", "0", ",", ".8", ",", ".5"}], "]"}], ",", 
-                  RowBox[{"RGBColor", "[", 
-                   RowBox[{"0", ",", ".8", ",", ".1", ",", ".5"}], "]"}]}], 
-                 "}"}], ",", "None"}], "}"}]}], ",", "\[IndentingNewLine]", 
-             RowBox[{"DateTicksFormat", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-               "\"\<MonthNameShort\>\"", ",", "\"\< '\>\"", ",", 
-                "\"\<YearShort\>\""}], "}"}]}], ",", "\[IndentingNewLine]", 
-             RowBox[{"AxesLabel", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"\"\<Months\>\"", ",", "\"\<sales\>\""}], "}"}]}], ",", 
-             RowBox[{"LabelStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"Black", ",", "12"}], "}"}]}], ",", 
-             "\[IndentingNewLine]", 
-             RowBox[{"AspectRatio", "\[Rule]", 
-              FractionBox["9", "8"]}], ",", 
-             RowBox[{"ImageSize", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"{", "480", "}"}], ",", 
-                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+              RowBox[{"a_", ",", "b_String", ",", "c_"}], "}"}], "\[Rule]", 
+             RowBox[{"{", 
+              RowBox[{"a", ",", 
+               RowBox[{"Rotate", "[", 
+                RowBox[{
+                 RowBox[{"Style", "[", 
+                  RowBox[{"b", ",", "15"}], "]"}], ",", 
+                 FractionBox["\[Pi]", "2"]}], "]"}], ",", "c"}], "}"}]}]}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"bins", "=", 
            RowBox[{"Cases", "[", 
             RowBox[{"pic", ",", 
@@ -424,8 +441,8 @@ probability that `1` will be `2` than `3`?\>\"", ",",
             RowBox[{
              RowBox[{
              "q", "=", 
-              "\"\<What month had the greatest combined sales, green + \
-blue?\>\""}], ";", "\[IndentingNewLine]", 
+              "\"\<What month had the greatest combined sales? (green + blue)\
+\>\""}], ";", "\[IndentingNewLine]", 
              RowBox[{"ansDt", "=", 
               RowBox[{
                RowBox[{"Keys", "[", 
@@ -439,8 +456,8 @@ blue?\>\""}], ";", "\[IndentingNewLine]",
             RowBox[{
              RowBox[{
              "q", "=", 
-              "\"\<What month had greatest green dominance, green - \
-blue?\>\""}], ";", "\[IndentingNewLine]", 
+              "\"\<What month had greatest green dominance? (green - \
+blue)\>\""}], ";", "\[IndentingNewLine]", 
              RowBox[{
               RowBox[{"gDom", "[", 
                RowBox[{"{", "a_", "}"}], "]"}], ":=", 
@@ -464,8 +481,8 @@ blue?\>\""}], ";", "\[IndentingNewLine]",
             RowBox[{
              RowBox[{
              "q", "=", 
-              "\"\<What month had greatest blue dominance, blue - \
-green?\>\""}], ";", "\[IndentingNewLine]", 
+              "\"\<What month had greatest blue dominance? (blue - \
+green)\>\""}], ";", "\[IndentingNewLine]", 
              RowBox[{
               RowBox[{"bDom", "[", 
                RowBox[{"{", "a_", "}"}], "]"}], ":=", 
@@ -489,8 +506,8 @@ green?\>\""}], ";", "\[IndentingNewLine]",
             RowBox[{
              RowBox[{
              "q", "=", 
-              "\"\<Month with the greatest shared sales level, green AND \
-blue?\>\""}], ";", "\[IndentingNewLine]", 
+              "\"\<Month with the greatest shared sales level? (green AND \
+blue)\>\""}], ";", "\[IndentingNewLine]", 
              RowBox[{
               RowBox[{"minFun", "[", 
                RowBox[{"{", "a_", "}"}], "]"}], ":=", 
@@ -623,14 +640,21 @@ blue?\>\""}], ";", "\[IndentingNewLine]",
    3.7910405329507093`*^9, 3.7910406184218473`*^9}, {3.791040919174605*^9, 
    3.7910409380785913`*^9}, {3.79110700268478*^9, 3.791107036491048*^9}, {
    3.7911117242387877`*^9, 3.791111866748414*^9}, {3.791134952223721*^9, 
-   3.7911349828354588`*^9}},
+   3.7911349828354588`*^9}, {3.819467531217792*^9, 3.8194676174842653`*^9}, {
+   3.819467711785212*^9, 3.819467754375238*^9}, {3.81946829783138*^9, 
+   3.819468331306797*^9}, {3.8194683805664682`*^9, 3.819468386030113*^9}, {
+   3.819468467190919*^9, 3.8194686254209747`*^9}, {3.819469332101157*^9, 
+   3.8194693368441553`*^9}, {3.819469406348277*^9, 3.819469453747611*^9}, {
+   3.819469524816216*^9, 3.8194695439636517`*^9}, {3.8194697742119102`*^9, 
+   3.819469856587078*^9}, {3.8194699080530987`*^9, 3.819469932084551*^9}},
  CellLabel->
-  "In[838]:=",ExpressionUUID->"0bdb3443-98a6-4725-b281-307e6e7dd100"]
+  "In[544]:=",ExpressionUUID->"0bdb3443-98a6-4725-b281-307e6e7dd100"]
 },
 WindowSize->{1399, 1395},
 WindowMargins->{{1, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (September 29, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"b8a4b2ae-f4f2-4c2c-873e-986e0f6320c9"
 ]
 (* End of Notebook Content *)
 
@@ -643,7 +667,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 28348, 607, 1736, "Input",ExpressionUUID->"0bdb3443-98a6-4725-b281-307e6e7dd100"]
+Cell[558, 20, 29572, 630, 1736, "Input",ExpressionUUID->"0bdb3443-98a6-4725-b281-307e6e7dd100"]
 }
 ]
 *)
