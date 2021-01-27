@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12029,        263]
-NotebookOptionsPosition[     11681,        249]
-NotebookOutlinePosition[     12074,        265]
-CellTagsIndexPosition[     12031,        262]
+NotebookDataLength[     15141,        327]
+NotebookOptionsPosition[     14660,        310]
+NotebookOutlinePosition[     15057,        326]
+CellTagsIndexPosition[     15014,        323]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -134,8 +136,19 @@ pressure of `2` bars, then what is its volume at a pressure of `3` bars?\>\"",
            RowBox[{"StringForm", "[", 
             RowBox[{
             "\"\<What is the centripetal acceleration of an object traveling \
-at `1` around a `2` diameter circular path?\\n`3`\>\"", ",", "speed", ",", 
-             RowBox[{"2", "*", "radius"}], ",", 
+at `1` around a `2` diameter circular path?\\n`3`\>\"", ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{"ToString", "[", "speed", "]"}], ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{"ToString", "[", 
+                RowBox[{"2", "*", "radius"}], "]"}], ",", 
+               RowBox[{"\"\< meters\>\"", "\[Rule]", "\"\<-meter\>\""}]}], 
+              "]"}], ",", "\[IndentingNewLine]", 
              RowBox[{"Style", "[", 
               RowBox[{
                RowBox[{"Hold", "[", 
@@ -165,7 +178,7 @@ at `1` around a `2` diameter circular path?\\n`3`\>\"", ",", "speed", ",",
                    RowBox[{"QuantityMagnitude", "[", "ansQua", "]"}]}]}], 
                  "]"}], ",", "4"}], "]"}], ",", ".01"}], "]"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"choices", "=", 
+          RowBox[{"raws", "=", 
            RowBox[{"Take", "[", 
             RowBox[{
              RowBox[{"DeleteDuplicates", "[", 
@@ -179,6 +192,21 @@ at `1` around a `2` diameter circular path?\\n`3`\>\"", ",", "speed", ",",
                     SuperscriptBox["\"\<Seconds\>\"", "2"]}]}], "]"}], "&"}], 
                  "/@", "disNo"}], ",", "ansQua"}], "]"}], "]"}], ",", "4"}], 
             "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"StringForm", "[", 
+               RowBox[{"\"\<`1` `2`\>\"", ",", 
+                RowBox[{"StringReplace", "[", 
+                 RowBox[{
+                  RowBox[{"ToString", "[", 
+                   RowBox[{"QuantityMagnitude", "[", "#", "]"}], "]"}], ",", 
+                  RowBox[{
+                   RowBox[{"\"\<.\>\"", "~~", "EndOfString"}], "\[Rule]", 
+                   "\"\<\>\""}]}], "]"}], ",", 
+                SuperscriptBox["\"\<m/s\>\"", "2"]}], "]"}], "&"}], ")"}], "/@",
+             "raws"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -243,13 +271,46 @@ at `1` around a `2` diameter circular path?\\n`3`\>\"", ",", "speed", ",",
    3.814105205817347*^9}, {3.814105249209179*^9, 3.8141052827847424`*^9}, 
    3.81410532664937*^9, {3.814105361896963*^9, 3.814105364753702*^9}, {
    3.8141055235533648`*^9, 3.8141055336804323`*^9}, {3.814105678449037*^9, 
-   3.8141056789674463`*^9}, {3.8141058036569853`*^9, 3.814105804279286*^9}},
+   3.8141056789674463`*^9}, {3.8141058036569853`*^9, 3.814105804279286*^9}, {
+   3.820758882145002*^9, 3.820758936870242*^9}, {3.820758975125741*^9, 
+   3.82075898326926*^9}, {3.8207590749572363`*^9, 3.820759110604185*^9}, {
+   3.8207592183793097`*^9, 3.8207593490658703`*^9}, {3.820759391737673*^9, 
+   3.820759487344565*^9}, {3.820760825643821*^9, 3.8207608603280163`*^9}, {
+   3.8207609084189377`*^9, 3.820760949506618*^9}, {3.8207611298107347`*^9, 
+   3.820761134313922*^9}, {3.820761218194973*^9, 3.820761252081594*^9}, {
+   3.8207615348972187`*^9, 3.820761553304331*^9}, {3.8207616064485407`*^9, 
+   3.8207618306877213`*^9}, {3.8207618928162823`*^9, 3.8207618983115*^9}, {
+   3.820761936447744*^9, 3.820761950687181*^9}, {3.820762021437142*^9, 
+   3.8207620218314037`*^9}, {3.820762053383232*^9, 3.820762057206592*^9}, 
+   3.820762123667322*^9},
  CellLabel->
-  "In[1290]:=",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"]
+  "In[255]:=",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Phys3\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Phys3"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Phys3"],
+  
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{{3.8207589083002234`*^9, 3.820758938084773*^9}, 
+   3.820758985314884*^9, 3.820759081950286*^9, 3.820759113180751*^9, {
+   3.8207592059205*^9, 3.820759208774959*^9}, {3.8207594955783157`*^9, 
+   3.820759533555963*^9}, 3.820761069761791*^9, 3.8207611362512827`*^9, {
+   3.820761180609091*^9, 3.820761190864543*^9}, 3.820761254095656*^9, {
+   3.820761804527698*^9, 3.820761833655074*^9}, 3.8207619025711403`*^9, 
+   3.8207619524460278`*^9, 3.8207620636508636`*^9, 3.820762127416862*^9, 
+   3.820762513547658*^9},
+ CellLabel->
+  "Out[255]=",ExpressionUUID->"fcc79130-c1ab-4716-87f3-1bda9f240a31"]
+}, Open  ]]
 },
-WindowSize->{1856, 1050},
+WindowSize->{1405, 1312},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"0a656bc4-3de8-4bb4-b6e1-47483fa7f5f4"
 ]
@@ -264,7 +325,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 11119, 227, 666, "Input",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"]
+Cell[CellGroupData[{
+Cell[580, 22, 13074, 264, 801, "Input",ExpressionUUID->"fd240a7a-f88f-413b-99f5-44ff07e0ae7c"],
+Cell[13657, 288, 987, 19, 60, "Output",ExpressionUUID->"fcc79130-c1ab-4716-87f3-1bda9f240a31"]
+}, Open  ]]
 }
 ]
 *)
