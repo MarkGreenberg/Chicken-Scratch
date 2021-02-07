@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     29627,        693]
-NotebookOptionsPosition[     29278,        679]
-NotebookOutlinePosition[     29671,        695]
-CellTagsIndexPosition[     29628,        692]
+NotebookDataLength[     30468,        710]
+NotebookOptionsPosition[     30115,        696]
+NotebookOutlinePosition[     30512,        712]
+CellTagsIndexPosition[     30469,        709]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -133,13 +133,17 @@ expression `4`?\>\"", ",",
           RowBox[{"inp", "=", 
            RowBox[{"If", "[", 
             RowBox[{
-             RowBox[{"funNo", "\[Equal]", "7"}], ",", 
-             RowBox[{"RandomInteger", "[", "25", "]"}], ",", 
-             RowBox[{"RandomInteger", "[", 
-              RowBox[{"{", 
-               RowBox[{
-                RowBox[{"-", "10"}], ",", "10"}], "}"}], "]"}]}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
+             RowBox[{
+              RowBox[{"funNo", "\[Equal]", "7"}], "||", 
+              RowBox[{"funNo", "\[Equal]", "9"}]}], ",", 
+             RowBox[{"RandomInteger", "[", "20", "]"}], ",", 
+             RowBox[{
+              RowBox[{"RandomInteger", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"-", "10"}], ",", "10"}], "}"}], "]"}], "/.", " ", 
+              RowBox[{"0", "\[Rule]", "12"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"err", "=", 
            RowBox[{
             RowBox[{"RandomInteger", "[", 
@@ -220,8 +224,7 @@ expression `4`?\>\"", ",",
              "&"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{
            RowBox[{
-           "inv", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "=",
-            
+           "inv", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "=", 
            RowBox[{"Quiet", "[", 
             RowBox[{"InverseFunction", "[", 
              RowBox[{
@@ -585,18 +588,25 @@ expression `4`?\>\"", ",",
               RowBox[{"InverseFunction", "[", "f", "]"}], "[", "inp", "]"}]}],
              "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{"Take", "[", 
-            RowBox[{
-             RowBox[{"DeleteDuplicates", "[", 
-              RowBox[{"Prepend", "[", 
-               RowBox[{
-                RowBox[{"RandomSample", "[", 
-                 RowBox[{"Join", "[", 
-                  RowBox[{"dis", ",", "sol"}], "]"}], "]"}], ",", 
+           RowBox[{
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Prepend", "[", 
                 RowBox[{
-                "sol", "\[LeftDoubleBracket]", "funNo", 
-                 "\[RightDoubleBracket]"}]}], "]"}], "]"}], ",", "4"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
+                 RowBox[{"RandomSample", "[", 
+                  RowBox[{"Join", "[", 
+                   RowBox[{"dis", ",", "sol"}], "]"}], "]"}], ",", 
+                 RowBox[{
+                 "sol", "\[LeftDoubleBracket]", "funNo", 
+                  "\[RightDoubleBracket]"}]}], "]"}], "]"}], ",", "4"}], 
+             "]"}], "/.", 
+            RowBox[{"ComplexInfinity", "\[Rule]", 
+             RowBox[{
+              RowBox[{
+              "sol", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              "+", 
+              RowBox[{"11", "/", "7"}]}]}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -674,12 +684,19 @@ expression `4`?\>\"", ",",
    3.8107522274065037`*^9}, 3.8107522603668337`*^9, {3.810752321984385*^9, 
    3.8107523226467123`*^9}, {3.810753509144157*^9, 3.8107535933796864`*^9}, {
    3.810753623916278*^9, 3.81075364240322*^9}, {3.810754860899275*^9, 
-   3.81075487207409*^9}, {3.8107553268432083`*^9, 3.810755327130533*^9}},
- CellLabel->"In[81]:=",ExpressionUUID->"d94aa532-7250-4b4a-bfb9-b7268477c86c"]
+   3.81075487207409*^9}, {3.8107553268432083`*^9, 3.810755327130533*^9}, {
+   3.821696374014546*^9, 3.8216964299655857`*^9}, {3.821696481981574*^9, 
+   3.82169650615766*^9}, {3.821696716197421*^9, 3.821696730439102*^9}, 
+   3.8216968742140017`*^9, {3.821696927782053*^9, 3.8216969606063223`*^9}, {
+   3.821698891425537*^9, 3.8216989347359343`*^9}, {3.8216992894242764`*^9, 
+   3.821699292887182*^9}, {3.821699893359655*^9, 3.82169991439861*^9}, 
+   3.821700855499137*^9},
+ CellLabel->
+  "In[177]:=",ExpressionUUID->"d94aa532-7250-4b4a-bfb9-b7268477c86c"]
 },
 WindowSize->{1709, 1312},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"035e672a-9569-4c60-aa8f-a659b62bca0d"
 ]
@@ -694,7 +711,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 28716, 657, 1920, "Input",ExpressionUUID->"d94aa532-7250-4b4a-bfb9-b7268477c86c"]
+Cell[558, 20, 29553, 674, 1920, "Input",ExpressionUUID->"d94aa532-7250-4b4a-bfb9-b7268477c86c"]
 }
 ]
 *)
