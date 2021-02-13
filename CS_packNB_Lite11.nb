@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     24851,        494]
-NotebookOptionsPosition[     24558,        481]
-NotebookOutlinePosition[     24895,        496]
-CellTagsIndexPosition[     24852,        493]
+NotebookDataLength[     34323,        618]
+NotebookOptionsPosition[     33841,        601]
+NotebookOutlinePosition[     34238,        617]
+CellTagsIndexPosition[     34195,        614]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -38,7 +40,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -54,7 +57,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association[
@@ -67,7 +70,6 @@ spurns a second suitor", "The Reeve" ->
 wife and daughter", "The Cook" -> 
                "an alcoholic apprentice who moves in with his buddy and a \
 prostitute", "The Man of Law" -> 
-               
                "the daughter of the emperor of Rome who travels and proves \
 her Christian morality", "The Wife of Bath" -> 
                "a rapist knight who is sentenced to find out what women truly \
@@ -153,222 +155,289 @@ tale about `2`?\>\"", ",",
             RowBox[{
             "1", ",", "37723", ",", "69615", ",", "110300", ",", "139595", 
              ",", "171115"}], "}"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"chars", "=", 
+          RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
             RowBox[{
-             RowBox[{"{", "\[IndentingNewLine]", 
-              RowBox[{
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Bernardo\>\"", ",", "\"\<Bernardo\>\"", ",", 
-                 "\"\< Ber. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{"\"\<Claudius, the King\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{
-                  "\"\<King Claudius\>\"", ",", "\"\<the king\>\"", ",", 
-                   "\"\<the King\>\""}], "}"}], ",", "\"\< King. \>\""}], 
-                "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Cornelius\>\"", ",", "\"\<Cornelius\>\"", ",", 
-                 "\"\< Cor. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Fortinbras\>\"", ",", "\"\<Fortinbras\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"\"\< For. \>\"", ",", "\"\< Fort. \>\""}], "}"}]}],
-                 "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Francisco\>\"", ",", "\"\<Francisco\>\"", ",", 
-                 "\"\< Fran. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{"\"\<Gertrude, the Queen\>\"", ",", 
-                 RowBox[{"{", 
-                  RowBox[{
-                  "\"\<Gertrude\>\"", ",", "\"\<the queen\>\"", ",", 
-                   "\"\<the Queen\>\""}], "}"}], ",", "\"\< Queen. \>\""}], 
-                "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Ghost\>\"", ",", "\"\<ghost\>\"", ",", 
-                 "\"\< Ghost. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Guildenstern\>\"", ",", "\"\<Guildenstern\>\"", ",", 
-                 "\"\< Guil. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Hamlet\>\"", ",", "\"\<Hamlet\>\"", ",", 
-                 "\"\< Ham. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Horatio\>\"", ",", "\"\<Horatio\>\"", ",", 
-                 "\"\< Hor. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Laertes\>\"", ",", "\"\<Laertes\>\"", ",", 
-                 "\"\< Laer. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Marcellus\>\"", ",", "\"\<Marcellus\>\"", ",", 
-                 "\"\< Mar. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Ophelia\>\"", ",", "\"\<Ophelia\>\"", ",", 
-                 "\"\< Oph. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Osric\>\"", ",", "\"\<Osric\>\"", ",", 
-                 "\"\< Osr. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Polonius\>\"", ",", "\"\<Polonius\>\"", ",", 
-                 "\"\< Pol. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Rosencrantz\>\"", ",", "\"\<Rosencrantz\>\"", ",", 
-                 "\"\< Ros. \>\""}], "}"}], ",", "\[IndentingNewLine]", 
-               RowBox[{"{", 
-                RowBox[{
-                "\"\<Voltimand\>\"", ",", "\"\<Voltimand\>\"", ",", 
-                 "\"\< Volt. \>\""}], "}"}]}], "}"}], ",", "4"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
-          RowBox[{"which", "=", 
-           RowBox[{"RandomChoice", "[", 
-            RowBox[{"{", 
-             RowBox[{"\"\<said\>\"", ",", "\"\<line\>\""}], "}"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"List", "ListIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Dimensions: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    RowBox[{"{", 
+                    RowBox[{"17", ",", "3"}], "}"}], "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["39024", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              {{
+               "Bernardo", {100, 698, 762, 1448, 14841, 16448, 18990}, {68, 
+                109, 164, 298, 357, 771, 826, 926, 1274, 1471, 1743, 1842, 
+                1946, 2208, 2331, 4682, 6097, 6305, 17707, 18257}}, {
+               "Claudius, the King", {84, 1774, 1866, 2564, 4809, 7637, 9322, 
+                13320, 16172, 42159, 42839, 56038, 57206, 69598, 80612, 81925,
+                 83443, 84760, 84812, 89752, 91638, 93545, 96982, 101817, 
+                113121, 113196, 113587, 113619, 113633, 129874, 130287, 
+                147317, 148921, 154559, 156720, 160428, 161490, 165017, 
+                167184, 167194, 167280}, CompressedData["
+1:eJwNzT1IFAAYxvH/8xZmGGrhiSEcBkkKSiSSmAjGEQmS5hkNGhpGS0KJi5g0
+FNSp4XBD3CChQ0b0oZ5GWMQd6V2IS2Og9AGCJneOQpPnO/yGZ/k/Z/ofhO8L
+GHC1QQhUwrEq2Havq6GlFnJ1cO4NPP8AffMwtwDNcbi0CDc/wZ0EvHO3V6B0
+FXZcOA29xaKhRJQHxHqZSNaIyguiMCSmXWmHuBoW0RuiqkeM3BIHbqpXvOoX
+wWHfD0XbI/EzIi7Oi5YF0R0Xu0si/lXkEuJaUiy6HXf5m0i4xhVRtypi7kdK
+ZN1g2r+/i/0N72+Ksl/i3m/x8Y/4uyWGtt0/sbYrMq45I9IulvXWnni7L/r+
+i66c2MQYOGocyTNmXXu+0XncyLoXBUbqhNFYZNx1KZc8aVw5ZbQGjMBp40uF
+MdNu1F830l1GaNQ4+9j47N4/MYafGtFnRlPEiLjzY8byuJGZMF5OGoeaymwh
+
+                "]}, {
+               "Cornelius", {7692, 9190, 9562, 45694, 46923}, {9432}}, {
+               "Fortinbras", {3578, 3762, 4030, 4165, 8472, 8949, 46129, 
+                117000, 117114, 117636, 145883, 168539, 168796, 169089}, {
+                117033, 117337, 117368, 169138, 169241, 170253, 170677}}, {
+               "Francisco", {211}, {18, 93, 118, 221, 329, 463, 607, 691}}, {
+               "Gertrude, the Queen", {70952, 80655, 84471, 84994, 94907, 
+                101226, 110669, 111602, 112117, 122957, 122967, 123735, 
+                125131, 125335, 132601, 139471, 152699, 165698, 166419, 
+                166625}, {10761, 11053, 12910, 43841, 44478, 44732, 45533, 
+                47381, 48163, 49790, 50255, 50536, 70146, 70325, 71311, 83309,
+                 86063, 86818, 87013, 88478, 89014, 89130, 90737, 100751, 
+                100906, 101004, 101103, 101160, 101315, 101506, 101754, 
+                101850, 101989, 102412, 102967, 104570, 104849, 105174, 
+                105340, 105771, 106429, 106494, 106571, 106756, 107581, 
+                108648, 109349, 109513, 110517, 110695, 111427, 119996, 
+                120104, 120722, 121009, 121150, 121345, 121454, 123838, 
+                124418, 124843, 125396, 138167, 138293, 139118, 150168, 
+                151226, 151441, 151633, 152142, 165546, 165721, 165867, 
+                166671}}, {
+               "Ghost", {29137, 29758, 33548, 34846, 35452, 82206, 91430}, {
+                29615, 29644, 29764, 29868, 29932, 30600, 30664, 30872, 31308,
+                 35942, 36197, 36400, 37300, 105506}}, {
+               "Guildenstern", {43017, 43084, 44465, 44494, 44771, 52852, 
+                53068, 55803, 59965, 67140, 69712, 70925, 80574, 82676, 91750,
+                 96016, 110376, 110585, 111787, 111827, 112096, 112668, 
+                114546, 114596, 116455, 117415, 130569, 155323, 169590}, {
+                44304, 44653, 52972, 53172, 53384, 53750, 54284, 55229, 55909,
+                 58933, 59402, 59775, 69993, 70206, 80782, 91764, 91841, 
+                91890, 91965, 92165, 92294, 92403, 92647, 93852, 93986, 94028,
+                 94079, 94302, 96309, 97152, 112550, 113686}}, {
+               "Hamlet", CompressedData["
+1:eJwNzU9IEwAcxfHv70cLIdQit0OoICLRcIQWSDtJKYK0HFEQo2DMSIiRsEAI
+S5nbiil4GAqpS6Z06DDGImKX/qFTY8FEdio8CEIMQTx0WYHk7/CBd3i81xYa
+vf1EgMfmUQN4zsJ8M/xugeutcO8SuNwQ8cBSN4xdgdGrcOomZAMwGbROCMrm
+g43UwnAxAuGn0PkMesbBPQX7CehLQT4Du+9gOAfLefB+gvQ36NgEn8mU4YFT
++O8S6i8IW5eFxS7BfcOyme4X/oSEckw4Tgrd04JjRoi/Fg4XLL8RBt4Kn3NC
+MC+c/yhEC0LBFM2BWfgqfDHL68Kvom1uCL3fhVTJvsrW+StUHErjaSVQp1TP
+KK5zSqFJ2XMq227lxzXlvlepDSoTPmXtllIyQ3eVuhHFP66kzc5z5cj8M/4X
+ykOzavbMnaiyP6WMxZRsXJlLKD9fKu2vlHBSWTG9M9Y1VfN+VqksKieKsmt/
+
+                "], CompressedData["
+1:eJwV1HtQVVUUx/HvWuaj1LCZmsqaTGykfKAUlgpigYAaRkGOiYp54RKEiAqJ
+5dsSRATRmmksKV9DzVhNZfnIB6akCQIlpmb5wJRRNCtrml5mv/74nHPvnr3X
+Wnvtc07PQH7KNAOydJn6AHwrIX0hUw4/CEWR0GMovCZ3R0G1NEbD2GEQHwOV
+EjIcHpOzciYW+sbB4yPgiDwaD7myQX6W2ATIkXVyTuYlwkkJH6n1o+BKAOIy
+IDEThgbhnRxozoM7pinOdNgtf0phAdRI/0IolxaZWwQ7pNds6P0SJCyGm4sV
+T2rl1/9/l8BnkrJUNZVC+2UwsQw2S6flqk8WSGg5zJdRFdAmDSvh6f2wTA5K
+5wOwVPxLqDgIddKlDgYegjUNENOofjVp7CvllGqJ/Bq6HlYOqZcVzcp1RDV8
+A/tk71H17xg0HYfbT0CxZJ2CwGkY0gIXJXgWLv0APVt1XnJAwi4o50X1ok1n
+cQk+krDLkCx7ftReruj85JafNCZrr8Kua7DoX60zo1M747JsvsEItjdSOhi3
+dTfi7jVOiYca/WWyXJfQ+4waOdHbyAwzjtxvbIkwtkUa1wYbEVHGbgmJNook
+EKuxOOOCzBthnJc18ZorqQlGqTRLz0QjSXKlz0ijJMm4aYxRJq8/YbTInlTj
+9zSjw0RjnGyRHpOM/elG4mTFlRemKE7A6JhhpGWq/qAxQ7ZKtR70YxL2nGqX
+YLZxUppzjH/knlzjuKRONe7MM1bLGb0hUflGtlTLx9ONizON8QVGldRLSqFx
+9GXNKTU9U8YkqZEuZeqj/C1Xl6u+cuPGCmOuBCqN+auMbquN36T1DePVN7Wm
+ytj4lnH6baPfWiNPstZpDxuNhe8a6zcpnpRuVW55dptqlM7bjVoZsMPYKeE7
+tdcanZmkfq7+ScpeY8o+Y1et/kv3L4yVsr1O8ySh3lghjYeMXg3G2Ebj/X7O
+oP5OWLgzeoDTZ6DTFOH8EekkDXLuetipkaJHnE+lVUYN1n2I67vhPBTllMge
+uS450c7MYc6CGOeYlAx3quWpWGeDXJIP45zYRGfOaKcuyflujBOd7Hwgs550
+OqY6GWOdE/LMOGf9eOfWNKdqgpM+yTmT7vwy2dk0xfU9cVZJa6biBZ3z0prl
+rMxWHc87obnKLydl9lRnQp5TJu3ynUr5ZIbTeabiFDjvSXKh8s1y8oucczJo
+ttPtRdUo1XOcvxaoxoVO10WaI/GLnbZXnB5L1AvpVKwelji7ZdFS5/tS5/Ay
+9a/MCS93GoQVqqdSfV3l/Acm5F2i
+                "]}, {
+               "Horatio", {396, 524, 791, 841, 958, 1834, 1885, 1992, 2346, 
+                14817, 14912, 15090, 15723, 15872, 15965, 18966, 25302, 34422,
+                 35376, 36680, 80846, 80862, 80917, 90878, 91407, 119987, 
+                120753, 120939, 122868, 129267, 129743, 129794, 142042, 
+                145584, 147435, 147995, 148242, 149279, 152542, 152574, 
+                152922, 153704, 156191, 167743, 167981, 168239, 
+                168655}, CompressedData["
+1:eJwN0M9LE3AcxvH39zMlfzCjDimUoIxRh2ASFaRbpZuuLhKRLCe62pqh0SbD
+Q1nhSUuHM2iJ4aE/YHXZwUMgBd0CxcSyvNWgLgnhITAQfA6v28PD8/m0JrPX
+Mw7IiM/A74GvVTBZDelDsC7vaiBfC946uFAPj72wfxTKjfBDPjfBm+PgaYdb
+8qQDloJwKgRtF9UjP6X5EsTFcxmuhiEVgY/dcKQHbkhePsjhKAzLazl2BU6k
+ICbz4k/DxIjG3ocVMQ3/It/GIJBTh+xIaQr+SGkatqThKRSl9plunYGKtOfV
+KZ/E5mC5AL87HImg42+nI3rH8Utuph2LUrfnyEnLf8eu7J82zgSMpjZj+6zh
+O2ec7zJeyqZMhI1Kr/G+zwjFjEK/Hhw3pgeMyKBRHjI2Esa128oljUcpY23U
+uHvP8GeNxnHD+8D4J9mHxslZY/K5si+M1aLxdsH4/so4AA1OXgQ=
+                "]}, {
+               "Laertes", {7672, 9583, 9655, 9748, 9953, 10497, 19255, 21635, 
+                21790, 124090, 124305, 124381, 124404, 124565, 124864, 125068,
+                 125285, 125905, 128433, 130890, 132780, 133477, 135622, 
+                136613, 138260, 148989, 149328, 151625, 152588, 156208, 
+                157573, 158559, 158827, 161399, 161732, 162574, 162697, 
+                163040, 163138, 163983, 166044, 166237, 166319, 166507, 
+                166846}, {9961, 19276, 19449, 19691, 21461, 22853, 22951, 
+                23093, 124598, 124680, 124770, 124872, 125358, 125450, 125783,
+                 126075, 126134, 126505, 127180, 127407, 127558, 127973, 
+                128396, 128886, 131102, 131990, 133173, 133303, 133553, 
+                133941, 134306, 134947, 134985, 135034, 135582, 135725, 
+                136481, 137104, 138268, 139085, 139143, 149288, 149362, 
+                149787, 149955, 150362, 150950, 163482, 163934, 164085, 
+                164376, 165117, 165161, 165219, 165483, 165902, 165959, 
+                166145, 166212, 166515, 166861, 167499}}, {
+               "Marcellus", {408, 536, 865, 1616, 6012, 14826, 15101, 16434, 
+                18975, 25315, 34434}, {576, 634, 749, 875, 952, 1666, 1795, 
+                1973, 2187, 2294, 2543, 2775, 3015, 6022, 6129, 6724, 7476, 
+                15111, 17145, 17698, 18248, 25464, 27994, 28830, 29273, 29371,
+                 29449, 34254, 34333, 34445, 34606, 34717, 35736, 35817, 
+                35868}}, {
+               "Ophelia", {19267, 20673, 22968, 23134, 24821, 40956, 40975, 
+                48006, 48380, 69686, 71069, 71358, 71579, 71660, 73676, 77727,
+                 82654, 83505, 88860, 120952, 121026, 121362, 122150, 123308, 
+                126551, 126826, 139184, 148980, 150160, 151484}, {19425, 
+                19670, 21162, 23019, 23163, 23591, 23801, 24094, 24211, 25224,
+                 41002, 41085, 41450, 41522, 42416, 71532, 73734, 73838, 
+                73990, 74271, 74304, 74427, 74740, 74913, 75459, 75583, 75951,
+                 76411, 83521, 83575, 83636, 83722, 83759, 83801, 83968, 
+                85096, 85184, 85344, 85501, 85703, 89761, 89885, 89982, 90679,
+                 120961, 121034, 121199, 121371, 121487, 121620, 121795, 
+                122158, 122509, 127036, 127259, 127446, 127621, 128064}}, {
+               "Osric", {156423, 160710, 161284, 162590, 164166, 166560, 
+                167291}, {156430, 156802, 157008, 157111, 157216, 157484, 
+                158272, 158404, 158550, 158648, 158781, 158961, 159091, 
+                159158, 159590, 159953, 160205, 160542, 160643, 164501, 
+                165186, 166185, 166405, 166491, 168527}}, {
+               "Polonius", {7662, 10294, 19230, 21535, 37751, 37776, 44814, 
+                45431, 45665, 52926, 52962, 59905, 66604, 69676, 72187, 76981,
+                 80547, 80729, 82644, 83001, 94862, 95352, 97208, 97646, 
+                100467, 100821, 101840, 102096, 108318, 110290, 111914, 
+                114638, 115273, 123226}, CompressedData["
+1:eJwNz80rAwAcxvHvj5RylHDScpkkN60UB1NSDiQ1eSkulJCthLk4Lew05j1v
+axwUNYWSg3cRykuK/AEMKcply3P4nJ5fz9PP0dZT121Ag5Q7wVsPPg/UNEJM
+epugsBnaW+BH1kLwLf4J3YbhYQpqp2FjRrk8zkFkHpyL0CpLci+eJbhbhrwV
+CEQgKwo5mxCS1y3t74BrD6r2IXigHlk4hKIjSD+GTlk9ga5T2JZf6TiDuAyc
+w/oFvMjJJbivwHENI5LxBqPvkBBXHPol+aG/PuFAir5g8A+iCZhNQpkZNynG
+c6rxlGlMZhu7uUZ+sZFWalS4jbDcVhpjbcZGn1HgNfwSkxKfcThkDAeMs3Gj
+Omj8AxsvYd4=
+                "]}, {
+               "Rosencrantz", {43004, 43068, 44442, 44518, 44758, 52836, 
+                53086, 67124, 69695, 70909, 80557, 82663, 91734, 95999, 
+                110360, 110569, 111811, 112080, 112652, 114318, 116439, 
+                117402, 130553, 155340, 169574}, {44172, 52916, 52996, 53125, 
+                53292, 53501, 53798, 53932, 54084, 54436, 54686, 54931, 55476,
+                 55793, 56880, 56998, 57573, 57760, 57926, 57996, 58688, 
+                59020, 60085, 67022, 67096, 69896, 70178, 70254, 70366, 70876,
+                 80773, 80814, 83261, 92871, 93076, 93231, 93322, 93495, 
+                96451, 97184, 112541, 112682, 112784, 112888, 113052, 113419, 
+                113519, 114360, 114454, 114536, 118321}}, {
+               "Voltimand", {7681, 9210, 9548, 45680, 45737, 46909}, {9441, 
+                45777}}},
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"StringForm", "[", 
             RowBox[{
-             RowBox[{"If", "[", 
-              RowBox[{
-               RowBox[{"which", "\[Equal]", "\"\<line\>\""}], ",", 
-               
-               "\"\<Blue represents the lines delivered by which character in \
-`1`?\>\"", ",", 
-               "\"\<Blue represents the mentions of which character's name in \
-`1`?\>\""}], "]"}], ",", 
+            "\"\<Which character in `1` speaks lines on the blue marks and is \
+mentioned by other characters on the red marks?\>\"", ",", 
              RowBox[{"Style", "[", 
               RowBox[{"\"\<Hamlet\>\"", ",", "Italic"}], "]"}]}], "]"}]}], 
           ";", "\[IndentingNewLine]", 
-          RowBox[{"locs", "=", 
-           RowBox[{
-            RowBox[{"(", 
-             RowBox[{
-              RowBox[{"First", "/@", 
-               RowBox[{"StringPosition", "[", 
-                RowBox[{"hamTxt", ",", 
-                 RowBox[{"#", "\[LeftDoubleBracket]", 
-                  RowBox[{"If", "[", 
-                   RowBox[{
-                    RowBox[{"which", "\[Equal]", "\"\<line\>\""}], ",", "3", 
-                    ",", "2"}], "]"}], "\[RightDoubleBracket]"}]}], "]"}]}], 
-              "&"}], ")"}], "/@", "chars"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{"Image", "[", 
+           RowBox[{"NumberLinePlot", "[", 
             RowBox[{
-             RowBox[{"ImageTrim", "[", 
+             RowBox[{"{", 
               RowBox[{
-               RowBox[{"Rasterize", "[", 
-                RowBox[{
-                 RowBox[{"NumberLinePlot", "[", 
-                  RowBox[{"locs", ",", "\[IndentingNewLine]", 
-                   RowBox[{"Prolog", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"Line", "[", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{
+               RowBox[{"data", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+               RowBox[{"data", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], "}"}], 
+             ",", 
+             RowBox[{"Prolog", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Line", "[", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
                     RowBox[{"{", 
                     RowBox[{"1", ",", "0"}], "}"}], ",", 
                     RowBox[{"{", 
-                    RowBox[{"1", ",", ".4"}], "}"}]}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
+                    RowBox[{"1", ",", "1"}], "}"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
                     RowBox[{"{", 
                     RowBox[{"37723", ",", "0"}], "}"}], ",", 
                     RowBox[{"{", 
-                    RowBox[{"37723", ",", ".4"}], "}"}]}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
+                    RowBox[{"37723", ",", "1"}], "}"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
                     RowBox[{"{", 
                     RowBox[{"69615", ",", "0"}], "}"}], ",", 
                     RowBox[{"{", 
-                    RowBox[{"69615", ",", ".4"}], "}"}]}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
+                    RowBox[{"69615", ",", "1"}], "}"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
                     RowBox[{"{", 
                     RowBox[{"110300", ",", "0"}], "}"}], ",", 
                     RowBox[{"{", 
-                    RowBox[{"110300", ",", ".4"}], "}"}]}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
+                    RowBox[{"110300", ",", "1"}], "}"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
                     RowBox[{"{", 
                     RowBox[{"139595", ",", "0"}], "}"}], ",", 
                     RowBox[{"{", 
-                    RowBox[{"139595", ",", ".4"}], "}"}]}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
+                    RowBox[{"139595", ",", "1"}], "}"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
                     RowBox[{"{", 
                     RowBox[{"171115", ",", "0"}], "}"}], ",", 
                     RowBox[{"{", 
-                    RowBox[{"171115", ",", ".4"}], "}"}]}], "}"}]}], "}"}], 
-                    "]"}], "}"}]}], ",", "\[IndentingNewLine]", 
-                   RowBox[{"PlotStyle", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"Blue", ",", 
-                    RowBox[{"GrayLevel", "[", ".7", "]"}], ",", "Pink", ",", 
-                    "Green"}], "}"}]}], ",", 
-                   RowBox[{"AspectRatio", "\[Rule]", ".3"}], ",", 
-                   "\[IndentingNewLine]", 
-                   RowBox[{"Ticks", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", 
-                    RowBox[{"18861", ",", "\"\<Act I\>\""}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"53669", ",", "\"\<Act II\>\""}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"89957", ",", "\"\<Act III\>\""}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"124947", ",", "\"\<Act IV\>\""}], "}"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{"155355", ",", "\"\<Act V\>\""}], "}"}]}], "}"}], 
-                    "}"}]}], ",", "\[IndentingNewLine]", 
-                   RowBox[{"AxesStyle", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"15", ",", "Black"}], "}"}]}], ",", 
-                   RowBox[{"PlotRange", "\[Rule]", 
-                    RowBox[{"{", 
-                    RowBox[{"1", ",", "171115"}], "}"}]}], ",", 
-                   RowBox[{"Spacings", "\[Rule]", ".08"}]}], "]"}], ",", 
-                 RowBox[{"ImageSize", "\[Rule]", "940"}]}], "]"}], ",", 
+                    RowBox[{"171115", ",", "1"}], "}"}]}], "}"}]}], "}"}], 
+                "]"}], "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"PlotStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"Red", ",", "Blue"}], "}"}]}], ",", 
+             RowBox[{"AspectRatio", "\[Rule]", ".06"}], ",", 
+             "\[IndentingNewLine]", 
+             RowBox[{"Ticks", "\[Rule]", 
+              RowBox[{"{", 
                RowBox[{"{", 
                 RowBox[{
                  RowBox[{"{", 
-                  RowBox[{"1", ",", "0"}], "}"}], ",", 
+                  RowBox[{"18861", ",", "\"\<Act I\>\""}], "}"}], ",", 
                  RowBox[{"{", 
-                  RowBox[{"171115", ",", "100"}], "}"}]}], "}"}]}], "]"}], 
-             ",", 
+                  RowBox[{"53669", ",", "\"\<Act II\>\""}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"89957", ",", "\"\<Act III\>\""}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"124947", ",", "\"\<Act IV\>\""}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"155355", ",", "\"\<Act V\>\""}], "}"}]}], "}"}], 
+               "}"}]}], ",", "\[IndentingNewLine]", 
+             RowBox[{"AxesStyle", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"15", ",", "Black"}], "}"}]}], ",", 
+             RowBox[{"PlotRange", "\[Rule]", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "171115"}], "}"}]}], ",", 
+             RowBox[{"Spacings", "\[Rule]", ".5"}], ",", 
              RowBox[{"ImageSize", "\[Rule]", "940"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"picTransit", "=", 
-           RowBox[{
-            RowBox[{"Hold", "[", 
-             RowBox[{"ToExpression", "[", 
-              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
-            RowBox[{"h2", "\[Rule]", 
-             RowBox[{"ToCharacterCode", "[", 
-              RowBox[{"ToString", "[", 
-               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
-          ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{"First", "/@", "chars"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"First", "/@", "data"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -383,8 +452,8 @@ tale about `2`?\>\"", ",",
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed", ",", "picTransit"}], "}"}],
-            "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
    "\[IndentingNewLine]", "\"\<CS_pack_Lite11\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
@@ -476,13 +545,65 @@ tale about `2`?\>\"", ",",
    3.7662547955146437`*^9, 3.7662548439608192`*^9}, {3.766254900579804*^9, 
    3.766254991672398*^9}, {3.766258519089028*^9, 3.7662585572374763`*^9}, {
    3.766258593766844*^9, 3.766258594464203*^9}, {3.766258642862842*^9, 
-   3.766258644413363*^9}, {3.76625891272744*^9, 3.7662589399492283`*^9}},
- CellLabel->"In[50]:=",ExpressionUUID->"ff3c895c-daa9-43a9-a69c-4f83209d3c7b"]
+   3.766258644413363*^9}, {3.76625891272744*^9, 3.7662589399492283`*^9}, {
+   3.822239736966834*^9, 3.822239754842279*^9}, {3.822240213352881*^9, 
+   3.822240239360683*^9}, 3.822240760459621*^9, 3.82224083164218*^9, 
+   3.822240894833541*^9, {3.82224092540171*^9, 3.822240964275605*^9}, 
+   3.822241001905868*^9, 3.8222410402662287`*^9, {3.82224114784807*^9, 
+   3.822241155499675*^9}, {3.822241192880412*^9, 3.8222411956265917`*^9}, 
+   3.8222412767082987`*^9, 3.822241309651731*^9, {3.8222413498964367`*^9, 
+   3.8222413520576563`*^9}, {3.822241382622916*^9, 3.822241384105002*^9}, {
+   3.8222414486590433`*^9, 3.8222414834127407`*^9}, {3.822241522865926*^9, 
+   3.82224152702877*^9}, {3.822241563050826*^9, 3.822241565756874*^9}, {
+   3.8222416361465263`*^9, 3.822241677634907*^9}, {3.8222417353538647`*^9, 
+   3.822241739660746*^9}, {3.822241771828856*^9, 3.8222417772644567`*^9}, {
+   3.8222418412886887`*^9, 3.822241950963497*^9}, {3.822241988647833*^9, 
+   3.822241992098987*^9}, {3.822242034775939*^9, 3.8222420507144613`*^9}, {
+   3.8222420828076067`*^9, 3.822242115466158*^9}, {3.82224216017463*^9, 
+   3.822242239937379*^9}, 3.822242287830619*^9, 3.8222423201498623`*^9, 
+   3.822242364950428*^9, {3.822242414616852*^9, 3.8222425787509537`*^9}, {
+   3.82224261804607*^9, 3.822242638806287*^9}, {3.822242733950513*^9, 
+   3.8222428313088083`*^9}, {3.822242865797763*^9, 3.8222428664122334`*^9}, {
+   3.8222429135432777`*^9, 3.822242917155849*^9}, {3.822242998682617*^9, 
+   3.8222429997641487`*^9}, 3.822243054832314*^9, {3.822243104725202*^9, 
+   3.822243107490448*^9}, 3.822243146248789*^9, 3.822243189338091*^9, 
+   3.822243224249753*^9, 3.822243257545877*^9, {3.822243336594021*^9, 
+   3.822243361747363*^9}, {3.822243431236989*^9, 3.822243458181036*^9}, {
+   3.82224354134262*^9, 3.822243541940096*^9}, {3.822243573061529*^9, 
+   3.822243573620077*^9}, {3.8222436716452303`*^9, 3.822243837117485*^9}, {
+   3.8222438677496233`*^9, 3.8222439183893957`*^9}, {3.82224409336852*^9, 
+   3.822244138987237*^9}},
+ CellLabel->"In[83]:=",ExpressionUUID->"ff3c895c-daa9-43a9-a69c-4f83209d3c7b"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Lite11\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Lite11"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Lite11"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.822240154896845*^9, 3.8222402448453817`*^9, {3.822240295199552*^9, 
+   3.8222403209580193`*^9}, 3.822241685567799*^9, {3.8222428391154118`*^9, 
+   3.822242867811898*^9}, 3.8222429179366093`*^9, 3.822243003745417*^9, 
+   3.822243062146331*^9, 3.822243109152079*^9, 3.82224314843753*^9, 
+   3.82224319468126*^9, 3.822243226511182*^9, 3.822243259234558*^9, {
+   3.822243339169416*^9, 3.8222433642214108`*^9}, {3.822243432432177*^9, 
+   3.822243459442128*^9}, {3.822243501064351*^9, 3.822243519216782*^9}, 
+   3.822243575284686*^9, 3.8222436071894207`*^9, {3.822243725578948*^9, 
+   3.822243838769644*^9}, {3.8222438688817043`*^9, 3.822243883568467*^9}, 
+   3.82224391974758*^9, {3.822243957017384*^9, 3.822243980647024*^9}, 
+   3.822244014525069*^9, 3.822244141504076*^9},
+ CellLabel->"Out[83]=",ExpressionUUID->"6cf80c73-ebeb-4454-9478-1d9b5a4ae359"]
+}, Open  ]]
 },
 WindowSize->{1743, 1358},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"83c9a443-e493-404f-b7e9-4f620d8f1f43"
 ]
 (* End of Notebook Content *)
 
@@ -495,7 +616,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 23996, 459, 1033, "Input",ExpressionUUID->"ff3c895c-daa9-43a9-a69c-4f83209d3c7b"]
+Cell[CellGroupData[{
+Cell[580, 22, 31995, 553, 616, "Input",ExpressionUUID->"ff3c895c-daa9-43a9-a69c-4f83209d3c7b"],
+Cell[32578, 577, 1247, 21, 60, "Output",ExpressionUUID->"6cf80c73-ebeb-4454-9478-1d9b5a4ae359"]
+}, Open  ]]
 }
 ]
 *)
