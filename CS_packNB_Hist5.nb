@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     27157,        490]
-NotebookOptionsPosition[     26809,        476]
-NotebookOutlinePosition[     27202,        492]
-CellTagsIndexPosition[     27159,        489]
+NotebookDataLength[     27337,        490]
+NotebookOptionsPosition[     26985,        476]
+NotebookOutlinePosition[     27382,        492]
+CellTagsIndexPosition[     27339,        489]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -45,11 +45,11 @@ Cell[BoxData[
                   RowBox[{
                     TagBox["\"Length: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
-                    TagBox["45", "IconizedItem"]}]}, {
+                    TagBox["46", "IconizedItem"]}]}, {
                   RowBox[{
                     TagBox["\"Byte count: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
-                    TagBox["2368", "IconizedItem"]}]}}, 
+                    TagBox["2424", "IconizedItem"]}]}}, 
                 GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
                 "Column", 
                 GridBoxItemSize -> {
@@ -71,7 +71,7 @@ Cell[BoxData[
              "Dwight D. Eisenhower", "John F. Kennedy", "Lyndon B. Johnson", 
              "Richard Nixon", "Gerald Ford", "Jimmy Carter", "Ronald Reagan", 
              "George H. W. Bush", "Bill Clinton", "George W. Bush", 
-             "Barack Obama", "Donald Trump"},
+             "Barack Obama", "Donald Trump", "Joe Biden"},
             SelectWithContents->True,
             Selectable->False]}], ";", "\[IndentingNewLine]", 
           RowBox[{"beg", "=", 
@@ -89,34 +89,32 @@ Cell[BoxData[
                RowBox[{"beg", "+", "2"}]}], "}"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{"Prepend", "[", 
+           RowBox[{"Take", "[", 
             RowBox[{
-             RowBox[{"RandomSample", "[", 
-              RowBox[{
-               RowBox[{"Drop", "[", 
-                RowBox[{"data", ",", 
-                 RowBox[{"{", 
-                  RowBox[{"beg", ",", 
-                   RowBox[{"beg", "+", "2"}]}], "}"}]}], "]"}], ",", "3"}], 
-              "]"}], ",", 
-             RowBox[{
-             "triplet", "\[LeftDoubleBracket]", "2", 
-              "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"DeleteDuplicates", "[", 
+              RowBox[{"Prepend", "[", 
+               RowBox[{
+                RowBox[{"RandomSample", "[", 
+                 RowBox[{
+                  RowBox[{"Complement", "[", 
+                   RowBox[{"data", ",", "triplet"}], "]"}], ",", "4"}], "]"}],
+                 ",", 
+                RowBox[{
+                "triplet", "\[LeftDoubleBracket]", "2", 
+                 "\[RightDoubleBracket]"}]}], "]"}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"q", "=", 
            RowBox[{"Style", "[", 
-            RowBox[{
-             RowBox[{"StringForm", "[", 
-              RowBox[{
-              "\"\<Which person was president of the United States between `` \
+            RowBox[{"StringForm", "[", 
+             RowBox[{
+             "\"\<Which person was president of the United States between `` \
 and ``?\>\"", ",", 
-               RowBox[{
-               "triplet", "\[LeftDoubleBracket]", "1", 
-                "\[RightDoubleBracket]"}], ",", 
-               RowBox[{
-               "triplet", "\[LeftDoubleBracket]", "3", 
-                "\[RightDoubleBracket]"}]}], "]"}], ",", 
-             RowBox[{"TextAlignment", "\[Rule]", "Center"}]}], "]"}]}], ";", 
+              RowBox[{
+              "triplet", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}], ",", 
+              RowBox[{
+              "triplet", "\[LeftDoubleBracket]", "3", 
+               "\[RightDoubleBracket]"}]}], "]"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
@@ -470,13 +468,15 @@ and ``?\>\"", ",",
    3.809635712929811*^9}, {3.809635767570204*^9, 3.809635784130207*^9}, {
    3.8096358214902287`*^9, 3.8096358927715883`*^9}, {3.8096360017567873`*^9, 
    3.809636006697921*^9}, {3.809636053810285*^9, 3.8096360542813377`*^9}, {
-   3.809636114602462*^9, 3.809636170604575*^9}},
- CellLabel->
-  "In[277]:=",ExpressionUUID->"e95950ea-a39f-4ffa-bb28-08cf0bcd05bb"]
+   3.809636114602462*^9, 3.809636170604575*^9}, {3.823207904712853*^9, 
+   3.823207949263089*^9}, {3.823207983742928*^9, 3.823208049885394*^9}, {
+   3.823208086590591*^9, 3.823208130164619*^9}, 3.823208221116824*^9, {
+   3.823208254237761*^9, 3.82320831863616*^9}},
+ CellLabel->"In[53]:=",ExpressionUUID->"e95950ea-a39f-4ffa-bb28-08cf0bcd05bb"]
 },
 WindowSize->{1275, 1068},
-WindowMargins->{{1, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+WindowMargins->{{0, Automatic}, {Automatic, 7}},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"4da64a0e-9f2e-42e4-b46c-7d62cabac756"
 ]
@@ -491,7 +491,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 26247, 454, 553, "Input",ExpressionUUID->"e95950ea-a39f-4ffa-bb28-08cf0bcd05bb"]
+Cell[558, 20, 26423, 454, 553, "Input",ExpressionUUID->"e95950ea-a39f-4ffa-bb28-08cf0bcd05bb"]
 }
 ]
 *)
