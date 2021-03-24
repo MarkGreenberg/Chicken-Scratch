@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     40808,        672]
-NotebookOptionsPosition[     40345,        656]
-NotebookOutlinePosition[     40762,        673]
-CellTagsIndexPosition[     40719,        670]
+NotebookDataLength[     43015,        703]
+NotebookOptionsPosition[     42548,        687]
+NotebookOutlinePosition[     42969,        704]
+CellTagsIndexPosition[     42926,        701]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -38,29 +38,8 @@ Cell[BoxData[
            RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
          "1", ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"words", "=", 
-           RowBox[{"RandomSample", "[", 
-            RowBox[{
-             RowBox[{"Flatten", "[", 
-              RowBox[{"Table", "[", 
-               RowBox[{
-                RowBox[{"{", 
-                 RowBox[{
-                 "\"\<blue\>\"", ",", "\"\<red\>\"", ",", "\"\<green\>\"", 
-                  ",", "\"\<black\>\"", ",", "\"\<purple\>\"", ",", 
-                  "\"\<brown\>\"", ",", "\"\<orange\>\"", ",", 
-                  "\"\<pink\>\""}], "}"}], ",", "48"}], "]"}], "]"}], ",", 
-             "48"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"qWord", "=", 
-           RowBox[{"RandomChoice", "[", 
-            RowBox[{"{", 
-             RowBox[{
-             "\"\<blue\>\"", ",", "\"\<red\>\"", ",", "\"\<green\>\"", ",", 
-              "\"\<black\>\"", ",", "\"\<purple\>\"", ",", "\"\<brown\>\"", 
-              ",", "\"\<orange\>\"", ",", "\"\<pink\>\""}], "}"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
           RowBox[{"colors", "=", 
-           RowBox[{"<|", 
+           RowBox[{"{", 
             RowBox[{
              RowBox[{"\"\<blue\>\"", "\[Rule]", "Blue"}], ",", 
              RowBox[{"\"\<red\>\"", "\[Rule]", "Red"}], ",", 
@@ -69,89 +48,117 @@ Cell[BoxData[
              RowBox[{"\"\<purple\>\"", "\[Rule]", "Purple"}], ",", 
              RowBox[{"\"\<brown\>\"", "\[Rule]", "Brown"}], ",", 
              RowBox[{"\"\<orange\>\"", "\[Rule]", "Orange"}], ",", 
-             RowBox[{"\"\<pink\>\"", "\[Rule]", "Pink"}]}], "|>"}]}], ";", 
+             RowBox[{"\"\<pink\>\"", "\[Rule]", "Pink"}], ",", 
+             RowBox[{"\"\<gray\>\"", "\[Rule]", "Gray"}]}], "}"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"qColor", "=", 
+          RowBox[{"words", "=", 
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<blue\>\"", ",", "\"\<red\>\"", ",", "\"\<green\>\"", ",", 
+             "\"\<black\>\"", ",", "\"\<purple\>\"", ",", "\"\<brown\>\"", 
+             ",", "\"\<orange\>\"", ",", "\"\<pink\>\"", ",", 
+             "\"\<gray\>\""}], "}"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"pairs", "=", 
            RowBox[{"RandomSample", "[", 
-            RowBox[{"colors", ",", "1"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"gems", "=", 
+            RowBox[{
+             RowBox[{"Tuples", "[", 
+              RowBox[{"{", 
+               RowBox[{"colors", ",", "words"}], "}"}], "]"}], ",", "30"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"spots", "=", 
+           RowBox[{"Sort", "[", 
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              RowBox[{"Range", "[", 
+               RowBox[{"Length", "[", "pairs", "]"}], "]"}], ",", "2"}], 
+             "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"frames", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"Rotate", "[", 
+             RowBox[{"Pane", "[", 
               RowBox[{
                RowBox[{"Style", "[", 
-                RowBox[{"#", ",", 
-                 RowBox[{"RandomChoice", "[", "colors", "]"}], ",", "Bold", 
-                 ",", "34", ",", 
-                 RowBox[{"FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}],
-                  ",", 
-                 RowBox[{"Background", "\[Rule]", "Transparent"}]}], "]"}], 
-               ",", 
-               RowBox[{"RandomReal", "[", 
-                RowBox[{"{", 
+                RowBox[{
                  RowBox[{
-                  RowBox[{"-", ".35"}], ",", ".35"}], "}"}], "]"}]}], "]"}], 
-             "&"}], "/@", "words"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"pic", "=", 
-           RowBox[{"Grid", "[", 
+                 "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+                 ",", 
+                 RowBox[{"#", "\[LeftDoubleBracket]", 
+                  RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+                 "72", ",", "Bold", ",", 
+                 RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}]}], "]"}], 
+               ",", 
+               RowBox[{"Alignment", "\[Rule]", "Center"}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", "400"}]}], "]"}], "&"}], "/@", 
+            "pairs"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"\"\<How long between the \>\"", "<>", 
             RowBox[{
-             RowBox[{"Partition", "[", 
-              RowBox[{"gems", ",", "4"}], "]"}], ",", 
-             RowBox[{"Alignment", "\[Rule]", "Center"}], ",", 
-             RowBox[{"Background", "\[Rule]", "Transparent"}], ",", 
-             RowBox[{"Spacings", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"0", ",", 
-                RowBox[{"-", ".8"}]}], "}"}]}]}], "]"}]}], ";", 
+             RowBox[{"pairs", "\[LeftDoubleBracket]", 
+              RowBox[{
+              "spots", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", 
+             RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], "<>", 
+            "\"\< word \\\"\>\"", "<>", 
+            RowBox[{
+             RowBox[{"pairs", "\[LeftDoubleBracket]", 
+              RowBox[{
+              "spots", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
+               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "2", 
+             "\[RightDoubleBracket]"}], "<>", "\"\<\\\" and the \>\"", "<>", 
+            RowBox[{
+             RowBox[{"pairs", "\[LeftDoubleBracket]", 
+              RowBox[{
+              "spots", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", 
+             RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], "<>", 
+            "\"\< word \\\"\>\"", "<>", 
+            RowBox[{
+             RowBox[{"pairs", "\[LeftDoubleBracket]", 
+              RowBox[{
+              "spots", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
+               "\[RightDoubleBracket]"}], "\[LeftDoubleBracket]", "2", 
+             "\[RightDoubleBracket]"}], "<>", "\"\<\\\"?\>\""}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"If", "[", 
+          RowBox[{"pic", "=", 
+           RowBox[{"ListAnimate", "[", 
+            RowBox[{"frames", ",", 
+             RowBox[{"DefaultDuration", "\[Rule]", "15"}], ",", 
+             RowBox[{"AnimationRepetitions", "\[Rule]", "1"}], ",", 
+             RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]}], ";",
+           "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
-            "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"q", "=", 
-              RowBox[{"StringForm", "[", 
-               RowBox[{
-               "\"\<On this screen, how many times does the word `1` \
-appear?\>\"", ",", 
-                RowBox[{"Style", "[", 
-                 RowBox[{"qWord", ",", "Italic"}], "]"}]}], "]"}]}], ";", 
-             "\[IndentingNewLine]", 
-             RowBox[{"ansNo", "=", 
+             RowBox[{"(", 
               RowBox[{
-               RowBox[{"Count", "[", 
-                RowBox[{"words", ",", "qWord"}], "]"}], "+", "1"}]}], ";"}], 
-            ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-            RowBox[{
-             RowBox[{"q", "=", 
-              RowBox[{"StringForm", "[", 
                RowBox[{
-               "\"\<In the graphic, how many times do `1` words appear?\>\"", 
-                ",", 
-                RowBox[{
-                 RowBox[{"Keys", "[", "qColor", "]"}], "\[LeftDoubleBracket]",
-                  "1", "\[RightDoubleBracket]"}]}], "]"}]}], ";", 
-             "\[IndentingNewLine]", 
-             RowBox[{"ansNo", "=", 
-              RowBox[{"Count", "[", 
-               RowBox[{"gems", ",", 
-                RowBox[{
-                "qColor", "\[LeftDoubleBracket]", "1", 
-                 "\[RightDoubleBracket]"}], ",", "Infinity"}], "]"}]}]}]}], 
-           "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+               "spots", "\[LeftDoubleBracket]", "2", 
+                "\[RightDoubleBracket]"}], "-", 
+               RowBox[{
+               "spots", "\[LeftDoubleBracket]", "1", 
+                "\[RightDoubleBracket]"}]}], ")"}], "/", "2"}], "//", "N"}]}],
+           ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{"Take", "[", 
+           RowBox[{
             RowBox[{
-             RowBox[{"DeleteDuplicates", "[", 
-              RowBox[{"Prepend", "[", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
                RowBox[{
-                RowBox[{"RandomSample", "[", 
-                 RowBox[{
-                  RowBox[{"Range", "[", 
-                   RowBox[{"0", ",", "16"}], "]"}], ",", "4"}], "]"}], ",", 
-                "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+                RowBox[{"ToString", "[", "#", "]"}], "<>", 
+                "\"\< seconds\>\""}], ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}],
+             "/@", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Prepend", "[", 
+                RowBox[{
+                 RowBox[{"RandomSample", "[", 
+                  RowBox[{
+                   RowBox[{"Range", "[", 
+                    RowBox[{"1", ",", "15", ",", ".5"}], "]"}], ",", "4"}], 
+                  "]"}], ",", "ansNo"}], "]"}], "]"}], ",", "4"}], "]"}]}]}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -651,13 +658,37 @@ Language", ".YUV" -> "a specialized video format saved as separate images",
    3.80678284137809*^9, 3.806782859056959*^9}, {3.810859343883534*^9, 
    3.810859345658186*^9}, {3.810859378994257*^9, 3.8108593863617992`*^9}, {
    3.8108594428910217`*^9, 3.8108594491855717`*^9}, {3.810859481034749*^9, 
-   3.810859496969124*^9}},
- CellLabel->"In[22]:=",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
+   3.810859496969124*^9}, {3.825609766872036*^9, 3.825609781518094*^9}, {
+   3.8256098146381617`*^9, 3.825609838773819*^9}, {3.8256098791258163`*^9, 
+   3.825610368272028*^9}, {3.8256107916561203`*^9, 3.825610855466146*^9}, {
+   3.825610894898052*^9, 3.82561090020196*^9}, {3.825611126450004*^9, 
+   3.825611147592914*^9}, 3.8256112057606697`*^9, {3.825611606502247*^9, 
+   3.825611647396286*^9}, {3.825611702398449*^9, 3.825611746325246*^9}, {
+   3.825611801341238*^9, 3.8256118141407013`*^9}, {3.825611954932538*^9, 
+   3.825611957012385*^9}, {3.825611992091881*^9, 3.825612189594531*^9}, {
+   3.82561222472299*^9, 3.825612247790084*^9}, {3.82561228539473*^9, 
+   3.82561228756245*^9}, {3.82561232947466*^9, 3.8256124544694147`*^9}, {
+   3.825612484718174*^9, 3.82561248576525*^9}, {3.8256127197563477`*^9, 
+   3.8256129004745893`*^9}, {3.825612983795158*^9, 3.825613059145677*^9}, {
+   3.8256131885134983`*^9, 3.8256132238807907`*^9}, {3.825613302466504*^9, 
+   3.825613319575629*^9}, {3.8256134354011173`*^9, 3.825613466863563*^9}, {
+   3.8256135065587482`*^9, 3.825613652598188*^9}, {3.82561371503014*^9, 
+   3.825613724413822*^9}, {3.8256139187366323`*^9, 3.825613926234274*^9}, {
+   3.82561397014917*^9, 3.825613991221958*^9}, {3.825614998238164*^9, 
+   3.825615011532592*^9}, {3.825615486591367*^9, 3.825615498541853*^9}, {
+   3.825615572624587*^9, 3.8256155900310183`*^9}, {3.825615705489243*^9, 
+   3.82561570573464*^9}, {3.825615825409286*^9, 3.825615825735147*^9}, {
+   3.825615917560602*^9, 3.825615927446376*^9}, {3.8256162171122026`*^9, 
+   3.8256162278622637`*^9}, {3.8256162618865643`*^9, 3.825616565102582*^9}, {
+   3.825616664445635*^9, 3.825616756798605*^9}, {3.825616898471353*^9, 
+   3.825616899862823*^9}},
+ CellLabel->
+  "In[207]:=",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 },
 WindowSize->{1608, 1384},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
 WindowStatusArea->None,
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"751a5644-4568-4e54-9842-7ed1d2773e3c"
 ]
@@ -673,7 +704,7 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 131, 3, 30, "Input",ExpressionUUID->"33e6fa05-de96-4e1a-981e-5ff6c4285853"],
-Cell[692, 25, 39649, 629, 697, "Input",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
+Cell[692, 25, 41852, 660, 592, "Input",ExpressionUUID->"8be46b7a-964f-4648-99da-6b29ea6e3786"]
 }
 ]
 *)
