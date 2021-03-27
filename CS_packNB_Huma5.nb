@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     52989,        940]
-NotebookOptionsPosition[     52600,        925]
-NotebookOutlinePosition[     53034,        942]
-CellTagsIndexPosition[     52991,        939]
+NotebookDataLength[     53853,        953]
+NotebookOptionsPosition[     53460,        938]
+NotebookOutlinePosition[     53898,        955]
+CellTagsIndexPosition[     53855,        952]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -463,55 +463,55 @@ Cell[BoxData[
             RowBox[{
             "data", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
             "<>", "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"qTransit", "=", 
-           RowBox[{
-            RowBox[{"Hold", "[", 
-             RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "/.", 
-            RowBox[{"h1", "\[Rule]", 
-             RowBox[{"ToCharacterCode", "[", "q", "]"}]}]}]}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"temperature", "=", 
-           RowBox[{"QuantityMagnitude", "[", 
-            RowBox[{"AirTemperatureData", "[", 
-             RowBox[{
-             "data", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-             "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"raw", "=", 
-           RowBox[{"Take", "[", 
+          RowBox[{"temp", "=", 
+           RowBox[{"Round", "[", 
             RowBox[{
+             RowBox[{"AirTemperatureData", "[", 
+              RowBox[{
+              "data", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              "]"}], ",", ".1"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mag", "=", 
+           RowBox[{"QuantityMagnitude", "[", "temp", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"fahr", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Quantity", "[", 
+              RowBox[{"#", ",", "\"\<DegreesFahrenheit\>\""}], "]"}], "&"}], "/@", 
+            RowBox[{"Take", "[", 
              RowBox[{"DeleteDuplicates", "[", 
               RowBox[{"Prepend", "[", 
                RowBox[{
                 RowBox[{"RandomSample", "[", 
-                 RowBox[{"Range", "[", 
-                  RowBox[{
-                   RowBox[{"temperature", "-", "20"}], ",", 
-                   RowBox[{"temperature", "+", "20"}]}], "]"}], "]"}], ",", 
-                "temperature"}], "]"}], "]"}], ",", "4"}], "]"}]}], ";", 
+                 RowBox[{
+                  RowBox[{"Range", "[", 
+                   RowBox[{
+                    RowBox[{"mag", "-", "20"}], ",", 
+                    RowBox[{"mag", "+", "20"}]}], "]"}], ",", "4"}], "]"}], 
+                ",", "mag"}], "]"}], "]"}], "]"}]}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"choices", "=", 
+          RowBox[{"cels", "=", 
            RowBox[{
             RowBox[{
-             RowBox[{"StringReplace", "[", 
-              RowBox[{
-               RowBox[{
-                RowBox[{"ToString", "[", "#", "]"}], "<>", 
-                "\"\<\[Degree]F\>\""}], ",", 
-               RowBox[{
-               "\"\<.\[Degree]\>\"", "\[Rule]", "\"\<\[Degree]\>\""}]}], 
-              "]"}], "&"}], "/@", "raw"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"UnitConvert", "[", 
+              RowBox[{"#", ",", "\"\<DegreesCelsius\>\""}], "]"}], "&"}], "/@",
+             "fahr"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"MapThread", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"StringForm", "[", 
+               RowBox[{"\"\<`1` (`2`)\>\"", ",", 
+                RowBox[{"Round", "[", 
+                 RowBox[{"#1", ",", ".1"}], "]"}], ",", 
+                RowBox[{"Round", "[", 
+                 RowBox[{"#2", ",", ".1"}], "]"}]}], "]"}], "&"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"fahr", ",", "cels"}], "}"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"mixTransit", "=", 
-           RowBox[{
-            RowBox[{
-             RowBox[{
-              RowBox[{"Hold", "[", 
-               RowBox[{"FromCharacterCode", "[", "h3", "]"}], "]"}], "/.", 
-              RowBox[{"h3", "\[Rule]", 
-               RowBox[{"ToCharacterCode", "[", "#", "]"}]}]}], "&"}], "/@", 
-            "mixed"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", 
            RowBox[{
             RowBox[{"Position", "[", 
@@ -523,9 +523,9 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"qTransit", ",", "ans", ",", "mixTransit"}], "}"}], 
-           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
@@ -919,14 +919,27 @@ Cell[BoxData[
    3.795608196635693*^9}, {3.795608238653097*^9, 3.795608261739273*^9}, 
    3.7956083697102823`*^9, {3.795608400433056*^9, 3.795608421533711*^9}, {
    3.795608550132622*^9, 3.795608605527897*^9}, {3.795611317795402*^9, 
-   3.7956113189611597`*^9}, {3.795612413384776*^9, 3.7956124342471437`*^9}},
- CellLabel->
-  "In[470]:=",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
+   3.7956113189611597`*^9}, {3.795612413384776*^9, 3.7956124342471437`*^9}, {
+   3.825866596943077*^9, 3.825866667357769*^9}, {3.825867153503194*^9, 
+   3.8258671546448183`*^9}, {3.825867194021645*^9, 3.825867237164957*^9}, {
+   3.825867270612701*^9, 3.82586727844492*^9}, {3.8258673194984217`*^9, 
+   3.825867323837235*^9}, 3.825867370448106*^9, {3.825867401557419*^9, 
+   3.825867426333088*^9}, {3.825867483717041*^9, 3.8258676825775757`*^9}, {
+   3.82586772341639*^9, 3.825867754423452*^9}, {3.825867822327579*^9, 
+   3.825867871286941*^9}, {3.825867937751058*^9, 3.82586794233477*^9}, {
+   3.825867984846471*^9, 3.825868035014431*^9}, 3.825868248196788*^9, {
+   3.825868303275824*^9, 3.8258683259252653`*^9}, {3.825868385221889*^9, 
+   3.825868436757251*^9}, {3.825868496758038*^9, 3.825868509300008*^9}, {
+   3.825868562932638*^9, 3.825868595787571*^9}, {3.82586902972326*^9, 
+   3.825869037938595*^9}, {3.825869213424267*^9, 3.8258692429466143`*^9}, {
+   3.825869505036738*^9, 
+   3.825869509954221*^9}},ExpressionUUID->"c1b55d85-c95c-402c-8ab0-\
+044d8b10acdf"]
 },
 WindowSize->{1433, 1352},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{17, Automatic}, {Automatic, 0}},
 TaggingRules->{"TryRealOnly" -> False},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"d968ada5-5618-4114-b8b3-d482c564177b"
 ]
@@ -941,7 +954,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 52038, 903, 661, "Input",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
+Cell[558, 20, 52898, 916, 661, "Input",ExpressionUUID->"c1b55d85-c95c-402c-8ab0-044d8b10acdf"]
 }
 ]
 *)
