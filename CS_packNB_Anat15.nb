@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     16580,        353]
-NotebookOptionsPosition[     16232,        339]
-NotebookOutlinePosition[     16625,        355]
-CellTagsIndexPosition[     16582,        352]
+NotebookDataLength[     17859,        375]
+NotebookOptionsPosition[     17378,        358]
+NotebookOutlinePosition[     17775,        374]
+CellTagsIndexPosition[     17732,        371]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -183,8 +185,15 @@ Cell[BoxData[
           RowBox[{"step", "=", 
            RowBox[{"RandomSample", "[", 
             RowBox[{
-             RowBox[{"Range", "[", "10", "]"}], ",", "4"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{"scen", "\[Equal]", "3"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "1", ",", "3", ",", "5", ",", "6", ",", "7", ",", "8", ",", 
+                 "9", ",", "10"}], "}"}], ",", 
+               RowBox[{"Range", "[", "10", "]"}]}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ansProp", "=", 
            RowBox[{"data", "\[LeftDoubleBracket]", 
             RowBox[{
@@ -196,24 +205,6 @@ Cell[BoxData[
               "step", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
               "\[RightDoubleBracket]"}], ",", "scen"}], 
             "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"If", "[", 
-           RowBox[{
-            RowBox[{
-             RowBox[{"scen", "\[Equal]", "3"}], "&&", 
-             RowBox[{"(", 
-              RowBox[{
-               RowBox[{
-                RowBox[{
-                "step", "\[LeftDoubleBracket]", "1", 
-                 "\[RightDoubleBracket]"}], "\[Equal]", "4"}], "||", 
-               RowBox[{
-                RowBox[{
-                "step", "\[LeftDoubleBracket]", "1", 
-                 "\[RightDoubleBracket]"}], "\[Equal]", "2"}]}], ")"}]}], ",", 
-            RowBox[{
-             RowBox[{
-             "step", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-             "++"}]}], "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"prop", "=", 
            RowBox[{"data", "\[LeftDoubleBracket]", 
             RowBox[{
@@ -274,9 +265,13 @@ in which product?\>\"", ",",
               RowBox[{"DeleteDuplicates", "[", 
                RowBox[{"Prepend", "[", 
                 RowBox[{
-                 RowBox[{"data", "\[LeftDoubleBracket]", 
-                  RowBox[{"All", ",", "scen"}], "\[RightDoubleBracket]"}], 
-                 ",", "ansProp"}], "]"}], "]"}], ",", "4"}], "]"}]}]}], ";", 
+                 RowBox[{"DeleteCases", "[", 
+                  RowBox[{
+                   RowBox[{"RandomSample", "[", 
+                    RowBox[{"data", "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "scen"}], "\[RightDoubleBracket]"}], 
+                    "]"}], ",", "prop"}], "]"}], ",", "ansProp"}], "]"}], 
+               "]"}], ",", "4"}], "]"}]}]}], ";", "\[IndentingNewLine]", 
           "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
@@ -333,13 +328,37 @@ in which product?\>\"", ",",
    3.811434420071885*^9}, {3.811434552275771*^9, 3.811434611710165*^9}, {
    3.811434651652128*^9, 3.811434674810375*^9}, {3.811435084956935*^9, 
    3.811435118481656*^9}, {3.8114352691164427`*^9, 3.811435282817318*^9}, 
-   3.811435471826933*^9},
- CellLabel->
-  "In[379]:=",ExpressionUUID->"2992aa75-a02e-4f5a-b457-9aa647b346df"]
+   3.811435471826933*^9, 3.829497394872794*^9, {3.829497459009653*^9, 
+   3.829497483700398*^9}, 3.829498263305958*^9, {3.829498989256205*^9, 
+   3.829499087423506*^9}, {3.829499130895247*^9, 3.829499174463855*^9}, {
+   3.8294993399214163`*^9, 3.82949934032094*^9}, {3.829499570220683*^9, 
+   3.829499591330493*^9}, {3.829499916483954*^9, 3.829499939897874*^9}, {
+   3.829500196212473*^9, 3.8295002090430727`*^9}, {3.829500249282999*^9, 
+   3.829500264195264*^9}, {3.8295003254256563`*^9, 3.829500347875557*^9}, {
+   3.829500437086239*^9, 3.829500496076116*^9}},
+ CellLabel->"In[87]:=",ExpressionUUID->"2992aa75-a02e-4f5a-b457-9aa647b346df"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Anat15\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Anat15"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Anat15"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.829497489289662*^9, {3.829499180868559*^9, 3.8294992085373583`*^9}, {
+   3.829499270190543*^9, 3.829499297083357*^9}, 3.829499343890635*^9, {
+   3.829499385660161*^9, 3.829499391226746*^9}, 3.829499629189497*^9, 
+   3.829500268919709*^9, 3.829500349505189*^9, 3.829500439817986*^9, 
+   3.829500509644526*^9},
+ CellLabel->"Out[87]=",ExpressionUUID->"ed7c12cb-242c-4ca2-a2c4-80e2d08e288b"]
+}, Open  ]]
 },
 WindowSize->{1591, 1285},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (June 19, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"ded5daaa-8531-42ce-b7fc-6db008cf14c2"
 ]
@@ -354,7 +373,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 15670, 317, 721, "Input",ExpressionUUID->"2992aa75-a02e-4f5a-b457-9aa647b346df"]
+Cell[CellGroupData[{
+Cell[580, 22, 15993, 316, 721, "Input",ExpressionUUID->"2992aa75-a02e-4f5a-b457-9aa647b346df"],
+Cell[16576, 340, 786, 15, 37, "Output",ExpressionUUID->"ed7c12cb-242c-4ca2-a2c4-80e2d08e288b"]
+}, Open  ]]
 }
 ]
 *)
