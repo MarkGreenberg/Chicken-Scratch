@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     25977,        498]
-NotebookOptionsPosition[     25625,        484]
-NotebookOutlinePosition[     26022,        500]
-CellTagsIndexPosition[     25979,        497]
+NotebookDataLength[     29348,        565]
+NotebookOptionsPosition[     28867,        548]
+NotebookOutlinePosition[     29264,        564]
+CellTagsIndexPosition[     29221,        561]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -128,32 +130,58 @@ Cell[BoxData[
               "fun1", ",", "fun2", ",", "fun3", ",", "fun4", ",", "fun5"}], 
               "]"}], ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
-           RowBox[{
-            RowBox[{"ResourceFunction", "[", "\"\<CurvaturePlot\>\"", "]"}], 
-            "[", 
+           RowBox[{"Show", "[", 
             RowBox[{
-             RowBox[{"choices", "\[LeftDoubleBracket]", 
-              RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
-             RowBox[{"{", 
-              RowBox[{"x", ",", "1", ",", "40"}], "}"}], ",", 
-             RowBox[{"{", 
+             RowBox[{"Graphics", "[", 
+              RowBox[{"{", 
+               RowBox[{"Red", ",", 
+                RowBox[{"AbsolutePointSize", "[", "16", "]"}], ",", 
+                RowBox[{"Point", "[", 
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0"}], "}"}], "]"}]}], "}"}], "]"}], ",", 
+             
+             RowBox[{
+              RowBox[{"ResourceFunction", "[", "\"\<CurvaturePlot\>\"", "]"}],
+               "[", 
               RowBox[{
+               RowBox[{"choices", "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
                RowBox[{"{", 
-                RowBox[{"0", ",", "0"}], "}"}], ",", 
-               RowBox[{"RandomReal", "[", 
+                RowBox[{"x", ",", "1", ",", "15"}], "}"}], ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"0", ",", "0"}], "}"}], ",", 
+                 RowBox[{"RandomReal", "[", 
+                  RowBox[{"{", 
+                   RowBox[{"0", ",", 
+                    RowBox[{"2", " ", "\[Pi]"}]}], "}"}], "]"}]}], "}"}], ",", 
+               RowBox[{"PlotStyle", "\[Rule]", 
                 RowBox[{"{", 
-                 RowBox[{"0", ",", 
-                  RowBox[{"2", " ", "\[Pi]"}]}], "}"}], "]"}]}], "}"}], ",", 
-             RowBox[{"PlotStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"Thick", ",", 
-                RowBox[{"Darker", "[", 
-                 RowBox[{"Blue", ",", ".2"}], "]"}]}], "}"}]}], ",", 
-             RowBox[{"LabelStyle", "\[Rule]", 
-              RowBox[{"{", 
-               RowBox[{"12", ",", "Black"}], "}"}]}], ",", 
-             RowBox[{"AspectRatio", "\[Rule]", 
-              FractionBox["9", "8"]}], ",", 
+                 RowBox[{"Thick", ",", 
+                  RowBox[{"Darker", "[", 
+                   RowBox[{"Blue", ",", ".2"}], "]"}]}], "}"}]}], ",", 
+               RowBox[{"PlotRange", "\[Rule]", "All"}], ",", 
+               RowBox[{"Axes", "\[Rule]", "None"}], ",", 
+               RowBox[{"AspectRatio", "\[Rule]", 
+                FractionBox["9", "8"]}]}], "]"}], ",", 
+             RowBox[{"PlotLabel", "\[Rule]", 
+              RowBox[{"Style", "[", 
+               RowBox[{
+                RowBox[{"StringForm", "[", 
+                 RowBox[{
+                 "\"\<`2` < `1` < 15\\n`1` = distance along the curve\\n`3` \
+curves counterclockwise\>\"", ",", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<x\>\"", ",", "Italic"}], "]"}], ",", 
+                  RowBox[{"Style", "[", 
+                   RowBox[{"\"\<0\>\"", ",", "Red"}], "]"}], ",", 
+                  RowBox[{
+                   RowBox[{"f", "[", "x", "]"}], ">", "0"}]}], "]"}], ",", 
+                "24", ",", "Black", ",", 
+                RowBox[{
+                "FontFamily", "\[Rule]", "\"\<Times New Roman\>\""}]}], 
+               "]"}]}], ",", 
              RowBox[{"ImageSize", "\[Rule]", 
               RowBox[{"{", 
                RowBox[{
@@ -162,8 +190,8 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{
           "q", "=", 
-           "\"\<The output of which function determines this line's \
-curvature?\>\""}], ";", "\[IndentingNewLine]", 
+           "\"\<The curvature of the figure is described by which function?\>\
+\""}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -479,8 +507,44 @@ mapping?\>\"", ",",
    3.796060302316164*^9}, {3.796060453805725*^9, 3.79606045688376*^9}, {
    3.7960606471395617`*^9, 3.796060709075366*^9}, {3.824916622668956*^9, 
    3.824916630739676*^9}, 3.824916680180031*^9, {3.824917341422016*^9, 
-   3.824917357052559*^9}},
- CellLabel->"In[68]:=",ExpressionUUID->"57a3245c-cd4e-488b-9f82-7f4a3746074c"]
+   3.824917357052559*^9}, {3.830346093967163*^9, 3.830346118736203*^9}, {
+   3.83034619984936*^9, 3.830346211679928*^9}, {3.830346463183526*^9, 
+   3.830346463318446*^9}, 3.830346684085946*^9, {3.830346776829093*^9, 
+   3.8303467850126057`*^9}, {3.830346967932094*^9, 3.830347219751459*^9}, {
+   3.830347265978065*^9, 3.830347286953761*^9}, {3.830347389859544*^9, 
+   3.830347410546789*^9}, 3.830347531156151*^9, {3.8303476849327383`*^9, 
+   3.830347701196168*^9}, {3.830348094007462*^9, 3.8303482396233273`*^9}, {
+   3.8303482817368603`*^9, 3.8303483055681353`*^9}, {3.830348393169099*^9, 
+   3.830348449752357*^9}, {3.830348588473916*^9, 3.830348667458001*^9}, {
+   3.8303487329798107`*^9, 3.830348760530018*^9}, {3.830348946390788*^9, 
+   3.830348950534173*^9}, {3.830348992237646*^9, 3.830349022757471*^9}, {
+   3.830349125991316*^9, 3.830349186637459*^9}, {3.830349217085433*^9, 
+   3.830349237965501*^9}, 3.8303492709905787`*^9, 3.830349811527706*^9, {
+   3.830349857927153*^9, 3.8303498734625063`*^9}, 3.830349909879376*^9, {
+   3.830349949471404*^9, 3.830349949758691*^9}, {3.83035013391193*^9, 
+   3.830350135534911*^9}, {3.830350302787342*^9, 3.8303503220551233`*^9}},
+ CellLabel->
+  "In[158]:=",ExpressionUUID->"57a3245c-cd4e-488b-9f82-7f4a3746074c"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Grap5\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Grap5"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Grap5"],
+  
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.830349274113347*^9, 3.830349370634182*^9, {3.8303495105835*^9, 
+   3.8303495459297667`*^9}, {3.830349677813188*^9, 3.830349727763445*^9}, {
+   3.830349773262567*^9, 3.8303497815246553`*^9}, {3.830349812477849*^9, 
+   3.830349978802372*^9}, {3.830350039623518*^9, 3.830350084131424*^9}, {
+   3.830350139131761*^9, 3.830350192056362*^9}, 3.830350328535741*^9},
+ CellLabel->
+  "Out[158]=",ExpressionUUID->"c2399fa9-44dd-428b-a135-df729c7919fb"]
+}, Open  ]]
 },
 WindowSize->{1575, 1355},
 WindowMargins->{{4, Automatic}, {Automatic, 5}},
@@ -499,7 +563,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 25063, 462, 873, "Input",ExpressionUUID->"57a3245c-cd4e-488b-9f82-7f4a3746074c"]
+Cell[CellGroupData[{
+Cell[580, 22, 27428, 504, 922, "Input",ExpressionUUID->"57a3245c-cd4e-488b-9f82-7f4a3746074c"],
+Cell[28011, 528, 840, 17, 37, "Output",ExpressionUUID->"c2399fa9-44dd-428b-a135-df729c7919fb"]
+}, Open  ]]
 }
 ]
 *)
