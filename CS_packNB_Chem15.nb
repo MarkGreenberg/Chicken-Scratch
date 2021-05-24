@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     48943,        879]
-NotebookOptionsPosition[     48313,        862]
-NotebookOutlinePosition[     48707,        878]
-CellTagsIndexPosition[     48664,        875]
+NotebookDataLength[     50687,        916]
+NotebookOptionsPosition[     49925,        896]
+NotebookOutlinePosition[     50322,        912]
+CellTagsIndexPosition[     50279,        909]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -155,6 +155,8 @@ Cell["", "Text",
  CellFrameColor->RGBColor[0, 0, 1],
  CellSize->{
   Inherited, 4},ExpressionUUID->"5e24ca99-d4a9-4040-9b03-1774e551bf7c"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
@@ -674,29 +676,32 @@ is `5`. What is the rate of this chemical reaction?\>\"", ",",
              RowBox[{"ToExpression", "[", 
               RowBox[{"FromCharacterCode", "[", "h1", "]"}], "]"}], "]"}], "/.", 
             RowBox[{"h1", "\[Rule]", 
-             RowBox[{"ToCharacterCode", "[", 
-              RowBox[{"ToString", "[", 
-               RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}]}]}]}], ";", 
+             RowBox[{"SequenceReplace", "[", 
+              RowBox[{
+               RowBox[{"ToCharacterCode", "[", 
+                RowBox[{"ToString", "[", 
+                 RowBox[{"InputForm", "[", "q", "]"}], "]"}], "]"}], ",", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{"46", ",", "44", ",", "32"}], "}"}], "\[Rule]", 
+                RowBox[{"Sequence", "[", 
+                 RowBox[{"44", ",", "32"}], "]"}]}]}], "]"}]}]}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"ansNo", "=", 
-           RowBox[{"Round", "[", 
+           FractionBox[
             RowBox[{
-             FractionBox[
-              RowBox[{
-               RowBox[{
-               "cons", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}],
-                "-", 
-               RowBox[{
-               "cons", "\[LeftDoubleBracket]", "2", 
-                "\[RightDoubleBracket]"}]}], 
-              RowBox[{
-               RowBox[{
-               "time", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}],
-                "-", 
-               RowBox[{
-               "time", "\[LeftDoubleBracket]", "1", 
-                "\[RightDoubleBracket]"}]}]], ",", ".01"}], "]"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{
+             "cons", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             "-", 
+             RowBox[{
+             "cons", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+            RowBox[{
+             RowBox[{
+             "time", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+             "-", 
+             RowBox[{
+             "time", "\[LeftDoubleBracket]", "1", 
+              "\[RightDoubleBracket]"}]}]]}], ";", "\[IndentingNewLine]", 
           RowBox[{"dis", "=", 
            RowBox[{
             RowBox[{
@@ -704,20 +709,26 @@ is `5`. What is the rate of this chemical reaction?\>\"", ",",
               RowBox[{"#", ",", 
                RowBox[{"\"\<Molar\>\"", "/", "\"\<Seconds\>\""}]}], "]"}], 
              "&"}], "/@", 
-            RowBox[{"Round", "[", 
+            RowBox[{"RandomVariate", "[", 
              RowBox[{
-              RowBox[{"RandomVariate", "[", 
-               RowBox[{
-                RowBox[{"HalfNormalDistribution", "[", ".4", "]"}], ",", 
-                "10"}], "]"}], ",", ".01"}], "]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+              RowBox[{"HalfNormalDistribution", "[", ".4", "]"}], ",", "10"}],
+              "]"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
-           RowBox[{"Take", "[", 
+           RowBox[{
             RowBox[{
-             RowBox[{"DeleteDuplicates", "[", 
-              RowBox[{"Prepend", "[", 
-               RowBox[{"dis", ",", "ansNo"}], "]"}], "]"}], ",", "4"}], 
-            "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"StringReplace", "[", 
+              RowBox[{
+               RowBox[{"ToString", "[", 
+                RowBox[{"NumberForm", "[", 
+                 RowBox[{"#", ",", "3"}], "]"}], "]"}], ",", 
+               RowBox[{"\"\<. \>\"", "\[Rule]", "\"\< \>\""}]}], "]"}], "&"}],
+             "/@", 
+            RowBox[{"Take", "[", 
+             RowBox[{
+              RowBox[{"DeleteDuplicates", "[", 
+               RowBox[{"Prepend", "[", 
+                RowBox[{"dis", ",", "ansNo"}], "]"}], "]"}], ",", "4"}], 
+             "]"}]}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -856,13 +867,36 @@ is `5`. What is the rate of this chemical reaction?\>\"", ",",
    3.798232128680661*^9, {3.798232206645885*^9, 3.798232212561862*^9}, {
    3.798232302473709*^9, 3.7982323082317343`*^9}, {3.798232421905158*^9, 
    3.798232422921997*^9}, {3.798232479095069*^9, 3.79823248057614*^9}, {
-   3.798232655817525*^9, 3.7982326589992743`*^9}},
+   3.798232655817525*^9, 3.7982326589992743`*^9}, {3.830869601370055*^9, 
+   3.830869664170319*^9}, {3.830870055130453*^9, 3.830870116080554*^9}, {
+   3.830870627673387*^9, 3.83087070400788*^9}, {3.830870769845614*^9, 
+   3.830870793455522*^9}, {3.830871832180209*^9, 3.830871846857938*^9}, {
+   3.830871877010182*^9, 3.830871885218006*^9}, {3.830871977018317*^9, 
+   3.830872000864223*^9}, {3.830872080896022*^9, 3.830872114430951*^9}},
  CellLabel->
-  "In[591]:=",ExpressionUUID->"d88c5951-865a-44e3-9479-8f746dfdc5f7"]
+  "In[391]:=",ExpressionUUID->"d88c5951-865a-44e3-9479-8f746dfdc5f7"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Chem15\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Chem15"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Chem15"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.830869633574766*^9, 3.830869665184546*^9, {3.83086969779066*^9, 
+   3.830869774221753*^9}, {3.830870129465488*^9, 3.830870218501457*^9}, 
+   3.830870674809168*^9, {3.830870706745297*^9, 3.8308707420046673`*^9}, 
+   3.830870800874374*^9, 3.8308721228304157`*^9},
+ CellLabel->
+  "Out[391]=",ExpressionUUID->"5359f707-4409-41d9-a9e0-5bc37ee68712"]
+}, Open  ]]
 },
 WindowSize->{1496, 1236},
 WindowMargins->{{1, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"9b4256ba-8874-4c45-ab30-191c3917821a"
 ]
@@ -880,7 +914,10 @@ Notebook[{
 Cell[558, 20, 7517, 115, 60, "Input",ExpressionUUID->"c6ce8a4f-34bf-4260-a4fa-f627b6d469a5"],
 Cell[8078, 137, 302, 7, 30, "Input",ExpressionUUID->"f7215fe1-c892-4e2d-bae2-2140319ab4a5"],
 Cell[8383, 146, 328, 10, 8, "Text",ExpressionUUID->"5e24ca99-d4a9-4040-9b03-1774e551bf7c"],
-Cell[8714, 158, 39595, 702, 749, "Input",ExpressionUUID->"d88c5951-865a-44e3-9479-8f746dfdc5f7"]
+Cell[CellGroupData[{
+Cell[8736, 160, 40427, 716, 749, "Input",ExpressionUUID->"d88c5951-865a-44e3-9479-8f746dfdc5f7"],
+Cell[49166, 878, 743, 15, 37, "Output",ExpressionUUID->"5359f707-4409-41d9-a9e0-5bc37ee68712"]
+}, Open  ]]
 }
 ]
 *)
