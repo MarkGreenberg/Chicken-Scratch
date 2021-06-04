@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      8499,        203]
-NotebookOptionsPosition[      8151,        189]
-NotebookOutlinePosition[      8545,        205]
-CellTagsIndexPosition[      8502,        202]
+NotebookDataLength[     16038,        352]
+NotebookOptionsPosition[     15557,        335]
+NotebookOutlinePosition[     15954,        351]
+CellTagsIndexPosition[     15911,        348]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -30,8 +32,8 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-         "1", ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"yrs", "=", 
            RowBox[{"RandomInteger", "[", 
@@ -171,8 +173,125 @@ character?\\n`1`\>\"", ",",
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
-        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], 
+         ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "3", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"Take", "[", 
+            RowBox[{
+             RowBox[{"DeleteDuplicatesBy", "[", 
+              RowBox[{
+               RowBox[{"RandomSample", "[", 
+                InterpretationBox[
+                 DynamicModuleBox[{Typeset`open = False}, 
+                  TemplateBox[{"Association", "AssociationIcon", 
+                    GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["25", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["6728", "IconizedItem"]}]}}, 
+                    GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                    DefaultBaseStyle -> "Column", 
+                    GridBoxItemSize -> {
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                    Dynamic[Typeset`open]},
+                   "IconizedObject"]],
+                 Association[
+                 "Dr. No" -> {"John Barry", 1962, "Sean Connery"}, 
+                  "From Russia with Love" -> {
+                   "Matt Monro", 1963, "Sean Connery"}, 
+                  "Goldfinger" -> {"Shirley Bassey", 1964, "Sean Connery"}, 
+                  "Thunderball" -> {"Tom Jones", 1965, "Sean Connery"}, 
+                  "You Only Live Twice" -> {
+                   "Nancy Sinatra", 1967, "Sean Connery"}, 
+                  "On Her Majesty's Secret Service" -> {
+                   "Louis Armstrong", 1969, "George Lazenby"}, 
+                  "Diamonds are Forever" -> {
+                   "Shirley Bassey", 1971, "Sean Connery"}, 
+                  "Live and Let Die" -> {
+                   "Paul McCartney and Wings", 1973, "Roger Moore"}, 
+                  "The Man with the Golden Gun" -> {
+                   "Lulu", 1974, "Roger Moore"}, 
+                  "The Spy Who Loved Me" -> {
+                   "Carly Simon", 1977, "Roger Moore"}, 
+                  "Moonraker" -> {"Shirley Bassey", 1979, "Roger Moore"}, 
+                  "For Your Eyes Only" -> {
+                   "Sheena Easton", 1981, "Roger Moore"}, 
+                  "Octopussy" -> {"Rita Coolidge", 1983, "Roger Moore"}, 
+                  "A View to a Kill" -> {"Duran Duran", 1985, "Roger Moore"}, 
+                  "The Living Daylights" -> {"A-Ha", 1987, "Timothy Dalton"}, 
+                  "Licence to Kill" -> {
+                   "Gladys Knight", 1989, "Timothy Dalton"}, 
+                  "GoldenEye" -> {"Tina Turner", 1995, "Pierce Brosnan"}, 
+                  "Tomorrow Never Dies" -> {
+                   "Sheryl Crow", 1997, "Pierce Brosnan"}, 
+                  "The World is Not Enough" -> {
+                   "Garbage", 1999, "Pierce Brosnan"}, 
+                  "Die Another Day" -> {"Madonna", 2002, "Pierce Brosnan"}, 
+                  "Casino Royale" -> {"Chris Cornell", 2006, "Daniel Craig"}, 
+                  "Quantum of Solace" -> {
+                   "Jack White and Alicia Keys", 2008, "Daniel Craig"}, 
+                  "Skyfall" -> {"Adele", 2012, "Daniel Craig"}, 
+                  "Spectre" -> {"Sam Smith", 2015, "Daniel Craig"}, 
+                  "No Time to Die" -> {"Billie Eilish", 2020, "Daniel Craig"}],
+                 SelectWithContents->True,
+                 Selectable->False], "]"}], ",", "Last"}], "]"}], ",", "4"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<The theme song of which James Bond 007 movie was performed \
+by `1`?\>\"", ",", 
+             RowBox[{"data", "\[LeftDoubleBracket]", 
+              RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "]"}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"List", "@@", 
+            RowBox[{"AssociationMap", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Tooltip", "[", 
+                RowBox[{
+                 RowBox[{
+                 "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+                 ",", 
+                 RowBox[{"Style", "[", 
+                  RowBox[{
+                   RowBox[{"StringForm", "[", 
+                    RowBox[{"\"\<`1` with `2`\>\"", ",", 
+                    RowBox[{"#", "\[LeftDoubleBracket]", 
+                    RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{"#", "\[LeftDoubleBracket]", 
+                    RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}]}], 
+                    "]"}], ",", 
+                   RowBox[{"Darker", "[", "Blue", "]"}], ",", "20"}], "]"}]}],
+                 "]"}], "&"}], ",", "data"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Huma8\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.687206484807311*^9, 3.687206523769788*^9}, {
@@ -184,12 +303,39 @@ character?\\n`1`\>\"", ",",
    3.8015974364909267`*^9}, {3.801597512596177*^9, 3.801598036306391*^9}, {
    3.801598083474574*^9, 3.8015984884895678`*^9}, {3.801598590235042*^9, 
    3.801598633353207*^9}, {3.801598729163291*^9, 3.8015987862821617`*^9}, 
-   3.801598841067424*^9},
- CellLabel->"In[80]:=",ExpressionUUID->"2a37aac4-9f97-4325-a34c-2c8a4defdb33"]
+   3.801598841067424*^9, {3.831834893895306*^9, 3.83183498144282*^9}, {
+   3.831835014525236*^9, 3.831835077983678*^9}, {3.831835115903153*^9, 
+   3.8318351481984997`*^9}, {3.831835180158967*^9, 3.8318352431428547`*^9}, {
+   3.831835482960092*^9, 3.831835495111758*^9}, {3.831835603608284*^9, 
+   3.83183563032054*^9}, {3.831835660584956*^9, 3.8318356659608717`*^9}, {
+   3.8318357735534887`*^9, 3.831835893849577*^9}, {3.831835932522089*^9, 
+   3.831836299891426*^9}, {3.831836331379827*^9, 3.831837233797051*^9}, {
+   3.8318372641726847`*^9, 3.8318380293869057`*^9}, {3.831838077138937*^9, 
+   3.831838225179558*^9}, 3.831838269587496*^9, {3.831838407890818*^9, 
+   3.831838410170164*^9}, {3.831838537528038*^9, 3.831838656498149*^9}, {
+   3.831838699856793*^9, 3.8318387783048973`*^9}, {3.831838926178842*^9, 
+   3.831838995762484*^9}, {3.831839105763644*^9, 3.8318391241559677`*^9}, 
+   3.831839164620645*^9, {3.831839268141078*^9, 3.8318392829485807`*^9}, {
+   3.8318393391105433`*^9, 3.831839384666819*^9}},
+ CellLabel->"In[84]:=",ExpressionUUID->"2a37aac4-9f97-4325-a34c-2c8a4defdb33"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Huma8\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Huma8"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Huma8"],
+  
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.83183938766326*^9},
+ CellLabel->"Out[84]=",ExpressionUUID->"5582726c-427e-4dd2-a2dc-d0531cbda3ad"]
+}, Open  ]]
 },
 WindowSize->{1270, 1318},
 WindowMargins->{{6, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Mac OS X x86 (64-bit) (March 13, 2020)",
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"cfe07164-4812-440d-a4df-4f7c1b1404b7"
 ]
@@ -204,7 +350,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 7589, 167, 577, "Input",ExpressionUUID->"2a37aac4-9f97-4325-a34c-2c8a4defdb33"]
+Cell[CellGroupData[{
+Cell[580, 22, 14464, 297, 760, "Input",ExpressionUUID->"2a37aac4-9f97-4325-a34c-2c8a4defdb33"],
+Cell[15047, 321, 494, 11, 37, "Output",ExpressionUUID->"5582726c-427e-4dd2-a2dc-d0531cbda3ad"]
+}, Open  ]]
 }
 ]
 *)
