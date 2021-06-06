@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12760,        296]
-NotebookOptionsPosition[     12468,        283]
-NotebookOutlinePosition[     12805,        298]
-CellTagsIndexPosition[     12762,        295]
+NotebookDataLength[     23524,        505]
+NotebookOptionsPosition[     22947,        486]
+NotebookOutlinePosition[     23438,        504]
+CellTagsIndexPosition[     23395,        501]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -30,8 +32,8 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-         "1", ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"binCt", "=", 
            RowBox[{"RandomInteger", "[", 
@@ -247,6 +249,141 @@ Cell[BoxData[
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
             RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "3", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"city", "=", 
+           RowBox[{"RandomChoice", "[", 
+            InterpretationBox[
+             DynamicModuleBox[{Typeset`open = False}, 
+              TemplateBox[{"List", "ListIcon", 
+                GridBox[{{
+                   RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["List", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["7", "IconizedItem"]}]}, {
+                   RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["3288", "IconizedItem"]}]}}, 
+                 GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                 DefaultBaseStyle -> "Column", 
+                 GridBoxItemSize -> {
+                  "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                Dynamic[Typeset`open]},
+               "IconizedObject"]],
+             {
+             Entity["City", {"NewYork", "NewYork", "UnitedStates"}] -> 
+              Entity["TimeZone", "America/New_York"], 
+              Entity["City", {"BuenosAires", "BuenosAires", "Argentina"}] -> 
+              Entity["TimeZone", "America/Argentina/Buenos_Aires"], 
+              Entity["City", {"Paris", "IleDeFrance", "France"}] -> 
+              Entity["TimeZone", "Europe/Paris"], 
+              Entity["City", {"Moscow", "Moscow", "Russia"}] -> 
+              Entity["TimeZone", "Europe/Moscow"], 
+              Entity["City", {"Johannesburg", "Gauteng", "SouthAfrica"}] -> 
+              Entity["TimeZone", "Africa/Johannesburg"], 
+              Entity["City", {"Sydney", "NewSouthWales", "Australia"}] -> 
+              Entity["TimeZone", "Australia/Sydney"], 
+              Entity["City", {"Tokyo", "Tokyo", "Japan"}] -> 
+              Entity["TimeZone", "Asia/Tokyo"]},
+             SelectWithContents->True,
+             Selectable->False], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"time", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"DateObject", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"TimeZone", "\[Rule]", 
+                RowBox[{
+                "city", "\[LeftDoubleBracket]", "2", 
+                 "\[RightDoubleBracket]"}]}]}], "]"}], "&"}], "/@", 
+            RowBox[{"RandomInteger", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"3786825600", ",", "3818448000"}], "}"}], ",", "4"}], 
+             "]"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"DateString", "[", 
+              RowBox[{"#", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                "\"\<MonthName\>\"", ",", "\"\< \>\"", ",", 
+                 "\"\<DayShort\>\"", ",", "\"\<, \>\"", ",", 
+                 "\"\<Hour12Short\>\"", ",", "\"\<:\>\"", ",", 
+                 "\"\<Minute\>\"", ",", "\"\< \>\"", ",", "\"\<AMPM\>\""}], 
+                "}"}]}], "]"}], "&"}], "/@", "time"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pic", "=", 
+           RowBox[{"Framed", "[", 
+            RowBox[{
+             RowBox[{"GeoGraphics", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"NightHemisphere", "[", 
+                  RowBox[{
+                  "time", "\[LeftDoubleBracket]", "1", 
+                   "\[RightDoubleBracket]"}], "]"}], ",", 
+                 RowBox[{"GeoMarker", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "city", "\[LeftDoubleBracket]", "1", 
+                    "\[RightDoubleBracket]"}], ",", 
+                   RowBox[{"\"\<Color\>\"", "\[Rule]", "Blue"}]}], "]"}]}], 
+                "}"}], ",", 
+               RowBox[{"GeoProjection", "\[Rule]", "\"\<Mercator\>\""}], ",", 
+               
+               RowBox[{"GeoBackground", "\[Rule]", "\"\<Coastlines\>\""}], 
+               ",", 
+               RowBox[{"AspectRatio", "\[Rule]", 
+                FractionBox["9", "8"]}], ",", 
+               RowBox[{"GeoGridRange", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "180"}], ",", "180"}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{"-", "180"}], ",", "180"}], "}"}]}], "}"}]}], ",", 
+               RowBox[{"ImageSize", "\[Rule]", 
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{"{", "480", "}"}], ",", 
+                  RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}], ",", 
+             RowBox[{"FrameStyle", "\[Rule]", "Thick"}], ",", 
+             RowBox[{"FrameMargins", "\[Rule]", "None"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{
+            "\"\<What is the date and time for `1` in this map?\>\"", ",", 
+             RowBox[{"CommonName", "[", 
+              RowBox[{
+              "city", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+              "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
            "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
    "\[IndentingNewLine]", "\"\<CS_pack_Grap1\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
@@ -277,14 +414,83 @@ Cell[BoxData[
    3.789489034188048*^9}, {3.78948916950056*^9, 3.7894891774753532`*^9}, {
    3.7894892967480907`*^9, 3.789489304794504*^9}, {3.789489477202629*^9, 
    3.7894895065466433`*^9}, {3.7894896691312723`*^9, 3.789489700265773*^9}, {
-   3.7894898706671133`*^9, 3.789489897896957*^9}},
+   3.7894898706671133`*^9, 3.789489897896957*^9}, {3.8319717154001217`*^9, 
+   3.831971721956951*^9}, {3.831971757483837*^9, 3.831971794000705*^9}, {
+   3.831971835506316*^9, 3.8319718563206587`*^9}, {3.831971892464134*^9, 
+   3.8319719166712418`*^9}, {3.83197204759044*^9, 3.831972087917449*^9}, 
+   3.831972139006754*^9, {3.83197217740532*^9, 3.8319721964684973`*^9}, {
+   3.831972263996337*^9, 3.831972269539792*^9}, {3.831972301611514*^9, 
+   3.831972321019826*^9}, {3.8319723912510643`*^9, 3.831972393666484*^9}, {
+   3.83197245896286*^9, 3.831972467457502*^9}, {3.831972550297558*^9, 
+   3.8319725530328503`*^9}, {3.831972592304884*^9, 3.8319725997528257`*^9}, {
+   3.831972648088791*^9, 3.8319726659118967`*^9}, {3.831972710487946*^9, 
+   3.831972719886897*^9}, {3.831976927465303*^9, 3.831976966056011*^9}, {
+   3.831977059782995*^9, 3.8319771679533167`*^9}, {3.831977215871286*^9, 
+   3.831977261846466*^9}, {3.8319773033184423`*^9, 3.831977322097596*^9}, {
+   3.8319773862219477`*^9, 3.8319773913775473`*^9}, {3.831977475677466*^9, 
+   3.831977477840232*^9}, {3.831977878282785*^9, 3.831977878538258*^9}, {
+   3.831977952259007*^9, 3.831977956315138*^9}, {3.831978000611319*^9, 
+   3.831978008369823*^9}, {3.8319780958584003`*^9, 3.831978099018412*^9}, {
+   3.831978150730188*^9, 3.831978160312821*^9}, {3.831978273400774*^9, 
+   3.831978281208061*^9}, {3.831978356703307*^9, 3.8319783588977127`*^9}, {
+   3.831978393279043*^9, 3.8319783961757517`*^9}, {3.831978521591527*^9, 
+   3.831978546297818*^9}, 3.831978593590803*^9, {3.831978636895979*^9, 
+   3.831978669246477*^9}, {3.831978709366634*^9, 3.831978785990982*^9}, {
+   3.831979132704132*^9, 3.831979182906274*^9}, {3.831979213351479*^9, 
+   3.8319792428713293`*^9}, {3.83197932928127*^9, 3.831979356214491*^9}, {
+   3.831979396392084*^9, 3.831979450615*^9}, {3.8319819095500097`*^9, 
+   3.831981914085041*^9}, {3.831981956709263*^9, 3.83198200393327*^9}, {
+   3.831982146742139*^9, 3.831982180917571*^9}, {3.8319822570460463`*^9, 
+   3.831982257580677*^9}, {3.831982493861315*^9, 3.831982525292563*^9}, {
+   3.831982558893114*^9, 3.831982561588684*^9}, {3.831982613190893*^9, 
+   3.8319826676775208`*^9}, {3.831982829350312*^9, 3.831983043748581*^9}, {
+   3.831983224989717*^9, 3.831983236084447*^9}, 3.8319839626910563`*^9, {
+   3.831984704885477*^9, 3.8319847312296867`*^9}, {3.831984785085558*^9, 
+   3.831984850746645*^9}, {3.831984917238345*^9, 3.8319849182210207`*^9}, {
+   3.83198495942218*^9, 3.831984989941292*^9}, {3.831985088622059*^9, 
+   3.831985102367215*^9}, {3.8319851459501133`*^9, 3.8319851647736683`*^9}, {
+   3.831985732116725*^9, 3.831985754821391*^9}, 3.831986063288137*^9},
  CellLabel->
-  "In[589]:=",ExpressionUUID->"d1eb238f-f1b5-4b07-ae22-ebba9761ee1f"]
+  "In[181]:=",ExpressionUUID->"d1eb238f-f1b5-4b07-ae22-ebba9761ee1f"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Grap1\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Grap1"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Grap1"],
+  
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.831971798835086*^9, 3.831972198763981*^9, 3.831972397231905*^9, 
+   3.831972469444911*^9, 3.831972554732539*^9, 3.831972600857287*^9, 
+   3.831972667757197*^9, 3.8319727216810083`*^9, {3.831979218375392*^9, 
+   3.831979244320343*^9}, 3.831979358090609*^9, {3.831979401669347*^9, 
+   3.831979452111278*^9}, 3.8319819154759207`*^9, {3.8319819597628527`*^9, 
+   3.831982005145361*^9}, 3.831982184804319*^9, 3.831982219193365*^9, {
+   3.83198226016315*^9, 3.831982312253036*^9}, 3.831982404998713*^9, 
+   3.831982585100101*^9, 3.831982670131866*^9, {3.831983007549179*^9, 
+   3.8319830454714127`*^9}, {3.831983078164733*^9, 3.831983107722206*^9}, {
+   3.8319831437395697`*^9, 3.831983165436903*^9}, 3.831983267419855*^9, 
+   3.831983966001315*^9, 3.831984002968198*^9, 3.831984064736847*^9, {
+   3.831984115137233*^9, 3.831984152715*^9}, 3.831984252676828*^9, 
+   3.831984514613955*^9, 3.831984791072486*^9, 3.831984821528566*^9, 
+   3.8319848525585012`*^9, 3.831984920093647*^9, 3.831984993046071*^9, 
+   3.831985097022801*^9, 3.8319851665058613`*^9, 3.831985642757276*^9, 
+   3.8319856885884523`*^9, 3.831985759634944*^9, 3.831986085478518*^9},
+ CellLabel->
+  "Out[181]=",ExpressionUUID->"5d9df0af-de4d-46fc-8680-912766add17b"]
+}, Open  ]]
 },
 WindowSize->{1438, 1318},
 WindowMargins->{{1, Automatic}, {Automatic, 6}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+TaggingRules->{
+ "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"03421402-cbd6-49e6-bab3-0aeae48c9ebe"
 ]
 (* End of Notebook Content *)
 
@@ -297,7 +503,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 11906, 261, 852, "Input",ExpressionUUID->"d1eb238f-f1b5-4b07-ae22-ebba9761ee1f"]
+Cell[CellGroupData[{
+Cell[580, 22, 20724, 431, 1134, "Input",ExpressionUUID->"d1eb238f-f1b5-4b07-ae22-ebba9761ee1f"],
+Cell[21307, 455, 1624, 28, 37, "Output",ExpressionUUID->"5d9df0af-de4d-46fc-8680-912766add17b"]
+}, Open  ]]
 }
 ]
 *)
