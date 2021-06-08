@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     41705,        877]
-NotebookOptionsPosition[     41352,        863]
-NotebookOutlinePosition[     41749,        879]
-CellTagsIndexPosition[     41706,        876]
+NotebookDataLength[     46122,        969]
+NotebookOptionsPosition[     45639,        952]
+NotebookOutlinePosition[     46037,        968]
+CellTagsIndexPosition[     45994,        965]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -70,17 +72,38 @@ Cell[BoxData[
           ";", "\[IndentingNewLine]", 
           RowBox[{"funSeg2", "=", 
            RowBox[{"BSplineFunction", "[", 
-            RowBox[{"pts", "\[LeftDoubleBracket]", 
-             RowBox[{"1", ",", 
-              RowBox[{"4", ";;", "7"}]}], "\[RightDoubleBracket]"}], "]"}]}], 
-          ";", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "4"}], "\[RightDoubleBracket]"}], ",", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "5"}], "\[RightDoubleBracket]"}]}], "}"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"funSeg3", "=", 
+           RowBox[{"BSplineFunction", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "5"}], "\[RightDoubleBracket]"}], ",", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "6"}], "\[RightDoubleBracket]"}]}], "}"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"funSeg4", "=", 
+           RowBox[{"BSplineFunction", "[", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "6"}], "\[RightDoubleBracket]"}], ",", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "7"}], "\[RightDoubleBracket]"}]}], "}"}], 
+            "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"funSeg5", "=", 
            RowBox[{"BSplineFunction", "[", 
             RowBox[{"pts", "\[LeftDoubleBracket]", 
              RowBox[{"1", ",", 
               RowBox[{"7", ";;", "10"}]}], "\[RightDoubleBracket]"}], "]"}]}],
            ";", "\[IndentingNewLine]", 
-          RowBox[{"funSeg4", "=", 
+          RowBox[{"funSeg6", "=", 
            RowBox[{"BSplineFunction", "[", 
             RowBox[{"{", 
              RowBox[{
@@ -177,10 +200,10 @@ Cell[BoxData[
                     "2", "\[RightDoubleBracket]"}]}], "}"}], ",", 
                   RowBox[{"{", 
                    RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
-                  RowBox[{"RevolutionAxis", "\[Rule]", "h5"}], ",", 
+                  RowBox[{"RevolutionAxis", "\[Rule]", "h7"}], ",", 
                   RowBox[{"PlotPoints", "\[Rule]", "60"}], ",", 
                   RowBox[{"MeshStyle", "\[Rule]", "None"}], ",", 
-                  RowBox[{"PlotStyle", "\[Rule]", "h6"}]}], "]"}], "]"}]}], 
+                  RowBox[{"PlotStyle", "\[Rule]", "h8"}]}], "]"}], "]"}]}], 
               ";", "\[IndentingNewLine]", 
               RowBox[{"ring2", "=", 
                RowBox[{"Quiet", "[", 
@@ -196,10 +219,10 @@ Cell[BoxData[
                     "2", "\[RightDoubleBracket]"}]}], "}"}], ",", 
                   RowBox[{"{", 
                    RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
-                  RowBox[{"RevolutionAxis", "\[Rule]", "h5"}], ",", 
+                  RowBox[{"RevolutionAxis", "\[Rule]", "h7"}], ",", 
                   RowBox[{"PlotPoints", "\[Rule]", "60"}], ",", 
                   RowBox[{"MeshStyle", "\[Rule]", "None"}], ",", 
-                  RowBox[{"PlotStyle", "\[Rule]", "h6"}]}], "]"}], "]"}]}], 
+                  RowBox[{"PlotStyle", "\[Rule]", "h8"}]}], "]"}], "]"}]}], 
               ";", "\[IndentingNewLine]", 
               RowBox[{"ring3", "=", 
                RowBox[{"Quiet", "[", 
@@ -215,10 +238,10 @@ Cell[BoxData[
                     "2", "\[RightDoubleBracket]"}]}], "}"}], ",", 
                   RowBox[{"{", 
                    RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
-                  RowBox[{"RevolutionAxis", "\[Rule]", "h5"}], ",", 
+                  RowBox[{"RevolutionAxis", "\[Rule]", "h7"}], ",", 
                   RowBox[{"PlotPoints", "\[Rule]", "60"}], ",", 
                   RowBox[{"MeshStyle", "\[Rule]", "None"}], ",", 
-                  RowBox[{"PlotStyle", "\[Rule]", "h6"}]}], "]"}], "]"}]}], 
+                  RowBox[{"PlotStyle", "\[Rule]", "h8"}]}], "]"}], "]"}]}], 
               ";", "\[IndentingNewLine]", 
               RowBox[{"ring4", "=", 
                RowBox[{"Quiet", "[", 
@@ -234,13 +257,53 @@ Cell[BoxData[
                     "2", "\[RightDoubleBracket]"}]}], "}"}], ",", 
                   RowBox[{"{", 
                    RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
-                  RowBox[{"RevolutionAxis", "\[Rule]", "h5"}], ",", 
+                  RowBox[{"RevolutionAxis", "\[Rule]", "h7"}], ",", 
                   RowBox[{"PlotPoints", "\[Rule]", "60"}], ",", 
                   RowBox[{"MeshStyle", "\[Rule]", "None"}], ",", 
-                  RowBox[{"PlotStyle", "\[Rule]", "h6"}]}], "]"}], "]"}]}], 
+                  RowBox[{"PlotStyle", "\[Rule]", "h8"}]}], "]"}], "]"}]}], 
+              ";", "\[IndentingNewLine]", 
+              RowBox[{"ring5", "=", 
+               RowBox[{"Quiet", "[", 
+                RowBox[{"RevolutionPlot3D", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"h5", "[", "t", "]"}], "\[LeftDoubleBracket]", 
+                    "1", "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    RowBox[{"h5", "[", "t", "]"}], "\[LeftDoubleBracket]", 
+                    "2", "\[RightDoubleBracket]"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+                  RowBox[{"RevolutionAxis", "\[Rule]", "h7"}], ",", 
+                  RowBox[{"PlotPoints", "\[Rule]", "60"}], ",", 
+                  RowBox[{"MeshStyle", "\[Rule]", "None"}], ",", 
+                  RowBox[{"PlotStyle", "\[Rule]", "h8"}]}], "]"}], "]"}]}], 
+              ";", "\[IndentingNewLine]", 
+              RowBox[{"ring6", "=", 
+               RowBox[{"Quiet", "[", 
+                RowBox[{"RevolutionPlot3D", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"h6", "[", "t", "]"}], "\[LeftDoubleBracket]", 
+                    "1", "\[RightDoubleBracket]"}], ",", 
+                    RowBox[{
+                    RowBox[{"h6", "[", "t", "]"}], "\[LeftDoubleBracket]", 
+                    "2", "\[RightDoubleBracket]"}]}], "}"}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{"t", ",", "0", ",", "1"}], "}"}], ",", 
+                  RowBox[{"RevolutionAxis", "\[Rule]", "h7"}], ",", 
+                  RowBox[{"PlotPoints", "\[Rule]", "60"}], ",", 
+                  RowBox[{"MeshStyle", "\[Rule]", "None"}], ",", 
+                  RowBox[{"PlotStyle", "\[Rule]", "h8"}]}], "]"}], "]"}]}], 
               ";", "\[IndentingNewLine]", 
               RowBox[{"Show", "[", 
-               RowBox[{"ring1", ",", "ring2", ",", "ring3", ",", "ring4", ",", 
+               RowBox[{
+               "ring1", ",", "ring2", ",", "ring3", ",", "ring4", ",", 
+                "ring5", ",", "ring6", ",", 
                 RowBox[{"ViewPoint", "\[Rule]", 
                  RowBox[{"RandomChoice", "[", 
                   RowBox[{"{", 
@@ -262,13 +325,14 @@ Cell[BoxData[
               RowBox[{"h2", "\[Rule]", "funSeg2"}], ",", 
               RowBox[{"h3", "\[Rule]", "funSeg3"}], ",", 
               RowBox[{"h4", "\[Rule]", "funSeg4"}], ",", 
-              RowBox[{"h5", "\[Rule]", "axis"}], ",", 
-              RowBox[{"h6", "\[Rule]", "color"}]}], "}"}]}]}], ";", 
+              RowBox[{"h5", "\[Rule]", "funSeg5"}], ",", 
+              RowBox[{"h6", "\[Rule]", "funSeg6"}], ",", 
+              RowBox[{"h7", "\[Rule]", "axis"}], ",", 
+              RowBox[{"h8", "\[Rule]", "color"}]}], "}"}]}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{
-          "q", "=", 
-           "\"\<Which shape produced this solid of rotation? (3D shape may be \
-compressed along the axis of rotation.)\>\""}], ";", "\[IndentingNewLine]", 
+          "q", "=", "\"\<Which shape produced this solid of rotation?\>\""}], 
+          ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -857,12 +921,37 @@ and `5`\[TildeFullEqual]`6`. What's the value of `7`?\>\"", ",",
    3.818632804445086*^9, 3.818632820420697*^9}, {3.818633474686481*^9, 
    3.818633509037252*^9}, 3.818633593357441*^9, {3.818633982754013*^9, 
    3.818634026488628*^9}, {3.81863418447814*^9, 3.818634218528036*^9}, {
-   3.8186343976633263`*^9, 3.818634404262369*^9}},
+   3.8186343976633263`*^9, 3.818634404262369*^9}, {3.832100417423266*^9, 
+   3.8321004424367323`*^9}, {3.832100475957905*^9, 3.832100482317391*^9}, {
+   3.8321510484879017`*^9, 3.8321511430687027`*^9}, {3.8321512175805187`*^9, 
+   3.832151244508382*^9}, {3.832151293795742*^9, 3.832151304931531*^9}, {
+   3.832151382787816*^9, 3.83215143327393*^9}, 3.832152724367519*^9, {
+   3.832152887602994*^9, 3.8321528965232773`*^9}, {3.832152941207788*^9, 
+   3.832152961583218*^9}},
  CellLabel->
-  "In[2984]:=",ExpressionUUID->"8eacdca4-fc0d-4e8c-8934-01ba2686ea39"]
+  "In[830]:=",ExpressionUUID->"8eacdca4-fc0d-4e8c-8934-01ba2686ea39"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geom8\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geom8"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geom8"],
+  
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.832152167656995*^9, 3.832152217875317*^9, 3.83215225272678*^9, 
+   3.83215234141191*^9, {3.8321523831347017`*^9, 3.832152398147296*^9}, {
+   3.832152437327909*^9, 3.83215248199148*^9}, 3.832152608373136*^9, 
+   3.83215273693701*^9, 3.83215279563723*^9, 3.832152973884027*^9},
+ CellLabel->
+  "Out[830]=",ExpressionUUID->"4c80fb4c-81f7-4bd4-957c-a5b9fe64cc2b"]
+}, Open  ]]
 },
 WindowSize->{1496, 1369},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowMargins->{{21, Automatic}, {Automatic, 0}},
 FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"64f1c0e0-560d-4308-825c-a5a4be646b6e"
@@ -878,7 +967,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 40790, 841, 1705, "Input",ExpressionUUID->"8eacdca4-fc0d-4e8c-8934-01ba2686ea39"]
+Cell[CellGroupData[{
+Cell[580, 22, 44283, 909, 1789, "Input",ExpressionUUID->"8eacdca4-fc0d-4e8c-8934-01ba2686ea39"],
+Cell[44866, 933, 757, 16, 37, "Output",ExpressionUUID->"4c80fb4c-81f7-4bd4-957c-a5b9fe64cc2b"]
+}, Open  ]]
 }
 ]
 *)
