@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13655,        330]
-NotebookOptionsPosition[     13345,        316]
-NotebookOutlinePosition[     13699,        332]
-CellTagsIndexPosition[     13656,        329]
+NotebookDataLength[     22068,        466]
+NotebookOptionsPosition[     21586,        449]
+NotebookOutlinePosition[     21983,        465]
+CellTagsIndexPosition[     21940,        462]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -30,8 +32,8 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-         "1", ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"pts", "=", 
            RowBox[{"RandomSample", "[", 
@@ -49,55 +51,49 @@ Cell[BoxData[
           RowBox[{"ptsA", "=", 
            RowBox[{"{", 
             RowBox[{
-             RowBox[{"pts", "[", 
-              RowBox[{"[", "1", "]"}], "]"}], ",", 
-             RowBox[{"pts", "[", 
-              RowBox[{"[", "2", "]"}], "]"}]}], "}"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{
+             "pts", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             ",", 
+             RowBox[{
+             "pts", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}], 
+            "}"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ptsB", "=", 
            RowBox[{"{", 
             RowBox[{
-             RowBox[{"pts", "[", 
-              RowBox[{"[", "3", "]"}], "]"}], ",", 
-             RowBox[{"pts", "[", 
-              RowBox[{"[", "4", "]"}], "]"}]}], "}"}]}], ";", 
-          "\[IndentingNewLine]", 
+             RowBox[{
+             "pts", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}], 
+             ",", 
+             RowBox[{
+             "pts", "\[LeftDoubleBracket]", "4", "\[RightDoubleBracket]"}]}], 
+            "}"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"v1", "=", 
            RowBox[{"{", 
             RowBox[{
              RowBox[{
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"2", ",", "1"}], "]"}], "]"}], "-", 
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ",", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], "-", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ",", 
              RowBox[{
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"2", ",", "2"}], "]"}], "]"}], "-", 
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"1", ",", "2"}], "]"}], "]"}]}]}], "}"}]}], ";", 
-          "\[IndentingNewLine]", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], "-", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}]}], 
+            "}"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"v2", "=", 
            RowBox[{"{", 
             RowBox[{
              RowBox[{
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"4", ",", "1"}], "]"}], "]"}], "-", 
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"3", ",", "1"}], "]"}], "]"}]}], ",", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"4", ",", "1"}], "\[RightDoubleBracket]"}], "-", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}]}], ",", 
              RowBox[{
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"4", ",", "2"}], "]"}], "]"}], "-", 
-              RowBox[{"pts", "[", 
-               RowBox[{"[", 
-                RowBox[{"3", ",", "2"}], "]"}], "]"}]}]}], "}"}]}], ";", 
-          "\[IndentingNewLine]", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"4", ",", "2"}], "\[RightDoubleBracket]"}], "-", 
+              RowBox[{"pts", "\[LeftDoubleBracket]", 
+               RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}]}]}], 
+            "}"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"ansNo", "=", 
            RowBox[{"v1", ".", "v2"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"pic", "=", 
@@ -236,16 +232,16 @@ coordinate plane?\>\"", ",",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
             RowBox[{"q", ",", "ans", ",", "mixed", ",", "pic"}], "}"}], 
-           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-         "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
+           "]"}]}], ",", "\[IndentingNewLine]", "\[IndentingNewLine]", "2", 
+         ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"no", "=", 
            RowBox[{"RandomInteger", "[", 
@@ -285,16 +281,124 @@ coordinate plane?\>\"", ",",
            RowBox[{
             RowBox[{"Position", "[", 
              RowBox[{"mixed", ",", 
-              RowBox[{"choices", "[", 
-               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
-            RowBox[{"[", 
-             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "3", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             InterpretationBox[
+              DynamicModuleBox[{Typeset`open = False}, 
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
+                    RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["123", "IconizedItem"]}]}, {
+                    RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["16664", "IconizedItem"]}]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+                  DefaultBaseStyle -> "Column", 
+                  GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+                 Dynamic[Typeset`open]},
+                "IconizedObject"]],
+              Association[
+              "acacia leaves" -> "161", "acacia log" -> "162", 
+               "acacia planks" -> "5:4", "acacia sapling" -> "6:4", 
+               "acacia slab" -> "126:4", "air" -> "0", "allium" -> "38:2", 
+               "andesite" -> "1:5", "azure bluet" -> "38:3", "bedrock" -> "7",
+                "birch leaves" -> "18:2", "birch log" -> "17:2", 
+               "birch planks" -> "5:2", "birch sapling" -> "6:2", 
+               "birch slab" -> "126:2", "black wool" -> "35:15", 
+               "blue orchid" -> "38:1", "blue wool" -> "35:11", "bookshelf" -> 
+               "47", "bricks" -> "45", "brick slab" -> "44:4", 
+               "brown mushroom" -> "39", "brown wool" -> "35:12", "chest" -> 
+               "54", "chiseled sandstone" -> "24:1", "chorus flower" -> "200",
+                "chorus plant" -> "199", "coal ore" -> "16", "coarse dirt" -> 
+               "3:1", "cobblestone" -> "4", "cobblestone slab" -> "44:3", 
+               "cobweb" -> "30", "cut sandstone" -> "24:2", "cyan wool" -> 
+               "35:9", "dandelion" -> "37", "dark oak leaves" -> "161:1", 
+               "dark oak log" -> "162:1", "dark oak planks" -> "5:5", 
+               "dark oak sapling" -> "6:5", "dark oak slab" -> "126:5", 
+               "dead bush" -> "32", "detector rail" -> "28", "diorite" -> 
+               "1:3", "dirt" -> "3", "dispenser" -> "23", "end rod" -> "198", 
+               "fern" -> "31:2", "glass" -> "20", "gold block" -> "41", 
+               "gold ore" -> "14", "granite" -> "1:1", "grass block" -> "2", 
+               "gravel" -> "13", "gray wool" -> "35:7", "green wool" -> 
+               "35:13", "iron block" -> "42", "iron ore" -> "15", 
+               "jungle leaves" -> "18:3", "jungle log" -> "17:3", 
+               "jungle planks" -> "5:3", "jungle sapling" -> "6:3", 
+               "jungle slab" -> "126:3", "lapis block" -> "22", "lapis ore" -> 
+               "21", "light blue wool" -> "35:3", "light gray wool" -> "35:8",
+                "lime wool" -> "35:5", "magenta wool" -> "35:2", 
+               "mossy cobblestone" -> "48", "nether brick slab" -> "44:6", 
+               "note block" -> "25", "oak leaves" -> "18", "oak log" -> "17", 
+               "oak planks" -> "5", "oak sapling" -> "6", "oak slab" -> "126",
+                "oak stairs" -> "53", "obsidian" -> "49", "orange tulip" -> 
+               "38:5", "orange wool" -> "35:1", "oxeye daisy" -> "38:8", 
+               "pink tulip" -> "38:7", "pink wool" -> "35:6", "piston" -> 
+               "33", "podzol" -> "3:2", "polished andesite" -> "1:6", 
+               "polished diorite" -> "1:4", "polished granite" -> "1:2", 
+               "poppy" -> "38", "powered rail" -> "27", "purple wool" -> 
+               "35:10", "purpur block" -> "201", "purpur pillar" -> "202", 
+               "purpur slab" -> "205", "purpur stairs" -> "203", 
+               "quartz slab" -> "44:7", "red mushroom" -> "40", "red sand" -> 
+               "12:1", "red sandstone slab" -> "182", "red tulip" -> "38:4", 
+               "red wool" -> "35:14", "sand" -> "12", "sandstone" -> "24", 
+               "sandstone slab" -> "44:1", "smooth quartz" -> "43:7", 
+               "smooth stone" -> "43:8", "spawner" -> "52", "sponge" -> "19", 
+               "spruce leaves" -> "18:1", "spruce log" -> "17:1", 
+               "spruce planks" -> "5:1", "spruce sapling" -> "6:1", 
+               "spruce slab" -> "126:1", "sticky piston" -> "29", "stone" -> 
+               "1", "stone brick slab" -> "44:5", "stone slab" -> "44:2", 
+               "tnt" -> "46", "torch" -> "50", "wet sponge" -> "19:1", 
+               "white tulip" -> "38:6", "white wool" -> "35", "yellow wool" -> 
+               "35:4"],
+              SelectWithContents->True,
+              Selectable->False], ",", "4"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"qNo", "=", 
+           RowBox[{
+            RowBox[{"Values", "[", "data", "]"}], "\[LeftDoubleBracket]", "1",
+             "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{
+           "\"\<Which of these Minecraft blocks\\nhas the numerical ID \>\"", 
+            "<>", "qNo", "<>", "\"\<?\>\""}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", "data", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
             RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
-       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Numb6\>\"", ",", 
+       "\[IndentingNewLine]", "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Numb6\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.6856277421796618`*^9, 3.685627759336501*^9}, {
    3.685648938384365*^9, 3.685648939050686*^9}, {3.685653112311743*^9, 
@@ -310,15 +414,44 @@ coordinate plane?\>\"", ",",
    3.7327446555820293`*^9, 3.7327446899494658`*^9}, {3.761930934859005*^9, 
    3.76193094025683*^9}, {3.761931054624962*^9, 3.761931085408181*^9}, {
    3.761931143073872*^9, 3.761931143328167*^9}, {3.761931297913405*^9, 
-   3.761931319607539*^9}},
- CellLabel->
-  "In[413]:=",ExpressionUUID->"0f16f388-fe9e-4b00-bc51-002862220671"]
+   3.761931319607539*^9}, {3.835544460104903*^9, 3.8355446386860647`*^9}, {
+   3.835544674486689*^9, 3.835544726022077*^9}, {3.835544771918495*^9, 
+   3.835544807248045*^9}, 3.835544871869728*^9, {3.835544941318274*^9, 
+   3.835545019861403*^9}, {3.8355450766309853`*^9, 3.835545085092678*^9}, {
+   3.835545172205462*^9, 3.835545208196329*^9}, {3.835545242892063*^9, 
+   3.835545257539485*^9}, {3.83554537103574*^9, 3.83554539189995*^9}, {
+   3.835545460731874*^9, 3.835545493335559*^9}, {3.8355608726664677`*^9, 
+   3.83556100102929*^9}, {3.835561038572901*^9, 3.835561047662257*^9}, {
+   3.835561080184147*^9, 3.835561084734496*^9}, {3.83556115802565*^9, 
+   3.835561162830946*^9}, {3.835561504126433*^9, 3.835561504277073*^9}, {
+   3.8355615910531807`*^9, 3.8355615979567013`*^9}, 3.8355616638146687`*^9, 
+   3.83556169848848*^9, 3.835561763541544*^9, {3.8355618037248163`*^9, 
+   3.8355618058519487`*^9}, 3.835561841189122*^9, {3.8355619339085703`*^9, 
+   3.835561983731536*^9}, 3.8355620268922462`*^9, {3.8355621930414543`*^9, 
+   3.835562214329948*^9}, {3.835562330147347*^9, 3.8355623341492767`*^9}, 
+   3.835562389950493*^9},ExpressionUUID->"0f16f388-fe9e-4b00-bc51-\
+002862220671"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Numb6\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Numb6"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Numb6"],
+  
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{3.8355610489360523`*^9, 3.835561086627831*^9, 
+  3.8355620615028267`*^9, 3.835562215920405*^9, 3.835562337416403*^9},
+ CellLabel->"Out[52]=",ExpressionUUID->"7b6350b9-27e4-4af1-9994-80f1852b659c"]
+}, Open  ]]
 },
 WindowSize->{1217, 1344},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
-StyleDefinitions->"Default.nb"
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"10961cf2-9606-4b8a-81d0-ce51855e67d4"
 ]
 (* End of Notebook Content *)
 
@@ -331,7 +464,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12783, 294, 1039, "Input",ExpressionUUID->"0f16f388-fe9e-4b00-bc51-002862220671"]
+Cell[CellGroupData[{
+Cell[580, 22, 20397, 410, 1245, "Input",ExpressionUUID->"0f16f388-fe9e-4b00-bc51-002862220671"],
+Cell[20980, 434, 590, 12, 37, "Output",ExpressionUUID->"7b6350b9-27e4-4af1-9994-80f1852b659c"]
+}, Open  ]]
 }
 ]
 *)
