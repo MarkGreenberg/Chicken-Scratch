@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     37402,        678]
-NotebookOptionsPosition[     37109,        665]
-NotebookOutlinePosition[     37447,        680]
-CellTagsIndexPosition[     37404,        677]
+NotebookDataLength[     58933,       1089]
+NotebookOptionsPosition[     58452,       1072]
+NotebookOutlinePosition[     58845,       1088]
+CellTagsIndexPosition[     58802,       1085]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -30,15 +32,16 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-         "1", ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"data", "=", 
            RowBox[{"RandomSample", "[", 
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -54,7 +57,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association[
@@ -258,7 +261,8 @@ Cell[BoxData[
             RowBox[{
              InterpretationBox[
               DynamicModuleBox[{Typeset`open = False}, 
-               TemplateBox[{"Association","AssociationIcon",GridBox[{{
+               TemplateBox[{"Association", "AssociationIcon", 
+                 GridBox[{{
                     RowBox[{
                     TagBox["\"Head: \"", "IconizedLabel"], 
                     "\[InvisibleSpace]", 
@@ -274,7 +278,7 @@ Cell[BoxData[
                   GridBoxAlignment -> {"Columns" -> {{Left}}}, 
                   DefaultBaseStyle -> "Column", 
                   GridBoxItemSize -> {
-                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
                  Dynamic[Typeset`open]},
                 "IconizedObject"]],
               Association[
@@ -446,8 +450,297 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
-        "]"}], "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
+            RowBox[{"qTransit", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], 
+         ",", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", "3", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"color0", "=", 
+           RowBox[{"Hue", "[", 
+            RowBox[{
+             RowBox[{"RandomReal", "[", "]"}], ",", 
+             RowBox[{"RandomReal", "[", 
+              RowBox[{"{", 
+               RowBox[{".3", ",", "1"}], "}"}], "]"}], ",", 
+             RowBox[{"RandomReal", "[", 
+              RowBox[{"{", 
+               RowBox[{".5", ",", "1"}], "}"}], "]"}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"color1", "=", 
+           RowBox[{"color0", "/.", 
+            RowBox[{
+             RowBox[{"Hue", "[", 
+              RowBox[{"h_", ",", "s_", ",", "b_"}], "]"}], "->", 
+             RowBox[{"Hue", "[", 
+              RowBox[{
+               RowBox[{"h", "+", ".25"}], ",", "s", ",", "b"}], "]"}]}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"color2", "=", 
+           RowBox[{"color0", "/.", 
+            RowBox[{
+             RowBox[{"Hue", "[", 
+              RowBox[{"h_", ",", "s_", ",", "b_"}], "]"}], "->", 
+             RowBox[{"Hue", "[", 
+              RowBox[{
+               RowBox[{"h", "+", ".5"}], ",", "s", ",", "b"}], "]"}]}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"color3", "=", 
+           RowBox[{"color0", "/.", 
+            RowBox[{
+             RowBox[{"Hue", "[", 
+              RowBox[{"h_", ",", "s_", ",", "b_"}], "]"}], "->", 
+             RowBox[{"Hue", "[", 
+              RowBox[{
+               RowBox[{"h", "+", ".75"}], ",", "s", ",", "b"}], "]"}]}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"data", "=", 
+           InterpretationBox[
+            DynamicModuleBox[{Typeset`open = False}, 
+             TemplateBox[{"Association", "AssociationIcon", 
+               GridBox[{{
+                  RowBox[{
+                    TagBox["\"Head: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["Association", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Length: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["10", "IconizedItem"]}]}, {
+                  RowBox[{
+                    TagBox["\"Byte count: \"", "IconizedLabel"], 
+                    "\[InvisibleSpace]", 
+                    TagBox["13712", "IconizedItem"]}]}}, 
+                GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+                "Column", 
+                GridBoxItemSize -> {
+                 "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+               Dynamic[Typeset`open]},
+              "IconizedObject"]],
+            Association["base color" -> {
+               Association[
+               "RoughnessCoefficient" -> 0.3, 
+                "BaseColor" -> $CellContext`color0], 
+               Association[
+               "RoughnessCoefficient" -> 0.3, 
+                "BaseColor" -> $CellContext`color1], 
+               Association[
+               "RoughnessCoefficient" -> 0.3, 
+                "BaseColor" -> $CellContext`color2]}, "emission color" -> {
+               Association[
+                ReplaceAll["EmissionColor" -> $CellContext`color1, Hue[
+                   Pattern[$CellContext`h, 
+                    Blank[]], 
+                   Pattern[$CellContext`s, 
+                    Blank[]], 
+                   Pattern[$CellContext`b, 
+                    Blank[]]] -> Hue[$CellContext`h, 1, 0.05]]], 
+               Association[
+                ReplaceAll["EmissionColor" -> $CellContext`color2, Hue[
+                   Pattern[$CellContext`h, 
+                    Blank[]], 
+                   Pattern[$CellContext`s, 
+                    Blank[]], 
+                   Pattern[$CellContext`b, 
+                    Blank[]]] -> Hue[$CellContext`h, 1, 0.1]]], 
+               Association[
+                ReplaceAll["EmissionColor" -> $CellContext`color3, Hue[
+                   Pattern[$CellContext`h, 
+                    Blank[]], 
+                   Pattern[$CellContext`s, 
+                    Blank[]], 
+                   Pattern[$CellContext`b, 
+                    Blank[]]] -> Hue[$CellContext`h, 1, 0.15]]]}, 
+             "specular color" -> {
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.2, "SpecularColor" -> $CellContext`color1], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.2, "SpecularColor" -> $CellContext`color2], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.2, "SpecularColor" -> $CellContext`color3]}, 
+             "metalic coefficient" -> {
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.5, "MetallicCoefficient" -> 0], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.5, "MetallicCoefficient" -> RandomReal[{0.25, 0.75}]], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.5, "MetallicCoefficient" -> 1]}, 
+             "surface roughness coefficient" -> {
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.2], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                RandomReal[{0.4, 0.6}]], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.8]}, "anisotropy coefficient" -> {
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.4, "SpecularAnisotropyCoefficient" -> 0], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.4, "SpecularAnisotropyCoefficient" -> 0.5], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.4, "SpecularAnisotropyCoefficient" -> 0.8]}, 
+             "anisotropy rotation" -> {
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.4, "SpecularAnisotropyCoefficient" -> {0.8, 0}], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.4, "SpecularAnisotropyCoefficient" -> {0.8, Pi/4}], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "RoughnessCoefficient" -> 
+                0.4, "SpecularAnisotropyCoefficient" -> {0.8, Pi/2}]}, 
+             "sheen color" -> {
+               Association[
+               "BaseColor" -> LightGray, "SheenColor" -> $CellContext`color1], 
+               Association[
+               "BaseColor" -> LightGray, "SheenColor" -> $CellContext`color2], 
+               Association[
+               "BaseColor" -> LightGray, 
+                "SheenColor" -> $CellContext`color3]}, "sheen roughness" -> {
+               Association[
+               "BaseColor" -> LightGray, "SheenColor" -> $CellContext`color1, 
+                "SheenRoughnessCoefficient" -> 0], 
+               Association[
+               "BaseColor" -> LightGray, "SheenColor" -> $CellContext`color1, 
+                "SheenRoughnessCoefficient" -> 0.2], 
+               Association[
+               "BaseColor" -> LightGray, "SheenColor" -> $CellContext`color1, 
+                "SheenRoughnessCoefficient" -> 1]}, "ambient exposure" -> {
+               Association[
+               "BaseColor" -> $CellContext`color0, "AmbientExposureFraction" -> 
+                0], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "AmbientExposureFraction" -> 
+                1], 
+               Association[
+               "BaseColor" -> $CellContext`color0, "AmbientExposureFraction" -> 
+                2]}],
+            SelectWithContents->True,
+            Selectable->False]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qData", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"data", ",", "4"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"qDat1", "=", 
+           RowBox[{
+            RowBox[{"Values", "[", "qData", "]"}], "\[LeftDoubleBracket]", 
+            "1", "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{
+          "q", "=", 
+           "\"\<Which physically based rendering (PBR) property varies in \
+these objects?\>\""}], ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Keys", "[", "qData", "]"}]}], ";", "\[IndentingNewLine]", 
+          
+          RowBox[{"pic", "=", 
+           RowBox[{"Graphics3D", "[", 
+            RowBox[{
+             RowBox[{"{", "\[IndentingNewLine]", 
+              RowBox[{
+               RowBox[{"MaterialShading", "[", 
+                RowBox[{
+                "qDat1", "\[LeftDoubleBracket]", "1", 
+                 "\[RightDoubleBracket]"}], "]"}], ",", 
+               RowBox[{"Dodecahedron", "[", 
+                RowBox[{"{", 
+                 RowBox[{"0", ",", "0", ",", "0"}], "}"}], "]"}], ",", 
+               RowBox[{"CapsuleShape", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"0", ",", "0", ",", "2"}], "}"}]}], "}"}], ",", 
+                 ".62"}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"MaterialShading", "[", 
+                RowBox[{
+                "qDat1", "\[LeftDoubleBracket]", "2", 
+                 "\[RightDoubleBracket]"}], "]"}], ",", 
+               RowBox[{"Dodecahedron", "[", 
+                RowBox[{"{", 
+                 RowBox[{"3", ",", "0", ",", "0"}], "}"}], "]"}], ",", 
+               RowBox[{"CapsuleShape", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"3", ",", "0", ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"3", ",", "0", ",", "2"}], "}"}]}], "}"}], ",", 
+                 ".62"}], "]"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"MaterialShading", "[", 
+                RowBox[{"qDat1", "[", 
+                 RowBox[{"[", "3", "]"}], "]"}], "]"}], ",", 
+               RowBox[{"Dodecahedron", "[", 
+                RowBox[{"{", 
+                 RowBox[{"6", ",", "0", ",", "0"}], "}"}], "]"}], ",", 
+               RowBox[{"CapsuleShape", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"{", 
+                    RowBox[{"6", ",", "0", ",", 
+                    RowBox[{"-", "2"}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{"6", ",", "0", ",", "2"}], "}"}]}], "}"}], ",", 
+                 ".62"}], "]"}]}], "\[IndentingNewLine]", "}"}], ",", 
+             RowBox[{"Boxed", "->", "False"}], ",", 
+             RowBox[{"ViewVertical", "->", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"-", "1"}], ",", "0", ",", "0"}], "}"}]}], ",", 
+             RowBox[{"Lighting", "\[Rule]", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"choices", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}], "==", 
+                 "\"\<ambient exposure\>\""}], ",", "\"\<Ambient\>\"", ",", 
+                "\"\<ThreePoint\>\""}], "]"}]}], ",", 
+             RowBox[{"ImageSize", "->", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{"{", "480", "}"}], ",", 
+                RowBox[{"{", "540", "}"}]}], "}"}]}]}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"picTransit", "=", 
+           RowBox[{
+            RowBox[{"Hold", "[", 
+             RowBox[{"ToExpression", "[", 
+              RowBox[{"FromCharacterCode", "[", "h2", "]"}], "]"}], "]"}], "/.", 
+            RowBox[{"h2", "\[Rule]", 
+             RowBox[{"ToCharacterCode", "[", 
+              RowBox[{"ToString", "[", 
+               RowBox[{"InputForm", "[", "pic", "]"}], "]"}], "]"}]}]}]}], 
+          ";", "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed", ",", "picTransit"}], "}"}],
+            "]"}]}]}], "\[IndentingNewLine]", "]"}], "\[IndentingNewLine]", 
+       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
    "\"\<CS_pack_Art1\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.683547400554873*^9, 3.683547403953895*^9}, 
@@ -659,14 +952,129 @@ Cell[BoxData[
    3.734535026606082*^9, 3.734535038555808*^9}, {3.734535078367236*^9, 
    3.734535102860564*^9}, 3.764707420460557*^9, 3.764707511382895*^9, {
    3.7647076175974197`*^9, 3.764707785355665*^9}, {3.764707917422832*^9, 
-   3.764707956615225*^9}},
+   3.764707956615225*^9}, {3.837271323038982*^9, 3.837271393210058*^9}, {
+   3.837271541408445*^9, 3.837271615558899*^9}, {3.837271670957437*^9, 
+   3.837271737165834*^9}, {3.837271830318572*^9, 3.837271875014629*^9}, {
+   3.837271919782589*^9, 3.837271929174698*^9}, {3.837272012511381*^9, 
+   3.837272126632209*^9}, 3.837272321296978*^9, {3.837272356899221*^9, 
+   3.837272418665365*^9}, {3.837272489755591*^9, 3.837272513185816*^9}, {
+   3.837272556298315*^9, 3.83727261133814*^9}, {3.8372728129076757`*^9, 
+   3.837272813220051*^9}, {3.837272899998199*^9, 3.8372729608524303`*^9}, {
+   3.8372729975970697`*^9, 3.837273144237834*^9}, {3.837273245975966*^9, 
+   3.837273280118164*^9}, {3.83727331707232*^9, 3.837273335650341*^9}, {
+   3.837273379267735*^9, 3.837273469404443*^9}, {3.8372735284801683`*^9, 
+   3.837273531605268*^9}, {3.837273626293432*^9, 3.837273798578348*^9}, {
+   3.83727419616133*^9, 3.8372742141098146`*^9}, {3.837274250477892*^9, 
+   3.837274371126863*^9}, {3.837274407406753*^9, 3.837274434622911*^9}, {
+   3.837274499353311*^9, 3.8372745116336937`*^9}, {3.837274559831862*^9, 
+   3.837274604816228*^9}, {3.837274671026332*^9, 3.837274766075284*^9}, {
+   3.837274831899602*^9, 3.837274848019718*^9}, {3.837274922916017*^9, 
+   3.837275176693769*^9}, {3.8372752161430807`*^9, 3.8372753655429296`*^9}, {
+   3.8372754332679567`*^9, 3.8372754468842497`*^9}, {3.837275492788513*^9, 
+   3.837275539132431*^9}, {3.837275580364725*^9, 3.837275604332931*^9}, {
+   3.8372756398847723`*^9, 3.837275735294476*^9}, {3.8372757784538794`*^9, 
+   3.837275914158114*^9}, {3.837275946943162*^9, 3.83727597680695*^9}, {
+   3.8372760571913357`*^9, 3.8372760775670652`*^9}, {3.837276415289053*^9, 
+   3.8372764335646276`*^9}, {3.83727646588881*^9, 3.837276474168651*^9}, {
+   3.8372765926169987`*^9, 3.837276629665188*^9}, {3.83727668838932*^9, 
+   3.83727669986495*^9}, {3.837276805750518*^9, 3.837276912530854*^9}, {
+   3.8372769783570004`*^9, 3.837276980338369*^9}, {3.837277044173115*^9, 
+   3.837277125179544*^9}, {3.837277178475223*^9, 3.837277226907381*^9}, {
+   3.837277284409348*^9, 3.8372772908526993`*^9}, {3.83727732341136*^9, 
+   3.83727740420133*^9}, {3.837277523787437*^9, 3.83727752660894*^9}, {
+   3.837277619562763*^9, 3.837277652449089*^9}, {3.8372777720664577`*^9, 
+   3.837277842280007*^9}, {3.8372779217940817`*^9, 3.837277973591977*^9}, {
+   3.8372780430468493`*^9, 3.837278049215171*^9}, {3.837278106857006*^9, 
+   3.8372781230792103`*^9}, {3.837278194048894*^9, 3.837278261286908*^9}, {
+   3.8372783040066433`*^9, 3.837278444484907*^9}, {3.837278485812447*^9, 
+   3.8372786409074383`*^9}, {3.837278781746118*^9, 3.8372788296328487`*^9}, {
+   3.837281157476942*^9, 3.837281157969285*^9}, {3.8372815441672993`*^9, 
+   3.837281562749497*^9}, {3.837281786055132*^9, 3.8372817989651213`*^9}, {
+   3.8372818373882303`*^9, 3.8372818609565897`*^9}, 3.837281915966632*^9, {
+   3.837281976078267*^9, 3.837282013596568*^9}, {3.837282045063552*^9, 
+   3.837282237358411*^9}, {3.837282282011622*^9, 3.837282405165807*^9}, {
+   3.8372824416515007`*^9, 3.837282558132371*^9}, {3.837282660163319*^9, 
+   3.8372827765472383`*^9}, {3.837282858067268*^9, 3.837282950234989*^9}, {
+   3.837283067276309*^9, 3.837283174435259*^9}, {3.837283213410303*^9, 
+   3.837283353187058*^9}, {3.8372834038330183`*^9, 3.837283415081367*^9}, {
+   3.837283453316311*^9, 3.837283470728978*^9}, {3.837283503094922*^9, 
+   3.8372835274734*^9}, {3.837283574985011*^9, 3.8372835780966463`*^9}, {
+   3.8372836408428583`*^9, 3.837283733810527*^9}, {3.837283882559898*^9, 
+   3.8372840080259*^9}, {3.837284046615404*^9, 3.837284061799944*^9}, {
+   3.837284092568819*^9, 3.837284224108142*^9}, {3.837284260272243*^9, 
+   3.837284301672868*^9}, {3.8372844359537373`*^9, 3.837284507730711*^9}, {
+   3.8372847015745773`*^9, 3.83728472188544*^9}, {3.8372847558364267`*^9, 
+   3.8372847574399853`*^9}, {3.837285374597807*^9, 3.837285375395125*^9}, {
+   3.837285693289156*^9, 3.8372857289042463`*^9}, {3.837286404620872*^9, 
+   3.837286505278308*^9}, {3.8372865603291473`*^9, 3.837286603403014*^9}, {
+   3.837286663245902*^9, 3.837286670741362*^9}, {3.8372867630672607`*^9, 
+   3.8372867658182917`*^9}, {3.837286923022217*^9, 3.837286942794591*^9}, {
+   3.837287146364326*^9, 3.8372871642363653`*^9}, {3.837287341514619*^9, 
+   3.8372874044227047`*^9}, {3.837294725902565*^9, 3.83729483634934*^9}, {
+   3.837295092028985*^9, 3.8372950921966677`*^9}, 3.8372952004999447`*^9, {
+   3.837295240836327*^9, 3.837295256251656*^9}, {3.837295327419235*^9, 
+   3.837295330746768*^9}, {3.8372954050692263`*^9, 3.8372954095556717`*^9}, {
+   3.837295685152405*^9, 3.8372956955176497`*^9}, {3.837295803910432*^9, 
+   3.837295817477991*^9}, {3.837295871709793*^9, 3.837295911751751*^9}, {
+   3.8372962034924517`*^9, 3.837296207475358*^9}, {3.837296245629513*^9, 
+   3.8372962527805243`*^9}, {3.8372963972783957`*^9, 3.837296406827425*^9}, {
+   3.8372968132064323`*^9, 3.837296848676318*^9}, {3.8372969319366693`*^9, 
+   3.8372969352563057`*^9}, {3.837297068950355*^9, 3.837297081887974*^9}, {
+   3.837297295991767*^9, 3.837297310852561*^9}, 3.837297653763413*^9, {
+   3.837297716505262*^9, 3.8372977419601583`*^9}, {3.837297863273307*^9, 
+   3.837297886708851*^9}},
  CellLabel->
-  "In[1557]:=",ExpressionUUID->"61ad8ebf-032f-4954-a714-5763585d2b18"]
+  "In[492]:=",ExpressionUUID->"61ad8ebf-032f-4954-a714-5763585d2b18"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Art1\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Art1"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Art1"],
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{{3.837271719122713*^9, 3.837271738297513*^9}, 
+   3.837276170832851*^9, 3.837276475644477*^9, 3.837276635954322*^9, 
+   3.837276701014532*^9, 3.837276769658372*^9, 3.837276921072897*^9, 
+   3.837276982639233*^9, {3.837277046918915*^9, 3.837277110898364*^9}, {
+   3.8372771821384897`*^9, 3.837277233008162*^9}, 3.837277292731944*^9, {
+   3.8372773243714247`*^9, 3.8372773521375437`*^9}, 3.837277409297964*^9, 
+   3.837277440918179*^9, {3.837277533160348*^9, 3.837277545850239*^9}, 
+   3.837277668761662*^9, {3.837277781454918*^9, 3.837277846967391*^9}, 
+   3.8372780575578823`*^9, 3.837278554187471*^9, 3.83727864764863*^9, 
+   3.8372788432362843`*^9, 3.83728105330392*^9, 3.8372811937308064`*^9, 
+   3.837281242236065*^9, 3.83728128692736*^9, 3.8372813854445057`*^9, 
+   3.837281470813456*^9, 3.837281577371215*^9, 3.837281638630219*^9, 
+   3.837284339742896*^9, {3.837284540407815*^9, 3.837284570211824*^9}, 
+   3.837284773537834*^9, 3.837285324634037*^9, 3.837285384102572*^9, 
+   3.837285754209393*^9, 3.837286076840864*^9, 3.837286609272025*^9, 
+   3.837286673238941*^9, 3.837286951774662*^9, 3.837287013924081*^9, 
+   3.8372877386273203`*^9, 3.8372948386432667`*^9, 3.8372949511681356`*^9, 
+   3.837295002694757*^9, {3.837295111362741*^9, 3.8372951320733232`*^9}, 
+   3.837295204280888*^9, {3.837295259349846*^9, 3.837295286408908*^9}, {
+   3.837295332357489*^9, 3.837295364305243*^9}, {3.83729544085144*^9, 
+   3.8372955193661633`*^9}, 3.8372955951097517`*^9, 3.837295640488168*^9, 
+   3.83729571882093*^9, 3.8372959195870323`*^9, {3.8372959984013367`*^9, 
+   3.837296019278434*^9}, {3.83729607395234*^9, 3.837296085391694*^9}, {
+   3.837296159410719*^9, 3.8372961788330812`*^9}, 3.837296210094487*^9, {
+   3.837296255586587*^9, 3.837296280716858*^9}, 3.8372964142624397`*^9, {
+   3.8372964516256*^9, 3.837296468010611*^9}, {3.837296514660327*^9, 
+   3.8372965239682617`*^9}, {3.83729655415478*^9, 3.837296637145026*^9}, {
+   3.837296669433386*^9, 3.837296731212804*^9}, 3.837296855968583*^9, 
+   3.837296961719357*^9, 3.837297094326078*^9, 3.837297312986017*^9, 
+   3.837297655125874*^9, 3.837297744177033*^9, 3.8372978706709967`*^9, 
+   3.837297914842482*^9},
+ CellLabel->
+  "Out[492]=",ExpressionUUID->"a5eeef8f-ebef-4eca-b954-61e4b59c86c0"]
+}, Open  ]]
 },
-WindowSize->{1252, 1383},
-WindowMargins->{{12, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+WindowSize->{1746, 1383},
+WindowMargins->{{8, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 24, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"18dec529-2c96-41cc-b82e-020b5df1c756"
 ]
 (* End of Notebook Content *)
 
@@ -679,7 +1087,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 36547, 643, 847, "Input",ExpressionUUID->"61ad8ebf-032f-4954-a714-5763585d2b18"]
+Cell[CellGroupData[{
+Cell[580, 22, 55215, 1004, 1320, "Input",ExpressionUUID->"61ad8ebf-032f-4954-a714-5763585d2b18"],
+Cell[55798, 1028, 2638, 41, 37, "Output",ExpressionUUID->"a5eeef8f-ebef-4eca-b954-61e4b59c86c0"]
+}, Open  ]]
 }
 ]
 *)
