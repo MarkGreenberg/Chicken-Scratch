@@ -10,14 +10,16 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     28956,        654]
-NotebookOptionsPosition[     28603,        640]
-NotebookOutlinePosition[     29000,        656]
-CellTagsIndexPosition[     28957,        653]
+NotebookDataLength[     31048,        688]
+NotebookOptionsPosition[     30569,        671]
+NotebookOutlinePosition[     30962,        687]
+CellTagsIndexPosition[     30919,        684]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
+
+Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -409,13 +411,17 @@ What is its \>\"", "<>",
           RowBox[{"pic", "=", 
            RowBox[{
             RowBox[{"Hold", "[", "\[IndentingNewLine]", 
-             RowBox[{
-              RowBox[{"mSet", "=", 
-               RowBox[{"MandelbrotSetPlot", "[", "\[IndentingNewLine]", 
+             RowBox[{"Grid", "[", 
+              RowBox[{
+               RowBox[{"{", 
                 RowBox[{
-                 RowBox[{"Epilog", " ", "\[Rule]", 
-                  RowBox[{"{", 
-                   RowBox[{
+                 RowBox[{"{", "\[IndentingNewLine]", 
+                  RowBox[{"mSet", "=", 
+                   RowBox[{"MandelbrotSetPlot", "[", "\[IndentingNewLine]", 
+                    RowBox[{
+                    RowBox[{"Epilog", " ", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"EdgeForm", "[", "Black", "]"}], ",", "Blue", ",", 
                     RowBox[{"Disk", "[", 
                     RowBox[{
@@ -440,38 +446,33 @@ What is its \>\"", "<>",
                     RowBox[{
                     "h1", "\[LeftDoubleBracket]", "4", 
                     "\[RightDoubleBracket]"}], ",", ".05"}], "]"}]}], "}"}]}],
-                  ",", "\[IndentingNewLine]", 
-                 RowBox[{"PlotRange", "\[Rule]", 
-                  RowBox[{"{", 
-                   RowBox[{
+                     ",", "\[IndentingNewLine]", 
+                    RowBox[{"PlotRange", "\[Rule]", 
+                    RowBox[{"{", 
+                    RowBox[{
                     RowBox[{"{", 
                     RowBox[{
                     RowBox[{"-", "1.53"}], ",", ".53"}], "}"}], ",", 
                     RowBox[{"{", 
                     RowBox[{
                     RowBox[{"-", "1.1"}], ",", "1.1"}], "}"}]}], "}"}]}], ",", 
-                 RowBox[{"Frame", "\[Rule]", "False"}], ",", 
-                 "\[IndentingNewLine]", 
-                 RowBox[{"ColorFunction", "\[Rule]", 
-                  RowBox[{"(", 
-                   RowBox[{
+                    RowBox[{"Frame", "\[Rule]", "False"}], ",", 
+                    "\[IndentingNewLine]", 
+                    RowBox[{"ColorFunction", "\[Rule]", 
+                    RowBox[{"(", 
+                    RowBox[{
                     RowBox[{"If", "[", 
                     RowBox[{
                     RowBox[{"#3", "\[Equal]", "1"}], ",", 
                     RowBox[{"GrayLevel", "[", ".85", "]"}], ",", "White"}], 
-                    "]"}], "&"}], ")"}]}], ",", "\[IndentingNewLine]", 
-                 RowBox[{"ImageSize", "\[Rule]", 
-                  RowBox[{"{", 
-                   RowBox[{
-                    RowBox[{"{", "300", "}"}], ",", 
-                    RowBox[{"{", "313", "}"}]}], "}"}]}]}], "]"}]}], ";", 
-              "\[IndentingNewLine]", 
-              RowBox[{"jSet", "=", 
-               RowBox[{"Framed", "[", 
-                RowBox[{"ImageCrop", "[", 
-                 RowBox[{
-                  RowBox[{"ImageResize", "[", "\[IndentingNewLine]", 
-                   RowBox[{
+                    "]"}], "&"}], ")"}]}], ",", 
+                    RowBox[{"ImageSize", "->", 
+                    RowBox[{"{", 
+                    RowBox[{"460", ",", "320"}], "}"}]}]}], "]"}]}], "}"}], 
+                 ",", "\[IndentingNewLine]", 
+                 RowBox[{"{", 
+                  RowBox[{"jSet", "=", 
+                   RowBox[{"Framed", "[", "\[IndentingNewLine]", 
                     RowBox[{"JuliaSetPlot", "[", 
                     RowBox[{
                     RowBox[{
@@ -499,32 +500,16 @@ What is its \>\"", "<>",
                     RowBox[{"ColorFunctionScaling", "\[Rule]", "False"}], ",",
                      "\[IndentingNewLine]", 
                     RowBox[{"Frame", "\[Rule]", "False"}], ",", 
-                    "\[IndentingNewLine]", 
-                    RowBox[{"ImageSize", "\[Rule]", 
+                    RowBox[{"ImageSize", "->", 
                     RowBox[{"{", 
                     RowBox[{
-                    RowBox[{"{", "465", "}"}], ",", 
-                    RowBox[{"{", "220", "}"}]}], "}"}]}]}], "]"}], ",", 
-                    RowBox[{"{", 
-                    RowBox[{
-                    RowBox[{"{", "465", "}"}], ",", 
-                    RowBox[{"{", "220", "}"}]}], "}"}]}], "]"}], ",", 
-                  "\[IndentingNewLine]", 
-                  RowBox[{"{", 
-                   RowBox[{"480", ",", "227"}], "}"}], ",", 
-                  RowBox[{"Padding", "\[Rule]", "\"\<Fixed\>\""}]}], "]"}], 
-                "]"}]}], ";", "\[IndentingNewLine]", 
-              RowBox[{"Column", "[", 
-               RowBox[{
+                    RowBox[{"UpTo", "[", "460", "]"}], ",", 
+                    RowBox[{"UpTo", "[", "200", "]"}]}], "}"}]}]}], "]"}], 
+                    "]"}]}], "}"}]}], "}"}], ",", "\[IndentingNewLine]", 
+               RowBox[{"ItemSize", "->", 
                 RowBox[{"{", 
-                 RowBox[{
-                  RowBox[{"Rasterize", "[", 
-                   RowBox[{"mSet", ",", 
-                    RowBox[{"ImageSize", "\[Rule]", "300"}]}], "]"}], ",", 
-                  RowBox[{"Rasterize", "[", 
-                   RowBox[{"jSet", ",", 
-                    RowBox[{"ImageSize", "\[Rule]", "465"}]}], "]"}]}], "}"}],
-                 ",", "Center"}], "]"}]}], "]"}], "/.", 
+                 RowBox[{"Automatic", ",", "Automatic"}], "}"}]}]}], "]"}], 
+             "]"}], "/.", 
             RowBox[{"{", 
              RowBox[{
               RowBox[{"h1", "\[Rule]", "pts"}], ",", 
@@ -535,7 +520,7 @@ What is its \>\"", "<>",
           "q", "=", 
            "\"\<Which point in the Mandelbrot Set (top) seeds the Julia Set \
 (bottom)?\>\""}], ";", "\[IndentingNewLine]", 
-          RowBox[{"choices", "=", 
+          RowBox[{"mixed", "=", 
            RowBox[{"{", 
             RowBox[{
              RowBox[{"Style", "[", 
@@ -548,7 +533,6 @@ What is its \>\"", "<>",
              RowBox[{"Style", "[", 
               RowBox[{"\"\<green\>\"", ",", "Green"}], "]"}]}], "}"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"mixed", "=", "choices"}], ";", "\[IndentingNewLine]", 
           RowBox[{"ans", "=", "seedPos"}], ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
@@ -634,13 +618,60 @@ What is its \>\"", "<>",
    3.788778949515312*^9}, {3.800730121581678*^9, 3.8007301398835173`*^9}, {
    3.800730226567297*^9, 3.8007302883634453`*^9}, {3.8007304927496653`*^9, 
    3.800730505043805*^9}, {3.80073054685851*^9, 3.800730578324045*^9}, {
-   3.8007307004294643`*^9, 3.800730700739286*^9}, 
-   3.820758138875106*^9},ExpressionUUID->"589baeb1-bc29-4176-a048-\
-a874ec101530"]
+   3.8007307004294643`*^9, 3.800730700739286*^9}, 3.820758138875106*^9, {
+   3.837381609222663*^9, 3.8373816187981567`*^9}, {3.8373817278789883`*^9, 
+   3.837381736805543*^9}, {3.837381835990643*^9, 3.837381841318057*^9}, {
+   3.837382017029871*^9, 3.8373820228211927`*^9}, {3.83738210300591*^9, 
+   3.837382105829453*^9}, {3.837382179237424*^9, 3.8373821970925817`*^9}, {
+   3.83738230161267*^9, 3.8373823199879293`*^9}, {3.837382466709478*^9, 
+   3.837382474292712*^9}, {3.8373827337315397`*^9, 3.837382749018633*^9}, {
+   3.8373827817793217`*^9, 3.8373828128818693`*^9}, {3.837382922929655*^9, 
+   3.837382923336689*^9}, {3.837382981625558*^9, 3.8373829821605787`*^9}, {
+   3.837383021200729*^9, 3.837383024635207*^9}, {3.837383167559729*^9, 
+   3.837383172318816*^9}, {3.837383476853785*^9, 3.8373835444762163`*^9}, {
+   3.837383575387998*^9, 3.8373836127359343`*^9}, {3.837383646942946*^9, 
+   3.837383660523376*^9}, {3.837383813267223*^9, 3.837383854210003*^9}, {
+   3.837383922494219*^9, 3.8373839270585623`*^9}, {3.8373839784164543`*^9, 
+   3.8373839902720833`*^9}, {3.8373840675696993`*^9, 3.837384081376978*^9}, {
+   3.837384225157818*^9, 3.8373842656724443`*^9}, {3.837384377321816*^9, 
+   3.837384394419593*^9}, {3.837384577970755*^9, 3.837384594505917*^9}, {
+   3.837384643971418*^9, 3.837384646323072*^9}, {3.837384682546377*^9, 
+   3.837384741044107*^9}, {3.8373847881475353`*^9, 3.837384812690674*^9}, {
+   3.837415288160812*^9, 3.837415367503715*^9}, {3.837415621906947*^9, 
+   3.837415684718011*^9}, {3.837415919998044*^9, 3.8374159565169*^9}, {
+   3.837425819943931*^9, 
+   3.837425820447548*^9}},ExpressionUUID->"589baeb1-bc29-4176-a048-\
+a874ec101530"],
+
+Cell[BoxData[
+ InterpretationBox[
+  RowBox[{"CloudObject", "[", 
+   TemplateBox[{
+    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geom9\"", 
+     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geom9"},
+    "HyperlinkURL"], "]"}],
+  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geom9"],
+  
+  SelectWithContents->True]], "Output",
+ CellChangeTimes->{
+  3.837381638341954*^9, 3.837381748137218*^9, 3.837381851933793*^9, 
+   3.837381928100647*^9, 3.837382039945836*^9, 3.8373821139458227`*^9, 
+   3.8373822050583982`*^9, 3.837382328358282*^9, 3.837382487063983*^9, 
+   3.837382825520487*^9, 3.837382939731269*^9, 3.837383037276824*^9, 
+   3.837383185919142*^9, 3.8373836788230753`*^9, 3.837383869329775*^9, 
+   3.837383936918757*^9, 3.8373840039832153`*^9, 3.837384109958028*^9, 
+   3.8373843097123117`*^9, 3.837384419851286*^9, 3.83738460064089*^9, 
+   3.837384751778204*^9, {3.837384793990911*^9, 3.8373848201690903`*^9}, 
+   3.837415377656398*^9, {3.8374154115499687`*^9, 3.83741545387536*^9}, {
+   3.8374155029137707`*^9, 3.837415561444152*^9}, 3.8374157003184443`*^9, 
+   3.837415970722077*^9},
+ CellLabel->
+  "Out[166]=",ExpressionUUID->"1a033a18-ab98-4598-9b1f-9980750f3fd5"]
+}, Open  ]]
 },
 WindowSize->{1427, 1364},
 WindowMargins->{{1, Automatic}, {Automatic, 1}},
-FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 24, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"0fa827cb-323a-4d68-952a-cbe2b7ee6a62"
 ]
@@ -655,7 +686,10 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 28041, 618, 2300, "Input",ExpressionUUID->"589baeb1-bc29-4176-a048-a874ec101530"]
+Cell[CellGroupData[{
+Cell[580, 22, 28746, 621, 2237, "Input",ExpressionUUID->"589baeb1-bc29-4176-a048-a874ec101530"],
+Cell[29329, 645, 1224, 23, 37, "Output",ExpressionUUID->"1a033a18-ab98-4598-9b1f-9980750f3fd5"]
+}, Open  ]]
 }
 ]
 *)
