@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10420,        236]
-NotebookOptionsPosition[     10128,        223]
-NotebookOutlinePosition[     10466,        238]
-CellTagsIndexPosition[     10423,        235]
+NotebookDataLength[     11564,        261]
+NotebookOptionsPosition[     11215,        247]
+NotebookOutlinePosition[     11609,        263]
+CellTagsIndexPosition[     11566,        260]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -140,8 +140,29 @@ Cell[BoxData[
            RowBox[{"Intersection", "[", 
             RowBox[{"set1", ",", "set2"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
-          RowBox[{"ansNo", "=", 
-           RowBox[{"Total", "[", "int", "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"uni", "=", 
+           RowBox[{"Union", "[", 
+            RowBox[{"set1", ",", "set2"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"RandomReal", "[", "]"}], "<", ".5"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"ansNo", "=", 
+              RowBox[{"Total", "[", "int", "]"}]}], ";", 
+             RowBox[{"symbol", "=", 
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "8898", "]"}], "]"}]}]}], 
+            ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"ansNo", "=", 
+              RowBox[{"Total", "[", "uni", "]"}]}], ";", 
+             RowBox[{"symbol", "=", 
+              RowBox[{"Hold", "[", 
+               RowBox[{"FromCharacterCode", "[", "8899", "]"}], "]"}]}]}]}], 
+           "]"}], ";", "\[IndentingNewLine]", 
           RowBox[{"choices", "=", 
            RowBox[{"Prepend", "[", 
             RowBox[{
@@ -158,10 +179,8 @@ Cell[BoxData[
            RowBox[{"StringForm", "[", 
             RowBox[{
             "\"\<What is the sum of the numbers in this set? \\n`1` `2` `3`\>\
-\"", ",", "set1", ",", 
-             RowBox[{"Hold", "[", 
-              RowBox[{"FromCharacterCode", "[", "8898", "]"}], "]"}], ",", 
-             "set2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+\"", ",", "set1", ",", "symbol", ",", "set2"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -176,9 +195,10 @@ Cell[BoxData[
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
-       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Numb12\>\"", ",", 
+            RowBox[{
+             RowBox[{"ReleaseHold", "[", "q", "]"}], ",", "ans", ",", 
+             "mixed"}], "}"}], "]"}]}]}], "]"}], "&"}]}], "]"}], "]"}], ",", 
+   "\[IndentingNewLine]", "\"\<CS_pack_Numb12\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.696680131766987*^9, 3.696680166296906*^9}, {
    3.6966802961171293`*^9, 3.696680369349655*^9}, {3.6966805834681587`*^9, 
@@ -217,14 +237,19 @@ Cell[BoxData[
    3.768940879551894*^9, 3.768940984102251*^9}, {3.7689410764936953`*^9, 
    3.7689411060935507`*^9}, {3.768941138894847*^9, 3.768941144685316*^9}, {
    3.768941294422387*^9, 3.768941299797195*^9}, {3.768941425918532*^9, 
-   3.7689414316453876`*^9}, {3.768941555637933*^9, 3.768941593852523*^9}},
+   3.7689414316453876`*^9}, {3.768941555637933*^9, 3.768941593852523*^9}, {
+   3.8375068889863873`*^9, 3.8375069379312468`*^9}, {3.837507553534072*^9, 
+   3.837507577245821*^9}, {3.837507736981303*^9, 3.837507897116589*^9}, {
+   3.837508012868371*^9, 3.837508014211684*^9}, {3.837508134966446*^9, 
+   3.837508147322904*^9}, {3.83750819561094*^9, 3.837508196602921*^9}},
  CellLabel->
-  "In[5140]:=",ExpressionUUID->"2b23f9da-5834-47d8-8b3c-bed34f4ecf6d"]
+  "In[243]:=",ExpressionUUID->"2b23f9da-5834-47d8-8b3c-bed34f4ecf6d"]
 },
 WindowSize->{1204, 1336},
 WindowMargins->{{-5, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 24, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c409e8e6-2b0b-49be-8d41-edf7d31a6eb3"
 ]
 (* End of Notebook Content *)
 
@@ -237,7 +262,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 9566, 201, 598, "Input",ExpressionUUID->"2b23f9da-5834-47d8-8b3c-bed34f4ecf6d"]
+Cell[558, 20, 10653, 225, 661, "Input",ExpressionUUID->"2b23f9da-5834-47d8-8b3c-bed34f4ecf6d"]
 }
 ]
 *)
