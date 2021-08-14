@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12088,        264]
-NotebookOptionsPosition[     11645,        247]
-NotebookOutlinePosition[     12004,        263]
-CellTagsIndexPosition[     11961,        260]
+NotebookDataLength[     13741,        292]
+NotebookOptionsPosition[     13393,        278]
+NotebookOutlinePosition[     13786,        294]
+CellTagsIndexPosition[     13743,        291]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -32,8 +30,8 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-         "1", ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"target", "=", 
            RowBox[{"RandomInteger", "[", 
@@ -161,9 +159,55 @@ Cell[BoxData[
           ";", "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
-       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Numb2\>\"", ",", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "3", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"semis", "=", 
+           RowBox[{"DeleteDuplicates", "[", 
+            RowBox[{"Times", "@@@", 
+             RowBox[{"Tuples", "[", 
+              RowBox[{
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"Prime", "[", "n", "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"n", ",", "60"}], "}"}]}], "]"}], ",", "2"}], 
+              "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"dis", "=", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{
+             RowBox[{"Complement", "[", 
+              RowBox[{
+               RowBox[{"Range", "[", 
+                RowBox[{"4", ",", "78960"}], "]"}], ",", "semis"}], "]"}], 
+             ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"ansNo", "=", 
+           RowBox[{"RandomChoice", "[", "semis", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", "\"\<Which of these is a semiprime number?\>\""}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{"Prepend", "[", 
+            RowBox[{"dis", ",", "ansNo"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{"choices", "[", 
+               RowBox[{"[", "1", "]"}], "]"}]}], "]"}], "[", 
+            RowBox[{"[", 
+             RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], "&"}]}], "]"}], 
+    "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb2\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{{3.682785968337284*^9, 3.6827859864664583`*^9}, {
    3.682786166485771*^9, 3.6827861735578938`*^9}, {3.6827863851865177`*^9, 
@@ -220,36 +264,23 @@ Cell[BoxData[
    3.730029396005582*^9}, {3.7300294264617147`*^9, 3.730029440278307*^9}, {
    3.7300294778308077`*^9, 3.730029479069234*^9}, {3.730029544782072*^9, 
    3.730029569501059*^9}, {3.730029630420978*^9, 3.730029662996543*^9}, {
-   3.7300298043749733`*^9, 
-   3.730029805484569*^9}},ExpressionUUID->"5988b9c9-6c75-49c4-bad4-\
-53fec4eb4eb2"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb2\"",
-     "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb2"},
-    "HyperlinkURL"], "]"}],
-  CloudObject[
-  "https://www.wolframcloud.com/objects/markgreenberg/CS_pack_Numb2"],
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{
-  3.728381823307951*^9, 3.728381977601289*^9, 3.728382180727293*^9, 
-   3.728382220080711*^9, 3.7283822981264553`*^9, {3.728382372718196*^9, 
-   3.7283823942368917`*^9}, 3.7283824969985228`*^9, 3.7300271014027863`*^9, 
-   3.730029207081624*^9, {3.730029246827199*^9, 3.730029263295608*^9}, 
-   3.730029442892136*^9, {3.7300294804698687`*^9, 3.7300294950071783`*^9}, 
-   3.730029581161357*^9, 3.730029671515162*^9, 
-   3.730029808857033*^9},ExpressionUUID->"729049a1-16f2-4ac4-87f4-\
-b45f275e746a"]
-}, Open  ]]
+   3.7300298043749733`*^9, 3.730029805484569*^9}, {3.8379647683677683`*^9, 
+   3.837964887786325*^9}, {3.8379649628987722`*^9, 3.837965043819489*^9}, {
+   3.837965111931205*^9, 3.837965234804242*^9}, {3.837965286020278*^9, 
+   3.8379652937716913`*^9}, {3.837965400540286*^9, 3.837965446116437*^9}, {
+   3.837965539500605*^9, 3.8379655520929203`*^9}, {3.837965595049988*^9, 
+   3.837965697423485*^9}, {3.837965728919457*^9, 3.837965762359572*^9}, {
+   3.8379657962003613`*^9, 3.837965796543601*^9}, {3.8379658465527897`*^9, 
+   3.837965850255418*^9}, {3.83796600372064*^9, 3.837966006511985*^9}, {
+   3.8379661011765738`*^9, 3.837966119096184*^9}, {3.8379661868966923`*^9, 
+   3.837966205648075*^9}},
+ CellLabel->"In[76]:=",ExpressionUUID->"5988b9c9-6c75-49c4-bad4-53fec4eb4eb2"]
 },
 WindowSize->{1263, 1157},
 WindowMargins->{{1, Automatic}, {Automatic, 0}},
-FrontEndVersion->"11.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (September \
-10, 2017)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 24, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"f5b77586-6468-455f-983c-2e518f7dd2ec"
 ]
 (* End of Notebook Content *)
 
@@ -262,10 +293,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 10143, 202, 685, "Input",ExpressionUUID->"5988b9c9-6c75-49c4-bad4-53fec4eb4eb2"],
-Cell[10726, 226, 903, 18, 37, "Output",ExpressionUUID->"729049a1-16f2-4ac4-87f4-b45f275e746a"]
-}, Open  ]]
+Cell[558, 20, 12831, 256, 958, "Input",ExpressionUUID->"5988b9c9-6c75-49c4-bad4-53fec4eb4eb2"]
 }
 ]
 *)
