@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     10006,        231]
-NotebookOptionsPosition[      9654,        217]
-NotebookOutlinePosition[     10052,        233]
-CellTagsIndexPosition[     10009,        230]
+NotebookDataLength[     13719,        304]
+NotebookOptionsPosition[     13369,        290]
+NotebookOutlinePosition[     13763,        306]
+CellTagsIndexPosition[     13720,        303]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -30,8 +30,8 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"RandomChoice", "[", 
           RowBox[{"{", 
-           RowBox[{"1", ",", "2"}], "}"}], "]"}], ",", "\[IndentingNewLine]", 
-         "1", ",", "\[IndentingNewLine]", 
+           RowBox[{"1", ",", "2", ",", "3"}], "}"}], "]"}], ",", 
+         "\[IndentingNewLine]", "1", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"exp", "=", 
            RowBox[{"RandomInteger", "[", "40", "]"}]}], ";", 
@@ -179,9 +179,69 @@ count leading zeros.)\>\"", ",", "ord", ",", "qStr"}], "]"}]}], ";",
           "\[IndentingNewLine]", 
           RowBox[{"InputForm", "[", 
            RowBox[{"{", 
-            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], "]"}], 
-       "&"}]}], "]"}], "]"}], ",", "\[IndentingNewLine]", 
-   "\"\<CS_pack_Numb5\>\"", ",", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}], ",", 
+         "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         "3", ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"data", "=", 
+           RowBox[{"Partition", "[", 
+            RowBox[{
+             RowBox[{"RandomInteger", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{"0", ",", "9"}], "}"}], ",", "40"}], "]"}], ",", 
+             "10"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"tone", "=", 
+           RowBox[{
+            RowBox[{"ResourceFunction", "[", "\"\<PlayTouchTone\>\"", "]"}], 
+            "[", 
+            RowBox[{"data", "[", 
+             RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"q", "=", 
+           RowBox[{"StringForm", "[", 
+            RowBox[{"\"\<This `1` dials which phone number?\\n`2`\>\"", ",", 
+             RowBox[{"Tooltip", "[", 
+              RowBox[{"\"\<TouchTone\>\"", ",", 
+               RowBox[{"Style", "[", 
+                RowBox[{
+                "\"\<dual-tone multi-frequency signaling\>\"", ",", "20", ",", 
+                 RowBox[{"Darker", "[", "Blue", "]"}]}], "]"}]}], "]"}], ",", 
+             "tone"}], "]"}]}], " ", ";", "\[IndentingNewLine]", 
+          RowBox[{"choices", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringInsert", "[", 
+              RowBox[{
+               RowBox[{"StringInsert", "[", 
+                RowBox[{
+                 RowBox[{"StringInsert", "[", 
+                  RowBox[{
+                   RowBox[{"StringJoin", "[", "#", "]"}], ",", "\"\<(\>\"", 
+                   ",", "1"}], "]"}], ",", "\"\<) \>\"", ",", "5"}], "]"}], 
+               ",", "\"\<-\>\"", ",", 
+               RowBox[{"-", "5"}]}], "]"}], "&"}], "/@", 
+            RowBox[{"Map", "[", 
+             RowBox[{"ToString", ",", "data", ",", 
+              RowBox[{"{", "2", "}"}]}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"mixed", "=", 
+           RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"ans", "=", 
+           RowBox[{
+            RowBox[{"Position", "[", 
+             RowBox[{"mixed", ",", 
+              RowBox[{
+              "choices", "\[LeftDoubleBracket]", "1", 
+               "\[RightDoubleBracket]"}]}], "]"}], "\[LeftDoubleBracket]", 
+            RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"InputForm", "[", 
+           RowBox[{"{", 
+            RowBox[{"q", ",", "ans", ",", "mixed"}], "}"}], "]"}]}]}], 
+        "\[IndentingNewLine]", "\[IndentingNewLine]", "]"}], "&"}]}], "]"}], 
+    "]"}], ",", "\[IndentingNewLine]", "\"\<CS_pack_Numb5\>\"", ",", 
    RowBox[{"Permissions", "\[Rule]", "\"\<Public\>\""}]}], "]"}]], "Input",
  CellChangeTimes->{
   3.682795972726798*^9, {3.6827960387881203`*^9, 3.682796065462183*^9}, {
@@ -211,13 +271,26 @@ count leading zeros.)\>\"", ",", "ord", ",", "qStr"}], "]"}]}], ";",
    3.818439601650419*^9, 3.818439601873612*^9}, {3.8184396608502607`*^9, 
    3.8184396653211946`*^9}, {3.81843979861873*^9, 3.8184398249933567`*^9}, {
    3.8184401641212997`*^9, 3.818440178255917*^9}, {3.8184403439921618`*^9, 
-   3.818440349503768*^9}, {3.818440386943981*^9, 3.818440403447219*^9}},
- CellLabel->
-  "In[546]:=",ExpressionUUID->"8f2ee22c-d9b8-4917-8c8c-73d229ecc286"]
+   3.818440349503768*^9}, {3.818440386943981*^9, 3.818440403447219*^9}, {
+   3.83906796696408*^9, 3.839068014829317*^9}, {3.839068048133565*^9, 
+   3.839068050333303*^9}, {3.839068089197611*^9, 3.839068202141273*^9}, {
+   3.839068232197558*^9, 3.839068250301491*^9}, {3.839068327477626*^9, 
+   3.839068389111504*^9}, {3.839068424701848*^9, 3.8390684251498632`*^9}, {
+   3.8390685573259983`*^9, 3.839068666798555*^9}, {3.839068714602001*^9, 
+   3.8390687147781487`*^9}, {3.839068755674871*^9, 3.839068798106895*^9}, {
+   3.839068867732972*^9, 3.839069064517151*^9}, {3.839069102400202*^9, 
+   3.839069105416108*^9}, {3.8390694154243927`*^9, 3.839069421503709*^9}, {
+   3.83906996884447*^9, 3.8390699844438047`*^9}, {3.839070015092826*^9, 
+   3.839070029716559*^9}, {3.839070138886202*^9, 3.8390701821667433`*^9}, {
+   3.839070247118854*^9, 3.8390702813983994`*^9}, {3.839070311975191*^9, 
+   3.839070315447152*^9}, {3.839070348107974*^9, 3.83907040948543*^9}, {
+   3.83907051860478*^9, 3.8390706736695747`*^9}, {3.83907079014109*^9, 
+   3.8390708262607317`*^9}, {3.839071060244574*^9, 3.839071081147893*^9}},
+ CellLabel->"In[86]:=",ExpressionUUID->"8f2ee22c-d9b8-4917-8c8c-73d229ecc286"]
 },
-WindowSize->{1236, 1304},
+WindowSize->{1493, 1304},
 WindowMargins->{{0, Automatic}, {30, Automatic}},
-FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 24, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"9da5df96-afd8-486a-922c-1cdeeaba9d87"
 ]
@@ -232,7 +305,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 9092, 195, 808, "Input",ExpressionUUID->"8f2ee22c-d9b8-4917-8c8c-73d229ecc286"]
+Cell[558, 20, 12807, 268, 1060, "Input",ExpressionUUID->"8f2ee22c-d9b8-4917-8c8c-73d229ecc286"]
 }
 ]
 *)
