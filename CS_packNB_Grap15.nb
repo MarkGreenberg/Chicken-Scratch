@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13794,        310]
-NotebookOptionsPosition[     13500,        297]
-NotebookOutlinePosition[     13839,        312]
-CellTagsIndexPosition[     13796,        309]
+NotebookDataLength[     14658,        325]
+NotebookOptionsPosition[     14308,        311]
+NotebookOutlinePosition[     14703,        327]
+CellTagsIndexPosition[     14660,        324]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -141,19 +141,28 @@ Cell[BoxData[
          "\[IndentingNewLine]", "2", ",", "\[IndentingNewLine]", 
          RowBox[{
           RowBox[{"allV", "=", 
-           RowBox[{"Range", "[", "24", "]"}]}], ";", "\[IndentingNewLine]", 
+           RowBox[{"RandomSample", "[", 
+            RowBox[{"Range", "[", "12", "]"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"core", "=", 
+           RowBox[{"Partition", "[", 
+            RowBox[{"allV", ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"perm", "=", 
            RowBox[{"Permutations", "[", 
             RowBox[{"allV", ",", 
              RowBox[{"{", "3", "}"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"allE", "=", 
+          RowBox[{"uber", "=", 
            RowBox[{"RandomSample", "[", 
-            RowBox[{"perm", ",", "7"}], "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"perm", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"edge", "=", 
+           RowBox[{"Join", "[", 
+            RowBox[{"core", ",", "uber"}], "]"}]}], ";", 
+          "\[IndentingNewLine]", 
           RowBox[{"disType1", "=", 
            RowBox[{"RandomSample", "[", 
             RowBox[{
              RowBox[{"Complement", "[", 
-              RowBox[{"perm", ",", "allE"}], "]"}], ",", "3"}], "]"}]}], ";", 
+              RowBox[{"perm", ",", "edge"}], "]"}], ",", "3"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"disType2", "=", 
            RowBox[{"RandomSample", "[", 
@@ -166,7 +175,7 @@ Cell[BoxData[
                 "\[UndirectedEdge]", 
                 RowBox[{
                 "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}],
-                "&"}], "/@", "allE"}], ",", "3"}], "]"}]}], ";", 
+                "&"}], "/@", "edge"}], ",", "3"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"disType3", "=", 
            RowBox[{"RandomSample", "[", 
@@ -179,7 +188,7 @@ Cell[BoxData[
                 "\[DirectedEdge]", 
                 RowBox[{
                 "#", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}],
-                "&"}], "/@", "allE"}], ",", "3"}], "]"}]}], ";", 
+                "&"}], "/@", "edge"}], ",", "3"}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"disType4", "=", 
            RowBox[{"RandomSample", "[", 
@@ -193,7 +202,7 @@ Cell[BoxData[
                 RowBox[{
                 "disType1", ",", "disType2", ",", "disType3", ",", 
                  "disType4"}], "]"}], ",", "3"}], "]"}], ",", 
-             RowBox[{"RandomChoice", "[", "allE", "]"}]}], "]"}]}], ";", 
+             RowBox[{"RandomChoice", "[", "edge", "]"}]}], "]"}]}], ";", 
           "\[IndentingNewLine]", 
           RowBox[{"hyperGraph", "=", 
            RowBox[{"ResourceFunction", "[", "\"\<HypergraphPlot\>\"", "]"}]}],
@@ -203,7 +212,7 @@ Cell[BoxData[
             RowBox[{"(", 
              RowBox[{
               RowBox[{"hyperGraph", "[", 
-               RowBox[{"allE", ",", 
+               RowBox[{"edge", ",", 
                 RowBox[{"VertexSize", "\[Rule]", ".22"}]}], "]"}], "/.", 
               RowBox[{
                RowBox[{"Style", "[", 
@@ -291,14 +300,20 @@ Cell[BoxData[
    3.7901856510620317`*^9}, {3.790185751150896*^9, 3.790185779197434*^9}, {
    3.790185923862226*^9, 3.790185933268888*^9}, {3.790186002406066*^9, 
    3.790186004772809*^9}, {3.7901860440297422`*^9, 3.790186049245679*^9}, {
-   3.790186110319813*^9, 3.790186128197299*^9}, 3.7901862422929087`*^9},
- CellLabel->
-  "In[3189]:=",ExpressionUUID->"7987a7e9-ec58-4736-9380-75d7ecc1f335"]
+   3.790186110319813*^9, 3.790186128197299*^9}, 3.7901862422929087`*^9, {
+   3.839848817111307*^9, 3.839848821844301*^9}, {3.839848860559801*^9, 
+   3.8398488671918097`*^9}, {3.839849658595128*^9, 3.839849930520441*^9}, {
+   3.839849977433215*^9, 3.839849978560896*^9}, {3.839850022665045*^9, 
+   3.839850027104768*^9}, {3.8398500670413437`*^9, 3.8398500769687366`*^9}, {
+   3.839850150162752*^9, 3.839850232761558*^9}, {3.839850374674857*^9, 
+   3.8398503752661657`*^9}, {3.8398504821198683`*^9, 3.839850500241611*^9}},
+ CellLabel->"In[33]:=",ExpressionUUID->"7987a7e9-ec58-4736-9380-75d7ecc1f335"]
 },
 WindowSize->{1452, 1361},
 WindowMargins->{{12, Automatic}, {10, Automatic}},
-FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
-StyleDefinitions->"Default.nb"
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 24, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"c9527236-bf1a-4c8f-9fa2-6add3398d8b9"
 ]
 (* End of Notebook Content *)
 
@@ -311,7 +326,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 12938, 275, 826, "Input",ExpressionUUID->"7987a7e9-ec58-4736-9380-75d7ecc1f335"]
+Cell[558, 20, 13746, 289, 868, "Input",ExpressionUUID->"7987a7e9-ec58-4736-9380-75d7ecc1f335"]
 }
 ]
 *)
