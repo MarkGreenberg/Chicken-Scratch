@@ -10,16 +10,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    472146,      10577]
-NotebookOptionsPosition[    471564,      10558]
-NotebookOutlinePosition[    472055,      10576]
-CellTagsIndexPosition[    472012,      10573]
+NotebookDataLength[    472700,      10576]
+NotebookOptionsPosition[    472254,      10560]
+NotebookOutlinePosition[    472741,      10578]
+CellTagsIndexPosition[    472698,      10575]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
 Cell[BoxData[
  RowBox[{"CloudDeploy", "[", "\[IndentingNewLine]", 
   RowBox[{
@@ -10245,25 +10243,7 @@ emerges where?\>\""}], ";", "\[IndentingNewLine]",
             RowBox[{
              RowBox[{"Values", "[", "ansDat", "]"}], ",", "3"}], "]"}]}], ";",
            "\[IndentingNewLine]", 
-          RowBox[{"dis", "=", 
-           RowBox[{"Partition", "[", 
-            RowBox[{
-             RowBox[{
-              RowBox[{
-               RowBox[{"StringDelete", "[", 
-                RowBox[{
-                 RowBox[{"CommonName", "[", "#", "]"}], ",", 
-                 RowBox[{
-                  RowBox[{
-                  "\"\< County\>\"", "|", "\"\< Parish\>\"", "|", "\"\<,\>\"",
-                    "|", "\"\< (\>\""}], "~~", "__", "~~", "EndOfString"}]}], 
-                "]"}], "&"}], "/@", 
-              RowBox[{"RandomSample", "[", 
-               RowBox[{
-                RowBox[{"Flatten", "[", 
-                 RowBox[{"Values", "[", "data", "]"}], "]"}], ",", "12"}], 
-               "]"}]}], ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
-          RowBox[{"ansStr", "=", 
+          RowBox[{"ansNames", "=", 
            RowBox[{
             RowBox[{
              RowBox[{"StringDelete", "[", 
@@ -10275,6 +10255,34 @@ emerges where?\>\""}], ";", "\[IndentingNewLine]",
                  "|", "\"\< (\>\""}], "~~", "__", "~~", "EndOfString"}]}], 
               "]"}], "&"}], "/@", "ansCounties"}]}], ";", 
           "\[IndentingNewLine]", 
+          RowBox[{"disNames", "=", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"StringDelete", "[", 
+              RowBox[{
+               RowBox[{"CommonName", "[", "#", "]"}], ",", 
+               RowBox[{
+                RowBox[{
+                "\"\< County\>\"", "|", "\"\< Parish\>\"", "|", "\"\<,\>\"", 
+                 "|", "\"\< (\>\""}], "~~", "__", "~~", "EndOfString"}]}], 
+              "]"}], "&"}], "/@", 
+            RowBox[{"RandomSample", "[", 
+             RowBox[{
+              RowBox[{"Complement", "[", 
+               RowBox[{
+                RowBox[{"Flatten", "[", 
+                 RowBox[{"Values", "[", "data", "]"}], "]"}], ",", 
+                "ansCounties"}], "]"}], ",", "15"}], "]"}]}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"allNames", "=", 
+           RowBox[{"Partition", "[", 
+            RowBox[{
+             RowBox[{"Take", "[", 
+              RowBox[{
+               RowBox[{"DeleteDuplicates", "[", 
+                RowBox[{"Join", "[", 
+                 RowBox[{"ansNames", ",", "disNames"}], "]"}], "]"}], ",", 
+               "12"}], "]"}], ",", "3"}], "]"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{
           "q", "=", 
            "\"\<Which three US counties or parishes are shown here?\>\""}], 
@@ -10326,10 +10334,7 @@ emerges where?\>\""}], ";", "\[IndentingNewLine]",
               "~~", "\"\< & \>\"", "~~", 
               RowBox[{
               "#", "\[LeftDoubleBracket]", "3", "\[RightDoubleBracket]"}]}], 
-             "&"}], "/@", 
-            RowBox[{"Prepend", "[", 
-             RowBox[{"dis", ",", "ansStr"}], "]"}]}]}], ";", 
-          "\[IndentingNewLine]", 
+             "&"}], "/@", "allNames"}]}], ";", "\[IndentingNewLine]", 
           RowBox[{"mixed", "=", 
            RowBox[{"RandomSample", "[", "choices", "]"}]}], ";", 
           "\[IndentingNewLine]", 
@@ -10533,34 +10538,31 @@ emerges where?\>\""}], ";", "\[IndentingNewLine]",
    3.832086866869697*^9, 3.832086890799158*^9}, {3.832086949149663*^9, 
    3.832087043684021*^9}, {3.8320872576594667`*^9, 3.8320872689567823`*^9}, 
    3.832087622193997*^9, {3.8320877468132563`*^9, 3.832087883740193*^9}, 
-   3.832087944183894*^9, {3.8320879745404177`*^9, 3.832088150828957*^9}},
+   3.832087944183894*^9, {3.8320879745404177`*^9, 3.832088150828957*^9}, {
+   3.839851832575349*^9, 3.83985185393857*^9}, 3.8398520846925573`*^9, {
+   3.839852118850506*^9, 3.839852160467181*^9}, {3.8398521908992434`*^9, 
+   3.839852196914214*^9}, {3.839863269215252*^9, 3.8398632742709303`*^9}, {
+   3.8398635351049347`*^9, 3.83986367371244*^9}, {3.8398640330087833`*^9, 
+   3.839864037425015*^9}, {3.839864074328545*^9, 3.839864090096366*^9}, {
+   3.839864187048676*^9, 3.839864187656152*^9}, {3.839864813568431*^9, 
+   3.839864846854465*^9}, {3.839865360028472*^9, 3.839865410126116*^9}, 
+   3.8398656948224154`*^9, {3.83986594257612*^9, 3.839866043623193*^9}, {
+   3.8398661372153788`*^9, 3.83986614423177*^9}, {3.8398662303360147`*^9, 
+   3.8398662363282413`*^9}, {3.839866273031706*^9, 3.83986628564765*^9}, {
+   3.839866381752615*^9, 3.8398663905437117`*^9}, {3.839866445659212*^9, 
+   3.8398664475213833`*^9}, {3.8398669488248463`*^9, 3.839866986961195*^9}, {
+   3.8398670369688787`*^9, 3.83986707105651*^9}, {3.8398671026808434`*^9, 
+   3.8398671601368504`*^9}, {3.839867195193429*^9, 3.839867292041748*^9}, {
+   3.8398673221137*^9, 3.839867323248796*^9}, {3.839867442419374*^9, 
+   3.839867480170813*^9}, 3.839920216114139*^9},
  CellLabel->
-  "In[748]:=",ExpressionUUID->"7a911f9f-d3f5-46b9-a860-6d529122e22d"],
-
-Cell[BoxData[
- InterpretationBox[
-  RowBox[{"CloudObject", "[", 
-   TemplateBox[{
-    "\"https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geog9\"", 
-     "https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geog9"},
-    "HyperlinkURL"], "]"}],
-  CloudObject["https://www.wolframcloud.com/obj/markgreenberg/CS_pack_Geog9"],
-  
-  SelectWithContents->True]], "Output",
- CellChangeTimes->{
-  3.832085817047139*^9, 3.832086112044148*^9, 3.832086207156557*^9, 
-   3.832086326384285*^9, 3.8320863707050533`*^9, {3.832086461797427*^9, 
-   3.832086477076785*^9}, {3.8320865300277567`*^9, 3.832086557459059*^9}, 
-   3.832087094274591*^9, 3.832087275134385*^9, 3.832088167904995*^9},
- CellLabel->
-  "Out[748]=",ExpressionUUID->"1c228ed7-59b9-4781-b792-f3c6c464ab0b"]
-}, Open  ]]
+  "(Debug) In[117]:=",ExpressionUUID->"7a911f9f-d3f5-46b9-a860-6d529122e22d"]
 },
-WindowSize->{1751, 1308},
+WindowSize->{1792, 1308},
 WindowMargins->{{6, Automatic}, {Automatic, 0}},
 TaggingRules->{
  "WelcomeScreenSettings" -> {"FEStarting" -> False}, "TryRealOnly" -> False},
-FrontEndVersion->"12.2 for Mac OS X x86 (64-bit) (December 12, 2020)",
+FrontEndVersion->"12.3 for Mac OS X x86 (64-bit) (June 24, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"bef1dc1b-766e-4493-b7ab-02e19b14f747"
 ]
@@ -10575,10 +10577,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[580, 22, 470201, 10515, 1021, "Input",ExpressionUUID->"7a911f9f-d3f5-46b9-a860-6d529122e22d"],
-Cell[470784, 10539, 764, 16, 37, "Output",ExpressionUUID->"1c228ed7-59b9-4781-b792-f3c6c464ab0b"]
-}, Open  ]]
+Cell[558, 20, 471692, 10538, 1039, "Input",ExpressionUUID->"7a911f9f-d3f5-46b9-a860-6d529122e22d"]
 }
 ]
 *)
